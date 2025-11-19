@@ -12,10 +12,12 @@ export default function DigitalMarketingPage() {
       <SEO
         title="Digital Marketing Services | Karol Digital"
         description="Digital marketing for small businesses — SEO guidance, email marketing, content strategy, branding and visibility improvements. Affordable and effective."
-        keywords="digital marketing, small business marketing, SEO, email marketing, content ideas, local business visibility"
+        url="https://www.karoldigital.co.uk/services/digital-marketing"
+        image="/service-marketing.jpg"
       />
 
       <main className="bg-white text-gray-900 pb-20">
+
 
         {/* === HERO SECTION === */}
         <motion.section

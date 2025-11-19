@@ -17,6 +17,7 @@ export default function WebDesignPage() {
 
       <main className="min-h-screen bg-white text-gray-900">
 
+
         {/* HERO */}
         <section className="relative min-h-[50vh] flex items-center justify-center text-center text-white">
           <Image

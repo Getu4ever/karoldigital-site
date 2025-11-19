@@ -1,9 +1,9 @@
 "use client";
 
+import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import SEO from "@/components/SEO";
 
 export default function SocialMediaPage() {
   return (

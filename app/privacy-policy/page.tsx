@@ -1,8 +1,18 @@
+"use client";
+
+import SEO from "@/components/SEO";
 import LegalHero from "@/components/LegalHero";
 
 export default function PrivacyPolicy() {
   return (
     <>
+      <SEO
+        title="Privacy Policy — Karol Digital"
+        description="Learn how Karol Digital collects, stores and protects your personal information. GDPR-compliant privacy policy for all website visitors and clients."
+        url="https://www.karoldigital.co.uk/privacy-policy"
+        image="/seo-cover.jpg"
+      />
+
       <LegalHero
         title="Privacy Policy"
         subtitle="How Karol Digital collects, protects, and uses your personal information."

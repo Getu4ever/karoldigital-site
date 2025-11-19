@@ -10,11 +10,12 @@ export default function ServicesPage() {
   return (
     <FadeIn>
       <SEO
-          title="Services & Pricing — Karol Digital"
-          description="Affordable and professional web design, social media setup and digital marketing for small businesses."
-          url="https://www.karoldigital.co.uk/services"
-          image="/seo-cover.jpg"
-        />
+        title="Services & Pricing — Karol Digital"
+        description="Affordable and professional web design, social media setup and digital marketing for small businesses."
+        url="https://www.karoldigital.co.uk/services"
+        image="/seo-cover.jpg"
+      />
+
       <main className="min-h-screen bg-white text-gray-900">
 
         {/* === HERO SECTION === */}

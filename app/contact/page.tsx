@@ -8,16 +8,17 @@ import SEO from "@/components/SEO";
 export default function ContactPage() {
   return (
     <FadeIn>
+      {/* CLIENT-SIDE SEO (CORRECT FOR THIS PAGE) */}
       <SEO
-  title="Contact Karol Digital"
-  description="Get in touch for web design, digital marketing and social media setup services. Request a free quote today."
-  url="https://www.karoldigital.co.uk/contact"
-  image="/hero-page-banner.jpg"
-/>
+        title="Contact Karol Digital"
+        description="Get in touch for web design, digital marketing and social media setup services. Request a free quote today."
+        url="https://www.karoldigital.co.uk/contact"
+        image="/hero-page-banner.jpg"
+      />
 
       <main className="min-h-screen bg-white text-gray-900">
 
-        {/* === HERO SECTION (keeps unique animation) === */}
+        {/* === HERO SECTION === */}
         <motion.section
           className="relative min-h-[60vh] flex items-center justify-center text-center text-white"
           initial={{ opacity: 0, y: 30 }}

@@ -22,16 +22,18 @@ export default function Home() {
     description:
       "Karol Digital provides affordable web design, AI-ready websites, social media setup and digital marketing for small businesses in the UK.",
   };
+
   return (
     <FadeIn>
-      <main className="min-h-screen bg-white text-gray-900">
-        <SEO
-          title="Karol Digital — Affordable Web Design & Digital Marketing"
-          description="Affordable web design, digital marketing, and social media services for small businesses. Modern, mobile-friendly websites built to grow your brand online."
-          url="https://www.karoldigital.co.uk/"
-          image="/hero-cover.jpg"
-        />
+      {/* SEO MUST BE FIRST INSIDE THE COMPONENT */}
+      <SEO
+        title="Karol Digital — Affordable Web Design & Digital Marketing"
+        description="Affordable web design, digital marketing, and social media services for small businesses. Modern, mobile-friendly websites built to grow your brand online."
+        url="https://www.karoldigital.co.uk/"
+        image="/hero-cover.jpg"
+      />
 
+      <main className="min-h-screen bg-white text-gray-900">
         {/* === HERO SECTION === */}
         <motion.section
           className="relative h-[90vh] text-white"
@@ -358,7 +360,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* === WHY WORK WITH US (Replacement Section) === */}
+        {/* === WHY WORK WITH US === */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

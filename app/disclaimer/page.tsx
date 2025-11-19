@@ -1,8 +1,18 @@
+"use client";
+
 import LegalHero from "@/components/LegalHero";
+import SEO from "@/components/SEO";
 
 export default function Disclaimer() {
   return (
     <>
+      <SEO
+        title="Disclaimer | Karol Digital"
+        description="Read Karol Digital’s legal disclaimer detailing accuracy, responsibility, external links and the limits of liability when using our website."
+        url="https://www.karoldigital.co.uk/legal/disclaimer"
+        image="/seo-cover.jpg"
+      />
+
       <LegalHero
         title="Disclaimer"
         subtitle="Important information regarding accuracy, reliability and use of our website content."

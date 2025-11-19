@@ -10,13 +10,14 @@ export default function About() {
   return (
     <FadeIn>
       <SEO
-  title="About Karol Digital"
-  description="Learn about Karol Digital’s mission to support small businesses with professional and affordable web design."
-  url="https://www.karoldigital.co.uk/about"
-  image="/about-team.jpg"
-/>
+        title="About Karol Digital"
+        description="Learn about Karol Digital’s mission to support small businesses with professional and affordable web design."
+        url="https://www.karoldigital.co.uk/about"
+        image="/about-team.jpg"
+      />
 
       <main className="min-h-screen bg-white text-gray-900">
+
 
         {/* === HERO SECTION (keeps unique animation) === */}
         <motion.section
@@ -154,7 +155,6 @@ export default function About() {
               </h2>
 
               <div className="grid md:grid-cols-3 gap-10">
-
                 {[
                   {
                     title: "Creativity",
@@ -183,13 +183,12 @@ export default function About() {
                     <p className="text-gray-700">{value.desc}</p>
                   </div>
                 ))}
-
               </div>
             </div>
           </section>
         </FadeIn>
 
-        {/* === SECTION 4: CTA === */}
+        {/* === CTA === */}
         <FadeIn>
           <section className="py-20 bg-gradient-to-r from-[#411b3f] via-[#513356] to-[#102f35] text-white text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
