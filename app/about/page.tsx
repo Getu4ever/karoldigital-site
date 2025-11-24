@@ -4,18 +4,10 @@ import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import SEO from "@/components/SEO";
 
 export default function About() {
   return (
     <FadeIn>
-      <SEO
-        title="About Karol Digital"
-        description="Learn about Karol Digital’s mission to support small businesses with professional and affordable web design."
-        url="https://www.karoldigital.co.uk/about"
-        image="/about-team.jpg"
-      />
-
       <main className="min-h-screen bg-white text-gray-900">
 
 

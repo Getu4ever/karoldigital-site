@@ -1,6 +1,5 @@
 "use client";
 
-import SEO from "@/components/SEO";
 import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -9,15 +8,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export default function DigitalMarketingPage() {
   return (
     <FadeIn>
-      <SEO
-        title="Digital Marketing Services | Karol Digital"
-        description="Digital marketing for small businesses — SEO guidance, email marketing, content strategy, branding and visibility improvements. Affordable and effective."
-        url="https://www.karoldigital.co.uk/services/digital-marketing"
-        image="/service-marketing.jpg"
-      />
-
       <main className="bg-white text-gray-900 pb-20">
-
 
         {/* === HERO SECTION === */}
         <motion.section
@@ -60,7 +51,6 @@ export default function DigitalMarketingPage() {
                 and attract customers — without overwhelming complexity.
               </p>
 
-              {/* Main Illustration Image */}
               <Image
                 src="/service-marketing.jpg"
                 alt="Digital Marketing Illustration"

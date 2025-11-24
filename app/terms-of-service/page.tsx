@@ -1,17 +1,10 @@
 "use client";
 
-import SEO from "@/components/SEO";
 import LegalHero from "@/components/LegalHero";
 
 export default function TermsOfService() {
   return (
     <>
-      <SEO
-        title="Terms of Service — Karol Digital"
-        description="Review the terms and conditions for using Karol Digital’s website and services."
-        url="https://www.karoldigital.co.uk/legal/terms-of-service"
-        image="/seo-cover.jpg"
-      />
       <LegalHero
         title="Terms of Service"
         subtitle="Please review the conditions that apply when using Karol Digital’s website and services."

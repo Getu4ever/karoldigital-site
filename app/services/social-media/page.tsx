@@ -1,6 +1,5 @@
 "use client";
 
-import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -8,13 +7,6 @@ import Breadcrumb from "@/components/Breadcrumb";
 export default function SocialMediaPage() {
   return (
     <>
-      <SEO
-        title="Social Media Setup — Karol Digital"
-        description="Professional social media setup for small businesses. Optimised bios, banners, Google Business setup and branding across all platforms."
-        url="https://www.karoldigital.co.uk/services/social-media"
-        image="/seo-cover.jpg"
-      />
-
       <main className="bg-white text-gray-900 pb-20">
 
         {/* === HERO SECTION (60vh consistent) === */}

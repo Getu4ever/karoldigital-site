@@ -1,18 +1,10 @@
 "use client";
 
-import SEO from "@/components/SEO";
 import LegalHero from "@/components/LegalHero";
 
 export default function CookiePolicy() {
   return (
     <>
-      <SEO
-        title="Cookie Policy — Karol Digital"
-        description="Understand how Karol Digital uses cookies for performance, analytics, and user experience improvement."
-        url="https://www.karoldigital.co.uk/cookie-policy"
-        image="/seo-cover.jpg"
-      />
-
       <LegalHero
         title="Cookie Policy"
         subtitle="Find out how Karol Digital uses cookies to enhance your website experience."

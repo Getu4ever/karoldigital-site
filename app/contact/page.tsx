@@ -3,21 +3,11 @@
 import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import SEO from "@/components/SEO";
 
 export default function ContactPage() {
   return (
     <FadeIn>
-      {/* CLIENT-SIDE SEO (CORRECT FOR THIS PAGE) */}
-      <SEO
-        title="Contact Karol Digital"
-        description="Get in touch for web design, digital marketing and social media setup services. Request a free quote today."
-        url="https://www.karoldigital.co.uk/contact"
-        image="/hero-page-banner.jpg"
-      />
-
       <main className="min-h-screen bg-white text-gray-900">
-
         {/* === HERO SECTION === */}
         <motion.section
           className="relative min-h-[60vh] flex items-center justify-center text-center text-white"
@@ -50,7 +40,6 @@ export default function ContactPage() {
         <FadeIn>
           <section className="py-20 px-6 md:px-12">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-
               {/* === CONTACT FORM === */}
               <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
                 <h2 className="text-3xl font-bold text-[#102f35] mb-6">
@@ -122,11 +111,9 @@ export default function ContactPage() {
                   loading="lazy"
                 ></iframe>
               </div>
-
             </div>
           </section>
         </FadeIn>
-
       </main>
     </FadeIn>
   );

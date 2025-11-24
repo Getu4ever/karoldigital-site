@@ -4,7 +4,6 @@ import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import SEO from "@/components/SEO";
 
 export default function Home() {
   const localBusinessJsonLd = {
@@ -25,14 +24,6 @@ export default function Home() {
 
   return (
     <FadeIn>
-      {/* SEO MUST BE FIRST INSIDE THE COMPONENT */}
-      <SEO
-        title="Karol Digital — Affordable Web Design & Digital Marketing"
-        description="Affordable web design, digital marketing, and social media services for small businesses. Modern, mobile-friendly websites built to grow your brand online."
-        url="https://www.karoldigital.co.uk/"
-        image="/hero-cover.jpg"
-      />
-
       <main className="min-h-screen bg-white text-gray-900">
         {/* === HERO SECTION === */}
         <motion.section

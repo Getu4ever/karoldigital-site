@@ -3,20 +3,12 @@
 import FadeIn from "@/components/FadeIn";
 import Image from "next/image";
 import Link from "next/link";
-import SEO from "@/components/SEO";
 
 export default function WebDesignPage() {
   return (
     <FadeIn>
-      <SEO
-        title="Web Design Services — Karol Digital"
-        description="Mobile-friendly, affordable and professional web design services for small businesses. View Starter, Growth and Premium website packages."
-        url="https://www.karoldigital.co.uk/services/web-design"
-        image="/seo-cover.jpg"
-      />
 
       <main className="min-h-screen bg-white text-gray-900">
-
 
         {/* HERO */}
         <section className="relative min-h-[50vh] flex items-center justify-center text-center text-white">
