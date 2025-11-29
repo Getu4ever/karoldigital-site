@@ -3,28 +3,36 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { Home, User, Layers, FileText, Phone } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Scroll listener
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const menuItems = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Home", icon: <Home size={18} /> },
+    { href: "/about", label: "About", icon: <User size={18} /> },
+    { href: "/services", label: "Services", icon: <Layers size={18} /> },
+    { href: "/blog", label: "Blog", icon: <FileText size={18} /> },
+    { href: "/contact", label: "Contact", icon: <Phone size={18} /> },
   ];
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -12 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: i * 0.07 },
+    }),
+  };
 
   return (
     <header
@@ -33,14 +41,10 @@ export default function Header() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo + Brand below */}
-        <Link href="/" className="flex flex-col items-center group">
-          <img
-            src="/logo.png"
-            alt="Karol Digital Logo"
-            className="h-[60px] w-auto mb-1"
-          />
-          <span className="text-xl md:text-2xl font-semibold text-white tracking-wide">
+        {/* Logo */}
+        <Link href="/" className="flex flex-col items-center">
+          <img src="/logo.png" className="h-[60px] w-auto mb-1" alt="" />
+          <span className="text-xl md:text-2xl font-semibold text-white">
             Karol <span className="text-yellow-400">Digital</span>
           </span>
         </Link>
@@ -59,7 +63,7 @@ export default function Header() {
             >
               {label}
               <span
-                className={`absolute left-0 -bottom-[6px] h-[4px] bg-yellow-400 rounded-full transition-all duration-300 ease-in-out ${
+                className={`absolute left-0 -bottom-[6px] h-[4px] bg-yellow-400 rounded-full transition-all duration-300 ${
                   pathname === href ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               />
@@ -69,10 +73,8 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden flex flex-col justify-center items-center space-y-1.5"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
+          className="md:hidden flex flex-col items-center space-y-1.5"
         >
           <span
             className={`block h-0.5 w-6 bg-white transition-transform ${
@@ -90,23 +92,70 @@ export default function Header() {
             }`}
           />
         </button>
-
-        {/* Mobile Menu */}
-        {open && (
-          <div className="absolute right-6 top-16 bg-white border border-gray-200 rounded-lg shadow-lg flex flex-col text-sm font-medium z-50">
-            {menuItems.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setOpen(false)}
-                className="px-6 py-2 hover:bg-gray-50 border-b border-gray-100 text-gray-900"
-              >
-                {label}
-              </Link>
-            ))}
-          </div>
-        )}
       </nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: "auto" }}
+            exit={{ opacity: 0, y: -15, height: 0 }}
+            transition={{ duration: 0.35 }}
+            className="
+              md:hidden absolute left-3 right-3 top-[115px]
+              rounded-2xl overflow-hidden shadow-2xl z-50
+              bg-gradient-to-br from-[#102f35] to-[#411b3f]
+              backdrop-blur-xl bg-opacity-80 border border-white/10
+            "
+          >
+            {/* Glowing Divider */}
+            <div className="h-[3px] w-full bg-gradient-to-r from-yellow-400/40 via-white/30 to-yellow-400/40" />
+
+            <nav className="flex flex-col px-6 py-5 space-y-4 text-base font-medium text-white">
+              {menuItems.map(({ href, label, icon }, i) => (
+                <motion.div
+                  key={href}
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  custom={i}
+                >
+                  <Link
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 py-1 hover:text-yellow-300 transition"
+                  >
+                    <div className="opacity-80">{icon}</div>
+                    {label}
+                  </Link>
+                </motion.div>
+              ))}
+
+              {/* CTA Button */}
+              <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35 }}
+            >
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="
+                  mt-4 block text-center px-6 py-3 rounded-full
+                  bg-white text-[#102f35] font-semibold
+                  hover:bg-[#0c2428] hover:text-white transition shadow-lg
+                "
+              >
+                Let’s Get Started
+              </Link>
+            </motion.div>
+
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
