@@ -41,8 +41,7 @@ export default function Home() {
           />
 
           <div className="absolute inset-0 bg-black/40" />
-
-          <div className="relative z-10 flex flex-col items-center text-center px-6 pt-28 md:pt-36">
+          <div className="relative z-10 flex flex-col items-center text-center px-6 pt-40 md:pt-48">
             <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">
               <span className="text-white">Karol </span>
               <span className="text-yellow-400">Digital</span>
@@ -69,6 +68,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
         </motion.section>
 
         {/* === SECTION 1 === */}

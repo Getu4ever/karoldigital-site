@@ -310,7 +310,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-left text-gray-700 shadow-lg rounded-2xl overflow-hidden">
+              <table className="min-w-[700px] w-full border-collapse text-left text-gray-700 shadow-lg rounded-2xl">
                 <thead>
                   <tr className="bg-[#102f35] text-white">
                     <th className="p-4 font-semibold">Feature</th>
