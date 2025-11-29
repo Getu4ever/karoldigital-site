@@ -3,18 +3,6 @@ import { groq } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
-import { generateSEOMetadata } from "@/components/seo-server";
-
-export const revalidate = 60;
-
-// ✅ Server-side SEO metadata (this replaces the <SEO /> client component)
-export const metadata = generateSEOMetadata({
-  title: "Karol Digital Blog",
-  description:
-    "Read insights, guides, and tips to help small businesses grow online.",
-  url: "https://www.karoldigital.co.uk/blog",
-  image: "/hero-page-banner.jpg",
-});
 
 interface BlogPost {
   title: string;

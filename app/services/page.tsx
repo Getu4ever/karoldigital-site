@@ -1,9 +1,9 @@
 "use client";
-
 import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+
 
 export default function ServicesPage() {
   return (
@@ -171,6 +171,84 @@ export default function ServicesPage() {
             </div>
           </section>
         </FadeIn>
+
+   {/* === MAINTENANCE PACKAGE SECTION === */}
+<FadeIn>
+  <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="max-w-6xl mx-auto text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
+        Website Maintenance Packages
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        Optional monthly support to keep your website secure, updated, and performing at its best.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+      {/* Basic Maintenance */}
+      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
+        <h3 className="text-2xl font-bold text-[#102f35] mb-4">Basic Maintenance</h3>
+        <p className="text-gray-600 mb-6">Ideal for small websites needing regular care.</p>
+        <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
+          <li>✔ Fixing bugs</li>
+          <li>✔ Minor text or image edits</li>
+          <li>✔ Updating plugins & dependencies</li>
+          <li>✔ Backup guidance</li>
+        </ul>
+        <p className="text-2xl font-extrabold text-[#411b3f] mb-6">£29–£59/mo</p>
+        <Link
+          href="/contact"
+          className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition"
+        >
+          Select Basic
+        </Link>
+      </div>
+
+      {/* Premium Maintenance */}
+      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] text-center hover:-translate-y-2 transition transform scale-105">
+        <h3 className="text-2xl font-bold text-[#411b3f] mb-4">Premium Maintenance</h3>
+        <p className="text-gray-600 mb-6">Perfect for businesses needing continuous improvements.</p>
+        <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
+          <li>✔ Everything in Basic</li>
+          <li>✔ Adding new features</li>
+          <li>✔ Deployment support</li>
+          <li>✔ Priority response time</li>
+          <li>✔ Advanced troubleshooting</li>
+        </ul>
+        <p className="text-2xl font-extrabold text-[#102f35] mb-6">£79–£129/mo</p>
+        <Link
+          href="/contact"
+          className="block text-center bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold py-3 rounded-full transition"
+        >
+          Select Premium
+        </Link>
+      </div>
+
+      {/* Custom Updates */}
+      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
+        <h3 className="text-2xl font-bold text-[#102f35] mb-4">Custom Updates</h3>
+        <p className="text-gray-600 mb-6">For major improvements, redesigns, or new functionality.</p>
+        <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
+          <li>✔ Technical support</li>
+          <li>✔ Website updates</li>
+          <li>✔ Fixing issues</li>
+          <li>✔ Advanced troubleshooting</li>
+          <li>✔ Feature development</li>
+        </ul>
+        <p className="text-2xl font-extrabold text-[#411b3f] mb-6">£99–£499 per update</p>
+        <Link
+          href="/contact"
+          className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition"
+        >
+          Request Custom Work
+        </Link>
+      </div>
+
+    </div>
+  </section>
+</FadeIn>
+
 
         {/* === SOCIAL MEDIA & DIGITAL MARKETING === */}
         <motion.section

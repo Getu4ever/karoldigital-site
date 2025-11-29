@@ -4,10 +4,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
 
-// ❗ Minimal fallback metadata (allows pages to override SEO)
+// ❗ Updated SEO-optimised metadata (perfect length)
 export const metadata = {
-  title: "Karol Digital",
-  description: "Affordable web design & digital services.",
+  title: "Karol Digital – Affordable Web Design for Small Businesses",
+  description:
+    "Affordable web design, SEO-ready websites and digital marketing for UK small businesses. Professional, modern and built to help your business grow online.",
 };
 
 // JSON-LD Schema
