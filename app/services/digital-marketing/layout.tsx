@@ -10,10 +10,48 @@ export const metadata = generateSEOMetadata({
   image: "/hero-page-banner.jpg",
 });
 
+// Breadcrumb Schema for Digital Marketing Page
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.karoldigital.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Services",
+      item: "https://www.karoldigital.co.uk/services",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Digital Marketing",
+      item: "https://www.karoldigital.co.uk/services/digital-marketing",
+    },
+  ],
+};
+
 export default function DigitalMarketingLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
+
+      {children}
+    </>
+  );
 }

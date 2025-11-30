@@ -11,7 +11,7 @@ export const metadata = {
     "Affordable web design, SEO-ready websites and digital marketing for UK small businesses. Professional, modern and built to help your business grow online.",
 };
 
-// JSON-LD Schema
+// JSON-LD: LocalBusiness (your existing schema)
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -28,6 +28,33 @@ const localBusinessJsonLd = {
     "Karol Digital provides affordable web design, AI-ready websites, social media setup and digital marketing for small businesses in the UK.",
 };
 
+// ✅ NEW: Organization Schema
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Karol Digital",
+  url: "https://www.karoldigital.co.uk",
+  logo: "https://www.karoldigital.co.uk/logo.png", // update if needed
+  sameAs: [
+    "https://www.facebook.com/karoldigital",
+    "https://www.linkedin.com/company/karoldigital",
+    "https://x.com/karoldigital",
+  ],
+};
+
+// ✅ NEW: WebSite Schema + SearchAction (helps Google generate sitelinks)
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Karol Digital",
+  url: "https://www.karoldigital.co.uk",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.karoldigital.co.uk/search?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -40,7 +67,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* Chatbase Script */}
+        {/* ✅ Added Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+
+        {/* ✅ Added WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+
+        {/* Chatbase Script (unchanged) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

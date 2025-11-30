@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Home, User, Layers, FileText, Phone } from "lucide-react";
+import { Home, User, Layers, FileText, Phone, Tag } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -21,6 +21,7 @@ export default function Header() {
     { href: "/", label: "Home", icon: <Home size={18} /> },
     { href: "/about", label: "About", icon: <User size={18} /> },
     { href: "/services", label: "Services", icon: <Layers size={18} /> },
+    { href: "/pricing", label: "Pricing", icon: <Tag size={18} /> }, // ⭐ NEW ITEM
     { href: "/blog", label: "Blog", icon: <FileText size={18} /> },
     { href: "/contact", label: "Contact", icon: <Phone size={18} /> },
   ];
@@ -135,23 +136,22 @@ export default function Header() {
 
               {/* CTA Button */}
               <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35 }}
-            >
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="
-                  mt-4 block text-center px-6 py-3 rounded-full
-                  bg-white text-[#102f35] font-semibold
-                  hover:bg-[#0c2428] hover:text-white transition shadow-lg
-                "
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
               >
-                Let’s Get Started
-              </Link>
-            </motion.div>
-
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="
+                    mt-4 block text-center px-6 py-3 rounded-full
+                    bg-white text-[#102f35] font-semibold
+                    hover:bg-[#0c2428] hover:text-white transition shadow-lg
+                  "
+                >
+                  Let’s Get Started
+                </Link>
+              </motion.div>
             </nav>
           </motion.div>
         )}

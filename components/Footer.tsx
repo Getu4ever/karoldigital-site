@@ -84,6 +84,60 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {/* EXTRA FOOTER ROW */}
+<div className="mt-8 pt-4 pb-10">
+  <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-center">
+
+    <Link
+      href="/services"
+      className="
+        text-white/90 hover:text-yellow-400
+        font-medium text-sm md:text-base
+        px-5 py-2.5
+        rounded-full
+        bg-white/5 backdrop-blur-sm
+        border border-white/10
+        transition-all duration-300
+        hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]
+      "
+    >
+      Services
+    </Link>
+
+    <Link
+      href="/pricing"
+      className="
+        text-white/90 hover:text-yellow-400
+        font-medium text-sm md:text-base
+        px-5 py-2.5
+        rounded-full
+        bg-white/5 backdrop-blur-sm
+        border border-white/10
+        transition-all duration-300
+        hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]
+      "
+    >
+      Pricing
+    </Link>
+
+    <Link
+      href="/contact"
+      className="
+        text-white/90 hover:text-yellow-400
+        font-medium text-sm md:text-base
+        px-5 py-2.5
+        rounded-full
+        bg-white/5 backdrop-blur-sm
+        border border-white/10
+        transition-all duration-300
+        hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]
+      "
+    >
+      Contact
+    </Link>
+
+  </div>
+</div>
 
       {/* FULL-WIDTH BLACK COPYRIGHT BAR (NO PADDING!) */}
       <div className="w-full bg-black py-4">
