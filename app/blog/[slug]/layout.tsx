@@ -10,7 +10,7 @@ export default async function BlogPostLayout({
   children: React.ReactNode;
   params: { slug: string };
 }) {
-  const slug = params.slug;
+  const { slug } = params;
   const articleUrl = `https://www.karoldigital.co.uk/blog/${slug}`;
 
   // Fetch minimal metadata-required fields
@@ -50,7 +50,7 @@ export default async function BlogPostLayout({
     ],
   };
 
-  // BlogPosting Schema (pulls OG image + dates from Sanity)
+  // BlogPosting Schema
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
