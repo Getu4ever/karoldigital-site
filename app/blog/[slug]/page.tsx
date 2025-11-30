@@ -17,10 +17,13 @@ export async function generateStaticParams() {
   return slugs.map((post: any) => ({ slug: post.slug }));
 }
 
-export default async function BlogPostPage(
-  props: { params: Promise<{ slug: string }> }
-) {
-  const { slug } = await props.params;
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = params;
+
 
   const { post, related } = await client.fetch(
     groq`{
