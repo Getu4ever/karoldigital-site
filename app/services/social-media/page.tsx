@@ -11,7 +11,7 @@ export default function SocialMediaPage() {
 
         {/* === HERO SECTION (60vh consistent) === */}
         <motion.section
-          className="relative min-h-[60vh] flex items-center justify-center text-center text-white"
+          className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}

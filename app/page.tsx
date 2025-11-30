@@ -27,49 +27,48 @@ export default function Home() {
       <main className="min-h-screen bg-white text-gray-900">
         {/* === HERO SECTION === */}
         <motion.section
-          className="relative h-[90vh] text-white"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <Image
-            src="/hero-cover.jpg"
-            alt="Karol Digital Cover"
-            fill
-            priority
-            className="object-cover brightness-[0.45]"
-          />
+  className="relative min-h-[75vh] flex items-center justify-center text-center text-white"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: 'easeOut' }}
+>
+  <Image
+    src="/hero-cover.jpg"
+    alt="Karol Digital Cover"
+    fill
+    priority
+    className="object-cover brightness-[0.45]"
+  />
+  <div className="absolute inset-0 bg-black/40" />
 
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="relative z-10 flex flex-col items-center text-center px-6 pt-40 md:pt-48">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">
-              <span className="text-white">Karol </span>
-              <span className="text-yellow-400">Digital</span>
-            </h1>
+  <div className="relative z-10 px-6">
+    <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">
+      <span className="text-white">Karol </span>
+      <span className="text-yellow-400">Digital</span>
+    </h1>
 
-            <p className="text-lg md:text-xl text-gray-100 drop-shadow-md mb-8 max-w-2xl">
-              Empowering Brands Online — Affordable Web Design & Digital Marketing
-              for Small Businesses.
-            </p>
+    <p className="text-lg md:text-xl text-gray-100 drop-shadow-md mb-8 max-w-2xl mx-auto">
+      Empowering Brands Online — Affordable Web Design & Digital Marketing
+      for Small Businesses.
+    </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
-                className="bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold px-8 py-3 rounded-full transition"
-              >
-                Let’s Get Started
-              </Link>
+    <div className="flex flex-wrap justify-center gap-4">
+      <Link
+        href="/contact"
+        className="bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold px-8 py-3 rounded-full transition"
+      >
+        Let’s Get Started
+      </Link>
 
-              <Link
-                href="/services"
-                className="bg-white text-[#411b3f] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition"
-              >
-                View Services
-              </Link>
-            </div>
-          </div>
-
-        </motion.section>
+      <Link
+        href="/services"
+        className="bg-white text-[#411b3f] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition"
+      >
+        View Services
+      </Link>
+    </div>
+  </div>
+</motion.section>
 
         {/* === SECTION 1 === */}
         <motion.section

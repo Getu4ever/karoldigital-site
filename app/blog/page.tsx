@@ -28,7 +28,7 @@ export default async function BlogIndexPage() {
       <main className="min-h-screen bg-white text-gray-900">
 
         {/* === HERO SECTION === */}
-        <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white">
+        <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4">
           <Image
             src="/hero-page-banner.jpg"
             alt="Karol Digital Blog"

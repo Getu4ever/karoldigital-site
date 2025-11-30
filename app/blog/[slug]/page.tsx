@@ -58,7 +58,7 @@ export default async function BlogPostPage(
       <main className="min-h-screen bg-white text-gray-900">
 
         {/* HERO SECTION */}
-        <section className="relative h-[60vh] flex items-center justify-center text-center text-white pt-24">
+        <section className="relative h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4">
           <Image
             src="/hero-page-banner.jpg"
             alt={post.title}
