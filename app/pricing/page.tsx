@@ -11,32 +11,33 @@ export default function PricingPage() {
       <main className="min-h-screen bg-white text-gray-900">
 
         {/* === HERO SECTION === */}
-        <motion.section
-          className="relative min-h-[60vh] flex items-center justify-center text-center text-white"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <Image
-            src="/hero-page-banner.jpg"
-            alt="Pricing – Karol Digital"
-            fill
-            priority
-            className="object-cover brightness-[0.45]"
-          />
-          <div className="absolute inset-0 bg-black/40" />
+       <motion.section
+  className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-28 md:pt-32"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  <Image
+    src="/hero-page-banner.jpg"
+    alt="Pricing – Karol Digital"
+    fill
+    priority
+    className="object-cover brightness-[0.45]"
+  />
+  <div className="absolute inset-0 bg-black/40" />
 
-          <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-              <span className="text-white">Website </span>
-              <span className="text-yellow-400">Pricing</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Transparent and affordable pricing for UK small businesses. Choose
-              a package that fits your goals and budget — from design to ongoing support.
-            </p>
-          </div>
-        </motion.section>
+  <div className="relative z-10 px-6">
+    <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+      <span className="text-white">Website </span>
+      <span className="text-yellow-400">Pricing</span>
+    </h1>
+    <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+      Transparent and affordable pricing for UK small businesses. Choose
+      a package that fits your goals and budget — from design to ongoing support.
+    </p>
+  </div>
+</motion.section>
+
 
         {/* === MAIN CONTENT === */}
         <div className="px-6 py-20 max-w-7xl mx-auto">
