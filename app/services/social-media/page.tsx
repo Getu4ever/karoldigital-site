@@ -26,11 +26,16 @@ export default function SocialMediaPage() {
 
           <div className="absolute inset-0 bg-black/40" />
 
-          <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold">
-              Social <span className="text-yellow-400">Media Setup</span>
-            </h1>
-          </div>
+          <div className="relative z-10 px-6 max-w-3xl mx-auto">
+  <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+    Social <span className="text-yellow-400">Media Setup</span>
+  </h1>
+
+  <p className="text-lg md:text-xl text-gray-100">
+    Optimised social profiles, branding and setup to boost your online presence.
+  </p>
+</div>
+
         </motion.section>
 
         {/* === CONTENT === */}
