@@ -87,11 +87,14 @@ export default function Home() {
                 <span className="text-[#102f35]">For Small Businesses</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                <strong>Karol Digital</strong> specialises in affordable web design for
-                small businesses. We build professional, mobile-friendly websites for cafés,
-                shops, and local trades — helping you attract more local customers and
-                start getting bookings and calls fast.
-              </p>
+              <strong>Karol Digital</strong> specialises in affordable web design for small businesses. 
+              We create modern, mobile-friendly websites tailored for service-based small businesses, 
+              retail and e-commerce shops, food and hospitality brands, skilled trades and construction 
+              companies, as well as creative and digital small businesses across arts, entertainment 
+              and recreation. Our goal is to help small businesses improve online visibility, build 
+              trust, and generate more enquiries, bookings and sales.
+            </p>
+
 
               <div className="flex flex-wrap gap-4">
                 <Link
