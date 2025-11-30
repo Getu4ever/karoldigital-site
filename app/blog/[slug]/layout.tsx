@@ -1,5 +1,3 @@
-// /app/blog/[slug]/layout.tsx
-
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 
@@ -8,9 +6,9 @@ export default async function BlogPostLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const articleUrl = `https://www.karoldigital.co.uk/blog/${slug}`;
 
   // Fetch minimal metadata-required fields
