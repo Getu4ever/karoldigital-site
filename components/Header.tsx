@@ -43,12 +43,20 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-center">
-          <img src="/logo.png" className="h-[60px] w-auto mb-1" alt="Karol Digital – Digital Marketing & Web Design Agency UK" />
-          <span className="text-xl md:text-2xl font-semibold text-white">
-            Karol <span className="text-yellow-400">Digital</span>
-          </span>
-        </Link>
+        <Link href="/" className="flex items-center gap-2" aria-label="Karol Digital Home">
+        <img
+          src="/logo.png"
+          className="h-[60px] w-auto"
+          alt="Karol Digital – Affordable Web Design for Small Businesses"
+        />
+
+        <span
+          className="text-xl md:text-2xl font-semibold text-white"
+          aria-hidden="true">
+          Karol <span className="text-yellow-400">Digital</span>
+        </span>
+      </Link>
+
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
