@@ -18,11 +18,17 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src="/logo.png" alt="Karol Digital Logo" className="h-[50px] w-auto" />
-              <h3 className="text-2xl font-semibold text-white">
-                Karol <span className="text-yellow-400">Digital</span>
-              </h3>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Karol Digital – Affordable Web Design for Small Businesses"
+              className="h-[50px] w-auto"
+            />
+
+            <span className="text-2xl font-semibold text-white">
+              Karol <span className="text-yellow-400">Digital</span>
+            </span>
+          </div>
+
             <p className="text-gray-300 leading-relaxed text-sm max-w-xs">
               Empowering small businesses through affordable web design, SEO, and digital marketing.
               Helping local brands grow online with confidence and creativity.
