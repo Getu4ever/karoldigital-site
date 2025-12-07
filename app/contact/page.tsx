@@ -27,12 +27,19 @@ export default function ContactPage() {
 
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-extrabold">
-              <span className="text-white">Contact </span>
-              <span className="text-yellow-400">Us</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mt-3">
-              We are here to help you grow your digital presence. Send us a message today.
-            </p>
+            <span className="text-white">Contact </span>
+            <span className="text-yellow-400">Us</span>
+
+            {/* SEO-only extension (not visible on screen) */}
+            <span className="sr-only">
+              Contact Karol Digital for affordable web design and digital marketing support in the UK
+            </span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mt-3">
+            We are here to help you grow your digital presence. Get in Touch today.
+          </p>
+
           </div>
         </motion.section>
 

@@ -5,6 +5,9 @@ import LegalHero from "@/components/LegalHero";
 export default function PrivacyPolicy() {
   return (
     <>
+    <h1 className="sr-only">
+    Privacy Policy for Karol Digital web design and digital marketing services in the UK
+  </h1>
       <LegalHero
         title="Privacy Policy"
         subtitle="How Karol Digital collects, protects, and uses your personal information."

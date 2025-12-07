@@ -29,13 +29,20 @@ export default function About() {
 
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-              <span className="text-white">About </span>
-              <span className="text-yellow-400">Karol Digital</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Building affordable, creative, and mobile-friendly websites that help
-              small businesses grow and stand out online.
-            </p>
+            <span className="text-white">About </span>
+            <span className="text-yellow-400">Karol Digital</span>
+
+            {/* SEO-only extension (not visible on screen) */}
+            <span className="sr-only">
+              Our story and mission to make web design and digital marketing accessible for small businesses in the UK
+            </span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+            Building affordable, creative, and mobile-friendly websites that help
+            small businesses grow and stand out online.
+          </p>
+
           </div>
         </motion.section>
 

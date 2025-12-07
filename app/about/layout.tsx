@@ -3,7 +3,7 @@
 export const metadata = {
   title: "About Karol Digital – Small Business Web Design Studio",
   description:
-    "Learn about Karol Digital, a UK-based web design studio helping small businesses with affordable websites, SEO, social media and digital marketing.",
+    "Discover the story behind Karol Digital and our mission to make professional web design and digital marketing accessible to small businesses across the UK.",
   alternates: {
     canonical: "https://www.karoldigital.co.uk/about",
   },

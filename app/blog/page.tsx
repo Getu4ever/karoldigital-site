@@ -40,12 +40,19 @@ export default async function BlogIndexPage() {
 
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-              <span className="text-white">Karol Digital </span>
-              <span className="text-yellow-400">Blog</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Insights, tips, and guides to help small businesses grow online.
-            </p>
+            <span className="text-white">Karol Digital </span>
+            <span className="text-yellow-400">Blog</span>
+
+            {/* SEO-only extension (not visible on screen) */}
+            <span className="sr-only">
+              Web design, SEO and digital marketing tips for small business growth in the UK
+            </span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+            Insights, tips, and guides to help small businesses grow online.
+          </p>
+
           </div>
         </section>
 

@@ -28,14 +28,20 @@ export default function DigitalMarketingPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6 max-w-3xl mx-auto">
-  <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-    <span className="text-white">Web Design </span>
-    <span className="text-yellow-400">Services</span>
-  </h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+          <span className="text-white">Web Design </span>
+          <span className="text-yellow-400">Services</span>
 
-  <p className="text-lg md:text-xl text-gray-100">
-    Professional, mobile-friendly websites built to help your business grow.
-  </p>
+          {/* SEO-only extension (not visible on screen) */}
+          <span className="sr-only">
+            Affordable web design services for small businesses including mobile-friendly and SEO-ready websites in the UK
+          </span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-gray-100">
+          Professional, mobile-friendly websites built to help your business grow.
+        </p>
+
 </div>
 
         </motion.section>

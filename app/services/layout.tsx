@@ -3,7 +3,7 @@
 export const metadata = {
   title: "Web Design & Digital Services Pricing – Karol Digital",
   description:
-    "Explore affordable web design packages, maintenance plans, social media setup and digital marketing services. Transparent pricing for small businesses across the UK.",
+    "Affordable web design, website maintenance, social media setup and digital marketing services for UK small businesses. Transparent pricing and professional support.",
   alternates: {
     canonical: "https://www.karoldigital.co.uk/services",
   },

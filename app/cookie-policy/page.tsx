@@ -5,6 +5,9 @@ import LegalHero from "@/components/LegalHero";
 export default function CookiePolicy() {
   return (
     <>
+    <h1 className="sr-only">
+    Cookie policy explaining how Karol Digital uses cookies on its web design and digital marketing website
+  </h1>
       <LegalHero
         title="Cookie Policy"
         subtitle="Find out how Karol Digital uses cookies to enhance your website experience."

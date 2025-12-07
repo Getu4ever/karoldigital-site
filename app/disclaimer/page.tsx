@@ -5,6 +5,9 @@ import LegalHero from "@/components/LegalHero";
 export default function Disclaimer() {
   return (
     <>
+    <h1 className="sr-only">
+    Website disclaimer for Karol Digital web design and digital marketing informational content
+  </h1>
       <LegalHero
         title="Disclaimer"
         subtitle="Important information regarding accuracy, reliability and use of our website content."

@@ -30,11 +30,18 @@ export default function PricingPage() {
     <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
       <span className="text-white">Website </span>
       <span className="text-yellow-400">Pricing</span>
+
+      {/* SEO-only extension (not visible on screen) */}
+      <span className="sr-only">
+        Affordable website design pricing packages for small businesses in the UK
+      </span>
     </h1>
+
     <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
       Transparent and affordable pricing for UK small businesses. Choose
       a package that fits your goals and budget — from design to ongoing support.
     </p>
+
   </div>
 </motion.section>
 

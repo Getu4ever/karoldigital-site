@@ -5,6 +5,9 @@ import LegalHero from "@/components/LegalHero";
 export default function TermsOfService() {
   return (
     <>
+      <h1 className="sr-only">
+    Terms of service for Karol Digital web design and digital marketing services in the UK
+  </h1>
       <LegalHero
         title="Terms of Service"
         subtitle="Please review the conditions that apply when using Karol Digital’s website and services."
