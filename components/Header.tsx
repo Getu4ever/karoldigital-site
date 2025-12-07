@@ -44,7 +44,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex flex-col items-center">
-          <img src="/logo.png" className="h-[60px] w-auto mb-1" alt="" />
+          <img src="/logo.png" className="h-[60px] w-auto mb-1" alt="Karol Digital – Digital Marketing & Web Design Agency UK" />
           <span className="text-xl md:text-2xl font-semibold text-white">
             Karol <span className="text-yellow-400">Digital</span>
           </span>
