@@ -69,7 +69,7 @@ export default async function NewsPage() {
               const imageUrl =
                 post.enclosure?.url ||
                 post["media:content"]?.url ||
-                "/news-placeholder.jpg";
+                "/news-placeholderNew.jpg";
 
               return (
                 <article
