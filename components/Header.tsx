@@ -23,6 +23,7 @@ export default function Header() {
     { href: "/services", label: "Services", icon: <Layers size={18} /> },
     { href: "/pricing", label: "Pricing", icon: <Tag size={18} /> }, // ⭐ NEW ITEM
     { href: "/blog", label: "Blog", icon: <FileText size={18} /> },
+    { href: "/news", label: "News", icon: <FileText size={18} /> },
     { href: "/contact", label: "Contact", icon: <Phone size={18} /> },
   ];
 
