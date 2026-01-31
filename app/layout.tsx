@@ -6,9 +6,9 @@ import AnimateWrapper from "@/components/AnimateWrapper";
 
 // ❗ Updated SEO-optimised metadata (perfect length)
 export const metadata = {
-  title: "Karol Digital – Affordable Web Design for Small Businesses",
+  title: "Karol Digital | Affordable Web Design & SEO for UK Small Business",
   description:
-    "Karol Digital - Affordable web design, SEO-ready websites and digital marketing for UK small businesses. Professional, modern and built to help your business grow online.",
+    "Affordable web design and SEO for UK small businesses. Karol Digital builds modern, professional websites to help you grow online. Get a free quote today!",
 };
 
 // JSON-LD: LocalBusiness (your existing schema)
