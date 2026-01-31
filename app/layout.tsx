@@ -6,7 +6,7 @@ import AnimateWrapper from "@/components/AnimateWrapper";
 
 // ❗ Updated SEO-optimised metadata (perfect length)
 export const metadata = {
-  title: "Karol Digital | Affordable Web Design & SEO for UK Small Business",
+  title: "Karol Digital | Affordable Web Design for UK Small Business",
   description:
     "Affordable web design and SEO for UK small businesses. Karol Digital builds modern, professional websites to help you grow online. Get a free quote today!",
 };
