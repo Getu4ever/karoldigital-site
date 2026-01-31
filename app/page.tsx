@@ -48,14 +48,13 @@ export default function Home() {
     Karol <span className="text-yellow-400">Digital</span> —
   </span>
   <span className="block text-2xl md:text-3xl text-gray-100 mt-3">
-    Affordable web design & digital marketing for UK small businesses
+    Affordable web design & digital marketing 
   </span>
 </h1>
 
 <p className="text-lg md:text-xl text-gray-100 drop-shadow-md mb-8 max-w-2xl mx-auto">
   Karol Digital provides affordable web design and digital marketing for UK
-  small businesses. We build mobile-friendly, SEO-ready websites that help
-  local businesses get more enquiries, bookings and online sales.
+  small businesses.
 </p>
 
 
