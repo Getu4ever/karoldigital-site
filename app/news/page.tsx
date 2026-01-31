@@ -9,10 +9,10 @@ type Props = {
   bgSrc?: string;
 };
 
-export default function HeroClient({ 
-  title = "Latest News and Updates", 
-  subtitle, 
-  bgSrc = "/hero-page-banner.jpg" 
+export default function HeroClient({
+  title = "Latest News and Updates",
+  subtitle,
+  bgSrc = "/hero-page-banner.jpg",
 }: Props) {
   return (
     <motion.section
@@ -21,35 +21,36 @@ export default function HeroClient({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <Image
-        src={bgSrc}
-        alt={title}
-        fill
-        priority
-        className="object-cover brightness-[0.45] -z-10"
-      />
+      {/* Background image (wrapper with negative z so it's behind everything) */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src={bgSrc}
+          alt={title} /* or alt="" if decorative */
+          fill
+          priority
+          className="object-cover brightness-[0.45]"
+        />
+      </div>
 
-      <div className="relative z-10 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
+      {/* Dark overlay for readability (above image, below content) */}
+      <div className="absolute inset-0 bg-black/40 z-0" aria-hidden />
+
+      {/* Foreground content */}
+      <div className="relative z-10 px-6">
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+          <span className="text-white">Latest </span>
+          <span className="text-yellow-400">News</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+          Digital marketing insights, SEO updates, and trends shaping the online world.
+        </p>
+
         {subtitle && <p className="mt-4 max-w-2xl mx-auto">{subtitle}</p>}
       </div>
     </motion.section>
   );
 }
-        {/* Dark overlay for readability */}
-<div className="absolute inset-0 bg-black/40" />
-
-<div className="relative z-10 px-6">
-  <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-    <span className="text-white">Latest </span>
-    <span className="text-yellow-400">News</span>
-  </h1>
-
-  <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-    Digital marketing insights, SEO updates, and trends shaping the online world.
-  </p>
-</div>
-</section>
 
 {/* ======================================================
     YOUR ORIGINAL NEWS PAGE CONTENT (UPDATED HEADINGS ONLY)
