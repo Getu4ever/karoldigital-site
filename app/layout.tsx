@@ -8,7 +8,7 @@ import AnimateWrapper from "@/components/AnimateWrapper";
 export const metadata = {
   title: "Karol Digital – Affordable Web Design for Small Businesses",
   description:
-    "Affordable web design, SEO-ready websites and digital marketing for UK small businesses. Professional, modern and built to help your business grow online.",
+    "Karol Digital - Affordable web design, SEO-ready websites and digital marketing for UK small businesses. Professional, modern and built to help your business grow online.",
 };
 
 // JSON-LD: LocalBusiness (your existing schema)
