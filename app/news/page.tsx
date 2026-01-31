@@ -1,44 +1,41 @@
-import Parser from "rss-parser";
-import Image from "next/image";
+"use client";
 
-type RSSItem = {
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+type Props = {
   title?: string;
-  link?: string;
-  pubDate?: string;
-  contentSnippet?: string;
-  creator?: string;
-  enclosure?: { url?: string };
-  ["media:content"]?: { url?: string };
+  subtitle?: string;
+  bgSrc?: string;
 };
 
-const parser = new Parser<RSSItem>({
-  customFields: { item: ["media:content", "enclosure"] },
-});
-
-export default async function NewsPage() {
-  const feed = await parser.parseURL("https://www.searchenginejournal.com/feed/");
-  const posts = (feed.items ?? []).slice(0, 6);
-
+export default function HeroClient({ 
+  title = "Latest News and Updates", 
+  subtitle, 
+  bgSrc = "/hero-page-banner.jpg" 
+}: Props) {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <motion.section
+      className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4 overflow-hidden"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <Image
+        src={bgSrc}
+        alt={title}
+        fill
+        priority
+        className="object-cover brightness-[0.45] -z-10"
+      />
 
-      {/* ======================================================
-          HERO SECTION (Same as Contact/About, different ALT)
-         ====================================================== */}
-      
-      <motion.section
-  className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4 overflow-hidden"
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
->
-  <Image
-    src="/hero-page-banner.jpg"
-    alt="Hero background — Latest news and updates"
-    fill
-    priority
-    className="object-cover brightness-[0.45] -z-10"
-  />
+      <div className="relative z-10 px-4">
+        <h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
+        {subtitle && <p className="mt-4 max-w-2xl mx-auto">{subtitle}</p>}
+      </div>
+    </motion.section>
+  );
+}
         {/* Dark overlay for readability */}
 <div className="absolute inset-0 bg-black/40" />
 
