@@ -93,13 +93,10 @@ export default function Home() {
                 <span className="text-[#102f35]">For Small Businesses</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              <strong>Karol Digital</strong> specialises in affordable web design for small businesses. 
-              We create modern, mobile-friendly websites tailored for service-based small businesses, 
-              retail and e-commerce shops, food and hospitality brands, skilled trades and construction 
-              companies, as well as creative and digital small businesses across arts, entertainment 
-              and recreation. Our goal is to help small businesses improve online visibility, build 
-              trust, and generate more enquiries, bookings and sales.
-            </p>
+  <strong>Karol Digital</strong> provides affordable web design and digital marketing for UK small businesses. We build mobile-friendly, SEO-ready websites and deliver conversion-focused marketing that increases enquiries, bookings and online sales.  
+  We work with retail and e-commerce, financial and immigration services, food and hospitality, skilled trades and construction, and creative & digital businesses across the UK.  
+  Our approach combines local SEO, clear site architecture and persuasive design to improve visibility, build trust with customers and generate measurable growth.
+</p>
 
 
               <div className="flex flex-wrap gap-4">
