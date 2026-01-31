@@ -26,20 +26,19 @@ export default async function NewsPage() {
           HERO SECTION (Same as Contact/About, different ALT)
          ====================================================== */}
       
-       <motion.section
-          className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-        <Image
-          src="/hero-page-banner.jpg"
-          alt="Latest News and Updates"
-          fill
-          priority
-          className="object-cover brightness-[0.45]"
-        />
-
+      <motion.section
+  className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4 overflow-hidden"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  <Image
+    src="/hero-page-banner.jpg"
+    alt="Hero background — Latest news and updates"
+    fill
+    priority
+    className="object-cover brightness-[0.45] -z-10"
+  />
         {/* Dark overlay for readability */}
 <div className="absolute inset-0 bg-black/40" />
 
