@@ -1,57 +1,58 @@
-"use client";
-
+import Parser from "rss-parser";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
-type Props = {
+type RSSItem = {
   title?: string;
-  subtitle?: string;
-  bgSrc?: string;
+  link?: string;
+  pubDate?: string;
+  contentSnippet?: string;
+  creator?: string;
+  enclosure?: { url?: string };
+  ["media:content"]?: { url?: string };
 };
 
-export default function HeroClient({
-  title = "Latest News and Updates",
-  subtitle,
-  bgSrc = "/hero-page-banner.jpg",
-}: Props) {
+const parser = new Parser<RSSItem>({
+  customFields: { item: ["media:content", "enclosure"] },
+});
+
+export default async function NewsPage() {
+  const feed = await parser.parseURL("https://www.searchenginejournal.com/feed/");
+  const posts = (feed.items ?? []).slice(0, 6);
+
   return (
-    <motion.section
-      className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4 overflow-hidden"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      {/* Background image (wrapper with negative z so it's behind everything) */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={bgSrc}
-          alt={title} /* or alt="" if decorative */
-          fill
-          priority
-          className="object-cover brightness-[0.45]"
-        />
-      </div>
+    <main className="min-h-screen bg-white text-gray-900">
 
-      {/* Dark overlay for readability (above image, below content) */}
-      <div className="absolute inset-0 bg-black/40 z-0" aria-hidden />
+      {/* ======================================================
+          HERO SECTION (Same as Contact/About, different ALT)
+         ====================================================== */}
+      <motion.section
+  className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4 overflow-hidden"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  <Image
+    src="/hero-page-banner.jpg"
+    alt="Hero background — Latest news and updates"
+    fill
+    priority
+    className="object-cover brightness-[0.45] -z-10"
+  />
 
-      {/* Foreground content */}
-      <div className="relative z-10 px-6">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-          <span className="text-white">Latest </span>
-          <span className="text-yellow-400">News</span>
-        </h1>
+        {/* Dark overlay for readability */}
+<div className="absolute inset-0 bg-black/40" />
 
-        <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-          Digital marketing insights, SEO updates, and trends shaping the online world.
-        </p>
+<div className="relative z-10 px-6">
+  <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+    <span className="text-white">Latest </span>
+    <span className="text-yellow-400">News</span>
+  </h1>
 
-        {subtitle && <p className="mt-4 max-w-2xl mx-auto">{subtitle}</p>}
-      </div>
-    </motion.section>
-  );
-}
-
+  <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+    Digital marketing insights, SEO updates, and trends shaping the online world.
+  </p>
+</div>
+</motion.section>
 {/* ======================================================
     YOUR ORIGINAL NEWS PAGE CONTENT (UPDATED HEADINGS ONLY)
    ====================================================== */}
