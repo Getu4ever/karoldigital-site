@@ -42,20 +42,21 @@ export default function Home() {
 
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 flex flex-col items-center text-center px-6 pt-40 md:pt-48">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">
-            <span className="text-white">Karol </span>
-            <span className="text-yellow-400">Digital</span>
+            {/* Replace current H1 block with this */}
+<h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg text-center">
+  <span className="block text-white">
+    Karol <span className="text-yellow-400">Digital</span> —
+  </span>
+  <span className="block text-2xl md:text-3xl text-gray-100 mt-3">
+    Affordable web design & digital marketing for UK small businesses
+  </span>
+</h1>
 
-            {/* SEO-only extension (not visible on screen) */}
-            <span className="sr-only">
-              Affordable Web Design and Digital Marketing for Small Businesses in the UK
-            </span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-gray-100 drop-shadow-md mb-8 max-w-2xl">
-            Empowering Brands Online — Affordable Web Design & Digital Marketing
-            for Small Businesses.
-          </p>
+<p className="text-lg md:text-xl text-gray-100 drop-shadow-md mb-8 max-w-2xl mx-auto">
+  Karol Digital provides affordable web design and digital marketing for UK
+  small businesses. We build mobile-friendly, SEO-ready websites that help
+  local businesses get more enquiries, bookings and online sales.
+</p>
 
 
             <div className="flex flex-wrap justify-center gap-4">
