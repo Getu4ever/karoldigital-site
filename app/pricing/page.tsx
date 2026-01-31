@@ -38,10 +38,10 @@ export default function PricingPage() {
     </h1>
 
     <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-      Transparent and affordable pricing for UK small businesses. Choose
-      a package that fits your goals and budget — from design to ongoing support.
+       Website pricing for UK small businesses — transparent, affordable plans designed
+  to get your business online quickly. Choose Starter, Growth or Premium packages.
     </p>
-
+    
   </div>
 </motion.section>
 
