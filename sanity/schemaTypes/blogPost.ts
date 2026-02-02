@@ -82,7 +82,7 @@ export default defineType({
       group: "seo",
     },
 
-    // ARTICLE BODY
+    // ARTICLE BODY — Updated with table + custom HTML support
     {
       name: "body",
       title: "Body",
@@ -90,6 +90,8 @@ export default defineType({
       of: [
         { type: "block" },
         { type: "image", options: { hotspot: true } },
+        { type: "table" },           // From @sanity/table plugin
+        { type: "customHtml" },      // ← Added for raw/custom HTML embeds
       ],
     },
 
