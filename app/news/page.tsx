@@ -22,10 +22,27 @@ export default async function NewsPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
 
+      {/* Inline keyframes + animation class (hydration-safe, no DOM mutation) */}
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .hero-fade-in {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+      `}</style>
+
       {/* ======================================================
-          HERO SECTION (Same as Contact/About, different ALT)
+          HERO SECTION - Pure CSS entrance animation (works in server component, no hydration mismatch)
          ====================================================== */}
-      <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4">
+      <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4 hero-fade-in">
         <Image
           src="/hero-page-banner.jpg"
           alt="Latest News and Updates"
@@ -35,34 +52,33 @@ export default async function NewsPage() {
         />
 
         {/* Dark overlay for readability */}
-<div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40" />
 
-<div className="relative z-10 px-6">
-  <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-    <span className="text-white">Latest </span>
-    <span className="text-yellow-400">News</span>
-  </h1>
+        <div className="relative z-10 px-6">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            <span className="text-white">Latest </span>
+            <span className="text-yellow-400">News</span>
+          </h1>
 
-  <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-    Digital marketing insights, SEO updates, and trends shaping the online world.
-  </p>
-</div>
-</section>
+          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+            Digital marketing insights, SEO updates, and trends shaping the online world.
+          </p>
+        </div>
+      </section>
 
-{/* ======================================================
-    YOUR ORIGINAL NEWS PAGE CONTENT (UPDATED HEADINGS ONLY)
-   ====================================================== */}
-<section className="bg-gray-50 py-16 px-6">
-  <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8">
-    <h1 className="text-3xl font-bold text-[#411b3f] text-center mb-4">
-      Digital Marketing News &amp; Insights
-    </h1>
+      {/* ======================================================
+          YOUR ORIGINAL NEWS PAGE CONTENT (unchanged)
+         ====================================================== */}
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+          <h1 className="text-3xl font-bold text-[#411b3f] text-center mb-4">
+            Digital Marketing News &amp; Insights
+          </h1>
 
-    <p className="text-gray-700 text-center max-w-3xl mx-auto mb-12">
-      Automatically updated marketing, SEO, and social media news curated from
-      Search Engine Journal — trusted by professionals worldwide.
-    </p>
-
+          <p className="text-gray-700 text-center max-w-3xl mx-auto mb-12">
+            Automatically updated marketing, SEO, and social media news curated from
+            Search Engine Journal — trusted by professionals worldwide.
+          </p>
 
           <div className="grid gap-10 md:grid-cols-3">
             {posts.map((post, i) => {
@@ -118,14 +134,13 @@ export default async function NewsPage() {
           <p className="text-center text-gray-500 text-sm mt-12">
             Content sourced automatically from{" "}
             <a
-            href="https://www.searchenginejournal.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-[#411b3f]"
+              href="https://www.searchenginejournal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-[#411b3f]"
             >
-            SearchEngineJournal.com
+              SearchEngineJournal.com
             </a>
-
             .
           </p>
         </div>
