@@ -1,14 +1,21 @@
 // /app/pricing/layout.tsx
 
-import { generateSEOMetadata } from "@/components/seo-server";
+// Remove this import line entirely:
+// import { generateSEOMetadata } from "@/components/seo-server";
 
-export const metadata = generateSEOMetadata({
+// Use the standard 'metadata' object supported by Next.js 14
+export const metadata = {
   title: "Website Pricing & Packages – Karol Digital",
   description:
     "Transparent and affordable website pricing for UK small businesses. Explore Starter, Growth and Premium web design packages plus digital marketing services.",
-  url: "https://www.karoldigital.co.uk/pricing",
-  image: "/hero-page-banner.jpg",
-});
+  // Add the canonical URL and image URL directly:
+  alternates: {
+    canonical: "https://www.karoldigital.co.uk/pricing",
+  },
+  openGraph: {
+    images: "/hero-page-banner.jpg",
+  },
+};
 
 const pricingSchema = {
   "@context": "https://schema.org",
