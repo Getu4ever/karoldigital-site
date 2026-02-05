@@ -24,20 +24,21 @@ export default function BuildersWebDesign() {
             className="object-cover brightness-[0.4]"
           />
           <div className="relative z-10 px-6">
-            <h1 className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tight">
-              Websites That <span className="text-yellow-400">Build Your Business</span>
-            </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-200">
-              High-performance websites for UK Builders, Contractors, and Tradespeople.
-              Designed to turn local searches into booked jobs.
-            </p>
-            <Link
-              href="/contact"
-              className="bg-[#102f35] hover:bg-yellow-500 hover:text-black text-white px-10 py-4 rounded-md font-bold transition-all inline-block"
-            >
-              Get My Free Quote
-            </Link>
-          </div>
+  <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
+    Websites That <span className="text-yellow-400">Build Your Business</span>
+  </h1>
+  <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-200">
+    High-performance websites for UK Builders, Contractors, and Tradespeople.
+    Designed to turn local searches into booked jobs.
+  </p>
+  <Link
+    href="/contact"
+    className="bg-white text-[#102f35] hover:bg-yellow-400 px-10 py-4 rounded-full font-bold transition-all inline-block shadow-lg"
+  >
+    Get My Free Quote
+  </Link>
+</div>
+
         </motion.section>
 
         {/* === SECTION 0: BUILDING TRUST & AUTHORITY === */}

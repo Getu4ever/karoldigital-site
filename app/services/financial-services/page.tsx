@@ -12,7 +12,7 @@ export default function FinanceWebDesign() {
 
         {/* === HERO: TRUST & STABILITY === */}
        <motion.section
-  className="relative min-h-[65vh] pt-24 md:pt-28 flex items-center justify-center text-center text-white"
+  className="relative min-h-[65vh] pt-24 md:pt-24 flex items-center justify-center text-center text-white"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 1 }}
@@ -23,19 +23,24 @@ export default function FinanceWebDesign() {
             fill
             className="object-cover brightness-[0.35]"
           />
-          <div className="relative z-10 px-6 max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Digital Excellence for <span className="text-yellow-400">Financial Professionals</span>
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-gray-200">
-              High-trust, secure, and professional websites for UK Mortgage Brokers, 
-              Accountants, and Financial Advisors.
-            </p>
-            {/* CTA Button using brand colors */}
-            <Link href="/contact" className="bg-yellow-400 hover:bg-yellow-300 text-[#102f35] px-10 py-4 rounded-md font-bold transition shadow-xl inline-block">
-              Request a Professional Consultation
-            </Link>
-          </div>
+         <div className="relative z-10 px-6 max-w-2xl mx-auto">
+  <h1 className="text-4xl md:text-6xl font-bold mb-6">
+    Digital Excellence for <span className="text-yellow-400">Financial&nbsp;Professionals</span>
+  </h1>
+  <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-100">
+    High-trust, secure, and professional websites for UK Mortgage Brokers, 
+    Accountants, and Financial Advisors.
+  </p>
+  <Link
+    href="/contact"
+    className="bg-white text-[#102f35] hover:bg-yellow-400 px-10 py-4 rounded-full font-bold transition-all inline-block shadow-lg"
+  >
+    Request a Professional Consultation
+  </Link>
+</div>
+
+
+
         </motion.section>
 
         {/* === SEO CONTENT: THE AUTHORITY SECTION === */}
