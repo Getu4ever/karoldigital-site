@@ -57,7 +57,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">Quick Links</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/services" className="hover:text-yellow-400 transition">Our Services</Link></li>
+              <li><Link href="/services/web-design" className="hover:text-yellow-400 transition">Web Design Services</Link></li>
               <li><Link href="/pricing" className="hover:text-yellow-400 transition">Packages</Link></li>
               <li><Link href="/blog" className="hover:text-yellow-400 transition">Expert Blog</Link></li>
               <li><Link href="/contact" className="hover:text-yellow-400 transition">Free Quote</Link></li>
