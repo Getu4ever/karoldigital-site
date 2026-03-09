@@ -5,15 +5,27 @@ export async function POST(req) {
     const data = await req.json();
     const { captchaToken, name, email, phone, message } = data;
 
-    // 1. Verify reCAPTCHA first
-    const verifyRes = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
-      { method: "POST" }
-    );
+    // 1. Verify reCAPTCHA with Google (Vercel-Optimized Fetch)
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY || "6LdsKYQsAAAAABVjVqYu_7QcS5AcKC32Mg-salN1";
+    
+    const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: secretKey,
+        response: captchaToken,
+      }),
+    });
+
     const verifyData = await verifyRes.json();
 
+    // Log the error to Vercel dashboard so we can see WHY it fails
     if (!verifyData.success) {
-      return Response.json({ success: false, error: "reCAPTCHA failed" }, { status: 400 });
+      console.error("reCAPTCHA Google Response:", verifyData);
+      return Response.json({ 
+        success: false, 
+        error: `reCAPTCHA failed: ${verifyData["error-codes"]?.[0] || "Unknown error"}` 
+      }, { status: 400 });
     }
 
     // 2. Setup Transporter
@@ -29,13 +41,12 @@ export async function POST(req) {
 
     await transporter.verify();
 
-    // 3. SEND ONE COMPOSITE EMAIL
-    // We send to the CUSTOMER and BCC YOU. This bypasses the Zoho "Self-to-Self" filter.
+    // 3. Send the Email
     await transporter.sendMail({
       from: `"Karol Digital" <${process.env.EMAIL_USER}>`,
-      to: email, // Send to the customer
-      bcc: "info@karoldigital.co.uk", // Send a copy to you
-      replyTo: email, // Clicking reply in your inbox goes to the customer
+      to: email, 
+      bcc: "info@karoldigital.co.uk",
+      replyTo: email, 
       subject: `Confirmation: We've received your inquiry, ${name}`,
       html: `
         <div style="font-family: Arial; color: #333;">
@@ -47,9 +58,6 @@ export async function POST(req) {
             <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
             <p><strong>Message:</strong> ${message}</p>
           </div>
-          <p style="font-size: 11px; color: #999; margin-top: 20px;">
-            Ref: Website Contact Form Submission
-          </p>
         </div>
       `,
     });
@@ -57,7 +65,7 @@ export async function POST(req) {
     return Response.json({ success: true });
 
   } catch (error) {
-    console.error("ZOHO ERROR:", error.message);
+    console.error("SERVER ERROR:", error.message);
     return Response.json({ success: false, error: error.message }, { status: 500 });
   }
 }
