@@ -1,12 +1,12 @@
-// /app/web-design-builders/layout.tsx
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Web Design for Builders & Construction Companies UK | Karol Digital",
+  // Refined for "Contractor" and "Trades" keywords
+  title: "Web Design for Builders & Construction Contractors UK | Karol Digital",
   description:
-    "Professional websites for UK builders, plumbers, and electricians. Show off your portfolio and get more local leads with a mobile-friendly tradesman website.",
-  url: "https://www.karoldigital.co.uk",
-  image: "/builders-hero-bg.jpg",
+    "High-performance websites for UK builders, contractors, and tradespeople. Get more local leads with professional project galleries and SEO for your trade business.",
+  url: "https://www.karoldigital.co.uk/services/building-services",
+  image: "/building-services-hero.jpg", // Using your industry-specific image
 });
 
 const builderServiceSchema = {
@@ -14,15 +14,42 @@ const builderServiceSchema = {
   "@type": "Service",
   "serviceType": "Web Design for Construction & Trades",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk"
+    "url": "https://www.karoldigital.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB"
+    }
   },
   "areaServed": {
     "@type": "Country",
     "name": "United Kingdom"
   },
-  "description": "Specialised web design for UK tradespeople. Includes project galleries, lead generation forms, and local SEO for building services.",
+  "description": "Bespoke web design and local SEO for UK tradespeople, building firms, and construction contractors. Features include before/after galleries and lead capture.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Trade & Construction Web Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Builder Portfolio Websites",
+          "description": "Websites featuring high-resolution project galleries and client testimonial integrations."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Local SEO for Tradespeople",
+          "description": "Optimising your business to rank for 'builder near me' and specific local service areas."
+        }
+      }
+    ]
+  }
 };
 
 export default function BuildersLayout({ children }: { children: React.ReactNode }) {

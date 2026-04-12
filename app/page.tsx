@@ -167,127 +167,108 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* === SECTION 3: Pricing Packages (Redesigned) === */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative py-24 px-6 md:px-12 bg-white"
-        >
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-              💼 Web Design Packages
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Clear, affordable packages designed to help your business grow online.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
-            {/* === STARTER PACKAGE === */}
-            <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition">
-              <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">
-                Starter
-              </h3>
-
-              <p className="text-gray-600 text-center mb-6">
-                Perfect for new businesses needing a clean, simple online presence.
-              </p>
-
-              <ul className="space-y-3 text-gray-700 mb-8">
-                <li>✔ Up to 3 pages</li>
-                <li>✔ WordPress or Google Sites</li>
-                <li>✔ No coding required</li>
-                <li>✔ Mobile-responsive design</li>
-                <li>✔ Basic contact form</li>
-                <li>✔ Fast turnaround</li>
-                <li className="text-gray-400 line-through">✘ SEO</li>
-                <li className="text-gray-400 line-through">✘ AI Chatbot</li>
-              </ul>
-
-              <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                £150 – £300
-              </p>
-
-              <Link
-                href="/contact"
-                className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition"
-              >
-                Choose Starter
-              </Link>
-            </div>
-
-            {/* === GROWTH PACKAGE === */}
-            <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition transform scale-105">
-              <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">
-                Growth
-              </h3>
-
-              <p className="text-gray-600 text-center mb-6">
-                Ideal for growing businesses wanting a stronger online presence.
-              </p>
-
-              <ul className="space-y-3 text-gray-700 mb-8">
-                <li>✔ Up to 6 pages</li>
-                <li>✔ WordPress or Google Sites</li>
-                <li>✔ On-page SEO</li>
-                <li>✔ Speed optimisation</li>
-                <li>✔ Mobile-responsive</li>
-                <li>✔ Contact form + integrations</li>
-                <li>✔ Google Business optimisation</li>
-                <li className="text-gray-400 line-through">✘ Coding</li>
-                {/* Added Chatbot */}
-                <li>✔ AI Chatbot (Basic Version)</li>
-              </ul>
-
-              <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                £350 – £600
-              </p>
-
-              <Link
-                href="/contact"
-                className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition"
-              >
-                Choose Growth
-              </Link>
-            </div>
-
-            {/* === PREMIUM PACKAGE === */}
-            <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition">
-              <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">
-                Premium
-              </h3>
-
-              <p className="text-gray-600 text-center mb-6">
-                Best for businesses wanting custom, high-end functionality & SEO.
-              </p>
-
-              <ul className="space-y-3 text-gray-700 mb-8">
-                <li>✔ 6–10 pages</li>
-                <li>✔ Custom coding included</li>
-                <li>✔ WordPress or fully custom</li>
-                <li>✔ Advanced SEO</li>
-                <li>✔ Speed optimisation</li>
-                <li>✔ Blog integration</li>
-                <li>✔ Custom animations</li>
-                {/* Added Chatbot */}
-                <li>✔ AI Chatbot (Advanced Version)</li>
-              </ul>
-
-              <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                £650 – £1,200
-              </p>
-
-              <Link
-                href="/contact"
-                className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition"
-              >
-                Choose Premium
-              </Link>
-            </div>
-          </div>
-        </motion.section>
+         {/* === PRICING PACKAGES === */}
+                <FadeIn>
+                  <section className="py-24 px-6 md:px-12 bg-white">
+                    <div className="max-w-7xl mx-auto text-center mb-16">
+                      <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
+                        💼 Web Design Packages
+                      </h2>
+                      <p className="text-gray-600 max-w-2xl mx-auto">
+                        Clear, affordable packages designed to help your business grow online.
+                      </p>
+                    </div>
+        
+                    <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+        
+                      {/* STARTER */}
+                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition">
+                        <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
+                        <p className="text-gray-600 text-center mb-6">
+                          Perfect for new businesses needing a clean online presence.
+                        </p>
+                        <ul className="space-y-3 text-gray-700 mb-8">
+                          <li>✔ Up to 3 pages</li>
+                          <li>✔ WordPress or Google Sites</li>
+                          <li>✔ Mobile responsive</li>
+                          <li>✔ Contact form</li>
+                          <li className="text-gray-400 line-through">✘ SEO</li>
+                        </ul>
+                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                          £150 – £300
+                        </p>
+                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                          Choose Starter
+                        </Link>
+                      </div>
+        
+                      {/* GROWTH */}
+                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
+                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
+                        <p className="text-gray-600 text-center mb-6">
+                          Ideal for businesses wanting stronger visibility.
+                        </p>
+                        <ul className="space-y-3 text-gray-700 mb-8">
+                          <li>✔ Up to 6 pages</li>
+                          <li>✔ On-page SEO</li>
+                          <li>✔ Speed optimisation</li>
+                          <li>✔ AI chatbot (basic)</li>
+                        </ul>
+                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                          £350 – £600
+                        </p>
+                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                          Choose Growth
+                        </Link>
+                      </div>
+        
+                      {/* PREMIUM – MOST POPULAR */}
+                      <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10">
+                        <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
+                          Most Popular
+                        </div>
+                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
+                        <p className="text-gray-600 text-center mb-6">
+                          High-end performance, SEO and custom functionality.
+                        </p>
+                        <ul className="space-y-3 text-gray-700 mb-8">
+                          <li>✔ 6–10+ pages</li>
+                          <li>✔ Custom coding</li>
+                          <li>✔ Advanced SEO</li>
+                          <li>✔ Advanced AI chatbot</li>
+                        </ul>
+                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                          £650 – £1,200
+                        </p>
+                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                          Choose Premium
+                        </Link>
+                      </div>
+        
+                      {/* ENTERPRISE */}
+                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
+                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise</h3>
+                        <p className="text-gray-600 text-center mb-6">
+                          Custom-built solutions for complex business operations.
+                        </p>
+                        <ul className="space-y-3 text-gray-700 mb-8">
+                          <li>✔ Fully custom-coded applications</li>
+                          <li>✔ User roles & infrastructure</li>
+                          <li>✔ Deep database integration</li>
+                          <li>✔ Advanced e-commerce</li>
+                          <li>✔ Enhanced security</li>
+                        </ul>
+                        <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
+                          £1,500 – £2,000
+                        </p>
+                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                          Request Quote
+                        </Link>
+                      </div>
+                   
+                    </div>
+                  </section>
+                </FadeIn>
 
         {/* === SECTION 4: Social Media + Digital Marketing === */}
         <motion.section

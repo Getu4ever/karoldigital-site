@@ -29,8 +29,8 @@ export default function DigitalMarketingPage() {
 
           <div className="relative z-10 px-6 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-          <span className="text-white">Web Design </span>
-          <span className="text-yellow-400">Services</span>
+          <span className="text-white">Digital </span>
+          <span className="text-yellow-400">Marketing</span>
 
           {/* SEO-only extension (not visible on screen) */}
           <span className="sr-only">

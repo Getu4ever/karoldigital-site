@@ -1,11 +1,12 @@
-// /app/web-design-immigration/layout.tsx
+// /app/services/immigration-services/layout.tsx
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Web Design for Immigration Consultants & Law Firms | Karol Digital",
+  // Refined Title: Added "UK" and "Agency" for local SEO
+  title: "Web Design for Immigration Firms & Law Agencies UK | Karol Digital",
   description:
-    "Professional, OISC-compliant website design for UK immigration firms. We build high-trust websites with secure lead capture and appointment booking for legal consultants.",
-  url: "https://www.karoldigital.co.uk",
+    "Specialist OISC-compliant website design for UK immigration firms. High-trust, secure websites with intake forms & SEO for immigration consultants. Get a quote.",
+  url: "https://www.karoldigital.co.uk/services/immigration-services", // Updated to specific page URL
   image: "/immigration-hero-bg.jpg",
 });
 
@@ -14,9 +15,14 @@ const immigrationServiceSchema = {
   "@type": "Service",
   "serviceType": "Web Design for Immigration Law Firms",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService", // Changed to ProfessionalService to match your root layout
     "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk"
+    "url": "https://www.karoldigital.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB"
+    }
   },
   "areaServed": {
     "@type": "Country",
@@ -25,22 +31,22 @@ const immigrationServiceSchema = {
   "description": "Specialised web design services for OISC and SRA regulated immigration consultants. Includes secure data forms, multi-language support, and SEO for visa services.",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Immigration Web Design Services",
+    "name": "Immigration Web Design Packages",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Immigration Firm Starter Site",
-          "description": "Compliance-ready 3-page website with secure contact forms for UK visa enquiries."
+          "name": "OISC Compliant Web Design",
+          "description": "Compliance-ready website with secure contact forms for UK visa enquiries."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Advanced Legal Practice Website",
-          "description": "Full-service site with automated consultation booking and document upload integration."
+          "name": "Immigration SEO & Lead Generation",
+          "description": "Helping legal firms rank for keywords like 'UK Spouse Visa' and 'Skilled Worker Visa'."
         }
       }
     ]

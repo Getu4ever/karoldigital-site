@@ -1,12 +1,12 @@
-// /app/web-design-finance/layout.tsx
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Web Design for Financial Advisors & Mortgage Brokers | Karol Digital",
+  // Refined for higher-volume UK search terms
+  title: "Web Design for Accountants & Mortgage Brokers UK | Karol Digital",
   description:
-    "Professional, secure, and SEO-optimised web design for UK financial services. High-trust platforms for mortgage brokers and IFAs with lead capture and compliance focus.",
-  url: "https://www.karoldigital.co.uk",
-  image: "/finance-hero-bg.jpg",
+    "Specialist web design for UK financial professionals. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs. Secure your digital presence.",
+  url: "https://www.karoldigital.co.uk/services/financial-services",
+  image: "/1stcall-finance-showcase.jpg", // Using your specific case study image
 });
 
 const financeServiceSchema = {
@@ -14,15 +14,42 @@ const financeServiceSchema = {
   "@type": "Service",
   "serviceType": "Financial Services Web Design",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService", // Aligns with your root layout
     "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk"
+    "url": "https://www.karoldigital.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB"
+    }
   },
   "areaServed": {
     "@type": "Country",
     "name": "United Kingdom"
   },
-  "description": "Professional web design for UK financial advisors and accountants. Includes secure lead generation and GDPR-compliant forms.",
+  "description": "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready web design for UK firms.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Financial Sector Web Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accountant & Tax Advisor Web Design",
+          "description": "Clean, corporate websites designed to showcase professional expertise and handle secure enquiries."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mortgage Broker Lead Gen Sites",
+          "description": "Optimized landing pages with calculator integrations and lead funnels for mortgage advisors."
+        }
+      }
+    ]
+  }
 };
 
 export default function FinanceLayout({ children }: { children: React.ReactNode }) {

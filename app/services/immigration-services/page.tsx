@@ -187,7 +187,7 @@ export default function ImmigrationWebDesign() {
           </div>
 
           <Link
-            href="https://1stcalluk-96op.vercel.app/"
+            href="https://1stcalluk.com/"
             target="_blank"
             className="inline-flex items-center bg-[#102f35] text-white px-6 py-3 rounded-full font-bold hover:bg-[#411b3f] transition shadow-md"
           >

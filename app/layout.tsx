@@ -4,37 +4,38 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
 
-// ❗ Updated SEO-optimised metadata (perfect length)
+// ❗ Refined Metadata: Using "Web Design Agency" for better keyword density
 export const metadata = {
-  title: "Karol Digital | Affordable Web Design for UK Small Business",
+  title: "Karol Digital | Affordable Web Design Agency for UK Small Business",
   description:
-    "Affordable web design and SEO for UK small businesses. Karol Digital builds modern, professional websites to help you grow online. Get a free quote today!",
+    "Karol Digital provides professional web design and SEO services for UK small businesses. Modern, AI-ready websites built to grow your brand. Get a free quote today!",
+  alternates: {
+    canonical: "https://www.karoldigital.co.uk",
+  },
 };
 
-// JSON-LD: LocalBusiness (your existing schema)
-const localBusinessJsonLd = {
+// JSON-LD: ProfessionalService (More specific than LocalBusiness for agencies)
+const professionalServiceJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   name: "Karol Digital",
   url: "https://www.karoldigital.co.uk",
   image: "https://www.karoldigital.co.uk/seo-cover.jpg",
+  logo: "https://www.karoldigital.co.uk/logo.png",
+  priceRange: "££",
   address: {
     "@type": "PostalAddress",
     addressLocality: "London",
     postalCode: "SW20 8DN",
     addressCountry: "GB",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 51.4093, // Example for SW20 area
+    longitude: -0.2104,
+  },
   description:
-    "Karol Digital provides affordable web design, AI-ready websites, social media setup and digital marketing for small businesses in the UK.",
-};
-
-// ✅ NEW: Organization Schema
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Karol Digital",
-  url: "https://www.karoldigital.co.uk",
-  logo: "https://www.karoldigital.co.uk/logo.png", // update if needed
+    "Affordable web design and digital marketing agency specializing in bespoke websites for small businesses across the UK.",
   sameAs: [
     "https://www.facebook.com/karoldigital",
     "https://www.linkedin.com/company/karoldigital",
@@ -42,40 +43,25 @@ const organizationJsonLd = {
   ],
 };
 
-// ✅ NEW: WebSite Schema + SearchAction (helps Google generate sitelinks)
+// Website Schema (Cleaned - Removed SearchAction since you don't have a search page)
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Karol Digital",
   url: "https://www.karoldigital.co.uk",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.karoldigital.co.uk/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Structured Data */}
+        {/* Unified Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd),
+            __html: JSON.stringify(professionalServiceJsonLd),
           }}
         />
-
-        {/* ✅ Added Organization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
-          }}
-        />
-
-        {/* ✅ Added WebSite Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -83,7 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* Chatbase Script (unchanged) */}
+        {/* Chatbase Script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -119,9 +105,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
       <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
         <Header />
-
         <AnimateWrapper>{children}</AnimateWrapper>
-
         <Footer />
       </body>
     </html>
