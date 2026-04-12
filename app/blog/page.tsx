@@ -28,7 +28,8 @@ export default async function BlogIndexPage() {
       <main className="min-h-screen bg-white text-gray-900">
 
         {/* === HERO SECTION === */}
-        <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4">
+        {/* Added pt-24 (mobile) and pt-32 (desktop) to clear the header area */}
+        <section className="relative min-h-[50vh] flex items-center justify-center text-center text-white pt-24 md:pt-32 pb-12">
           <Image
             src="/hero-page-banner.jpg"
             alt="Karol Digital Blog"
@@ -38,21 +39,21 @@ export default async function BlogIndexPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
 
-          <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="text-white">Karol Digital </span>
-            <span className="text-yellow-400">Blog</span>
+          <div className="relative z-10 px-6 max-w-5xl">
+            {/* Reduced from text-6xl to text-4xl/5xl for better fit */}
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+              <span className="text-white">Karol Digital </span>
+              <span className="text-yellow-400">Blog</span>
 
-            {/* SEO-only extension (not visible on screen) */}
-            <span className="sr-only">
-              Web design, SEO and digital marketing tips for small business growth in the UK
-            </span>
-          </h1>
+              {/* SEO-only extension */}
+              <span className="sr-only">
+                Web design, SEO and digital marketing tips for small business growth in the UK
+              </span>
+            </h1>
 
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-            Insights, tips, and guides to help small businesses grow online.
-          </p>
-
+            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-medium">
+              Insights, tips, and guides to help small businesses grow online in the age of AI.
+            </p>
           </div>
         </section>
 

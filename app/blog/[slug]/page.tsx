@@ -58,7 +58,7 @@ export default async function BlogPostPage(
       <main className="min-h-screen bg-white text-gray-900">
 
         {/* HERO SECTION */}
-        <section className="relative h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4">
+        <section className="relative min-h-[45vh] flex flex-col items-center justify-start text-center text-white pt-28 md:pt-36 pb-12">
           <Image
             src="/hero-page-banner.jpg"
             alt={post.title}
@@ -68,19 +68,18 @@ export default async function BlogPostPage(
           />
           <div className="absolute inset-0 bg-black/40" />
 
-          <div className="relative z-10 px-6 max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-3">
+          <div className="relative z-10 px-6 max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4 tracking-tight">
               {post.title}
             </h1>
 
             {post.subtitle && (
-              <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-medium">
                 {post.subtitle}
               </p>
             )}
           </div>
         </section>
-
         {/* CONTENT */}
         <section className="px-6 py-20 max-w-3xl mx-auto">
 
