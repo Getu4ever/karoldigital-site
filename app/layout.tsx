@@ -3,18 +3,36 @@ import { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
+import { Metadata } from "next";
 
-// ❗ Refined Metadata: Using "Web Design Agency" for better keyword density
-export const metadata = {
+// ❗ Refined Metadata: Adding mobile optimization and standardized theme colors
+export const metadata: Metadata = {
   title: "Karol Digital | Affordable Web Design Agency for UK Small Business",
   description:
     "Karol Digital provides professional web design and SEO services for UK small businesses. Modern, AI-ready websites built to grow your brand. Get a free quote today!",
+  metadataBase: new URL("https://www.karoldigital.co.uk"),
   alternates: {
-    canonical: "https://www.karoldigital.co.uk",
+    canonical: "/",
+  },
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#102f35",
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://www.karoldigital.co.uk",
+    siteName: "Karol Digital",
+    images: [
+      {
+        url: "/seo-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Karol Digital - Web Design Services",
+      },
+    ],
   },
 };
 
-// JSON-LD: ProfessionalService (More specific than LocalBusiness for agencies)
+// JSON-LD: ProfessionalService with Opening Hours (Vital for Local SEO)
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -23,6 +41,7 @@ const professionalServiceJsonLd = {
   image: "https://www.karoldigital.co.uk/seo-cover.jpg",
   logo: "https://www.karoldigital.co.uk/logo.png",
   priceRange: "££",
+  telephone: "+447432241315", // Replace with your actual business number if different
   address: {
     "@type": "PostalAddress",
     addressLocality: "London",
@@ -31,8 +50,20 @@ const professionalServiceJsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 51.4093, // Example for SW20 area
+    latitude: 51.4093,
     longitude: -0.2104,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
   },
   description:
     "Affordable web design and digital marketing agency specializing in bespoke websites for small businesses across the UK.",
@@ -43,7 +74,6 @@ const professionalServiceJsonLd = {
   ],
 };
 
-// Website Schema (Cleaned - Removed SearchAction since you don't have a search page)
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -55,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Unified Structured Data */}
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -69,7 +99,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* Chatbase Script */}
+        {/* Chatbase Script Integration */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
