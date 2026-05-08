@@ -242,7 +242,7 @@ export default function PricingPage() {
                   <li>✔ Plugin & Dependency Updates</li>
                   <li>✔ Backup guidance</li>
                 </ul>
-                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £200 -£300/mo</p>
+                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £200-£300/mo</p>
                 <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition">
                   Select Basic
                 </Link>
@@ -259,7 +259,7 @@ export default function PricingPage() {
                   <li>✔ Priority 24h Response</li>
                   <li>✔ Monthly Analytics Report</li>
                 </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] mb-6">From £300- £400/mo</p>
+                <p className="text-2xl font-extrabold text-[#102f35] mb-6">From £300-£400/mo</p>
                 <Link href="/contact" className="block text-center bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold py-3 rounded-full transition">
                   Select Premium
                 </Link>
