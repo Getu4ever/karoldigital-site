@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Karol Digital Homepage
+ * Updated with 2026 strategic fit tiers and high-performance branding.
+ */
 export default function Home() {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
@@ -19,15 +23,20 @@ export default function Home() {
       addressCountry: "GB",
     },
     description:
-      "Karol Digital provides affordable web design, AI-ready websites, social media setup and digital marketing for small businesses in the UK.",
+      "Karol Digital provides high-performance web design, brand identity, and digital marketing for small businesses in the UK.",
   };
 
   return (
     <FadeIn>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       <main className="min-h-screen bg-white text-gray-900">
+        
         {/* === HERO SECTION === */}
         <motion.section
-          className="relative h-[90vh] text-white"
+          className="relative h-[90vh] text-white overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -42,303 +51,168 @@ export default function Home() {
 
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 flex flex-col items-center text-center px-6 pt-40 md:pt-48">
-            {/* Replace current H1 block with this */}
-<h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg text-center">
-  <span className="block text-white">
-    Karol <span className="text-yellow-400">Digital</span> —
-  </span>
-  <span className="block text-2xl md:text-3xl text-gray-100 mt-3">
-    Affordable web design & digital marketing 
-  </span>
-</h1>
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg text-center">
+              <span className="block text-white">
+                Karol <span className="text-yellow-400">Digital</span> —
+              </span>
+              <span className="block text-2xl md:text-3xl text-gray-100 mt-3 font-medium">
+                High-Performance Web Design & Branding
+              </span>
+            </h1>
 
-<p className="text-lg md:text-xl text-gray-100 drop-shadow-md mb-8 max-w-2xl mx-auto">
-  Karol Digital provides affordable web design and digital marketing for UK
-  small businesses.
-</p>
-
+            <p className="text-lg md:text-xl text-gray-100 drop-shadow-md mb-8 max-w-2xl mx-auto">
+              We build conversion-focused digital infrastructure and professional identities that help UK businesses outrank the competition.
+            </p>
 
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold px-8 py-3 rounded-full transition"
+                className="bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold px-8 py-3 rounded-full transition shadow-lg"
               >
-                Let’s Get Started
+                Start Your Project
               </Link>
 
               <Link
                 href="/services"
-                className="bg-white text-[#411b3f] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition"
+                className="bg-white text-[#411b3f] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition shadow-lg"
               >
-                View Services
+                View Pricing
               </Link>
             </div>
           </div>
-
         </motion.section>
 
-        {/* === SECTION 1 === */}
+        {/* === STRATEGIC INTRO SECTION === */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          className="relative py-20 px-6 md:px-12 bg-white text-gray-800"
+          className="py-24 px-6 md:px-12 bg-white text-gray-800"
         >
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            {/* Text */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#411b3f] mb-4">
-                Affordable Web Design{" "}
-                <span className="text-[#102f35]">For Small Businesses</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#411b3f] mb-6">
+                Bespoke Digital Solutions{" "}
+                <span className="text-[#102f35]">Built for Growth</span>
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-  <strong>Karol Digital</strong> provides affordable web design and digital marketing for UK small businesses. We build mobile-friendly, SEO-ready websites and deliver conversion-focused marketing that increases enquiries, bookings and online sales.  
-  We work with retail and e-commerce, financial and immigration services, food and hospitality, skilled trades and construction, and creative & digital businesses across the UK.  
-  Our approach combines local SEO, clear site architecture and persuasive design to improve visibility, build trust with customers and generate measurable growth.
-</p>
-
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                <strong>Karol Digital</strong> provides affordable web design and digital marketing for UK small businesses. We build mobile-friendly, SEO-ready websites and deliver conversion-focused marketing that increases enquiries, bookings, and online sales.  
+                <br /><br />
+                We work with retail, e-commerce, professional services, hospitality, and construction firms across the UK. Our approach combines <strong>Strategic Brand Identity</strong>, local SEO dominance, and custom-coded architecture to improve visibility and generate measurable ROI.
+              </p>
 
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-block bg-[#102f35] hover:bg-[#411b3f] text-white px-6 py-3 rounded-full font-semibold transition shadow-md"
+                  className="inline-block bg-[#102f35] hover:bg-[#411b3f] text-white px-8 py-3 rounded-full font-semibold transition shadow-md"
                 >
-                  Get a Free Quote
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-block border border-[#102f35] text-[#102f35] hover:border-[#411b3f] hover:text-[#411b3f] px-6 py-3 rounded-full font-semibold transition"
-                >
-                  View Services
+                  Request a Strategy Call
                 </Link>
               </div>
             </div>
 
-            {/* Image */}
-            <div className="flex justify-center">
+            <div className="flex justify-center relative">
+               <div className="absolute -inset-4 bg-yellow-400/10 rounded-full blur-3xl" />
               <Image
                 src="/digital-marketing-bg.jpg"
                 alt="Digital Marketing Service"
                 width={500}
                 height={400}
-                className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+                className="relative rounded-2xl shadow-2xl w-full max-w-md object-cover"
               />
             </div>
           </div>
         </motion.section>
 
-        {/* === SECTION 2 === */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]"
-        >
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
-            {/* Image */}
-            <div className="flex justify-center">
-              <Image
-                src="/laptop-mockup.jpg"
-                alt="Website Mockup"
-                width={560}
-                height={420}
-                className="rounded-xl shadow-lg w-full max-w-xl object-cover transition-transform duration-700 hover:scale-[1.02]"
-              />
-            </div>
-
-            {/* Text */}
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35]">
-                Why Choose <span className="text-[#411b3f]">Karol Digital</span>
+        {/* === WEB PRICING PACKAGES === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-gray-50">
+            <div className="max-w-7xl mx-auto text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
+                💼 Performance Web Packages
               </h2>
-
-              <p className="text-gray-700 leading-relaxed">
-                We help small businesses thrive online with clear strategy and clean
-                execution. From professional websites to effective social setup and
-                digital marketing, we focus on visibility, enquiries, and growth.
-              </p>
-
-              <p className="text-xl font-semibold text-[#102f35]">
-                Let’s build something <span className="text-[#411b3f]">great together.</span>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Transparent pricing for high-performance websites. No hidden fees.
               </p>
             </div>
-          </div>
-        </motion.section>
 
-         {/* === PRICING PACKAGES === */}
-                <FadeIn>
-                  <section className="py-24 px-6 md:px-12 bg-white">
-                    <div className="max-w-7xl mx-auto text-center mb-16">
-                      <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-                        💼 Web Design Packages
-                      </h2>
-                      <p className="text-gray-600 max-w-2xl mx-auto">
-                        Clear, affordable packages designed to help your business grow online.
-                      </p>
-                    </div>
-        
-                    <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto">
-        
-                      {/* STARTER */}
-                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition">
-                        <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          Perfect for new businesses needing a clean online presence.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Up to 7 pages</li>
-                          <li>✔ WordPress or Google Sites</li>
-                          <li>✔ Mobile responsive</li>
-                          <li>✔ Basic SEO</li>
-                          <li>✔ Contact form</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £900–£1,500
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Choose Starter
-                        </Link>
-                      </div>
-        
-                      {/* GROWTH */}
-                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
-                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          Ideal for businesses wanting stronger visibility.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Up to 10 pages</li>
-                          <li>✔ On-page SEO</li>
-                          <li>✔ Speed optimisation</li>
-                          <li>✔ AI chatbot (basic)</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £1,800–£3,000
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Choose Growth
-                        </Link>
-                      </div>
-        
-                      {/* PREMIUM – MOST POPULAR */}
-                      <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10">
-                        <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
-                          Most Popular
-                        </div>
-                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          High-end performance, SEO and custom functionality.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ 10-15+ pages</li>
-                          <li>✔ Custom coding</li>
-                          <li>✔ Advanced SEO</li>
-                          <li>✔ Advanced AI chatbot</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £3,500–£6,000
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Choose Premium
-                        </Link>
-                      </div>
-        
-                      {/* ENTERPRISE */}
-                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
-                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          Custom-built solutions for complex business operations.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Fully custom-coded applications</li>
-                          <li>✔ User roles & infrastructure</li>
-                          <li>✔ Deep database integration</li>
-                          <li>✔ Advanced e-commerce</li>
-                          <li>✔ Enhanced security</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
-                          From £6,000
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Request Quote
-                        </Link>
-                      </div>
-                   
-                    </div>
-                  </section>
-                </FadeIn>
+            <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+              {/* STARTER */}
+              <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#411b3f] flex flex-col h-full hover:shadow-2xl transition-all">
+                <h3 className="text-2xl font-bold text-[#411b3f] text-center mb-2">Starter</h3>
+                <p className="text-xs text-center text-gray-500 mb-6 uppercase tracking-wider font-bold">Foundation Build</p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow text-sm">
+                  <li>✔ 5–7 Optimized Pages</li>
+                  <li>✔ Mobile Responsive</li>
+                  <li>✔ Basic SEO Setup</li>
+                  <li>✔ Contact Form Integration</li>
+                  <li>✔ Standard Performance</li>
+                </ul>
+                <p className="text-xl font-extrabold text-[#102f35] text-center mb-6">£900–£1,500</p>
+                <Link href="/contact" className="text-center bg-gray-100 hover:bg-[#411b3f] hover:text-white text-[#411b3f] py-3 rounded-full font-bold transition">
+                  Get Started
+                </Link>
+              </div>
 
-        {/* === SECTION 4: Social Media + Digital Marketing === */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-gray-100"
-        >
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-              📱 Social Media & Digital Marketing
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Boost your online visibility with professional branding & practical strategies.
-            </p>
-          </div>
+              {/* GROWTH */}
+              <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] flex flex-col h-full hover:shadow-2xl transition-all">
+                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-2">Growth</h3>
+                <p className="text-xs text-center text-gray-500 mb-6 uppercase tracking-wider font-bold">Scaling Strategy</p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow text-sm">
+                  <li>✔ Up to 10 Pages</li>
+                  <li>✔ Full On-page SEO</li>
+                  <li>✔ Conversion-focused UX</li>
+                  <li>✔ Basic AI Chatbot</li>
+                  <li>✔ Speed Optimization</li>
+                </ul>
+                <p className="text-xl font-extrabold text-[#102f35] text-center mb-6">£1,800–£3,000</p>
+                <Link href="/contact" className="text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full font-bold transition">
+                  Go Growth
+                </Link>
+              </div>
 
-          <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
-            <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#411b3f] mb-3">
-                Social Media Setup
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Optimised bios, branding, and content setup for key platforms.
-              </p>
-              <p className="font-bold text-[#102f35] mb-4">From £250</p>
-              <Link
-                href="/services/social-media"
-                className="text-[#102f35] font-semibold underline"
-              >
-                Learn More
-              </Link>
+              {/* PREMIUM */}
+              <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10 flex flex-col h-full ring-2 ring-yellow-400/20">
+                <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Best ROI
+                </div>
+                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-2">Premium</h3>
+                <p className="text-xs text-center text-gray-500 mb-6 uppercase tracking-wider font-bold">Full Identity & Sales</p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow text-sm">
+                  <li className="font-bold">✔ Bespoke Brand Identity</li>
+                  <li>✔ 10-15+ Custom Pages</li>
+                  <li>✔ Advanced Custom Coding</li>
+                  <li>✔ Advanced AI Integration</li>
+                  <li>✔ Sales Copywriting</li>
+                </ul>
+                <p className="text-xl font-extrabold text-[#102f35] text-center mb-6">£3,500–£6,000</p>
+                <Link href="/contact" className="text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full font-bold transition shadow-md">
+                  Go Premium
+                </Link>
+              </div>
+
+              {/* ENTERPRISE */}
+              <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] flex flex-col h-full hover:shadow-2xl transition-all">
+                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-2">Enterprise</h3>
+                <p className="text-xs text-center text-gray-500 mb-6 uppercase tracking-wider font-bold">Custom Logic</p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow text-sm">
+                  <li>✔ Fully Custom App Logic</li>
+                  <li>✔ Deep CRM Integration</li>
+                  <li>✔ Multi-user Infrastructure</li>
+                  <li>✔ Advanced E-commerce</li>
+                  <li>✔ Priority Tech Support</li>
+                </ul>
+                <p className="text-xl font-extrabold text-[#411b3f] text-center mb-6">From £6,500</p>
+                <Link href="/contact" className="text-center border-2 border-[#102f35] hover:bg-[#102f35] hover:text-white text-[#102f35] py-3 rounded-full font-bold transition">
+                  Request Quote
+                </Link>
+              </div>
             </div>
+          </section>
+        </FadeIn>
 
-            <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">
-                Digital Marketing
-              </h3>
-              <p className="text-gray-600 mb-4">
-                SEO, email marketing, content planning & brand visibility.
-              </p>
-              <p className="font-bold text-[#411b3f] mb-4">From £450</p>
-              <Link
-                href="/services/digital-marketing"
-                className="text-[#102f35] font-semibold underline"
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">
-                Brand Identity
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Logos, colour palettes, typography & social templates.
-              </p>
-              <p className="font-bold text-[#411b3f] mb-4">Custom pricing</p>
-              <Link
-                href="/contact"
-                className="text-[#102f35] font-semibold underline"
-              >
-                Request Quote
-              </Link>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* === WHY WORK WITH US === */}
+        {/* === MARKETING & RETAINERS === */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -346,51 +220,85 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-24 px-6 md:px-12 bg-white"
         >
-          <div className="max-w-6xl mx-auto text-center mb-16">
+          <div className="max-w-7xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-              Why Work With <span className="text-[#411b3f]">Karol Digital</span>?
+              📱 Growth & Maintenance
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A modern, reliable and transparent partner for small businesses who want
-              to grow online — without big agency prices.
+              Professional management to keep your platform secure and visible.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            <div className="bg-gray-50 rounded-2xl p-8 text-center border hover:border-[#411b3f] transition-all">
+              <h3 className="text-xl font-bold text-[#411b3f] mb-3">Paid Advertising</h3>
+              <p className="text-gray-600 mb-4 text-sm">Google Ads and Social Meta campaigns managed for maximum leads.</p>
+              <p className="font-extrabold text-[#102f35] mb-4">From £250/mo</p>
+              <Link href="/services/social-media" className="text-[#102f35] font-bold underline">Learn More</Link>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8 text-center border hover:border-[#102f35] transition-all">
+              <h3 className="text-xl font-bold text-[#102f35] mb-3">SEO & Content</h3>
+              <p className="text-gray-600 mb-4 text-sm">Ongoing keyword dominance and high-authority backlink strategy.</p>
+              <p className="font-extrabold text-[#411b3f] mb-4">From £450/mo</p>
+              <Link href="/services/digital-marketing" className="text-[#102f35] font-bold underline">Learn More</Link>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8 text-center border hover:border-[#102f35] transition-all">
+              <h3 className="text-xl font-bold text-[#102f35] mb-3">Tech Maintenance</h3>
+              <p className="text-gray-600 mb-4 text-sm">Bi-weekly updates, security patches, and minor UI revisions.</p>
+              <p className="font-extrabold text-[#411b3f] mb-4">From £200/mo</p>
+              <Link href="/contact" className="text-[#102f35] font-bold underline">Request Maintenance</Link>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* === BRAND VALUE SECTION === */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="py-24 px-6 md:px-12 bg-[#102f35] text-white"
+        >
+          <div className="max-w-6xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-extrabold mb-4">
+              Why Partner With <span className="text-yellow-400">Karol Digital</span>?
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              We provide the technical muscle and creative clarity of a large agency, with the agility and transparency of a dedicated partner.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {/* Trust Card 1 */}
-            <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition">
+            <div className="p-8 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10">
               <div className="text-5xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-[#102f35] mb-2">
-                Fast Delivery
-              </h3>
-              <p className="text-gray-700">
-                Get your website live quickly without compromising quality or design.
-              </p>
+              <h3 className="text-xl font-bold text-yellow-400 mb-2">Technical Excellence</h3>
+              <p className="text-gray-300">Fast, custom-coded websites built with modern stacks (Next.js/React) for superior performance.</p>
             </div>
 
-            {/* Trust Card 2 */}
-            <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition">
-              <div className="text-5xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold text-[#102f35] mb-2">
-                Professional Design
-              </h3>
-              <p className="text-gray-700">
-                Clean, modern, mobile-friendly websites built with care and attention.
-              </p>
+            <div className="p-8 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10">
+              <div className="text-5xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-yellow-400 mb-2">Strategy-First</h3>
+              <p className="text-gray-300">We don’t just "make websites"—we design conversion journeys that drive actual revenue.</p>
             </div>
 
-            {/* Trust Card 3 */}
-            <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition">
-              <div className="text-5xl mb-4">💼</div>
-              <h3 className="text-xl font-bold text-[#102f35] mb-2">
-                Small Business Friendly
-              </h3>
-              <p className="text-gray-700">
-                Fair pricing, flexible packages, and support tailored to your needs.
-              </p>
+            <div className="p-8 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10">
+              <div className="text-5xl mb-4">🤝</div>
+              <h3 className="text-xl font-bold text-yellow-400 mb-2">Scalable Partnership</h3>
+              <p className="text-gray-300">From solo-founder starters to enterprise infrastructure, we scale with your business.</p>
             </div>
           </div>
         </motion.section>
+
+        {/* === CTA SECTION === */}
+        <section className="py-20 text-center px-6">
+          <h2 className="text-4xl font-extrabold text-[#102f35] mb-6">Ready to dominate your market?</h2>
+          <Link href="/contact" className="inline-block bg-[#411b3f] hover:bg-[#102f35] text-white font-bold px-10 py-4 rounded-full transition-all scale-110 hover:scale-115">
+            Book Your Free Consultation
+          </Link>
+        </section>
+
       </main>
     </FadeIn>
   );
