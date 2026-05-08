@@ -73,17 +73,17 @@ export default function PricingPage() {
               <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition">
                 <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
                 <p className="text-gray-600 text-center mb-6">
-                  Perfect for new businesses needing a clean online presence.
+                 Foundation Web -  Perfect for new businesses needing a clean online presence.
                 </p>
                 <ul className="space-y-3 text-gray-700 mb-8">
-                  <li>✔ Up to 3 pages</li>
+                  <li>✔ 5–7 pages</li>
+                   <li>✔ Basic SEO</li>
                   <li>✔ WordPress or Google Sites</li>
                   <li>✔ Mobile responsive</li>
                   <li>✔ Contact form</li>
-                  <li className="text-gray-400 line-through">✘ SEO</li>
                 </ul>
                 <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £150 – £300
+                  £900–£1,500
                 </p>
                 <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                   Choose Starter
@@ -94,16 +94,17 @@ export default function PricingPage() {
               <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
                 <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
                 <p className="text-gray-600 text-center mb-6">
-                  Ideal for businesses wanting stronger visibility.
+                  Strategic Growth Web - Ideal for businesses wanting stronger visibility.
                 </p>
                 <ul className="space-y-3 text-gray-700 mb-8">
-                  <li>✔ Up to 6 pages</li>
+                  <li>✔ For conversion-focused sites with lead capture</li>
+                  <li>✔ Analytics, UX strategy</li>
                   <li>✔ On-page SEO</li>
                   <li>✔ Speed optimisation</li>
                   <li>✔ AI chatbot (basic)</li>
                 </ul>
                 <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £350 – £600
+                  £1,800–£3,000
                 </p>
                 <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                   Choose Growth
@@ -126,7 +127,7 @@ export default function PricingPage() {
                   <li>✔ Advanced AI chatbot</li>
                 </ul>
                 <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £650 – £1,200
+                  £3,500–£6,000
                 </p>
                 <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                   Choose Premium
@@ -147,7 +148,7 @@ export default function PricingPage() {
                   <li>✔ Enhanced security</li>
                 </ul>
                 <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
-                  £1,500 – £2,000
+                  From £6,500
                 </p>
                 <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                   Request Quote
@@ -182,7 +183,7 @@ export default function PricingPage() {
                   <li>✔ Updating plugins & dependencies</li>
                   <li>✔ Backup guidance</li>
                 </ul>
-                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">£29–£59/mo</p>
+                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £200 -£300/mo</p>
                 <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition">
                   Select Basic
                 </Link>
@@ -199,7 +200,7 @@ export default function PricingPage() {
                   <li>✔ Priority response time</li>
                   <li>✔ Advanced troubleshooting</li>
                 </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] mb-6">£79–£129/mo</p>
+                <p className="text-2xl font-extrabold text-[#102f35] mb-6">From £300- £400/mo</p>
                 <Link href="/contact" className="block text-center bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold py-3 rounded-full transition">
                   Select Premium
                 </Link>
@@ -216,7 +217,7 @@ export default function PricingPage() {
                   <li>✔ Advanced troubleshooting</li>
                   <li>✔ Feature development</li>
                 </ul>
-                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">£99–£499 per update</p>
+                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £199 per update</p>
                 <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition">
                   Request Custom Work
                 </Link>
@@ -246,7 +247,7 @@ export default function PricingPage() {
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
               <h3 className="text-xl font-bold text-[#411b3f] mb-3">Social Media Setup</h3>
               <p className="text-gray-600 mb-4">Optimised bios, branding, and content setup for key platforms.</p>
-              <p className="font-bold text-[#102f35] mb-4">From £80</p>
+              <p className="font-bold text-[#102f35] mb-4">From £250</p>
               <Link href="/services/social-media" className="text-[#102f35] font-semibold underline">
                 Learn More
               </Link>
@@ -254,7 +255,7 @@ export default function PricingPage() {
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
               <h3 className="text-xl font-bold text-[#102f35] mb-3">Digital Marketing</h3>
               <p className="text-gray-600 mb-4">SEO, email marketing, content planning & brand visibility.</p>
-              <p className="font-bold text-[#411b3f] mb-4">From £60</p>
+              <p className="font-bold text-[#411b3f] mb-4">From £450</p>
               <Link href="/services/digital-marketing" className="text-[#102f35] font-semibold underline">
                 Learn More
               </Link>
@@ -385,17 +386,17 @@ export default function PricingPage() {
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
                 <h3 className="text-xl font-bold text-[#411b3f] mb-3">Blog Setup</h3>
                 <p className="text-gray-600 mb-4">Full blog system + category setup.</p>
-                <p className="font-bold text-[#102f35]">£50+</p>
+                <p className="font-bold text-[#102f35]">£150+</p>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
                 <h3 className="text-xl font-bold text-[#102f35] mb-3">Email Marketing Integration</h3>
                 <p className="text-gray-600 mb-4">Mailchimp, Brevo or custom provider.</p>
-                <p className="font-bold text-[#411b3f]">£30+</p>
+                <p className="font-bold text-[#411b3f]">£130+</p>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
                 <h3 className="text-xl font-bold text-[#102f35] mb-3">Advanced Animations</h3>
                 <p className="text-gray-600 mb-4">Smooth, modern UI interactions.</p>
-                <p className="font-bold text-[#411b3f]">£40+</p>
+                <p className="font-bold text-[#411b3f]">£140+</p>
               </div>
             </div>
           </section>

@@ -1,11 +1,12 @@
 "use client";
+
 import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
 
-export default function ServicesPage() {
+export default function PricingPage() {
   return (
     <FadeIn>
       <main className="min-h-screen bg-white text-gray-900">
@@ -54,186 +55,177 @@ export default function ServicesPage() {
           </section>
         </FadeIn>
 
-         {/* === PRICING PACKAGES === */}
-                <FadeIn>
-                  <section className="py-24 px-6 md:px-12 bg-white">
-                    <div className="max-w-7xl mx-auto text-center mb-16">
-                      <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-                        💼 Web Design Packages
-                      </h2>
-                      <p className="text-gray-600 max-w-2xl mx-auto">
-                        Clear, affordable packages designed to help your business grow online.
-                      </p>
-                    </div>
-        
-                    <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto">
-        
-                      {/* STARTER */}
-                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition">
-                        <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          Perfect for new businesses needing a clean online presence.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Up to 3 pages</li>
-                          <li>✔ WordPress or Google Sites</li>
-                          <li>✔ Mobile responsive</li>
-                          <li>✔ Contact form</li>
-                          <li className="text-gray-400 line-through">✘ SEO</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £150 – £300
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Choose Starter
-                        </Link>
-                      </div>
-        
-                      {/* GROWTH */}
-                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
-                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          Ideal for businesses wanting stronger visibility.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Up to 6 pages</li>
-                          <li>✔ On-page SEO</li>
-                          <li>✔ Speed optimisation</li>
-                          <li>✔ AI chatbot (basic)</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £350 – £600
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Choose Growth
-                        </Link>
-                      </div>
-        
-                      {/* PREMIUM – MOST POPULAR */}
-                      <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10">
-                        <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
-                          Most Popular
-                        </div>
-                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          High-end performance, SEO and custom functionality.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ 6–10+ pages</li>
-                          <li>✔ Custom coding</li>
-                          <li>✔ Advanced SEO</li>
-                          <li>✔ Advanced AI chatbot</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £650 – £1,200
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Choose Premium
-                        </Link>
-                      </div>
-        
-                      {/* ENTERPRISE */}
-                      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
-                        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise</h3>
-                        <p className="text-gray-600 text-center mb-6">
-                          Custom-built solutions for complex business operations.
-                        </p>
-                        <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Fully custom-coded applications</li>
-                          <li>✔ User roles & infrastructure</li>
-                          <li>✔ Deep database integration</li>
-                          <li>✔ Advanced e-commerce</li>
-                          <li>✔ Enhanced security</li>
-                        </ul>
-                        <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
-                          £1,500 – £2,000
-                        </p>
-                        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                          Request Quote
-                        </Link>
-                      </div>
-                   
-                    </div>
-                  </section>
-                </FadeIn>
+        {/* === PRICING PACKAGES === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-white">
+            <div className="max-w-7xl mx-auto text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
+                💼 Web Design Packages
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Clear, affordable packages designed to help your business grow online.
+              </p>
+            </div>
 
-   {/* === MAINTENANCE PACKAGE SECTION === */}
-<FadeIn>
-  <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-gray-100">
-    <div className="max-w-6xl mx-auto text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-        Website Maintenance Packages
-      </h2>
-      <p className="text-gray-600 max-w-2xl mx-auto">
-        Optional monthly support to keep your website secure, updated, and performing at its best.
-      </p>
-    </div>
+            <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto">
 
-    <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+              {/* STARTER */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition">
+                <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
+                <p className="text-gray-600 text-center mb-6">
+                 Foundation Web -  Perfect for new businesses needing a clean online presence.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8">
+                  <li>✔ 5–7 pages</li>
+                   <li>✔ Basic SEO</li>
+                  <li>✔ WordPress or Google Sites</li>
+                  <li>✔ Mobile responsive</li>
+                  <li>✔ Contact form</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                  £900–£1,500
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Choose Starter
+                </Link>
+              </div>
 
-      {/* Basic Maintenance */}
-      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
-        <h3 className="text-2xl font-bold text-[#102f35] mb-4">Basic Maintenance</h3>
-        <p className="text-gray-600 mb-6">Ideal for small websites needing regular care.</p>
-        <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
-          <li>✔ Fixing bugs</li>
-          <li>✔ Minor text or image edits</li>
-          <li>✔ Updating plugins & dependencies</li>
-          <li>✔ Backup guidance</li>
-        </ul>
-        <p className="text-2xl font-extrabold text-[#411b3f] mb-6">£29–£59/mo</p>
-        <Link
-          href="/contact"
-          className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition"
-        >
-          Select Basic
-        </Link>
-      </div>
+              {/* GROWTH */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
+                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
+                <p className="text-gray-600 text-center mb-6">
+                  Strategic Growth Web - Ideal for businesses wanting stronger visibility.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8">
+                  <li>✔ For conversion-focused sites with lead capture</li>
+                  <li>✔ Analytics, UX strategy</li>
+                  <li>✔ On-page SEO</li>
+                  <li>✔ Speed optimisation</li>
+                  <li>✔ AI chatbot (basic)</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                  £1,800–£3,000
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Choose Growth
+                </Link>
+              </div>
 
-      {/* Premium Maintenance */}
-      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] text-center hover:-translate-y-2 transition transform scale-105">
-        <h3 className="text-2xl font-bold text-[#411b3f] mb-4">Premium Maintenance</h3>
-        <p className="text-gray-600 mb-6">Perfect for businesses needing continuous improvements.</p>
-        <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
-          <li>✔ Everything in Basic</li>
-          <li>✔ Adding new features</li>
-          <li>✔ Deployment support</li>
-          <li>✔ Priority response time</li>
-          <li>✔ Advanced troubleshooting</li>
-        </ul>
-        <p className="text-2xl font-extrabold text-[#102f35] mb-6">£79–£129/mo</p>
-        <Link
-          href="/contact"
-          className="block text-center bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold py-3 rounded-full transition"
-        >
-          Select Premium
-        </Link>
-      </div>
+              {/* PREMIUM – MOST POPULAR */}
+              <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10">
+                <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
+                  Most Popular
+                </div>
+                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
+                <p className="text-gray-600 text-center mb-6">
+                  High-end performance, SEO and custom functionality.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8">
+                  <li>✔ 6–10+ pages</li>
+                  <li>✔ Custom coding</li>
+                  <li>✔ Advanced SEO</li>
+                  <li>✔ Advanced AI chatbot</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                  £3,500–£6,000
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Choose Premium
+                </Link>
+              </div>
 
-      {/* Custom Updates */}
-      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
-        <h3 className="text-2xl font-bold text-[#102f35] mb-4">Custom Updates</h3>
-        <p className="text-gray-600 mb-6">For major improvements, redesigns, or new functionality.</p>
-        <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
-          <li>✔ Technical support</li>
-          <li>✔ Website updates</li>
-          <li>✔ Fixing issues</li>
-          <li>✔ Advanced troubleshooting</li>
-          <li>✔ Feature development</li>
-        </ul>
-        <p className="text-2xl font-extrabold text-[#411b3f] mb-6">£99–£499 per update</p>
-        <Link
-          href="/contact"
-          className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition"
-        >
-          Request Custom Work
-        </Link>
-      </div>
+              {/* ENTERPRISE */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition">
+                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise</h3>
+                <p className="text-gray-600 text-center mb-6">
+                  Custom-built solutions for complex business operations.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8">
+                  <li>✔ Fully custom-coded applications</li>
+                  <li>✔ User roles & infrastructure</li>
+                  <li>✔ Deep database integration</li>
+                  <li>✔ Advanced e-commerce</li>
+                  <li>✔ Enhanced security</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
+                  From £6,500
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Request Quote
+                </Link>
+              </div>
+           
+            </div>
+          </section>
+        </FadeIn>
 
-    </div>
-  </section>
-</FadeIn>
+        {/* === MAINTENANCE PACKAGE SECTION === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-gray-100">
+            <div className="max-w-6xl mx-auto text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
+                Website Maintenance Packages
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Optional monthly support to keep your website secure, updated, and performing at its best.
+              </p>
+            </div>
 
+            <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+              {/* Basic Maintenance */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
+                <h3 className="text-2xl font-bold text-[#102f35] mb-4">Basic Maintenance</h3>
+                <p className="text-gray-600 mb-6">Ideal for small websites needing regular care.</p>
+                <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
+                  <li>✔ Fixing bugs</li>
+                  <li>✔ Minor text or image edits</li>
+                  <li>✔ Updating plugins & dependencies</li>
+                  <li>✔ Backup guidance</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £200 -£300/mo</p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition">
+                  Select Basic
+                </Link>
+              </div>
+
+              {/* Premium Maintenance */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] text-center hover:-translate-y-2 transition">
+                <h3 className="text-2xl font-bold text-[#411b3f] mb-4">Premium Maintenance</h3>
+                <p className="text-gray-600 mb-6">Perfect for businesses needing continuous improvements.</p>
+                 <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
+                  <li>✔ Everything in Basic</li>
+                  <li>✔ Adding new features</li>
+                  <li>✔ Deployment support</li>
+                  <li>✔ Priority response time</li>
+                  <li>✔ Advanced troubleshooting</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#102f35] mb-6">From £300- £400/mo</p>
+                <Link href="/contact" className="block text-center bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold py-3 rounded-full transition">
+                  Select Premium
+                </Link>
+              </div>
+              
+              {/* Custom Updates */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
+                <h3 className="text-2xl font-bold text-[#102f35] mb-4">Custom Updates</h3>
+                <p className="text-gray-600 mb-6">For major improvements, redesigns, or new functionality.</p>
+                <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
+                  <li>✔ Technical support</li>
+                  <li>✔ Website updates</li>
+                  <li>✔ Fixing issues</li>
+                  <li>✔ Advanced troubleshooting</li>
+                  <li>✔ Feature development</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £499 per update</p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition">
+                  Request Custom Work
+                </Link>
+              </div>
+
+            </div>
+          </section>
+        </FadeIn>
 
         {/* === SOCIAL MEDIA & DIGITAL MARKETING === */}
         <motion.section
@@ -241,7 +233,7 @@ export default function ServicesPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          className="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-gray-100"
+          className="py-24 px-6 md:px-12 bg-gray-50"
         >
           <div className="max-w-7xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
@@ -251,26 +243,23 @@ export default function ServicesPage() {
               Boost your online visibility with professional branding & practical strategies.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
               <h3 className="text-xl font-bold text-[#411b3f] mb-3">Social Media Setup</h3>
               <p className="text-gray-600 mb-4">Optimised bios, branding, and content setup for key platforms.</p>
-              <p className="font-bold text-[#102f35] mb-4">From £80</p>
+              <p className="font-bold text-[#102f35] mb-4">From £250</p>
               <Link href="/services/social-media" className="text-[#102f35] font-semibold underline">
                 Learn More
               </Link>
             </div>
-
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
               <h3 className="text-xl font-bold text-[#102f35] mb-3">Digital Marketing</h3>
               <p className="text-gray-600 mb-4">SEO, email marketing, content planning & brand visibility.</p>
-              <p className="font-bold text-[#411b3f] mb-4">From £60</p>
+              <p className="font-bold text-[#411b3f] mb-4">From £450</p>
               <Link href="/services/digital-marketing" className="text-[#102f35] font-semibold underline">
                 Learn More
               </Link>
             </div>
-
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
               <h3 className="text-xl font-bold text-[#102f35] mb-3">Brand Identity</h3>
               <p className="text-gray-600 mb-4">Logos, colour palettes, typography & social templates.</p>
@@ -293,9 +282,8 @@ export default function ServicesPage() {
                 See what’s included in each package so you can choose the perfect fit for your business.
               </p>
             </div>
-
             <div className="overflow-x-auto">
-              <table className="min-w-[700px] w-full border-collapse text-left text-gray-700 shadow-lg rounded-2xl">
+              <table className="min-w-[700px] w-full border-collapse text-left text-gray-700 shadow-lg rounded-2xl overflow-hidden">
                 <thead>
                   <tr className="bg-[#102f35] text-white">
                     <th className="p-4 font-semibold">Feature</th>
@@ -305,41 +293,41 @@ export default function ServicesPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td className="p-4 border">Pages Included</td>
-                    <td className="p-4 border text-center">Up to 3</td>
-                    <td className="p-4 border text-center">Up to 6</td>
-                    <td className="p-4 border text-center">6–10</td>
+                  <tr className="border-b">
+                    <td className="p-4">Pages Included</td>
+                    <td className="p-4 text-center">Up to 3</td>
+                    <td className="p-4 text-center">Up to 6</td>
+                    <td className="p-4 text-center">6–10+</td>
+                  </tr>
+                  <tr className="border-b">
+                    <td className="p-4">SEO</td>
+                    <td className="p-4 text-center text-gray-400">✘</td>
+                    <td className="p-4 text-center">✔ On-page SEO</td>
+                    <td className="p-4 text-center">✔ Advanced SEO</td>
+                  </tr>
+                  <tr className="border-b">
+                    <td className="p-4">Speed Optimisation</td>
+                    <td className="p-4 text-center">✔ Basic</td>
+                    <td className="p-4 text-center">✔ Enhanced</td>
+                    <td className="p-4 text-center">✔ Premium</td>
+                  </tr>
+                  <tr className="border-b">
+                    <td className="p-4">Coding</td>
+                    <td className="p-4 text-center text-gray-400">✘</td>
+                    <td className="p-4 text-center text-gray-400">✘</td>
+                    <td className="p-4 text-center">✔ Included</td>
+                  </tr>
+                  <tr className="border-b">
+                    <td className="p-4">AI Chatbot</td>
+                    <td className="p-4 text-center text-gray-400">✘</td>
+                    <td className="p-4 text-center">✔ Basic Version</td>
+                    <td className="p-4 text-center">✔ Advanced Version</td>
                   </tr>
                   <tr>
-                    <td className="p-4 border">SEO</td>
-                    <td className="p-4 border text-center text-gray-400">✘</td>
-                    <td className="p-4 border text-center">✔ On-page SEO</td>
-                    <td className="p-4 border text-center">✔ Advanced SEO</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 border">Speed Optimisation</td>
-                    <td className="p-4 border text-center">✔ Basic</td>
-                    <td className="p-4 border text-center">✔ Enhanced</td>
-                    <td className="p-4 border text-center">✔ Premium</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 border">Coding</td>
-                    <td className="p-4 border text-center text-gray-400">✘</td>
-                    <td className="p-4 border text-center text-gray-400">✘</td>
-                    <td className="p-4 border text-center">✔ Included</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 border">AI Chatbot</td>
-                    <td className="p-4 border text-center text-gray-400">✘</td>
-                    <td className="p-4 border text-center">✔ Basic Version</td>
-                    <td className="p-4 border text-center">✔ Advanced Version</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 border">Google Business Integration</td>
-                    <td className="p-4 border text-center text-gray-400">✘</td>
-                    <td className="p-4 border text-center">✔ Included</td>
-                    <td className="p-4 border text-center">✔ Included</td>
+                    <td className="p-4">Google Business Integration</td>
+                    <td className="p-4 text-center text-gray-400">✘</td>
+                    <td className="p-4 text-center">✔ Included</td>
+                    <td className="p-4 text-center">✔ Included</td>
                   </tr>
                 </tbody>
               </table>
@@ -358,7 +346,6 @@ export default function ServicesPage() {
                 No matter which package you choose, every website is built with quality, performance, and usability in mind.
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
               <div className="bg-white shadow-lg p-8 rounded-2xl border">
                 <h3 className="text-xl font-bold text-[#102f35] mb-4">Core Deliverables</h3>
@@ -370,7 +357,6 @@ export default function ServicesPage() {
                   <li>✔ Hosting & domain support</li>
                 </ul>
               </div>
-
               <div className="bg-white shadow-lg p-8 rounded-2xl border">
                 <h3 className="text-xl font-bold text-[#411b3f] mb-4">Performance & Support</h3>
                 <ul className="space-y-3 text-gray-700">
@@ -396,27 +382,22 @@ export default function ServicesPage() {
                 Customise your package with optional upgrades designed to enhance your website.
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-              
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
                 <h3 className="text-xl font-bold text-[#411b3f] mb-3">Blog Setup</h3>
                 <p className="text-gray-600 mb-4">Full blog system + category setup.</p>
-                <p className="font-bold text-[#102f35]">£50+</p>
+                <p className="font-bold text-[#102f35]">£150+</p>
               </div>
-
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
                 <h3 className="text-xl font-bold text-[#102f35] mb-3">Email Marketing Integration</h3>
                 <p className="text-gray-600 mb-4">Mailchimp, Brevo or custom provider.</p>
-                <p className="font-bold text-[#411b3f]">£30+</p>
+                <p className="font-bold text-[#411b3f]">£130+</p>
               </div>
-
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
                 <h3 className="text-xl font-bold text-[#102f35] mb-3">Advanced Animations</h3>
                 <p className="text-gray-600 mb-4">Smooth, modern UI interactions.</p>
-                <p className="font-bold text-[#411b3f]">£40+</p>
+                <p className="font-bold text-[#411b3f]">£140+</p>
               </div>
-
             </div>
           </section>
         </FadeIn>
@@ -432,7 +413,6 @@ export default function ServicesPage() {
                 A simple, transparent process from start to finish.
               </p>
             </div>
-
             <div className="grid md:grid-cols-4 gap-10 max-w-6xl mx-auto">
               {[
                 { step: "1", title: "Discovery", desc: "We discuss your business, goals, and design preferences." },
@@ -461,13 +441,11 @@ export default function ServicesPage() {
                 Answers to the most common questions clients ask before getting started.
               </p>
             </div>
-
             <div className="max-w-4xl mx-auto space-y-6">
               <details className="border rounded-lg p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">How long does a website take?</summary>
                 <p className="mt-3 text-gray-600">Starter sites: 3–5 days. Growth: 5–10 days. Premium: 10–20 days depending on complexity.</p>
               </details>
-
               <details className="border rounded-lg p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">Do you provide hosting?</summary>
                 <p className="mt-3 text-gray-600">
@@ -475,12 +453,10 @@ export default function ServicesPage() {
                   and help you choose the right plan for your website.
                 </p>
               </details>
-
               <details className="border rounded-lg p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">Can I update the website myself?</summary>
                 <p className="mt-3 text-gray-600">Yes — you will receive full training after launch.</p>
               </details>
-
               <details className="border rounded-lg p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">What is the payment structure?</summary>
                 <p className="mt-3 text-gray-600">Usually 50% upfront and 50% on completion. Instalments available if needed.</p>
