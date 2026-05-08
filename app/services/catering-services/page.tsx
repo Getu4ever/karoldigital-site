@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * CateringWebDesign Page
+ * Updated to include The Office Lunch showcase and Food Mama Kitchens.
+ * Full code provided as requested.
+ */
 export default function CateringWebDesign() {
   return (
     <FadeIn>
@@ -12,11 +17,11 @@ export default function CateringWebDesign() {
 
         {/* === HERO: THE APPETISER === */}
         <motion.section
-  className="relative min-h-[65vh] pt-24 md:pt-28 flex items-center justify-center text-center text-white"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1 }}
->
+          className="relative min-h-[65vh] pt-24 md:pt-28 flex items-center justify-center text-center text-white"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <Image
             src="/hero-page-banner.jpg" 
             alt="Web Design for Catering Businesses"
@@ -50,7 +55,43 @@ export default function CateringWebDesign() {
           </p>
         </section>
 
-        {/* === CASE STUDY: FOOD MAMA KITCHENS === */}
+        {/* === CASE STUDY 1: THE OFFICE LUNCH === */}
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-[#fcfcfc] rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row-reverse border border-gray-100">
+              <div className="md:w-1/2 relative min-h-[400px]">
+                <Image
+                  src="/office-lunch-showcase.jpg" // Screenshot of the-office-lunch.vercel.app
+                  alt="The Office Lunch Web Design"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="md:w-1/2 p-8 md:p-14 flex flex-col justify-center">
+                <span className="text-red-600 font-bold text-sm uppercase tracking-widest mb-2">Corporate Catering</span>
+                <h3 className="text-3xl font-bold text-[#102f35] mb-6">The Office Lunch</h3>
+                <p className="text-gray-700 mb-8 leading-relaxed">
+                  We built a sleek, modern interface for <strong>The Office Lunch</strong>, a specialized corporate catering service. The platform is designed to handle high-volume office orders with a focus on professional aesthetics and rapid navigation.
+                </p>
+                <div className="flex gap-4 mb-8">
+                  <div className="bg-gray-100 p-4 rounded-xl flex-1">
+                    <span className="block text-xl font-bold text-red-600">B2B Logic</span>
+                    <span className="text-xs text-gray-500 uppercase">Built for Teams</span>
+                  </div>
+                  <div className="bg-gray-100 p-4 rounded-xl flex-1">
+                    <span className="block text-xl font-bold text-red-600">Clean UI</span>
+                    <span className="text-xs text-gray-500 uppercase">Fast Conversion</span>
+                  </div>
+                </div>
+                <Link href="https://the-office-lunch.vercel.app/" target="_blank" className="text-[#411b3f] font-bold flex items-center hover:underline">
+                  Visit The Office Lunch <span className="ml-2">↗</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* === CASE STUDY 2: FOOD MAMA KITCHENS === */}
         <section className="py-20 px-6 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row border border-gray-100">
@@ -87,7 +128,7 @@ export default function CateringWebDesign() {
         </section>
 
         {/* === FEATURE GRID === */}
-        <section className="py-20 px-6 bg-white">
+        <section className="py-20 px-6 bg-white border-t border-gray-100">
           <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
             {[
               { title: "Dynamic Menus", desc: "Digital menus that look great on any device and are easy to update as your specials change.", icon: "🍱" },
