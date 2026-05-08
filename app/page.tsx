@@ -188,14 +188,14 @@ export default function Home() {
                           Perfect for new businesses needing a clean online presence.
                         </p>
                         <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Up to 3 pages</li>
+                          <li>✔ Up to 7 pages</li>
                           <li>✔ WordPress or Google Sites</li>
                           <li>✔ Mobile responsive</li>
+                          <li>✔ Basic SEO</li>
                           <li>✔ Contact form</li>
-                          <li className="text-gray-400 line-through">✘ SEO</li>
                         </ul>
                         <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £150 – £300
+                          £900–£1,500
                         </p>
                         <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                           Choose Starter
@@ -209,13 +209,13 @@ export default function Home() {
                           Ideal for businesses wanting stronger visibility.
                         </p>
                         <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ Up to 6 pages</li>
+                          <li>✔ Up to 10 pages</li>
                           <li>✔ On-page SEO</li>
                           <li>✔ Speed optimisation</li>
                           <li>✔ AI chatbot (basic)</li>
                         </ul>
                         <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £350 – £600
+                          £1,800–£3,000
                         </p>
                         <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                           Choose Growth
@@ -232,13 +232,13 @@ export default function Home() {
                           High-end performance, SEO and custom functionality.
                         </p>
                         <ul className="space-y-3 text-gray-700 mb-8">
-                          <li>✔ 6–10+ pages</li>
+                          <li>✔ 10-15+ pages</li>
                           <li>✔ Custom coding</li>
                           <li>✔ Advanced SEO</li>
                           <li>✔ Advanced AI chatbot</li>
                         </ul>
                         <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                          £650 – £1,200
+                          £3,500–£6,000
                         </p>
                         <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                           Choose Premium
@@ -259,7 +259,7 @@ export default function Home() {
                           <li>✔ Enhanced security</li>
                         </ul>
                         <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
-                          £1,500 – £2,000
+                          From £6,000
                         </p>
                         <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
                           Request Quote
@@ -295,7 +295,7 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Optimised bios, branding, and content setup for key platforms.
               </p>
-              <p className="font-bold text-[#102f35] mb-4">From £80</p>
+              <p className="font-bold text-[#102f35] mb-4">From £250</p>
               <Link
                 href="/services/social-media"
                 className="text-[#102f35] font-semibold underline"
@@ -311,7 +311,7 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 SEO, email marketing, content planning & brand visibility.
               </p>
-              <p className="font-bold text-[#411b3f] mb-4">From £60</p>
+              <p className="font-bold text-[#411b3f] mb-4">From £450</p>
               <Link
                 href="/services/digital-marketing"
                 className="text-[#102f35] font-semibold underline"
