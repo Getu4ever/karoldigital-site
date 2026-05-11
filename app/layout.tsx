@@ -5,6 +5,12 @@ import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
 import { Metadata } from "next";
 
+/* Mobile viewport must be exported separately in App Router */
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 // ❗ Refined Metadata: Adding mobile optimization and standardized theme colors
 export const metadata: Metadata = {
   title: "Karol Digital | Affordable Web Design for UK Small Business",
@@ -29,6 +35,9 @@ export const metadata: Metadata = {
         alt: "Karol Digital - Web Design Services",
       },
     ],
+  },
+  icons: {
+    apple: "/apple-touch-icon.png",
   },
 };
 
