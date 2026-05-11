@@ -1,15 +1,18 @@
 "use client";
 
-import { useState, useRef } from "react"; // Added useRef
+import { useState, useRef } from "react";
 import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ReCAPTCHA from "react-google-recaptcha"; // Ensure you ran: npm install react-google-recaptcha
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactPage() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [source, setSource] = useState("");
+  const [otherSource, setOtherSource] = useState("");
+
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const onCaptchaChange = (token: string | null) => {
@@ -24,6 +27,11 @@ export default function ContactPage() {
       return;
     }
 
+    if (source === "Other" && !otherSource.trim()) {
+      setStatus("Please specify how you heard about us.");
+      return;
+    }
+
     setLoading(true);
     setStatus("");
 
@@ -34,22 +42,23 @@ export default function ContactPage() {
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-      captchaToken, // Sending the token to the backend
+      source: source === "Other" ? otherSource : source,
+      captchaToken,
     };
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (res.ok) {
         setStatus("Message sent successfully!");
         form.reset();
-        recaptchaRef.current?.reset(); // Reset the widget
+        setSource("");
+        setOtherSource("");
+        recaptchaRef.current?.reset();
         setCaptchaToken(null);
       } else {
         const errData = await res.json();
@@ -84,12 +93,9 @@ export default function ContactPage() {
             <h1 className="text-5xl md:text-6xl font-extrabold">
               <span className="text-white">Contact </span>
               <span className="text-yellow-400">Us</span>
-              <span className="sr-only">
-                Contact Karol Digital for affordable web design and digital marketing support in the UK
-              </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mt-3">
-              We are here to help you grow your digital presence. Get in Touch today.
+              We are here to help you grow your digital presence. Get in touch today.
             </p>
           </div>
         </motion.section>
@@ -106,7 +112,9 @@ export default function ContactPage() {
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">Full Name</label>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Full Name
+                    </label>
                     <input
                       name="name"
                       type="text"
@@ -117,7 +125,9 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">Email Address</label>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Email Address
+                    </label>
                     <input
                       name="email"
                       type="email"
@@ -128,7 +138,9 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">Phone Number</label>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Phone Number
+                    </label>
                     <input
                       name="phone"
                       type="text"
@@ -137,8 +149,48 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {/* SOURCE FIELD */}
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">Message</label>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Where did you hear about us?
+                    </label>
+                    <select
+                      required
+                      value={source}
+                      onChange={(e) => setSource(e.target.value)}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-[#102f35] outline-none"
+                    >
+                      <option value="">Select an option</option>
+                      <option value="Online Search">Online / Digital Search</option>
+                      <option value="Social Media">Social Media</option>
+                      <option value="Referral">Referral / Word of Mouth</option>
+                      <option value="Advertising">Advertising</option>
+                      <option value="Job Platform">Job Platform / Recruiter</option>
+                      <option value="Content">Blog / Email / Press</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  {source === "Other" && (
+                    <div>
+                      <label className="block text-gray-700 font-medium mb-1">
+                        Other (please specify)
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={otherSource}
+                        onChange={(e) => setOtherSource(e.target.value)}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#102f35] outline-none"
+                        placeholder="Please specify"
+                      />
+                    </div>
+                  )}
+
+                  <div>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Message
+                    </label>
                     <textarea
                       name="message"
                       required
@@ -148,7 +200,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* reCAPTCHA WIDGET */}
+                  {/* reCAPTCHA */}
                   <div className="flex justify-start py-2">
                     <ReCAPTCHA
                       ref={recaptchaRef}
@@ -166,7 +218,13 @@ export default function ContactPage() {
                   </button>
 
                   {status && (
-                    <p className={`text-sm text-center mt-3 ${status.includes("successfully") ? "text-green-600" : "text-red-600"}`}>
+                    <p
+                      className={`text-sm text-center mt-3 ${
+                        status.includes("successfully")
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }`}
+                    >
                       {status}
                     </p>
                   )}
