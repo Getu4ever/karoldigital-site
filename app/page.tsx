@@ -300,7 +300,6 @@ export default function Home() {
         </section>
 
 {/* === Process Timeline (Interactive Steps) === */}
-
 <motion.section
   initial={{ opacity: 0, y: 40 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -309,47 +308,49 @@ export default function Home() {
   className="py-24 px-6 md:px-12 bg-[#c2c2c2]/10"
 >
   <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl font-extrabold text-[#102f35] text-center mb-6">
+    <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] text-center mb-6">
       Our Proven Process
     </h2>
 
-    <p className="text-gray-600 text-center max-w-2xl mx-auto mb-16">
-      A clear, transparent approach designed to deliver measurable growth — from strategy to launch and beyond.
+    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
+      Success isn’t accidental; it’s engineered. We follow a clear, transparent, and iterative approach designed 
+      to transform your digital presence into a high-performing asset. From initial research to post-launch 
+      scaling, we ensure every decision is backed by data and aligned with your long-term commercial goals.
     </p>
 
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
       {[
         {
           step: "01",
           title: "Discovery & Strategy",
-          text: "We analyse your business, audience, and competitors to define a clear digital strategy aligned with your goals.",
+          text: "Every great project begins with deep immersion. We dive into your business model, identifying core user personas and competitive advantages. By auditing your existing data and defining clear KPIs, we build a strategic roadmap that ensures your new website doesn't just look beautiful, but serves as a precise tool for customer acquisition and market positioning.",
         },
         {
           step: "02",
           title: "Design & Development",
-          text: "Modern, high-performance websites built with conversion, speed, and scalability at the core.",
+          text: "This is where vision meets execution. Our design team crafts bespoke user experiences (UX) that guide visitors effortlessly toward conversion points. Simultaneously, our developers build on a foundation of clean, scalable code. We prioritise lightning-fast load speeds, mobile-first responsiveness, and intuitive content management systems that empower your team to make updates with ease.",
         },
         {
           step: "03",
           title: "Launch & Growth",
-          text: "We launch, optimise, and support your website with SEO, analytics, and continuous improvement.",
+          text: "Deployment is only the beginning of our partnership. After a rigorous pre-launch testing phase covering SEO, security, and cross-browser compatibility, we take your site live. Post-launch, we shift focus to continuous growth. Through detailed analytics, conversion rate optimisation (CRO), and ongoing technical support, we ensure your platform evolves alongside your business.",
         },
       ].map((item, i) => (
         <motion.div
           key={i}
-          whileHover={{ y: -6 }}
+          whileHover={{ y: -8 }}
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className="group rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-all"
+          className="group rounded-3xl border border-gray-200 bg-white p-8 lg:p-10 shadow-sm hover:shadow-2xl transition-all duration-300"
         >
-          <span className="text-5xl font-black text-[#411b3f]/10 group-hover:text-[#411b3f]/20 transition">
+          <span className="text-6xl font-black text-[#411b3f]/10 group-hover:text-[#411b3f]/20 transition-colors duration-300">
             {item.step}
           </span>
 
-          <h3 className="mt-6 text-xl font-bold text-[#102f35]">
+          <h3 className="mt-8 text-2xl font-bold text-[#102f35]">
             {item.title}
           </h3>
 
-          <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+          <p className="mt-5 text-gray-600 text-base leading-7">
             {item.text}
           </p>
         </motion.div>
