@@ -7,9 +7,9 @@ import { Metadata } from "next";
 
 // ❗ Refined Metadata: Adding mobile optimization and standardized theme colors
 export const metadata: Metadata = {
-  title: "Karol Digital | Affordable Web Design Agency for UK Small Business",
+  title: "Karol Digital | Affordable Web Design for UK Small Business",
   description:
-    "Karol Digital provides professional web design and SEO services for UK small businesses. Modern, AI-ready websites built to grow your brand. Get a free quote today!",
+    "Karol Digital provides professional web design and SEO services for UK small businesses. Modern websites built to grow your brand. Get a free quote today!",
   metadataBase: new URL("https://www.karoldigital.co.uk"),
   alternates: {
     canonical: "/",

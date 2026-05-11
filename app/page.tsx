@@ -97,7 +97,7 @@ export default function Home() {
                 <span className="text-[#102f35]">Built for Growth</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                <strong>Karol Digital</strong> provides affordable web design and digital marketing for UK small businesses. We build mobile-friendly, SEO-ready websites and deliver conversion-focused marketing that increases enquiries, bookings, and online sales.  
+                <strong>Karol Digital</strong> provides affordable web design and digital marketing for UK small businesses. We build High-Performance Web Design & Branding, mobile-friendly, SEO-ready websites and deliver conversion-focused marketing that increases enquiries, bookings, and online sales.  
                 <br /><br />
                 We work with retail, e-commerce, professional services, hospitality, and construction firms across the UK. Our approach combines <strong>Strategic Brand Identity</strong>, local SEO dominance, and custom-coded architecture to improve visibility and generate measurable ROI.
               </p>
