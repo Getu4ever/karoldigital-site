@@ -27,11 +27,21 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "mainImage",
-      title: "Main Image",
-      type: "image",
-      options: { hotspot: true },
-    },
+  name: "mainImage",
+  title: "Main Image",
+  type: "image",
+  options: { hotspot: true },
+  fields: [
+    {
+      name: "alt",
+      title: "Alt Text",
+      type: "string",
+      description: "Important for SEO and accessibility.",
+      validation: (Rule) => Rule.required()
+    }
+  ]
+},
+
     {
       name: "publishedAt",
       title: "Published Date",
