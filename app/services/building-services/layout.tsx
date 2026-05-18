@@ -2,7 +2,7 @@ import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
   // Refined for "Contractor" and "Trades" keywords
-  title: "Web Design for Builders & Construction Contractors UK | Karol Digital",
+  title: "Web Design for Construction & Builders | Karol Digital",
   description:
     "High-performance websites for UK builders, contractors, and tradespeople. Get more local leads with professional project galleries and SEO for your trade business.",
   url: "https://www.karoldigital.co.uk/services/building-services",

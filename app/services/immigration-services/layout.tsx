@@ -3,7 +3,7 @@ import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
   // Refined Title: Added "UK" and "Agency" for local SEO
-  title: "Web Design for Immigration Firms & Law Agencies UK | Karol Digital",
+  title: "Web Design for Immigration Firms | Karol Digital",
   description:
     "Specialist OISC-compliant website design for UK immigration firms. High-trust, secure websites with intake forms & SEO for immigration consultants. Get a quote.",
   url: "https://www.karoldigital.co.uk/services/immigration-services", // Updated to specific page URL

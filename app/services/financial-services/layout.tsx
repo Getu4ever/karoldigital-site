@@ -2,7 +2,7 @@ import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
   // Refined for higher-volume UK search terms
-  title: "Web Design for Accountants & Mortgage Brokers UK | Karol Digital",
+  title: "Web Design for Accountants & Finance | Karol Digital",
   description:
     "Specialist web design for UK financial professionals. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs. Secure your digital presence.",
   url: "https://www.karoldigital.co.uk/services/financial-services",

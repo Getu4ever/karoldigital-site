@@ -2,7 +2,7 @@ import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
   // Targeting high-growth sectors: Meal Prep and Dark Kitchens
-  title: "Web Design for Caterers, Meal Prep & Dark Kitchens UK | Karol Digital",
+  title: "Web Design for Caterers & Kitchens | Karol Digital",
   description:
     "Professional web design for UK food businesses. We build high-conversion websites for caterers & meal prep services with online ordering and digital menus.",
   url: "https://www.karoldigital.co.uk/services/catering-services",

@@ -3,7 +3,7 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Digital Marketing News – SEO, Social Media & Web Updates | Karol Digital",
+  title: "Digital Marketing & SEO News | Karol Digital",
   description:
     "Stay updated with the latest digital marketing insights, SEO trends, social media updates, and web industry news. Curated automatically by Karol Digital.",
   url: "https://www.karoldigital.co.uk/news",
