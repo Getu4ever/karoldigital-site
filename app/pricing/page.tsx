@@ -32,7 +32,7 @@ export default function PricingPage() {
               <span className="text-yellow-400">Digital Solutions</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              High-performance websites and brand identities engineered to turn visitors into loyal customers.
+              High-performance websites and brand identities engineered to turn visitors into loyal customers and long-term clients.
             </p>
           </div>
         </motion.section>
@@ -45,178 +45,120 @@ export default function PricingPage() {
                 Strategic Design Meets Technical Excellence
               </h2>
               <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                From full brand identities to custom-coded e-commerce platforms, we provide the technical 
-                infrastructure your business needs to dominate its market.
+                From full brand identities to custom-coded e-commerce platforms, we provide the technical
+                infrastructure your business needs to compete, scale, and dominate its market.
               </p>
             </div>
           </section>
         </FadeIn>
 
-        {/* === PRICING PACKAGES === */}
-        <FadeIn>
-          <section className="py-24 px-6 md:px-12 bg-white">
-            <div className="max-w-7xl mx-auto text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-                💼 Performance Web Packages
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Transparent pricing for results-driven digital transformation.
-              </p>
-            </div>
+       {/* === PRICING PACKAGES === */}
+<FadeIn>
+  <section className="py-24 px-6 md:px-12 bg-white">
+    <div className="max-w-7xl mx-auto text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
+        💼 Performance Web Packages
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        Transparent pricing based on business outcomes, not just design delivery.
+      </p>
+    </div>
 
-            <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto mb-20">
+    <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto mb-20">
 
-              {/* STARTER */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition flex flex-col">
-                <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
-                <p className="text-gray-600 text-center mb-6">
-                 Foundation Web - Perfect for new businesses needing a clean online presence.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ 5–7 pages</li>
-                   <li>✔ Basic SEO Setup</li>
-                  <li>✔ WordPress or Google Sites</li>
-                  <li>✔ Mobile responsive</li>
-                  <li>✔ Contact form</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £900–£1,500
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Choose Starter
-                </Link>
-              </div>
+      {/* STARTER */}
+      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition flex flex-col">
+        <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
+        <p className="text-gray-600 text-center mb-6">
+          A professional online presence for new or small businesses.
+        </p>
+        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+          <li>✔ 5–7 pages</li>
+          <li>✔ Basic SEO Setup</li>
+          <li>✔ WordPress or CMS Setup</li>
+          <li>✔ Mobile responsive design</li>
+          <li>✔ Contact form integration</li>
+        </ul>
+        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+          £900–£1,500
+        </p>
+        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+          Choose Starter
+        </Link>
+      </div>
 
-              {/* GROWTH */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
-                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
-                <p className="text-gray-600 text-center mb-6">
-                  Strategic Growth Web - Ideal for established businesses wanting visibility.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ Conversion-focused UX</li>
-                  <li>✔ Analytics & UX Strategy</li>
-                  <li>✔ Full On-page SEO</li>
-                  <li>✔ Speed optimisation</li>
-                  <li>✔ AI chatbot (basic)</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £1,800–£3,000
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Choose Growth
-                </Link>
-              </div>
+      {/* GROWTH */}
+      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
+        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
+        <p className="text-gray-600 text-center mb-6">
+          A conversion-focused website designed to generate consistent leads, enquiries, and bookings.
+        </p>
+        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+          <li>✔ UX & Conversion Optimisation</li>
+          <li>✔ Full On-page SEO</li>
+          <li>✔ Speed & Performance Optimisation</li>
+          <li>✔ Analytics & Tracking Setup</li>
+          <li>✔ Lead Capture System</li>
+        </ul>
+        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+          £1,800–£3,000
+        </p>
+        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+          Choose Growth
+        </Link>
+      </div>
 
-              {/* PREMIUM – MOST POPULAR */}
-              <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10 flex flex-col">
-                <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
-                  Best Value
-                </div>
-                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
-                <p className="text-gray-600 text-center mb-6">
-                  High-end performance, custom branding, and marketing readiness.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li className="font-bold text-[#102f35]">✔ Full Brand Identity (Logo/Palette)</li>
-                  <li>✔ 6–10+ Custom Pages</li>
-                  <li>✔ Advanced Custom Coding</li>
-                  <li>✔ Copywriting & Sales Strategy</li>
-                  <li>✔ Advanced AI Chatbot</li>
-                  <li className="text-blue-600 text-sm font-semibold italic">Optional: Growth Partner Retainer</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £3,500–£6,000
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Choose Premium
-                </Link>
-              </div>
+      {/* PREMIUM */}
+      <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10 flex flex-col">
+        <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
+          Most Powerful
+        </div>
+        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
+        <p className="text-gray-600 text-center mb-6">
+          A complete digital growth system combining brand identity, high-end design, and conversion strategy.
+        </p>
+        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+          <li className="font-bold text-[#102f35]">✔ Full Brand Identity System</li>
+          <li>✔ 6–10+ Custom Designed Pages</li>
+          <li>✔ Advanced Custom Development</li>
+          <li>✔ Sales-Focused Copywriting</li>
+          <li>✔ Conversion Strategy Integration</li>
+          <li>✔ Advanced Automation Tools</li>
+        </ul>
+        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+          £3,500–£6,000
+        </p>
+        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+          Choose Premium
+        </Link>
+      </div>
 
-              {/* ENTERPRISE */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
-                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise</h3>
-                <p className="text-gray-600 text-center mb-6">
-                  Custom-built solutions for complex business operations.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ Full Branding & Strategy</li>
-                  <li>✔ User Roles & Infrastructure</li>
-                  <li>✔ Deep CRM/Database Integration</li>
-                  <li>✔ Advanced E-commerce Logic</li>
-                  <li>✔ Enhanced Security Systems</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
-                  From £6,500
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Request Quote
-                </Link>
-              </div>
-           
-            </div>
+      {/* ENTERPRISE */}
+      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
+        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise (Ecommerce Systems)</h3>
+        <p className="text-gray-600 text-center mb-6">
+          Full ecommerce platforms and complex business systems for scalable operations and online sales.
+        </p>
+        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+          <li>✔ Full Ecommerce Website (Shop / Cart / Checkout)</li>
+          <li>✔ Payment Gateway Integration (Stripe / PayPal)</li>
+          <li>✔ Product Catalogue System</li>
+          <li>✔ Order & Inventory Management</li>
+          <li>✔ CRM / Database Integration</li>
+          <li>✔ User Roles & Business Logic</li>
+          <li>✔ High-Level Security Architecture</li>
+        </ul>
+        <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
+          From £6,500
+        </p>
+        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+          Request Quote
+        </Link>
+      </div>
 
-            {/* === STRATEGIC FIT COMPARISON TABLE === */}
-            <div className="max-w-6xl mx-auto mt-24">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-4">
-                  📊 Strategic Fit Comparison
-                </h2>
-                <p className="text-gray-600">Choose the tier that matches your business objectives.</p>
-              </div>
-              <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-100">
-                <table className="w-full border-collapse text-left bg-white">
-                  <thead>
-                    <tr className="bg-[#102f35] text-white">
-                      <th className="p-5 font-semibold">Strategic Goal</th>
-                      <th className="p-5 font-semibold text-center border-l border-white/10">Starter</th>
-                      <th className="p-5 font-semibold text-center border-l border-white/10">Growth</th>
-                      <th className="p-5 font-semibold text-center border-l border-white/10 bg-yellow-500/10">Premium</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-gray-700">
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Business Stage</td>
-                      <td className="p-5 text-center italic text-sm text-gray-500 border-l">New / Solo-Founder</td>
-                      <td className="p-5 text-center italic text-sm text-gray-500 border-l">Scaling SMB</td>
-                      <td className="p-5 text-center font-semibold text-[#102f35] border-l">Market Leader</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Brand Identity</td>
-                      <td className="p-5 text-center text-sm border-l">Logo Placement Only</td>
-                      <td className="p-5 text-center text-sm border-l">Basic Visual Alignment</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Full Bespoke Identity</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Sales Logic</td>
-                      <td className="p-5 text-center text-sm border-l">Static Info</td>
-                      <td className="p-5 text-center text-sm border-l">Active Lead Gen</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Hybrid Order Engine</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">SEO Intensity</td>
-                      <td className="p-5 text-center text-sm border-l">Foundational</td>
-                      <td className="p-5 text-center text-sm border-l">Competitive</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Aggressive Dominance</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Tech Stack</td>
-                      <td className="p-5 text-center text-sm border-l">CMS / Template</td>
-                      <td className="p-5 text-center text-sm border-l">CMS / Optimized</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Next.js / React (Custom)</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Primary Outcome</td>
-                      <td className="p-5 text-center text-xs border-l">Digital Business Card</td>
-                      <td className="p-5 text-center text-xs border-l">Growth & Traffic</td>
-                      <td className="p-5 text-center font-bold text-xs border-l uppercase">Maximum Conversion ROI</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
+    </div>
+  </section>
+</FadeIn>
 
         {/* === MAINTENANCE PACKAGE SECTION === */}
         <FadeIn>

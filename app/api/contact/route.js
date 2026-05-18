@@ -10,7 +10,7 @@ export async function POST(req) {
       email,
       phone,
       message,
-      source, // NEW FIELD
+      source,
     } = data;
 
     if (!captchaToken || !name || !email || !message || !source) {
@@ -69,37 +69,60 @@ export async function POST(req) {
     await transporter.verify();
 
     /* -------------------------------
-       3. Send Email
+       3. Send Emails
     -------------------------------- */
-    await transporter.sendMail({
+
+    // EMAIL A: Send Confirmation to Customer
+    const customerMailPromise = transporter.sendMail({
       from: `"Karol Digital" <${process.env.EMAIL_USER}>`,
       to: email,
-      bcc: ["info@karoldigital.co.uk", "getu4ever@gmail.com"],
-      replyTo: email,
       subject: `Confirmation: We've received your inquiry, ${name}`,
       html: `
-        <div style="font-family: Arial, sans-serif; color: #333;">
-          <h2>Thank you for contacting Karol Digital, ${name}</h2>
-          <p>We have received your message and will respond shortly.</p>
-
-          <div style="background:#f4f4f4;padding:16px;border-radius:8px;margin-top:16px;">
-            <h3 style="margin-top:0;">Inquiry Details</h3>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-            <p><strong>Heard About Us Via:</strong> ${source}</p>
-            <p><strong>Message:</strong></p>
-            <p style="white-space:pre-line;">${message}</p>
-          </div>
-
-          <hr style="margin:24px 0;border:none;border-top:1px solid #e5e5e5;" />
-
-          <footer style="font-size:12px;color:#777;">
+        <div style="font-family: Verdana, sans-serif; color: #333;">
+          <header>
+            <h2 style="color: #d91e18;">Karol <span style="color: #333;">Digital</span></h2>
+          </header>
+          <p>Hi ${name},</p>
+          <p>Thank you for contacting Karol Digital. We have received your message and our team will get back to you shortly.</p>
+          <hr />
+          <footer style="font-size: 12px; color: #777;">
             <p>&copy; 2026 Karol Digital. All rights reserved.</p>
           </footer>
         </div>
       `,
     });
+
+    // EMAIL B: Send Lead Notification to YOU (The one you reply to)
+    const adminMailPromise = transporter.sendMail({
+      from: `"Karol Digital Leads" <${process.env.EMAIL_USER}>`,
+      to: "info@karoldigital.co.uk",
+      cc: "getu4ever@gmail.com",
+      replyTo: email, // This ensures when you hit reply, it goes to the customer
+      subject: `New Web Inquiry: ${name} via ${source}`,
+      html: `
+        <div style="font-family: Verdana, sans-serif; color: #333;">
+          <header>
+             <h2 style="color: #d91e18;">New Lead <span style="color: #333;">Notification</span></h2>
+          </header>
+          <div style="background:#f4f4f4;padding:16px;border-radius:8px;">
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+            <p><strong>Source:</strong> ${source}</p>
+            <p><strong>Message:</strong></p>
+            <p style="white-space:pre-line;">${message}</p>
+          </div>
+          <p style="margin-top: 20px; color: #666;"><em>Note: You can reply directly to this email to contact the customer.</em></p>
+          <hr />
+          <footer style="font-size: 12px; color: #777;">
+            <p>Internal Notification | Karol Digital</p>
+          </footer>
+        </div>
+      `,
+    });
+
+    // Run both email sends
+    await Promise.all([customerMailPromise, adminMailPromise]);
 
     return Response.json({ success: true });
   } catch (error) {
