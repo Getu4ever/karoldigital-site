@@ -75,11 +75,11 @@ export default function BuildersWebDesign() {
               </p>
 
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                We design and build <strong>conversion-focused websites for UK builders,
-                contractors, and tradespeople</strong> that clearly showcase your services,
-                previous work, and credibility. The result is a website that works as hard
-                as you do — bringing in consistent, qualified enquiries.
-              </p>
+               We design and build <strong>conversion-focused websites</strong> for UK builders,
+               contractors, and tradespeople that clearly showcase your services,
+               previous work, and credibility. The result is a website that works as hard
+               as you do — bringing in consistent, qualified enquiries.
+             </p>
 
               <p className="text-gray-700 text-lg leading-relaxed">
                 Whether you specialise in residential builds, renovations, or specialist trades,
