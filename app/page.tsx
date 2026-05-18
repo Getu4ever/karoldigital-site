@@ -290,6 +290,62 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
+        
+        {/* === PARTNERSHIP SECTION === */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="py-20 px-6 md:px-12 bg-white border-t border-gray-100"
+        >
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-4">
+              Partner with SBC Marketing and 1st Call UK Group
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-sm md:text-base">
+              Through strategic cross-industry alliances, we combine expert digital execution with established corporate insights to deliver full-scale infrastructure for UK enterprises.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto items-center justify-items-center">
+              {/* SBC Marketing */}
+              <Link 
+                href="https://sbc-marketing.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-[280px] p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center group h-[180px]"
+              >
+                <div className="relative w-full h-[80px] transition-transform duration-300 group-hover:scale-105">
+                  <Image
+                    src="/sbc-marketing-logo.jpg"
+                    alt="SBC Marketing Logo — Visit Website"
+                    fill
+                    priority
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+
+              {/* 1st Call UK Group */}
+              <Link 
+                href="https://www.1stcalluk.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-[280px] p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center group h-[180px]"
+              >
+                <div className="relative w-full h-[80px] transition-transform duration-300 group-hover:scale-105">
+                  <Image
+                    src="/1stcalluk-logo.jpg"
+                    alt="1st Call UK Group Logo — Visit Website"
+                    fill
+                    priority
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </motion.section>
 
         {/* === CTA SECTION === */}
         <section className="py-20 text-center px-6">
