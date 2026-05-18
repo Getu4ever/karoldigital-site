@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/blog/services/immigration-services',
+        destination: '/services/immigration-services',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
