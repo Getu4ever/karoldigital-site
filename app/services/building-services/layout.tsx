@@ -4,7 +4,7 @@ export const metadata = generateSEOMetadata({
   // Refined for "Contractor" and "Trades" keywords
   title: "Web Design for Construction & Builders | Karol Digital",
   description:
-    "High-performance websites for UK builders, contractors, and tradespeople. Get more local leads with professional project galleries and SEO for your trade business.",
+    "High-performance websites for UK builders and contractors. Get more local leads with professional project galleries and trade SEO.",
   url: "https://www.karoldigital.co.uk/services/building-services",
   image: "/building-services-hero.jpg", // Using your industry-specific image
 });

@@ -4,7 +4,7 @@ export const metadata = generateSEOMetadata({
   // Targeting high-intent "Setup" and "Branding" keywords
   title: "Social Media Setup & Google Business Profile UK | Karol Digital",
   description:
-    "Professional social media profile setup for UK small businesses. We optimize your Facebook, Instagram, and Google Business profiles for maximum local visibility.",
+    "Professional social media setup for UK small businesses. Optimize your Facebook, Instagram, and Google Business profiles for local visibility.",
   url: "https://www.karoldigital.co.uk/services/social-media",
   image: "/service-socialmedia.jpg", // Using the industry-specific image
 });

@@ -4,7 +4,7 @@ export const metadata = generateSEOMetadata({
   // Targeting high-intent "WordPress" and "Custom" keywords
   title: "WordPress & Custom Web Design Packages UK | Karol Digital",
   description:
-    "Professional, mobile-friendly web design for UK businesses. From simple WordPress sites to custom-coded solutions with AI chatbots. Explore our tiered packages.",
+    "Mobile-friendly web design for UK businesses. From simple WordPress sites to custom-coded solutions with AI chatbots. Explore our packages.",
   url: "https://www.karoldigital.co.uk/services/web-design",
   image: "/hero-page-banner.jpg",
 });

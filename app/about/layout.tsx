@@ -3,7 +3,7 @@
 export const metadata = {
   title: "About Karol Digital – Web Design for UK Small Businesses",
   description:
-    "Learn how Karol Digital helps UK small businesses with affordable, SEO‑ready websites and growth-focused digital marketing. Meet the team and request a free quote.",
+    "Affordable, SEO-ready websites and growth-focused digital marketing for UK small businesses. Meet our team and request a free project quote today.",
   alternates: {
     canonical: "https://www.karoldigital.co.uk/about",
   },

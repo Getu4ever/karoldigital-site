@@ -4,7 +4,7 @@ export const metadata = generateSEOMetadata({
   // Refined for higher-volume UK search terms
   title: "Web Design for Accountants & Finance | Karol Digital",
   description:
-    "Specialist web design for UK financial professionals. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs. Secure your digital presence.",
+    "Specialist web design for UK financial professionals. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs.",
   url: "https://www.karoldigital.co.uk/services/financial-services",
   image: "/1stcall-finance-showcase.jpg", // Using your specific case study image
 });
