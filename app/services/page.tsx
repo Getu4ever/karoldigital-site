@@ -4,8 +4,36 @@ import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Scale, HardHat, Utensils, Landmark, ArrowRight } from "lucide-react";
 
-export default function PricingPage() {
+export default function ServicesPage() {
+  const specializedPills = [
+    {
+      href: "/services/immigration-services",
+      label: "Immigration Firms",
+      icon: <Scale size={18} />,
+      color: "hover:border-[#102f35] hover:text-[#102f35]",
+    },
+    {
+      href: "/services/building-services",
+      label: "Building & Trades",
+      icon: <HardHat size={18} />,
+      color: "hover:border-[#411b3f] hover:text-[#411b3f]",
+    },
+    {
+      href: "/services/catering-services",
+      label: "Catering & Food",
+      icon: <Utensils size={18} />,
+      color: "hover:border-[#102f35] hover:text-[#102f35]",
+    },
+    {
+      href: "/services/financial-services",
+      label: "Financial Services",
+      icon: <Landmark size={18} />,
+      color: "hover:border-[#411b3f] hover:text-[#411b3f]",
+    },
+  ];
+
   return (
     <FadeIn>
       <main className="min-h-screen bg-white text-gray-900">
@@ -19,7 +47,7 @@ export default function PricingPage() {
         >
           <Image
             src="/hero-page-banner.jpg"
-            alt="Karol Digital Services"
+            alt="Karol Digital Core Capabilities"
             fill
             priority
             className="object-cover brightness-[0.45]"
@@ -28,434 +56,373 @@ export default function PricingPage() {
 
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-              <span className="text-white">Bespoke </span>
-              <span className="text-yellow-400">Digital Solutions</span>
+              <span className="text-white">Professional </span>
+              <span className="text-yellow-400">Web Engineering</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              High-performance websites and brand identities engineered to turn visitors into loyal customers.
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
+              High-trust corporate solutions, headless architecture systems, and bespoke digital frameworks crafted to turn visibility into enterprise growth.
             </p>
           </div>
         </motion.section>
 
-        {/* === INTRO SECTION === */}
+        {/* === INTRO VALUE PROPOSITION === */}
         <FadeIn>
-          <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
+          <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9] pb-16">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-[#102f35] mb-4">
-                Strategic Design Meets Technical Excellence
+              <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f] block mb-3">
+                Engineered for Results
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-6">
+                Strategic Solutions Rooted in Technical Excellence
               </h2>
+              <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mb-6">
+                At Karol Digital, we deliver much more than visual frameworks. We engineer robust, enterprise-grade digital infrastructures that elevate your operational presence online. By combining sleek corporate layouts with optimized technical SEO architectures, we construct platforms that function as your most efficient asset.
+              </p>
               <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                From full brand identities to custom-coded e-commerce platforms, we provide the technical 
-                infrastructure your business needs to dominate its market.
+                Whether implementing low-latency Headless CMS systems or expanding intuitive customer journeys, our methods ensure data integrity, responsive layout rendering, and strict compliance with global technical metrics.
               </p>
             </div>
           </section>
         </FadeIn>
 
-        {/* === PRICING PACKAGES === */}
+        {/* === PILL-STYLE SUB-NAVIGATION BAR === */}
+        <FadeIn>
+          <section className="bg-white py-12 px-6 border-b border-gray-50">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col items-center">
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]/60 mb-8">
+                  Explore Industry Specialisms
+                </h3>
+                
+                <div className="flex flex-wrap items-center justify-center gap-4">
+                  {specializedPills.map((pill) => (
+                    <Link
+                      key={pill.href}
+                      href={pill.href}
+                      className="group relative flex items-center gap-3 px-8 py-4 bg-[#411b3f]/5 border border-[#102f35]/10 text-[#102f35] rounded-full font-bold text-sm transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#102f35]/10 active:scale-95"
+                    >
+                      {/* Animated Background Fill */}
+                      <span className="absolute inset-0 w-0 bg-gradient-to-r from-[#102f35] to-[#411b3f] transition-all duration-500 ease-out group-hover:w-full" />
+
+                      {/* Content (Z-index ensures it stays above the fill) */}
+                      <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors duration-500">
+                        <span className="text-[#411b3f] group-hover:text-yellow-400 transition-colors duration-500">
+                          {pill.icon}
+                        </span>
+                        <span className="tracking-tight">{pill.label}</span>
+                        <ArrowRight 
+                          size={16} 
+                          className="opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-yellow-400" 
+                        />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        {/* === CORE CAPABILITIES DETAILED SHOWCASE === */}
         <FadeIn>
           <section className="py-24 px-6 md:px-12 bg-white">
-            <div className="max-w-7xl mx-auto text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-                💼 Performance Web Packages
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Transparent pricing for results-driven digital transformation.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto mb-20">
-
-              {/* STARTER */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition flex flex-col">
-                <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
-                <p className="text-gray-600 text-center mb-6">
-                 Foundation Web - Perfect for new businesses needing a clean online presence.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ 5–7 pages</li>
-                   <li>✔ Basic SEO Setup</li>
-                  <li>✔ WordPress or Google Sites</li>
-                  <li>✔ Mobile responsive</li>
-                  <li>✔ Contact form</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £900–£1,500
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Choose Starter
-                </Link>
-              </div>
-
-              {/* GROWTH */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
-                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
-                <p className="text-gray-600 text-center mb-6">
-                  Strategic Growth Web - Ideal for established businesses wanting visibility.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ Conversion-focused UX</li>
-                  <li>✔ Analytics & UX Strategy</li>
-                  <li>✔ Full On-page SEO</li>
-                  <li>✔ Speed optimisation</li>
-                  <li>✔ AI chatbot (basic)</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £1,800–£3,000
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Choose Growth
-                </Link>
-              </div>
-
-              {/* PREMIUM – MOST POPULAR */}
-              <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10 flex flex-col">
-                <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
-                  Best Value
-                </div>
-                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
-                <p className="text-gray-600 text-center mb-6">
-                  High-end performance, custom branding, and marketing readiness.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li className="font-bold text-[#102f35]">✔ Full Brand Identity (Logo/Palette)</li>
-                  <li>✔ 6–10+ Custom Pages</li>
-                  <li>✔ Advanced Custom Coding</li>
-                  <li>✔ Copywriting & Sales Strategy</li>
-                  <li>✔ Advanced AI Chatbot</li>
-                  <li className="text-blue-600 text-sm font-semibold italic">Optional: Growth Partner Retainer</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-                  £3,500–£6,000
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Choose Premium
-                </Link>
-              </div>
-
-              {/* ENTERPRISE */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
-                <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise</h3>
-                <p className="text-gray-600 text-center mb-6">
-                  Custom-built solutions for complex business operations.
-                </p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ Full Branding & Strategy</li>
-                  <li>✔ User Roles & Infrastructure</li>
-                  <li>✔ Deep CRM/Database Integration</li>
-                  <li>✔ Advanced E-commerce Logic</li>
-                  <li>✔ Enhanced Security Systems</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
-                  From £6,500
-                </p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-                  Request Quote
-                </Link>
-              </div>
-           
-            </div>
-
-            {/* === STRATEGIC FIT COMPARISON TABLE === */}
-            <div className="max-w-6xl mx-auto mt-24">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-4">
-                  📊 Strategic Fit Comparison
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-20">
+                <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+                  🛠 Our Specialized Digital Capabilities
                 </h2>
-                <p className="text-gray-600">Choose the tier that matches your business objectives.</p>
-              </div>
-              <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-100">
-                <table className="w-full border-collapse text-left bg-white">
-                  <thead>
-                    <tr className="bg-[#102f35] text-white">
-                      <th className="p-5 font-semibold">Strategic Goal</th>
-                      <th className="p-5 font-semibold text-center border-l border-white/10">Starter</th>
-                      <th className="p-5 font-semibold text-center border-l border-white/10">Growth</th>
-                      <th className="p-5 font-semibold text-center border-l border-white/10 bg-yellow-500/10">Premium</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-gray-700">
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Business Stage</td>
-                      <td className="p-5 text-center italic text-sm text-gray-500 border-l">New / Solo-Founder</td>
-                      <td className="p-5 text-center italic text-sm text-gray-500 border-l">Scaling SMB</td>
-                      <td className="p-5 text-center font-semibold text-[#102f35] border-l">Market Leader</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Brand Identity</td>
-                      <td className="p-5 text-center text-sm border-l">Logo Placement Only</td>
-                      <td className="p-5 text-center text-sm border-l">Basic Visual Alignment</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Full Bespoke Identity</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Sales Logic</td>
-                      <td className="p-5 text-center text-sm border-l">Static Info</td>
-                      <td className="p-5 text-center text-sm border-l">Active Lead Gen</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Hybrid Order Engine</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">SEO Intensity</td>
-                      <td className="p-5 text-center text-sm border-l">Foundational</td>
-                      <td className="p-5 text-center text-sm border-l">Competitive</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Aggressive Dominance</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Tech Stack</td>
-                      <td className="p-5 text-center text-sm border-l">CMS / Template</td>
-                      <td className="p-5 text-center text-sm border-l">CMS / Optimized</td>
-                      <td className="p-5 text-center font-semibold border-l text-green-600">Next.js / React (Custom)</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50 transition">
-                      <td className="p-5 font-medium">Primary Outcome</td>
-                      <td className="p-5 text-center text-xs border-l">Digital Business Card</td>
-                      <td className="p-5 text-center text-xs border-l">Growth & Traffic</td>
-                      <td className="p-5 text-center font-bold text-xs border-l uppercase">Maximum Conversion ROI</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
-
-        {/* === MAINTENANCE PACKAGE SECTION === */}
-        <FadeIn>
-          <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-gray-100">
-            <div className="max-w-6xl mx-auto text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-                Website Maintenance Packages
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Ongoing technical support to keep your investment secure and performing at peak levels.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-              {/* Basic Maintenance */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
-                <h3 className="text-2xl font-bold text-[#102f35] mb-4">Basic Maintenance</h3>
-                <p className="text-gray-600 mb-6">Ideal for small websites needing regular care.</p>
-                <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
-                  <li>✔ Fixing bugs</li>
-                  <li>✔ Minor text or image edits</li>
-                  <li>✔ Plugin & Dependency Updates</li>
-                  <li>✔ Backup guidance</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £200-£300/mo</p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition">
-                  Select Basic
-                </Link>
-              </div>
-
-              {/* Premium Maintenance */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] text-center hover:-translate-y-2 transition">
-                <h3 className="text-2xl font-bold text-[#411b3f] mb-4">Premium Maintenance</h3>
-                <p className="text-gray-600 mb-6">Priority support for active, scaling businesses.</p>
-                 <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
-                  <li>✔ Everything in Basic</li>
-                  <li>✔ New Feature Implementation</li>
-                  <li>✔ Deployment support</li>
-                  <li>✔ Priority 24h Response</li>
-                  <li>✔ Monthly Analytics Report</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#102f35] mb-6">From £300-£400/mo</p>
-                <Link href="/contact" className="block text-center bg-[#411b3f] hover:bg-[#102f35] text-white font-semibold py-3 rounded-full transition">
-                  Select Premium
-                </Link>
-              </div>
-              
-              {/* Custom Updates */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
-                <h3 className="text-2xl font-bold text-[#102f35] mb-4">Custom Updates</h3>
-                <p className="text-gray-600 mb-6">For major improvements, redesigns, or new functionality.</p>
-                <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
-                  <li>✔ Technical support</li>
-                  <li>✔ Website updates</li>
-                  <li>✔ Fixing issues</li>
-                  <li>✔ Advanced troubleshooting</li>
-                  <li>✔ Feature development</li>
-                </ul>
-                <p className="text-2xl font-extrabold text-[#411b3f] mb-6">From £199 per update</p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white font-semibold py-3 rounded-full transition">
-                  Request Custom Work
-                </Link>
-              </div>
-
-            </div>
-          </section>
-        </FadeIn>
-
-        {/* === MARKETING RETAINERS === */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="py-24 px-6 md:px-12 bg-gray-50"
-        >
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-              📱 Marketing & Growth Retainers
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Boost your visibility with expert branding and conversion-led advertising.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
-            <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#411b3f] mb-3">Paid Advertising (Ads)</h3>
-              <p className="text-gray-600 mb-4">Google Ads & Social Media campaigns managed for ROI.</p>
-              <p className="font-bold text-[#102f35] mb-4">From £250/mo</p>
-              <Link href="/services/social-media" className="text-[#102f35] font-semibold underline">
-                Learn More
-              </Link>
-            </div>
-            <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">SEO & Content</h3>
-              <p className="text-gray-600 mb-4">Ongoing SEO audits, backlinking, and content planning.</p>
-              <p className="font-bold text-[#411b3f] mb-4">From £450/mo</p>
-              <Link href="/services/digital-marketing" className="text-[#102f35] font-semibold underline">
-                Learn More
-              </Link>
-            </div>
-            <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">Brand Identity Suite</h3>
-              <p className="text-gray-600 mb-4">Full Logos, colour palettes, typography & social templates.</p>
-              <p className="font-bold text-[#411b3f] mb-4">Custom Pricing</p>
-              <Link href="/contact" className="text-[#102f35] font-semibold underline">
-                Request Quote
-              </Link>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* === DELIVERABLES === */}
-        <FadeIn>
-          <section className="py-24 px-6 md:px-12 bg-gray-50">
-            <div className="max-w-5xl mx-auto text-center mb-12">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-                🎁 Built for Long-Term Success
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Every website we build is a high-performance asset designed to outrank competition.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-              <div className="bg-white shadow-lg p-8 rounded-2xl border">
-                <h3 className="text-xl font-bold text-[#102f35] mb-4">Core Deliverables</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li>✔ Bespoke, clean web design</li>
-                  <li>✔ Mobile-responsive architecture</li>
-                  <li>✔ Automated lead notifications</li>
-                  <li>✔ Enterprise-grade security</li>
-                  <li>✔ Hosting & Deployment support</li>
-                </ul>
-              </div>
-              <div className="bg-white shadow-lg p-8 rounded-2xl border">
-                <h3 className="text-xl font-bold text-[#411b3f] mb-4">Performance & Support</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li>✔ Image & Asset optimisation</li>
-                  <li>✔ Zero-latency performance tuning</li>
-                  <li>✔ 14-day Post-Launch hyper-support</li>
-                  <li>✔ Ongoing Technical consultation</li>
-                  <li>✔ CMS Training for self-management</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
-
-        {/* === ADD-ONS === */}
-        <FadeIn>
-          <section className="py-24 px-6 md:px-12 bg-white">
-            <div className="max-w-6xl mx-auto text-center mb-12">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-                ➕ Optional Strategic Add-Ons
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Enhance your platform with advanced features as your business scales.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-              <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold text-[#411b3f] mb-3">Blog & Content Engine</h3>
-                <p className="text-gray-600 mb-4">Full CMS integration for SEO-driven articles.</p>
-                <p className="font-bold text-[#102f35]">£150+</p>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold text-[#102f35] mb-3">Email Automation Setup</h3>
-                <p className="text-gray-600 mb-4">Mailchimp, Brevo or HubSpot workflows.</p>
-                <p className="font-bold text-[#411b3f]">£130+</p>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold text-[#102f35] mb-3">Advanced Motion Design</h3>
-                <p className="text-gray-600 mb-4">High-end UI interactions and transitions.</p>
-                <p className="font-bold text-[#411b3f]">£140+</p>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
-
-        {/* === HOW IT WORKS === */}
-        <FadeIn>
-          <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#eef2f6]">
-            <div className="max-w-6xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-                🛠 Our Strategic Process
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                A streamlined workflow focused on clarity and collaboration.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-4 gap-10 max-w-6xl mx-auto">
-              {[
-                { step: "1", title: "Discovery", desc: "Strategy call to define goals, audience, and design direction." },
-                { step: "2", title: "Design & Brand", desc: "Bespoke layouts and brand assets created for approval." },
-                { step: "3", title: "Technical Build", desc: "High-performance coding with SEO & speed prioritisation." },
-                { step: "4", title: "Launch & Scale", desc: "Site goes live with training and optional growth retainers." },
-              ].map((item) => (
-                <div key={item.step} className="bg-white p-8 rounded-2xl shadow border text-center">
-                  <div className="text-4xl font-extrabold text-[#411b3f] mb-3">{item.step}</div>
-                  <h3 className="text-xl font-bold text-[#102f35] mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        </FadeIn>
-
-        {/* === FAQ === */}
-        <FadeIn>
-          <section className="py-24 px-6 md:px-12 bg-white">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-                ❓ Frequently Asked Questions
-              </h2>
-              <p className="text-gray-600">
-                Common questions about our high-performance digital builds.
-              </p>
-            </div>
-            <div className="max-w-4xl mx-auto space-y-6">
-              <details className="border rounded-lg p-6 shadow-sm">
-                <summary className="font-semibold cursor-pointer">How long does a bespoke project take?</summary>
-                <p className="mt-3 text-gray-600">Starter builds: 5 days. Growth: 10 days. Premium: 15–25 days depending on branding complexity.</p>
-              </details>
-              <details className="border rounded-lg p-6 shadow-sm">
-                <summary className="font-semibold cursor-pointer">Do you manage the hosting?</summary>
-                <p className="mt-3 text-gray-600">
-                  We deploy your site to enterprise-grade platforms (like Vercel or AWS) and manage the setup so you never have to worry about downtime.
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  A comprehensive breakdown of the core digital services we deploy to establish market authority.
                 </p>
-              </details>
-              <details className="border rounded-lg p-6 shadow-sm">
-                <summary className="font-semibold cursor-pointer">Can I update content myself?</summary>
-                <p className="mt-3 text-gray-600">Yes. We provide a full CMS (Content Management System) and training so you can edit text and images effortlessly.</p>
-              </details>
-              <details className="border rounded-lg p-6 shadow-sm">
-                <summary className="font-semibold cursor-pointer">What is the payment structure?</summary>
-                <p className="mt-3 text-gray-600">Standard structure is 50% upfront and 50% on launch. Custom milestones are available for Enterprise projects.</p>
-              </details>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-12">
+                
+                {/* SERVICE 1 */}
+                <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
+                  <div>
+                    <div className="text-4xl mb-4">💻</div>
+                    <h3 className="text-2xl font-bold text-[#102f35] mb-4">Bespoke Web Engineering</h3>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      We design clean, highly polished digital portals tailored entirely to your unique business parameters. Rejecting rigid, overused theme configurations, we build structured environments that scale naturally as operations expand.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      Our modern responsive structures assure cross-browser fluid layout scaling, fast interactive page speeds, and flawless user experiences across smartphones, tablets, and large displays.
+                    </p>
+                  </div>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-700 font-medium">
+                    <li>• Modern CSS Frameworks & Dynamic Animations</li>
+                    <li>• Native Component Component Design Patterning</li>
+                    <li>• Zero-Latency Architecture Standard</li>
+                  </ul>
+                </div>
+
+                {/* SERVICE 2 */}
+                <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
+                  <div>
+                    <div className="text-4xl mb-4">🛍</div>
+                    <h3 className="text-2xl font-bold text-[#411b3f] mb-4">Headless Commerce & CMS</h3>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      For rapid operational scaling, we implement clean decoupled frameworks utilizing modern systems like Next.js, Sanity Studio, and robust Shopify Storefront APIs. This isolates backend inventory management from frontend displays.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      The outcome is a fast storefront that processes product variations instantly and syncs with global suppliers without degrading browser rendering times.
+                    </p>
+                  </div>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-700 font-medium">
+                    <li>• Shopify Storefront API Integrations</li>
+                    <li>• Structured Content Modeling via Sanity</li>
+                    <li>• Drop-shipping Supply Chain Hookups</li>
+                  </ul>
+                </div>
+
+                {/* SERVICE 3 */}
+                <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
+                  <div>
+                    <div className="text-4xl mb-4">📈</div>
+                    <h3 className="text-2xl font-bold text-[#102f35] mb-4">Technical SEO & Marketing</h3>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      We construct websites with crawl architecture as a core priority. By handling indexability requirements, clean semantic typography hierarchies, and structural JSON-LD schemas manually, we prepare your site to claim local organic rankings.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      Every asset is structured to match user intent directly, linking transactional search expressions with your main sales funnel paths.
+                    </p>
+                  </div>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-700 font-medium">
+                    <li>• Structured JSON-LD Schema Deployments</li>
+                    <li>• Semantic Layout Tag Hierarchy Optimization</li>
+                    <li>• Local Google Business Footprint Audit</li>
+                  </ul>
+                </div>
+
+              </div>
             </div>
+          </section>
+        </FadeIn>
+
+        {/* === NEXT.JS & CORE WEB VITALS TECHNICAL DEEP DIVE === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-gray-50 border-y border-gray-100">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f] block mb-3">
+                  Under the Hood
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-6">
+                  Optimized for Core Web Vitals and Absolute Security
+                </h2>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Modern search engine algorithms rank pages based on structural loading metrics and client security. By building within modern component architectures, we compile asset layouts into lightning-fast production bundles.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  We address the primary pillars of site performance: **Largest Contentful Paint (LCP)** via responsive layout scaling, **Interaction to Next Paint (INP)** through strict script hygiene, and **Cumulative Layout Shift (CLS)** by enforcing defined dimension tags across all active image elements.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl">🔒</span>
+                    <div>
+                      <h4 className="font-bold text-[#102f35]">GDPR & Data Compliance</h4>
+                      <p className="text-sm text-gray-600">Secure validation architectures with localized data processing loops to safely protect commercial inquiries.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl">⚡</span>
+                    <div>
+                      <h4 className="font-bold text-[#102f35]">Edge Infrastructure Routing</h4>
+                      <p className="text-sm text-gray-600">Global hosting delivery using enterprise nodes (Vercel/AWS) for fast localized script delivery.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+                <h3 className="text-xl font-bold text-[#102f35] mb-6 text-center">Performance Benchmarks</h3>
+                <div className="space-y-6">
+                  {[
+                    { label: "Performance & Rendering Rate", value: "99%" },
+                    { label: "Accessibility Standards Compliance", value: "100%" },
+                    { label: "Best Practices Framework Metric", value: "100%" },
+                    { label: "SEO Structural Crawl Integrity", value: "100%" },
+                  ].map((stat, i) => (
+                    <div key={i}>
+                      <div className="flex justify-between text-sm font-semibold mb-2">
+                        <span className="text-gray-700">{stat.label}</span>
+                        <span className="text-[#411b3f]">{stat.value}</span>
+                      </div>
+                      <div className="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                        <div className="bg-[#102f35] h-full rounded-full" style={{ width: stat.value }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        {/* === SECTOR SPECIALISMS INDUSTRY GRID === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-white">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-4">
+                  Vertical Industry Solutions
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  We customize our structural frameworks to deliver conversion value inside specialized UK commercial markets.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
+                  <h4 className="font-bold text-lg text-[#102f35] mb-2">Financial & Legal Sectors</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    High-trust environments built for accountants, mortgage brokers, and IFAs. Engineered for clear information display and bulletproof GDPR data compliance.
+                  </p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
+                  <h4 className="font-bold text-lg text-[#411b3f] mb-2">Building & Construction</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    High-performance portfolios structured for commercial contractors, tradespeople, and firms requiring conversion-focused galleries to capture local qualified leads.
+                  </p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
+                  <h4 className="font-bold text-lg text-[#102f35] mb-2">E-Commerce Retailing</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Modern headless retail platforms built to support rapid drop-shipping connections, complex inventories, and clean single-page checkouts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        {/* === DETAILED STRATEGIC PROCESS STEP WORKFLOW === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-white to-[#f9fafb] border-t border-gray-100">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-20">
+                <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+                  ⚙ Our End-to-End Operational Framework
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  How we transition your digital project securely from initial strategic discovery to full production deployment.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-4 gap-8">
+                
+                <div className="relative bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                  <div>
+                    <div className="text-3xl font-extrabold text-[#411b3f] mb-4">01</div>
+                    <h3 className="text-xl font-bold text-[#102f35] mb-3">Discovery & Audit</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      We audit competitive market keywords, assess target audience parameters, and establish absolute structural requirements to maximize search performance from day one.
+                    </p>
+                  </div>
+                  <div className="text-xs font-semibold text-[#411b3f] mt-4 uppercase tracking-wider">Phase Estimate: 2-3 Days</div>
+                </div>
+
+                <div className="relative bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                  <div>
+                    <div className="text-3xl font-extrabold text-[#102f35] mb-4">02</div>
+                    <h3 className="text-xl font-bold text-[#102f35] mb-3">Architecture & Design</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      We design tailored visual assets, map intuitive layout paths, and configure semantic content maps, avoiding generic pre-built template systems entirely.
+                    </p>
+                  </div>
+                  <div className="text-xs font-semibold text-[#102f35] mt-4 uppercase tracking-wider">Phase Estimate: 4-5 Days</div>
+                </div>
+
+                <div className="relative bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                  <div>
+                    <div className="text-3xl font-extrabold text-[#411b3f] mb-4">03</div>
+                    <h3 className="text-xl font-bold text-[#102f35] mb-3">Development & Build</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      We write highly optimized components, clean technical script hooks, dynamic asset processing engines, and structured JSON markup validation routines.
+                    </p>
+                  </div>
+                  <div className="text-xs font-semibold text-[#411b3f] mt-4 uppercase tracking-wider">Phase Estimate: 5-10 Days</div>
+                </div>
+
+                <div className="relative bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                  <div>
+                    <div className="text-3xl font-extrabold text-[#102f35] mb-4">04</div>
+                    <h3 className="text-xl font-bold text-[#102f35] mb-3">Launch & Calibration</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      We securely deploy your clean source code to cloud edge servers, verify live DNS targets, map active sitemaps, and provide full dashboard system validation.
+                    </p>
+                  </div>
+                  <div className="text-xs font-semibold text-[#102f35] mt-4 uppercase tracking-wider">Phase Estimate: Continuous</div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        {/* === BROAD KNOWLEDGE CAPABILITIES FAQ === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-white border-t border-gray-100">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-4">
+                  Technical Service Capabilities FAQ
+                </h2>
+                <p className="text-gray-600">
+                  Answers concerning our development practices, technical standards, and asset optimizations.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <details className="border rounded-xl p-6 shadow-sm group transition-all">
+                  <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
+                    <span>What are the clear benefits of a headless layout stack over standard systems?</span>
+                    <span className="text-xl group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                    By separating user display layouts from database engines via modern APIs, headless builds eliminate heavy plugin tracking overhead entirely. This results in incredibly fast site interaction responses, reduces data vulnerabilities to zero, and allows you to update structural site data without breaking frontend configurations.
+                  </p>
+                </details>
+
+                <details className="border rounded-xl p-6 shadow-sm group transition-all">
+                  <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
+                    <span>How does Karol Digital manually guarantee structured data indexation?</span>
+                    <span className="text-xl group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                    We code custom semantic elements manually using appropriate metadata object layouts. By nesting native JSON-LD tracking cards across layout boundaries, search engine bots can map business service offerings, localized UK operational spaces, and real authorship credentials cleanly.
+                  </p>
+                </details>
+
+                <details className="border rounded-xl p-6 shadow-sm group transition-all">
+                  <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
+                    <span>Can customized automation flows be integrated down the line?</span>
+                    <span className="text-xl group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                    Yes. All system architectures are structured as modular component fields. New customer support engines, specialized booking calendars, CRM Webhook pipelines, or automated newsletter platforms can be cleanly injected into existing workspaces without rebuilding the site.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        {/* === FINAL CALL TO ACTION BRIEF === */}
+        <FadeIn>
+          <section className="py-24 bg-gradient-to-r from-[#411b3f] via-[#513356] to-[#102f35] text-white text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Let’s Architect Your Next Digital Asset
+            </h2>
+            <p className="text-lg mb-8 text-gray-100 max-w-2xl mx-auto px-6">
+              Accelerate your digital presence with high-performance web development. Discuss your long-term commercial targets with us today.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-[#102f35] hover:bg-[#411b3f] hover:text-white font-semibold px-8 py-4 rounded-full shadow-lg transition"
+            >
+              Request a Technical Strategy Session
+            </Link>
           </section>
         </FadeIn>
 

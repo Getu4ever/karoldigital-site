@@ -1,18 +1,18 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  // Targeting high-growth sectors: Meal Prep and Dark Kitchens
-  title: "Web Design for Caterers & Kitchens | Karol Digital",
+  // Refined to perfectly match the updated page title keywords and H1 target
+  title: "Catering Website Design & Hospitality Web Systems | Karol Digital",
   description:
-    "Professional web design for UK food businesses. We build high-conversion websites for caterers & meal prep services with online ordering and digital menus.",
+    "Professional catering website design for UK food brands. We build high-conversion web frameworks for caterers & meal prep services with smooth online ordering.",
   url: "https://www.karoldigital.co.uk/services/catering-services",
-  image: "/foodmama-showcase-new.jpg", // Using your successful case study image
+  image: "/foodmama-showcase-new.jpg",
 });
 
 const cateringSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Web Design for Hospitality & Catering",
+  "serviceType": "Catering Website Design & Hospitality Systems",
   "provider": {
     "@type": "ProfessionalService",
     "name": "Karol Digital",
@@ -27,7 +27,7 @@ const cateringSchema = {
     "@type": "Country",
     "name": "United Kingdom"
   },
-  "description": "Bespoke web design for the UK food and hospitality sector. Specialising in mobile-first websites with integrated ordering systems and visual menus.",
+  "description": "Bespoke catering website design for the UK hospitality sector. Specialising in mobile-first websites with integrated ordering architectures and visual menus.",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Hospitality Web Solutions",

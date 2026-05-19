@@ -10,8 +10,7 @@ export default function About() {
     <FadeIn>
       <main className="min-h-screen bg-white text-gray-900">
 
-
-        {/* === HERO SECTION (keeps unique animation) === */}
+        {/* === HERO SECTION === */}
         <motion.section
           className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4"
           initial={{ opacity: 0, y: 30 }}
@@ -29,20 +28,14 @@ export default function About() {
 
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="text-white">About </span>
-            <span className="text-yellow-400">Karol Digital</span>
+              <span className="text-white">About </span>
+              <span className="text-yellow-400">Karol Digital</span>
+            </h1>
 
-            {/* SEO-only extension (not visible on screen) */}
-            <span className="sr-only">
-              Our story and mission to make web design and digital marketing accessible for small businesses in the UK
-            </span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-            Building affordable, creative, and mobile-friendly websites that help
-            small businesses grow and stand out online.
-          </p>
-
+            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+              Building affordable, creative, and mobile-friendly websites that help
+              small businesses grow and stand out online.
+            </p>
           </div>
         </motion.section>
 
@@ -57,18 +50,23 @@ export default function About() {
                   Our <span className="text-[#102f35]">Story</span>
                 </h2>
 
+                {/* Fixed: Explicitly matches H1 text in the first sentence for the crawler */}
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  <strong>Karol Digital</strong> was founded with one mission —
+                  Everything you need to know <strong>About Karol Digital</strong> begins with our core mission —
                   to make professional web design and digital marketing accessible
                   to every small business. We believe every brand deserves a clean,
-                  fast, and creative online presence that works as hard as they do.
+                  fast, and creative online presence that works as hard as they do. Our approach removes the barriers of high agency costs while delivering exceptional website performance.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
                   From local cafés and tradespeople to startups and solo
                   entrepreneurs, we help businesses turn their ideas into
                   high-performing websites designed to engage customers and
-                  drive real results.
+                  drive real results. By working closely with business owners, we ensure that every design strategy is specifically tailored to reach local customers across the UK effectively.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  We understand that navigating the digital world can feel overwhelming for growing companies. That is why we manage the entire technical process seamlessly, from initial mockups and user experience layout mapping to robust deployment and search visibility optimization.
                 </p>
 
                 <Link
@@ -120,16 +118,20 @@ export default function About() {
 
                 <p className="text-gray-700 leading-relaxed mb-6">
                   We design, build, and manage beautiful, responsive websites that
-                  perform across all devices. From content creation and SEO setup to
-                  ongoing maintenance, we provide everything your business needs to
-                  succeed online.
+                  perform flawlessly across all mobile, tablet, and desktop devices. From content creation and local SEO setup to
+                  ongoing technical maintenance, we provide everything your business needs to
+                  succeed in competitive online markets. Our digital strategies focus heavily on user engagement and conversion rate optimization.
                 </p>
 
-                <ul className="list-disc list-inside text-gray-700 mb-6">
-                  <li>✔ Affordable mobile-friendly web design</li>
-                  <li>✔ WordPress or fully custom-built sites</li>
-                  <li>✔ Social media branding & setup</li>
-                  <li>✔ Digital marketing & local SEO support</li>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Whether you require an efficient single-page landing site or a comprehensive service portal, we scale our frameworks to match your professional operational requirements, bringing robust structure to your brand identity.
+                </p>
+
+                <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                  <li>✔ <strong>Affordable mobile-friendly web design:</strong> Perfectly adjusted layouts for seamless scrolling on any smartphone screen size.</li>
+                  <li>✔ <strong>WordPress or fully custom-built sites:</strong> Content systems tailored to your technical specifications and business workflows.</li>
+                  <li>✔ <strong>Social media branding & setup:</strong> Cohesive professional layouts for Facebook, Instagram, and LinkedIn channels.</li>
+                  <li>✔ <strong>Digital marketing & local SEO support:</strong> Strategic structural optimizations to rank effectively for local commercial intent.</li>
                 </ul>
 
                 <Link
@@ -157,29 +159,29 @@ export default function About() {
                 {[
                   {
                     title: "Creativity",
-                    desc: "We bring strategic thinking and artistic design together to create memorable digital experiences.",
+                    desc: "We bring strategic thinking and artistic design together to create memorable digital experiences. Every project begins with fresh, custom layouts that reject cookie-cutter approaches in order to let your business shine.",
                     icon: "🎨",
                   },
                   {
                     title: "Transparency",
-                    desc: "Clear pricing, honest advice, and real support — no hidden fees, no confusing jargon.",
+                    desc: "Clear pricing, honest advice, and real support — no hidden fees, no confusing technical jargon. We treat your digital platform as our priority, keeping you closely informed at every stage of development.",
                     icon: "🤝",
                   },
                   {
                     title: "Growth",
-                    desc: "We help your business grow through smart design choices and practical marketing strategies.",
+                    desc: "We help your business grow through smart design choices and practical marketing strategies. Our ultimate measure of project success is the consistent volume of inquiries and sales generated by your live platform.",
                     icon: "🚀",
                   },
                 ].map((value) => (
                   <div
                     key={value.title}
-                    className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-lg transition"
+                    className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-lg transition text-left md:text-center"
                   >
-                    <div className="text-5xl mb-4">{value.icon}</div>
-                    <h3 className="text-xl font-bold text-[#102f35] mb-2">
+                    <div className="text-5xl mb-4 text-center">{value.icon}</div>
+                    <h3 className="text-xl font-bold text-[#102f35] mb-2 text-center">
                       {value.title}
                     </h3>
-                    <p className="text-gray-700">{value.desc}</p>
+                    <p className="text-gray-700 leading-relaxed">{value.desc}</p>
                   </div>
                 ))}
               </div>
@@ -194,8 +196,8 @@ export default function About() {
               Ready to grow your business online?
             </h2>
             <p className="text-lg mb-8 text-gray-100 max-w-2xl mx-auto">
-              Let’s discuss your goals and create a web presence that reflects your
-              brand, drives results, and connects you with the right audience.
+              Let’s discuss your upcoming goals and build a distinct web presence that accurately reflects your
+              brand, captures search intent, and connects you directly with the right target audience.
             </p>
             <Link
               href="/contact"

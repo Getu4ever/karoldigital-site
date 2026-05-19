@@ -1,18 +1,18 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  // Refined for "Contractor" and "Trades" keywords
-  title: "Web Design for Construction & Builders | Karol Digital",
+  // Refined to perfectly match the updated page title keywords
+  title: "Construction Website Design & Trade SEO | Karol Digital",
   description:
-    "High-performance websites for UK builders and contractors. Get more local leads with professional project galleries and trade SEO.",
+    "High-performance construction website design for UK builders and contractors. Get more local leads with professional project galleries and trade SEO.",
   url: "https://www.karoldigital.co.uk/services/building-services",
-  image: "/building-services-hero.jpg", // Using your industry-specific image
+  image: "/building-services-hero.jpg",
 });
 
 const builderServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Web Design for Construction & Trades",
+  "serviceType": "Construction Website Design & Trades",
   "provider": {
     "@type": "ProfessionalService",
     "name": "Karol Digital",
@@ -27,7 +27,7 @@ const builderServiceSchema = {
     "@type": "Country",
     "name": "United Kingdom"
   },
-  "description": "Bespoke web design and local SEO for UK tradespeople, building firms, and construction contractors. Features include before/after galleries and lead capture.",
+  "description": "Bespoke construction website design and local SEO for UK tradespeople, building firms, and construction contractors. Features include before/after galleries and lead capture.",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Trade & Construction Web Services",

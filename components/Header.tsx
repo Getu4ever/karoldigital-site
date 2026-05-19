@@ -17,6 +17,7 @@ import {
   Utensils,
   Landmark,
   Newspaper,
+  ArrowRight,
 } from "lucide-react";
 
 export default function Header() {
@@ -111,17 +112,31 @@ export default function Header() {
                       exit={{ opacity: 0, y: 10 }}
                       className="absolute left-0 top-full pt-4 w-64"
                     >
-                      <div className="bg-[#102f35] border border-white/10 rounded-xl shadow-2xl overflow-hidden p-2">
-                        {item.dropdown.map((sub) => (
+                      <div className="bg-[#102f35] border border-white/10 rounded-xl shadow-2xl overflow-hidden p-2 flex flex-col">
+                        {/* Industry Niche Links */}
+                        <div className="flex flex-col gap-1">
+                          {item.dropdown.map((sub) => (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#411b3f] hover:text-yellow-400 rounded-lg transition"
+                            >
+                              <span className="text-yellow-400">{sub.icon}</span>
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+
+                        {/* Option A: Dropdown Footer Button */}
+                        <div className="mt-2 pt-2 border-t border-white/10">
                           <Link
-                            key={sub.href}
-                            href={sub.href}
-                            className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#411b3f] hover:text-yellow-400 rounded-lg transition"
+                            href="/services"
+                            className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-yellow-400 hover:bg-white/5 rounded-lg transition group/btn"
                           >
-                            <span className="text-yellow-400">{sub.icon}</span>
-                            {sub.label}
+                            <span>View All Services</span>
+                            <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-1" />
                           </Link>
-                        ))}
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -135,6 +150,7 @@ export default function Header() {
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col items-center space-y-1.5"
+          aria-label="Toggle Menu"
         >
           <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? "rotate-45 translate-y-1.5" : ""}`} />
           <span className={`block h-0.5 w-6 bg-white transition-opacity ${open ? "opacity-0" : ""}`} />
@@ -150,14 +166,16 @@ export default function Header() {
               {menuItems.map((item) => (
                 <div key={item.href}>
                   {item.dropdown ? (
-                    <div className="flex items-center gap-3 text-lg font-semibold">
+                    <div className="flex items-center gap-3 text-lg font-semibold text-gray-200">
                       {item.label}
                     </div>
                   ) : (
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="flex items-center gap-3 text-lg font-semibold"
+                      className={`flex items-center gap-3 text-lg font-semibold ${
+                        pathname === item.href ? "text-yellow-400" : "text-white"
+                      }`}
                     >
                       {item.label}
                     </Link>
@@ -165,12 +183,24 @@ export default function Header() {
 
                   {item.dropdown && (
                     <div className="mt-2 ml-4 flex flex-col space-y-3 border-l border-white/20 pl-4">
+                      {/* Mobile Specific View All Link */}
+                      <Link
+                        href="/services"
+                        onClick={() => setOpen(false)}
+                        className="text-sm font-medium text-yellow-400 underline decoration-dotted underline-offset-4"
+                      >
+                        All Services Overview
+                      </Link>
+                      
+                      {/* Niche Items */}
                       {item.dropdown.map((sub) => (
                         <Link
                           key={sub.href}
                           href={sub.href}
                           onClick={() => setOpen(false)}
-                          className="text-sm text-gray-300 hover:text-yellow-400"
+                          className={`text-sm ${
+                            pathname === sub.href ? "text-yellow-400 font-medium" : "text-gray-300 hover:text-yellow-400"
+                          }`}
                         >
                           {sub.label}
                         </Link>
@@ -180,13 +210,15 @@ export default function Header() {
                 </div>
               ))}
 
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="bg-white text-[#102f35] py-3 rounded-full text-center font-bold"
-              >
-                Let's Get Started
-              </Link>
+              <div className="flex flex-col gap-2 pt-2 border-t border-white/10">
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="bg-white text-[#102f35] py-3 rounded-full text-center font-bold shadow-md active:scale-95 transition"
+                >
+                  Let's Get Started
+                </Link>
+              </div>
             </nav>
           </motion.div>
         )}

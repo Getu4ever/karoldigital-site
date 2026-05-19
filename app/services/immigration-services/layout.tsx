@@ -2,20 +2,20 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  // Refined Title: Added "UK" and "Agency" for local SEO
-  title: "Web Design for Immigration Firms | Karol Digital",
+  // Refined for maximum consistency with the page's exact focus and target headers
+  title: "Immigration Law Firm Web Design & OISC Systems | Karol Digital",
   description:
-    "Specialist OISC-compliant website design for UK immigration firms. High-trust, secure websites with intake forms & SEO for immigration consultants. Get a quote.",
-  url: "https://www.karoldigital.co.uk/services/immigration-services", // Updated to specific page URL
-  image: "/immigration-hero-bg.jpg",
+    "Specialist OISC & SRA-compliant website design for UK immigration firms. High-trust, secure websites with smart intake forms & targeted legal SEO. Get a quote.",
+  url: "https://www.karoldigital.co.uk/services/immigration-services",
+  image: "/1st-call-uk-immigration-services.jpg", // Using your premium case study asset for open graph consistency
 });
 
 const immigrationServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Web Design for Immigration Law Firms",
+  "serviceType": "Immigration Law Firm Web Design & OISC Systems",
   "provider": {
-    "@type": "ProfessionalService", // Changed to ProfessionalService to match your root layout
+    "@type": "ProfessionalService",
     "name": "Karol Digital",
     "url": "https://www.karoldigital.co.uk",
     "address": {
@@ -28,25 +28,33 @@ const immigrationServiceSchema = {
     "@type": "Country",
     "name": "United Kingdom"
   },
-  "description": "Specialised web design services for OISC and SRA regulated immigration consultants. Includes secure data forms, multi-language support, and SEO for visa services.",
+  "description": "Specialised high-trust web design services for OISC and SRA regulated immigration law firms, consultants, and corporate visa advisors. Features secure pre-screening intake systems.",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Immigration Web Design Packages",
+    "name": "Immigration Web Design Frameworks",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "OISC Compliant Web Design",
-          "description": "Compliance-ready website with secure contact forms for UK visa enquiries."
+          "name": "OISC & SRA Compliant Web Design",
+          "description": "Compliance-ready web systems with strict layout placement for statutory verification badges and fee disclosures."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Immigration SEO & Lead Generation",
-          "description": "Helping legal firms rank for keywords like 'UK Spouse Visa' and 'Skilled Worker Visa'."
+          "name": "Corporate Sponsor Licence Landing Systems",
+          "description": "B2B conversion funnels targeting global business mobility routes, skilled worker sponsorships, and audit readiness."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Immigration SEO & Case Acquisition",
+          "description": "Bespoke semantic architecture designed to rank legal firms for high-volume phrases like 'Sponsor Licence lawyers London' and family paths."
         }
       }
     ]
