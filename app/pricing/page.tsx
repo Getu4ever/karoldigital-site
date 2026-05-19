@@ -45,8 +45,7 @@ export default function PricingPage() {
                 Strategic Design Meets Technical Excellence
               </h2>
               <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                From full brand identities to custom-coded e-commerce platforms, we provide the technical
-                infrastructure your business needs to compete, scale, and dominate its market.
+                By engineering bespoke digital solutions, from full brand identities to custom-coded e-commerce platforms, I provide the technical infrastructure your business needs to compete, scale, and dominate its market.
               </p>
             </div>
           </section>
