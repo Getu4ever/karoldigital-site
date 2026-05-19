@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function PricingPage() {
   return (
     <FadeIn>
-      <main className="min-h-screen bg-white text-gray-900">
+      <main className="min-h-screen bg-white text-gray-900 font-sans">
 
         {/* === HERO SECTION === */}
         <motion.section
@@ -51,113 +51,113 @@ export default function PricingPage() {
           </section>
         </FadeIn>
 
-       {/* === PRICING PACKAGES === */}
-<FadeIn>
-  <section className="py-24 px-6 md:px-12 bg-white">
-    <div className="max-w-7xl mx-auto text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-        💼 Performance Web Packages
-      </h2>
-      <p className="text-gray-600 max-w-2xl mx-auto">
-        Transparent pricing based on business outcomes, not just design delivery.
-      </p>
-    </div>
+        {/* === PRICING PACKAGES === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-white">
+            <div className="max-w-7xl mx-auto text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
+                💼 Performance Web Packages
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Transparent pricing based on business outcomes, not just design delivery.
+              </p>
+            </div>
 
-    <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto mb-20">
+            <div className="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto mb-20">
 
-      {/* STARTER */}
-      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition flex flex-col">
-        <h3 className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
-        <p className="text-gray-600 text-center mb-6">
-          A professional online presence for new or small businesses.
-        </p>
-        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-          <li>✔ 5–7 pages</li>
-          <li>✔ Basic SEO Setup</li>
-          <li>✔ WordPress or CMS Setup</li>
-          <li>✔ Mobile responsive design</li>
-          <li>✔ Contact form integration</li>
-        </ul>
-        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-          £900–£1,500
-        </p>
-        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-          Choose Starter
-        </Link>
-      </div>
+              {/* STARTER */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition flex flex-col">
+                <p className="text-3xl font-bold text-[#411b3f] text-center mb-4">Starter</p>
+                <p className="text-gray-600 text-center mb-6">
+                  A professional online presence for new or small businesses.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+                  <li>✔ 5–7 pages</li>
+                  <li>✔ Basic SEO Setup</li>
+                  <li>✔ WordPress or CMS Setup</li>
+                  <li>✔ Mobile responsive design</li>
+                  <li>✔ Contact form integration</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                  £900–£1,500
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Choose Starter
+                </Link>
+              </div>
 
-      {/* GROWTH */}
-      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
-        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
-        <p className="text-gray-600 text-center mb-6">
-          A conversion-focused website designed to generate consistent leads, enquiries, and bookings.
-        </p>
-        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-          <li>✔ UX & Conversion Optimisation</li>
-          <li>✔ Full On-page SEO</li>
-          <li>✔ Speed & Performance Optimisation</li>
-          <li>✔ Analytics & Tracking Setup</li>
-          <li>✔ Lead Capture System</li>
-        </ul>
-        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-          £1,800–£3,000
-        </p>
-        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-          Choose Growth
-        </Link>
-      </div>
+              {/* GROWTH */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
+                <p className="text-3xl font-bold text-[#102f35] text-center mb-4">Growth</p>
+                <p className="text-gray-600 text-center mb-6">
+                  A conversion-focused website designed to generate consistent leads, enquiries, and bookings.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+                  <li>✔ UX & Conversion Optimisation</li>
+                  <li>✔ Full On-page SEO</li>
+                  <li>✔ Speed & Performance Optimisation</li>
+                  <li>✔ Analytics & Tracking Setup</li>
+                  <li>✔ Lead Capture System</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                  £1,800–£3,000
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Choose Growth
+                </Link>
+              </div>
 
-      {/* PREMIUM */}
-      <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10 flex flex-col">
-        <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
-          Most Powerful
-        </div>
-        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
-        <p className="text-gray-600 text-center mb-6">
-          A complete digital growth system combining brand identity, high-end design, and conversion strategy.
-        </p>
-        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-          <li className="font-bold text-[#102f35]">✔ Full Brand Identity System</li>
-          <li>✔ 6–10+ Custom Designed Pages</li>
-          <li>✔ Advanced Custom Development</li>
-          <li>✔ Sales-Focused Copywriting</li>
-          <li>✔ Conversion Strategy Integration</li>
-          <li>✔ Advanced Automation Tools</li>
-        </ul>
-        <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
-          £3,500–£6,000
-        </p>
-        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-          Choose Premium
-        </Link>
-      </div>
+              {/* PREMIUM */}
+              <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-105 z-10 flex flex-col">
+                <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase">
+                  Most Powerful
+                </div>
+                <p className="text-3xl font-bold text-[#102f35] text-center mb-4">Premium</p>
+                <p className="text-gray-600 text-center mb-6">
+                  A complete digital growth system combining brand identity, high-end design, and conversion strategy.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+                  <li className="font-bold text-[#102f35]">✔ Full Brand Identity System</li>
+                  <li>✔ 6–10+ Custom Designed Pages</li>
+                  <li>✔ Advanced Custom Development</li>
+                  <li>✔ Sales-Focused Copywriting</li>
+                  <li>✔ Conversion Strategy Integration</li>
+                  <li>✔ Advanced Automation Tools</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+                  £3,500–£6,000
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Choose Premium
+                </Link>
+              </div>
 
-      {/* ENTERPRISE */}
-      <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
-        <h3 className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise (Ecommerce Systems)</h3>
-        <p className="text-gray-600 text-center mb-6">
-          Full ecommerce platforms and complex business systems for scalable operations and online sales.
-        </p>
-        <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-          <li>✔ Full Ecommerce Website (Shop / Cart / Checkout)</li>
-          <li>✔ Payment Gateway Integration (Stripe / PayPal)</li>
-          <li>✔ Product Catalogue System</li>
-          <li>✔ Order & Inventory Management</li>
-          <li>✔ CRM / Database Integration</li>
-          <li>✔ User Roles & Business Logic</li>
-          <li>✔ High-Level Security Architecture</li>
-        </ul>
-        <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
-          From £6,500
-        </p>
-        <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
-          Request Quote
-        </Link>
-      </div>
+              {/* ENTERPRISE */}
+              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col">
+                <p className="text-3xl font-bold text-[#102f35] text-center mb-4">Enterprise (Ecommerce Systems)</p>
+                <p className="text-gray-600 text-center mb-6">
+                  Full ecommerce platforms and complex business systems for scalable operations and online sales.
+                </p>
+                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
+                  <li>✔ Full Ecommerce Website (Shop / Cart / Checkout)</li>
+                  <li>✔ Payment Gateway Integration (Stripe / PayPal)</li>
+                  <li>✔ Product Catalogue System</li>
+                  <li>✔ Order & Inventory Management</li>
+                  <li>✔ CRM / Database Integration</li>
+                  <li>✔ User Roles & Business Logic</li>
+                  <li>✔ High-Level Security Architecture</li>
+                </ul>
+                <p className="text-2xl font-extrabold text-[#411b3f] text-center mb-6">
+                  From £6,500
+                </p>
+                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full">
+                  Request Quote
+                </Link>
+              </div>
 
-    </div>
-  </section>
-</FadeIn>
+            </div>
+          </section>
+        </FadeIn>
 
         {/* === MAINTENANCE PACKAGE SECTION === */}
         <FadeIn>
@@ -175,7 +175,7 @@ export default function PricingPage() {
 
               {/* Basic Maintenance */}
               <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
-                <h3 className="text-2xl font-bold text-[#102f35] mb-4">Basic Maintenance</h3>
+                <p className="text-2xl font-bold text-[#102f35] mb-4">Basic Maintenance</p>
                 <p className="text-gray-600 mb-6">Ideal for small websites needing regular care.</p>
                 <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
                   <li>✔ Fixing bugs</li>
@@ -191,9 +191,9 @@ export default function PricingPage() {
 
               {/* Premium Maintenance */}
               <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] text-center hover:-translate-y-2 transition">
-                <h3 className="text-2xl font-bold text-[#411b3f] mb-4">Premium Maintenance</h3>
+                <p className="text-2xl font-bold text-[#411b3f] mb-4">Premium Maintenance</p>
                 <p className="text-gray-600 mb-6">Priority support for active, scaling businesses.</p>
-                 <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
+                <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
                   <li>✔ Everything in Basic</li>
                   <li>✔ New Feature Implementation</li>
                   <li>✔ Deployment support</li>
@@ -208,7 +208,7 @@ export default function PricingPage() {
               
               {/* Custom Updates */}
               <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] text-center hover:-translate-y-2 transition">
-                <h3 className="text-2xl font-bold text-[#102f35] mb-4">Custom Updates</h3>
+                <p className="text-2xl font-bold text-[#102f35] mb-4">Custom Updates</p>
                 <p className="text-gray-600 mb-6">For major improvements, redesigns, or new functionality.</p>
                 <ul className="space-y-3 text-gray-700 mb-8 text-left mx-auto max-w-xs">
                   <li>✔ Technical support</li>
@@ -245,7 +245,7 @@ export default function PricingPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#411b3f] mb-3">Paid Advertising (Ads)</h3>
+              <p className="text-xl font-bold text-[#411b3f] mb-3">Paid Advertising (Ads)</p>
               <p className="text-gray-600 mb-4">Google Ads & Social Media campaigns managed for ROI.</p>
               <p className="font-bold text-[#102f35] mb-4">From £250/mo</p>
               <Link href="/services/social-media" className="text-[#102f35] font-semibold underline">
@@ -253,7 +253,7 @@ export default function PricingPage() {
               </Link>
             </div>
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">SEO & Content</h3>
+              <p className="text-xl font-bold text-[#102f35] mb-3">SEO & Content</p>
               <p className="text-gray-600 mb-4">Ongoing SEO audits, backlinking, and content planning.</p>
               <p className="font-bold text-[#411b3f] mb-4">From £450/mo</p>
               <Link href="/services/digital-marketing" className="text-[#102f35] font-semibold underline">
@@ -261,7 +261,7 @@ export default function PricingPage() {
               </Link>
             </div>
             <div className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">Brand Identity Suite</h3>
+              <p className="text-xl font-bold text-[#102f35] mb-3">Brand Identity Suite</p>
               <p className="text-gray-600 mb-4">Full Logos, colour palettes, typography & social templates.</p>
               <p className="font-bold text-[#411b3f] mb-4">Custom Pricing</p>
               <Link href="/contact" className="text-[#102f35] font-semibold underline">
@@ -279,12 +279,12 @@ export default function PricingPage() {
                 🎁 Built for Long-Term Success
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Every website we build is a high-performance asset designed to outrank competition.
+                Every website I build is a high-performance asset designed to outrank competition.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
               <div className="bg-white shadow-lg p-8 rounded-2xl border">
-                <h3 className="text-xl font-bold text-[#102f35] mb-4">Core Deliverables</h3>
+                <p className="text-xl font-bold text-[#102f35] mb-4">Core Deliverables</p>
                 <ul className="space-y-3 text-gray-700">
                   <li>✔ Bespoke, clean web design</li>
                   <li>✔ Mobile-responsive architecture</li>
@@ -294,7 +294,7 @@ export default function PricingPage() {
                 </ul>
               </div>
               <div className="bg-white shadow-lg p-8 rounded-2xl border">
-                <h3 className="text-xl font-bold text-[#411b3f] mb-4">Performance & Support</h3>
+                <p className="text-xl font-bold text-[#411b3f] mb-4">Performance & Support</p>
                 <ul className="space-y-3 text-gray-700">
                   <li>✔ Image & Asset optimisation</li>
                   <li>✔ Zero-latency performance tuning</li>
@@ -320,17 +320,17 @@ export default function PricingPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold text-[#411b3f] mb-3">Blog & Content Engine</h3>
+                <p className="text-xl font-bold text-[#411b3f] mb-3">Blog & Content Engine</p>
                 <p className="text-gray-600 mb-4">Full CMS integration for SEO-driven articles.</p>
                 <p className="font-bold text-[#102f35]">£150+</p>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold text-[#102f35] mb-3">Email Automation Setup</h3>
+                <p className="text-xl font-bold text-[#102f35] mb-3">Email Automation Setup</p>
                 <p className="text-gray-600 mb-4">Mailchimp, Brevo or HubSpot workflows.</p>
                 <p className="font-bold text-[#411b3f]">£130+</p>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold text-[#102f35] mb-3">Advanced Motion Design</h3>
+                <p className="text-xl font-bold text-[#102f35] mb-3">Advanced Motion Design</p>
                 <p className="text-gray-600 mb-4">High-end UI interactions and transitions.</p>
                 <p className="font-bold text-[#411b3f]">£140+</p>
               </div>
@@ -343,7 +343,7 @@ export default function PricingPage() {
           <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#eef2f6]">
             <div className="max-w-6xl mx-auto text-center mb-16">
               <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-                🛠 Our Strategic Process
+                🛠 Strategic Process
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 A streamlined workflow focused on clarity and collaboration.
@@ -358,7 +358,7 @@ export default function PricingPage() {
               ].map((item) => (
                 <div key={item.step} className="bg-white p-8 rounded-2xl shadow border text-center">
                   <div className="text-4xl font-extrabold text-[#411b3f] mb-3">{item.step}</div>
-                  <h3 className="text-xl font-bold text-[#102f35] mb-2">{item.title}</h3>
+                  <p className="text-xl font-bold text-[#102f35] mb-2">{item.title}</p>
                   <p className="text-gray-600">{item.desc}</p>
                 </div>
               ))}
@@ -374,7 +374,7 @@ export default function PricingPage() {
                 ❓ Frequently Asked Questions
               </h2>
               <p className="text-gray-600">
-                Common questions about our high-performance digital builds.
+                Common questions about my high-performance digital builds.
               </p>
             </div>
             <div className="max-w-4xl mx-auto space-y-6">
@@ -385,12 +385,12 @@ export default function PricingPage() {
               <details className="border rounded-lg p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">Do you manage the hosting?</summary>
                 <p className="mt-3 text-gray-600">
-                  We deploy your site to enterprise-grade platforms (like Vercel or AWS) and manage the setup so you never have to worry about downtime.
+                  I deploy your site to enterprise-grade platforms (like Vercel or AWS) and manage the setup so you never have to worry about downtime.
                 </p>
               </details>
               <details className="border rounded-lg p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">Can I update content myself?</summary>
-                <p className="mt-3 text-gray-600">Yes. We provide a full CMS (Content Management System) and training so you can edit text and images effortlessly.</p>
+                <p className="mt-3 text-gray-600">Yes. I provide a full CMS (Content Management System) and training so you can edit text and images effortlessly.</p>
               </details>
               <details className="border rounded-lg p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">What is the payment structure?</summary>
