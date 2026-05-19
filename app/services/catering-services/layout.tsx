@@ -1,15 +1,18 @@
+// /app/services/catering-services/layout.tsx
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  // Refined to perfectly match the updated page title keywords and H1 target
-  title: "Catering Website Design & Hospitality Web Systems | Karol Digital",
+  // OPTIMIZED: Trimmed from 596px to ~515px to sit comfortably under the 580px limit.
+  // Perfectly matches the H1 content terms to clear the heading density warning.
+  title: "Catering Website Design & Hospitality Systems | Karol Digital",
   description:
-    "Professional catering website design for UK food brands. We build high-conversion web frameworks for caterers & meal prep services with smooth online ordering.",
+    "Professional catering website design for UK food brands. I build high-conversion web frameworks for caterers with smooth online ordering.", 
+  // OPTIMIZED: Trimmed from 1002px to ~895px to drop below the strict 1000px cap.
   url: "https://www.karoldigital.co.uk/services/catering-services",
   image: "/foodmama-showcase-new.jpg",
 });
 
-const cateringSchema = {
+const cateringServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Catering Website Design & Hospitality Systems",
@@ -27,25 +30,25 @@ const cateringSchema = {
     "@type": "Country",
     "name": "United Kingdom"
   },
-  "description": "Bespoke catering website design for the UK hospitality sector. Specialising in mobile-first websites with integrated ordering architectures and visual menus.",
+  "description": "Bespoke digital solutions and high-conversion web frameworks for UK food brands, caterers, and meal prep businesses featuring integrated ordering systems.",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Hospitality Web Solutions",
+    "name": "Hospitality Web Services",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Meal Prep & Subscription Websites",
-          "description": "E-commerce solutions for recurring meal deliveries and subscription-based food businesses."
+          "name": "Catering & Meal Prep Web Design",
+          "description": "Bespoke web platforms built with interactive menu components and frictionless online booking funnels."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Catering Event Booking Systems",
-          "description": "Lead generation sites for event caterers featuring dynamic menu galleries and enquiry management."
+          "name": "Hospitality Ordering Integrations",
+          "description": "Custom commission-free online ordering setups and menu e-commerce engines for local food brands."
         }
       }
     ]
@@ -57,7 +60,7 @@ export default function CateringLayout({ children }: { children: React.ReactNode
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(cateringSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cateringServiceSchema) }}
       />
       {children}
     </>

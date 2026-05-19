@@ -61,11 +61,11 @@ export default function CateringWebDesign() {
               Premium Next.js Frameworks for Food Brands
             </span>
             <h1 className="text-4xl sm:text-5xl font-black mb-6 tracking-tight leading-tight md:leading-[1.15]">
-              Catering Website Design That Looks <br className="hidden sm:inline" />
-              <span className="text-yellow-400">Good Enough To Eat</span>
+              Catering Website Design & <br className="hidden sm:inline" />
+              <span className="text-yellow-400">Hospitality Systems</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
-              Professional web design systems for UK caterers, premium meal prep services, and modern dark kitchens. Engineered to turn hungry visitors into high-value clients.
+              Professional catering website design and high-conversion web frameworks for UK food brands. I build custom online ordering systems engineered to turn hungry visitors into booked events.
             </p>
             <Link 
               href="/contact" 
@@ -75,7 +75,6 @@ export default function CateringWebDesign() {
             </Link>
           </div>
         </motion.section>
-
         {/* === BRANDED BREADCRUMB NAVIGATION BAR === */}
         <div className="bg-[#102f35]/5 border-b border-[#102f35]/10 py-4 px-6">
           <nav className="max-w-7xl mx-auto flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500">
