@@ -1,37 +1,14 @@
 // app/services/web-design/page.tsx
 "use client";
 
-import { generateSEOMetadata } from "@/components/seo-server";
 import FadeIn from "@/components/FadeIn";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export const metadata = generateSEOMetadata({
-  title: "WordPress & Custom Web Design Packages UK | Karol Digital",
-  description:
-    "Mobile-friendly web design for UK businesses. From simple WordPress sites to custom-coded solutions with AI chatbots. Explore our packages.",
-  url: "https://www.karoldigital.co.uk/services/web-design",
-  image: "/hero-page-banner.jpg",
-});
-
-const webDesignSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.karoldigital.co.uk" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.karoldigital.co.uk/services" },
-    { "@type": "ListItem", "position": 3, "name": "Web Design", "item": "https://www.karoldigital.co.uk/services/web-design" }
-  ]
-};
-
 export default function WebDesignPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webDesignSchema) }}
-      />
       <FadeIn>
         <main className="min-h-screen bg-white text-gray-900">
           {/* === HERO SECTION === */}
