@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Scale, HardHat, Utensils, Landmark, ArrowRight } from "lucide-react";
+import { Scale, HardHat, Utensils, Landmark, ArrowRight, Monitor, Megaphone, Share2 } from "lucide-react";
 
 export default function ServicesPage() {
   const specializedPills = [
@@ -85,11 +85,13 @@ export default function ServicesPage() {
           </section>
         </FadeIn>
 
-        {/* === PILL-STYLE SUB-NAVIGATION BAR === */}
+                {/* === MULTI-TIER SUB-NAVIGATION WORKSPACE === */}
         <FadeIn>
-          <section className="bg-white py-12 px-6 border-b border-gray-50">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col items-center">
+          <section className="bg-white py-16 px-6 border-b border-gray-50 flex flex-col gap-12">
+            <div className="max-w-6xl mx-auto w-full">
+              
+              {/* TIER 1: INDUSTRY SPECIALISMS */}
+              <div className="flex flex-col items-center mb-12">
                 <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]/60 mb-8">
                   Explore Industry Specialisms
                 </h3>
@@ -101,10 +103,7 @@ export default function ServicesPage() {
                       href={pill.href}
                       className="group relative flex items-center gap-3 px-8 py-4 bg-[#411b3f]/5 border border-[#102f35]/10 text-[#102f35] rounded-full font-bold text-sm transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#102f35]/10 active:scale-95"
                     >
-                      {/* Animated Background Fill */}
                       <span className="absolute inset-0 w-0 bg-gradient-to-r from-[#102f35] to-[#411b3f] transition-all duration-500 ease-out group-hover:w-full" />
-
-                      {/* Content (Z-index ensures it stays above the fill) */}
                       <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors duration-500">
                         <span className="text-[#411b3f] group-hover:text-yellow-400 transition-colors duration-500">
                           {pill.icon}
@@ -119,9 +118,58 @@ export default function ServicesPage() {
                   ))}
                 </div>
               </div>
+
+              {/* TIER 2: CORE DIGITAL CAPABILITIES */}
+              <div className="flex flex-col items-center">
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#102f35]/60 mb-8">
+                  Core Digital Capabilities
+                </h3>
+                
+                <div className="flex flex-wrap items-center justify-center gap-4">
+                  {[
+                    {
+                      label: "Web Design Services",
+                      href: "/services/web-design",
+                      icon: <Monitor size={18} />,
+                    },
+                    {
+                      label: "Digital Marketing",
+                      href: "/services/digital-marketing",
+                      icon: <Megaphone size={18} />,
+                    },
+                    {
+                      label: "Social Media Strategy",
+                      href: "/services/social-media",
+                      icon: <Share2 size={18} />,
+                    },
+                  ].map((capability) => (
+                    <Link
+                      key={capability.href}
+                      href={capability.href}
+                      className="group relative flex items-center gap-3 px-8 py-4 bg-[#102f35]/5 border border-[#102f35]/10 text-[#102f35] rounded-full font-bold text-sm transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#102f35]/10 active:scale-95"
+                    >
+                      {/* Inverse Gradient Fill for Subtle Platform Distinction */}
+                      <span className="absolute inset-0 w-0 bg-gradient-to-r from-[#411b3f] to-[#102f35] transition-all duration-500 ease-out group-hover:w-full" />
+                      
+                      <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors duration-500">
+                        <span className="text-[#102f35] group-hover:text-yellow-400 transition-colors duration-500">
+                          {capability.icon}
+                        </span>
+                        <span className="tracking-tight">{capability.label}</span>
+                        <ArrowRight 
+                          size={16} 
+                          className="opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-yellow-400" 
+                        />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </section>
         </FadeIn>
+
 
         {/* === CORE CAPABILITIES DETAILED SHOWCASE === */}
         <FadeIn>

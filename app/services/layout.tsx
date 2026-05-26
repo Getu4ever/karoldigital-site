@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   ...generateSEOMetadata({
     // Differentiated title optimized to lead with the main H1 theme of your overview page
-    title: "Professional Web Engineering & Digital Capabilities | Karol Digital",
+    title: "Web Engineering & Digital Capabilities | Karol Digital",
     description:
       "Explore transparent pricing for web design, maintenance, and digital marketing. Affordable packages tailored for UK small businesses, from Starter to Premium.",
     url: "https://www.karoldigital.co.uk/services",

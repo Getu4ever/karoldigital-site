@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
-    title: "Immigration Law Firm Marketing & OISC Web Systems | Karol Digital",
+    title: "Immigration Law Firm Web & OISC Systems | Karol Digital",
     description:
       "Specialist OISC & SRA-compliant website design for UK immigration firms. High-trust, secure websites with smart intake forms & targeted legal SEO. Get a quote.",
     url: "https://www.karoldigital.co.uk/services/immigration-services",

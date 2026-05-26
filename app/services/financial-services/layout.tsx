@@ -2,7 +2,7 @@ import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
   // Refined to perfectly align with the updated page title keywords and H1 target
-  title: "Financial Services Web Design & Corporate Systems | Karol Digital",
+  title: "Financial Services Web Design & Systems | Karol Digital",
   description:
     "Specialist financial services web design for UK corporate brands. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs.",
   url: "https://www.karoldigital.co.uk/services/financial-services",
