@@ -1,23 +1,27 @@
+// app/sitemap.ts
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.karoldigital.co.uk'
   
-  // Base fixed date anchor to prevent false "modified daily" signals for static anchors
+  // Base fixed date anchor for long-term static pages
   const staticDate = new Date('2026-05-19')
+  
+  // Force current timestamp to ping search bots regarding your recent layout metadata overhaul
+  const structuralUpdateDate = new Date()
   
   // Define core structural views with explicit priority layers
   const corePages: MetadataRoute.Sitemap = [
     { 
       url: baseUrl, 
-      lastModified: new Date(), // Homepage updates dynamically on structural changes
+      lastModified: structuralUpdateDate, // Forces immediate home page re-crawl
       changeFrequency: 'daily' as const, 
       priority: 1.0 
     },
     { 
       url: `${baseUrl}/services`, 
-      lastModified: staticDate, 
-      changeFrequency: 'monthly' as const, 
+      lastModified: structuralUpdateDate, // Pings bots to fetch the new Web Engineering hub titles
+      changeFrequency: 'daily' as const,  // Temporarily bumped to daily to expedite indexing
       priority: 0.9 
     },
     { 
@@ -34,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Synchronized to match the exact structural links defined in your layout metadata options
+  // Services array updated to trigger immediate index refreshing on cannibalized targets
   const services: MetadataRoute.Sitemap = [
     'web-design',
     'digital-marketing',
@@ -45,8 +49,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'financial-services',
   ].map((service) => ({
     url: `${baseUrl}/services/${service}`,
-    lastModified: staticDate,
-    changeFrequency: 'monthly' as const,
+    // Triggers absolute re-indexing specifically for your web-design and immigration layouts
+    lastModified: ['web-design', 'immigration-services'].includes(service) 
+      ? structuralUpdateDate 
+      : staticDate,
+    changeFrequency: ['web-design', 'immigration-services'].includes(service)
+      ? ('daily' as const) // Speeds up the resolution of keyword cannibalization groups
+      : ('monthly' as const),
     priority: 0.8,
   }))
 

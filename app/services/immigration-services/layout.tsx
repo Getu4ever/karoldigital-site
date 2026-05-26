@@ -1,14 +1,19 @@
-// /app/services/immigration-services/layout.tsx
 import { generateSEOMetadata } from "@/components/seo-server";
+import { Metadata } from "next";
 
-export const metadata = generateSEOMetadata({
-  // Refined for maximum consistency with the page's exact focus and target headers
-  title: "Immigration Law Firm Web Design & OISC Systems | Karol Digital",
-  description:
-    "Specialist OISC & SRA-compliant website design for UK immigration firms. High-trust, secure websites with smart intake forms & targeted legal SEO. Get a quote.",
-  url: "https://www.karoldigital.co.uk/services/immigration-services",
-  image: "/1st-call-uk-immigration-services.jpg", // Using your premium case study asset for open graph consistency
-});
+export const metadata: Metadata = {
+  ...generateSEOMetadata({
+    title: "Immigration Law Firm Marketing & OISC Web Systems | Karol Digital",
+    description:
+      "Specialist OISC & SRA-compliant website design for UK immigration firms. High-trust, secure websites with smart intake forms & targeted legal SEO. Get a quote.",
+    url: "https://www.karoldigital.co.uk/services/immigration-services",
+    image: "/1st-call-uk-immigration-services.jpg",
+  }),
+  // Pass natively to Next.js by adding it outside the helper wrapper
+  alternates: {
+    canonical: "https://www.karoldigital.co.uk/services/immigration-services",
+  },
+};
 
 const immigrationServiceSchema = {
   "@context": "https://schema.org",

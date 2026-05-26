@@ -1,13 +1,20 @@
+// app/services/web-design/layout.tsx
 import { generateSEOMetadata } from "@/components/seo-server";
+import { Metadata } from "next";
 
-export const metadata = generateSEOMetadata({
-  // Targeting high-intent "WordPress" and "Custom" keywords
-  title: "WordPress & Custom Web Design Packages UK | Karol Digital",
-  description:
-    "Mobile-friendly web design for UK businesses. From simple WordPress sites to custom-coded solutions with AI chatbots. Explore our packages.",
-  url: "https://www.karoldigital.co.uk/services/web-design",
-  image: "/hero-page-banner.jpg",
-});
+export const metadata: Metadata = {
+  ...generateSEOMetadata({
+    title: "WordPress & Custom Web Design Packages UK | Karol Digital",
+    description:
+      "Mobile-friendly web design for UK businesses. From simple WordPress sites to custom-coded solutions with AI chatbots. Explore our packages.",
+    url: "https://www.karoldigital.co.uk/services/web-design",
+    image: "/hero-page-banner.jpg",
+  }),
+  // Safely appends the explicit canonical link outside your custom utility
+  alternates: {
+    canonical: "https://www.karoldigital.co.uk/services/web-design",
+  },
+};
 
 const webDesignSchema = [
   {
@@ -53,11 +60,11 @@ const webDesignSchema = [
           "itemOffered": {
             "@type": "Service",
             "name": "Starter Web Design",
-            "description": "Budget-friendly 3-page websites using WordPress or Google Sites."
+            "description": "Budget-friendly 5–7 page websites using WordPress or Google Sites."
           },
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "price": "150.00",
+            "price": "900.00",
             "priceCurrency": "GBP"
           }
         },
@@ -66,11 +73,11 @@ const webDesignSchema = [
           "itemOffered": {
             "@type": "Service",
             "name": "Growth Web Design",
-            "description": "Feature-rich 6-page websites with SEO, speed optimization, and basic AI chatbots."
+            "description": "Feature-rich 10-page websites with full on-page SEO, speed optimization, and basic AI chatbots."
           },
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "price": "350.00",
+            "price": "1800.00",
             "priceCurrency": "GBP"
           }
         },
@@ -79,11 +86,11 @@ const webDesignSchema = [
           "itemOffered": {
             "@type": "Service",
             "name": "Premium Web Design",
-            "description": "High-end 10-page websites with custom coding, advanced SEO, and advanced AI chatbots."
+            "description": "High-end 10-15+ custom pages with bespoke brand identities, custom coding, and advanced AI chatbots."
           },
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "price": "650.00",
+            "price": "3500.00",
             "priceCurrency": "GBP"
           }
         }

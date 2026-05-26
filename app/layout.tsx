@@ -1,27 +1,27 @@
+// app/layout.tsx
 import "./globals.css";
 import { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 
-/* Mobile viewport must be exported separately in App Router */
-export const viewport = {
+/* Mobile viewport and theme styling must be exported separately in App Router */
+export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#102f35",
 };
 
-// ❗ Refined Metadata: Adding mobile optimization and standardized theme colors
+// Refined Metadata: Optimized to eliminate keyword conflict with child routes
 export const metadata: Metadata = {
-  title: "Karol Digital | Affordable Web Design for UK Small Business",
+  title: "Karol Digital — High-Performance Web Design & Branding",
   description:
-    "Karol Digital provides professional web design and SEO services for UK small businesses. Modern websites built to grow your brand. Get a free quote today!",
+    "We build conversion-focused digital infrastructure and professional identities that help UK businesses outrank the competition. Get a free quote today!",
   metadataBase: new URL("https://www.karoldigital.co.uk"),
   alternates: {
     canonical: "/",
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#102f35",
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: "/seo-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Karol Digital - Web Design Services",
+        alt: "Karol Digital - High-Performance Web Design & Branding",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD: ProfessionalService with Opening Hours (Vital for Local SEO)
+// JSON-LD: ProfessionalService with local parameter tracking configurations
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -50,17 +50,11 @@ const professionalServiceJsonLd = {
   image: "https://www.karoldigital.co.uk/seo-cover.jpg",
   logo: "https://www.karoldigital.co.uk/logo.png",
   priceRange: "££",
-  telephone: "+447432241315", // Replace with your actual business number if different
+  telephone: "07565472445", // Matches your exact commercial phone registry entry
   address: {
     "@type": "PostalAddress",
     addressLocality: "London",
-    postalCode: "SW20 8DN",
     addressCountry: "GB",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 51.4093,
-    longitude: -0.2104,
   },
   openingHoursSpecification: [
     {
