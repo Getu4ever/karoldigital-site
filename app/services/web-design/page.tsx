@@ -1,4 +1,3 @@
-// app/services/web-design/page.tsx
 "use client";
 
 import FadeIn from "@/components/FadeIn";
@@ -8,112 +7,207 @@ import { motion } from "framer-motion";
 
 export default function WebDesignPage() {
   return (
-    <>
-      <FadeIn>
-        <main className="min-h-screen bg-white text-gray-900">
-          {/* === HERO SECTION === */}
-          <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4">
-            <Image
-              src="/hero-page-banner.jpg"
-              alt="Web Design Services"
-              fill
-              priority
-              className="object-cover brightness-[0.45]"
-            />
-            <div className="absolute inset-0 bg-black/40" />
+    <FadeIn>
+      <main className="min-h-screen bg-white text-gray-900">
 
-            <div className="relative z-10 px-6 max-w-3xl">
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-6xl font-extrabold mb-4"
-              >
-                <span className="text-white">Web Design </span>
-                <span className="text-yellow-400">Services</span>
-              </motion.h1>
-              <p className="text-lg md:text-xl text-gray-100">
-                Professional, mobile-friendly websites and brand identities engineered to turn visitors into loyal customers.
+        {/* === HERO SECTION === */}
+        <section className="relative min-h-[80vh] flex items-center justify-center text-center text-white">
+          <Image
+            src="/hero-page-banner.jpg"
+            alt="Professional Web Design Services"
+            fill
+            priority
+            className="object-cover brightness-[0.45]"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+
+          <div className="relative z-10 px-6 max-w-4xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-5xl md:text-6xl font-extrabold mb-6"
+            >
+              Professional Web Design
+              <span className="block text-yellow-400 mt-2">
+                Built for Growth, Performance & Trust
+              </span>
+            </motion.h1>
+
+            <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
+              We design high-impact websites that position your business as credible,
+              authoritative, and conversion-ready — engineered to support long-term
+              growth in competitive digital markets.
+            </p>
+          </div>
+        </section>
+
+        {/* === BREADCRUMB SECTION === */}
+<nav
+  aria-label="Breadcrumb"
+  className="bg-white border-b border-gray-100 py-4 px-6 md:px-12"
+>
+  <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-600">
+    <li>
+      <a href="/" className="hover:text-[#102f35] transition">
+        Home
+      </a>
+    </li>
+
+    <li className="text-gray-400">/</li>
+
+    <li>
+      <a href="/services" className="hover:text-[#102f35] transition">
+        Services
+      </a>
+    </li>
+
+    <li className="text-gray-400">/</li>
+
+    <li className="text-[#102f35] font-semibold">
+      Web Design
+    </li>
+  </ol>
+</nav>
+
+        {/* === INTRODUCTION === */}
+        <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#102f35] mb-8">
+              Web Design That Goes Beyond Visual Appeal
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              At Karol Digital, web design is not treated as a cosmetic exercise.
+              Every website we create is built with a clear strategic purpose —
+              to communicate value, build trust, guide user behaviour, and support
+              measurable business objectives.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto space-y-10 text-gray-700 text-lg leading-relaxed">
+            <p>
+              Your website is often the first meaningful interaction a potential
+              customer has with your brand. In seconds, visitors decide whether
+              they trust your business, understand your offer, and feel confident
+              enough to engage further. Poor design, slow performance, or unclear
+              messaging can silently cost you opportunities every single day.
+            </p>
+
+            <p>
+              Our approach to web design combines strategic planning, user-centred
+              design principles, and modern development standards. We focus on
+              clarity, usability, and performance to ensure that your website
+              functions as a powerful business asset rather than a static brochure.
+            </p>
+          </div>
+        </section>
+
+        {/* === CORE BENEFITS === */}
+        <section className="bg-gray-50 py-20 px-6 md:px-12">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-[#411b3f] mb-4">
+                Strategy-Driven Design
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                We design with intent. Layouts, content structure, and user flows
+                are planned around your business goals — whether that is lead
+                generation, enquiries, bookings, or product sales.
               </p>
             </div>
-          </section>
 
-          {/* === DESCRIPTION SECTION === */}
-          <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
-            <div className="max-w-5xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#102f35] mb-8">Strategic Design Meets Technical Excellence</h2>
-              <p className="text-gray-700 leading-relaxed mb-10 text-lg">
-                Whether you're a startup or an established brand, we build clean,
-                modern websites that reflect your business professionally. Choose
-                from flexible packages that match your goals, budget, and timeline.
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-[#411b3f] mb-4">
+                Performance & Accessibility
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Fast load times, mobile optimisation, and accessibility best
+                practices are baked into every project. This ensures a smooth
+                experience for users and improved visibility in search engines.
               </p>
             </div>
 
-            {/* === PRICING PACKAGES GRID === */}
-            <div className="grid md:grid-cols-4 gap-8 lg:gap-10 mb-24">
-              {/* STARTER */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#411b3f] hover:-translate-y-2 transition flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-[#411b3f] text-center mb-4">Starter</h3>
-                <p className="text-sm text-gray-600 text-center mb-6">Foundation Web - Perfect for new businesses needing a clean online presence.</p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ 5–7 pages</li>
-                  <li>✔ WordPress or Google Sites</li>
-                  <li>✔ Mobile-responsive</li>
-                  <li>✔ Basic SEO Setup</li>
-                  <li>✔ Contact form</li>
-                </ul>
-                <p className="text-xl font-extrabold text-center text-[#102f35] mb-6">£900 – £1,500</p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full transition">Choose Starter</Link>
-              </div>
-
-              {/* GROWTH */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-4">Growth</h3>
-                <p className="text-sm text-gray-600 text-center mb-6">Strategic Growth Web - Ideal for established businesses wanting visibility.</p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ Conversion-focused UX</li>
-                  <li>✔ Full On-page SEO</li>
-                  <li>✔ Speed optimisation</li>
-                  <li>✔ AI Chatbot (Basic)</li>
-                  <li>✔ Analytics & UX Strategy</li>
-                </ul>
-                <p className="text-xl font-extrabold text-center text-[#102f35] mb-6">£1,800 – £3,000</p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full transition">Choose Growth</Link>
-              </div>
-
-              {/* PREMIUM */}
-              <div className="relative bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-yellow-400 scale-[1.05] z-10 flex flex-col h-full ring-2 ring-yellow-400/20">
-                <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Best Value</div>
-                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-4">Premium</h3>
-                <p className="text-sm text-gray-600 text-center mb-6">High-end performance, custom branding, and marketing readiness.</p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li className="font-bold text-[#102f35]">✔ Full Brand Identity</li>
-                  <li>✔ 6–10+ Custom Pages</li>
-                  <li>✔ Advanced Custom Coding</li>
-                  <li>✔ Copywriting & Sales Strategy</li>
-                  <li>✔ Advanced AI Chatbot</li>
-                </ul>
-                <p className="text-xl font-extrabold text-center text-[#102f35] mb-6">£3,500 – £6,000</p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full transition shadow-lg">Choose Premium</Link>
-              </div>
-
-              {/* ENTERPRISE */}
-              <div className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#102f35] hover:-translate-y-2 transition flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-4">Enterprise</h3>
-                <p className="text-sm text-gray-600 text-center mb-6">Custom-built solutions for complex business operations.</p>
-                <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
-                  <li>✔ Full Branding & Strategy</li>
-                  <li>✔ User Roles & Infrastructure</li>
-                  <li>✔ Deep CRM Integration</li>
-                  <li>✔ Advanced E-commerce Logic</li>
-                  <li>✔ Enhanced Security Systems</li>
-                </ul>
-                <p className="text-xl font-extrabold text-center text-[#411b3f] mb-6">From £6,500</p>
-                <Link href="/contact" className="block text-center bg-[#102f35] hover:bg-[#411b3f] text-white py-3 rounded-full transition">Request Quote</Link>
-              </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-[#411b3f] mb-4">
+                Scalable Architecture
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Your website is built to grow with your business. From simple
+                brochure sites to advanced digital systems, our solutions are
+                designed with scalability and future expansion in mind.
+              </p>
             </div>
-          </section>
-        </main>
-      </FadeIn>
-    </>
+          </div>
+        </section>
+
+        {/* === PROCESS SECTION === */}
+        <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#102f35] mb-8">
+              Our Web Design Process
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              A structured and transparent process ensures clarity, efficiency,
+              and results at every stage of your project.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="p-6 border-l-4 border-[#102f35]">
+              <h4 className="text-xl font-bold mb-3">Discovery & Planning</h4>
+              <p>
+                We begin by understanding your business, audience, competitors,
+                and objectives. This phase defines the foundation of the project.
+              </p>
+            </div>
+
+            <div className="p-6 border-l-4 border-[#102f35]">
+              <h4 className="text-xl font-bold mb-3">Design & UX</h4>
+              <p>
+                Visual concepts and user journeys are crafted to ensure clarity,
+                engagement, and intuitive navigation across all devices.
+              </p>
+            </div>
+
+            <div className="p-6 border-l-4 border-[#102f35]">
+              <h4 className="text-xl font-bold mb-3">Development</h4>
+              <p>
+                Clean, modern code brings the design to life, focusing on speed,
+                security, and technical excellence.
+              </p>
+            </div>
+
+            <div className="p-6 border-l-4 border-[#102f35]">
+              <h4 className="text-xl font-bold mb-3">Launch & Support</h4>
+              <p>
+                Thorough testing precedes launch, followed by guidance and
+                ongoing support to ensure long-term success.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* === CTA SECTION === */}
+        <section className="bg-[#102f35] py-20 px-6 text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-extrabold mb-6">
+              Ready to Build a Website That Works for Your Business?
+            </h2>
+            <p className="text-lg text-gray-200 mb-10 leading-relaxed">
+              Explore our structured packages and find the solution that aligns
+              with your business goals, growth stage, and budget.
+            </p>
+
+            <Link
+              href="/pricing"
+              className="inline-block bg-[#ffffff] text-[#102f35] font-bold px-10 py-4 rounded-full hover:bg-yellow-300 transition"
+            >
+              View Web Design Packages & Pricing
+            </Link>
+          </div>
+        </section>
+
+      </main>
+    </FadeIn>
   );
 }

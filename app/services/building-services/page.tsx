@@ -14,21 +14,23 @@ import { Home, Layers, HardHat, ChevronRight, CheckCircle2, HelpCircle, Briefcas
 export default function BuildersWebDesign() {
   // JSON-LD Structured Data Schema for Local Industry Targeting
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Web Design & Technical SEO for Construction & Trades",
-    "image": "https://karoldigital.co.uk/building-services-hero.jpg",
-    "description": "Premium, conversion-focused custom Next.js websites built specifically for UK builders, commercial contractors, and construction firms to scale local leads.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Karol Digital"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "price": "Variable"
-    }
-  };
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Web Design & Technical SEO for Construction & Trades",
+  "description":
+    "Premium, conversion-focused custom Next.js websites built specifically for UK builders, commercial contractors, and construction firms to scale local leads and improve online visibility.",
+  "image": "https://karoldigital.co.uk/building-services-hero.jpg",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Karol Digital",
+    "url": "https://www.karoldigital.co.uk"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "category": "Web Design Services"
+};
 
   return (
     <FadeIn>

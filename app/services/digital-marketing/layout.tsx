@@ -1,12 +1,11 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  // Targeting high-intent "Growth" and "Strategy" keywords
   title: "Digital Marketing & SEO Services | Karol Digital",
   description:
     "Practical digital marketing support for small businesses. SEO guidance, email marketing setup, and actionable growth strategies to attract more customers online.",
   url: "https://www.karoldigital.co.uk/services/digital-marketing",
-  image: "/service-marketing.jpg", // Using the specific marketing illustration
+  image: "/service-marketing.jpg",
 });
 
 const digitalMarketingSchema = [
@@ -38,39 +37,17 @@ const digitalMarketingSchema = [
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Small Business Digital Marketing Support",
-    "description": "Actionable marketing strategies including SEO optimization, email marketing setup, and content planning for UK SMEs.",
+    "serviceType": "Digital Marketing Services for SMEs",
+    "description":
+      "Actionable marketing strategies including SEO optimisation, email marketing setup, and content planning for UK small businesses and SMEs.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Karol Digital",
       "url": "https://www.karoldigital.co.uk"
     },
-    "areaServed": "GB",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Marketing Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Local SEO & Content Optimization"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Email Marketing & Automation"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Social Media Content Strategy"
-          }
-        }
-      ]
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
     }
   }
 ];

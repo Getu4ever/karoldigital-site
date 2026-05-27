@@ -14,21 +14,23 @@ import { Home, Layers, ShieldCheck, ChevronRight, CheckCircle2, HelpCircle, File
 export default function FinanceWebDesign() {
   // JSON-LD Structured Data Schema for Professional Financial Digital Platforms
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Financial Services Corporate Website Design Systems",
-    "image": "https://www.karoldigital.co.uk/1stcall-finance-showcase.jpg",
-    "description": "Premium corporate website development for UK mortgage brokers, accountants, and financial advisory firms. Complete with secure lead capture parameters, FCA-ready disclosures, and compliance integration.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Karol Digital"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "price": "Variable"
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Financial Services Corporate Website Design Systems",
+  "description":
+    "Premium corporate website development for UK mortgage brokers, accountants, and financial advisory firms. Built with secure lead capture systems, compliance-focused structure, and conversion optimisation.",
+  "image": "https://www.karoldigital.co.uk/1stcall-finance-showcase.jpg",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Karol Digital",
+    "url": "https://www.karoldigital.co.uk",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
     }
-  };
+  },
+  "category": "Web Design Services for Financial Sector"
+};
 
   return (
     <FadeIn>

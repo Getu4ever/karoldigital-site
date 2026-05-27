@@ -1,12 +1,11 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  // Targeting high-intent "Setup" and "Branding" keywords
   title: "Social Media Setup & Google Business Profile UK | Karol Digital",
   description:
     "Professional social media setup for UK small businesses. Optimize your Facebook, Instagram, and Google Business profiles for local visibility.",
   url: "https://www.karoldigital.co.uk/services/social-media",
-  image: "/service-socialmedia.jpg", // Using the industry-specific image
+  image: "/service-socialmedia.jpg",
 });
 
 const socialMediaSchema = [
@@ -38,33 +37,17 @@ const socialMediaSchema = [
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Social Media Branding & Setup",
-    "description": "Comprehensive setup of social media profiles and Google Business listings to ensure brand consistency and local search visibility.",
+    "serviceType": "Social Media & Local Business Profile Optimisation",
+    "description":
+      "Comprehensive setup and optimisation of social media profiles and Google Business listings to ensure brand consistency and local search visibility.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Karol Digital",
       "url": "https://www.karoldigital.co.uk"
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Social Media Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Google Business Profile Setup",
-            "description": "Optimisation for Google Maps, including business hours, service areas, and contact details."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Platform Branding & Optimisation",
-            "description": "Custom banners and bio setup for Facebook, Instagram, TikTok, and LinkedIn."
-          }
-        }
-      ]
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
     }
   }
 ];

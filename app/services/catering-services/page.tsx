@@ -14,21 +14,23 @@ import { Home, Layers, UtensilsCrossed, ChevronRight, CheckCircle2, HelpCircle, 
 export default function CateringWebDesign() {
   // JSON-LD Structured Data Schema for Food Industry Web Services
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Hospitality & Catering Website Design Systems",
-    "image": "https://www.karoldigital.co.uk/office-lunch-showcase.jpg",
-    "description": "Bespoke online ordering platforms, digital menus, and premium web design frameworks tailored for UK corporate caterers, premium meal prep, and dark kitchens.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Karol Digital"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "price": "Variable"
-    }
-  };
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Hospitality & Catering Website Design Systems",
+  "description":
+    "Bespoke online ordering platforms, digital menus, and premium web design frameworks tailored for UK corporate caterers, premium meal prep providers, and dark kitchens.",
+  "image": "https://www.karoldigital.co.uk/office-lunch-showcase.jpg",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Karol Digital",
+    "url": "https://www.karoldigital.co.uk"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "category": "Web Design Services for Hospitality & Catering"
+};
 
   return (
     <FadeIn>

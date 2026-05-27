@@ -1,7 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  // Refined to perfectly align with the updated page title keywords and H1 target
   title: "Financial Services Web Design & Systems | Karol Digital",
   description:
     "Specialist financial services web design for UK corporate brands. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs.",
@@ -12,7 +11,10 @@ export const metadata = generateSEOMetadata({
 const financeServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Financial Services Web Design & Corporate Systems",
+  "name": "Financial Services Web Design & Corporate Systems",
+  "serviceType": "Web Design Services for Financial Sector",
+  "description":
+    "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready corporate web design for UK firms including accountants, mortgage brokers, and IFAs.",
   "provider": {
     "@type": "ProfessionalService",
     "name": "Karol Digital",
@@ -26,46 +28,21 @@ const financeServiceSchema = {
   "areaServed": {
     "@type": "Country",
     "name": "United Kingdom"
-  },
-  "description": "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready corporate web design for UK firms.",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Financial Sector Web Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Accountant & Tax Advisor Web Design",
-          "description": "Clean, corporate websites designed to showcase professional expertise, authority branding, and handle secure enquiries."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mortgage Broker Lead Gen Sites",
-          "description": "Optimized high-performance landing pages with tool configurations, rate calculators, and secure lead pipelines."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Independent Financial Advisor (IFA) Web Systems",
-          "description": "Bespoke authority websites focused on wealth preservation, retirement planning compliance, and institutional credibility."
-        }
-      }
-    ]
   }
 };
 
-export default function FinanceLayout({ children }: { children: React.ReactNode }) {
+export default function FinanceLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(financeServiceSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(financeServiceSchema),
+        }}
       />
       {children}
     </>

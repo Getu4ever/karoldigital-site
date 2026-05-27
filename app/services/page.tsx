@@ -458,7 +458,7 @@ export default function ServicesPage() {
 
         {/* === FINAL CALL TO ACTION BRIEF === */}
         <FadeIn>
-          <section className="py-24 bg-gradient-to-r from-[#411b3f] via-[#513356] to-[#102f35] text-white text-center">
+          <section className="py-24 bg-gradient-to-r from-[#102f35] via-[#513356] to-[#102f35] text-white text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Let’s Architect Your Next Digital Asset
             </h2>

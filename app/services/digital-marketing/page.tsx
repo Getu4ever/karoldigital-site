@@ -4,6 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
+import Link from "next/link";
 
 export default function DigitalMarketingPage() {
   return (
@@ -19,7 +20,7 @@ export default function DigitalMarketingPage() {
         >
           <Image
             src="/hero-page-banner.jpg"
-            alt="Digital Marketing"
+            alt="Digital Marketing Services UK"
             fill
             priority
             className="object-cover brightness-[0.45]"
@@ -28,22 +29,19 @@ export default function DigitalMarketingPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6 max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-          <span className="text-white">Digital </span>
-          <span className="text-yellow-400">Marketing</span>
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+              <span className="text-white">Digital </span>
+              <span className="text-yellow-400">Marketing</span>
 
-          {/* SEO-only extension (not visible on screen) */}
-          <span className="sr-only">
-            Affordable web design services for small businesses including mobile-friendly and SEO-ready websites in the UK
-          </span>
-        </h1>
+              <span className="sr-only">
+                Digital marketing services for UK small businesses including SEO, content strategy, and growth optimisation
+              </span>
+            </h1>
 
-        <p className="text-lg md:text-xl text-gray-100">
-          Professional, mobile-friendly websites built to help your business grow.
-        </p>
-
-</div>
-
+            <p className="text-lg md:text-xl text-gray-100">
+              Practical, results-driven marketing strategies designed to help UK businesses grow visibility, traffic, and customer acquisition.
+            </p>
+          </div>
         </motion.section>
 
         {/* === CONTENT SECTION === */}
@@ -51,39 +49,106 @@ export default function DigitalMarketingPage() {
           <Breadcrumb current="Digital Marketing" />
 
           <FadeIn>
-            <div>
-              <h2 className="text-3xl font-bold text-[#102f35] mb-4">
-                Grow Your Business with Smart Marketing
-              </h2>
+            <div className="space-y-10">
 
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                Our digital marketing service is perfect for small businesses
-                looking to grow online. We provide simple, practical, and
-                actionable strategies that improve visibility, build trust,
-                and attract customers — without overwhelming complexity.
-              </p>
+              {/* INTRO */}
+              <section>
+                <h2 className="text-3xl font-bold text-[#102f35] mb-4">
+                  Practical Digital Marketing That Drives Real Growth
+                </h2>
 
+                <p className="text-gray-700 leading-relaxed">
+                  Digital marketing should not feel overwhelming or overly technical. At Karol Digital, we focus on clarity, structure, and measurable outcomes. Our approach is designed specifically for small and medium-sized UK businesses that need consistent visibility without wasting time or budget on complex systems that don’t convert.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  Instead of generic strategies, we build practical marketing foundations that help your business attract the right audience, improve search visibility, and convert visitors into paying customers. Every recommendation is tailored to your industry, location, and business goals.
+                </p>
+              </section>
+
+              {/* IMAGE */}
               <Image
                 src="/service-marketing.jpg"
-                alt="Digital Marketing Illustration"
+                alt="Digital Marketing Strategy Illustration"
                 width={900}
                 height={600}
                 loading="lazy"
-                className="rounded-xl shadow-md mb-10 object-cover"
+                className="rounded-xl shadow-md object-cover"
               />
 
-              <h3 className="text-2xl font-semibold text-[#411b3f] mb-3">
-                What’s Included
-              </h3>
+              {/* VALUE SECTION */}
+              <section>
+                <h3 className="text-2xl font-semibold text-[#411b3f] mb-3">
+                  What You Get From Our Marketing System
+                </h3>
 
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>SEO advice and content optimization</li>
-                <li>Email marketing setup & branded templates</li>
-                <li>Content ideas and posting strategy</li>
-                <li>Brand messaging refinement</li>
-                <li>Audience targeting recommendations</li>
-                <li>Monthly improvement actions you can implement</li>
-              </ul>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Our digital marketing service is built around actionable systems rather than theory. You receive structured guidance that helps you improve visibility across search engines, social platforms, and local listings.
+                </p>
+
+                <ul className="list-disc pl-6 text-gray-700 space-y-3">
+                  <li>Search engine optimisation strategies tailored to your business niche</li>
+                  <li>Content planning frameworks designed to increase engagement and visibility</li>
+                  <li>Email marketing setup with branded templates and automation guidance</li>
+                  <li>Google Business Profile optimisation for stronger local reach</li>
+                  <li>Social media content structure for consistent posting and brand clarity</li>
+                  <li>Conversion-focused messaging improvements for landing pages and ads</li>
+                  <li>Monthly optimisation roadmap with clear, actionable next steps</li>
+                </ul>
+              </section>
+
+              {/* STRATEGY SECTION */}
+              <section>
+                <h3 className="text-2xl font-semibold text-[#102f35] mb-3">
+                  A Clear Strategy Built for Small Business Growth
+                </h3>
+
+                <p className="text-gray-700 leading-relaxed">
+                  Many businesses struggle with digital marketing because they lack structure. We solve this by building a clear framework that connects your website, content, and marketing channels into one cohesive system. This ensures every action contributes to visibility and conversion.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  Whether you are launching a new business or trying to improve an existing online presence, our approach focuses on sustainable growth rather than short-term spikes in traffic. This helps you build long-term authority in your market.
+                </p>
+              </section>
+
+              {/* BENEFITS */}
+              <section>
+                <h3 className="text-2xl font-semibold text-[#411b3f] mb-3">
+                  Why Businesses Choose Our Approach
+                </h3>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Unlike traditional agencies that focus on volume-based marketing, we prioritise clarity and performance. Every recommendation is designed to improve your real-world results, not just analytics dashboards.
+                </p>
+
+                <ul className="list-disc pl-6 text-gray-700 space-y-3">
+                  <li>Clear, non-technical explanations and implementation steps</li>
+                  <li>Focus on ROI-driven marketing activities</li>
+                  <li>Scalable systems suitable for long-term business growth</li>
+                  <li>Alignment with your website, branding, and service structure</li>
+                  <li>Support for both local and national visibility strategies</li>
+                </ul>
+              </section>
+
+              {/* CTA */}
+              <section className="text-center mt-16">
+                <h3 className="text-2xl font-bold text-[#102f35] mb-4">
+                  Ready to Grow Your Business Online?
+                </h3>
+
+                <p className="text-gray-700 mb-6">
+                  Explore transparent packages and find the right digital marketing solution for your business.
+                </p>
+
+                <Link
+                  href="/pricing"
+                  className="inline-block bg-[#102f35] hover:bg-[#411b3f] text-white px-8 py-3 rounded-full transition"
+                >
+                  View Pricing & Packages
+                </Link>
+              </section>
+
             </div>
           </FadeIn>
         </div>

@@ -14,21 +14,24 @@ import { Home, Layers, Scale, ChevronRight, CheckCircle2, HelpCircle, ShieldAler
 export default function ImmigrationWebDesign() {
   // JSON-LD Structured Data Schema for Professional Legal & Regulatory Web Services
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Immigration Law Firm Website Design Systems",
-    "image": "https://www.karoldigital.co.uk/1st-call-uk-immigration-services.jpg",
-    "description": "Premium, high-trust corporate website design and specialized SEO frameworks for OISC and SRA-regulated UK immigration law firms, consultants, and corporate visa advisors.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Karol Digital"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "price": "Variable"
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Immigration Law Firm Website Design Systems",
+  "description":
+    "Premium, high-trust website design and SEO systems tailored for UK immigration law firms, OISC-regulated consultants, and corporate visa advisory practices.",
+  "image":
+    "https://www.karoldigital.co.uk/1st-call-uk-immigration-services.jpg",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Karol Digital",
+    "url": "https://www.karoldigital.co.uk",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
     }
-  };
+  },
+  "category": "Web Design Services for Legal & Immigration Sector"
+};
 
   return (
     <FadeIn>
