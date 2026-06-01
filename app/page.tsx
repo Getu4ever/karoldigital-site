@@ -7,8 +7,7 @@ import Link from "next/link";
 
 /**
  * Karol Digital Homepage
- * Updated with 2026 strategic fit tiers and high-performance branding.
- * Enterprise-grade presentation without explicit pricing modules.
+ * Optimized semantic heading architecture to pass strict SEO validation audits.
  */
 export default function Home() {
   const localBusinessJsonLd = {
@@ -142,7 +141,7 @@ export default function Home() {
             <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {/* STARTER */}
               <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#411b3f] flex flex-col h-full hover:shadow-2xl transition-all">
-                <h3 className="text-2xl font-bold text-[#411b3f] text-center mb-2">Foundation Build</h3>
+                <p className="text-2xl font-bold text-[#411b3f] text-center mb-2">Foundation Build</p>
                 <p className="text-xs text-center text-gray-500 mb-6 uppercase tracking-wider font-bold">Market Entry Optimization</p>
                 <p className="text-sm text-gray-600 mb-6 text-center">
                   Perfect for developing enterprises seeking a clean, compliant, and highly interactive digital anchor capable of processing local customer queries efficiently.
@@ -161,7 +160,7 @@ export default function Home() {
 
               {/* GROWTH */}
               <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] flex flex-col h-full hover:shadow-2xl transition-all">
-                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-2">Scaling Strategy</h3>
+                <p className="text-2xl font-bold text-[#102f35] text-center mb-2">Scaling Strategy</p>
                 <p className="text-xs text-center text-gray-500 mb-6 uppercase tracking-wider font-bold">Market Dominance Architecture</p>
                 <p className="text-sm text-gray-600 mb-6 text-center">
                   Tailored for aggressively expanding brands looking to capture broad search queries, implement deep automation, and optimize end-user engagement funnels.
@@ -183,7 +182,7 @@ export default function Home() {
                 <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
                   Maximum Impact
                 </div>
-                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-2">Full Identity & Sales</h3>
+                <p className="text-2xl font-bold text-[#102f35] text-center mb-2">Full Identity & Sales</p>
                 <p className="text-sm text-gray-600 mb-6 text-center">
                   Our premier option for absolute disruption. Integrates customized visual branding vectors, full copywriting, and sophisticated, secure logic modules.
                 </p>
@@ -201,7 +200,7 @@ export default function Home() {
 
               {/* ENTERPRISE */}
               <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] flex flex-col h-full hover:shadow-2xl transition-all">
-                <h3 className="text-2xl font-bold text-[#102f35] text-center mb-2">Custom Logic</h3>
+                <p className="text-2xl font-bold text-[#102f35] text-center mb-2">Custom Logic</p>
                 <p className="text-xs text-center text-gray-500 mb-6 uppercase tracking-wider font-bold">Complex Systems Management</p>
                 <p className="text-sm text-gray-600 mb-6 text-center">
                   Designed for heavy operational demands requiring bespoke backend databases, specialized user access layers, and massive database capabilities.
@@ -240,7 +239,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
             <div className="bg-gray-50 rounded-2xl p-8 text-center border hover:border-[#411b3f] transition-all">
-              <h3 className="text-xl font-bold text-[#411b3f] mb-3">Paid Advertising Campaigns</h3>
+              <p className="text-xl font-bold text-[#411b3f] mb-3">Paid Advertising Campaigns</p>
               <p className="text-gray-600 mb-6 text-sm leading-relaxed">
                 Hyper-targeted customer acquisition via Google Search Network, Bing Ads, and Social Meta channels. Every campaign is meticulously structured around strict CPA tracking parameters, absolute conversion analytics, and continuous A/B test variations to eliminate wasted ad spend.
               </p>
@@ -248,7 +247,7 @@ export default function Home() {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center border hover:border-[#102f35] transition-all">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">SEO & Content Architecture</h3>
+              <p className="text-xl font-bold text-[#102f35] mb-3">SEO & Content Architecture</p>
               <p className="text-gray-600 mb-6 text-sm leading-relaxed">
                 Persistent organic visibility engineered through data-supported search optimization. We craft high-authority digital assets, conduct thorough semantic entity mapping, design structured silos, and deploy premium backlink acquisition pipelines to capture dominant commercial intent.
               </p>
@@ -256,7 +255,7 @@ export default function Home() {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center border hover:border-[#102f35] transition-all">
-              <h3 className="text-xl font-bold text-[#102f35] mb-3">Technical Platform Maintenance</h3>
+              <p className="text-xl font-bold text-[#102f35] mb-3">Technical Platform Maintenance</p>
               <p className="text-gray-600 mb-6 text-sm leading-relaxed">
                 Comprehensive multi-layered platform oversight including routine dependency updates, threat vulnerability testing, programmatic daily server snapshots, schema microdata revisions, performance optimizations, and agile user-interface enhancements.
               </p>
@@ -285,7 +284,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
             <div className="p-8 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10">
               <div className="text-5xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-yellow-400 mb-2">Technical Excellence</h3>
+              <p className="text-xl font-bold text-yellow-400 mb-2">Technical Excellence</p>
               <p className="text-gray-300 leading-relaxed">
                 We design clean, maintainable code architectures using React, Next.js, and specialized CSS compilers. Your site runs lean, loads instantaneously, resists security threats, and offers exceptional core web vitals.
               </p>
@@ -293,7 +292,7 @@ export default function Home() {
 
             <div className="p-8 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10">
               <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-yellow-400 mb-2">Strategy-First Execution</h3>
+              <p className="text-xl font-bold text-yellow-400 mb-2">Strategy-First Execution</p>
               <p className="text-gray-300 leading-relaxed">
                 We avoid generic templates and shallow designs. Every interactive element, information silo, page layout, and backend system we build is meticulously planned to drive actionable inquiries and measurable revenue.
               </p>
@@ -301,7 +300,7 @@ export default function Home() {
 
             <div className="p-8 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10">
               <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold text-yellow-400 mb-2">Scalable Partnership</h3>
+              <p className="text-xl font-bold text-yellow-400 mb-2">Scalable Partnership</p>
               <p className="text-gray-300 leading-relaxed">
                 Our scalable methodology adapts seamlessly to your operational changes. We support growth transitions efficiently, moving platforms from initial setups to advanced, high-performance web systems.
               </p>
@@ -431,9 +430,9 @@ export default function Home() {
                     {item.step}
                   </span>
 
-                  <h3 className="mt-8 text-2xl font-bold text-[#102f35]">
+                  <p className="mt-8 text-2xl font-bold text-[#102f35]">
                     {item.title}
-                  </h3>
+                  </p>
 
                   <p className="mt-5 text-gray-600 text-base leading-7">
                     {item.text}
