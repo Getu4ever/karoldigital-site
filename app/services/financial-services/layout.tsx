@@ -12,7 +12,7 @@ const financeServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Financial Services Web Design & Corporate Systems",
-  "serviceType": "Web Design Services for Financial Sector",
+  "serviceType": "Bespoke website Designing Services for Financial Sector",
   "description":
     "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready corporate web design for UK firms including accountants, mortgage brokers, and IFAs.",
   "provider": {

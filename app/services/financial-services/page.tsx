@@ -16,9 +16,9 @@ export default function FinanceWebDesign() {
   const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Financial Services Corporate Website Design Systems",
+  "name": "Bespoke website Designing Services for Financial Sector",
   "description":
-    "Premium corporate website development for UK mortgage brokers, accountants, and financial advisory firms. Built with secure lead capture systems, compliance-focused structure, and conversion optimisation.",
+    "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready corporate web design for UK firms including accountants, mortgage brokers, and IFAs.",
   "image": "https://www.karoldigital.co.uk/1stcall-finance-showcase.jpg",
   "provider": {
     "@type": "ProfessionalService",

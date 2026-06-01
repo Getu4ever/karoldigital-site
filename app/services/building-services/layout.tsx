@@ -12,7 +12,7 @@ const builderServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Construction Website Design & Trades SEO",
-  "serviceType": "Web Design Services for Construction & Trades",
+  "serviceType": "Bespoke website Designing Services for Construction & Trades",
   "description":
     "Bespoke construction website design and local SEO for UK tradespeople, building firms, and construction contractors. Includes project showcases, lead capture systems, and local search optimisation.",
   "provider": {

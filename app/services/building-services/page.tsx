@@ -16,7 +16,7 @@ export default function BuildersWebDesign() {
   const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Web Design & Technical SEO for Construction & Trades",
+  "name": "Bespoke website Designing Services for Construction & Trades",
   "description":
     "Premium, conversion-focused custom Next.js websites built specifically for UK builders, commercial contractors, and construction firms to scale local leads and improve online visibility.",
   "image": "https://karoldigital.co.uk/building-services-hero.jpg",
