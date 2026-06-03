@@ -34,9 +34,7 @@ export default function Footer() {
                 Karol <span className="text-yellow-400 text-xl block sm:inline">Digital</span>
               </span>
             </div>
-            <p className="text-gray-300 leading-relaxed text-sm max-w-xs">
-              Providing affordable, professional web design and SEO across the UK. We help small businesses grow with high-converting digital platforms.
-            </p>
+            
           </div>
 
           {/* Column 2: Industries (The SEO Booster) */}
@@ -103,6 +101,12 @@ export default function Footer() {
 
         </div>
       </div>
+      {/* FULL-WIDTH Service description */}
+<div className="w-full bg-white py-6 mt-12 flex justify-center">
+  <p className="text-[#102f35] leading-relaxed text-lg max-w-4xl text-center px-6">
+    Providing affordable, professional web design and SEO across the UK. We help small businesses grow with high-converting digital platforms.
+  </p>
+</div>
 
       {/* FULL-WIDTH BLACK COPYRIGHT BAR */}
       <div className="w-full bg-black py-6 mt-12">
