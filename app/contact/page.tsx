@@ -73,7 +73,6 @@ export default function ContactPage() {
 
   return (
     <FadeIn>
-      {/* Added overflow-x-hidden to prevent horizontal scroll wobbling */}
       <main className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
         {/* HERO */}
         <motion.section
@@ -106,7 +105,7 @@ export default function ContactPage() {
           <section className="py-20 px-6 md:px-12">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
               {/* FORM */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 w-full">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
                 <h2 className="text-3xl font-bold text-[#102f35] mb-6">
                   Send Us a Message
                 </h2>
@@ -202,7 +201,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* reCAPTCHA */}
-                  <div className="flex justify-start py-2 overflow-hidden">
+                  <div className="flex justify-start py-2">
                     <ReCAPTCHA
                       ref={recaptchaRef}
                       sitekey="6LdsKYQsAAAAAPaYefX2OaGGADRDRJljpKAKNMk1"
@@ -233,10 +232,10 @@ export default function ContactPage() {
               </div>
 
               {/* MAP */}
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-[450px] w-full">
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=..." // Ensure this is a valid embed URL
-                  className="w-full h-full border-0"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.850903333333!2d-0.1277583!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c772455555%3A0x5555555555555555!2sLondon!5e0!3m2!1sen!2suk!4v1234567890"
+                  className="w-full h-full min-h-[450px] border-0"
                   loading="lazy"
                 ></iframe>
               </div>
