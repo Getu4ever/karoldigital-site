@@ -52,6 +52,8 @@ export default async function BlogPostPage(
   if (!post) notFound();
 
   const articleUrl = `https://www.karoldigital.co.uk/blog/${slug}`;
+  // Inside your BlogPostPage, right before the return statement:
+console.log(JSON.stringify(post.body, null, 2));
 
   return (
     <FadeIn>

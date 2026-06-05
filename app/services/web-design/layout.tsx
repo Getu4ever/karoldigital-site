@@ -3,18 +3,18 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
-    title: "WordPress & Custom Web Design Packages UK | Karol Digital",
+    title: "High-Performance Digital Growth Strategies | Karol Digital UK",
     description:
-      "Mobile-friendly web design for UK businesses. From simple WordPress sites to custom-coded solutions with AI chatbots. Explore our packages.",
-    url: "https://www.karoldigital.co.uk/services/web-design",
-    image: "/hero-page-banner.jpg",
+      "Stop chasing traffic and start closing clients. We engineer high-performance websites and conversion systems for UK businesses ready to scale.",
+    url: "https://www.karoldigital.co.uk/solutions",
+    image: "/hero-cover.jpg",
   }),
   alternates: {
-    canonical: "https://www.karoldigital.co.uk/services/web-design",
+    canonical: "https://www.karoldigital.co.uk/solutions",
   },
 };
 
-const webDesignSchema = [
+const growthStrategySchema = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -28,29 +28,18 @@ const webDesignSchema = [
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Services",
-        "item": "https://www.karoldigital.co.uk/services"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Web Design",
-        "item": "https://www.karoldigital.co.uk/services/web-design"
+        "name": "Growth Strategies",
+        "item": "https://www.karoldigital.co.uk/solutions"
       }
     ]
   },
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Karol Digital Web Design Services",
-    "serviceType": "Web Design Services for UK Businesses",
+    "@type": "ProfessionalService",
+    "name": "Karol Digital Growth Architecture",
     "description":
-      "Professional web design services for UK small businesses, offering WordPress, custom coding, and AI chatbot integrations.",
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "Karol Digital",
-      "url": "https://www.karoldigital.co.uk"
-    },
+      "Digital growth engineering, conversion optimization, and high-performance web systems for UK businesses.",
+    "url": "https://www.karoldigital.co.uk",
     "areaServed": {
       "@type": "Country",
       "name": "United Kingdom"
@@ -58,7 +47,7 @@ const webDesignSchema = [
   }
 ];
 
-export default function WebDesignLayout({
+export default function GrowthStrategyLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -68,7 +57,7 @@ export default function WebDesignLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webDesignSchema),
+          __html: JSON.stringify(growthStrategySchema),
         }}
       />
       {children}
