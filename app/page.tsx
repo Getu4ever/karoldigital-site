@@ -95,7 +95,7 @@ export default function Home() {
                 In 2026, speed, trust, and clarity win. If your site doesn’t load instantly and clearly communicate your value, you’re losing customers every single day.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                At <strong>Karol Digital</strong>, we create <strong>high-performance web design &amp; branding</strong> that turns visitors into loyal clients.
+                At <strong>Karol Digital</strong>, we create high-performance web design &amp; branding that turns visitors into loyal clients.
               </p>
             </div>
 
