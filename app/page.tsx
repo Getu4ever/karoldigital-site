@@ -145,7 +145,7 @@ export default function Home() {
             </h2>
             
             <p>
-              The digital landscape has changed dramatically. Search engines now reward websites that deliver genuine value, lightning-fast experiences, and strong, memorable branding. At Karol Digital, our <strong>high-performance web design &amp; branding</strong> approach combines cutting-edge Next.js technology with strategic brand storytelling that truly resonates with UK audiences.
+              The digital landscape has changed dramatically. Search engines now reward websites that deliver genuine value, lightning-fast experiences, and strong, memorable branding. At Karol Digital, our high-performance web design &amp; branding approach combines cutting-edge Next.js technology with strategic brand storytelling that truly resonates with UK audiences.
             </p>
             
             <p>
