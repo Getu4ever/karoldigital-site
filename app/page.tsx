@@ -67,7 +67,6 @@ export default function Home() {
             className="object-cover brightness-[0.40]"
           />
           <div className="relative z-10 text-center px-6 max-w-5xl">
-            {/* Updated H1 to include 'Web Design' and 'Digital Strategy' keywords */}
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
               High-Performance <span className="text-yellow-400">Web Design</span> & <br/> 
               <span className="text-yellow-400">Digital Strategy</span> for UK Businesses.
@@ -83,7 +82,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-   {/* === THE TRUST GAP & VALUE PROP === */}
+        {/* === THE TRUST GAP & VALUE PROP === */}
         <section className="py-24 px-6 md:px-12 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -98,7 +97,6 @@ export default function Home() {
               </p>
             </div>
             
-            {/* Image and Call-to-Action Block */}
             <div className="flex flex-col gap-6">
               <div className="relative flex justify-center">
                 <div className="absolute -inset-4 bg-yellow-400/10 rounded-full blur-3xl" />
@@ -187,7 +185,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* === EXTENDED PHILOSOPHY: THE 2026 IMPERATIVE === */}
+        {/* === EXTENDED PHILOSOPHY === */}
         <section className="py-24 bg-white px-6">
           <div className="max-w-4xl mx-auto text-gray-800 leading-relaxed space-y-8">
             <h2 className="text-4xl font-bold text-[#102f35]">The 2026 Digital Imperative: From Brochure to Business Asset</h2>
@@ -195,23 +193,12 @@ export default function Home() {
               In an era dominated by AI-driven search, voice-integrated assistants, and increasingly volatile consumer behavior, the traditional "brochure" website is effectively obsolete. To survive and thrive in 2026, your digital infrastructure must evolve into a proactive, high-intelligence commercial asset. At Karol Digital, we operate under a "helpful-first" methodology. This means every line of code, every UI design decision, and every word of content is obsessively crafted to solve your customers' problems before they even think to voice them.
             </p>
             <p>
-              We view your website as a complex, living ecosystem. By leveraging advanced React and Next.js frameworks, we deliver lightning-fast load speeds that search engines prioritize and users demand. We complement this with semantic schema markup that feeds AI search engines the precise data they need to position you as the definitive authority in your industry. Whether you are a specialized professional service, a retail conglomerate, or a national construction firm, our goal remains constant: to eliminate friction and guide your visitors through a deliberate, high-conversion customer journey.
-            </p>
-            
-            <h3 className="text-2xl font-bold text-[#102f35]">Why Engineering Matters: Eliminating Bloat</h3>
-            <p>
-              The most common mistake we see in modern business design is the reliance on "bloated" templates and heavy, third-party plugin stacks. These shortcuts sacrifice long-term performance for short-term visual ease. They may look functional for a week, but they eventually degrade into slow, insecure, and unmaintainable technical debt. We choose the harder path: custom-coded, bespoke instances built for performance, security, and scalability. 
-            </p>
-            <p>
-              By opting for a custom-engineered approach, we ensure your site passes Core Web Vitals with flying colors, significantly lowering your bounce rates and boosting your organic rankings. We focus on lean, modular codebases that keep your backend secure against emerging threats and ensure your site is ready to scale when you are. Your business needs a partner who understands that technical excellence is the bedrock of marketing success. By integrating intelligent lead pipelines and automated conversational systems, we ensure that your website isn't just taking up space—it’s actively working to capture value, qualify inquiries, and drive revenue while you focus on running your business.
-            </p>
-            <p>
-              Choosing Karol Digital means choosing a partner who understands the nuance between "being online" and "achieving digital dominance." We are not just service providers; we are strategic engineers focused on your bottom line.
+              We view your website as a complex, living ecosystem. By leveraging advanced React and Next.js frameworks, we deliver lightning-fast load speeds that search engines prioritize and users demand. We complement this with semantic schema markup that feeds AI search engines the precise data they need to position you as the definitive authority in your industry.
             </p>
           </div>
         </section>
 
-        {/* === AUTHORITY FAQ SECTION (Accordion) === */}
+        {/* === AUTHORITY FAQ SECTION === */}
         <section className="py-24 bg-gray-50 px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-[#102f35] mb-12">Expert Answers for Modern Businesses</h2>
