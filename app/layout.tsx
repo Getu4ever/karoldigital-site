@@ -5,15 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
 import { Metadata, Viewport } from "next";
+import Script from "next/script";
 
-/* Mobile viewport and theme styling must be exported separately in App Router */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#102f35",
 };
 
-// Refined Metadata: Optimized to eliminate keyword conflict with child routes
 export const metadata: Metadata = {
   title: "Karol Digital — High-Performance Web Design & Branding",
   description:
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD: ProfessionalService with local parameter tracking configurations
+// JSON-LD Data
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -50,7 +49,7 @@ const professionalServiceJsonLd = {
   image: "https://www.karoldigital.co.uk/seo-cover.jpg",
   logo: "https://www.karoldigital.co.uk/logo.png",
   priceRange: "££",
-  telephone: "07565472445", // Matches your exact commercial phone registry entry
+  telephone: "07565472445",
   address: {
     "@type": "PostalAddress",
     addressLocality: "London",
@@ -86,7 +85,7 @@ const websiteJsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
         {/* Structured Data */}
         <script
@@ -101,9 +100,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: JSON.stringify(websiteJsonLd),
           }}
         />
+      </head>
 
-        {/* Chatbase Script Integration */}
-        <script
+      <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
+        <Header />
+        <AnimateWrapper>{children}</AnimateWrapper>
+        <Footer />
+
+        {/* Chatbase Script - Using Next.js Script for better optimization */}
+        <Script
+          id="chatbase"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
@@ -134,12 +141,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             `,
           }}
         />
-      </head>
-
-      <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
-        <Header />
-        <AnimateWrapper>{children}</AnimateWrapper>
-        <Footer />
       </body>
     </html>
   );

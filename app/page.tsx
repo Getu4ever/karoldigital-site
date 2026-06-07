@@ -61,7 +61,7 @@ export default function Home() {
         >
           <Image
             src="/hero-cover.jpg"
-            alt="Karol Digital Strategy"
+            alt="Karol Digital High-Performance Web Design & Digital Strategy"
             fill
             priority
             className="object-cover brightness-[0.40]"
@@ -72,7 +72,7 @@ export default function Home() {
               <span className="text-yellow-400">Digital Strategy</span> for UK Businesses.
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-              Stop chasing traffic and start closing clients. We engineer conversion systems that turn your digital presence into your most profitable salesperson.
+              Stop chasing traffic and start closing clients. We engineer conversion systems that turn your digital presence into your most profitable salesperson with high-performance web design and digital strategy.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="bg-[#411b3f] hover:bg-[#102f35] text-white font-bold px-10 py-4 rounded-full transition shadow-lg">
@@ -93,7 +93,7 @@ export default function Home() {
                 In 2026, a pretty website isn't enough. Modern customers are skeptical and impatient. If your site doesn't load instantly, communicate your value in five seconds, and build immediate trust, you are losing revenue every single day.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                At Karol Digital, we specialize in bridging the "Trust Gap." We don't just build sites; we architect digital sales engines that convert visitors into loyal clients through strategic design, performance optimization, and helpful, expert-driven content.
+                At Karol Digital, we specialize in <strong>high-performance web design</strong> and <strong>digital strategy</strong> for UK businesses, bridging the "Trust Gap." We don't just build sites; we architect digital sales engines that convert visitors into loyal clients through strategic design, performance optimization, and helpful, expert-driven content.
               </p>
             </div>
             
@@ -102,7 +102,7 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-yellow-400/10 rounded-full blur-3xl" />
                 <Image
                   src="/karol-digital-home.jpg"
-                  alt="Digital Marketing Strategy"
+                  alt="Karol Digital High-Performance Web Design & Digital Strategy for UK Businesses"
                   width={500}
                   height={400}
                   className="relative rounded-2xl shadow-2xl w-full max-w-md object-cover"
@@ -110,10 +110,10 @@ export default function Home() {
               </div>
               <div className="bg-[#102f35] p-6 rounded-xl text-white text-center shadow-lg">
                 <p className="font-semibold text-lg">
-                  Ready to transform your business? 
+                  Ready to transform your business with high-performance web design? 
                 </p>
                 <p className="text-gray-300 mt-2 mb-4 text-sm">
-                  Let’s engineer a growth system that aligns with your vision.
+                  Let’s engineer a growth system that aligns with your vision using proven digital strategy.
                 </p>
                 <Link href="/contact" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-[#102f35] font-bold px-8 py-2 rounded-full transition text-sm">
                   Start My Transformation
@@ -126,18 +126,18 @@ export default function Home() {
         {/* === TESTIMONIALS === */}
         <section className="py-24 bg-gray-50 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-[#102f35] mb-16">Trusted by UK Market Leaders</h2>
+            <h2 className="text-3xl font-bold text-center text-[#102f35] mb-16">Trusted by UK Market Leaders for High-Performance Web Design</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#411b3f]">
-                <p className="italic text-gray-600 mb-6">"Karol Digital completely overhauled our digital presence. Since the launch, our inquiry quality has jumped significantly. The technical expertise is unmatched."</p>
+                <p className="italic text-gray-600 mb-6">"Karol Digital completely overhauled our digital presence with expert high-performance web design and digital strategy. Since the launch, our inquiry quality has jumped significantly. The technical expertise is unmatched."</p>
                 <p className="font-bold text-[#102f35]">— 1st Call UK Immigration</p>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#102f35]">
-                <p className="italic text-gray-600 mb-6">"Our new platform is not just a website; it is a financial lead generation engine. The attention to detail in the UX and SEO is exactly what we needed."</p>
+                <p className="italic text-gray-600 mb-6">"Our new platform is not just a website; it is a financial lead generation engine built with high-performance web design. The attention to detail in the UX and SEO is exactly what we needed for our digital strategy."</p>
                 <p className="font-bold text-[#102f35]">— 1st Call UK Finance</p>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-400">
-                <p className="italic text-gray-600 mb-6">"Professional, fast, and results-focused. They understood our brand identity perfectly and translated it into a high-converting digital storefront."</p>
+                <p className="italic text-gray-600 mb-6">"Professional, fast, and results-focused high-performance web design. They understood our brand identity perfectly and translated it into a high-converting digital storefront."</p>
                 <p className="font-bold text-[#102f35]">— Food Mama's Kitchen</p>
               </div>
             </div>
@@ -147,24 +147,24 @@ export default function Home() {
         {/* === ARCHITECTURE TIERS === */}
         <section className="py-24 px-6 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#102f35] mb-4">Strategic Solutions Architecture</h2>
+            <h2 className="text-4xl font-bold text-[#102f35] mb-4">Strategic Solutions Architecture for High-Performance Web Design & Digital Strategy</h2>
             <p className="text-gray-600 text-lg">Engineered for growth, regardless of your current business size.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-xl transition">
               <h3 className="text-2xl font-bold mb-4">Foundation Build</h3>
-              <p className="text-gray-600 mb-6">For enterprises entering the digital space with authority.</p>
+              <p className="text-gray-600 mb-6">For enterprises entering the digital space with authority through high-performance web design.</p>
               <Link href="/contact" className="block text-center py-3 bg-gray-100 rounded-full font-bold">Get My Growth Blueprint</Link>
             </div>
             <div className="bg-[#102f35] p-8 rounded-2xl text-white">
               <h3 className="text-2xl font-bold mb-4">Scaling Strategy</h3>
-              <p className="text-gray-300 mb-6">For brands ready to dominate search and maximize funnels.</p>
+              <p className="text-gray-300 mb-6">For brands ready to dominate search and maximize funnels with expert digital strategy.</p>
               <Link href="/contact" className="block text-center py-3 bg-yellow-400 text-[#102f35] rounded-full font-bold">Scale My Business Now</Link>
             </div>
             <div className="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-xl transition">
               <h3 className="text-2xl font-bold mb-4">Full Identity & Sales</h3>
-              <p className="text-gray-600 mb-6">The premier choice for market disruption and total control.</p>
+              <p className="text-gray-600 mb-6">The premier choice for market disruption and total control using high-performance web design & digital strategy for UK businesses.</p>
               <Link href="/contact" className="block text-center py-3 bg-[#411b3f] text-white rounded-full font-bold">Claim My Strategy Session</Link>
             </div>
           </div>
@@ -188,12 +188,12 @@ export default function Home() {
         {/* === EXTENDED PHILOSOPHY === */}
         <section className="py-24 bg-white px-6">
           <div className="max-w-4xl mx-auto text-gray-800 leading-relaxed space-y-8">
-            <h2 className="text-4xl font-bold text-[#102f35]">The 2026 Digital Imperative: From Brochure to Business Asset</h2>
+            <h2 className="text-4xl font-bold text-[#102f35]">The 2026 Digital Imperative: From Brochure to Business Asset with High-Performance Web Design & Digital Strategy</h2>
             <p>
               In an era dominated by AI-driven search, voice-integrated assistants, and increasingly volatile consumer behavior, the traditional "brochure" website is effectively obsolete. To survive and thrive in 2026, your digital infrastructure must evolve into a proactive, high-intelligence commercial asset. At Karol Digital, we operate under a "helpful-first" methodology. This means every line of code, every UI design decision, and every word of content is obsessively crafted to solve your customers' problems before they even think to voice them.
             </p>
             <p>
-              We view your website as a complex, living ecosystem. By leveraging advanced React and Next.js frameworks, we deliver lightning-fast load speeds that search engines prioritize and users demand. We complement this with semantic schema markup that feeds AI search engines the precise data they need to position you as the definitive authority in your industry.
+              We view your website as a complex, living ecosystem. By leveraging advanced React and Next.js frameworks, we deliver lightning-fast load speeds that search engines prioritize and users demand for <strong>high-performance web design</strong>. We complement this with semantic schema markup and expert <strong>digital strategy</strong> that feeds AI search engines the precise data they need to position you as the definitive authority in your industry for UK businesses.
             </p>
           </div>
         </section>
@@ -201,7 +201,7 @@ export default function Home() {
         {/* === AUTHORITY FAQ SECTION === */}
         <section className="py-24 bg-gray-50 px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-[#102f35] mb-12">Expert Answers for Modern Businesses</h2>
+            <h2 className="text-3xl font-bold text-center text-[#102f35] mb-12">Expert Answers for Modern Businesses on High-Performance Web Design & Digital Strategy</h2>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
@@ -232,8 +232,8 @@ export default function Home() {
 
         {/* FINAL CTA */}
         <section className="py-24 bg-gray-900 text-white text-center px-6">
-          <h2 className="text-4xl font-bold mb-6">Ready to stop chasing vanity traffic and start closing deals?</h2>
-          <p className="text-gray-400 mb-10 max-w-xl mx-auto">Let’s conduct a comprehensive architectural assessment of your current presence and unlock your site's true potential.</p>
+          <h2 className="text-4xl font-bold mb-6">Ready to stop chasing vanity traffic and start closing deals with high-performance web design & digital strategy?</h2>
+          <p className="text-gray-400 mb-10 max-w-xl mx-auto">Let’s conduct a comprehensive architectural assessment of your current presence and unlock your site's true potential for UK businesses.</p>
           <Link href="/contact" className="bg-yellow-400 hover:bg-yellow-500 text-[#102f35] font-bold px-10 py-4 rounded-full transition shadow-xl">
             Book My Consultation
           </Link>
