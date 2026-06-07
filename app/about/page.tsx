@@ -80,7 +80,7 @@ export default function About() {
               {/* Image */}
               <div className="flex justify-center">
                 <Image
-                  src="/about-team.jpg"
+                  src="/karol-digital-about.jpg"
                   alt="Karol Digital Team"
                   width={500}
                   height={400}
@@ -101,7 +101,7 @@ export default function About() {
               {/* Image */}
               <div className="flex justify-center">
                 <Image
-                  src="/about-services.jpg"
+                  src="/karol-digital-about-02.jpg"
                   alt="Karol Digital Services"
                   width={550}
                   height={420}
