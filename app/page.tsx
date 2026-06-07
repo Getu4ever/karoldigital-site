@@ -52,7 +52,7 @@ export default function Home() {
       />
       <main className="min-h-screen bg-white text-gray-900">
         
-        {/* === HERO SECTION === */}
+       {/* === HERO SECTION === */}
         <motion.section
           className="relative h-[90vh] flex items-center justify-center text-white overflow-hidden"
           initial={{ opacity: 0 }}
@@ -67,11 +67,13 @@ export default function Home() {
             className="object-cover brightness-[0.40]"
           />
           <div className="relative z-10 text-center px-6 max-w-5xl">
+            {/* Updated H1 to include 'Web Design' and 'Digital Strategy' keywords */}
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-              Stop Chasing Traffic. <br/><span className="text-yellow-400">Start Closing Clients.</span>
+              High-Performance <span className="text-yellow-400">Web Design</span> & <br/> 
+              <span className="text-yellow-400">Digital Strategy</span> for UK Businesses.
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-              We engineer high-performance websites and conversion systems that turn your digital presence into your most profitable salesperson.
+              Stop chasing traffic and start closing clients. We engineer conversion systems that turn your digital presence into your most profitable salesperson.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="bg-[#411b3f] hover:bg-[#102f35] text-white font-bold px-10 py-4 rounded-full transition shadow-lg">
