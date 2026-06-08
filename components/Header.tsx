@@ -67,9 +67,9 @@ export default function Header() {
   <Image 
     src="/logo.WebP" 
     alt="Karol Digital Logo" 
-    width={200} // Set fixed width based on your design
-    height={60} // Set fixed height to prevent layout shift
-    priority={true} // CRITICAL: This fixes the LCP discovery delay
+    width={100} // Set dimensions to prevent Layout Shift
+    height={60} 
+    priority={true} // CRITICAL: This fixes the LCP/Fetchpriority issue
     className="h-[60px] w-auto"
   />
   <span className="text-xl md:text-2xl font-semibold text-white">

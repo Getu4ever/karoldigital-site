@@ -6,6 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Karol Digital - Final Polished Homepage (2026 SEO Optimized)
+ * Word count: ~980 words
+ */
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -60,7 +64,7 @@ export default function Home() {
             src="/hero-cover.WebP"
             alt="Karol Digital - High-Performance Web Design & Branding"
             fill
-            priority // Correct: Hero image must be high priority
+            priority
             className="object-cover brightness-[0.40]"
             sizes="100vw"
             quality={82}
@@ -143,7 +147,12 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-[#102f35]">
               Why High-Performance Web Design &amp; Branding Matters in 2026
             </h2>
-            <p>The digital landscape has changed dramatically...</p>
+            <p>
+              The digital landscape has changed dramatically. Search engines now reward websites that deliver genuine value, lightning-fast experiences, and strong, memorable branding. At Karol Digital, we combine cutting-edge Next.js technology with strategic brand storytelling that truly resonates with UK audiences.
+            </p>
+            <p>
+              We build websites that achieve exceptional Core Web Vitals scores while creating powerful first impressions. Whether you’re a local service business in London, an e-commerce brand, or a professional services firm, strong professional branding helps you stand out and build instant trust in a competitive market.
+            </p>
 
             <div className="pt-8 pb-6">
               <Image
@@ -154,55 +163,54 @@ export default function Home() {
                 className="rounded-2xl shadow-xl w-full object-cover"
                 sizes="(max-width: 768px) 100vw, 640px"
                 quality={85}
-                // priority={false} // Removed priority as it's below the fold
               />
               <p className="text-center text-sm text-gray-500 mt-3">
                 London-based • High-Performance Web Design &amp; Branding
               </p>
             </div>
-          <h3 className="text-2xl font-semibold text-[#102f35]">The Power of Strategic Branding</h3>
-          <p>
-            Your brand is far more than a logo — it’s the emotional connection customers feel when they interact with your business online. Our branding services include professional visual identity development, consistent tone-of-voice guidelines, and cohesive messaging across all touchpoints. This creates a unified experience that reinforces trust and significantly increases conversion rates.
-          </p>
 
-          <h3 className="text-2xl font-semibold text-[#102f35]">Conversion-Focused Digital Strategy</h3>
-          <p>
-            We don’t just design beautiful websites — we engineer them to sell. Every button, headline, navigation path, and call-to-action is strategically placed based on user behaviour research. Our data-informed approach ensures your site guides visitors naturally toward booking calls, making purchases, or submitting enquiries.
-          </p>
+            <h3 className="text-2xl font-semibold text-[#102f35]">The Power of Strategic Branding</h3>
+            <p>
+              Your brand is far more than a logo — it’s the emotional connection customers feel when they interact with your business online. Our branding services include professional visual identity development, consistent tone-of-voice guidelines, and cohesive messaging across all touchpoints. This creates a unified experience that reinforces trust and significantly increases conversion rates.
+            </p>
 
-          <p>
-            With deep experience serving UK businesses — from London to regional towns — our web design and branding solutions are tailored to help you dominate your niche, improve search rankings, and achieve sustainable growth. We understand the unique challenges faced by British businesses and design solutions that work effectively within the UK market context.
-          </p>
+            <h3 className="text-2xl font-semibold text-[#102f35]">Conversion-Focused Digital Strategy</h3>
+            <p>
+              We don’t just design beautiful websites — we engineer them to sell. Every button, headline, navigation path, and call-to-action is strategically placed based on user behaviour research. Our data-informed approach ensures your site guides visitors naturally toward booking calls, making purchases, or submitting enquiries.
+            </p>
 
-          <h3 className="text-2xl font-semibold text-[#102f35]">The Technical Advantage</h3>
-          <p>
-            Modern websites must be fast, secure, and scalable. Using Next.js and advanced performance optimisation techniques, we deliver websites that load in under one second and consistently achieve 95+ scores on Google PageSpeed Insights. This technical excellence not only improves user experience but also sends strong positive signals to search engines.
-          </p>
+            <p>
+              With deep experience serving UK businesses — from London to regional towns — our web design and branding solutions are tailored to help you dominate your niche, improve search rankings, and achieve sustainable growth. We understand the unique challenges faced by British businesses and design solutions that work effectively within the UK market context.
+            </p>
 
-          <p>
-            From semantic HTML and proper schema markup to mobile-first responsive design and accessibility compliance, every detail is carefully considered. We combine this technical foundation with creative branding that makes your business memorable and trustworthy in a crowded digital marketplace.
-          </p>
+            <h3 className="text-2xl font-semibold text-[#102f35]">The Technical Advantage</h3>
+            <p>
+              Modern websites must be fast, secure, and scalable. Using Next.js and advanced performance optimisation techniques, we deliver websites that load in under one second and consistently achieve 95+ scores on Google PageSpeed Insights. This technical excellence not only improves user experience but also sends strong positive signals to search engines.
+            </p>
 
-          {/* Additional Content for Word Count */}
-          <h3 className="text-2xl font-semibold text-[#102f35]">Our Process</h3>
-          <p>
-            We follow a proven 5-stage process: Discovery & Strategy, Branding & Design, Development & Optimisation, Testing & Launch, and Ongoing Support. This structured approach ensures every project is delivered on time and exceeds expectations.
-          </p>
+            <p>
+              From semantic HTML and proper schema markup to mobile-first responsive design and accessibility compliance, every detail is carefully considered. We combine this technical foundation with creative branding that makes your business memorable and trustworthy in a crowded digital marketplace.
+            </p>
 
-          <p>
-            Whether you need a complete brand refresh, a new high-performance website, or optimisation of your existing platform, our team delivers results that drive real business growth. Many of our clients see significant increases in lead quality and conversion rates within the first few months.
-          </p>
+            <h3 className="text-2xl font-semibold text-[#102f35]">Our Process</h3>
+            <p>
+              We follow a proven 5-stage process: Discovery & Strategy, Branding & Design, Development & Optimisation, Testing & Launch, and Ongoing Support. This structured approach ensures every project is delivered on time and exceeds expectations.
+            </p>
 
-          <div className="pt-6">
-            <Link 
-              href="/contact" 
-              className="inline-block bg-[#102f35] hover:bg-[#411b3f] text-white font-bold px-10 py-4 rounded-full transition shadow-lg"
-            >
-              Get Your Free Growth Blueprint →
-            </Link>
+            <p>
+              Whether you need a complete brand refresh, a new high-performance website, or optimisation of your existing platform, our team delivers results that drive real business growth. Many of our clients see significant increases in lead quality and conversion rates within the first few months.
+            </p>
+
+            <div className="pt-6">
+              <Link 
+                href="/contact" 
+                className="inline-block bg-[#102f35] hover:bg-[#411b3f] text-white font-bold px-10 py-4 rounded-full transition shadow-lg"
+              >
+                Get Your Free Growth Blueprint →
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* === TESTIMONIALS === */}
         <section className="py-24 px-6 bg-white">
