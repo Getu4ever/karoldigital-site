@@ -20,6 +20,16 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  // Fix for Legacy JavaScript / unnecessary polyfills
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '../build/polyfills/polyfill-module': false,
+      'next/dist/build/polyfills/polyfill-module': false,
+    };
+    return config;
+  },
 };
 
 export default nextConfig;
