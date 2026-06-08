@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from 'next/image';
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -62,8 +63,15 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-       <img src="/logo.WebP" className="h-[60px] w-auto" alt="Karol Digital Logo"/>
+<Link href="/" className="flex items-center gap-2">
+  <Image 
+    src="/logo.WebP" 
+    alt="Karol Digital Logo" 
+    width={200} // Set fixed width based on your design
+    height={60} // Set fixed height to prevent layout shift
+    priority={true} // CRITICAL: This fixes the LCP discovery delay
+    className="h-[60px] w-auto"
+  />
   <span className="text-xl md:text-2xl font-semibold text-white">
     Karol <span className="text-yellow-400">Digital</span>
   </span>

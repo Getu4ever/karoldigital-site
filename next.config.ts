@@ -1,6 +1,10 @@
+// next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Turbopack (default in Next.js 16) handles CSS optimization 
+  // and minification automatically in production.
+  
   images: {
     remotePatterns: [
       {
@@ -19,16 +23,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
     ];
-  },
-
-  // Fix for Legacy JavaScript / unnecessary polyfills
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '../build/polyfills/polyfill-module': false,
-      'next/dist/build/polyfills/polyfill-module': false,
-    };
-    return config;
   },
 };
 
