@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/solutions',
+        destination: '/services',
+        permanent: true,
+      },
+      {
         source: '/blog/services/immigration-services',
         destination: '/services/immigration-services',
         permanent: true,
