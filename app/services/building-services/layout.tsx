@@ -15,6 +15,14 @@ const builderServiceSchema = {
   "serviceType": "Bespoke website Designing Services for Construction & Trades",
   "description":
     "Bespoke construction website design and local SEO for UK tradespeople, building firms, and construction contractors. Includes project showcases, lead capture systems, and local search optimisation.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "GBP",
+    "price": "0.00", 
+    "lowPrice": "500", // This fixes the error
+    "highPrice": "5000",
+    "url": "https://www.karoldigital.co.uk/services/building-services"
+  },
   "provider": {
     "@type": "ProfessionalService",
     "name": "Karol Digital",

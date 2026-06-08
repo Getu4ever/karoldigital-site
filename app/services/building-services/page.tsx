@@ -17,13 +17,13 @@ export default function BuildersWebDesign() {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Bespoke website Designing Services for Construction & Trades",
-  "description":
-    "Premium, conversion-focused custom Next.js websites built specifically for UK builders, commercial contractors, and construction firms to scale local leads and improve online visibility.",
-  "image": "https://karoldigital.co.uk/building-services-hero.jpg",
-  "provider": {
-    "@type": "ProfessionalService",
-    "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk"
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "GBP",
+    "price": "0.00", // Replace with your actual base price if applicable
+    "lowPrice": "500", // Add this minimum price
+    "highPrice": "5000", // Add this maximum price
+    "url": "https://karoldigital.co.uk/services/building-services"
   },
   "areaServed": {
     "@type": "Country",

@@ -17,8 +17,15 @@ export default function FinanceWebDesign() {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Bespoke website Designing Services for Financial Sector",
-  "description":
-    "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready corporate web design for UK firms including accountants, mortgage brokers, and IFAs.",
+  "description": "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready corporate web design for UK firms including accountants, mortgage brokers, and IFAs.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "GBP",
+    "price": "0.00",
+    "lowPrice": "800", // Update this to your starting price for finance services
+    "highPrice": "8000",
+    "url": "https://www.karoldigital.co.uk/services/financial-services"
+  },
   "image": "https://www.karoldigital.co.uk/1stcall-finance-showcase.jpg",
   "provider": {
     "@type": "ProfessionalService",
