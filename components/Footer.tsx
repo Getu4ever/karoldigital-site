@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Column 2: Industries (The SEO Booster) */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">Industries</h4>
+            <h3 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">Industries</h3>
             <ul className="space-y-3 text-sm">
               {industries.map((item) => (
                 <li key={item.href}>
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">Quick Links</h4>
+            <h3 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">Quick Links</h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/services/web-design" className="hover:text-yellow-400 transition">Web Design Services</Link></li>
               <li><Link href="/pricing" className="hover:text-yellow-400 transition">Packages</Link></li>
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Column 4: Legal */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">Legal</h4>
+            <h3 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">Legal</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><Link href="/privacy-policy" className="hover:text-yellow-400 transition">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service" className="hover:text-yellow-400 transition">Terms of Service</Link></li>
@@ -75,7 +75,7 @@ export default function Footer() {
           {/* Column 5: Social & Contact */}
           <div className="space-y-6">
             <div className="space-y-2">
-              <h4 className="text-lg font-semibold text-white">Let&apos;s Connect</h4>
+              <h3 className="text-lg font-semibold text-white">Let&apos;s Connect</h3>
               <p className="text-sm text-gray-400">London, United Kingdom</p>
               <a href="tel:+447565472445" className="block text-sm hover:text-yellow-400 transition">07565472445</a>
             </div>
@@ -109,11 +109,11 @@ export default function Footer() {
 </div>
 
       {/* FULL-WIDTH BLACK COPYRIGHT BAR */}
-      <div className="w-full bg-black py-6 mt-12">
-        <p className="text-center text-xs text-gray-500 tracking-wider">
-          © {year} KAROL DIGITAL. ALL RIGHTS RESERVED. CRAFTED IN THE UK.
-        </p>
-      </div>
+<div className="w-full bg-black py-6 mt-12">
+  <p className="text-center text-[10px] leading-tight text-gray-300 tracking-wider">
+    © {year} KAROL DIGITAL. ALL RIGHTS RESERVED. CRAFTED IN THE UK.
+  </p>
+</div>
     </footer>
   );
 }

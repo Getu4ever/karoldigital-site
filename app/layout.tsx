@@ -86,7 +86,7 @@ const websiteJsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en GB">
+    <html lang="en-GB" dir="ltr">
       <head>
         {/* Structured Data */}
         <script
