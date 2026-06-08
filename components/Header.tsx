@@ -63,7 +63,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-       <img src="/logo.png" className="h-[60px] w-auto" alt="Karol Digital Logo"/>
+       <img src="/logo.WebP" className="h-[60px] w-auto" alt="Karol Digital Logo"/>
   <span className="text-xl md:text-2xl font-semibold text-white">
     Karol <span className="text-yellow-400">Digital</span>
   </span>

@@ -61,12 +61,15 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/hero-cover.jpg"
+            src="/hero-cover.WebP"
             alt="Karol Digital - High-Performance Web Design & Branding"
             fill
             priority
             className="object-cover brightness-[0.40]"
-          />
+            sizes="100vw"
+            quality={82}           // Increased compression (good balance)
+            style={{ objectPosition: 'center' }}  // Optional: control focus
+            />
           <div className="relative z-10 text-center px-6 max-w-5xl">
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
               High-Performance <span className="text-yellow-400">Web Design</span> &amp;<br />
@@ -101,12 +104,14 @@ export default function Home() {
 
             <div className="flex flex-col gap-6">
               <Image
-                src="/karol-digital-home.jpg"
+                src="/karol-digital-home.WebP"
                 alt="Karol Digital High-Performance Web Design & Branding"
-                width={520}
-                height={420}
+                width={640}
+                height={400}
                 className="rounded-2xl shadow-2xl w-full"
-              />
+                sizes="(max-width: 768px) 100vw, 640px"
+                quality={82}
+                />
               <p className="text-center text-sm text-gray-500">
                 London-based • High-Performance Web Design &amp; Branding
               </p>
@@ -154,12 +159,15 @@ export default function Home() {
 
           <div className="pt-8 pb-6">
             <Image
-              src="/karol-digital-home-02.jpg"
-              alt="Karol Digital - Professional Web Design & Branding in London"
-              width={800}
-              height={500}
-              className="rounded-2xl shadow-xl w-full object-cover"
-            />
+          src="/karol-digital-home-02.WebP"
+          alt="Karol Digital - Professional Web Design & Branding in London"
+          width={640}           // Reduced to match actual display size
+          height={400}          // Reduced to match actual display size
+          className="rounded-2xl shadow-xl w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 640px"   // Critical for PageSpeed
+          quality={85}          // Good balance of quality/size (default is 75)
+          priority              // Add this if it's above the fold / LCP image
+/>
             <p className="text-center text-sm text-gray-500 mt-3">
               London-based • High-Performance Web Design &amp; Branding
             </p>
