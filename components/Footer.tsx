@@ -72,33 +72,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 5: Social & Contact */}
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-white">Let&apos;s Connect</h3>
-              <p className="text-sm text-gray-400">London, United Kingdom</p>
-              <a href="tel:+447565472445" className="block text-sm hover:text-yellow-400 transition">07565472445</a>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { icon: <FaFacebookF />, url: "https://www.facebook.com/karolgraphics" },
-                { icon: <FaInstagram />, url: "https://www.instagram.com/karoldigital2025/" },
-                { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/in/karol-digital/" },
-                { icon: <FaYoutube />, url: "https://www.youtube.com/@KarolDigital-26" },
-              ].map((social, i) => (
-                <a
-                  key={i}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-yellow-400 hover:text-[#102f35] rounded-lg transition-all duration-300"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-          </div>
-
+      {/* Column 5: Social & Contact */}
+<div className="space-y-6">
+  <div className="space-y-2">
+    <h3 className="text-lg font-semibold text-white">Let&apos;s Connect</h3>
+    <p className="text-sm text-gray-400">London, United Kingdom</p>
+    <a href="tel:+447565472445" className="block text-sm hover:text-yellow-400 transition">07565472445</a>
+  </div>
+  <div className="flex flex-wrap gap-3">
+    {[
+      { icon: <FaFacebookF />, url: "https://www.facebook.com/karolgraphics", label: "Follow us on Facebook" },
+      { icon: <FaInstagram />, url: "https://www.instagram.com/karoldigital2025/", label: "Follow us on Instagram" },
+      { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/in/karol-digital/", label: "Follow us on LinkedIn" },
+      { icon: <FaYoutube />, url: "https://www.youtube.com/@KarolDigital-26", label: "Subscribe to our YouTube channel" },
+    ].map((social, i) => (
+      <a
+        key={i}
+        href={social.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={social.label} // Added for accessibility
+        className="w-10 h-10 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-yellow-400 hover:text-[#102f35] rounded-lg transition-all duration-300"
+      >
+        {social.icon}
+      </a>
+    ))}
+  </div>
+</div>
         </div>
       </div>
       {/* FULL-WIDTH Service description */}

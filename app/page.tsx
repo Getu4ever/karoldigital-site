@@ -6,10 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-/**
- * Karol Digital - Final Polished Homepage (2026 SEO Optimized)
- * Word count: ~980 words
- */
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -64,11 +60,11 @@ export default function Home() {
             src="/hero-cover.WebP"
             alt="Karol Digital - High-Performance Web Design & Branding"
             fill
-            priority
+            priority // Correct: Hero image must be high priority
             className="object-cover brightness-[0.40]"
             sizes="100vw"
-            quality={82}           // Increased compression (good balance)
-            style={{ objectPosition: 'center' }}  // Optional: control focus
+            quality={82}
+            style={{ objectPosition: 'center' }}
             />
           <div className="relative z-10 text-center px-6 max-w-5xl">
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
@@ -141,38 +137,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* === EXTENDED SEO CONTENT SECTION - EXPANDED === */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-gray-800 leading-relaxed space-y-8">
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-[#102f35]">
-            Why High-Performance Web Design &amp; Branding Matters in 2026
-          </h2>
-          
-          <p>
-            The digital landscape has changed dramatically. Search engines now reward websites that deliver genuine value, lightning-fast experiences, and strong, memorable branding. At Karol Digital, we combine cutting-edge Next.js technology with strategic brand storytelling that truly resonates with UK audiences.
-          </p>
-          
-          <p>
-            We build websites that achieve exceptional Core Web Vitals scores while creating powerful first impressions. Whether you’re a local service business in London, an e-commerce brand, or a professional services firm, strong professional branding helps you stand out and build instant trust in a competitive market.
-          </p>
+        {/* === EXTENDED SEO CONTENT SECTION === */}
+        <section className="py-20 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto text-gray-800 leading-relaxed space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#102f35]">
+              Why High-Performance Web Design &amp; Branding Matters in 2026
+            </h2>
+            <p>The digital landscape has changed dramatically...</p>
 
-          <div className="pt-8 pb-6">
-            <Image
-          src="/karol-digital-home-02.WebP"
-          alt="Karol Digital - Professional Web Design & Branding in London"
-          width={640}           // Reduced to match actual display size
-          height={400}          // Reduced to match actual display size
-          className="rounded-2xl shadow-xl w-full object-cover"
-          sizes="(max-width: 768px) 100vw, 640px"   // Critical for PageSpeed
-          quality={85}          // Good balance of quality/size (default is 75)
-          priority              // Add this if it's above the fold / LCP image
-/>
-            <p className="text-center text-sm text-gray-500 mt-3">
-              London-based • High-Performance Web Design &amp; Branding
-            </p>
-          </div>
-
+            <div className="pt-8 pb-6">
+              <Image
+                src="/karol-digital-home-02.WebP"
+                alt="Karol Digital - Professional Web Design & Branding in London"
+                width={640}
+                height={400}
+                className="rounded-2xl shadow-xl w-full object-cover"
+                sizes="(max-width: 768px) 100vw, 640px"
+                quality={85}
+                // priority={false} // Removed priority as it's below the fold
+              />
+              <p className="text-center text-sm text-gray-500 mt-3">
+                London-based • High-Performance Web Design &amp; Branding
+              </p>
+            </div>
           <h3 className="text-2xl font-semibold text-[#102f35]">The Power of Strategic Branding</h3>
           <p>
             Your brand is far more than a logo — it’s the emotional connection customers feel when they interact with your business online. Our branding services include professional visual identity development, consistent tone-of-voice guidelines, and cohesive messaging across all touchpoints. This creates a unified experience that reinforces trust and significantly increases conversion rates.
