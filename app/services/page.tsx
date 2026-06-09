@@ -171,75 +171,60 @@ export default function ServicesPage() {
         </FadeIn>
 
 
-        {/* === CORE CAPABILITIES DETAILED SHOWCASE === */}
+       {/* === CORE CAPABILITIES DETAILED SHOWCASE === */}
         <FadeIn>
           <section className="py-24 px-6 md:px-12 bg-white">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-20">
                 <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-                  🛠 Our Specialized Digital Capabilities
+                  🛠 Specialized Digital Capabilities
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                  A comprehensive breakdown of the core digital services we deploy to establish market authority.
+                  Engineering robust, high-performance digital infrastructure to command your market.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-12">
+              <div className="grid md:grid-cols-3 gap-8">
                 
                 {/* SERVICE 1 */}
-                <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
-                  <div>
-                    <div className="text-4xl mb-4">💻</div>
-                    <h3 className="text-2xl font-bold text-[#102f35] mb-4">Bespoke Web Engineering</h3>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      We design clean, highly polished digital portals tailored entirely to your unique business parameters. Rejecting rigid, overused theme configurations, we build structured environments that scale naturally as operations expand.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      Our modern responsive structures assure cross-browser fluid layout scaling, fast interactive page speeds, and flawless user experiences across smartphones, tablets, and large displays.
-                    </p>
-                  </div>
-                  <ul className="mt-4 space-y-2 text-sm text-gray-700 font-medium">
-                    <li>• Modern CSS Frameworks & Dynamic Animations</li>
-                    <li>• Native Component Component Design Patterning</li>
-                    <li>• Zero-Latency Architecture Standard</li>
+                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                  <div className="text-4xl mb-6">💻</div>
+                  <h3 className="text-xl font-bold text-[#102f35] mb-4">Bespoke Web Engineering</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Custom-coded portals built for speed and scalability. We bypass rigid templates to deliver unique, high-conversion user experiences optimized for all device environments.
+                  </p>
+                  <ul className="space-y-2 text-xs text-[#411b3f] font-bold uppercase tracking-wide">
+                    <li>• Performance-First Architecture</li>
+                    <li>• Fluid Responsive Design</li>
+                    <li>• Modern CSS Frameworks</li>
                   </ul>
                 </div>
 
                 {/* SERVICE 2 */}
-                <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
-                  <div>
-                    <div className="text-4xl mb-4">🛍</div>
-                    <h3 className="text-2xl font-bold text-[#411b3f] mb-4">Headless Commerce & CMS</h3>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      For rapid operational scaling, we implement clean decoupled frameworks utilizing modern systems like Next.js, Sanity Studio, and robust Shopify Storefront APIs. This isolates backend inventory management from frontend displays.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      The outcome is a fast storefront that processes product variations instantly and syncs with global suppliers without degrading browser rendering times.
-                    </p>
-                  </div>
-                  <ul className="mt-4 space-y-2 text-sm text-gray-700 font-medium">
-                    <li>• Shopify Storefront API Integrations</li>
-                    <li>• Structured Content Modeling via Sanity</li>
-                    <li>• Drop-shipping Supply Chain Hookups</li>
+                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                  <div className="text-4xl mb-6">🛍</div>
+                  <h3 className="text-xl font-bold text-[#411b3f] mb-4">Headless Commerce</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Decoupled storefronts utilizing Next.js and robust APIs. We isolate your backend operations from frontend rendering for instantaneous, enterprise-grade scalability.
+                  </p>
+                  <ul className="space-y-2 text-xs text-[#411b3f] font-bold uppercase tracking-wide">
+                    <li>• Shopify Storefront API</li>
+                    <li>• Structured CMS Integration</li>
+                    <li>• High-Volume Scaling</li>
                   </ul>
                 </div>
 
                 {/* SERVICE 3 */}
-                <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
-                  <div>
-                    <div className="text-4xl mb-4">📈</div>
-                    <h3 className="text-2xl font-bold text-[#102f35] mb-4">Technical SEO & Marketing</h3>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      We construct websites with crawl architecture as a core priority. By handling indexability requirements, clean semantic typography hierarchies, and structural JSON-LD schemas manually, we prepare your site to claim local organic rankings.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      Every asset is structured to match user intent directly, linking transactional search expressions with your main sales funnel paths.
-                    </p>
-                  </div>
-                  <ul className="mt-4 space-y-2 text-sm text-gray-700 font-medium">
-                    <li>• Structured JSON-LD Schema Deployments</li>
-                    <li>• Semantic Layout Tag Hierarchy Optimization</li>
-                    <li>• Local Google Business Footprint Audit</li>
+                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                  <div className="text-4xl mb-6">📈</div>
+                  <h3 className="text-xl font-bold text-[#102f35] mb-4">Technical SEO & Growth</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Data-driven architecture built for search visibility. We manually configure semantic hierarchies and JSON-LD schemas to ensure your site dominates local organic rankings.
+                  </p>
+                  <ul className="space-y-2 text-xs text-[#411b3f] font-bold uppercase tracking-wide">
+                    <li>• Semantic Schema Deployment</li>
+                    <li>• Crawl Budget Optimization</li>
+                    <li>• Local Authority Audits</li>
                   </ul>
                 </div>
 
