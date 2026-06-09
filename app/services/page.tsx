@@ -68,19 +68,34 @@ export default function ServicesPage() {
         {/* === INTRO VALUE PROPOSITION === */}
         <FadeIn>
           <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9] pb-16">
-            <div className="max-w-5xl mx-auto text-center">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f] block mb-3">
-                Engineered for Results
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-6">
-                Strategic Solutions Rooted in Technical Excellence
-              </h2>
-              <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mb-6">
-                At Karol Digital, we deliver much more than visual frameworks. We engineer robust, enterprise-grade digital infrastructures that elevate your operational presence online. By combining sleek corporate layouts with optimized technical SEO architectures, we construct platforms that function as your most efficient asset.
-              </p>
-              <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                Whether implementing low-latency Headless CMS systems or expanding intuitive customer journeys, our methods ensure data integrity, responsive layout rendering, and strict compliance with global technical metrics.
-              </p>
+            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+              
+              {/* Text Column */}
+              <div className="text-left">
+                <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f] block mb-3">
+                  Engineered for Results
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-6">
+                  Strategic Solutions Rooted in Technical Excellence
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  At Karol Digital, we deliver much more than visual frameworks. We engineer robust, enterprise-grade digital infrastructures that elevate your operational presence online.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  By combining sleek corporate layouts with optimized technical SEO architectures, we construct platforms that function as your most efficient asset—ensuring data integrity, rapid rendering, and global metric compliance.
+                </p>
+              </div>
+
+              {/* Image Column */}
+              <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/strategic-engineering-visual.webp"
+                  alt="Karol Digital Strategic Infrastructure"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
             </div>
           </section>
         </FadeIn>

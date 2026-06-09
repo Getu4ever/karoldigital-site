@@ -71,17 +71,40 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* INTRO SECTION */}
-        <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-[#102f35] mb-4">
-              Strategic Design Meets Technical Excellence
-            </h2>
-            <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              By engineering bespoke digital solutions, from full brand identities to custom-coded e-commerce platforms, I provide the technical infrastructure your business needs to compete, scale, and dominate its market.
-            </p>
-          </div>
-        </section>
+        {/* === INTRO VALUE PROPOSITION === */}
+        <FadeIn>
+          <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
+            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+              
+              {/* Text Column */}
+              <div className="space-y-6">
+                <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f]">
+                  The Karol Digital Standard
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#102f35]">
+                  Strategic Design Meets Technical Excellence
+                </h2>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  By engineering bespoke digital solutions, from full brand identities to custom-coded e-commerce platforms, I provide the technical infrastructure your business needs to compete, scale, and dominate its market.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  We don't just build platforms; we create strategic assets. Our iterative, transparent workflow ensures every line of code serves your commercial goals—driving alignment from discovery call through launch and continuous optimization. We bridge the gap between creative vision and high-performance technical execution.
+                </p>
+              </div>
+
+              {/* Image Column */}
+              <div className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
+                <Image
+                  src="/strategic-web-development-visual.webp"
+                  alt="Karol Digital Strategic Partnership"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+            </div>
+          </section>
+        </FadeIn>
 
         {/* PRICING PACKAGES */}
         <section className="py-24 px-6 md:px-12 bg-white">
