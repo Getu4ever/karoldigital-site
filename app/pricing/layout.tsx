@@ -25,79 +25,48 @@ export const metadata: Metadata = {
 
 const pricingServiceSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
+  "@type": "Product",
   "name": "Web Design & Digital Solutions",
   "description":
     "Professional web design and digital solutions for UK businesses, including Starter, Growth, Premium, and Enterprise eCommerce packages.",
-  "provider": {
-    "@type": "ProfessionalService",
-    "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk",
-    "image": "https://www.karoldigital.co.uk/hero-page-banner.jpg",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    }
+  "brand": {
+    "@type": "Brand",
+    "name": "Karol Digital"
   },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Web Design Packages",
-    "itemListElement": [
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "GBP",
+    "lowPrice": "900",
+    "highPrice": "6500",
+    "offerCount": "4",
+    "offers": [
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Starter Web Design Package",
-          "description":
-            "Professional 5–7 page website for startups and small businesses with responsive design, basic SEO setup, and contact form."
-        },
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": 900,
-          "priceCurrency": "GBP"
-        }
+        "name": "Starter Web Design Package",
+        "price": "900",
+        "priceCurrency": "GBP",
+        "description": "Professional 5–7 page website for startups and small businesses with responsive design, basic SEO setup, and contact form."
       },
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Growth Web Design Package",
-          "description":
-            "Conversion-focused website with UX optimisation, SEO setup, performance improvements, analytics, and automation."
-        },
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": 1800,
-          "priceCurrency": "GBP"
-        }
+        "name": "Growth Web Design Package",
+        "price": "1800",
+        "priceCurrency": "GBP",
+        "description": "Conversion-focused website with UX optimisation, SEO setup, performance improvements, analytics, and automation."
       },
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Premium Web Design Package",
-          "description":
-            "High-end digital system including branding, custom pages, advanced development, copywriting, and automation systems."
-        },
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": 3500,
-          "priceCurrency": "GBP"
-        }
+        "name": "Premium Web Design Package",
+        "price": "3500",
+        "priceCurrency": "GBP",
+        "description": "High-end digital system including branding, custom pages, advanced development, copywriting, and automation systems."
       },
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Enterprise eCommerce Solution",
-          "description":
-            "Fully custom eCommerce platforms with product management, payment gateways, CRM systems, advanced security, and scalability."
-        },
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": 6500,
-          "priceCurrency": "GBP"
-        }
+        "name": "Enterprise eCommerce Solution",
+        "price": "6500",
+        "priceCurrency": "GBP",
+        "description": "Fully custom eCommerce platforms with product management, payment gateways, CRM systems, advanced security, and scalability."
       }
     ]
   }
