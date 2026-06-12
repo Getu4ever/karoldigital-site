@@ -1,16 +1,18 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 import { Metadata } from "next";
 
+const PAGE_URL = "https://www.karoldigital.co.uk/services";
+
 export const metadata: Metadata = {
   ...generateSEOMetadata({
     title: "High-Performance Digital Growth Strategies | Karol Digital UK",
     description:
       "Stop chasing traffic and start closing clients. We engineer high-performance websites and conversion systems for UK businesses ready to scale.",
-    url: "https://www.karoldigital.co.uk/solutions",
+    url: PAGE_URL,
     image: "/hero-cover.jpg",
   }),
   alternates: {
-    canonical: "https://www.karoldigital.co.uk/solutions",
+    canonical: PAGE_URL,
   },
 };
 
@@ -29,7 +31,7 @@ const growthStrategySchema = [
         "@type": "ListItem",
         "position": 2,
         "name": "Growth Strategies",
-        "item": "https://www.karoldigital.co.uk/solutions"
+        "item": PAGE_URL // Updated this to match PAGE_URL
       }
     ]
   },
