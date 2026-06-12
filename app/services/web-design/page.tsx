@@ -30,75 +30,101 @@ export default function WebDesignPage() {
             >
               Professional Web Design
               <span className="block text-yellow-400 mt-2">
-                Built for Growth, Performance & Trust
+                Built for Growth, Performance &amp; Trust
               </span>
             </motion.h1>
 
-            <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-4">
               We design high-impact websites that position your business as credible,
               authoritative, and conversion-ready — engineered to support long-term
               growth in competitive digital markets.
+            </p>
+            <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto">
+              Ideal for UK service businesses and SMEs who are ready to move beyond
+              basic templates and turn their website into a reliable source of enquiries.
             </p>
           </div>
         </section>
 
         {/* === BREADCRUMB SECTION === */}
-<nav
-  aria-label="Breadcrumb"
-  className="bg-white border-b border-gray-100 py-4 px-6 md:px-12"
->
-  <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-600">
-    <li>
-      <a href="/" className="hover:text-[#102f35] transition">
-        Home
-      </a>
-    </li>
+        <nav
+          aria-label="Breadcrumb"
+          className="bg-white border-b border-gray-100 py-4 px-6 md:px-12"
+        >
+          <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-600">
+            <li>
+              <a href="/" className="hover:text-[#102f35] transition">
+                Home
+              </a>
+            </li>
 
-    <li className="text-gray-400">/</li>
+            <li className="text-gray-400">/</li>
 
-    <li>
-      <a href="/services" className="hover:text-[#102f35] transition">
-        Services
-      </a>
-    </li>
+            <li>
+              <a href="/services" className="hover:text-[#102f35] transition">
+                Services
+              </a>
+            </li>
 
-    <li className="text-gray-400">/</li>
+            <li className="text-gray-400">/</li>
 
-    <li className="text-[#102f35] font-semibold">
-      Web Design
-    </li>
-  </ol>
-</nav>
+            <li className="text-[#102f35] font-semibold">
+              Web Design
+            </li>
+          </ol>
+        </nav>
 
-        {/* === INTRODUCTION === */}
+        {/* === INTRODUCTION (NOW WITH IMAGE ON RIGHT) === */}
         <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="max-w-5xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#102f35] mb-8">
-              Web Design That Goes Beyond Visual Appeal
-            </h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              At Karol Digital, web design is not treated as a cosmetic exercise.
-              Every website we create is built with a clear strategic purpose —
-              to communicate value, build trust, guide user behaviour, and support
-              measurable business objectives.
-            </p>
-          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Text Column */}
+            <div>
+              <div className="max-w-5xl mb-10">
+                <h2 className="text-4xl font-bold text-[#102f35] mb-8">
+                  Web Design That Goes Beyond Visual Appeal
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  At Karol Digital, web design is not treated as a cosmetic exercise.
+                  Every website we create is built with a clear strategic purpose —
+                  to communicate value, build trust, guide user behaviour, and support
+                  measurable business objectives.
+                </p>
+              </div>
 
-          <div className="max-w-6xl mx-auto space-y-10 text-gray-700 text-lg leading-relaxed">
-            <p>
-              Your website is often the first meaningful interaction a potential
-              customer has with your brand. In seconds, visitors decide whether
-              they trust your business, understand your offer, and feel confident
-              enough to engage further. Poor design, slow performance, or unclear
-              messaging can silently cost you opportunities every single day.
-            </p>
+              <div className="space-y-7 text-gray-700 text-lg leading-relaxed">
+                <p>
+                  Your website is often the first meaningful interaction a potential
+                  customer has with your brand. In seconds, visitors decide whether
+                  they trust your business, understand your offer, and feel confident
+                  enough to engage further. Poor design, slow performance, or unclear
+                  messaging can silently cost you opportunities every single day.
+                </p>
 
-            <p>
-              Our approach to web design combines strategic planning, user-centred
-              design principles, and modern development standards. We focus on
-              clarity, usability, and performance to ensure that your website
-              functions as a powerful business asset rather than a static brochure.
-            </p>
+                <p>
+                  Our approach to web design combines strategic planning, user-centred
+                  design principles, and modern development standards. We focus on
+                  clarity, usability, and performance to ensure that your website
+                  functions as a powerful business asset rather than a static brochure.
+                </p>
+
+                <p>
+                  Whether you&apos;re refreshing an outdated website or starting from
+                  scratch, we align design decisions with your sales process, marketing
+                  activity, and long-term positioning — so your website actively helps
+                  you win more of the right clients.
+                </p>
+              </div>
+            </div>
+
+            {/* Image Column */}
+            <div className="relative h-[360px] md:h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/web-design-services.webp"
+                alt="High-performance web design by Karol Digital"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </section>
 
@@ -118,7 +144,7 @@ export default function WebDesignPage() {
 
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-[#411b3f] mb-4">
-                Performance & Accessibility
+                Performance &amp; Accessibility
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Fast load times, mobile optimisation, and accessibility best
@@ -154,34 +180,38 @@ export default function WebDesignPage() {
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="p-6 border-l-4 border-[#102f35]">
-              <h4 className="text-xl font-bold mb-3">Discovery & Planning</h4>
-              <p>
+              <h4 className="text-xl font-bold mb-3">Discovery &amp; Planning</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 We begin by understanding your business, audience, competitors,
-                and objectives. This phase defines the foundation of the project.
+                and objectives. This phase defines the foundation of the project
+                and the role your website will play in your wider strategy.
               </p>
             </div>
 
             <div className="p-6 border-l-4 border-[#102f35]">
-              <h4 className="text-xl font-bold mb-3">Design & UX</h4>
-              <p>
+              <h4 className="text-xl font-bold mb-3">Design &amp; UX</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Visual concepts and user journeys are crafted to ensure clarity,
-                engagement, and intuitive navigation across all devices.
+                engagement, and intuitive navigation across all devices. Every
+                page has a clear job and a clear next step for the user.
               </p>
             </div>
 
             <div className="p-6 border-l-4 border-[#102f35]">
               <h4 className="text-xl font-bold mb-3">Development</h4>
-              <p>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Clean, modern code brings the design to life, focusing on speed,
-                security, and technical excellence.
+                security, and technical excellence. We build with maintainability
+                in mind so updates are easier later on.
               </p>
             </div>
 
             <div className="p-6 border-l-4 border-[#102f35]">
-              <h4 className="text-xl font-bold mb-3">Launch & Support</h4>
-              <p>
+              <h4 className="text-xl font-bold mb-3">Launch &amp; Support</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Thorough testing precedes launch, followed by guidance and
-                ongoing support to ensure long-term success.
+                optional ongoing support to ensure long-term success and
+                continuous improvement.
               </p>
             </div>
           </div>
@@ -193,17 +223,25 @@ export default function WebDesignPage() {
             <h2 className="text-4xl font-extrabold mb-6">
               Ready to Build a Website That Works for Your Business?
             </h2>
-            <p className="text-lg text-gray-200 mb-10 leading-relaxed">
+            <p className="text-lg text-gray-200 mb-8 leading-relaxed">
               Explore our structured packages and find the solution that aligns
               with your business goals, growth stage, and budget.
             </p>
 
-            <Link
-              href="/pricing"
-              className="inline-block bg-[#ffffff] text-[#102f35] font-bold px-10 py-4 rounded-full hover:bg-yellow-300 transition"
-            >
-              View Web Design Packages & Pricing
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/pricing"
+                className="inline-block bg-[#ffffff] text-[#102f35] font-bold px-10 py-4 rounded-full hover:bg-yellow-300 transition"
+              >
+                View Web Design Packages &amp; Pricing
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-block border border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-[#102f35] transition"
+              >
+                Discuss Your Web Design Project
+              </Link>
+            </div>
           </div>
         </section>
 

@@ -94,7 +94,9 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <>
-                <p className="text-xs font-bold text-[#411b3f] mb-6">Let's Start Your Growth Blueprint</p>
+                <p className="text-xs font-bold text-[#411b3f] mb-2 uppercase tracking-wide">
+                    Let's Start Your Growth Blueprint
+                  </p>
                   <h2 className="text-3xl font-bold text-[#102f35] mb-6">Send Us a Message</h2>
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
