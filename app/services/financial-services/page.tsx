@@ -71,7 +71,7 @@ export default function FinanceWebDesign() {
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Financial Services Web Design <br className="hidden md:inline" />
-              For <span className="text-yellow-400">Corporate Industry Trust</span>
+              For <span className="text-yellow-400">Corporate Sector Trust</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
               High-trust, secure, and professional web platforms for UK Mortgage Brokers, Chartered Accountants, and Certified Financial Advisors.

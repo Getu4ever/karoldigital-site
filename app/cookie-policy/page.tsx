@@ -10,7 +10,7 @@ export default function CookiePolicy() {
   </h1>
       <LegalHero
         title="Cookie Policy"
-        subtitle="Find out how Karol Digital uses cookies to enhance your website experience."
+        subtitle="This page is explaining how Karol Digital uses cookies to enhance your website experience."
       />
 
       <div className="max-w-4xl mx-auto py-24 px-6 text-gray-700">

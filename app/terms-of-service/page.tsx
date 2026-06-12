@@ -54,6 +54,15 @@ export default function TermsOfService() {
           Karol Digital is not liable for any damages arising from misuse of our
           services, third-party issues, hosting problems or website downtime.
         </p>
+        <h2 className="text-2xl font-semibold text-[#411b3f] mt-10 mb-4">
+          Contact
+        </h2>
+        <p className="leading-7">
+          Karol Digital - Web Design & Digital Marketing for UK Small Business <br />
+          Email: info@karoldigital.co.uk 
+          Phone: 07565472445 <br />
+          Location: London, United Kingdom
+        </p>
       </div>
     </>
   );

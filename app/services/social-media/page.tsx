@@ -59,7 +59,7 @@ export default function SocialMediaPage() {
             </p>
 
             <p className="text-gray-700 leading-relaxed mt-4">
-              We specialise in setting up and optimising business profiles across all major platforms including Facebook, Instagram, TikTok, LinkedIn, YouTube, and Google Business Profile. Every element is aligned to reflect your brand identity and improve discoverability in both social and local search results.
+              We set up and optimise professional business profiles across all major platforms including Facebook, Instagram, TikTok, LinkedIn, YouTube, and Google Business Profile. Every element is aligned to reflect your brand identity and improve discoverability in both social and local search results.
             </p>
           </section>
 

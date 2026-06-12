@@ -34,12 +34,12 @@ export default function DigitalMarketingPage() {
               <span className="text-yellow-400">Marketing</span>
 
               <span className="sr-only">
-                Digital marketing services for UK small businesses including SEO, content strategy, and growth optimisation
+                Digital marketing services for UK small businesses - SEO, content strategy, and growth optimisation
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100">
-              Practical, results-driven marketing strategies designed to help UK businesses grow visibility, traffic, and customer acquisition.
+              Practical, results-driven digital marketing strategies designed to help UK businesses grow visibility, traffic, and customer acquisition.
             </p>
           </div>
         </motion.section>

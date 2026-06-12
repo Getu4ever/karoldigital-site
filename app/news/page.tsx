@@ -76,7 +76,7 @@ export default async function NewsPage() {
           </h2>
 
           <p className="text-gray-700 text-center max-w-3xl mx-auto mb-12">
-            Automatically updated marketing, SEO, and social media news curated from
+            Latest - Automatically updated marketing, SEO, and social media news curated from
             Search Engine Journal — trusted by professionals worldwide.
           </p>
 
