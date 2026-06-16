@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Website Pricing & Affordable Web Design Packages UK | Karol Digital",
+  title: "Website Pricing & Web Design Packages UK | Karol Digital",
   description:
     "Flexible website pricing for UK businesses. Start with a Website Growth Audit or Starter Lite package, then scale into Growth, Premium, or Enterprise solutions when you're ready.",
   alternates: {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Flexible Website Pricing & Packages | Karol Digital",
     description:
-      "Affordable website pricing for UK businesses, including Starter Lite, Starter, Growth, Premium, Enterprise, and Website Growth Audits.",
+      "Clear and affordable website pricing for UK businesses. Choose from Website Growth Audits, Starter Lite, Growth, Premium, or Enterprise web design packages.",
     images: [
       {
         url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/hero-page-banner.jpg)",
