@@ -3,18 +3,20 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "Website Pricing & Web Design Packages UK | Karol Digital",
+  // Shortened to ensure it fits within the recommended pixel width
   description:
-    "Flexible website pricing for UK businesses. Start with a Website Growth Audit or Starter Lite package, then scale into Growth, Premium, or Enterprise solutions when you're ready.",
+    "Flexible website pricing for UK businesses. Choose from Growth Audits, Starter, Growth, Premium, or Enterprise web design solutions tailored to your needs.",
   alternates: {
-    canonical: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+    // Corrected format: provide the full string only
+    canonical: "https://www.karoldigital.co.uk/pricing",
   },
   openGraph: {
     title: "Flexible Website Pricing & Packages | Karol Digital",
     description:
-      "Clear and affordable website pricing for UK businesses. Choose from Website Growth Audits, Starter Lite, Growth, Premium, or Enterprise web design packages.",
+      "Clear and affordable website pricing for UK businesses. Choose from Website Growth Audits, Starter, Growth, Premium, or Enterprise web design packages.",
     images: [
       {
-        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/hero-page-banner.jpg)",
+        url: "https://www.karoldigital.co.uk/hero-page-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Karol Digital Website Pricing",
@@ -24,11 +26,11 @@ export const metadata: Metadata = {
 };
 
 const pricingServiceSchema = {
-  "@context": "[schema.org](https://schema.org)",
+  "@context": "https://schema.org",
   "@type": "Product",
   name: "Website Design & Digital Growth Services",
   description:
-    "Flexible web design and digital growth services for UK businesses, including Website Growth Audits, Starter Lite, Starter, Growth, Premium, and Enterprise solutions.",
+    "Flexible web design and digital growth services for UK businesses, including Website Growth Audits, Starter, Growth, Premium, and Enterprise solutions.",
   brand: {
     "@type": "Brand",
     name: "Karol Digital",
@@ -47,7 +49,7 @@ const pricingServiceSchema = {
         priceCurrency: "GBP",
         description:
           "A practical review of your website covering messaging, structure, speed, SEO, and lead generation opportunities.",
-        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+        url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
@@ -56,7 +58,7 @@ const pricingServiceSchema = {
         priceCurrency: "GBP",
         description:
           "A lean 1-3 page professional website for new businesses or simple service offers, including mobile responsiveness, contact form, and basic SEO setup.",
-        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+        url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
@@ -65,7 +67,7 @@ const pricingServiceSchema = {
         priceCurrency: "GBP",
         description:
           "A professional 5-7 page website for local businesses and growing service brands, including CMS setup, responsive design, and core SEO setup.",
-        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+        url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
@@ -74,7 +76,7 @@ const pricingServiceSchema = {
         priceCurrency: "GBP",
         description:
           "A conversion-focused website package for businesses that need more enquiries, including UX improvements, on-page SEO, performance tuning, and lead capture systems.",
-        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+        url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
@@ -83,7 +85,7 @@ const pricingServiceSchema = {
         priceCurrency: "GBP",
         description:
           "A complete digital growth system with branding, custom pages, advanced development, and conversion strategy for established brands ready to scale.",
-        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+        url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
@@ -92,7 +94,7 @@ const pricingServiceSchema = {
         priceCurrency: "GBP",
         description:
           "Custom enterprise websites and ecommerce systems with advanced integrations, CRM connectivity, payment systems, and high-level security.",
-        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+        url: "https://www.karoldigital.co.uk/pricing",
       },
     ],
   },
