@@ -81,16 +81,18 @@ export default function Home() {
             style={{ objectPosition: "center" }}
           />
           <div className="relative z-10 text-center px-6 max-w-5xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-              High-Performance Websites that Turn UK Visitors into Clients
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+              <span className="text-white">High-Performance Websites that </span>
+              <span className="text-yellow-400">Turn UK Visitors into Clients</span>
             </h1>
+
             <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
               Custom-built Next.js websites and branding that load fast, build
               trust, and consistently generate qualified enquiries.
             </p>
             <Link
               href="/contact"
-              className="bg-[#411b3f] hover:bg-[#102f35] text-white font-bold px-12 py-5 rounded-full text-lg transition shadow-xl inline-block"
+              className="bg-white hover:bg-yellow-400 text-black font-bold px-12 py-5 rounded-full text-lg transition shadow-xl inline-block"
             >
               Get Your Free Growth Blueprint
             </Link>
