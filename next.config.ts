@@ -1,6 +1,10 @@
+// next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Turbopack (default in Next.js 16) handles CSS optimization 
+  // and minification automatically in production.
+  
   images: {
     remotePatterns: [
       {
@@ -18,14 +22,6 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // 1. Redirect www to non-www
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.karoldigital.co.uk" }],
-        destination: "https://karoldigital.co.uk/:path*",
-        permanent: true,
-      },
-      // 2. Existing redirects
       {
         source: '/solutions',
         destination: '/services',
