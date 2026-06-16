@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="space-y-4 lg:col-span-1">
             <div className="flex items-center space-x-2">
               <img
-                src="/logo.png"
+                src="/logo.WebP"
                 alt="Karol Digital Logo"
                 className="h-[50px] w-auto"
               />
