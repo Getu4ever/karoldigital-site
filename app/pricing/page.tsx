@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-// Define the shape of the props
 interface PricingCardProps {
   title: string;
   desc: string;
@@ -14,9 +13,9 @@ interface PricingCardProps {
   buttonText: string;
   highlighted?: boolean;
   link?: string;
+  fit?: string;
 }
 
-// Applying the interface to the component
 const PricingCard = ({
   title,
   desc,
@@ -25,6 +24,7 @@ const PricingCard = ({
   buttonText,
   highlighted = false,
   link = "/contact",
+  fit,
 }: PricingCardProps) => {
   return (
     <div
@@ -36,23 +36,39 @@ const PricingCard = ({
     >
       {highlighted && (
         <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-          Most Popular
+          Best Value
         </div>
       )}
-      <p className="text-3xl font-bold text-[#102f35] text-center mb-4">
+
+      <p className="text-3xl font-bold text-[#102f35] text-center mb-3">
         {title}
       </p>
-      <p className="text-gray-600 text-center mb-6 h-12">{desc}</p>
+
+      <p className="text-gray-600 text-center mb-3 min-h-[48px]">{desc}</p>
+
+      {fit && (
+        <p className="text-xs font-semibold uppercase tracking-wide text-[#411b3f] text-center mb-6">
+          {fit}
+        </p>
+      )}
+
       <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
         {features.map((feature, i) => (
           <li key={i} className="flex items-start gap-2">
-            <span className="text-yellow-500">✔</span> {feature}
+            <span className="text-yellow-500">✔</span>
+            <span>{feature}</span>
           </li>
         ))}
       </ul>
-      <p className="text-2xl font-extrabold text-[#102f35] text-center mb-6">
+
+      <p className="text-2xl font-extrabold text-[#102f35] text-center mb-2">
         {price}
       </p>
+
+      <p className="text-xs text-gray-500 text-center mb-6">
+        Clear fixed quote before any build starts
+      </p>
+
       <Link
         href={link}
         className={`block text-center py-3 rounded-full font-semibold transition ${
@@ -80,31 +96,36 @@ export default function PricingPage() {
         >
           <Image
             src="/hero-page-banner.jpg"
-            alt="Karol Digital Services"
+            alt="Karol Digital Pricing"
             fill
             priority
             className="object-cover brightness-[0.45]"
           />
           <div className="absolute inset-0 bg-black/40" />
+
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-              <span className="text-white">Bespoke </span>
-              <span className="text-yellow-400">Digital Solutions</span>
+              <span className="text-white">Flexible </span>
+              <span className="text-yellow-400">Website Pricing</span>
             </h1>
+
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              High-performance websites and brand identities engineered to turn
-              visitors into loyal customers.
+              Professional websites and digital growth support for businesses
+              that need results without jumping straight into a huge upfront
+              investment.
             </p>
+
             <p className="text-sm md:text-base text-gray-200 max-w-3xl mx-auto mt-4">
-              These ranges are a guide. We’ll confirm a clear fixed proposal
-              after a short discovery call, based on your scope and priorities.
+              Start smaller if you need to. Scale when the business is ready.
+              Every package is designed to give you a clear next step, not lock
+              you into more than you need.
             </p>
           </div>
         </motion.section>
 
         {/* TRUST SIGNALS */}
         <section className="py-12 bg-gray-50 border-b">
-          <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+          <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
             <div>
               <p className="font-bold text-[#102f35]">✓ No Hidden Fees</p>
             </div>
@@ -112,42 +133,52 @@ export default function PricingPage() {
               <p className="font-bold text-[#102f35]">✓ 100% Code Ownership</p>
             </div>
             <div>
-              <p className="font-bold text-[#102f35]">✓ Performance-Focused Builds</p>
+              <p className="font-bold text-[#102f35]">✓ Clear Fixed Quotes</p>
+            </div>
+            <div>
+              <p className="font-bold text-[#102f35]">✓ Built to Grow Later</p>
             </div>
           </div>
         </section>
 
-        {/* === INTRO VALUE PROPOSITION === */}
+        {/* INTRO VALUE PROPOSITION */}
         <FadeIn>
           <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-              {/* Text Column */}
               <div className="space-y-6">
                 <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f]">
-                  The Karol Digital Standard
+                  Pricing That Makes Sense
                 </span>
+
                 <h2 className="text-4xl md:text-5xl font-bold text-[#102f35]">
-                  Strategic Design Meets Technical Excellence
+                  Start With What You Need, Not What You Don’t
                 </h2>
+
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  By engineering bespoke digital solutions, from full brand
-                  identities to custom-coded e-commerce platforms, we provide
-                  the technical infrastructure your business needs to compete,
-                  scale, and dominate its market.
+                  Not every business needs a full-scale custom build on day one.
+                  Some need a professional launch site. Others need a better
+                  conversion path, stronger branding, or a more reliable lead
+                  flow.
                 </p>
+
                 <p className="text-gray-600 leading-relaxed">
-                  We don&apos;t just build platforms; we create strategic assets.
-                  Our transparent workflow ensures every decision supports your
-                  commercial goals — from the first discovery call through to
-                  launch and ongoing optimisation.
+                  These packages are designed to give you a sensible starting
+                  point. If you are budget-conscious but still want quality,
+                  speed, and a site that helps your business grow, this page is
+                  built for you.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed">
+                  We keep the process transparent, recommend the best-fit option
+                  honestly, and make sure you only pay for what will genuinely
+                  help your business move forward.
                 </p>
               </div>
 
-              {/* Image Column */}
               <div className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
                 <Image
                   src="/strategic-web-development-visual.webp"
-                  alt="Karol Digital Strategic Partnership"
+                  alt="Karol Digital pricing and project planning"
                   fill
                   className="object-cover"
                 />
@@ -156,67 +187,154 @@ export default function PricingPage() {
           </section>
         </FadeIn>
 
+        {/* LOW-FRICTION ENTRY OFFER */}
+        <section className="py-20 px-6 md:px-12 bg-white border-b border-gray-100">
+          <div className="max-w-5xl mx-auto text-center bg-gray-50 rounded-3xl p-10 md:p-14 border border-gray-100 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-widest text-[#411b3f] mb-3">
+              Not Ready for a Full Website Yet?
+            </p>
+
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] mb-4">
+              Start With a Website Growth Audit
+            </h2>
+
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+              If you already have a site but are not getting enough leads, this
+              is the easiest place to start. We review your homepage, messaging,
+              structure, speed, and conversion flow, then give you practical,
+              prioritised actions.
+            </p>
+
+            <div className="inline-block bg-white px-8 py-5 rounded-2xl shadow-md border border-gray-100 mb-8">
+              <p className="text-3xl font-extrabold text-[#102f35]">£95 - £195</p>
+              <p className="text-sm text-gray-500 mt-1">
+                Ideal for businesses that want clarity before committing to a full build
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-block bg-[#102f35] text-white px-8 py-4 rounded-full font-bold hover:bg-[#411b3f] transition"
+              >
+                Ask About the Audit
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-block border border-[#102f35] text-[#102f35] px-8 py-4 rounded-full font-bold hover:bg-[#102f35] hover:text-white transition"
+              >
+                Get a Recommendation
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* PRICING PACKAGES */}
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-7xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-              💼 Performance Web Packages
+              💼 Website Packages
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Transparent, outcome-focused pricing. Choose the tier that matches
-              your stage of growth, then we fine-tune it to your exact needs.
+              Designed for different stages of business growth, with lower-risk
+              options for smaller budgets and scalable options when you are
+              ready to invest more.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
+            <PricingCard
+              title="Starter Lite"
+              desc="A lean professional site for businesses that need a credible online presence fast."
+              price="£450-£750"
+              fit="Best for new businesses or simple service offers"
+              features={[
+                "1-3 Pages",
+                "Mobile Responsive",
+                "Contact Form",
+                "Basic SEO Setup",
+              ]}
+              buttonText="Ask About Starter Lite"
+            />
+
             <PricingCard
               title="Starter"
-              desc="Professional online presence for new businesses."
-              price="£800–£1,400"
+              desc="A stronger foundation for businesses ready to present themselves properly online."
+              price="From £795"
+              fit="Best for local businesses and growing service brands"
               features={[
-                "5–7 Pages",
-                "Basic SEO Setup",
+                "5-7 Pages",
                 "CMS Setup",
                 "Mobile Responsive",
+                "Core SEO Setup",
               ]}
-              buttonText="Choose Starter"
+              buttonText="Ask About Starter"
             />
+
             <PricingCard
               title="Growth"
-              desc="Conversion-focused to generate consistent leads."
-              price="£1,600–£2,800"
+              desc="Built for businesses that need more enquiries and a stronger conversion journey."
+              price="From £1,400"
+              fit="Best for businesses already getting traffic"
               features={[
                 "UX & Conversion Optimisation",
                 "Full On-page SEO",
                 "Performance Tuning",
                 "Lead Capture System",
               ]}
-              buttonText="Choose Growth"
-            />
-            <PricingCard
-              title="Premium"
-              desc="Complete digital growth system & branding."
-              price="£3,200–£5,500"
-              features={[
-                "Full Brand Identity",
-                "6–10+ Custom Pages",
-                "Advanced Custom Dev",
-                "Conversion Strategy",
-              ]}
-              buttonText="Choose Premium"
+              buttonText="See If Growth Fits"
               highlighted
             />
+
+            <PricingCard
+              title="Premium"
+              desc="A full digital growth system with stronger branding, positioning, and custom functionality."
+              price="From £3,200"
+              fit="Best for established brands ready to scale"
+              features={[
+                "Full Brand Identity",
+                "6-10+ Custom Pages",
+                "Advanced Custom Development",
+                "Conversion Strategy",
+              ]}
+              buttonText="Discuss Premium"
+            />
+
             <PricingCard
               title="Enterprise"
-              desc="Complex ecommerce & business systems."
-              price="From £6,000"
+              desc="For complex ecommerce, custom systems, and advanced integrations."
+              price="Custom Quote"
+              fit="Best for advanced businesses with technical requirements"
               features={[
-                "Full Ecommerce/Shop",
+                "Full Ecommerce / Shop",
                 "Payment Integration",
                 "CRM Integration",
                 "High-Level Security",
               ]}
-              buttonText="Request Quote"
+              buttonText="Request a Quote"
             />
+          </div>
+        </section>
+
+        {/* NOT SURE WHICH PACKAGE */}
+        <section className="py-10 px-6 md:px-12 bg-white">
+          <div className="max-w-4xl mx-auto text-center bg-gray-50 rounded-3xl p-10 border border-gray-100">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#102f35] mb-4">
+              Not sure which package fits?
+            </h3>
+
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Tell us about your business, budget, and goals, and we’ll point
+              you toward the most sensible option - even if that means starting
+              smaller than you expected.
+            </p>
+
+            <Link
+              href="/contact"
+              className="inline-block bg-[#102f35] text-white px-8 py-4 rounded-full font-bold hover:bg-[#411b3f] transition"
+            >
+              Get a Recommendation
+            </Link>
           </div>
         </section>
 
@@ -227,6 +345,10 @@ export default function PricingPage() {
               <h2 className="text-4xl font-bold mb-4">
                 Trusted by Growing UK Businesses
               </h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Businesses come to Karol Digital when they want a site that
+                looks professional, feels fast, and supports better enquiries.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -239,14 +361,14 @@ export default function PricingPage() {
                     "A true partner in growth. Karol Digital understands the balance between aesthetics and high-converting marketing.",
                 },
                 {
-                  name: "1st CallUK Immigration",
+                  name: "1st Call UK Immigration",
                   link: "[1stcalluk.com](https://www.1stcalluk.com/)",
                   logo: "/logos/1st-calluk-immigration.webp",
                   quote:
                     "Karol Digital transformed our online presence, making it easier than ever for clients to reach us.",
                 },
                 {
-                  name: "1st CallUK Financial",
+                  name: "1st Call UK Financial",
                   link: "[1stcalluk.financial](https://www.1stcalluk.financial/)",
                   logo: "/logos/1st-call-financial.webp",
                   quote:
@@ -277,14 +399,16 @@ export default function PricingPage() {
                       priority
                     />
                   </div>
+
                   <div className="flex-grow">
                     <div className="text-yellow-400 text-3xl mb-4 opacity-50">
-                      “
+                      "
                     </div>
                     <p className="italic text-gray-100 mb-6 leading-relaxed text-sm">
                       "{t.quote}"
                     </p>
                   </div>
+
                   <div className="pt-4 border-t border-white/10 mt-auto">
                     <p className="font-bold text-white text-sm">{t.name}</p>
                   </div>
@@ -304,9 +428,14 @@ export default function PricingPage() {
 
         {/* MAINTENANCE PACKAGES */}
         <section className="py-24 px-6 md:px-12 bg-gray-50">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] text-center mb-6">
             Website Maintenance
           </h2>
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
+            Ongoing support options for businesses that want peace of mind
+            without hiring a full-time developer.
+          </p>
+
           <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
             <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] text-center">
               <p className="text-2xl font-bold mb-4">Basic</p>
@@ -315,29 +444,37 @@ export default function PricingPage() {
                 <li>Minor edits</li>
                 <li>Dependency updates</li>
               </ul>
-              <p className="font-bold text-xl mb-6">£150–£250/mo</p>
+              <p className="font-bold text-xl mb-2">£150-£250/mo</p>
+              <p className="text-sm text-gray-500 mb-6">
+                Best for stable brochure-style websites
+              </p>
               <Link
                 href="/contact"
                 className="block bg-[#102f35] text-white py-3 rounded-full"
               >
-                Select Basic
+                Ask About Basic
               </Link>
             </div>
+
             <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#411b3f] text-center">
               <p className="text-2xl font-bold mb-4">Premium</p>
               <ul className="text-gray-600 space-y-2 mb-6">
                 <li>Everything in Basic</li>
-                <li>New Feature Dev</li>
+                <li>New Feature Development</li>
                 <li>Priority Response</li>
               </ul>
-              <p className="font-bold text-xl mb-6">£250–£350/mo</p>
+              <p className="font-bold text-xl mb-2">£250-£350/mo</p>
+              <p className="text-sm text-gray-500 mb-6">
+                Best for growing websites that need regular updates
+              </p>
               <Link
                 href="/contact"
                 className="block bg-[#411b3f] text-white py-3 rounded-full"
               >
-                Select Premium
+                Ask About Premium
               </Link>
             </div>
+
             <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] text-center">
               <p className="text-2xl font-bold mb-4">Custom</p>
               <ul className="text-gray-600 space-y-2 mb-6">
@@ -345,7 +482,10 @@ export default function PricingPage() {
                 <li>Feature development</li>
                 <li>Troubleshooting</li>
               </ul>
-              <p className="font-bold text-xl mb-6">From £150/update</p>
+              <p className="font-bold text-xl mb-2">From £150/update</p>
+              <p className="text-sm text-gray-500 mb-6">
+                Best for one-off work without a monthly plan
+              </p>
               <Link
                 href="/contact"
                 className="block bg-[#102f35] text-white py-3 rounded-full"
@@ -364,28 +504,29 @@ export default function PricingPage() {
                 📱 Marketing &amp; Growth Retainers
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Scalable growth strategies designed to keep your business ahead
-                of the competition.
+                Flexible ongoing growth support for businesses that want help
+                generating traffic, leads, and stronger brand visibility.
               </p>
             </div>
+
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   title: "Paid Advertising",
-                  desc: "High-converting Google Ads and Social Media campaigns engineered to capture qualified leads.",
-                  price: "Starts at £200/mo",
+                  desc: "Google Ads and paid social campaigns designed to capture qualified traffic without wasting budget.",
+                  price: "From £200/mo",
                   icon: "🚀",
                 },
                 {
                   title: "SEO & Content",
-                  desc: "Continuous search engine optimisation, technical audits, and content planning to boost organic visibility.",
-                  price: "Starts at £400/mo",
+                  desc: "Technical SEO, content planning, and ongoing optimisation to improve organic visibility over time.",
+                  price: "From £400/mo",
                   icon: "📈",
                 },
                 {
                   title: "Brand Identity",
-                  desc: "Ongoing brand support — visual updates, asset creation, and marketing templates to keep your brand consistent.",
-                  price: "Custom retainer",
+                  desc: "Ongoing brand support including design updates, assets, and templates to keep your business looking consistent.",
+                  price: "Custom Retainer",
                   icon: "🎨",
                 },
               ].map((item, i) => (
@@ -396,12 +537,15 @@ export default function PricingPage() {
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 text-2xl">
                     {item.icon}
                   </div>
+
                   <h3 className="font-bold text-[#102f35] text-xl mb-3">
                     {item.title}
                   </h3>
+
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed">
                     {item.desc}
                   </p>
+
                   <div className="pt-6 border-t border-gray-50">
                     <p className="text-[#102f35] font-bold">{item.price}</p>
                   </div>
@@ -411,12 +555,13 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* DELIVERABLES & ADD-ONS */}
+        {/* DELIVERABLES */}
         <section className="py-24 px-6 md:px-12 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-extrabold text-[#102f35] text-center mb-12">
               What’s Included in Every Project
             </h2>
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-2xl border-l-4 border-[#102f35] shadow-md">
                 <h3 className="font-bold text-[#102f35] text-xl mb-6">
@@ -424,52 +569,53 @@ export default function PricingPage() {
                 </h3>
                 <ul className="space-y-4 text-gray-700">
                   <li className="flex items-center gap-3">
-                    ✨{" "}
+                    ✨
                     <span>
-                      <strong>Bespoke Design:</strong> Tailored exclusively to
-                      your brand identity.
+                      <strong>Bespoke Design:</strong> Tailored to your brand,
+                      audience, and business goals.
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
-                    📱{" "}
+                    📱
                     <span>
                       <strong>Mobile-First:</strong> Fully responsive across all
-                      devices.
+                      key devices.
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
-                    🔒{" "}
+                    🔒
                     <span>
-                      <strong>Secure Deployment:</strong> Enterprise-grade
-                      hosting and deployment.
+                      <strong>Secure Deployment:</strong> Professional hosting
+                      and deployment setup.
                     </span>
                   </li>
                 </ul>
               </div>
+
               <div className="bg-white p-8 rounded-2xl border-l-4 border-[#411b3f] shadow-md">
                 <h3 className="font-bold text-[#411b3f] text-xl mb-6">
                   Performance &amp; Support
                 </h3>
                 <ul className="space-y-4 text-gray-700">
                   <li className="flex items-center gap-3">
-                    ⚡{" "}
+                    ⚡
                     <span>
                       <strong>Speed Optimisation:</strong> Built for strong
-                      Google PageSpeed and Core Web Vitals.
+                      loading performance and Core Web Vitals.
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
-                    🛠{" "}
+                    🛠
                     <span>
-                      <strong>14-Day Hyper-Support:</strong> Direct access for
-                      post-launch questions.
+                      <strong>14-Day Post-Launch Support:</strong> Direct help
+                      after launch for fixes and questions.
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
-                    📚{" "}
+                    📚
                     <span>
-                      <strong>CMS Training:</strong> Empowering you to manage
-                      your own content.
+                      <strong>CMS Training:</strong> So you can update content
+                      yourself with confidence.
                     </span>
                   </li>
                 </ul>
@@ -483,26 +629,31 @@ export default function PricingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-                🛠 Our Strategic Process
+                🛠 How It Works
               </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                A clear, low-friction process designed to help you move forward
+                without confusion or pressure.
+              </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {[
                 {
                   title: "Discovery Call",
-                  desc: "A deep dive into your business goals, target audience, and unique requirements.",
+                  desc: "We discuss your business, budget, current site, and what success looks like.",
                 },
                 {
-                  title: "Strategic Proposal",
-                  desc: "We present a tailored roadmap aligned with your budget, timeline, and desired outcomes.",
+                  title: "Best-Fit Recommendation",
+                  desc: "You get a clear recommendation based on what you actually need, not the most expensive option.",
                 },
                 {
                   title: "Build & Refine",
-                  desc: "Bespoke development with regular checkpoints to keep the project aligned and transparent.",
+                  desc: "We build the project with clear checkpoints, feedback rounds, and transparent communication.",
                 },
                 {
-                  title: "Launch & Scale",
-                  desc: "Rigorous testing followed by a smooth deployment and long-term optimisation strategy.",
+                  title: "Launch & Improve",
+                  desc: "Once live, we support the rollout and help you improve performance over time if needed.",
                 },
               ].map((step, i) => (
                 <div
@@ -512,23 +663,29 @@ export default function PricingPage() {
                   <div className="text-[#411b3f]/20 font-black text-6xl mb-4 group-hover:text-[#411b3f]/10 transition-colors">
                     0{i + 1}
                   </div>
+
                   <h3 className="font-bold text-[#102f35] text-xl mb-3">
                     {step.title}
                   </h3>
+
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
               ))}
             </div>
+
             <div className="text-center bg-[#102f35] p-12 rounded-3xl text-white">
               <h3 className="text-2xl font-bold mb-4">
-                Ready to start your digital transformation?
+                Ready to take the next step?
               </h3>
-              <p className="text-gray-200 mb-6">
-                Share a few details about your project, and we&apos;ll respond
-                with a tailored plan and clear pricing.
+
+              <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
+                Share a few details about your business and budget, and you’ll
+                get a practical recommendation with clear pricing and no
+                pressure.
               </p>
+
               <Link
                 href="/contact"
                 className="inline-block bg-yellow-400 text-[#102f35] px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition shadow-lg"
@@ -545,25 +702,27 @@ export default function PricingPage() {
             <h2 className="text-4xl font-extrabold text-[#102f35] text-center mb-12">
               ❓ FAQ
             </h2>
+
             <div className="space-y-6">
               {[
                 {
-                  q: "How long does a project take?",
-                  a: "Most projects take between 5 and 25 days depending on scope, integrations, and feedback speed.",
+                  q: "Do I need to choose a package before contacting you?",
+                  a: "No. If you're unsure, just send your goals and approximate budget. We’ll recommend the most suitable option, even if that means starting smaller.",
                 },
                 {
-                  q: "Do you manage hosting?",
-                  a: "Yes. We handle deployment on enterprise platforms like Vercel or AWS so everything runs smoothly.",
+                  q: "Can I start with a smaller package and upgrade later?",
+                  a: "Yes. That’s exactly how many businesses begin. We can start with a leaner site or audit, then expand once you’re ready.",
+                },
+                {
+                  q: "How long does a project take?",
+                  a: "Most projects take between 5 and 25 days depending on scope, feedback speed, and whether extra integrations are needed.",
                 },
                 {
                   q: "Can I update content myself?",
                   a: "Yes. We provide a user-friendly CMS setup and training so you can manage content without relying on a developer.",
                 },
               ].map((item, i) => (
-                <details
-                  key={i}
-                  className="border rounded-lg p-6 bg-white"
-                >
+                <details key={i} className="border rounded-lg p-6 bg-white">
                   <summary className="font-semibold cursor-pointer">
                     {item.q}
                   </summary>

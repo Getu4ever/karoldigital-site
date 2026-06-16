@@ -2,74 +2,100 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Affordable Web Design Pricing & Packages UK | Karol Digital",
+  title: "Website Pricing & Affordable Web Design Packages UK | Karol Digital",
   description:
-    "Transparent pricing for UK small businesses. From Starter websites to Premium digital systems and Enterprise eCommerce solutions.",
+    "Flexible website pricing for UK businesses. Start with a Website Growth Audit or Starter Lite package, then scale into Growth, Premium, or Enterprise solutions when you're ready.",
   alternates: {
-    canonical: "https://www.karoldigital.co.uk/pricing",
+    canonical: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
   },
   openGraph: {
-    title: "Web Design Packages & Pricing | Karol Digital",
+    title: "Flexible Website Pricing & Packages | Karol Digital",
     description:
-      "Professional web design packages starting from £900. Compare Starter, Growth, Premium, and Enterprise eCommerce solutions.",
+      "Affordable website pricing for UK businesses, including Starter Lite, Starter, Growth, Premium, Enterprise, and Website Growth Audits.",
     images: [
       {
-        url: "https://www.karoldigital.co.uk/hero-page-banner.jpg",
+        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/hero-page-banner.jpg)",
         width: 1200,
         height: 630,
-        alt: "Karol Digital Web Design Pricing",
+        alt: "Karol Digital Website Pricing",
       },
     ],
   },
 };
 
 const pricingServiceSchema = {
-  "@context": "https://schema.org",
+  "@context": "[schema.org](https://schema.org)",
   "@type": "Product",
-  "name": "Web Design & Digital Solutions",
-  "description":
-    "Professional web design and digital solutions for UK businesses, including Starter, Growth, Premium, and Enterprise eCommerce packages.",
-  "brand": {
+  name: "Website Design & Digital Growth Services",
+  description:
+    "Flexible web design and digital growth services for UK businesses, including Website Growth Audits, Starter Lite, Starter, Growth, Premium, and Enterprise solutions.",
+  brand: {
     "@type": "Brand",
-    "name": "Karol Digital"
+    name: "Karol Digital",
   },
-  "offers": {
+  offers: {
     "@type": "AggregateOffer",
-    "priceCurrency": "GBP",
-    "lowPrice": "900",
-    "highPrice": "6500",
-    "offerCount": "4",
-    "offers": [
+    priceCurrency: "GBP",
+    lowPrice: "95",
+    highPrice: "6000",
+    offerCount: "6",
+    offers: [
       {
         "@type": "Offer",
-        "name": "Starter Web Design Package",
-        "price": "900",
-        "priceCurrency": "GBP",
-        "description": "Professional 5–7 page website for startups and small businesses with responsive design, basic SEO setup, and contact form."
+        name: "Website Growth Audit",
+        price: "95",
+        priceCurrency: "GBP",
+        description:
+          "A practical review of your website covering messaging, structure, speed, SEO, and lead generation opportunities.",
+        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
       },
       {
         "@type": "Offer",
-        "name": "Growth Web Design Package",
-        "price": "1800",
-        "priceCurrency": "GBP",
-        "description": "Conversion-focused website with UX optimisation, SEO setup, performance improvements, analytics, and automation."
+        name: "Starter Lite Website Package",
+        price: "450",
+        priceCurrency: "GBP",
+        description:
+          "A lean 1-3 page professional website for new businesses or simple service offers, including mobile responsiveness, contact form, and basic SEO setup.",
+        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
       },
       {
         "@type": "Offer",
-        "name": "Premium Web Design Package",
-        "price": "3500",
-        "priceCurrency": "GBP",
-        "description": "High-end digital system including branding, custom pages, advanced development, copywriting, and automation systems."
+        name: "Starter Website Package",
+        price: "795",
+        priceCurrency: "GBP",
+        description:
+          "A professional 5-7 page website for local businesses and growing service brands, including CMS setup, responsive design, and core SEO setup.",
+        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
       },
       {
         "@type": "Offer",
-        "name": "Enterprise eCommerce Solution",
-        "price": "6500",
-        "priceCurrency": "GBP",
-        "description": "Fully custom eCommerce platforms with product management, payment gateways, CRM systems, advanced security, and scalability."
-      }
-    ]
-  }
+        name: "Growth Website Package",
+        price: "1400",
+        priceCurrency: "GBP",
+        description:
+          "A conversion-focused website package for businesses that need more enquiries, including UX improvements, on-page SEO, performance tuning, and lead capture systems.",
+        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+      },
+      {
+        "@type": "Offer",
+        name: "Premium Website Package",
+        price: "3200",
+        priceCurrency: "GBP",
+        description:
+          "A complete digital growth system with branding, custom pages, advanced development, and conversion strategy for established brands ready to scale.",
+        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+      },
+      {
+        "@type": "Offer",
+        name: "Enterprise Website & Ecommerce Solution",
+        price: "6000",
+        priceCurrency: "GBP",
+        description:
+          "Custom enterprise websites and ecommerce systems with advanced integrations, CRM connectivity, payment systems, and high-level security.",
+        url: "[karoldigital.co.uk](https://www.karoldigital.co.uk/pricing)",
+      },
+    ],
+  },
 };
 
 export default function PricingLayout({
