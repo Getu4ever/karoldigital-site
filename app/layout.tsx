@@ -15,17 +15,18 @@ export const viewport: Viewport = {
 
 // Refined Metadata: Optimized to eliminate keyword conflict with child routes
 export const metadata: Metadata = {
+  // Use the non-www version as the base
+  metadataBase: new URL("https://karoldigital.co.uk"), 
   title: "Karol Digital — High-Performance Web Design & Branding",
   description:
     "We build conversion-focused digital infrastructure and professional identities that help UK businesses outrank the competition. Get a free quote today!",
-  metadataBase: new URL("https://www.karoldigital.co.uk"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://www.karoldigital.co.uk",
+    url: "https://karoldigital.co.uk", // Match the canonical
     siteName: "Karol Digital",
     images: [
       {
@@ -46,9 +47,9 @@ const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Karol Digital",
-  url: "https://www.karoldigital.co.uk",
-  image: "https://www.karoldigital.co.uk/seo-cover.jpg",
-  logo: "https://www.karoldigital.co.uk/logo.png",
+  url: "https://karoldigital.co.uk", // Changed from www
+  image: "https://karoldigital.co.uk/seo-cover.jpg",
+  logo: "https://karoldigital.co.uk/logo.png",
   priceRange: "££",
   telephone: "07565472445", // Matches your exact commercial phone registry entry
   address: {
@@ -81,7 +82,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Karol Digital",
-  url: "https://www.karoldigital.co.uk",
+  url: "https://karoldigital.co.uk", // Changed from www
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
