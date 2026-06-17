@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  Home,
   User,
   Layers,
   FileText,
@@ -18,6 +17,7 @@ import {
   Utensils,
   Landmark,
   ArrowRight,
+  Home,
 } from "lucide-react";
 
 export default function Header() {
@@ -59,7 +59,6 @@ export default function Header() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo.WebP"
@@ -74,7 +73,6 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           {menuItems.map((item) => (
             <div
@@ -107,7 +105,6 @@ export default function Header() {
                 </Link>
               )}
 
-              {/* Desktop Dropdown */}
               {item.dropdown && (
                 <AnimatePresence>
                   {servicesOpen && (
@@ -171,7 +168,6 @@ export default function Header() {
             </div>
           ))}
 
-          {/* Desktop CTA */}
           <Link
             href="/contact"
             className="bg-yellow-400 text-[#102f35] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
@@ -180,7 +176,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col items-center space-y-1.5"
@@ -204,11 +199,21 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div className="md:hidden absolute left-3 right-3 top-[100px] rounded-2xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-white p-6 shadow-2xl border border-white/10">
             <nav className="flex flex-col space-y-4">
+              <Link
+                href="/"
+                onClick={() => setOpen(false)}
+                className={`flex items-center gap-3 text-lg font-semibold ${
+                  pathname === "/" ? "text-yellow-400" : "text-white"
+                }`}
+              >
+                <Home size={18} />
+                Home
+              </Link>
+
               {menuItems.map((item) => (
                 <div key={item.href}>
                   {item.dropdown ? (
