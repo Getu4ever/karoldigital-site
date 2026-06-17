@@ -23,7 +23,7 @@ export default function DigitalMarketingPage() {
             alt="Digital Marketing Services UK"
             fill
             priority
-            className="object-cover brightness-[0.45]"
+            className="object-cover brightness-[0.5]"
           />
 
           <div className="absolute inset-0 bg-black/40" />

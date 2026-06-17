@@ -58,7 +58,7 @@ export default function ServicesPage() {
             alt="Karol Digital Core Capabilities"
             fill
             priority
-            className="object-cover brightness-[0.45]"
+            className="object-cover brightness-[0.5]"
           />
           <div className="absolute inset-0 bg-black/40" />
 

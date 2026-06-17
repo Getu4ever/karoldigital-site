@@ -54,7 +54,7 @@ export default function BuildersWebDesign() {
             alt="Custom Web Design and Local SEO Architecture for Builders and Contractors UK"
             fill
             priority
-            className="object-cover brightness-[0.3]"
+            className="object-cover brightness-[0.4]"
           />
           
           {/* Main Hero Content Box Container - Unified Max Width Footprint */}

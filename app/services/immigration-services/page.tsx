@@ -54,7 +54,7 @@ export default function ImmigrationWebDesign() {
             alt="Premium web design and SEO for immigration law firms"
             fill
             priority
-            className="object-cover brightness-[0.3]"
+            className="object-cover brightness-[0.5]"
           />
 
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">

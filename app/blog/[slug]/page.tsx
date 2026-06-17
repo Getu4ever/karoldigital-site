@@ -66,7 +66,7 @@ console.log(JSON.stringify(post.body, null, 2));
             alt={post.title}
             fill
             priority
-            className="object-cover brightness-[0.40]"
+            className="object-cover brightness-[0.65]"
           />
           <div className="absolute inset-0 bg-black/40" />
 

@@ -21,7 +21,7 @@ export default function About() {
             alt="About Karol Digital"
             fill
             priority
-            className="object-cover brightness-[0.45]"
+            className="object-cover brightness-[0.65]"
           />
           <div className="absolute inset-0 bg-black/40" />
 

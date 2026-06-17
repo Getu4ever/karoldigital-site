@@ -48,7 +48,7 @@ export default async function NewsPage() {
           alt="Latest News and Updates"
           fill
           priority
-          className="object-cover brightness-[0.45]"
+          className="object-cover brightness-[0.65]"
         />
 
         {/* Dark overlay for readability */}

@@ -34,7 +34,7 @@ export default async function BlogIndexPage() {
             alt="Karol Digital Blog"
             fill
             priority
-            className="object-cover brightness-[0.45]"
+            className="object-cover brightness-[0.65]"
           />
           <div className="absolute inset-0 bg-black/40" />
 

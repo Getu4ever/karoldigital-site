@@ -61,7 +61,7 @@ export default function FinanceWebDesign() {
             alt="Financial Services Corporate Website Design and Architecture"
             fill
             priority
-            className="object-cover brightness-[0.3]"
+            className="object-cover brightness-[0.5]"
           />
           
           {/* Main Hero Content Box Container */}

@@ -54,7 +54,7 @@ export default function CateringWebDesign() {
             alt="Premium Web Design for Catering and Hospitality Businesses"
             fill
             priority
-            className="object-cover brightness-[0.35]"
+            className="object-cover brightness-[0.5]"
           />
           
           {/* Main Hero Content Box Container - Reduced Max Width to 2xl */}
