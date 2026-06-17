@@ -23,6 +23,7 @@ import {
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -32,11 +33,32 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const closeMobileMenu = () => {
+    setOpen(false);
+    setMobileServicesOpen(false);
+  };
+
   const serviceItems = [
-    { href: "/services/immigration-services", label: "Immigration Firms", icon: <Scale size={16} /> },
-    { href: "/services/building-services", label: "Building & Trades", icon: <HardHat size={16} /> },
-    { href: "/services/catering-services", label: "Catering & Food", icon: <Utensils size={16} /> },
-    { href: "/services/financial-services", label: "Financial Services", icon: <Landmark size={16} /> },
+    {
+      href: "/services/immigration-services",
+      label: "Immigration Firms",
+      icon: <Scale size={16} />,
+    },
+    {
+      href: "/services/building-services",
+      label: "Building & Trades",
+      icon: <HardHat size={16} />,
+    },
+    {
+      href: "/services/catering-services",
+      label: "Catering & Food",
+      icon: <Utensils size={16} />,
+    },
+    {
+      href: "/services/financial-services",
+      label: "Financial Services",
+      icon: <Landmark size={16} />,
+    },
   ];
 
   const menuItems = [
@@ -177,7 +199,10 @@ export default function Header() {
         </div>
 
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => {
+            setOpen(!open);
+            if (open) setMobileServicesOpen(false);
+          }}
           className="md:hidden flex flex-col items-center space-y-1.5"
           aria-label="Toggle Menu"
         >
@@ -201,11 +226,17 @@ export default function Header() {
 
       <AnimatePresence>
         {open && (
-          <motion.div className="md:hidden absolute left-3 right-3 top-[100px] rounded-2xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-white p-6 shadow-2xl border border-white/10">
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.25 }}
+            className="md:hidden absolute left-3 right-3 top-[100px] rounded-2xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-white p-6 shadow-2xl border border-white/10"
+          >
             <nav className="flex flex-col space-y-4">
               <Link
                 href="/"
-                onClick={() => setOpen(false)}
+                onClick={closeMobileMenu}
                 className={`flex items-center gap-3 text-lg font-semibold ${
                   pathname === "/" ? "text-yellow-400" : "text-white"
                 }`}
@@ -217,54 +248,75 @@ export default function Header() {
               {menuItems.map((item) => (
                 <div key={item.href}>
                   {item.dropdown ? (
-                    <div className="flex items-center gap-3 text-lg font-semibold text-gray-200">
-                      {item.label}
-                    </div>
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                        className={`flex w-full items-center justify-between text-lg font-semibold transition ${
+                          mobileServicesOpen ? "text-yellow-400" : "text-gray-200"
+                        }`}
+                      >
+                        <span className="flex items-center gap-3">
+                          {item.icon}
+                          {item.label}
+                        </span>
+                        <ChevronDown
+                          size={18}
+                          className={`transition-transform ${
+                            mobileServicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      <AnimatePresence>
+                        {mobileServicesOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="mt-3 ml-4 flex flex-col space-y-3 border-l border-white/20 pl-4">
+                              {item.dropdown.map((sub) => (
+                                <Link
+                                  key={sub.href}
+                                  href={sub.href}
+                                  onClick={closeMobileMenu}
+                                  className={`flex items-center gap-2 text-sm ${
+                                    pathname === sub.href
+                                      ? "text-yellow-400 font-medium"
+                                      : "text-gray-300 hover:text-yellow-400"
+                                  }`}
+                                >
+                                  <span className="text-yellow-400">{sub.icon}</span>
+                                  {sub.label}
+                                </Link>
+                              ))}
+
+                              <Link
+                                href="/services"
+                                onClick={closeMobileMenu}
+                                className="pt-1 text-sm font-medium text-yellow-400 underline decoration-dotted underline-offset-4"
+                              >
+                                All Services Overview
+                              </Link>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
                   ) : (
                     <Link
                       href={item.href}
-                      onClick={() => setOpen(false)}
+                      onClick={closeMobileMenu}
                       className={`flex items-center gap-3 text-lg font-semibold ${
                         pathname === item.href ? "text-yellow-400" : "text-white"
                       }`}
                     >
+                      {item.icon}
                       {item.label}
                     </Link>
-                  )}
-
-                  {item.dropdown && (
-                    <div className="mt-2 ml-4 flex flex-col space-y-3 border-l border-white/20 pl-4">
-                      <Link
-                        href="/services"
-                        onClick={() => setOpen(false)}
-                        className="text-sm font-medium text-yellow-400 underline decoration-dotted underline-offset-4"
-                      >
-                        All Services Overview
-                      </Link>
-
-                      <Link
-                        href="/pricing"
-                        onClick={() => setOpen(false)}
-                        className="text-sm font-medium text-yellow-400 underline decoration-dotted underline-offset-4"
-                      >
-                        View Pricing
-                      </Link>
-
-                      {item.dropdown.map((sub) => (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          onClick={() => setOpen(false)}
-                          className={`text-sm ${
-                            pathname === sub.href
-                              ? "text-yellow-400 font-medium"
-                              : "text-gray-300 hover:text-yellow-400"
-                          }`}
-                        >
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
                   )}
                 </div>
               ))}
@@ -272,7 +324,7 @@ export default function Header() {
               <div className="flex flex-col gap-2 pt-2 border-t border-white/10">
                 <Link
                   href="/contact"
-                  onClick={() => setOpen(false)}
+                  onClick={closeMobileMenu}
                   className="bg-white text-[#102f35] py-3 rounded-full text-center font-bold shadow-md active:scale-95 transition"
                 >
                   Get a Recommendation
