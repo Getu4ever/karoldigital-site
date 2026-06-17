@@ -62,8 +62,8 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/karol_digital_logo.WebP"
-            alt="company Logo"
+            src="/logo.WebP"
+            alt="Karol Digital Logo"
             width={100}
             height={60}
             priority={true}

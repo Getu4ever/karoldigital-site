@@ -71,11 +71,11 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/hero-cover.WebP"
+            src="/home-banner03.png"
             alt="Karol Digital - High-Performance Web Design & Branding"
             fill
             priority
-            className="object-cover brightness-[0.40]"
+            className="object-cover brightness-[0.90]"
             sizes="100vw"
             quality={82}
             style={{ objectPosition: "center" }}

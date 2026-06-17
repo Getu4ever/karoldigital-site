@@ -9,7 +9,6 @@ export default function About() {
   return (
     <FadeIn>
       <main className="min-h-screen bg-white text-gray-900">
-
         {/* === HERO SECTION === */}
         <motion.section
           className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4"
@@ -33,8 +32,8 @@ export default function About() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Building affordable, creative, and mobile-friendly websites that help
-              small businesses grow and stand out online.
+              We build affordable, high-performing websites for UK businesses that
+              want to look professional, earn trust, and generate more enquiries.
             </p>
           </div>
         </motion.section>
@@ -43,30 +42,37 @@ export default function About() {
         <FadeIn>
           <section className="py-20 px-6 md:px-12 bg-white">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
               {/* Text */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#411b3f]">
                   Our <span className="text-[#102f35]">Story</span>
                 </h2>
 
-                {/* Fixed: Explicitly matches H1 text in the first sentence for the crawler */}
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Everything you need to know <strong>About Karol Digital</strong> begins with our core mission —
-                  to make professional web design and digital marketing accessible
-                  to every small business. We believe every brand deserves a clean,
-                  fast, and creative online presence that works as hard as they do. Our approach removes the barriers of high agency costs while delivering exceptional website performance.
+                  <strong>Karol Digital</strong> was built around a simple idea:
+                  small businesses should be able to access professional web design
+                  without paying inflated agency prices or getting lost in technical
+                  jargon.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  From local cafés and tradespeople to startups and solo
-                  entrepreneurs, we help businesses turn their ideas into
-                  high-performing websites designed to engage customers and
-                  drive real results. By working closely with business owners, we ensure that every design strategy is specifically tailored to reach local customers across the UK effectively.
+                  Too many businesses are held back by outdated websites, confusing
+                  messaging, or digital setups that never really supported growth.
+                  We set out to change that by creating websites that are modern,
+                  fast, clear, and built around real business goals.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  We understand that navigating the digital world can feel overwhelming for growing companies. That is why we manage the entire technical process seamlessly, from initial mockups and user experience layout mapping to robust deployment and search visibility optimization.
+                  From local trades and independent food businesses to growing
+                  service brands and specialist firms, we help businesses present
+                  themselves properly online and turn more visitors into genuine
+                  enquiries.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  We believe good web design should not just look nice - it should
+                  make your business easier to trust, easier to understand, and
+                  easier to choose.
                 </p>
 
                 <Link
@@ -81,14 +87,13 @@ export default function About() {
               <div className="flex justify-center">
                 <Image
                   src="/karol-digital-about.jpg"
-                  alt="Karol Digital Team"
+                  alt="Karol Digital team and brand story"
                   width={500}
                   height={400}
                   loading="lazy"
                   className="rounded-2xl shadow-lg w-full max-w-md object-cover"
                 />
               </div>
-
             </div>
           </section>
         </FadeIn>
@@ -97,12 +102,11 @@ export default function About() {
         <FadeIn>
           <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
               {/* Image */}
               <div className="flex justify-center">
                 <Image
                   src="/karol-digital-about-02.jpg"
-                  alt="Karol Digital Services"
+                  alt="Karol Digital web design services"
                   width={550}
                   height={420}
                   loading="lazy"
@@ -117,21 +121,36 @@ export default function About() {
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  We design, build, and manage beautiful, responsive websites that
-                  perform flawlessly across all mobile, tablet, and desktop devices. From content creation and local SEO setup to
-                  ongoing technical maintenance, we provide everything your business needs to
-                  succeed in competitive online markets. Our digital strategies focus heavily on user engagement and conversion rate optimization.
+                  We design, build, and support websites that help businesses
+                  look credible and perform better online. That means clean design,
+                  strong mobile usability, fast loading times, and clear page
+                  structures that guide people toward making contact.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Whether you require an efficient single-page landing site or a comprehensive service portal, we scale our frameworks to match your professional operational requirements, bringing robust structure to your brand identity.
+                  Whether you need a simple launch website, a stronger service-led
+                  site, or a more advanced platform with custom functionality, we
+                  shape the project around what your business actually needs - not
+                  a one-size-fits-all template.
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-                  <li>✔ <strong>Affordable mobile-friendly web design:</strong> Perfectly adjusted layouts for seamless scrolling on any smartphone screen size.</li>
-                  <li>✔ <strong>WordPress or fully custom-built sites:</strong> Content systems tailored to your technical specifications and business workflows.</li>
-                  <li>✔ <strong>Social media branding & setup:</strong> Cohesive professional layouts for Facebook, Instagram, and LinkedIn channels.</li>
-                  <li>✔ <strong>Digital marketing & local SEO support:</strong> Strategic structural optimizations to rank effectively for local commercial intent.</li>
+                  <li>
+                    ✔ <strong>Affordable mobile-friendly web design:</strong> built
+                    to work smoothly across phones, tablets, and desktops.
+                  </li>
+                  <li>
+                    ✔ <strong>WordPress or fully custom-built sites:</strong> based
+                    on your goals, budget, and how much flexibility you need.
+                  </li>
+                  <li>
+                    ✔ <strong>Branding and social media support:</strong> helping
+                    your business look more consistent and professional online.
+                  </li>
+                  <li>
+                    ✔ <strong>SEO and local visibility support:</strong> so the
+                    right people can actually find you when they search.
+                  </li>
                 </ul>
 
                 <Link
@@ -141,7 +160,6 @@ export default function About() {
                   Explore Our Services
                 </Link>
               </div>
-
             </div>
           </section>
         </FadeIn>
@@ -150,7 +168,6 @@ export default function About() {
         <FadeIn>
           <section className="py-20 px-6 md:px-12 bg-white">
             <div className="max-w-6xl mx-auto text-center">
-
               <h2 className="text-3xl md:text-4xl font-bold mb-10 text-[#411b3f]">
                 Our <span className="text-[#102f35]">Values</span>
               </h2>
@@ -159,17 +176,17 @@ export default function About() {
                 {[
                   {
                     title: "Creativity",
-                    desc: "We bring strategic thinking and artistic design together to create memorable digital experiences. Every project begins with fresh, custom layouts that reject cookie-cutter approaches in order to let your business shine.",
+                    desc: "Every business has its own strengths, personality, and audience. We create websites that feel tailored to your brand rather than copied from a template.",
                     icon: "🎨",
                   },
                   {
                     title: "Transparency",
-                    desc: "Clear pricing, honest advice, and real support — no hidden fees, no confusing technical jargon. We treat your digital platform as our priority, keeping you closely informed at every stage of development.",
+                    desc: "We believe in honest advice, clear pricing, and straightforward communication. No inflated promises, no hidden extras, and no unnecessary complexity.",
                     icon: "🤝",
                   },
                   {
                     title: "Growth",
-                    desc: "We help your business grow through smart design choices and practical marketing strategies. Our ultimate measure of project success is the consistent volume of inquiries and sales generated by your live platform.",
+                    desc: "A website should help your business move forward. We focus on practical design decisions that improve trust, visibility, and the quality of the enquiries you receive.",
                     icon: "🚀",
                   },
                 ].map((value) => (
@@ -196,18 +213,18 @@ export default function About() {
               Ready to grow your business online?
             </h2>
             <p className="text-lg mb-8 text-gray-100 max-w-2xl mx-auto">
-              Let’s discuss your upcoming goals and build a distinct web presence that accurately reflects your
-              brand, captures search intent, and connects you directly with the right target audience.
+              If you need a website that looks professional, feels trustworthy,
+              and helps turn visitors into enquiries, we can help you take the
+              next step.
             </p>
             <Link
               href="/contact"
               className="inline-block bg-white text-[#102f35] hover:bg-[#411b3f] hover:text-white font-semibold px-8 py-3 rounded-full transition"
             >
-              Let’s Talk
+              Start Your Project
             </Link>
           </section>
         </FadeIn>
-
       </main>
     </FadeIn>
   );
