@@ -86,17 +86,17 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services/social-media" className="hover:text-yellow-400 transition">
-                  Social Media
+                  Social Media Services
                 </Link>
               </li>
               <li>
-                <Link href="/digital-marketing" className="hover:text-yellow-400 transition">
-                  Digital Marketing
+                <Link href="/services/digital-marketing" className="hover:text-yellow-400 transition">
+                  Digital Marketing Services
                 </Link>
               </li>
               <li>
                 <Link href="/news" className="hover:text-yellow-400 transition">
-                  Feed
+                  Activity Feed
                 </Link>
               </li>
             </ul>

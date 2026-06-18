@@ -65,7 +65,7 @@ export default function SocialMediaPage() {
 
           {/* IMAGE */}
           <Image
-            src="/service-socialmedia.jpg"
+            src="/social-media.webp"
             alt="Social Media Branding Illustration"
             width={900}
             height={600}
