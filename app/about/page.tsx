@@ -37,11 +37,27 @@ export default function About() {
             </p>
           </div>
         </motion.section>
-
+       {/* === INTRO / POSITIONING === */}
+<FadeIn>
+  <section className="pt-20 pb-12 px-6 md:px-12 bg-white">
+    <div className="max-w-5xl mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#411b3f]">
+        Built for Businesses That Want to Be Taken Seriously Online
+      </h2>
+      <p className="text-gray-700 leading-relaxed text-lg">
+        Your website is often the first impression people have of your
+        business. At Karol Digital, we believe that impression should feel
+        professional, clear, and reassuring from the very first click.
+        Everything we design is created to support real business goals —
+        not vanity metrics or unnecessary complexity.
+      </p>
+    </div>
+  </section>
+</FadeIn>
         {/* === SECTION 1: OUR STORY === */}
         <FadeIn>
           <section className="py-20 px-6 md:px-12 bg-white">
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
               {/* Text */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#411b3f]">
@@ -84,7 +100,7 @@ export default function About() {
               </div>
 
               {/* Image */}
-              <div className="flex justify-center">
+                  <div className="flex justify-center md:justify-end self-start">
                 <Image
                   src="/karol-digital-about.jpg"
                   alt="Karol Digital team and brand story"
@@ -100,8 +116,8 @@ export default function About() {
 
         {/* === SECTION 2: WHAT WE DO === */}
         <FadeIn>
-          <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
               {/* Image */}
               <div className="flex justify-center">
                 <Image
