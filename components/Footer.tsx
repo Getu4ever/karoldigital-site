@@ -160,40 +160,40 @@ export default function Footer() {
             </Link>
 
             <div className="flex flex-wrap gap-3">
-              {[
-                {
-                  icon: <FaFacebookF />,
-                  url: "[facebook.com](https://www.facebook.com/karolgraphics)",
-                  label: "Follow us on Facebook",
-                },
-                {
-                  icon: <FaInstagram />,
-                  url: "[instagram.com](https://www.instagram.com/karoldigital2025/)",
-                  label: "Follow us on Instagram",
-                },
-                {
-                  icon: <FaLinkedinIn />,
-                  url: "[linkedin.com](https://www.linkedin.com/in/karol-digital/)",
-                  label: "Follow us on LinkedIn",
-                },
-                {
-                  icon: <FaYoutube />,
-                  url: "[youtube.com](https://www.youtube.com/@KarolDigital-26)",
-                  label: "Subscribe to our YouTube channel",
-                },
-              ].map((social, i) => (
-                <a
-                  key={i}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-8 h-8 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-yellow-400 hover:text-[#102f35] rounded-lg transition-all duration-300 text-sm"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
+  {[
+    {
+      icon: <FaFacebookF />,
+      url: "https://www.facebook.com/karolgraphics",
+      label: "Follow us on Facebook",
+    },
+    {
+      icon: <FaInstagram />,
+      url: "https://www.instagram.com/karoldigital2025/",
+      label: "Follow us on Instagram",
+    },
+    {
+      icon: <FaLinkedinIn />,
+      url: "https://www.linkedin.com/in/karol-digital/",
+      label: "Follow us on LinkedIn",
+    },
+    {
+      icon: <FaYoutube />,
+      url: "https://www.youtube.com/@KarolDigital-26",
+      label: "Subscribe to our YouTube channel",
+    },
+  ].map((social, i) => (
+    <a
+      key={i}
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={social.label}
+      className="w-8 h-8 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-yellow-400 hover:text-[#102f35] rounded-lg transition-all duration-300 text-sm"
+    >
+      {social.icon}
+    </a>
+  ))}
+</div>
           </div>
         </div>
       </div>
