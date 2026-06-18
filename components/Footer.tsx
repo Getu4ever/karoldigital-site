@@ -85,18 +85,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-yellow-400 transition">
-                  Pricing
+                <Link href="/social-media" className="hover:text-yellow-400 transition">
+                  Social Media
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-yellow-400 transition">
-                  About
+                <Link href="/digital-marketing" className="hover:text-yellow-400 transition">
+                  Digital Marketing
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-yellow-400 transition">
-                  Contact
+                <Link href="/news" className="hover:text-yellow-400 transition">
+                  Feed
                 </Link>
               </li>
             </ul>
