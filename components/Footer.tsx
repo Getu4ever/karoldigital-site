@@ -85,7 +85,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/social-media" className="hover:text-yellow-400 transition">
+                <Link href="/services/social-media" className="hover:text-yellow-400 transition">
                   Social Media
                 </Link>
               </li>
