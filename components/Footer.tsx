@@ -156,7 +156,7 @@ export default function Footer() {
               href="/contact"
               className="inline-block bg-yellow-400 text-[#102f35] px-4 py-2 rounded-full text-xs font-bold leading-none hover:bg-yellow-300 transition shadow-md"
             >
-              Get a Recommendation
+              Request a Quote
             </Link>
 
             <div className="flex flex-wrap gap-3">
