@@ -223,7 +223,7 @@ export default function PricingPage() {
                 href="/contact"
                 className="inline-block border border-[#102f35] text-[#102f35] px-8 py-4 rounded-full font-bold hover:bg-[#102f35] hover:text-white transition"
               >
-                Get Advice
+                Get Evaluation
               </Link>
             </div>
           </div>
@@ -311,7 +311,7 @@ export default function PricingPage() {
                 "CRM Integration",
                 "High-Level Security",
               ]}
-              buttonText="Request a Quote"
+              buttonText="Ask for a Quote"
             />
           </div>
         </section>
