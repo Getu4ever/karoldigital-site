@@ -15,8 +15,8 @@ export default function Footer() {
   const industries = [
     { name: "Immigration Services", href: "/services/immigration-services" },
     { name: "Building & Construction", href: "/services/building-services" },
-    { name: "Catering & Food", href: "/services/catering-services" },
-    { name: "Financial Services", href: "/services/financial-services" },
+    { name: "Corporate & Event Catering", href: "/services/catering-services" },
+    { name: "Financial Firms", href: "/services/financial-services" },
   ];
 
   return (
@@ -81,12 +81,12 @@ export default function Footer() {
                   href="/services/web-design"
                   className="hover:text-yellow-400 transition"
                 >
-                  Web Design Services
+                  Web Development & Coding
                 </Link>
               </li>
               <li>
                 <Link href="/services/social-media" className="hover:text-yellow-400 transition">
-                  Social Media Services
+                  Social Media Management
                 </Link>
               </li>
               <li>
@@ -95,8 +95,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="hover:text-yellow-400 transition">
-                  Activity Feed
+                <Link href="/services/ai-logo-design" className="hover:text-yellow-400 transition">
+                  Ai Logo Design Support
                 </Link>
               </li>
             </ul>

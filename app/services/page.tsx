@@ -161,6 +161,11 @@ export default function ServicesPage() {
                       href: "/services/social-media",
                       icon: <Share2 size={18} />,
                     },
+                    {
+                      label: "AI Logo Creation",
+                      href: "/services/ai-logo-design",
+                      icon: <Share2 size={18} />,
+                    },
                   ].map((capability) => (
                     <Link
                       key={capability.href}
