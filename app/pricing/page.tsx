@@ -358,14 +358,14 @@ export default function PricingPage() {
                   link: "[sbc-marketing.co.uk](https://sbc-marketing.co.uk/)",
                   logo: "/logos/sbc.webp",
                   quote:
-                    "A true partner in growth. Karol Digital understands the balance between aesthetics and high-converting marketing.",
+                    "A true partner in growth that understands aesthetics and high-converting marketing.",
                 },
                 {
                   name: "1st Call UK Immigration",
                   link: "[1stcalluk.com](https://www.1stcalluk.com/)",
                   logo: "/logos/1st-calluk-immigration.webp",
                   quote:
-                    "Karol Digital transformed our online presence, making it easier than ever for clients to reach us.",
+                    "KD Transformed our online presence, making it easier than ever for clients to reach us.",
                 },
                 {
                   name: "1st Call UK Financial",
