@@ -223,7 +223,7 @@ export default function PricingPage() {
                 href="/contact"
                 className="inline-block border border-[#102f35] text-[#102f35] px-8 py-4 rounded-full font-bold hover:bg-[#102f35] hover:text-white transition"
               >
-                Get a Recommendation
+                Get Advice
               </Link>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6 max-w-7xl mx-auto">
             <PricingCard
               title="Starter Lite"
               desc="A lean professional site for businesses that need a credible online presence fast."
@@ -333,7 +333,7 @@ export default function PricingPage() {
               href="/contact"
               className="inline-block bg-[#102f35] text-white px-8 py-4 rounded-full font-bold hover:bg-[#411b3f] transition"
             >
-              Get a Recommendation
+              Get Expert Advice
             </Link>
           </div>
         </section>
