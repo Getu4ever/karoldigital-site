@@ -32,75 +32,80 @@ export default function About() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              We build affordable, high-performing websites for UK businesses that
-              want to look professional, earn trust, and generate more enquiries.
+              We build high-performance websites for UK service businesses that
+              want to look more credible, communicate more clearly, and generate
+              more qualified enquiries.
             </p>
           </div>
         </motion.section>
-       {/* === INTRO / POSITIONING === */}
-<FadeIn>
-  <section className="pt-20 pb-12 px-6 md:px-12 bg-white">
-    <div className="max-w-5xl mx-auto text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#411b3f]">
-        Built for Businesses That Want to Be Taken Seriously Online
-      </h2>
-      <p className="text-gray-700 leading-relaxed text-lg">
-        Your website is often the first impression people have of your
-        business. At Karol Digital, we believe that impression should feel
-        professional, clear, and reassuring from the very first click.
-        Everything we design is created to support real business goals —
-        not vanity metrics or unnecessary complexity.
-      </p>
-    </div>
-  </section>
-</FadeIn>
+
+        {/* === INTRO / POSITIONING === */}
+        <FadeIn>
+          <section className="pt-20 pb-12 px-6 md:px-12 bg-white">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#102f35]">
+                Built for Service Businesses That Need More Than Just a Better-Looking Website
+              </h2>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                Your website is often the first impression people have of your
+                business. At Karol Digital, we believe that impression should
+                build trust quickly, explain your value clearly, and make it
+                easier for the right people to get in touch. Everything we
+                create is designed around real business goals - not vanity, not
+                unnecessary complexity, and not design for its own sake.
+              </p>
+            </div>
+          </section>
+        </FadeIn>
+
         {/* === SECTION 1: OUR STORY === */}
         <FadeIn>
           <section className="py-20 px-6 md:px-12 bg-white">
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
               {/* Text */}
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#411b3f]">
-                  Our <span className="text-[#102f35]">Story</span>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#102f35]">
+                  Our <span className="text-[#411b3f]">Story</span>
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
                   <strong>Karol Digital</strong> was built around a simple idea:
-                  small businesses should be able to access professional web design
-                  without paying inflated agency prices or getting lost in technical
-                  jargon.
+                  UK service businesses should be able to access professional,
+                  high-performance web design without inflated agency pricing,
+                  vague strategy, or technical jargon that gets in the way.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Too many businesses are held back by outdated websites, confusing
-                  messaging, or digital setups that never really supported growth.
-                  We set out to change that by creating websites that are modern,
-                  fast, clear, and built around real business goals.
+                  Too many businesses are held back by slow websites, unclear
+                  messaging, weak positioning, or outdated design that quietly
+                  costs them trust and enquiries. We set out to change that by
+                  building websites that are modern, fast, clear, and focused on
+                  conversion from the start.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  From local trades and independent food businesses to growing
-                  service brands and specialist firms, we help businesses present
-                  themselves properly online and turn more visitors into genuine
-                  enquiries.
+                  From legal, financial, and immigration firms to construction,
+                  local trades, and other service-led businesses, we help
+                  companies present themselves more credibly online and turn
+                  more visitors into genuine enquiries.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  We believe good web design should not just look nice - it should
-                  make your business easier to trust, easier to understand, and
-                  easier to choose.
+                  We believe good web design should do more than look polished.
+                  It should make your business easier to trust, easier to
+                  understand, and easier to choose.
                 </p>
 
                 <Link
                   href="/contact"
                   className="inline-block bg-[#102f35] hover:bg-[#411b3f] text-white px-6 py-3 rounded-full font-semibold shadow-md transition"
                 >
-                  Get in Touch
+                  Book a Free Consultation
                 </Link>
               </div>
 
               {/* Image */}
-                  <div className="flex justify-center md:justify-end self-start">
+              <div className="flex justify-center md:justify-end self-start">
                 <Image
                   src="/karol-digital-about.jpg"
                   alt="Karol Digital team and brand story"
@@ -116,8 +121,8 @@ export default function About() {
 
         {/* === SECTION 2: WHAT WE DO === */}
         <FadeIn>
-<section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9]">
+            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
               {/* Image */}
               <div className="flex justify-center">
                 <Image
@@ -137,35 +142,37 @@ export default function About() {
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  We design, build, and support websites that help businesses
-                  look credible and perform better online. That means clean design,
-                  strong mobile usability, fast loading times, and clear page
-                  structures that guide people toward making contact.
+                  We design, build, and improve websites that help service
+                  businesses look credible and perform better online. That means
+                  clean design, strong mobile usability, fast loading times, and
+                  clear page structures that guide the right people toward
+                  making contact.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Whether you need a simple launch website, a stronger service-led
-                  site, or a more advanced platform with custom functionality, we
-                  shape the project around what your business actually needs - not
-                  a one-size-fits-all template.
+                  Whether you need a simpler launch website, a stronger
+                  service-led website, or a more advanced build with custom
+                  functionality, we shape the project around what your business
+                  actually needs - not a one-size-fits-all template.
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                   <li>
-                    ✔ <strong>Affordable mobile-friendly web design:</strong> built
-                    to work smoothly across phones, tablets, and desktops.
+                    <strong>High-performance website design:</strong> built to
+                    work smoothly across phones, tablets, and desktops.
                   </li>
                   <li>
-                    ✔ <strong>WordPress or fully custom-built sites:</strong> based
-                    on your goals, budget, and how much flexibility you need.
+                    <strong>WordPress or custom-built websites:</strong> based
+                    on your goals, growth stage, and the flexibility you need.
                   </li>
                   <li>
-                    ✔ <strong>Branding and social media support:</strong> helping
-                    your business look more consistent and professional online.
+                    <strong>Clearer positioning and stronger trust signals:</strong>{" "}
+                    helping visitors understand what you do and why they should
+                    choose you.
                   </li>
                   <li>
-                    ✔ <strong>SEO and local visibility support:</strong> so the
-                    right people can actually find you when they search.
+                    <strong>SEO and local visibility support:</strong> so the
+                    right people can find you and take action.
                   </li>
                 </ul>
 
@@ -184,25 +191,25 @@ export default function About() {
         <FadeIn>
           <section className="py-20 px-6 md:px-12 bg-white">
             <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-10 text-[#411b3f]">
-                Our <span className="text-[#102f35]">Values</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-10 text-[#102f35]">
+                Our <span className="text-[#411b3f]">Values</span>
               </h2>
 
               <div className="grid md:grid-cols-3 gap-10">
                 {[
                   {
-                    title: "Creativity",
-                    desc: "Every business has its own strengths, personality, and audience. We create websites that feel tailored to your brand rather than copied from a template.",
-                    icon: "🎨",
+                    title: "Clarity",
+                    desc: "Visitors should quickly understand what you do, who you help, and why your business is the right fit. We value clear messaging over vague marketing language.",
+                    icon: "🎯",
                   },
                   {
                     title: "Transparency",
-                    desc: "We believe in honest advice, clear pricing, and straightforward communication. No inflated promises, no hidden extras, and no unnecessary complexity.",
+                    desc: "We believe in honest advice, clear pricing, and straightforward communication. No hidden extras, no inflated promises, and no unnecessary complexity.",
                     icon: "🤝",
                   },
                   {
-                    title: "Growth",
-                    desc: "A website should help your business move forward. We focus on practical design decisions that improve trust, visibility, and the quality of the enquiries you receive.",
+                    title: "Performance",
+                    desc: "A website should help your business move forward. We focus on practical decisions that improve trust, usability, visibility, and the quality of the enquiries you receive.",
                     icon: "🚀",
                   },
                 ].map((value) => (
@@ -226,12 +233,12 @@ export default function About() {
         <FadeIn>
           <section className="py-20 bg-gradient-to-r from-[#411b3f] via-[#513356] to-[#102f35] text-white text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to grow your business online?
+              Ready for a website that brings more of the right enquiries?
             </h2>
             <p className="text-lg mb-8 text-gray-100 max-w-2xl mx-auto">
-              If you need a website that looks professional, feels trustworthy,
-              and helps turn visitors into enquiries, we can help you take the
-              next step.
+              If you need a website that looks credible, feels trustworthy, and
+              helps turn visitors into genuine enquiries, Karol Digital can help
+              you take the next step.
             </p>
             <Link
               href="/contact"

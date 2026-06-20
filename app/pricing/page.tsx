@@ -110,8 +110,9 @@ export default function PricingPage() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Professional websites and digital growth support for businesses
-              that need results without jumping straight into a huge upfront
+              Professional websites and digital growth support for UK service
+              businesses that want stronger credibility, clearer messaging, and
+              more enquiries without jumping straight into a huge upfront
               investment.
             </p>
 
@@ -151,14 +152,14 @@ export default function PricingPage() {
                 </span>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-[#102f35]">
-                  Start With What You Need, Not What You Don’t
+                  Start With What You Need, Not What You Don&apos;t
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed text-lg">
                   Not every business needs a full-scale custom build on day one.
                   Some need a professional launch site. Others need a better
-                  conversion path, stronger branding, or a more reliable lead
-                  flow.
+                  conversion path, stronger messaging, clearer positioning, or a
+                  more reliable flow of enquiries.
                 </p>
 
                 <p className="text-gray-600 leading-relaxed">
@@ -199,10 +200,10 @@ export default function PricingPage() {
             </h2>
 
             <p className="text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-              If you already have a site but are not getting enough leads, this
-              is the easiest place to start. We review your homepage, messaging,
-              structure, speed, and conversion flow, then give you practical,
-              prioritised actions.
+              If you already have a site but are not getting enough enquiries,
+              this is the easiest place to start. We review your homepage,
+              messaging, structure, speed, trust signals, and conversion flow,
+              then give you practical, prioritised actions.
             </p>
 
             <div className="inline-block bg-white px-8 py-5 rounded-2xl shadow-md border border-gray-100 mb-8">
@@ -324,7 +325,7 @@ export default function PricingPage() {
             </h3>
 
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Tell us about your business, budget, and goals, and we’ll point
+              Tell us about your business, budget, and goals, and we&apos;ll point
               you toward the most sensible option - even if that means starting
               smaller than you expected.
             </p>
@@ -559,7 +560,7 @@ export default function PricingPage() {
         <section className="py-24 px-6 md:px-12 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-extrabold text-[#102f35] text-center mb-12">
-              What’s Included in Every Project
+              What&apos;s Included in Every Project
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -681,7 +682,7 @@ export default function PricingPage() {
               </h3>
 
               <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-                Share a few details about your business and budget, and you’ll
+                Share a few details about your business and budget, and you&apos;ll
                 get a practical recommendation with clear pricing and no
                 pressure.
               </p>
