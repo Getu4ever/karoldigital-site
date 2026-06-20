@@ -15,24 +15,24 @@ export const viewport: Viewport = {
 
 // Refined Metadata: Optimized to eliminate keyword conflict with child routes
 export const metadata: Metadata = {
-  title: "Karol Digital — High-Performance Web Design & Branding",
+  title: "Karol Digital — Web Design for UK Service Businesses",
   description:
-    "We build conversion-focused digital infrastructure and professional identities that help UK businesses outrank the competition. Get a free quote today!",
-  metadataBase: new URL("https://www.karoldigital.co.uk"),
-  alternates: {
-    canonical: "/",
-  },
+    "We build fast, trust-building websites for UK service businesses that want more qualified enquiries, clearer messaging, and stronger online credibility.",
+  metadataBase: new URL("[karoldigital.co.uk](https://www.karoldigital.co.uk)"),
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://www.karoldigital.co.uk",
+    url: "[karoldigital.co.uk](https://www.karoldigital.co.uk)",
     siteName: "Karol Digital",
+    title: "Karol Digital — Web Design for UK Service Businesses",
+    description:
+      "Fast, conversion-focused websites for UK service businesses that want more qualified enquiries and a stronger online presence.",
     images: [
       {
         url: "/seo-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Karol Digital - High-Performance Web Design & Branding",
+        alt: "Karol Digital - Web Design for UK Service Businesses",
       },
     ],
   },
@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
+
 
 // JSON-LD: ProfessionalService with local parameter tracking configurations
 const professionalServiceJsonLd = {
@@ -69,7 +70,7 @@ const professionalServiceJsonLd = {
     name: "United Kingdom",
   },
   description:
-    "Affordable web design and digital marketing agency specializing in bespoke websites for small businesses across the UK.",
+  "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
   sameAs: [
     "https://www.facebook.com/karoldigital",
     "https://www.linkedin.com/company/karoldigital",
