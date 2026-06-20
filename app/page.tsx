@@ -129,7 +129,7 @@ export default function Home() {
 
               <p className="text-lg text-gray-700 leading-relaxed">
                 Karol Digital builds high-performance websites that help visitors
-                understand what you do, trust your business faster, and take action.
+                understand what you do, trust your business faster, and take action. We built your website to turn more visitors into qualified enquiries.
               </p>
             </div>
 
