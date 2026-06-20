@@ -13,16 +13,16 @@ export const viewport: Viewport = {
   themeColor: "#102f35",
 };
 
-// Refined Metadata: Optimized to eliminate keyword conflict with child routes
+// Refined Metadata: Corrected URLs to plain strings
 export const metadata: Metadata = {
   title: "Karol Digital — Web Design for UK Service Businesses",
   description:
     "We build fast, trust-building websites for UK service businesses that want more qualified enquiries, clearer messaging, and stronger online credibility.",
-  metadataBase: new URL("[karoldigital.co.uk](https://www.karoldigital.co.uk)"),
+  metadataBase: new URL("https://www.karoldigital.co.uk"),
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "[karoldigital.co.uk](https://www.karoldigital.co.uk)",
+    url: "https://www.karoldigital.co.uk",
     siteName: "Karol Digital",
     title: "Karol Digital — Web Design for UK Service Businesses",
     description:
@@ -41,7 +41,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 // JSON-LD: ProfessionalService with local parameter tracking configurations
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
@@ -51,7 +50,7 @@ const professionalServiceJsonLd = {
   image: "https://www.karoldigital.co.uk/seo-cover.jpg",
   logo: "https://www.karoldigital.co.uk/logo.png",
   priceRange: "££",
-  telephone: "07565472445", // Matches your exact commercial phone registry entry
+  telephone: "07565472445",
   address: {
     "@type": "PostalAddress",
     addressLocality: "London",
