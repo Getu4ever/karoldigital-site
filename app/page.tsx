@@ -93,7 +93,7 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/pricing"
+                href="/contact"
                 className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-10 py-4 rounded-full text-lg transition inline-block"
               >
                 Get a Website Audit
@@ -406,7 +406,7 @@ export default function Home() {
                 poor structure, low trust, or slow performance is hurting leads.
               </p>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="block text-center py-3 bg-yellow-400 text-[#102f35] rounded-full font-bold"
               >
                 Get a Website Audit
@@ -532,7 +532,7 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/pricing"
+                href="/contact"
                 className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-12 py-4 rounded-full text-lg transition inline-block"
               >
                 Get a Website Audit
