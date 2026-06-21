@@ -190,38 +190,40 @@ export default function Header() {
             </div>
           ))}
 
-          <Link
-            href="/contact"
-            className="bg-yellow-400 text-[#102f35] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
-          >
-            Get a Recommendation
-          </Link>
-        </div>
+          <a
+  href="https://wa.me/447565472445"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-yellow-400 text-[#102f35] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
+>
+  Chat with Us
+</a>
+</div>
 
-        <button
-          onClick={() => {
-            setOpen(!open);
-            if (open) setMobileServicesOpen(false);
-          }}
-          className="md:hidden flex flex-col items-center space-y-1.5"
-          aria-label="Toggle Menu"
-        >
-          <span
-            className={`block h-0.5 w-6 bg-white transition-transform ${
-              open ? "rotate-45 translate-y-1.5" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-white transition-opacity ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-white transition-transform ${
-              open ? "-rotate-45 -translate-y-1.5" : ""
-            }`}
-          />
-        </button>
+<button
+  onClick={() => {
+    setOpen(!open);
+    if (open) setMobileServicesOpen(false);
+  }}
+  className="md:hidden flex flex-col items-center space-y-1.5"
+  aria-label="Toggle Menu"
+>
+  <span
+    className={`block h-0.5 w-6 bg-white transition-transform ${
+      open ? "rotate-45 translate-y-1.5" : ""
+    }`}
+  />
+  <span
+    className={`block h-0.5 w-6 bg-white transition-opacity ${
+      open ? "opacity-0" : ""
+    }`}
+  />
+  <span
+    className={`block h-0.5 w-6 bg-white transition-transform ${
+      open ? "-rotate-45 -translate-y-1.5" : ""
+    }`}
+  />
+</button>
       </nav>
 
       <AnimatePresence>
