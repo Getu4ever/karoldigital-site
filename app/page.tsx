@@ -182,7 +182,7 @@ export default function Home() {
                   Professional website design for service businesses that need a stronger first
                   impression, clearer messaging, and better conversion.
                 </p>
-                <Link href="/services" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                <Link href="/services/web-design" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
                   Explore services
                 </Link>
               </div>
@@ -193,7 +193,7 @@ export default function Home() {
                   Custom-built websites for businesses that need more flexibility, better
                   performance, and a site tailored to how they actually sell.
                 </p>
-                <Link href="/services" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                <Link href="/services/custom-web-development" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
                   View development options
                 </Link>
               </div>
@@ -204,7 +204,7 @@ export default function Home() {
                   High-performance websites with a modern technical foundation, designed for
                   speed, usability, and long-term scalability.
                 </p>
-                <Link href="/services" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                <Link href="/services/nextjs-development" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
                   Learn more
                 </Link>
               </div>
@@ -215,8 +215,8 @@ export default function Home() {
                   Clear advice for businesses whose current site feels slow, unclear, outdated,
                   or underperforming.
                 </p>
-                <Link href="/contact" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
-                  Request an audit
+                <Link href="/book" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                  Request a website audit
                 </Link>
               </div>
             </div>
