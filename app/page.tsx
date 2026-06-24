@@ -9,23 +9,18 @@ import Link from "next/link";
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const localBusinessJsonLd = {
-    "@context": "[schema.org](https://schema.org)",
-    "@type": "LocalBusiness",
-    name: "Karol Digital",
-    url: "[karoldigital.co.uk](https://www.karoldigital.co.uk)",
-    description:
-      "High-performance web design for UK service businesses that want more qualified enquiries.",
-  };
-
   const faqs = [
     {
       q: "Who do you work best with?",
-      a: "We work best with UK service businesses that rely on trust, clarity, and enquiries to win work. That includes legal, financial, immigration, construction, local trade, and other service-led businesses that need a stronger website presence.",
+      a: "We work best with UK service businesses that rely on trust, clarity, and enquiries to win work. That includes legal, financial, immigration, construction, trade, and other service-led businesses that need a stronger website presence.",
     },
     {
       q: "Can you improve an existing website?",
-      a: "Yes. If your current website feels slow, unclear, outdated, or is not bringing in the right enquiries, we can audit it, improve it, or rebuild it into a faster and more effective lead-generation website.",
+      a: "Yes. If your current website feels slow, unclear, outdated, or is not bringing in the right enquiries, we can audit it, improve it, or rebuild it into a faster, clearer, and more effective lead generation website.",
+    },
+    {
+      q: "Do you build custom websites or use templates?",
+      a: "We focus on custom website design and development built around your business goals, messaging, and user journey. The aim is to create a website that feels credible, performs well, and supports long-term growth.",
     },
     {
       q: "What if I am not ready for a full website project?",
@@ -35,124 +30,119 @@ export default function Home() {
       q: "How long does a typical project take?",
       a: "Most website projects take between 3 and 6 weeks depending on the scope, number of pages, and feedback turnaround.",
     },
-    {
-      q: "What happens after I get in touch?",
-      a: "We start with a short conversation about your business, your current website, and what kind of enquiries you want more of. From there, we recommend the clearest next step.",
-    },
   ];
 
   return (
     <FadeIn>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessJsonLd),
-        }}
-      />
-
       <main className="min-h-screen bg-white text-gray-900">
         {/* HERO */}
-        <motion.section
-          className="relative min-h-[100vh] flex items-center justify-center text-white overflow-hidden"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+<motion.section
+  className="relative min-h-[100svh] flex items-center justify-center overflow-hidden text-white pt-28 pb-16 md:pt-32 md:pb-20"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+>
+  <Image
+    src="/home-banner03.png"
+    alt="Web design for UK service businesses"
+    fill
+    priority
+    className="object-cover brightness-[0.45]"
+    sizes="100vw"
+    quality={82}
+    style={{ objectPosition: "center" }}
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-br from-[#102f35]/75 via-[#102f35]/45 to-[#411b3f]/55" />
+
+  <div className="relative z-20 w-full px-6 md:px-10">
+    <div className="mx-auto max-w-5xl text-center">
+      <p className="mb-5 inline-flex rounded-full border border-yellow-300/60 bg-[#102f35]/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-200 shadow-lg backdrop-blur-md md:text-sm">
+        Web design for UK service businesses
+      </p>
+
+      <h1 className="text-4xl font-extrabold leading-tight md:text-6xl">
+        High-performance websites built to turn
+        <span className="text-yellow-400"> more visitors into qualified enquiries</span>
+      </h1>
+
+      <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200 md:text-2xl">
+        Custom web design and development for businesses that need clearer messaging,
+        stronger credibility, faster load times, and a better flow of leads.
+      </p>
+
+      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <Link
+          href="/book"
+          className="inline-block rounded-full bg-yellow-400 px-10 py-4 text-lg font-bold text-black shadow-xl transition hover:bg-yellow-500"
         >
-          <Image
-            src="/home-banner03.png"
-            alt="High-performance website design for UK service businesses"
-            fill
-            priority
-            className="object-cover brightness-[0.55]"
-            sizes="100vw"
-            quality={82}
-            style={{ objectPosition: "center" }}
-          />
+          Book a Consultation
+        </Link>
 
-          <div className="relative z-10 text-center px-6 max-w-5xl">
-            <p className="uppercase tracking-[0.2em] text-sm md:text-base text-yellow-400 font-semibold mb-4">
-              For UK service businesses
-            </p>
+        <Link
+          href="/contact"
+          className="inline-block rounded-full border border-white/30 bg-white/10 px-10 py-4 text-lg font-bold text-white transition hover:bg-white/20"
+        >
+          Request a Website Audit
+        </Link>
+      </div>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-              Websites built to turn
-              <span className="text-yellow-400"> more visitors into qualified enquiries</span>
-            </h1>
+      <p className="mx-auto mt-6 max-w-2xl text-sm text-gray-300">
+        Built for service businesses that want a website to look credible, load fast,
+        and help the right people get in touch.
+      </p>
+    </div>
+  </div>
+</motion.section>
 
-            <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Fast, trust-building websites for businesses that need clearer messaging,
-              stronger credibility, and a better flow of enquiries.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/contact"
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-10 py-4 rounded-full text-lg transition shadow-xl inline-block"
-              >
-                Book a Free Consultation
-              </Link>
-
-              <Link
-                href="/contact"
-                className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-10 py-4 rounded-full text-lg transition inline-block"
-              >
-                Get a Website Audit
-              </Link>
-            </div>
-
-            <p className="mt-5 text-sm text-gray-300 max-w-2xl mx-auto">
-              Built for businesses that want their website to look credible, load fast,
-              and help the right people get in touch.
-            </p>
-          </div>
-        </motion.section>
 
         {/* POSITIONING */}
-        <section className="py-24 px-6 md:px-12 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+        <section className="px-6 py-20 md:px-10 md:py-24">
+          <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-8 leading-tight">
-                If your website is not bringing enquiries,
+              <h2 className="mb-8 text-4xl font-bold leading-tight text-[#102f35] md:text-5xl">
+                If your website is not generating enquiries,
                 <br />
                 it is not doing its job
               </h2>
 
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Many service businesses do not have a traffic problem. They have a trust,
+              <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                Many UK service businesses do not have a traffic problem. They have a trust,
                 clarity, and conversion problem.
               </p>
 
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Slow pages, vague messaging, weak calls-to-action, and outdated design
-                quietly cost you leads even when people are already interested.
+              <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                Slow pages, vague messaging, weak calls-to-action, and outdated design quietly
+                cost you leads even when people are already interested in what you offer.
               </p>
 
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Karol Digital builds high-performance websites that help visitors
-                understand what you do, trust your business faster, and take action. We built your website to turn more visitors into qualified enquiries.
+              <p className="text-lg leading-relaxed text-gray-700">
+                Karol Digital designs and builds custom websites for service businesses that
+                need better positioning, stronger trust signals, and a clearer path from first
+                visit to first enquiry.
               </p>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
               <Image
                 src="/karol-digital-home.WebP"
-                alt="Karol Digital website design for UK service businesses"
+                alt="Custom website design for UK service businesses"
                 width={640}
                 height={400}
-                className="rounded-2xl shadow-2xl w-full"
+                className="w-full rounded-3xl shadow-2xl"
                 sizes="(max-width: 768px) 100vw, 640px"
                 quality={82}
               />
               <p className="text-center text-sm text-gray-500">
-                Fast, modern websites designed around trust, clarity, and enquiries
+                Fast, modern websites designed around trust, clarity, and lead generation
               </p>
             </div>
           </div>
         </section>
 
         {/* STATS */}
-        <section className="py-16 bg-[#102f35] text-white">
-          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center px-6">
+        <section className="bg-[#102f35] py-16 text-white">
+          <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-6 text-center md:grid-cols-4">
             <div>
               <div className="text-5xl font-bold text-yellow-400">98+</div>
               <p className="mt-2">PageSpeed scores on core pages</p>
@@ -172,194 +162,226 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DIFFERENCE */}
-        <section className="py-24 px-6 bg-gray-50">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-14">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-4">
-                Why service businesses choose Karol Digital
+        {/* SERVICES */}
+        <section className="bg-gray-50 px-6 py-20 md:px-10 md:py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-4xl font-bold text-[#102f35] md:text-5xl">
+                Website services built around growth
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                The goal is not just to make your website look better. The goal is to
-                make it easier for the right people to trust you and get in touch.
+              <p className="mx-auto max-w-3xl text-lg text-gray-600">
+                From full website builds to audits and performance improvements, the focus is
+                always the same: a stronger website that helps your business win more of the
+                right enquiries.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-bold text-[#102f35] mb-4">
-                  Clear positioning
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Visitors should quickly understand what you do, who you help, and why
-                  your business is the right fit. We build page structures and messaging
-                  that remove confusion.
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Web Design</h3>
+                <p className="mb-6 leading-relaxed text-gray-700">
+                  Professional website design for service businesses that need a stronger first
+                  impression, clearer messaging, and better conversion.
+                </p>
+                <Link href="/services" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                  Explore services
+                </Link>
+              </div>
+
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Custom Web Development</h3>
+                <p className="mb-6 leading-relaxed text-gray-700">
+                  Custom-built websites for businesses that need more flexibility, better
+                  performance, and a site tailored to how they actually sell.
+                </p>
+                <Link href="/services" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                  View development options
+                </Link>
+              </div>
+
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Next.js Development</h3>
+                <p className="mb-6 leading-relaxed text-gray-700">
+                  High-performance websites with a modern technical foundation, designed for
+                  speed, usability, and long-term scalability.
+                </p>
+                <Link href="/services" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                  Learn more
+                </Link>
+              </div>
+
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Website Audits</h3>
+                <p className="mb-6 leading-relaxed text-gray-700">
+                  Clear advice for businesses whose current site feels slow, unclear, outdated,
+                  or underperforming.
+                </p>
+                <Link href="/contact" className="font-semibold text-[#102f35] hover:text-[#411b3f]">
+                  Request an audit
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DIFFERENCE */}
+        <section className="bg-white px-6 py-20 md:px-10 md:py-24">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-4xl font-bold text-[#102f35] md:text-5xl">
+                Why service businesses choose Karol Digital
+              </h2>
+              <p className="mx-auto max-w-3xl text-lg text-gray-600">
+                The goal is not just to make your website look better. The goal is to make it
+                easier for the right people to trust you and get in touch.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Clear positioning</h3>
+                <p className="leading-relaxed text-gray-700">
+                  Visitors should quickly understand what you do, who you help, and why your
+                  business is the right fit.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-bold text-[#102f35] mb-4">
-                  Faster trust-building
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Better branding, stronger presentation, and a cleaner user experience
-                  help your business feel more credible from the first few seconds.
+              <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Faster trust-building</h3>
+                <p className="leading-relaxed text-gray-700">
+                  Better branding, stronger presentation, and a cleaner user experience help
+                  your business feel more credible from the first few seconds.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-bold text-[#102f35] mb-4">
-                  Better enquiry flow
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  We simplify the journey from first visit to first contact with clearer
-                  calls-to-action, stronger hierarchy, and less friction across the page.
+              <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Better enquiry flow</h3>
+                <p className="leading-relaxed text-gray-700">
+                  Clearer calls-to-action, stronger hierarchy, and less friction make it easier
+                  for the right people to get in touch.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* INDUSTRIES */}
+        <section className="bg-gray-50 px-6 py-20 md:px-10 md:py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-4xl font-bold text-[#102f35] md:text-5xl">
+                Industry-focused website design
+              </h2>
+              <p className="mx-auto max-w-3xl text-lg text-gray-600">
+                Different service businesses need different messaging, trust signals, and user
+                journeys. We build websites around how your industry wins work.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <Link
+                href="/services/financial-services"
+                className="rounded-3xl border border-gray-200 bg-white p-8 transition hover:shadow-lg"
+              >
+                <h3 className="mb-3 text-2xl font-bold text-[#102f35]">Financial Services</h3>
+                <p className="text-gray-700">
+                  Website design for financial businesses that need trust, clarity, and a more
+                  professional lead generation journey.
+                </p>
+              </Link>
+
+              <Link
+                href="/services/immigration-services"
+                className="rounded-3xl border border-gray-200 bg-white p-8 transition hover:shadow-lg"
+              >
+                <h3 className="mb-3 text-2xl font-bold text-[#102f35]">Immigration Lawyers</h3>
+                <p className="text-gray-700">
+                  Websites for immigration-focused firms that need to build authority, reduce
+                  confusion, and make it easier for clients to enquire.
+                </p>
+              </Link>
+
+              <Link
+                href="/services/building-services"
+                className="rounded-3xl border border-gray-200 bg-white p-8 transition hover:shadow-lg"
+              >
+                <h3 className="mb-3 text-2xl font-bold text-[#102f35]">Construction and Trades</h3>
+                <p className="text-gray-700">
+                  Lead generation websites for construction companies and tradespeople that need
+                  stronger credibility and more quote-ready enquiries.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* PROOF */}
-<section className="py-24 px-6 bg-white">
-  <div className="max-w-6xl mx-auto">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-[#102f35] mb-4">
-        Built for performance, visibility, and lead generation
-      </h2>
-      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-        Strong websites do more than look good. They load fast, follow best
-        practices, and create a better experience for both visitors and search engines.
-      </p>
-    </div>
+        <section className="bg-white px-6 py-20 md:px-10 md:py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-14 text-center">
+              <h2 className="mb-4 text-4xl font-bold text-[#102f35]">
+                Built for performance, visibility, and lead generation
+              </h2>
+              <p className="mx-auto max-w-3xl text-lg text-gray-600">
+                Strong websites do more than look good. They load fast, follow best practices,
+                and create a better experience for both visitors and search engines.
+              </p>
+            </div>
 
-    <div className="grid md:grid-cols-3 gap-8">
-      <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-        <h3 className="text-2xl font-bold text-[#102f35] mb-4">
-          1st Call UK Financial
-        </h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          A mobile-first website experience with strong speed, accessibility,
-          best practices, and SEO performance.
-        </p>
-        <div className="space-y-3 text-gray-800">
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Mobile performance</span>
-            <span className="font-bold text-[#102f35]">96</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Accessibility</span>
-            <span className="font-bold text-[#102f35]">96</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Best practices</span>
-            <span className="font-bold text-[#102f35]">100</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>SEO</span>
-            <span className="font-bold text-[#102f35]">100</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Mobile-ready experience</span>
-            <span className="font-bold text-[#102f35]">Strong</span>
-          </div>
-        </div>
-      </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">1st Call UK Financial</h3>
+                <p className="mb-6 leading-relaxed text-gray-700">
+                  A mobile-first website experience with strong speed, accessibility, best
+                  practices, and SEO performance.
+                </p>
+              </div>
 
-      <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-        <h3 className="text-2xl font-bold text-[#102f35] mb-4">
-          1st Call UK Immigration
-        </h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          A high-performing service website built to combine trust, clarity,
-          and strong mobile usability.
-        </p>
-        <div className="space-y-3 text-gray-800">
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Mobile performance</span>
-            <span className="font-bold text-[#102f35]">99</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Accessibility</span>
-            <span className="font-bold text-[#102f35]">96</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Best practices</span>
-            <span className="font-bold text-[#102f35]">100</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>SEO</span>
-            <span className="font-bold text-[#102f35]">100</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Mobile-ready experience</span>
-            <span className="font-bold text-[#102f35]">Excellent</span>
-          </div>
-        </div>
-      </div>
+              <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">1st Call UK Immigration</h3>
+                <p className="mb-6 leading-relaxed text-gray-700">
+                  A high-performing service website built to combine trust, clarity, and strong
+                  mobile usability.
+                </p>
+              </div>
 
-      <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-        <h3 className="text-2xl font-bold text-[#102f35] mb-4">
-          Food Mama&apos;s Kitchen
-        </h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          A fast, well-structured website experience supported by strong page quality,
-          clean metadata, and a clear technical foundation.
-        </p>
-        <div className="space-y-3 text-gray-800">
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>SEO score</span>
-            <span className="font-bold text-[#102f35]">91%</span>
+              <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8">
+                <h3 className="mb-4 text-2xl font-bold text-[#102f35]">Food Mama&apos;s Kitchen</h3>
+                <p className="mb-6 leading-relaxed text-gray-700">
+                  A fast, well-structured website experience supported by strong page quality,
+                  clean metadata, and a clear technical foundation.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Meta information</span>
-            <span className="font-bold text-[#102f35]">99%</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Page quality</span>
-            <span className="font-bold text-[#102f35]">100%</span>
-          </div>
-          <div className="flex justify-between border-b border-gray-200 pb-2">
-            <span>Page structure</span>
-            <span className="font-bold text-[#102f35]">100%</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Response time</span>
-            <span className="font-bold text-[#102f35]">0.37s</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+        </section>
 
         {/* TESTIMONIALS */}
-        <section className="py-24 px-6 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-[#102f35] mb-16">
+        <section className="bg-gray-50 px-6 py-20 md:px-10 md:py-24">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="mb-14 text-center text-4xl font-bold text-[#102f35]">
               Trusted by growing UK businesses
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#411b3f]">
-                <p className="italic text-gray-600 mb-6">
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="rounded-3xl border-t-4 border-[#411b3f] bg-white p-8 shadow-md">
+                <p className="mb-6 italic text-gray-600">
                   "Karol Digital transformed our digital presence. The website made it easier
                   for clients to understand what we offer and contact us."
                 </p>
                 <p className="font-bold text-[#102f35]">- 1st Call UK Immigration</p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#102f35]">
-                <p className="italic text-gray-600 mb-6">
-                  "A true lead generation engine. We saw a clear uplift in the quality of
-                  leads coming through the site."
+              <div className="rounded-3xl border-t-4 border-[#102f35] bg-white p-8 shadow-md">
+                <p className="mb-6 italic text-gray-600">
+                  "A true lead generation engine. We saw a clear uplift in the quality of leads
+                  coming through the site."
                 </p>
                 <p className="font-bold text-[#102f35]">- 1st Call UK Financial</p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-yellow-400">
-                <p className="italic text-gray-600 mb-6">
+              <div className="rounded-3xl border-t-4 border-yellow-400 bg-white p-8 shadow-md">
+                <p className="mb-6 italic text-gray-600">
                   "Professional, fast, and results-driven. The new branding and website gave
                   the business a much stronger online presence."
                 </p>
@@ -369,80 +391,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* LEAD PATHS */}
-        <section className="py-24 px-6 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#102f35] mb-4">
-              Start with the right next step
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Different businesses need different support. Choose the path that fits where you are.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-xl transition">
-              <h3 className="text-2xl font-bold mb-4 text-[#102f35]">
-                I need a new website
-              </h3>
-              <p className="text-gray-600 mb-8">
-                For businesses that need a modern, professional site built from the ground up
-                to create trust and generate more enquiries.
-              </p>
-              <Link
-                href="/contact"
-                className="block text-center py-3 bg-[#102f35] text-white rounded-full font-bold"
-              >
-                Book a Free Consultation
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-xl transition">
-              <h3 className="text-2xl font-bold mb-4 text-[#102f35]">
-                My current site is not converting
-              </h3>
-              <p className="text-gray-600 mb-8">
-                For businesses that already have a website but suspect weak messaging,
-                poor structure, low trust, or slow performance is hurting leads.
-              </p>
-              <Link
-                href="/contact"
-                className="block text-center py-3 bg-yellow-400 text-[#102f35] rounded-full font-bold"
-              >
-                Get a Website Audit
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-xl transition">
-              <h3 className="text-2xl font-bold mb-4 text-[#102f35]">
-                I need branding and website support
-              </h3>
-              <p className="text-gray-600 mb-8">
-                For businesses that want a stronger visual identity, more consistency,
-                and a website that properly reflects the quality of the service.
-              </p>
-              <Link
-                href="/pricing"
-                className="block text-center py-3 bg-gray-100 rounded-full font-bold"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* PARTNERS */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50 border-t border-b border-gray-200">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-[#102f35] mb-12">
+        <section className="border-y border-gray-200 bg-gray-50 px-6 py-20 md:px-10">
+          <div className="mx-auto max-w-5xl text-center">
+            <h2 className="mb-12 text-3xl font-bold text-[#102f35]">
               Selected clients and partners
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
               <Link
                 href="[sbc-marketing.co.uk](https://sbc-marketing.co.uk/)"
                 target="_blank"
-                className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition flex items-center justify-center h-[180px]"
+                rel="noopener noreferrer"
+                className="flex h-[180px] items-center justify-center rounded-2xl bg-white p-8 shadow-sm transition hover:shadow-md"
               >
                 <Image
                   src="/sbc-marketing-logo.jpg"
@@ -455,7 +416,8 @@ export default function Home() {
               <Link
                 href="[1stcalluk.co.uk](https://www.1stcalluk.co.uk/)"
                 target="_blank"
-                className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition flex items-center justify-center h-[180px]"
+                rel="noopener noreferrer"
+                className="flex h-[180px] items-center justify-center rounded-2xl bg-white p-8 shadow-sm transition hover:shadow-md"
               >
                 <Image
                   src="/1stcalluk-logo.jpg"
@@ -469,9 +431,9 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section className="py-24 bg-white px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-[#102f35] mb-12">
+        <section className="bg-white px-6 py-20 md:px-10 md:py-24">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-12 text-center text-4xl font-bold text-[#102f35]">
               Frequently asked questions
             </h2>
 
@@ -479,18 +441,14 @@ export default function Home() {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-gray-50 rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                  className="overflow-hidden rounded-2xl border border-gray-100 bg-gray-50 shadow-sm"
                 >
                   <button
-                    onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
-                    }
-                    className="w-full text-left p-6 font-bold text-[#102f35] flex justify-between items-center hover:bg-gray-100"
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    className="flex w-full items-center justify-between p-6 text-left font-bold text-[#102f35] hover:bg-gray-100"
                   >
                     {faq.q}
-                    <span className="text-2xl">
-                      {openIndex === index ? "-" : "+"}
-                    </span>
+                    <span className="text-2xl">{openIndex === index ? "-" : "+"}</span>
                   </button>
 
                   <AnimatePresence>
@@ -512,30 +470,30 @@ export default function Home() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="py-28 bg-gray-900 text-white text-center px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <section className="bg-gray-900 px-6 py-24 text-center text-white">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">
               If your website should be bringing in better enquiries, start there
             </h2>
 
-            <p className="text-gray-400 text-lg mb-10">
-              Book a free consultation if you need a new website, or start with an
-              audit if you want to improve the one you already have.
+            <p className="mb-10 text-lg text-gray-400">
+              Book a consultation if you need a new website, or request an audit if you want
+              to improve the one you already have.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="bg-yellow-400 hover:bg-yellow-500 text-[#102f35] font-bold px-12 py-4 rounded-full text-lg transition shadow-xl inline-block"
+                className="inline-block rounded-full bg-yellow-400 px-12 py-4 text-lg font-bold text-[#102f35] shadow-xl transition hover:bg-yellow-500"
               >
-                Book a Free Consultation
+                Book a Consultation
               </Link>
 
               <Link
                 href="/contact"
-                className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-12 py-4 rounded-full text-lg transition inline-block"
+                className="inline-block rounded-full border border-white/20 bg-white/10 px-12 py-4 text-lg font-bold text-white transition hover:bg-white/20"
               >
-                Get a Website Audit
+                Request a Website Audit
               </Link>
             </div>
 

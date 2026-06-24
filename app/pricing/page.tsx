@@ -89,7 +89,7 @@ export default function PricingPage() {
       <main className="min-h-screen bg-white text-gray-900 font-sans">
         {/* HERO SECTION */}
         <motion.section
-          className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4"
+          className="relative min-h-[80vh] flex items-center justify-center text-center text-white pt-24 pb-12 md:pt-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

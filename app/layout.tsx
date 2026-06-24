@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Karol Digital",
     title: "Karol Digital — Web Design for UK Service Businesses",
     description:
-      "Fast, conversion-focused websites for UK service businesses that want more qualified enquiries and a stronger online presence.",
+    "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
     images: [
       {
         url: "/seo-cover.jpg",
@@ -121,12 +121,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 }
 
                 const onLoad=function(){
-                  const script=document.createElement("script");
-                  script.src="https://www.chatbase.co/embed.min.js";
-                  script.id="cn8XxlevKOTIx0z1Oyy4S";
-                  script.domain="www.chatbase.co";
-                  document.body.appendChild(script)
-                };
+  const script=document.createElement("script");
+  script.src="[chatbase.co](https://www.chatbase.co/embed.min.js)";
+  script.id="cn8XxlevKOTIx0z1Oyy4S";
+  script.domain="www.chatbase.co";
+  document.body.appendChild(script)
+};
+
                 
                 if(document.readyState==="complete"){onLoad()}
                 else{window.addEventListener("load",onLoad)}

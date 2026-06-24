@@ -44,6 +44,33 @@ export default function AILogoDesignPage() {
             </p>
           </div>
         </motion.section>
+        {/* === BREADCRUMB SECTION === */}
+        <nav
+          aria-label="Breadcrumb"
+          className="bg-white border-b border-gray-100 py-4 px-6 md:px-12"
+        >
+          <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-600">
+            <li>
+              <a href="/" className="hover:text-[#102f35] transition">
+                Home
+              </a>
+            </li>
+
+            <li className="text-gray-400">/</li>
+
+            <li>
+              <a href="/services" className="hover:text-[#102f35] transition">
+                Services
+              </a>
+            </li>
+
+            <li className="text-gray-400">/</li>
+
+            <li className="text-[#102f35] font-semibold">
+              Ai Logo Design
+            </li>
+          </ol>
+        </nav>
 
         {/* INTRO */}
         <FadeIn>
