@@ -99,30 +99,29 @@ export default function Home() {
         {/* POSITIONING */}
         <section className="px-6 py-20 md:px-10 md:py-24">
           <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
-            <div>
-              <h2 className="mb-8 text-4xl font-bold leading-tight text-[#102f35] md:text-5xl">
-                If your website is not generating enquiries,
-                <br />
-                it is not doing its job
-              </h2>
+  <div>
+    <h2 className="mb-8 text-4xl font-bold leading-tight text-[#102f35] md:text-5xl">
+      If your website is not generating enquiries,
+      <br />
+      it is not doing its job
+    </h2>
 
-              <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                Many UK service businesses do not have a traffic problem. They have a trust,
-                clarity, and conversion problem.
-              </p>
+    <p className="mb-6 text-lg leading-relaxed text-gray-700">
+      Many UK service businesses have a traffic problem, but most have a conversion problem. 
+      We focus on building <strong>high-performance websites</strong> that do more than just exist—they are engineered to turn <strong>more visitors into qualified enquiries</strong>.
+    </p>
 
-              <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                Slow pages, vague messaging, weak calls-to-action, and outdated design quietly
-                cost you leads even when people are already interested in what you offer.
-              </p>
+    <p className="mb-6 text-lg leading-relaxed text-gray-700">
+      Slow page speeds, vague messaging, and outdated design are quietly costing you leads. 
+      Even when people are interested in your services, a lack of clarity stops them from taking action. 
+      We transform these barriers into a seamless journey that builds trust and authority.
+    </p>
 
-              <p className="text-lg leading-relaxed text-gray-700">
-                Karol Digital designs and builds custom websites for service businesses that
-                need better positioning, stronger trust signals, and a clearer path from first
-                visit to first enquiry.
-              </p>
-            </div>
-
+    <p className="text-lg leading-relaxed text-gray-700">
+      Karol Digital designs custom <strong>websites</strong> for service businesses that need better positioning, stronger trust signals, and a clearer path from a first visit to a <strong>qualified enquiry</strong>. 
+      Stop losing potential clients to performance issues and start converting your traffic into real business growth.
+    </p>
+  </div>
             <div className="flex flex-col gap-5">
               <Image
                 src="/karol-digital-home.WebP"
