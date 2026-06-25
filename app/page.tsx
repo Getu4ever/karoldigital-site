@@ -482,17 +482,17 @@ export default function Home() {
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                href="/contact"
+                href="/book"
                 className="inline-block rounded-full bg-yellow-400 px-12 py-4 text-lg font-bold text-[#102f35] shadow-xl transition hover:bg-yellow-500"
               >
-                Book a Consultation
+                Book an assessment
               </Link>
 
               <Link
                 href="/contact"
                 className="inline-block rounded-full border border-white/20 bg-white/10 px-12 py-4 text-lg font-bold text-white transition hover:bg-white/20"
               >
-                Request a Website Audit
+                Request a Website review
               </Link>
             </div>
 
