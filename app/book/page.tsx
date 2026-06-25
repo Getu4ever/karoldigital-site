@@ -130,7 +130,6 @@ export default function BookingPage() {
           </div>
         </FadeIn>
       </main>
-      <Footer />
     </>
   );
 }
