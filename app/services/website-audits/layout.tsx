@@ -4,9 +4,8 @@ import { Metadata } from "next";
 const PAGE_URL = "https://www.karoldigital.co.uk/services/website-audits";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Professional Website Health Audit & Conversion Analysis | Karol Digital",
-  description:
-    "Identify hidden issues affecting your sales. Our expert website health audit analyzes performance, SEO, UX, and conversion strategy to help UK businesses reclaim lost enquiries.",
+  title: "Website Health Audit & Conversion Analysis | Karol Digital",
+  description: "Expert website health audit to fix performance, SEO, and UX issues. Get actionable insights to increase your conversions and reclaim lost sales.",
   url: PAGE_URL,
   image: "/hero-page-banner.jpg",
 });
