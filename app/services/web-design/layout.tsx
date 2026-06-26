@@ -1,22 +1,18 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 import { Metadata } from "next";
 
-const PAGE_URL = "https://www.karoldigital.co.uk/services";
+// 1. Correct the URL to the specific web design page
+const PAGE_URL = "https://www.karoldigital.co.uk/services/web-design";
 
-export const metadata: Metadata = {
-  ...generateSEOMetadata({
-    title: "High-Performance Digital Growth Strategies | Karol Digital UK",
-    description:
-      "Stop chasing traffic and start closing clients. We engineer high-performance websites and conversion systems for UK businesses ready to scale.",
-    url: PAGE_URL,
-    image: "/hero-cover.jpg",
-  }),
-  alternates: {
-    canonical: PAGE_URL,
-  },
-};
+export const metadata: Metadata = generateSEOMetadata({
+  title: "Professional Web Design Services | Karol Digital",
+  description:
+    "Expert web design services for UK service businesses. Built for trust, performance, and lead generation. Move beyond basic templates today.",
+  url: PAGE_URL,
+  image: "/web-design-services.webp", // Ensure this image exists
+});
 
-const growthStrategySchema = [
+const webDesignSchema = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -30,18 +26,27 @@ const growthStrategySchema = [
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Growth Strategies",
-        "item": PAGE_URL // Updated this to match PAGE_URL
+        "name": "Services",
+        "item": "https://www.karoldigital.co.uk/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Web Design",
+        "item": PAGE_URL
       }
     ]
   },
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Karol Digital Growth Architecture",
-    "description":
-      "Digital growth engineering, conversion optimization, and high-performance web systems for UK businesses.",
-    "url": "https://www.karoldigital.co.uk",
+    "@type": "Service",
+    "name": "Professional Web Design Services",
+    "description": "High-impact web design for UK service businesses focused on trust, clarity, and conversion.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Karol Digital",
+      "url": "https://www.karoldigital.co.uk"
+    },
     "areaServed": {
       "@type": "Country",
       "name": "United Kingdom"
@@ -49,7 +54,7 @@ const growthStrategySchema = [
   }
 ];
 
-export default function GrowthStrategyLayout({
+export default function WebDesignLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -59,7 +64,7 @@ export default function GrowthStrategyLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(growthStrategySchema),
+          __html: JSON.stringify(webDesignSchema),
         }}
       />
       {children}
