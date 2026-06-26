@@ -32,6 +32,7 @@ export default async function BlogPostPage(
         publishedAt,
         "imageUrl": mainImage.asset->url,
         likes,
+        keywords, 
         comments[approved == true]{
           name,
           comment,
