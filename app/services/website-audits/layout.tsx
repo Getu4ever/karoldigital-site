@@ -1,15 +1,14 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 import { Metadata } from "next";
 
-// 1. Point to the exact URL of the audit page
 const PAGE_URL = "https://www.karoldigital.co.uk/services/website-audits";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Professional Website Audit & Performance Review | Karol Digital",
+  title: "Professional Website Health Audit & Conversion Analysis | Karol Digital",
   description:
-    "Identify the silent leaks in your sales funnel. Our comprehensive website audit diagnoses performance, usability, and SEO to help you convert more visitors into clients.",
+    "Identify hidden issues affecting your sales. Our expert website health audit analyzes performance, SEO, UX, and conversion strategy to help UK businesses reclaim lost enquiries.",
   url: PAGE_URL,
-  image: "/hero-page-banner.jpg", // Update if you have a specific audit-page cover image
+  image: "/hero-page-banner.jpg",
 });
 
 const websiteAuditSchema = [
