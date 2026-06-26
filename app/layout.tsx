@@ -1,4 +1,3 @@
-// app/layout.tsx
 import "./globals.css";
 import { ReactNode } from "react";
 import Header from "@/components/Header";
@@ -6,14 +5,12 @@ import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
 import { Metadata, Viewport } from "next";
 
-/* Mobile viewport and theme styling must be exported separately in App Router */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#102f35",
 };
 
-// Refined Metadata: Corrected URLs to plain strings
 export const metadata: Metadata = {
   title: "Karol Digital — Web Design for UK Service Businesses",
   description:
@@ -26,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Karol Digital",
     title: "Karol Digital — Web Design for UK Service Businesses",
     description:
-    "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
+      "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
     images: [
       {
         url: "/seo-cover.jpg",
@@ -41,7 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD: ProfessionalService with local parameter tracking configurations
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -69,7 +65,7 @@ const professionalServiceJsonLd = {
     name: "United Kingdom",
   },
   description:
-  "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
+    "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
   sameAs: [
     "https://www.facebook.com/karoldigital",
     "https://www.linkedin.com/company/karoldigital",
@@ -88,7 +84,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-GB" dir="ltr">
       <head>
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -102,7 +97,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* Chatbase Script Integration */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -119,16 +113,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     }
                   })
                 }
-
                 const onLoad=function(){
-  const script=document.createElement("script");
-  script.src="[chatbase.co](https://www.chatbase.co/embed.min.js)";
-  script.id="cn8XxlevKOTIx0z1Oyy4S";
-  script.domain="www.chatbase.co";
-  document.body.appendChild(script)
-};
-
-                
+                  const script=document.createElement("script");
+                  script.src="https://www.chatbase.co/embed.min.js";
+                  script.id="cn8XxlevKOTIx0z1Oyy4S";
+                  script.domain="www.chatbase.co";
+                  document.body.appendChild(script)
+                };
                 if(document.readyState==="complete"){onLoad()}
                 else{window.addEventListener("load",onLoad)}
               })();
@@ -136,7 +127,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-
       <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
         <Header />
         <AnimateWrapper>{children}</AnimateWrapper>
