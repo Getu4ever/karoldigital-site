@@ -62,7 +62,7 @@ export default function Header() {
       icon: <Code2 size={16} />,
     },
     {
-      href: "/services/website-audit",
+      href: "/services/website-audits",
       label: "Website Audits",
       icon: <Search size={16} />,
     },
