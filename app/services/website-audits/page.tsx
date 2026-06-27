@@ -6,45 +6,45 @@ import Link from "next/link";
 
 export default function WebsiteAuditPage() {
   return (
-    <FadeIn>
-      <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-white text-gray-900">
 
-        {/* HERO SECTION */}
-        <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24 pb-12">
-          <Image
-            src="/hero-page-banner.jpg"
-            alt="Website Health Audit"
-            fill
-            priority
-            className="object-cover brightness-[0.4]"
-          />
+      {/* HERO SECTION (NOW SEO SAFE - OUTSIDE FULL PAGE ANIMATION WRAPPER) */}
+      <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24 pb-12">
+        <Image
+          src="/hero-page-banner.jpg"
+          alt="Website Health Audit"
+          fill
+          priority
+          className="object-cover brightness-[0.4]"
+        />
 
-          <div className="relative z-10 px-6 max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-              Website Health Audit
-              <span className="block text-yellow-400 mt-2 text-2xl md:text-3xl font-medium">
-                Improve Conversions and Performance
-              </span>
-            </h1>
+        <div className="relative z-10 px-6 max-w-3xl">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+            Website Health Audit
+            <span className="block text-yellow-400 mt-2 text-2xl md:text-3xl font-medium">
+              Improve Conversions and Performance
+            </span>
+          </h1>
 
-            <p className="text-lg text-gray-200 max-w-xl mx-auto">
-              Identify issues affecting your website performance and conversions.
-            </p>
-          </div>
-        </section>
+          <p className="text-lg text-gray-200 max-w-xl mx-auto">
+            Identify issues affecting your website performance and conversions.
+          </p>
+        </div>
+      </section>
 
-        {/* BREADCRUMB */}
-        <nav aria-label="Breadcrumb" className="bg-gray-50 border-b border-gray-100 py-3 px-6 md:px-12">
-          <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-500">
-            <li><a href="/" className="hover:text-[#102f35]">Home</a></li>
-            <li>/</li>
-            <li><a href="/services" className="hover:text-[#102f35]">Services</a></li>
-            <li>/</li>
-            <li className="text-[#102f35] font-semibold">Website Health & Conversion Analysis</li>
-          </ol>
-        </nav>
+      {/* BREADCRUMB */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 border-b border-gray-100 py-3 px-6 md:px-12">
+        <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-500">
+          <li><a href="/" className="hover:text-[#102f35]">Home</a></li>
+          <li>/</li>
+          <li><a href="/services" className="hover:text-[#102f35]">Services</a></li>
+          <li>/</li>
+          <li className="text-[#102f35] font-semibold">Website Health & Conversion Analysis</li>
+        </ol>
+      </nav>
 
-        {/* CONTENT */}
+      {/* CONTENT (NOW WRAPPED ONLY WHERE ANIMATION IS SAFE) */}
+      <FadeIn>
         <section className="py-10 px-6 md:px-12 max-w-4xl mx-auto">
 
           <h2 className="text-3xl font-bold text-[#102f35] mb-6">
@@ -52,7 +52,7 @@ export default function WebsiteAuditPage() {
           </h2>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            A Website Health Audit is designed to improve conversions and performance by identifying issues affecting your website performance and conversions. This structured Website Health Audit helps businesses clearly understand what is preventing users from converting.
+            A Website Health Audit is designed to improve conversions and performance by identifying issues affecting your website performance and conversions. This structured audit helps businesses clearly understand what is preventing users from converting.
           </p>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -67,7 +67,7 @@ export default function WebsiteAuditPage() {
             {[
               {
                 title: "Technical Performance",
-                desc: "This Website Health Audit identifies performance issues affecting load speed, rendering, and overall site stability."
+                desc: "This audit identifies performance issues affecting load speed, rendering, and overall site stability."
               },
               {
                 title: "User Experience (UX)",
@@ -153,8 +153,8 @@ export default function WebsiteAuditPage() {
           </Link>
 
         </section>
+      </FadeIn>
 
-      </main>
-    </FadeIn>
+    </main>
   );
 }
