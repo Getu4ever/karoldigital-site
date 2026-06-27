@@ -88,7 +88,7 @@ export default function WebsiteAuditPage() {
               }
             ].map((item, idx) => (
               <div key={idx} className="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-[#102f35] transition">
-                <h3 className="font-bold text-xl text-[#102f35] mb-2">{item.title}</h3>
+                <p className="font-bold text-xl text-[#102f35] mb-2">{item.title}</p>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
