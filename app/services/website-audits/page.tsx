@@ -8,7 +8,7 @@ export default function WebsiteAuditPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
 
-      {/* HERO SECTION (NOW SEO SAFE - OUTSIDE FULL PAGE ANIMATION WRAPPER) */}
+      {/* HERO SECTION */}
       <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24 pb-12">
         <Image
           src="/hero-page-banner.jpg"
@@ -43,8 +43,9 @@ export default function WebsiteAuditPage() {
         </ol>
       </nav>
 
-      {/* CONTENT (NOW WRAPPED ONLY WHERE ANIMATION IS SAFE) */}
       <FadeIn>
+
+        {/* CONTENT */}
         <section className="py-10 px-6 md:px-12 max-w-4xl mx-auto">
 
           <h2 className="text-3xl font-bold text-[#102f35] mb-6">
@@ -52,15 +53,19 @@ export default function WebsiteAuditPage() {
           </h2>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            A Website Health Audit is designed to improve conversions and performance by identifying issues affecting your website performance and conversions. This structured audit helps businesses clearly understand what is preventing users from converting.
+            A Website Health Audit is a structured evaluation designed to improve conversions and performance by identifying technical, UX, and SEO issues that affect your website performance. It provides clarity on why visitors are not converting and what is preventing growth.
           </p>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Many websites suffer from hidden problems that reduce performance. A proper Website Health Audit highlights technical issues, UX barriers, and SEO limitations that directly affect your ability to improve conversions and performance.
+            In most websites, performance issues are hidden beneath the surface. A proper Website Health Audit uncovers these problems and translates them into actionable improvements that directly support conversion optimisation and overall performance gains.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            Businesses that invest in a Website Health Audit gain a clearer understanding of user behaviour, allowing them to improve conversions through better structure, faster load times, and stronger user experience design.
           </p>
 
           <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-            By carrying out a Website Health Audit, you can systematically identify issues affecting your website performance and conversions, allowing you to make targeted improvements that lead to measurable growth.
+            By continuously analysing website performance, a Website Health Audit helps identify issues affecting your website performance and conversions before they reduce revenue or user engagement.
           </p>
 
           <div className="grid gap-6">
@@ -105,8 +110,12 @@ export default function WebsiteAuditPage() {
             Unlike basic reports, a Website Health Audit explains not only what is wrong, but also why it is happening and how it impacts your ability to improve conversions and performance.
           </p>
 
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            Modern digital growth depends on understanding user behaviour. A Website Health Audit provides data-driven clarity that allows businesses to improve conversions through structured optimisation rather than guesswork.
+          </p>
+
           <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-            A Website Health Audit is essential for businesses that want to scale, as it ensures you can consistently identify issues affecting your website performance and conversions before they impact revenue.
+            A Website Health Audit is essential for scaling businesses because it ensures you can consistently identify issues affecting your website performance and conversions before they impact revenue or marketing efficiency.
           </p>
 
           <h3 className="text-2xl font-bold text-[#102f35] mb-4">
