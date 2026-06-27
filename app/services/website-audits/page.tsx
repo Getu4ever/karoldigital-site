@@ -23,7 +23,7 @@ export default function WebsiteAuditPage() {
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
               Website Health Audit
               <span className="block text-yellow-400 mt-2 text-2xl md:text-3xl font-medium">
-                Improve Conversions & Performance
+                Improve Conversions and Performance
               </span>
             </h1>
 
