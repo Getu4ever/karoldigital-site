@@ -37,10 +37,10 @@ export default function WebsiteAuditPage() {
         <section className="py-20 px-6 md:px-12 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[#102f35] mb-6">Why perform an Expert Website Health Audit?</h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            An <strong>Expert Website Health Audit</strong> is the most effective way to identify hidden performance bottlenecks. When you invest in professional <strong>Conversion Analysis</strong>, you gain <strong>Data Insights</strong> that form a clear roadmap to transform your digital presence. Many businesses lose potential revenue because they lack a comprehensive <strong>Conversion Analysis</strong> of their sales funnels—our <strong>Expert Website Health Audit</strong> delivers the <strong>Data Insights</strong> required for long-term growth.
+            An Expert Website Health Audit is the most effective way to identify hidden performance bottlenecks. When you invest in professional <strong>Conversion Analysis</strong>, you gain <strong>Data Insights</strong> that form a clear roadmap to transform your digital presence. Many businesses lose potential revenue because they lack a comprehensive Analysis of their sales funnels—our Audit delivers the Data Insights required for long-term growth.
           </p>
           <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-            By auditing your site's performance, you ensure a fast, seamless journey. Our <strong>Conversion Analysis</strong> uses <strong>Data Insights</strong> to uncover why users leave, allowing you to <strong>Boost Conversions</strong> and improve overall site performance.
+            By auditing your site's performance, you ensure a fast, seamless journey. Our Conversion Analysis uses <strong>Data Insights</strong> to uncover why users leave, allowing you to Boost Conversions and improve overall site performance.
           </p>
 
           <div className="grid gap-6">
