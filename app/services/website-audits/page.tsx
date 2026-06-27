@@ -8,16 +8,27 @@ export default function WebsiteAuditPage() {
   return (
     <FadeIn>
       <main className="min-h-screen bg-white text-gray-900">
+
         {/* HERO SECTION */}
         <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24 pb-12">
-          <Image src="/hero-page-banner.jpg" alt="Website Health Audit" fill priority className="object-cover brightness-[0.4]" />
-          <div className="relative z-10 px-6 max-w-4xl">
+          <Image
+            src="/hero-page-banner.jpg"
+            alt="Website Health Audit"
+            fill
+            priority
+            className="object-cover brightness-[0.4]"
+          />
+
+          <div className="relative z-10 px-6 max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
               Website Health Audit
-              <span className="block text-yellow-400 mt-2">Boost Conversions With Data Insights</span>
+              <span className="block text-yellow-400 mt-2 text-2xl md:text-3xl font-medium">
+                Improve Conversions & Performance
+              </span>
             </h1>
-            <p className="text-xl text-gray-100 max-w-2xl mx-auto">
-              Our <strong>website performance audit</strong> provides the <strong>Conversion Analysis</strong> and <strong>Data Insights</strong> your business needs to grow.
+
+            <p className="text-lg text-gray-200 max-w-xl mx-auto">
+              Identify issues affecting your website performance and conversions.
             </p>
           </div>
         </section>
@@ -35,24 +46,41 @@ export default function WebsiteAuditPage() {
 
         {/* CONTENT */}
         <section className="py-10 px-6 md:px-12 max-w-4xl mx-auto">
+
           <h2 className="text-3xl font-bold text-[#102f35] mb-6">
-            Why perform a website health audit?
+            Why perform a Website Health Audit?
           </h2>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            A website performance audit is the most effective way to identify hidden performance bottlenecks. When you invest in professional <strong>Conversion Analysis</strong>, you gain <strong>Data Insights</strong> that form a clear roadmap to transform your digital presence. Many businesses lose potential revenue because they lack a comprehensive analysis of their sales funnels—this audit delivers the insights required for long-term growth.
+            A Website Health Audit is designed to improve conversions and performance by identifying issues affecting your website performance and conversions. This structured Website Health Audit helps businesses clearly understand what is preventing users from converting.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            Many websites suffer from hidden problems that reduce performance. A proper Website Health Audit highlights technical issues, UX barriers, and SEO limitations that directly affect your ability to improve conversions and performance.
           </p>
 
           <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-            By reviewing your site's performance, you ensure a fast, seamless journey. Our conversion analysis uses <strong>data-driven insights</strong> to uncover why users leave, allowing you to improve conversions and overall site performance.
+            By carrying out a Website Health Audit, you can systematically identify issues affecting your website performance and conversions, allowing you to make targeted improvements that lead to measurable growth.
           </p>
 
           <div className="grid gap-6">
             {[
-              { title: "Technical Performance", desc: "This audit checks rendering bottlenecks to ensure peak site performance." },
-              { title: "User Experience (UX)", desc: "Deep conversion analysis to optimize paths and improve results." },
-              { title: "SEO Health", desc: "Technical review providing data insights to boost visibility." },
-              { title: "Conversion Strategy", desc: "We analyse user journeys to help improve conversion rates through smarter strategy." },
+              {
+                title: "Technical Performance",
+                desc: "This Website Health Audit identifies performance issues affecting load speed, rendering, and overall site stability."
+              },
+              {
+                title: "User Experience (UX)",
+                desc: "We analyse user journeys to identify friction points that impact conversions and performance."
+              },
+              {
+                title: "SEO Health",
+                desc: "This audit highlights SEO issues affecting visibility and organic performance."
+              },
+              {
+                title: "Conversion Strategy",
+                desc: "We identify barriers that prevent users from converting and provide actionable improvements."
+              }
             ].map((item, idx) => (
               <div key={idx} className="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-[#102f35] transition">
                 <h3 className="font-bold text-xl text-[#102f35] mb-2">{item.title}</h3>
@@ -64,16 +92,21 @@ export default function WebsiteAuditPage() {
 
         {/* SEO EXPANDED CONTENT */}
         <section className="py-6 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
+
           <h2 className="text-3xl font-bold text-[#102f35] mb-6">
             What Is a Website Health Audit?
           </h2>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            A website health audit is a comprehensive evaluation of technical performance, user experience, SEO structure, and conversion effectiveness. This process combines advanced diagnostics with <strong>data insights</strong> to identify obstacles that prevent your site from converting visitors into customers.
+            A Website Health Audit is a structured process used to improve conversions and performance by analysing technical performance, user behaviour, and SEO structure. It helps identify issues affecting your website performance and conversions in a clear, actionable way.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            Unlike basic reports, a Website Health Audit explains not only what is wrong, but also why it is happening and how it impacts your ability to improve conversions and performance.
           </p>
 
           <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-            Unlike automated reports, this audit provides actionable findings. Every recommendation is designed to improve conversions, engagement, and long-term digital growth through reliable insights.
+            A Website Health Audit is essential for businesses that want to scale, as it ensures you can consistently identify issues affecting your website performance and conversions before they impact revenue.
           </p>
 
           <h3 className="text-2xl font-bold text-[#102f35] mb-4">
@@ -81,38 +114,46 @@ export default function WebsiteAuditPage() {
           </h3>
 
           <ul className="list-disc pl-6 text-lg text-gray-700 space-y-3 mb-10">
-            <li>Full technical performance and page speed analysis</li>
+            <li>Technical performance and page speed analysis</li>
             <li>SEO structure, indexing, and crawlability review</li>
             <li>User experience and conversion path evaluation</li>
             <li>Mobile responsiveness and accessibility testing</li>
-            <li>Analytics review and data interpretation</li>
+            <li>Analytics and behavioural data interpretation</li>
           </ul>
 
           <h3 className="text-2xl font-bold text-[#102f35] mb-4">
-            How It Boosts Conversions
+            How It Improves Conversions & Performance
           </h3>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Conversion losses often occur silently. Our analysis identifies friction points such as slow load times, unclear messaging, poor navigation, and ineffective calls-to-action. By applying behavioural insights, we help improve conversions without increasing ad spend.
+            A Website Health Audit helps improve conversions and performance by identifying issues affecting your website performance and conversions such as slow loading speed, unclear messaging, weak calls-to-action, and poor user flow.
           </p>
 
           <p className="text-lg text-gray-700 leading-relaxed">
-            Businesses that act on these findings consistently see improvements in lead quality, engagement time, and revenue performance.
+            Businesses that implement recommendations from a Website Health Audit typically see measurable improvements in conversions, engagement, and overall performance.
           </p>
         </section>
 
         {/* CTA */}
         <section className="bg-[#102f35] py-20 px-6 text-center text-white">
+
           <h2 className="text-3xl font-bold mb-6">
-            Need a Website Health & Conversion Analysis?
+            Need a Website Health Audit?
           </h2>
+
           <p className="mb-8 text-gray-300 max-w-lg mx-auto">
-            Book a full review to uncover issues affecting performance and improve conversions with data-backed insights.
+            Get a full Website Health Audit to improve conversions and performance by identifying issues affecting your website performance and conversions.
           </p>
-          <Link href="/contact" className="bg-yellow-400 text-[#102f35] px-10 py-4 rounded-full font-bold hover:bg-yellow-300 transition">
+
+          <Link
+            href="/contact"
+            className="bg-yellow-400 text-[#102f35] px-10 py-4 rounded-full font-bold hover:bg-yellow-300 transition"
+          >
             Book Your Audit Today
           </Link>
+
         </section>
+
       </main>
     </FadeIn>
   );
