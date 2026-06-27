@@ -34,7 +34,7 @@ export default function WebsiteAuditPage() {
         </nav>
 
         {/* CONTENT */}
-        <section className="py-20 px-6 md:px-12 max-w-4xl mx-auto">
+        <section className="py-10 px-6 md:px-12 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[#102f35] mb-6">Why perform an Expert Website Health Audit?</h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             An Expert Website Health Audit is the most effective way to identify hidden performance bottlenecks. When you invest in professional <strong>Conversion Analysis</strong>, you gain <strong>Data Insights</strong> that form a clear roadmap to transform your digital presence. Many businesses lose potential revenue because they lack a comprehensive Analysis of their sales funnels—our Audit delivers the Data Insights required for long-term growth.
@@ -57,6 +57,44 @@ export default function WebsiteAuditPage() {
             ))}
           </div>
         </section>
+        {/* SEO EXPANDED CONTENT */}
+<section className="py-6 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
+  <h2 className="text-3xl font-bold text-[#102f35] mb-6">
+    What Is an Expert Website Health Audit?
+  </h2>
+
+  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+    An <strong>Expert Website Health Audit</strong> is a comprehensive evaluation of your website’s technical performance, user experience, SEO structure, and conversion effectiveness. This process combines advanced diagnostics with <strong>Data Insights</strong> to identify obstacles that prevent your site from converting visitors into customers.
+  </p>
+
+  <p className="text-lg text-gray-700 mb-10 leading-relaxed">
+    Unlike automated reports, our Website Health Audit delivers actionable findings. Every recommendation is designed to <strong>Boost Conversions</strong>, improve engagement, and strengthen long-term digital growth through reliable Data Insights.
+  </p>
+
+  <h3 className="text-2xl font-bold text-[#102f35] mb-4">
+    What Our Website Health Audit Covers
+  </h3>
+
+  <ul className="list-disc pl-6 text-lg text-gray-700 space-y-3 mb-10">
+    <li>Full technical performance and page speed analysis</li>
+    <li>SEO structure, indexing, and crawlability review</li>
+    <li>User experience and conversion path evaluation</li>
+    <li>Mobile responsiveness and accessibility testing</li>
+    <li>Analytics review and Data Insights interpretation</li>
+  </ul>
+
+  <h3 className="text-2xl font-bold text-[#102f35] mb-4">
+    How an Expert Website Health Audit Boosts Conversions
+  </h3>
+
+  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+    Conversion losses often occur silently. Our <strong>Conversion Analysis</strong> identifies friction points such as slow load times, unclear messaging, poor navigation, and ineffective calls-to-action. By applying Data Insights from real user behavior, we help you Boost Conversions without increasing ad spend.
+  </p>
+
+  <p className="text-lg text-gray-700 leading-relaxed">
+    Businesses that act on Expert Website Health Audit findings consistently see improvements in lead quality, engagement time, and revenue performance.
+  </p>
+</section>
 
         {/* CTA */}
         <section className="bg-[#102f35] py-20 px-6 text-center text-white">
