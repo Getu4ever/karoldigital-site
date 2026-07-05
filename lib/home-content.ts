@@ -42,6 +42,8 @@ export const homeTestimonials = [
 export const homeCaseStudies = [
   {
     title: "1st Call UK Financial",
+    logo: "/logos/1st-call-financial.webp",
+    logoAlt: "1st Call UK Financial logo",
     description:
       "A mobile-first website experience with strong speed, accessibility, best practices, and SEO performance.",
     industryHref: "/industries/financial-services",
@@ -49,6 +51,8 @@ export const homeCaseStudies = [
   },
   {
     title: "1st Call UK Immigration",
+    logo: "/logos/1st-calluk-immigration.webp",
+    logoAlt: "1st Call UK Immigration logo",
     description:
       "A high-performing service website built to combine trust, clarity, and strong mobile usability.",
     industryHref: "/industries/immigration-services",
@@ -56,9 +60,81 @@ export const homeCaseStudies = [
   },
   {
     title: "Food Mama's Kitchen",
+    logo: "/logos/food-mama-kitchen.webp",
+    logoAlt: "Food Mama's Kitchen logo",
     description:
       "A fast, well-structured website experience supported by strong page quality, clean metadata, and a clear technical foundation.",
     industryHref: "/industries/catering-services",
     industryLabel: "Catering & food brand websites",
+  },
+] as const;
+
+export const homeServices = [
+  {
+    title: "Web Design",
+    description:
+      "Professional website design for service businesses that need a stronger first impression, clearer messaging, and better conversion.",
+    href: "/services/web-design",
+    cta: "Explore services",
+  },
+  {
+    title: "Custom Web Development",
+    description:
+      "Custom-built websites for businesses that need more flexibility, better performance, and a site tailored to how they actually sell.",
+    href: "/services/custom-web-development",
+    cta: "View development options",
+  },
+  {
+    title: "Next.js Development",
+    description:
+      "High-performance websites with a modern technical foundation, designed for speed, usability, and long-term scalability.",
+    href: "/services/nextjs-development",
+    cta: "Learn more",
+  },
+  {
+    title: "Website Audits",
+    description:
+      "Clear advice for businesses whose current site feels slow, unclear, outdated, or underperforming.",
+    href: "/book?service=Website+Audit",
+    cta: "Request a website audit",
+  },
+] as const;
+
+export const homeDifference = [
+  {
+    title: "Clear positioning",
+    description:
+      "Visitors should quickly understand what you do, who you help, and why your business is the right fit.",
+  },
+  {
+    title: "Faster trust-building",
+    description:
+      "Better branding, stronger presentation, and a cleaner user experience help your business feel more credible from the first few seconds.",
+  },
+  {
+    title: "Better enquiry flow",
+    description:
+      "Clearer calls-to-action, stronger hierarchy, and less friction make it easier for the right people to get in touch.",
+  },
+] as const;
+
+export const homeIndustries = [
+  {
+    title: "Financial Services",
+    description:
+      "Website design for financial businesses that need trust, clarity, and a more professional lead generation journey.",
+    href: "/industries/financial-services",
+  },
+  {
+    title: "Immigration Lawyers",
+    description:
+      "Websites for immigration-focused firms that need to build authority, reduce confusion, and make it easier for clients to enquire.",
+    href: "/industries/immigration-services",
+  },
+  {
+    title: "Construction and Trades",
+    description:
+      "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
+    href: "/industries/building-services",
   },
 ] as const;
