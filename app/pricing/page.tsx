@@ -246,7 +246,7 @@ export default function PricingPage() {
           <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6 max-w-7xl mx-auto">
             <PricingCard
               title="Starter Lite"
-              desc="A lean professional site for businesses that need a credible online presence fast."
+              desc="A lean professional site with a focused scope to keep costs down while still looking credible."
               price="£450-£750"
               fit="Best for new businesses or simple service offers"
               features={[
@@ -276,12 +276,12 @@ export default function PricingPage() {
 
             <PricingCard
               title="Growth"
-              desc="Built for businesses that need more enquiries and a stronger conversion journey."
-              price="From £1,400"
+              desc="Built for businesses that need more enquiries — with conversion work scoped to your highest-impact pages."
+              price="From £1,750"
               fit="Best for businesses already getting traffic"
               features={[
-                "UX & Conversion Optimisation",
-                "Full On-page SEO",
+                "Conversion-Focused UX (Key Pages)",
+                "Priority On-page SEO (Core Pages)",
                 "Performance Tuning",
                 "Lead Capture System",
               ]}
@@ -490,7 +490,8 @@ export default function PricingPage() {
               </ul>
               <p className="font-bold text-xl mb-2">From £150/update</p>
               <p className="text-sm text-gray-500 mb-6">
-                Best for one-off work without a monthly plan
+                Small tasks billed in 1-hour minimum blocks — best for one-off
+                work without a monthly plan
               </p>
               <Link
                 href="/book"
@@ -521,6 +522,7 @@ export default function PricingPage() {
                   title: "Paid Advertising",
                   desc: "Google Ads and paid social campaigns designed to capture qualified traffic without wasting budget.",
                   price: "From £200/mo",
+                  priceNote: "Management fee only — ad spend billed separately",
                   icon: "🚀",
                 },
                 {
@@ -554,6 +556,11 @@ export default function PricingPage() {
 
                   <div className="pt-6 border-t border-gray-50">
                     <p className="text-[#102f35] font-bold">{item.price}</p>
+                    {"priceNote" in item && item.priceNote && (
+                      <p className="text-xs text-gray-500 mt-1">
+                        {item.priceNote}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
@@ -721,7 +728,7 @@ export default function PricingPage() {
                 },
                 {
                   q: "How long does a project take?",
-                  a: "Most projects take between 5 and 25 days depending on scope, feedback speed, and whether extra integrations are needed.",
+                  a: "Most projects take between 3 and 6 weeks depending on scope, feedback speed, and whether extra integrations are needed.",
                 },
                 {
                   q: "Can I update content myself?",

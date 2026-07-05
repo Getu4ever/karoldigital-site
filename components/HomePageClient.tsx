@@ -208,7 +208,7 @@ export default function HomePageClient() {
               {homeServices.map((service, index) => (
                 <article
                   key={service.title}
-                  className="group flex flex-col rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40 hover:shadow-lg"
+                  className="group flex flex-col rounded-3xl border border-gray-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40 hover:shadow-lg"
                 >
                   <IconBadge icon={serviceIcons[index]} />
                   <h3 className="mb-4 text-2xl font-bold text-[#102f35]">{service.title}</h3>
@@ -217,7 +217,7 @@ export default function HomePageClient() {
                   </p>
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-1 font-semibold text-[#102f35] transition group-hover:text-[#411b3f]"
+                    className="inline-flex items-center justify-center gap-1 font-semibold text-[#102f35] transition group-hover:text-[#411b3f]"
                   >
                     {service.cta}
                     <ArrowRight
@@ -260,7 +260,7 @@ export default function HomePageClient() {
               {homeDifference.map((item, index) => (
                 <article
                   key={item.title}
-                  className="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm transition hover:border-[#102f35]/15 hover:shadow-md"
+                  className="rounded-3xl border border-gray-100 bg-gray-50 p-8 text-center shadow-sm transition hover:border-[#102f35]/15 hover:shadow-md"
                 >
                   <IconBadge icon={differenceIcons[index]} />
                   <h3 className="mb-4 text-2xl font-bold text-[#102f35]">{item.title}</h3>
@@ -290,14 +290,14 @@ export default function HomePageClient() {
                 <Link
                   key={industry.title}
                   href={industry.href}
-                  className="group flex flex-col rounded-3xl border border-gray-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-[#102f35]/20 hover:shadow-lg"
+                  className="group flex flex-col rounded-3xl border border-gray-200 bg-white p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[#102f35]/20 hover:shadow-lg"
                 >
                   <IconBadge icon={industryIcons[index]} />
                   <h3 className="mb-3 text-2xl font-bold text-[#102f35] group-hover:text-[#411b3f]">
                     {industry.title}
                   </h3>
                   <p className="mb-6 flex-grow text-gray-700">{industry.description}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35]">
+                  <span className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-[#102f35]">
                     Explore this industry
                     <ArrowRight
                       size={16}

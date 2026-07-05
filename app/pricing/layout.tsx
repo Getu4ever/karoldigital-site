@@ -72,10 +72,10 @@ const pricingServiceSchema = {
       {
         "@type": "Offer",
         name: "Growth Website Package",
-        price: "1400",
+        price: "1750",
         priceCurrency: "GBP",
         description:
-          "A conversion-focused website package for businesses that need more enquiries, including UX improvements, on-page SEO, performance tuning, and lead capture systems.",
+          "A conversion-focused website package for businesses that need more enquiries, including conversion UX on key pages, priority on-page SEO, performance tuning, and lead capture systems.",
         url: "https://www.karoldigital.co.uk/pricing",
       },
       {
