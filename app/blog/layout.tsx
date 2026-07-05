@@ -3,9 +3,9 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Karol Digital Blog – Tips for Small Business Grow online",
+  title: "Karol Digital Blog – Web Design & Lead Generation for UK Service Businesses",
   description:
-    "Read practical guides, insights, and digital marketing tips to help UK small businesses grow online. Updated regularly by Karol Digital.",
+    "Read practical guides on web design, SEO, conversion, and digital growth for UK service businesses. Updated regularly by Karol Digital.",
   url: "https://www.karoldigital.co.uk/blog",
   image: "/hero-page-banner.jpg",
 });

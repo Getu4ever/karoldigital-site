@@ -1,37 +1,19 @@
-import { client } from "@/sanity/lib/client";
-import { groq } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
-
-interface BlogPost {
-  title: string;
-  subtitle?: string;
-  publishedAt: string;
-  slug: string;
-  imageUrl?: string;
-}
+import BlogCta from "@/components/BlogCta";
+import { getBlogIndexPosts } from "@/lib/sanity-blog";
 
 export default async function BlogIndexPage() {
-  const posts = await client.fetch<BlogPost[]>(
-    groq`*[_type == "blogPost"] | order(publishedAt desc){
-      title,
-      subtitle,
-      publishedAt,
-      "slug": slug.current,
-      "imageUrl": mainImage.asset->url
-    }`
-  );
+  const posts = await getBlogIndexPosts();
 
   return (
     <FadeIn>
       <main className="min-h-screen bg-white text-gray-900">
-
-        {/* === HERO SECTION === */}
-        <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4">
+        <section className="relative flex min-h-[60vh] items-center justify-center pt-8 text-center text-white md:pt-4">
           <Image
             src="/hero-page-banner.jpg"
-            alt="Karol Digital Blog"
+            alt="Karol Digital Blog — web design and lead generation for UK service businesses"
             fill
             priority
             className="object-cover brightness-[0.65]"
@@ -39,51 +21,38 @@ export default async function BlogIndexPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="text-white">Karol Digital </span>
-            <span className="text-yellow-400">Blog</span>
-
-            {/* SEO-only extension (not visible on screen) */}
-            <span className="sr-only">
-              Web design, SEO and digital marketing tips for small business growth in the UK
-            </span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-            Insights, tips, and guides to help small businesses grow online.
-          </p>
-
+            <h1 className="mb-4 text-5xl font-extrabold md:text-6xl">
+              <span className="text-white">Karol Digital </span>
+              <span className="text-yellow-400">Blog</span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg text-gray-100 md:text-xl">
+              Practical guides on web design, SEO, and conversion for UK service businesses
+              that want more qualified enquiries.
+            </p>
           </div>
         </section>
 
-        {/* === BLOG GRID === */}
-        <section className="py-16 px-6 md:px-12">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+        <section className="px-6 py-16 md:px-12">
+          <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-3">
             {posts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="block rounded-2xl shadow-md hover:shadow-xl transition bg-white overflow-hidden border border-gray-100"
+                className="block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition hover:shadow-xl"
               >
                 {post.imageUrl && (
                   <Image
                     src={post.imageUrl}
-                    alt={post.title}
+                    alt={post.imageAlt || post.title}
                     width={500}
                     height={350}
-                    className="w-full h-56 object-cover"
+                    className="h-56 w-full object-cover"
                   />
                 )}
 
                 <div className="p-6">
-                  <h2 className="text-xl font-bold text-[#102f35] mb-2">
-                    {post.title}
-                  </h2>
-
-                  <p className="text-gray-600 line-clamp-3 mb-4">
-                    {post.subtitle}
-                  </p>
-
+                  <h2 className="mb-2 text-xl font-bold text-[#102f35]">{post.title}</h2>
+                  <p className="mb-4 line-clamp-3 text-gray-600">{post.subtitle}</p>
                   <p className="text-sm text-gray-500">
                     {new Date(post.publishedAt).toLocaleDateString("en-GB", {
                       day: "numeric",
@@ -95,8 +64,17 @@ export default async function BlogIndexPage() {
               </Link>
             ))}
           </div>
+
+          {posts.length === 0 && (
+            <p className="text-center text-gray-600">New articles are coming soon.</p>
+          )}
         </section>
 
+        <section className="px-6 pb-20 md:px-12">
+          <div className="mx-auto max-w-4xl">
+            <BlogCta />
+          </div>
+        </section>
       </main>
     </FadeIn>
   );

@@ -47,6 +47,13 @@ export default defineType({
       title: "Published Date",
       type: "datetime",
     },
+    {
+      name: "authorName",
+      title: "Author Name",
+      type: "string",
+      initialValue: "Karol Digital",
+      description: "Displayed on the blog post and used in structured data.",
+    },
 
     // SEO
     {

@@ -1,5 +1,36 @@
-import { client } from "@/sanity/lib/client";
-import { groq } from "next-sanity";
+import type { Metadata } from "next";
+import { generateSEOMetadata } from "@/components/seo-server";
+import { getBlogPostSeo } from "@/lib/sanity-blog";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogPostSeo(slug);
+
+  if (!post) {
+    return { title: "Blog Post | Karol Digital" };
+  }
+
+  const title = post.seoTitle || post.title;
+  const description =
+    post.seoDescription ||
+    post.subtitle ||
+    "Practical web design and lead generation advice for UK service businesses.";
+  const image = post.seoImageUrl || post.imageUrl || "/hero-page-banner.jpg";
+  const url = `https://www.karoldigital.co.uk/blog/${slug}`;
+
+  return generateSEOMetadata({
+    title: `${title} | Karol Digital Blog`,
+    description,
+    url,
+    image,
+    type: "article",
+    keywords: post.seoKeywords?.join(", "),
+  });
+}
 
 export default async function BlogPostLayout({
   children,
@@ -10,19 +41,8 @@ export default async function BlogPostLayout({
 }) {
   const { slug } = await params;
   const articleUrl = `https://www.karoldigital.co.uk/blog/${slug}`;
+  const post = await getBlogPostSeo(slug);
 
-  // Fetch minimal metadata-required fields
-  const post = await client.fetch(
-    groq`*[_type == "blogPost" && slug.current == $slug][0]{
-      title,
-      publishedAt,
-      "imageUrl": mainImage.asset->url,
-      author->{ name }
-    }`,
-    { slug }
-  );
-
-  // Breadcrumb Schema
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -48,51 +68,52 @@ export default async function BlogPostLayout({
     ],
   };
 
-  // BlogPosting Schema
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post?.title,
-    image: post?.imageUrl ? [post.imageUrl] : [],
-    datePublished: post?.publishedAt,
-    dateModified: post?.publishedAt,
-    author: {
-      "@type": "Person",
-      name: post?.author?.name || "Karol Digital",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Karol Digital",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.karoldigital.co.uk/logo.png",
-      },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": articleUrl,
-    },
-    url: articleUrl,
-  };
+  const articleJsonLd = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.seoTitle || post.title,
+        description: post.seoDescription || post.subtitle,
+        image: post.seoImageUrl || post.imageUrl ? [post.seoImageUrl || post.imageUrl] : [],
+        datePublished: post.publishedAt,
+        dateModified: post.updatedAt || post.publishedAt,
+        author: {
+          "@type": "Person",
+          name: post.authorName || "Karol Digital",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Karol Digital",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.karoldigital.co.uk/logo.png",
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": articleUrl,
+        },
+        url: articleUrl,
+        keywords: post.seoKeywords?.join(", "),
+      }
+    : null;
 
   return (
     <>
-      {/* Breadcrumb Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbJsonLd),
         }}
       />
-
-      {/* BlogPosting Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
+      {articleJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(articleJsonLd),
+          }}
+        />
+      )}
       {children}
     </>
   );

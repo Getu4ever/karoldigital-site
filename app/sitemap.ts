@@ -1,7 +1,8 @@
 // app/sitemap.ts
 import { MetadataRoute } from "next";
+import { getBlogPostsForSitemap } from "@/lib/sanity-blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.karoldigital.co.uk";
 
   const corePages: MetadataRoute.Sitemap = [
@@ -83,22 +84,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const blogs: MetadataRoute.Sitemap = [
-    "is-your-business-ready-for-ai-search-2026-guide",
-    "financial-services-website-design-trust-factor",
-    "how-much-does-a-professional-website-cost-uk-small-business-2026",
-    "immigration-consultant-website-essentials",
-    "construction-website-design-tips-uk-builders",
-    "interactive-catering-menu-vs-pdf-sales",
-    "why-every-small-business-needs-a-modern-website-in-2025",
-    "how-to-choose-the-right-website-design-package-for-your-small-business-in-2025",
-    "the-importance-of-website-speed-for-small-businesses-in-2025",
-    "enhancing-web-accessibility-for-better-user-experience",
-    "why-every-small-business-needs-a-conversion-optimised-website-2025-guide",
-    "diy-vs-professional-website-design-which-is-right-for-your-business-in-2025",
-  ].map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date("2026-06-17"),
+  const blogPosts = await getBlogPostsForSitemap();
+  const blogs: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt || post.publishedAt || Date.now()),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
