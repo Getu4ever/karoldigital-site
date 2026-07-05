@@ -24,7 +24,7 @@ export default function FinanceWebDesign() {
     "price": "0.00",
     "lowPrice": "800", // Update this to your starting price for finance services
     "highPrice": "8000",
-    "url": "https://www.karoldigital.co.uk/services/financial-services"
+    "url": "https://www.karoldigital.co.uk/industries/financial-services"
   },
   "image": "https://www.karoldigital.co.uk/1stcall-finance-showcase.jpg",
   "provider": {
@@ -77,7 +77,7 @@ export default function FinanceWebDesign() {
               High-trust, secure, and professional web platforms for UK Mortgage Brokers, Chartered Accountants, and Certified Financial Advisors.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-base"
             >
               Request a Professional Consultation
@@ -336,7 +336,7 @@ export default function FinanceWebDesign() {
               Modernize your operations with a bespoke web architecture engineered to validate corporate expertise and funnel high-value client acquisitions.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-yellow-400 text-black px-10 py-4 rounded-full font-black hover:bg-white transition-all shadow-xl hover:scale-[1.02] active:scale-95"
             >
               Start Your Finance Project

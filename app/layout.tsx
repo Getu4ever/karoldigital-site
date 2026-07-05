@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Metadata, Viewport } from "next";
 
 export const viewport: Viewport = {
@@ -128,6 +129,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
+        <GoogleAnalytics />
         <Header />
         <AnimateWrapper>{children}</AnimateWrapper>
         <Footer />

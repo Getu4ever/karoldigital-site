@@ -23,7 +23,7 @@ const PricingCard = ({
   features,
   buttonText,
   highlighted = false,
-  link = "/contact",
+  link = "/book",
   fit,
 }: PricingCardProps) => {
   return (
@@ -215,13 +215,13 @@ export default function PricingPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="/book"
                 className="inline-block bg-[#102f35] text-white px-8 py-4 rounded-full font-bold hover:bg-[#411b3f] transition"
               >
                 Ask About the Audit
               </Link>
               <Link
-                href="/contact"
+                href="/book"
                 className="inline-block border border-[#102f35] text-[#102f35] px-8 py-4 rounded-full font-bold hover:bg-[#102f35] hover:text-white transition"
               >
                 Get Evaluation
@@ -255,7 +255,8 @@ export default function PricingPage() {
                 "Contact Form",
                 "Basic SEO Setup",
               ]}
-              buttonText="Ask About Starter Lite"
+              buttonText="Book Starter Lite Consultation"
+              link="/book?service=Starter+Lite"
             />
 
             <PricingCard
@@ -269,7 +270,8 @@ export default function PricingPage() {
                 "Mobile Responsive",
                 "Core SEO Setup",
               ]}
-              buttonText="Ask About Starter"
+              buttonText="Book Starter Consultation"
+              link="/book?service=Starter"
             />
 
             <PricingCard
@@ -283,7 +285,8 @@ export default function PricingPage() {
                 "Performance Tuning",
                 "Lead Capture System",
               ]}
-              buttonText="See If Growth Fits"
+              buttonText="Book Growth Consultation"
+              link="/book?service=Growth"
               highlighted
             />
 
@@ -298,7 +301,8 @@ export default function PricingPage() {
                 "Advanced Custom Development",
                 "Conversion Strategy",
               ]}
-              buttonText="Discuss Premium"
+              buttonText="Book Premium Consultation"
+              link="/book?service=Premium"
             />
 
             <PricingCard
@@ -312,7 +316,8 @@ export default function PricingPage() {
                 "CRM Integration",
                 "High-Level Security",
               ]}
-              buttonText="Ask for a Quote"
+              buttonText="Request Enterprise Quote"
+              link="/book?service=Enterprise"
             />
           </div>
         </section>
@@ -331,7 +336,7 @@ export default function PricingPage() {
             </p>
 
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-[#102f35] text-white px-8 py-4 rounded-full font-bold hover:bg-[#411b3f] transition"
             >
               Get Expert Advice
@@ -356,28 +361,28 @@ export default function PricingPage() {
               {[
                 {
                   name: "SBC Marketing",
-                  link: "[sbc-marketing.co.uk](https://sbc-marketing.co.uk/)",
+                  link: "https://sbc-marketing.co.uk/",
                   logo: "/logos/sbc.webp",
                   quote:
                     "A true partner in growth that understands aesthetics and high-converting marketing.",
                 },
                 {
                   name: "1st Call UK Immigration",
-                  link: "[1stcalluk.com](https://www.1stcalluk.com/)",
+                  link: "https://www.1stcalluk.com/",
                   logo: "/logos/1st-calluk-immigration.webp",
                   quote:
                     "KD Transformed our online presence, making it easier than ever for clients to reach us.",
                 },
                 {
                   name: "1st Call UK Financial",
-                  link: "[1stcalluk.financial](https://www.1stcalluk.financial/)",
+                  link: "https://www.1stcalluk.financial/",
                   logo: "/logos/1st-call-financial.webp",
                   quote:
                     "Professional, efficient, and results-driven. Our lead generation has never been better.",
                 },
                 {
                   name: "Food Mama’s Kitchen",
-                  link: "[foodmamakitchens.co.uk](https://www.foodmamakitchens.co.uk/)",
+                  link: "https://www.foodmamakitchens.co.uk/",
                   logo: "/logos/food-mama-kitchen.webp",
                   quote:
                     "The branding and website have truly elevated our business. Highly recommended.",
@@ -450,7 +455,7 @@ export default function PricingPage() {
                 Best for stable brochure-style websites
               </p>
               <Link
-                href="/contact"
+                href="/book"
                 className="block bg-[#102f35] text-white py-3 rounded-full"
               >
                 Ask About Basic
@@ -469,7 +474,7 @@ export default function PricingPage() {
                 Best for growing websites that need regular updates
               </p>
               <Link
-                href="/contact"
+                href="/book"
                 className="block bg-[#411b3f] text-white py-3 rounded-full"
               >
                 Ask About Premium
@@ -488,7 +493,7 @@ export default function PricingPage() {
                 Best for one-off work without a monthly plan
               </p>
               <Link
-                href="/contact"
+                href="/book"
                 className="block bg-[#102f35] text-white py-3 rounded-full"
               >
                 Request Work
@@ -688,7 +693,7 @@ export default function PricingPage() {
               </p>
 
               <Link
-                href="/contact"
+                href="/book"
                 className="inline-block bg-yellow-400 text-[#102f35] px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition shadow-lg"
               >
                 Get Started Today

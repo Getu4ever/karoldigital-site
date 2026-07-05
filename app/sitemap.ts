@@ -2,7 +2,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "[karoldigital.co.uk](https://www.karoldigital.co.uk)";
+  const baseUrl = "https://www.karoldigital.co.uk";
 
   const corePages: MetadataRoute.Sitemap = [
     {
@@ -24,10 +24,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/industries`,
+      lastModified: new Date("2026-06-17"),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/pricing`,
       lastModified: new Date("2026-05-19"),
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/book`,
+      lastModified: new Date("2026-06-17"),
+      changeFrequency: "monthly",
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/blog`,
@@ -45,14 +57,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const services: MetadataRoute.Sitemap = [
     "web-design",
+    "custom-web-development",
+    "nextjs-development",
+    "website-audits",
     "digital-marketing",
     "social-media",
+    "ai-logo-design",
+    "small-business-web-design-london",
+  ].map((service) => ({
+    url: `${baseUrl}/services/${service}`,
+    lastModified: new Date("2026-05-19"),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  const industries: MetadataRoute.Sitemap = [
+    "financial-services",
     "immigration-services",
     "building-services",
     "catering-services",
-    "financial-services",
-  ].map((service) => ({
-    url: `${baseUrl}/services/${service}`,
+  ].map((industry) => ({
+    url: `${baseUrl}/industries/${industry}`,
     lastModified: new Date("2026-05-19"),
     changeFrequency: "monthly" as const,
     priority: 0.8,
@@ -73,10 +98,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "diy-vs-professional-website-design-which-is-right-for-your-business-in-2025",
   ].map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date("2026-06-17"), // replace with real per-post dates if possible
+    lastModified: new Date("2026-06-17"),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
-  return [...corePages, ...services, ...blogs];
+  return [...corePages, ...services, ...industries, ...blogs];
 }

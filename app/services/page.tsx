@@ -42,17 +42,17 @@ export default function ServicesPage() {
 
   const industryLinks = [
     {
-      href: "/services/financial-services",
+      href: "/industries/financial-services",
       label: "Financial Services",
       icon: <Landmark size={18} />,
     },
     {
-      href: "/services/immigration-services",
+      href: "/industries/immigration-services",
       label: "Immigration Lawyers",
       icon: <Scale size={18} />,
     },
     {
-      href: "/services/building-services",
+      href: "/industries/building-services",
       label: "Construction & Trades",
       icon: <HardHat size={18} />,
     },
@@ -73,8 +73,8 @@ export default function ServicesPage() {
         "Mobile-responsive layouts",
         "Stronger trust and credibility signals",
       ],
-      href: "/contact",
-      cta: "Book a Consultation",
+      href: "/book",
+      cta: "Book a Free Consultation",
     },
     {
       title: "Custom Web Development",
@@ -85,7 +85,7 @@ export default function ServicesPage() {
         "No template bloat",
         "Built around your goals and user journey",
       ],
-      href: "/contact",
+      href: "/book?service=Custom+Web+Development",
       cta: "Discuss Your Project",
     },
     {
@@ -97,7 +97,7 @@ export default function ServicesPage() {
         "Clean technical foundation",
         "Better performance across devices",
       ],
-      href: "/contact",
+      href: "/book?service=Next.js+Development",
       cta: "Talk About Next.js Development",
     },
     {
@@ -109,7 +109,7 @@ export default function ServicesPage() {
         "Performance and SEO checks",
         "Clear next-step recommendations",
       ],
-      href: "/contact",
+      href: "/book?service=Website+Audit",
       cta: "Request a Website Audit",
     },
   ];
@@ -504,10 +504,10 @@ export default function ServicesPage() {
             to improve, the next step is a focused conversation.
           </p>
           <Link
-            href="/contact"
+            href="/book"
             className="inline-block bg-white text-[#102f35] hover:bg-[#411b3f] hover:text-white font-semibold px-8 py-4 rounded-full shadow-lg transition"
           >
-            Book a Consultation
+            Book a Free Consultation
           </Link>
         </section>
       </main>

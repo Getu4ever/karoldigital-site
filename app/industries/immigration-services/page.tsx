@@ -14,16 +14,16 @@ import {
 } from "lucide-react";
 
 const schemaMarkup = {
-  "@context": "[schema.org](https://schema.org)",
+  "@context": "https://schema.org",
   "@type": "Service",
   name: "Immigration Law Firm Website Design Systems",
   description:
     "Premium, high-trust website design and SEO systems tailored for UK immigration law firms, OISC-regulated consultants, and corporate visa advisory practices.",
-  image: "[karoldigital.co.uk](https://www.karoldigital.co.uk/1st-call-uk-immigration-services.jpg)",
+  image: "https://www.karoldigital.co.uk/1st-call-uk-immigration-services.jpg",
   provider: {
     "@type": "ProfessionalService",
     name: "Karol Digital",
-    url: "[karoldigital.co.uk](https://www.karoldigital.co.uk)",
+    url: "https://www.karoldigital.co.uk",
     areaServed: {
       "@type": "Country",
       name: "United Kingdom",
@@ -80,7 +80,7 @@ export default function ImmigrationWebDesign() {
             </p>
 
             <Link
-              href="/contact"
+              href="/book"
               className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
             >
               Get a Quote for Your Firm
@@ -419,7 +419,7 @@ export default function ImmigrationWebDesign() {
                 </div>
 
                 <Link
-                  href="[1stcalluk.com](https://1stcalluk.com/)"
+                  href="https://1stcalluk.com/"
                   target="_blank"
                   className="inline-flex items-center justify-center bg-[#102f35] text-white px-6 py-4 rounded-full font-bold hover:bg-[#411b3f] transition-all text-sm uppercase tracking-wider group shadow-md"
                 >
@@ -525,7 +525,7 @@ export default function ImmigrationWebDesign() {
               clients to instruct you.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black px-10 py-4 rounded-full font-black text-sm uppercase tracking-wider shadow-lg transition transform hover:scale-105 active:scale-95"
             >
               Start Your Project

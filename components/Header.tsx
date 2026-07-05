@@ -238,11 +238,11 @@ export default function Header() {
           })}
 
           <Link
-  href="/book"
-  className="bg-yellow-400 text-[#102f35] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
->
-  Book a Consultation
-</Link>
+            href="/book"
+            className="bg-yellow-400 text-[#102f35] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
+          >
+            Book a Free Consultation
+          </Link>
         </div>
 
         <button
@@ -384,11 +384,11 @@ export default function Header() {
 
               <div className="flex flex-col gap-2 pt-2 border-t border-white/10">
                 <Link
-                  href="/contact"
+                  href="/book"
                   onClick={closeMobileMenu}
                   className="bg-white text-[#102f35] py-3 rounded-full text-center font-bold shadow-md active:scale-95 transition"
                 >
-                  Book a Consultation
+                  Book a Free Consultation
                 </Link>
               </div>
             </nav>

@@ -31,13 +31,13 @@ export type PageKey =
 
 export const seoConfig: Record<PageKey, SEOProps> = {
   home: {
-    title: "Karol Digital — Affordable Web Design & Digital Marketing",
+    title: "Karol Digital — Web Design for UK Service Businesses",
     description:
-      "Affordable web design, digital marketing, and social media services for small businesses. Modern, mobile-friendly websites built to grow your brand online.",
+      "We build fast, trust-building websites for UK service businesses that want more qualified enquiries, clearer messaging, and stronger online credibility.",
     url: "https://www.karoldigital.co.uk/",
-    image: "/hero-cover.jpg",
+    image: "/seo-cover.jpg",
     keywords:
-      "web design, digital marketing, small business websites, SEO, WordPress design",
+      "web design UK, service business websites, lead generation websites, website audits, Next.js development",
     type: "website",
   },
 

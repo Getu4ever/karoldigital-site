@@ -6,12 +6,12 @@ export const metadata: Metadata = {
     title: "Immigration Law Firm Web & OISC Systems | Karol Digital",
     description:
       "Specialist OISC & SRA-compliant website design for UK immigration firms. High-trust, secure websites with smart intake forms & targeted legal SEO. Get a quote.",
-    url: "https://www.karoldigital.co.uk/services/immigration-services",
+    url: "https://www.karoldigital.co.uk/industries/immigration-services",
     image: "/1st-call-uk-immigration-services.jpg",
   }),
   alternates: {
     canonical:
-      "https://www.karoldigital.co.uk/services/immigration-services",
+      "https://www.karoldigital.co.uk/industries/immigration-services",
   },
 };
 

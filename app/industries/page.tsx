@@ -302,7 +302,7 @@ export default function IndustriesPage() {
             right website structure can make a major difference.
           </p>
           <Link
-            href="/contact"
+            href="/book"
             className="inline-block bg-white text-[#102f35] hover:bg-[#411b3f] hover:text-white font-semibold px-8 py-4 rounded-full shadow-lg transition"
           >
             Book a Consultation

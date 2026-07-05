@@ -70,7 +70,7 @@ export default function CateringWebDesign() {
               Professional catering website design and high-conversion web frameworks for UK food brands. I build custom online ordering systems engineered to turn hungry visitors into booked events.
             </p>
             <Link 
-              href="/contact" 
+              href="/book" 
               className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
             >
               Start My Food Website
@@ -369,7 +369,7 @@ export default function CateringWebDesign() {
               Incorporate lightning-fast order conversion maps, maximize local geographic reach, and establish structural digital dominance.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-yellow-400 text-black px-10 py-4 rounded-full font-black hover:bg-white transition-all shadow-xl hover:scale-[1.02] active:scale-95"
             >
               Let's Cook Up Your Website

@@ -85,7 +85,7 @@ export default function NextJSDevelopmentPage() {
         {/* CTA */}
         <section className="bg-[#102f35] py-20 px-6 text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to upgrade your tech stack?</h2>
-          <Link href="/contact" className="bg-white text-[#102f35] px-10 py-4 rounded-full font-bold">
+          <Link href="/book" className="bg-white text-[#102f35] px-10 py-4 rounded-full font-bold">
             Discuss Your Development Needs
           </Link>
         </section>

@@ -97,7 +97,7 @@ export default function About() {
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="/book"
                   className="inline-block bg-[#102f35] hover:bg-[#411b3f] text-white px-6 py-3 rounded-full font-semibold shadow-md transition"
                 >
                   Book a Free Consultation
@@ -241,10 +241,10 @@ export default function About() {
               you take the next step.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-white text-[#102f35] hover:bg-[#411b3f] hover:text-white font-semibold px-8 py-3 rounded-full transition"
             >
-              Start Your Project
+              Book a Free Consultation
             </Link>
           </section>
         </FadeIn>

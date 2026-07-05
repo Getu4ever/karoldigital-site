@@ -2,9 +2,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Turbopack (default in Next.js 16) handles CSS optimization 
-  // and minification automatically in production.
-  
   images: {
     remotePatterns: [
       {
@@ -21,17 +18,29 @@ const nextConfig: NextConfig = {
   },
 
   async redirects() {
+    const industryRedirects = [
+      "financial-services",
+      "immigration-services",
+      "building-services",
+      "catering-services",
+    ].map((slug) => ({
+      source: `/services/${slug}`,
+      destination: `/industries/${slug}`,
+      permanent: true,
+    }));
+
     return [
       {
-        source: '/solutions',
-        destination: '/services',
+        source: "/solutions",
+        destination: "/services",
         permanent: true,
       },
       {
-        source: '/blog/services/immigration-services',
-        destination: '/services/immigration-services',
+        source: "/blog/services/immigration-services",
+        destination: "/industries/immigration-services",
         permanent: true,
       },
+      ...industryRedirects,
     ];
   },
 };

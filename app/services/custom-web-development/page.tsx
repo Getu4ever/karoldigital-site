@@ -127,7 +127,7 @@ export default function CustomDevelopmentPage() {
               technologies to bring your vision to life.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-[#102f35] text-white font-bold px-10 py-4 rounded-full hover:bg-[#1a4a54] transition"
             >
               Start Your Custom Project

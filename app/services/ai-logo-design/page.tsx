@@ -413,7 +413,7 @@ export default function AILogoDesignPage() {
                 modern, and commercially usable.
               </p>
               <Link
-                href="/contact"
+                href="/book"
                 className="inline-flex items-center gap-2 bg-white text-[#102f35] hover:bg-[#411b3f] hover:text-white font-semibold px-8 py-4 rounded-full shadow-lg transition"
               >
                 Request Logo Design Support

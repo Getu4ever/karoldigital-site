@@ -3,9 +3,9 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Contact Karol Digital – Get in Touch Today",
+  title: "Contact Karol Digital – Website Enquiries & Support",
   description:
-    "Have questions about web design, digital services or pricing? Contact Karol Digital for friendly support and expert guidance.",
+    "Contact Karol Digital about web design, website audits, or digital services for UK service businesses. Clear advice and a response within 24 hours.",
   url: "https://www.karoldigital.co.uk/contact",
   image: "/hero-page-banner.jpg",
 });

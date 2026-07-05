@@ -4,7 +4,7 @@ export const metadata = generateSEOMetadata({
   title: "Financial Services Web Design & Systems | Karol Digital",
   description:
     "Specialist financial services web design for UK corporate brands. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs.",
-  url: "https://www.karoldigital.co.uk/services/financial-services",
+  url: "https://www.karoldigital.co.uk/industries/financial-services",
   image: "/1stcall-finance-showcase.jpg",
 });
 
@@ -21,7 +21,7 @@ const financeServiceSchema = {
     "price": "0.00",
     "lowPrice": "800", // Fixes the Search Console error
     "highPrice": "8000",
-    "url": "https://www.karoldigital.co.uk/services/financial-services"
+    "url": "https://www.karoldigital.co.uk/industries/financial-services"
   },
   "provider": {
     "@type": "ProfessionalService",

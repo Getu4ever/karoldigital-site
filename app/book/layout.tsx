@@ -1,16 +1,13 @@
 import { generateSEOMetadata } from "@/components/seo-server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export const metadata = generateSEOMetadata({
-  title: "Book Your Project Discovery | Karol Digital",
+  title: "Book a Free Website Consultation | Karol Digital",
   description:
-    "Start your growth blueprint. Book a consultation with Karol Digital to discuss your custom web development, design, or marketing needs.",
+    "Book a free consultation with Karol Digital. Discuss web design, development, audits, or marketing for your UK service business.",
   url: "https://www.karoldigital.co.uk/book",
   image: "/hero-page-banner.jpg",
 });
 
-// Breadcrumb Schema for the Book page
 const bookBreadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -33,16 +30,13 @@ const bookBreadcrumbJsonLd = {
 export default function BookLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* Breadcrumb Schema for SEO & Sitelinks */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(bookBreadcrumbJsonLd),
         }}
       />
-      <Header />
       {children}
-      <Footer />
     </>
   );
 }

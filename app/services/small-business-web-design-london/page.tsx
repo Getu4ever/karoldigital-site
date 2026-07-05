@@ -48,7 +48,7 @@ export default function LondonSmallBusinessWebDesignPage() {
     </p>
 
     <Link
-      href="/contact"
+      href="/book?service=Website+Audit"
       className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
     >
       Request a London Lead Audit
@@ -245,7 +245,7 @@ export default function LondonSmallBusinessWebDesignPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 className="bg-white text-[#102f35] hover:bg-yellow-400 font-bold px-8 py-4 rounded-full shadow-xl transition-all"
-                href="/contact"
+                href="/book"
               >
                 Book Your London Lead Audit
               </Link>

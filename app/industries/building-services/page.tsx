@@ -23,7 +23,7 @@ export default function BuildersWebDesign() {
     "price": "0.00", // Replace with your actual base price if applicable
     "lowPrice": "500", // Add this minimum price
     "highPrice": "5000", // Add this maximum price
-    "url": "https://karoldigital.co.uk/services/building-services"
+    "url": "https://www.karoldigital.co.uk/industries/building-services"
   },
   "areaServed": {
     "@type": "Country",
@@ -70,7 +70,7 @@ export default function BuildersWebDesign() {
               High-performance, secure web development for UK Builders, Contractors, and Trade Specialists. Engineered to turn local search intent into high-value booked contracts.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
             >
               Get My Free Quote
@@ -331,7 +331,7 @@ export default function BuildersWebDesign() {
               Incorporate structured asset workflows, maximize visibility parameters, and convert casual search patterns into stable business expansion.
             </p>
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-yellow-400 text-black px-10 py-4 rounded-full font-black hover:bg-white transition-all shadow-xl hover:scale-[1.02] active:scale-95"
             >
               Let's Talk Strategy

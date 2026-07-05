@@ -13,11 +13,14 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   const industries = [
-    { name: "Immigration Services", href: "/services/immigration-services" },
-    { name: "Building & Construction", href: "/services/building-services" },
-    { name: "Corporate & Event Catering", href: "/services/catering-services" },
-    { name: "Financial Firms", href: "/services/financial-services" },
-    { name: "Small Business Web Design",href: "/services/small-business-web-design-london"},
+    { name: "Immigration Services", href: "/industries/immigration-services" },
+    { name: "Building & Construction", href: "/industries/building-services" },
+    { name: "Corporate & Event Catering", href: "/industries/catering-services" },
+    { name: "Financial Firms", href: "/industries/financial-services" },
+    {
+      name: "Small Business Web Design",
+      href: "/services/small-business-web-design-london",
+    },
   ];
 
   return (
@@ -154,10 +157,10 @@ export default function Footer() {
             </div>
 
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block bg-yellow-400 text-[#102f35] px-4 py-2 rounded-full text-xs font-bold leading-none hover:bg-yellow-300 transition shadow-md"
             >
-              Request a Quote
+              Book a Free Consultation
             </Link>
 
             <div className="flex flex-wrap gap-3">
@@ -209,6 +212,12 @@ export default function Footer() {
             We help UK businesses grow with fast, professional, conversion-focused
             websites built around real business goals.
           </p>
+          <Link
+            href="/book"
+            className="inline-block mt-4 bg-yellow-400 text-[#102f35] px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
+          >
+            Book a Free Consultation
+          </Link>
         </div>
       </div>
 

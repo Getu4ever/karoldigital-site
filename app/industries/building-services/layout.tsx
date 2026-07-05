@@ -4,7 +4,7 @@ export const metadata = generateSEOMetadata({
   title: "Construction Website Design & Trade SEO | Karol Digital",
   description:
     "High-performance construction website design for UK builders and contractors. Get more local leads with professional project galleries and trade SEO.",
-  url: "https://www.karoldigital.co.uk/services/building-services",
+  url: "https://www.karoldigital.co.uk/industries/building-services",
   image: "/building-services-hero.jpg",
 });
 
@@ -21,7 +21,7 @@ const builderServiceSchema = {
     "price": "0.00", 
     "lowPrice": "500", // This fixes the error
     "highPrice": "5000",
-    "url": "https://www.karoldigital.co.uk/services/building-services"
+    "url": "https://www.karoldigital.co.uk/industries/building-services"
   },
   "provider": {
     "@type": "ProfessionalService",

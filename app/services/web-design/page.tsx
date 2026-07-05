@@ -53,17 +53,17 @@ export default function WebDesignPage() {
         >
           <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-600">
             <li>
-              <a href="/" className="hover:text-[#102f35] transition">
+              <Link href="/" className="hover:text-[#102f35] transition">
                 Home
-              </a>
+              </Link>
             </li>
 
             <li className="text-gray-400">/</li>
 
             <li>
-              <a href="/services" className="hover:text-[#102f35] transition">
+              <Link href="/services" className="hover:text-[#102f35] transition">
                 Services
-              </a>
+              </Link>
             </li>
 
             <li className="text-gray-400">/</li>
@@ -236,10 +236,10 @@ export default function WebDesignPage() {
                 View Web Design Packages &amp; Pricing
               </Link>
               <Link
-                href="/contact"
+                href="/book"
                 className="inline-block border border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-[#102f35] transition"
               >
-                Discuss Your Web Design Project
+                Book a Free Consultation
               </Link>
             </div>
           </div>

@@ -4,7 +4,7 @@ export const metadata = generateSEOMetadata({
   title: "Catering Website Design & Hospitality Systems | Karol Digital",
   description:
     "Professional catering website design for UK food brands. High-conversion web frameworks for caterers with smooth online ordering and digital menu systems.",
-  url: "https://www.karoldigital.co.uk/services/catering-services",
+  url: "https://www.karoldigital.co.uk/industries/catering-services",
   image: "/foodmama-showcase-new.jpg",
 });
 
