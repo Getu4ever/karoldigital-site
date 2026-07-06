@@ -27,15 +27,16 @@ export default function CustomDevelopmentPage() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-6xl font-extrabold mb-6"
             >
-              Custom Web Development
-              <span className="block text-yellow-400 mt-2">
-                Bespoke Solutions for Unique Business Challenges
+              Custom Web Development{" "}
+              <span className="text-yellow-400">
+                — Bespoke Solutions for Unique Business Challenges
               </span>
             </motion.h1>
 
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-8">
-              Move beyond the limitations of off-the-shelf templates. We build high-performance,
-              custom-coded digital applications tailored to your specific workflows and business goals.
+              Move beyond the limitations of off-the-shelf templates. We build bespoke,
+              high-performance, custom-coded digital applications tailored to your unique
+              workflows and business goals.
             </p>
           </div>
         </section>

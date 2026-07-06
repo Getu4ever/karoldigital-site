@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
-    title: "Web Engineering & Digital Services | Karol Digital",
+    title: "Web Design & Digital Services | Karol Digital",
     description:
       "Explore our core web design and digital services for UK businesses. From strategy and design to SEO and automation systems.",
     url: "https://www.karoldigital.co.uk/services",

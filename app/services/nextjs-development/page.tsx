@@ -19,14 +19,14 @@ export default function NextJSDevelopmentPage() {
           />
           <div className="relative z-10 px-6 max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-              Next.js Development
-              <span className="block text-yellow-400 mt-2">
-                Blazing Fast, Secure &amp; Scalable Web Apps
+              Next.js Development{" "}
+              <span className="text-yellow-400">
+                — Blazing Fast, Secure & Scalable Web Apps
               </span>
             </h1>
             <p className="text-xl text-gray-100">
-              Modern engineering for businesses that demand superior performance, 
-              SEO excellence, and a premium user experience.
+              High-performance Next.js development for businesses that need secure,
+              scalable web apps, SEO excellence, and a premium user experience.
             </p>
           </div>
         </section>

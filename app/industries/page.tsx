@@ -19,7 +19,7 @@ export default function IndustriesPage() {
     {
       href: "/industries/financial-services",
       label: "Financial Services",
-      linkLabel: "Financial sector sites",
+      linkLabel: "Financial sites",
       icon: <Landmark size={20} />,
       description:
         "Web design for financial businesses that need clarity, trust, and a more professional route to enquiry.",
@@ -27,7 +27,7 @@ export default function IndustriesPage() {
     {
       href: "/industries/immigration-services",
       label: "Immigration Lawyers",
-      linkLabel: "Immigration firm sites",
+      linkLabel: "Immigration sites",
       icon: <Scale size={20} />,
       description:
         "Website design for immigration-focused firms that need to build authority, reduce confusion, and make it easier for clients to get in touch.",
@@ -35,7 +35,7 @@ export default function IndustriesPage() {
     {
       href: "/industries/building-services",
       label: "Construction and Trades",
-      linkLabel: "Construction sector sites",
+      linkLabel: "Construction sites",
       icon: <HardHat size={20} />,
       description:
         "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
@@ -87,8 +87,8 @@ export default function IndustriesPage() {
               Industry-focused websites for service businesses
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
-              Different industries need different messaging, trust signals, and user
-              journeys. We build websites around how your clients choose and enquire.
+              Industry-focused websites for service businesses that need stronger
+              credibility, clearer messaging, and better lead generation.
             </p>
           </div>
         </motion.section>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import BlogCta from "@/components/BlogCta";
-import { truncateLinkLabel } from "@/lib/link-label";
+import { blogLinkLabel } from "@/lib/link-label";
 import { getBlogIndexPosts } from "@/lib/sanity-blog";
 
 export default async function BlogIndexPage() {
@@ -64,7 +64,7 @@ export default async function BlogIndexPage() {
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-1 font-semibold text-[#102f35] hover:text-[#411b3f]"
                   >
-                    {truncateLinkLabel(post.title)}
+                    {blogLinkLabel(post.title)}
                     <span aria-hidden="true">→</span>
                   </Link>
                 </div>

@@ -30,16 +30,12 @@ export default function DigitalMarketingPage() {
 
           <div className="relative z-10 px-6 max-w-3xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-              <span className="text-white">Digital </span>
-              <span className="text-yellow-400">Marketing</span>
-
-              <span className="sr-only">
-                Digital marketing services for UK small businesses - SEO, content strategy, and growth optimisation
-              </span>
+              Digital Marketing Services
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100">
-              Practical, results-driven digital marketing strategies designed to help UK businesses grow visibility, traffic, and customer acquisition.
+              Digital marketing services for UK small businesses — including SEO,
+              content strategy, and practical growth optimisation that drives real results.
             </p>
           </div>
         </motion.section>

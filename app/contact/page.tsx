@@ -231,12 +231,12 @@ export default function ContactPage() {
           />
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-extrabold">
-              Get in Touch About Your{" "}
+              Contact Us About Your{" "}
               <span className="text-yellow-400">Website Project</span>
             </h1>
             <p className="text-lg text-gray-100 max-w-xl mx-auto mt-4">
-              Tell us about your business and what you need from your website. We will respond
-              with clear advice and honest next steps.
+              Get in touch to tell us about your business and what you need from your
+              website. We will respond with clear advice and honest next steps.
             </p>
           </div>
         </motion.section>

@@ -145,7 +145,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
 };
 
 /** ~580px in Google SERP preview (Seobility limit) */
-export const SEO_TITLE_MAX_LENGTH = 58;
+export const SEO_TITLE_MAX_LENGTH = 55;
 export const SEO_BRAND_SUFFIX = " | Karol Digital";
 
 /**

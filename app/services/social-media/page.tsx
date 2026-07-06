@@ -28,15 +28,13 @@ export default function SocialMediaPage() {
 
         <div className="relative z-10 px-6 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            Social <span className="text-yellow-400">Media Setup</span>
-
-            <span className="sr-only">
-              Professional social media setup and Google Business optimisation for UK small businesses
-            </span>
+            Professional Social Media Setup
           </h1>
 
           <p className="text-lg md:text-xl text-gray-100">
-            Professionally structured social media profiles and branding systems designed to improve visibility, trust, and customer engagement.
+            Professional social media setup and Google Business optimisation for UK
+            small businesses — structured profiles designed to improve visibility,
+            trust, and customer engagement.
           </p>
         </div>
       </motion.section>

@@ -67,7 +67,9 @@ export default function BuildersWebDesign() {
               That <span className="text-yellow-400">Builds Your Business</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
-              High-performance, secure web development for UK Builders, Contractors, and Trade Specialists. Engineered to turn local search intent into high-value booked contracts.
+              High-performance, secure web development and trade SEO for UK builders,
+              contractors, and trade specialists — engineered to turn local search
+              intent into high-value booked contracts.
             </p>
             <Link
               href="/book"

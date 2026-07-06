@@ -124,20 +124,20 @@ export const homeIndustries = [
     description:
       "Website design for financial businesses that need trust, clarity, and a more professional lead generation journey.",
     href: "/industries/financial-services",
-    linkLabel: "Financial sector sites",
+    linkLabel: "Financial sites",
   },
   {
     title: "Immigration Lawyers",
     description:
       "Websites for immigration-focused firms that need to build authority, reduce confusion, and make it easier for clients to enquire.",
     href: "/industries/immigration-services",
-    linkLabel: "Immigration firm sites",
+    linkLabel: "Immigration sites",
   },
   {
     title: "Construction and Trades",
     description:
       "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
     href: "/industries/building-services",
-    linkLabel: "Construction sector sites",
+    linkLabel: "Construction sites",
   },
 ] as const;

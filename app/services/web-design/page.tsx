@@ -28,16 +28,14 @@ export default function WebDesignPage() {
               transition={{ duration: 0.6 }}
               className="text-5xl md:text-6xl font-extrabold mb-6"
             >
-              Professional Web Design
-              <span className="block text-yellow-400 mt-2">
-                Built for Growth, Performance &amp; Trust
-              </span>
+              Professional Web Design{" "}
+              <span className="text-yellow-400">— Built for Growth, Performance & Trust</span>
             </motion.h1>
 
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-4">
-              We design high-impact websites that position your business as credible,
-              authoritative, and conversion-ready — engineered to support long-term
-              growth in competitive digital markets.
+              We design high-impact websites built for growth — credible, authoritative,
+              and conversion-ready — engineered to support long-term performance in
+              competitive digital markets.
             </p>
             <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto">
               Ideal for UK service businesses and SMEs who are ready to move beyond

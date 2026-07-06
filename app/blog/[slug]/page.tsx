@@ -10,7 +10,7 @@ import FadeIn from "@/components/FadeIn";
 import BlogCta from "@/components/BlogCta";
 import BlogComments from "@/components/BlogComments";
 import CopyLinkButton from "@/components/CopyLinkButton";
-import { truncateLinkLabel } from "@/lib/link-label";
+import { blogLinkLabel } from "@/lib/link-label";
 import { getBlogPostBySlug } from "@/lib/sanity-blog";
 import { getBlogServiceLinks } from "@/lib/blog-related-links";
 
@@ -203,7 +203,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                         href={`/blog/${item.slug}`}
                         className="text-sm font-semibold text-[#411b3f] hover:underline"
                       >
-                        {truncateLinkLabel(item.title)}
+                        {blogLinkLabel(item.title)}
                       </Link>
                     </div>
                   </article>
