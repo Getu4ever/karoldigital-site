@@ -169,32 +169,37 @@ export default function Footer() {
       icon: <FaFacebookF />,
       url: "https://www.facebook.com/karolgraphics",
       label: "Follow us on Facebook",
+      shortLabel: "Facebook",
     },
     {
       icon: <FaInstagram />,
       url: "https://www.instagram.com/karoldigital2025/",
       label: "Follow us on Instagram",
+      shortLabel: "Instagram",
     },
     {
       icon: <FaLinkedinIn />,
       url: "https://www.linkedin.com/in/karol-digital/",
       label: "Follow us on LinkedIn",
+      shortLabel: "LinkedIn",
     },
     {
       icon: <FaYoutube />,
       url: "https://www.youtube.com/@KarolDigital-26",
       label: "Subscribe to our YouTube channel",
+      shortLabel: "YouTube",
     },
-  ].map((social, i) => (
+  ].map((social) => (
     <a
-      key={i}
+      key={social.url}
       href={social.url}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={social.label}
-      className="w-8 h-8 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-yellow-400 hover:text-[#102f35] rounded-lg transition-all duration-300 text-sm"
+      className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-gray-300 transition-all duration-300 hover:bg-yellow-400 hover:text-[#102f35]"
     >
       {social.icon}
+      <span>{social.shortLabel}</span>
     </a>
   ))}
 </div>
@@ -216,7 +221,7 @@ export default function Footer() {
             href="/book"
             className="inline-block mt-4 bg-yellow-400 text-[#102f35] px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
           >
-            Discuss Your Project
+            Talk to Our Team
           </Link>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import FadeIn from "@/components/FadeIn";
+import { setBookServicePrefill } from "@/lib/book-prefill";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -74,6 +75,7 @@ export default function ServicesPage() {
         "Stronger trust and credibility signals",
       ],
       href: "/book",
+      servicePrefill: "Web Design",
       cta: "Discuss Web Design Needs",
     },
     {
@@ -85,8 +87,9 @@ export default function ServicesPage() {
         "No template bloat",
         "Built around your goals and user journey",
       ],
-      href: "/book?service=Custom+Web+Development",
-      cta: "Discuss Your Project",
+      href: "/book",
+      servicePrefill: "Custom Web Development",
+      cta: "Discuss Custom Development",
     },
     {
       title: "Next.js Development Services",
@@ -97,8 +100,9 @@ export default function ServicesPage() {
         "Clean technical foundation",
         "Better performance across devices",
       ],
-      href: "/book?service=Next.js+Development",
-      cta: "Talk About Next.js Development",
+      href: "/book",
+      servicePrefill: "Next.js Development",
+      cta: "Talk About Next.js",
     },
     {
       title: "Website Audits and Improvement Plans",
@@ -109,10 +113,10 @@ export default function ServicesPage() {
         "Performance and SEO checks",
         "Clear next-step recommendations",
       ],
-      href: "/book?service=Website+Audit",
-      cta: "Request a Website Audit",
+      href: "/services/website-audits",
+      cta: "Explore Website Audits",
     },
-  ];
+  ] as const;
 
   const processSteps = [
     {
@@ -307,6 +311,11 @@ export default function ServicesPage() {
 
                 <Link
                   href={card.href}
+                  onClick={() => {
+                    if ("servicePrefill" in card && card.servicePrefill) {
+                      setBookServicePrefill(card.servicePrefill);
+                    }
+                  }}
                   className="inline-flex items-center gap-2 font-semibold text-[#102f35] hover:text-[#411b3f]"
                 >
                   {card.cta}
