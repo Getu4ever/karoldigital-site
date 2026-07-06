@@ -1,6 +1,7 @@
 "use client";
 
 import FadeIn from "@/components/FadeIn";
+import { setBookServicePrefill } from "@/lib/book-prefill";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -107,7 +108,8 @@ export default function HomePageClient() {
                 </Link>
 
                 <Link
-                  href="/book?service=Website+Audit"
+                  href="/book"
+                  onClick={() => setBookServicePrefill("Website Audit")}
                   className="inline-block rounded-full border border-white/30 bg-white/10 px-10 py-4 text-lg font-bold text-white backdrop-blur-sm transition hover:bg-white/20"
                 >
                   Request a Website Audit
@@ -211,7 +213,7 @@ export default function HomePageClient() {
                   className="group flex flex-col rounded-3xl border border-gray-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40 hover:shadow-lg"
                 >
                   <IconBadge icon={serviceIcons[index]} />
-                  <h3 className="mb-4 text-2xl font-bold text-[#102f35]">{service.title}</h3>
+                  <p className="mb-4 text-2xl font-bold text-[#102f35]">{service.title}</p>
                   <p className="mb-6 flex-grow leading-relaxed text-gray-700">
                     {service.description}
                   </p>
@@ -263,7 +265,7 @@ export default function HomePageClient() {
                   className="rounded-3xl border border-gray-100 bg-gray-50 p-8 text-center shadow-sm transition hover:border-[#102f35]/15 hover:shadow-md"
                 >
                   <IconBadge icon={differenceIcons[index]} />
-                  <h3 className="mb-4 text-2xl font-bold text-[#102f35]">{item.title}</h3>
+                  <p className="mb-4 text-2xl font-bold text-[#102f35]">{item.title}</p>
                   <p className="leading-relaxed text-gray-700">{item.description}</p>
                 </article>
               ))}
@@ -287,25 +289,25 @@ export default function HomePageClient() {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {homeIndustries.map((industry, index) => (
-                <Link
+                <article
                   key={industry.title}
-                  href={industry.href}
-                  className="group flex flex-col rounded-3xl border border-gray-200 bg-white p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[#102f35]/20 hover:shadow-lg"
+                  className="flex flex-col rounded-3xl border border-gray-200 bg-white p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[#102f35]/20 hover:shadow-lg"
                 >
                   <IconBadge icon={industryIcons[index]} />
-                  <h3 className="mb-3 text-2xl font-bold text-[#102f35] group-hover:text-[#411b3f]">
-                    {industry.title}
-                  </h3>
+                  <p className="mb-3 text-2xl font-bold text-[#102f35]">{industry.title}</p>
                   <p className="mb-6 flex-grow text-gray-700">{industry.description}</p>
-                  <span className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-[#102f35]">
-                    Explore this industry
+                  <Link
+                    href={industry.href}
+                    className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-[#102f35] hover:text-[#411b3f]"
+                  >
+                    {industry.linkLabel}
                     <ArrowRight
                       size={16}
                       className="transition-transform group-hover:translate-x-1"
                       aria-hidden="true"
                     />
-                  </span>
-                </Link>
+                  </Link>
+                </article>
               ))}
             </div>
 
@@ -350,9 +352,9 @@ export default function HomePageClient() {
                       className="h-12 w-auto max-w-[180px] object-contain object-left"
                     />
                   </div>
-                  <h3 className="mb-4 text-xl font-bold text-[#102f35] md:text-2xl">
+                  <p className="mb-4 text-xl font-bold text-[#102f35] md:text-2xl">
                     {study.title}
-                  </h3>
+                  </p>
                   <p className="mb-6 flex-grow leading-relaxed text-gray-700">
                     {study.description}
                   </p>
@@ -373,9 +375,9 @@ export default function HomePageClient() {
         <section className="border-y border-gray-200 bg-gradient-to-r from-[#102f35] via-[#1a4a54] to-[#411b3f] px-6 py-14 text-white">
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
             <div>
-              <h2 className="text-2xl font-bold md:text-3xl">
+              <p className="text-2xl font-bold md:text-3xl">
                 Ready to turn your website into a lead generation asset?
-              </h2>
+              </p>
               <p className="mt-2 text-gray-200">
                 Free consultation. Clear advice. No pressure to commit.
               </p>
@@ -384,7 +386,7 @@ export default function HomePageClient() {
               href="/book"
               className="shrink-0 rounded-full bg-yellow-400 px-8 py-3 font-bold text-[#102f35] shadow-lg transition hover:bg-yellow-500"
             >
-              Schedule a Free Call
+              Book a Free Call
             </Link>
           </div>
         </section>
@@ -425,9 +427,9 @@ export default function HomePageClient() {
         <section className="border-y border-gray-200 bg-white px-6 py-20 md:px-10">
           <div className="mx-auto max-w-5xl text-center">
             <SectionEyebrow>Partners</SectionEyebrow>
-            <h2 className="mb-12 text-3xl font-bold text-[#102f35] md:text-4xl">
+            <p className="mb-12 text-3xl font-bold text-[#102f35] md:text-4xl">
               Selected clients and partners
-            </h2>
+            </p>
 
             <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
               <Link
@@ -509,14 +511,14 @@ export default function HomePageClient() {
                 href="/book"
                 className="inline-block rounded-full bg-yellow-400 px-12 py-4 text-lg font-bold text-[#102f35] shadow-xl transition hover:bg-yellow-500"
               >
-                Discuss Your Project
+                Start Your Project
               </Link>
 
               <Link
-                href="/book?service=Website+Audit"
+                href="/services/website-audits"
                 className="inline-block rounded-full border border-white/20 bg-white/10 px-12 py-4 text-lg font-bold text-white transition hover:bg-white/20"
               >
-                Request a Website Audit
+                Explore audit services
               </Link>
             </div>
 

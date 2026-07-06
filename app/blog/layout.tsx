@@ -3,7 +3,7 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Karol Digital Blog – Web Design & Lead Generation for UK Service Businesses",
+  title: "Web Design & SEO Blog | Karol Digital",
   description:
     "Read practical guides on web design, SEO, conversion, and digital growth for UK service businesses. Updated regularly by Karol Digital.",
   url: "https://www.karoldigital.co.uk/blog",

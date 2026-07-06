@@ -47,7 +47,7 @@ export const homeCaseStudies = [
     description:
       "A mobile-first website experience with strong speed, accessibility, best practices, and SEO performance.",
     industryHref: "/industries/financial-services",
-    industryLabel: "Financial services web design",
+    industryLabel: "Financial services",
   },
   {
     title: "1st Call UK Immigration",
@@ -56,7 +56,7 @@ export const homeCaseStudies = [
     description:
       "A high-performing service website built to combine trust, clarity, and strong mobile usability.",
     industryHref: "/industries/immigration-services",
-    industryLabel: "Immigration law firm websites",
+    industryLabel: "Immigration services",
   },
   {
     title: "Food Mama's Kitchen",
@@ -65,7 +65,7 @@ export const homeCaseStudies = [
     description:
       "A fast, well-structured website experience supported by strong page quality, clean metadata, and a clear technical foundation.",
     industryHref: "/industries/catering-services",
-    industryLabel: "Catering & food brand websites",
+    industryLabel: "Catering services",
   },
 ] as const;
 
@@ -95,8 +95,8 @@ export const homeServices = [
     title: "Website Audits",
     description:
       "Clear advice for businesses whose current site feels slow, unclear, outdated, or underperforming.",
-    href: "/book?service=Website+Audit",
-    cta: "Request a website audit",
+    href: "/services/website-audits",
+    cta: "View audit services",
   },
 ] as const;
 
@@ -124,17 +124,20 @@ export const homeIndustries = [
     description:
       "Website design for financial businesses that need trust, clarity, and a more professional lead generation journey.",
     href: "/industries/financial-services",
+    linkLabel: "Financial sector sites",
   },
   {
     title: "Immigration Lawyers",
     description:
       "Websites for immigration-focused firms that need to build authority, reduce confusion, and make it easier for clients to enquire.",
     href: "/industries/immigration-services",
+    linkLabel: "Immigration firm sites",
   },
   {
     title: "Construction and Trades",
     description:
       "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
     href: "/industries/building-services",
+    linkLabel: "Construction sector sites",
   },
 ] as const;

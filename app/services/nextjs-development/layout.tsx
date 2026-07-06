@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = generateSEOMetadata({
-  title: "Next.js Development Services | High-Performance Web Apps | Karol Digital",
+  title: "Next.js Development | Karol Digital",
   description:
     "Expert Next.js development for fast, secure, and scalable web applications. Improve your SEO and user experience with our custom-coded solutions.",
   url: "https://www.karoldigital.co.uk/services/nextjs-development",

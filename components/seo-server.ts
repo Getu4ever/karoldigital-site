@@ -27,7 +27,8 @@ export type PageKey =
   | "privacy_policy"
   | "cookie_policy"
   | "disclaimer"
-  | "terms_of_service";
+  | "terms_of_service"
+  | "industries";
 
 export const seoConfig: Record<PageKey, SEOProps> = {
   home: {
@@ -130,7 +131,50 @@ export const seoConfig: Record<PageKey, SEOProps> = {
     image: "/seo-cover.jpg",
     type: "website",
   },
+
+  industries: {
+    title: "Industry Web Design for UK Service Businesses | Karol Digital",
+    description:
+      "Industry-focused website design for UK financial, immigration, construction, catering, and other service businesses that need trust, clarity, and more qualified enquiries.",
+    url: "https://www.karoldigital.co.uk/industries",
+    image: "/seo-cover.jpg",
+    keywords:
+      "industry web design UK, financial services websites, immigration lawyer websites, construction web design",
+    type: "website",
+  },
 };
+
+/** ~580px in Google SERP preview (Seobility limit) */
+export const SEO_TITLE_MAX_LENGTH = 58;
+export const SEO_BRAND_SUFFIX = " | Karol Digital";
+
+/**
+ * Keeps titles within SERP width limits. Adds brand suffix when missing
+ * and truncates long titles at a word boundary.
+ */
+export function formatSeoTitle(title: string): string {
+  const normalized = title.replace(/\s+/g, " ").trim();
+  const withBrand = /Karol Digital/i.test(normalized)
+    ? normalized
+    : `${normalized}${SEO_BRAND_SUFFIX}`;
+
+  if (withBrand.length <= SEO_TITLE_MAX_LENGTH) {
+    return withBrand;
+  }
+
+  const suffixMatch = withBrand.match(/(\s[|–—-]\sKarol Digital(?:\sBlog)?)\s*$/i);
+  const suffix = suffixMatch ? suffixMatch[1] : SEO_BRAND_SUFFIX;
+  const maxPrimary = SEO_TITLE_MAX_LENGTH - suffix.length - 1;
+
+  let primary = withBrand.slice(0, withBrand.length - suffix.length).trim();
+  primary = primary.slice(0, maxPrimary);
+  const lastSpace = primary.lastIndexOf(" ");
+  if (lastSpace > 20) {
+    primary = primary.slice(0, lastSpace);
+  }
+
+  return `${primary}…${suffix}`;
+}
 
 /**
  * General generator (used by layout and blog).
@@ -143,12 +187,14 @@ export function generateSEOMetadata({
   type = "website",
   keywords,
 }: SEOProps): Metadata {
+  const formattedTitle = formatSeoTitle(title);
+
   return {
-    title,
+    title: formattedTitle,
     description,
     keywords,
     openGraph: {
-      title,
+      title: formattedTitle,
       description,
       url,
       images: [{ url: image }],
@@ -156,7 +202,7 @@ export function generateSEOMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: formattedTitle,
       description,
       images: [image],
     },

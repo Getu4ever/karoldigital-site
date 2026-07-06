@@ -57,9 +57,9 @@ export default function Footer() {
 
           {/* Column 2: Industries */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
+            <p className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
               Industries
-            </h3>
+            </p>
             <ul className="space-y-3 text-sm">
               {industries.map((item) => (
                 <li key={item.href}>
@@ -76,9 +76,9 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
+            <p className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
               Quick Links
-            </h3>
+            </p>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
@@ -108,9 +108,9 @@ export default function Footer() {
 
           {/* Column 4: Legal */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
+            <p className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
               Legal
-            </h3>
+            </p>
             <ul className="space-y-3 text-sm text-gray-300">
               <li>
                 <Link
@@ -142,7 +142,7 @@ export default function Footer() {
           {/* Column 5: Social & Contact */}
           <div className="space-y-6">
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-white">Let&apos;s Connect</h3>
+              <p className="text-lg font-semibold text-white">Let&apos;s Connect</p>
               <p className="text-sm text-gray-400">London, United Kingdom</p>
               <a
                 href="tel:+447565472445"

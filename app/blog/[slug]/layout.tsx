@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateSEOMetadata } from "@/components/seo-server";
+import { formatSeoTitle, generateSEOMetadata } from "@/components/seo-server";
 import { getBlogPostSeo } from "@/lib/sanity-blog";
 
 export async function generateMetadata({
@@ -11,7 +11,7 @@ export async function generateMetadata({
   const post = await getBlogPostSeo(slug);
 
   if (!post) {
-    return { title: "Blog Post | Karol Digital" };
+    return { title: formatSeoTitle("Blog Post") };
   }
 
   const title = post.seoTitle || post.title;
@@ -23,7 +23,7 @@ export async function generateMetadata({
   const url = `https://www.karoldigital.co.uk/blog/${slug}`;
 
   return generateSEOMetadata({
-    title: `${title} | Karol Digital Blog`,
+    title,
     description,
     url,
     image,

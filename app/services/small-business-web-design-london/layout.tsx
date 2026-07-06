@@ -2,36 +2,54 @@ import { generateSEOMetadata } from "@/components/seo-server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-// 1. Update metadata for each specific service page
+const PAGE_URL =
+  "https://www.karoldigital.co.uk/services/small-business-web-design-london";
+
 export const metadata = generateSEOMetadata({
-  title: "Service Name | Karol Digital",
-  description: "Brief, punchy description of this specific service for search engines.",
-  url: "https://www.karoldigital.co.uk/services/your-slug",
-  image: "/service-image.jpg",
+  title: "Small Business Web Design London | Karol Digital",
+  description:
+    "Professional web design for London small businesses that need a credible online presence, faster load times, and more qualified enquiries.",
+  url: PAGE_URL,
+  image: "/hero-page-banner.jpg",
 });
 
-// 2. Define schema specific to the service
 const serviceSchema = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.karoldigital.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.karoldigital.co.uk/services" },
-      { "@type": "ListItem", "position": 3, "name": "Service Name", "item": "https://www.karoldigital.co.uk/services/your-slug" }
-    ]
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.karoldigital.co.uk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://www.karoldigital.co.uk/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Small Business Web Design London",
+        item: PAGE_URL,
+      },
+    ],
   },
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Service Name",
-    "description": "Descriptive text about what the service offers.",
-    "provider": {
+    name: "Small Business Web Design London",
+    description:
+      "Custom web design for London small businesses focused on trust, performance, and lead generation.",
+    provider: {
       "@type": "ProfessionalService",
-      "name": "Karol Digital",
-      "url": "https://www.karoldigital.co.uk"
-    }
-  }
+      name: "Karol Digital",
+      url: "https://www.karoldigital.co.uk",
+    },
+  },
 ];
 
 export default function ServiceLayout({

@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = generateSEOMetadata({
-  title: "Custom Web Development | Bespoke Digital Solutions | Karol Digital",
+  title: "Custom Web Development | Karol Digital",
   description:
     "Expert custom web development services. We build high-performance, secure, and scalable web applications tailored to your unique business workflows.",
   url: "https://www.karoldigital.co.uk/services/custom-web-development",
