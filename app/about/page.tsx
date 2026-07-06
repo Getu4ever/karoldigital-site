@@ -244,7 +244,7 @@ export default function About() {
               href="/book"
               className="inline-block bg-white text-[#102f35] hover:bg-[#411b3f] hover:text-white font-semibold px-8 py-3 rounded-full transition"
             >
-              Book a Free Consultation
+              Request a Free Consultation
             </Link>
           </section>
         </FadeIn>

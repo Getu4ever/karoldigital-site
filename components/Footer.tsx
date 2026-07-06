@@ -160,7 +160,7 @@ export default function Footer() {
               href="/book"
               className="inline-block bg-yellow-400 text-[#102f35] px-4 py-2 rounded-full text-xs font-bold leading-none hover:bg-yellow-300 transition shadow-md"
             >
-              Book a Free Consultation
+              Schedule a Free Call
             </Link>
 
             <div className="flex flex-wrap gap-3">
@@ -216,7 +216,7 @@ export default function Footer() {
             href="/book"
             className="inline-block mt-4 bg-yellow-400 text-[#102f35] px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
           >
-            Book a Free Consultation
+            Discuss Your Project
           </Link>
         </div>
       </div>

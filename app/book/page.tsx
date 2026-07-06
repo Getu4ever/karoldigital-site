@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import { trackLead } from "@/lib/analytics";
+import { consumeBookServicePrefill } from "@/lib/book-prefill";
 import {
   BOOK_SERVICE_OPTIONS,
   normalizeBookService,
@@ -29,9 +30,21 @@ function BookingForm() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const service = searchParams.get("service");
-    if (service) {
-      setFormData((prev) => ({ ...prev, service: normalizeBookService(service) }));
+    const fromQuery = searchParams.get("service");
+    if (fromQuery) {
+      setFormData((prev) => ({
+        ...prev,
+        service: normalizeBookService(fromQuery),
+      }));
+      return;
+    }
+
+    const fromStorage = consumeBookServicePrefill();
+    if (fromStorage) {
+      setFormData((prev) => ({
+        ...prev,
+        service: normalizeBookService(fromStorage),
+      }));
     }
   }, [searchParams]);
 

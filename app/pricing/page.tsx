@@ -1,6 +1,7 @@
 "use client";
 
 import FadeIn from "@/components/FadeIn";
+import { setBookServicePrefill } from "@/lib/book-prefill";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +13,7 @@ interface PricingCardProps {
   features: string[];
   buttonText: string;
   highlighted?: boolean;
-  link?: string;
+  servicePrefill?: string;
   fit?: string;
 }
 
@@ -23,7 +24,7 @@ const PricingCard = ({
   features,
   buttonText,
   highlighted = false,
-  link = "/book",
+  servicePrefill,
   fit,
 }: PricingCardProps) => {
   return (
@@ -70,7 +71,10 @@ const PricingCard = ({
       </p>
 
       <Link
-        href={link}
+        href="/book"
+        onClick={() => {
+          if (servicePrefill) setBookServicePrefill(servicePrefill);
+        }}
         className={`block text-center py-3 rounded-full font-semibold transition ${
           highlighted
             ? "bg-yellow-400 text-[#102f35] hover:bg-yellow-500"
@@ -256,7 +260,7 @@ export default function PricingPage() {
                 "Basic SEO Setup",
               ]}
               buttonText="Book Starter Lite Consultation"
-              link="/book?service=Starter+Lite"
+              servicePrefill="Starter Lite"
             />
 
             <PricingCard
@@ -271,7 +275,7 @@ export default function PricingPage() {
                 "Core SEO Setup",
               ]}
               buttonText="Book Starter Consultation"
-              link="/book?service=Starter"
+              servicePrefill="Starter"
             />
 
             <PricingCard
@@ -286,7 +290,7 @@ export default function PricingPage() {
                 "Lead Capture System",
               ]}
               buttonText="Book Growth Consultation"
-              link="/book?service=Growth"
+              servicePrefill="Growth"
               highlighted
             />
 
@@ -302,7 +306,7 @@ export default function PricingPage() {
                 "Conversion Strategy",
               ]}
               buttonText="Book Premium Consultation"
-              link="/book?service=Premium"
+              servicePrefill="Premium"
             />
 
             <PricingCard
@@ -317,7 +321,7 @@ export default function PricingPage() {
                 "High-Level Security",
               ]}
               buttonText="Request Enterprise Quote"
-              link="/book?service=Enterprise"
+              servicePrefill="Enterprise"
             />
           </div>
         </section>

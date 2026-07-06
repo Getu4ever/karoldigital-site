@@ -384,7 +384,7 @@ export default function HomePageClient() {
               href="/book"
               className="shrink-0 rounded-full bg-yellow-400 px-8 py-3 font-bold text-[#102f35] shadow-lg transition hover:bg-yellow-500"
             >
-              Book a Free Consultation
+              Schedule a Free Call
             </Link>
           </div>
         </section>
@@ -509,7 +509,7 @@ export default function HomePageClient() {
                 href="/book"
                 className="inline-block rounded-full bg-yellow-400 px-12 py-4 text-lg font-bold text-[#102f35] shadow-xl transition hover:bg-yellow-500"
               >
-                Book a Free Consultation
+                Discuss Your Project
               </Link>
 
               <Link

@@ -18,7 +18,7 @@ export default function BlogCta({
           href="/book"
           className="inline-block rounded-full bg-yellow-400 px-10 py-3 font-bold text-[#102f35] transition hover:bg-yellow-500"
         >
-          Book a Free Consultation
+          Talk to Us About Your Site
         </Link>
         <Link
           href="/book?service=Website+Audit"

@@ -222,7 +222,9 @@ export default function Header() {
                             href="/pricing"
                             className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-white/5 rounded-lg transition group/btn"
                           >
-                            <span>View Pricing</span>
+                            <span>
+                              {isServices ? "View Pricing" : "Compare Website Packages"}
+                            </span>
                             <ArrowRight
                               size={14}
                               className="transition-transform group-hover/btn:translate-x-1"
@@ -241,7 +243,7 @@ export default function Header() {
             href="/book"
             className="bg-yellow-400 text-[#102f35] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
           >
-            Book a Free Consultation
+            Book Consultation
           </Link>
         </div>
 
@@ -388,7 +390,7 @@ export default function Header() {
                   onClick={closeMobileMenu}
                   className="bg-white text-[#102f35] py-3 rounded-full text-center font-bold shadow-md active:scale-95 transition"
                 >
-                  Book a Free Consultation
+                  Schedule Free Consultation
                 </Link>
               </div>
             </nav>
