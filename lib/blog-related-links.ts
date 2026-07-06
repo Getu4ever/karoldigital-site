@@ -17,30 +17,29 @@ export function getBlogServiceLinks(
   };
 
   if (haystack.match(/immigration|oisc|visa|legal/)) {
-    add("Immigration law firm web design", "/industries/immigration-services");
+    add("Immigration web design", "/industries/immigration-services");
   }
   if (haystack.match(/financial|mortgage|accountant|ifa|advisor/)) {
-    add("Financial services web design", "/industries/financial-services");
+    add("Financial web design", "/industries/financial-services");
   }
   if (haystack.match(/construction|builder|trade|contractor/)) {
-    add("Construction & trades web design", "/industries/building-services");
+    add("Construction web design", "/industries/building-services");
   }
   if (haystack.match(/catering|restaurant|food|menu|hospitality/)) {
-    add("Catering & food brand websites", "/industries/catering-services");
+    add("Catering web design", "/industries/catering-services");
   }
   if (haystack.match(/audit|conversion|speed|performance|seo|accessibility/)) {
     add("Website audits", "/services/website-audits");
-    add("Request a website audit", "/book?service=Website+Audit");
   }
   if (haystack.match(/pricing|cost|package|diy/)) {
-    add("View pricing packages", "/pricing");
+    add("View pricing", "/pricing");
   }
   if (haystack.match(/london/)) {
-    add("Small business web design in London", "/services/small-business-web-design-london");
+    add("London web design", "/services/small-business-web-design-london");
   }
 
   add("Web design services", "/services/web-design");
-  add("Book a free consultation", "/book");
+  add("Book consultation", "/book");
 
   return links.slice(0, 5);
 }

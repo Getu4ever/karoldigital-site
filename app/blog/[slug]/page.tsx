@@ -10,6 +10,7 @@ import FadeIn from "@/components/FadeIn";
 import BlogCta from "@/components/BlogCta";
 import BlogComments from "@/components/BlogComments";
 import CopyLinkButton from "@/components/CopyLinkButton";
+import { truncateLinkLabel } from "@/lib/link-label";
 import { getBlogPostBySlug } from "@/lib/sanity-blog";
 import { getBlogServiceLinks } from "@/lib/blog-related-links";
 
@@ -183,10 +184,9 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
               <h2 className="mb-8 text-2xl font-bold text-[#102f35]">Related Articles</h2>
               <div className="grid gap-8 md:grid-cols-3">
                 {related.map((item) => (
-                  <Link
+                  <article
                     key={item.slug}
-                    href={`/blog/${item.slug}`}
-                    className="block overflow-hidden rounded-xl border border-gray-100 bg-white shadow transition hover:shadow-lg"
+                    className="overflow-hidden rounded-xl border border-gray-100 bg-white shadow transition hover:shadow-lg"
                   >
                     {item.imageUrl && (
                       <Image
@@ -198,9 +198,15 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                       />
                     )}
                     <div className="p-4">
-                      <p className="text-sm font-semibold text-[#102f35]">{item.title}</p>
+                      <p className="mb-3 text-sm font-semibold text-[#102f35]">{item.title}</p>
+                      <Link
+                        href={`/blog/${item.slug}`}
+                        className="text-sm font-semibold text-[#411b3f] hover:underline"
+                      >
+                        {truncateLinkLabel(item.title)}
+                      </Link>
                     </div>
-                  </Link>
+                  </article>
                 ))}
               </div>
             </div>

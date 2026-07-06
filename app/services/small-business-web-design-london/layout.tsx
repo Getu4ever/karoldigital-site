@@ -1,17 +1,21 @@
 import { generateSEOMetadata } from "@/components/seo-server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 
 const PAGE_URL =
   "https://www.karoldigital.co.uk/services/small-business-web-design-london";
 
-export const metadata = generateSEOMetadata({
-  title: "Small Business Web Design London | Karol Digital",
-  description:
-    "Professional web design for London small businesses that need a credible online presence, faster load times, and more qualified enquiries.",
-  url: PAGE_URL,
-  image: "/hero-page-banner.jpg",
-});
+export const metadata: Metadata = {
+  ...generateSEOMetadata({
+    title: "Small Business Web Design London | Karol Digital",
+    description:
+      "Professional web design for London small businesses that need a credible online presence, faster load times, and more qualified enquiries.",
+    url: PAGE_URL,
+    image: "/hero-page-banner.jpg",
+  }),
+  alternates: {
+    canonical: PAGE_URL,
+  },
+};
 
 const serviceSchema = [
   {
@@ -65,9 +69,7 @@ export default function ServiceLayout({
           __html: JSON.stringify(serviceSchema),
         }}
       />
-      <Header />
       {children}
-      <Footer />
     </>
   );
 }

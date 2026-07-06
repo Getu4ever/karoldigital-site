@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import BlogCta from "@/components/BlogCta";
+import { truncateLinkLabel } from "@/lib/link-label";
 import { getBlogIndexPosts } from "@/lib/sanity-blog";
 
 export default async function BlogIndexPage() {
@@ -35,10 +36,9 @@ export default async function BlogIndexPage() {
         <section className="px-6 py-16 md:px-12">
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-3">
             {posts.map((post) => (
-              <Link
+              <article
                 key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition hover:shadow-xl"
+                className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition hover:shadow-xl"
               >
                 {post.imageUrl && (
                   <Image
@@ -53,15 +53,22 @@ export default async function BlogIndexPage() {
                 <div className="p-6">
                   <h2 className="mb-2 text-xl font-bold text-[#102f35]">{post.title}</h2>
                   <p className="mb-4 line-clamp-3 text-gray-600">{post.subtitle}</p>
-                  <p className="text-sm text-gray-500">
+                  <p className="mb-4 text-sm text-gray-500">
                     {new Date(post.publishedAt).toLocaleDateString("en-GB", {
                       day: "numeric",
                       month: "short",
                       year: "numeric",
                     })}
                   </p>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center gap-1 font-semibold text-[#102f35] hover:text-[#411b3f]"
+                  >
+                    {truncateLinkLabel(post.title)}
+                    <span aria-hidden="true">→</span>
+                  </Link>
                 </div>
-              </Link>
+              </article>
             ))}
           </div>
 

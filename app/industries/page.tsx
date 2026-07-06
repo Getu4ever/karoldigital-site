@@ -19,6 +19,7 @@ export default function IndustriesPage() {
     {
       href: "/industries/financial-services",
       label: "Financial Services",
+      linkLabel: "Financial sector sites",
       icon: <Landmark size={20} />,
       description:
         "Web design for financial businesses that need clarity, trust, and a more professional route to enquiry.",
@@ -26,6 +27,7 @@ export default function IndustriesPage() {
     {
       href: "/industries/immigration-services",
       label: "Immigration Lawyers",
+      linkLabel: "Immigration firm sites",
       icon: <Scale size={20} />,
       description:
         "Website design for immigration-focused firms that need to build authority, reduce confusion, and make it easier for clients to get in touch.",
@@ -33,6 +35,7 @@ export default function IndustriesPage() {
     {
       href: "/industries/building-services",
       label: "Construction and Trades",
+      linkLabel: "Construction sector sites",
       icon: <HardHat size={20} />,
       description:
         "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
@@ -135,9 +138,8 @@ export default function IndustriesPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry) => (
-                <Link
+                <article
                   key={industry.href}
-                  href={industry.href}
                   className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-center gap-3 mb-5 text-[#102f35]">
@@ -149,11 +151,14 @@ export default function IndustriesPage() {
                     {industry.description}
                   </p>
 
-                  <span className="inline-flex items-center gap-2 font-semibold text-[#102f35] hover:text-[#411b3f]">
-                    Explore this industry
-                    <ArrowRight size={16} />
-                  </span>
-                </Link>
+                  <Link
+                    href={industry.href}
+                    className="inline-flex items-center gap-2 font-semibold text-[#102f35] hover:text-[#411b3f]"
+                  >
+                    {industry.linkLabel}
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </Link>
+                </article>
               ))}
             </div>
           </div>
