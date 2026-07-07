@@ -156,73 +156,51 @@ export default function Footer() {
               </p>
             </div>
 
-            <Link
-              href="/book"
-              className="inline-block bg-yellow-400 text-[#102f35] px-4 py-2 rounded-full text-xs font-bold leading-none hover:bg-yellow-300 transition shadow-md"
-            >
-              Schedule a Free Call
-            </Link>
+            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+              <Link
+                href="/book"
+                className="inline-block bg-yellow-400 text-[#102f35] px-4 py-2 rounded-full text-xs font-bold leading-none hover:bg-yellow-300 transition shadow-md"
+              >
+                Schedule a Free Call
+              </Link>
 
-            <div className="flex flex-wrap gap-3">
-  {[
-    {
-      icon: <FaFacebookF />,
-      url: "https://www.facebook.com/karolgraphics",
-      label: "Follow us on Facebook",
-      shortLabel: "Facebook",
-    },
-    {
-      icon: <FaInstagram />,
-      url: "https://www.instagram.com/karoldigital2025/",
-      label: "Follow us on Instagram",
-      shortLabel: "Instagram",
-    },
-    {
-      icon: <FaLinkedinIn />,
-      url: "https://www.linkedin.com/in/karol-digital/",
-      label: "Follow us on LinkedIn",
-      shortLabel: "LinkedIn",
-    },
-    {
-      icon: <FaYoutube />,
-      url: "https://www.youtube.com/@KarolDigital-26",
-      label: "Subscribe to our YouTube channel",
-      shortLabel: "YouTube",
-    },
-  ].map((social) => (
-    <a
-      key={social.url}
-      href={social.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={social.label}
-      className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-gray-300 transition-all duration-300 hover:bg-yellow-400 hover:text-[#102f35]"
-    >
-      {social.icon}
-      <span>{social.shortLabel}</span>
-    </a>
-  ))}
-</div>
+              <div className="flex items-center gap-3">
+                {[
+                  {
+                    icon: <FaFacebookF />,
+                    url: "https://www.facebook.com/karolgraphics",
+                    label: "Follow us on Facebook",
+                  },
+                  {
+                    icon: <FaInstagram />,
+                    url: "https://www.instagram.com/karoldigital2025/",
+                    label: "Follow us on Instagram",
+                  },
+                  {
+                    icon: <FaLinkedinIn />,
+                    url: "https://www.linkedin.com/in/karol-digital/",
+                    label: "Follow us on LinkedIn",
+                  },
+                  {
+                    icon: <FaYoutube />,
+                    url: "https://www.youtube.com/@KarolDigital-26",
+                    label: "Subscribe to our YouTube channel",
+                  },
+                ].map((social) => (
+                  <a
+                    key={social.url}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm transition-all duration-300 hover:bg-yellow-400 hover:text-[#102f35]"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* FULL-WIDTH CTA BAR */}
-      <div className="w-full bg-white py-8 mt-12 flex justify-center">
-        <div className="max-w-4xl text-center px-6">
-          <p className="text-[#102f35] leading-relaxed text-lg font-semibold mb-3">
-            Need a website that looks credible and brings in better enquiries?
-          </p>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-            We help UK businesses grow with fast, professional, conversion-focused
-            websites built around real business goals.
-          </p>
-          <Link
-            href="/book"
-            className="inline-block mt-4 bg-yellow-400 text-[#102f35] px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
-          >
-            Talk to Our Team
-          </Link>
         </div>
       </div>
 
