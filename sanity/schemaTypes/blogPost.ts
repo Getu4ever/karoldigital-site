@@ -106,7 +106,19 @@ export default defineType({
       type: "array",
       of: [
         { type: "block" },
-        { type: "image", options: { hotspot: true } },
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            {
+              name: "alt",
+              title: "Alt Text",
+              type: "string",
+              description: "Important for SEO and accessibility.",
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+        },
         { type: "table" },           // From @sanity/table plugin
         { type: "customHtml" },      // ← Added for raw/custom HTML embeds
       ],
