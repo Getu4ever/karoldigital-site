@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
+import { homeTestimonials } from "@/lib/home-content";
 
 export const metadata: Metadata = {
   title: "Website Pricing & Web Design Packages UK | Karol Digital",
@@ -25,6 +26,20 @@ export const metadata: Metadata = {
   },
 };
 
+const pricingReviews = homeTestimonials.map(({ quote, author }) => ({
+  "@type": "Review" as const,
+  author: {
+    "@type": "Organization" as const,
+    name: author,
+  },
+  reviewBody: quote,
+  reviewRating: {
+    "@type": "Rating" as const,
+    ratingValue: "5",
+    bestRating: "5",
+  },
+}));
+
 const pricingServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -35,6 +50,14 @@ const pricingServiceSchema = {
     "@type": "Brand",
     name: "Karol Digital",
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    ratingCount: String(pricingReviews.length),
+    reviewCount: String(pricingReviews.length),
+  },
+  review: pricingReviews,
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
