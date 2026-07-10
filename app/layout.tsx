@@ -98,7 +98,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: JSON.stringify(websiteJsonLd),
           }}
         />
-
       </head>
       <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
         <GoogleAnalytics />

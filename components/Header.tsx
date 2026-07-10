@@ -121,7 +121,8 @@ export default function Header() {
             width={100}
             height={60}
             priority
-            className="h-[60px] w-auto"
+            className="h-[60px]"
+            style={{ width: "auto" }}
           />
           <span className="text-xl md:text-2xl font-semibold text-white">
             Karol <span className="text-brand-gold-soft">Digital</span>

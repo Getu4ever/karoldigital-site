@@ -39,7 +39,8 @@ export default function Footer() {
                 alt="Karol Digital Logo"
                 width={84}
                 height={50}
-                className="h-[50px] w-auto"
+                className="h-[50px]"
+                style={{ width: "auto" }}
               />
               <span className="text-2xl font-semibold text-white leading-none">
                 Karol{" "}
