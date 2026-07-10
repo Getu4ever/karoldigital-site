@@ -58,14 +58,14 @@ export default function ImmigrationWebDesign() {
           />
 
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-yellow-400 block mb-4">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
               High-Trust Websites for OISC &amp; SRA-Regulated Practices
             </span>
 
-            <h1 className="text-4xl sm:text-5xl font-black mb-6 tracking-tight leading-tight md:leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Web Design for{" "}
               <br className="hidden sm:inline" />
-              <span className="text-yellow-400">Immigration Services</span>
+              <span className="text-brand-gold-muted">Immigration Services</span>
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 text-gray-200 leading-relaxed font-medium">
@@ -81,7 +81,7 @@ export default function ImmigrationWebDesign() {
 
             <Link
               href="/book"
-              className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
+              className="bg-white text-[#102f35] hover:bg-brand-gold px-10 py-4.5 rounded-full font-semibold transition-all duration-300 inline-block shadow-md active:scale-95 text-sm uppercase tracking-wider"
             >
               Get a Quote for Your Firm
             </Link>
@@ -108,7 +108,7 @@ export default function ImmigrationWebDesign() {
             </Link>
             <ChevronRight size={12} className="text-gray-400" />
             <span className="flex items-center gap-1 text-[#411b3f]">
-              <Scale size={14} className="text-yellow-500" />
+              <Scale size={14} className="text-brand-gold-deep" />
               <span>Immigration Web Design</span>
             </span>
           </nav>
@@ -125,19 +125,19 @@ export default function ImmigrationWebDesign() {
                 height={500}
                 className="rounded-3xl shadow-2xl z-10 relative object-cover"
               />
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-yellow-400 rounded-3xl -z-10 hidden md:block" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-brand-gold/50 rounded-3xl -z-10 hidden md:block" />
             </div>
 
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 Legal Credibility &amp; Compliance
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] mb-6 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-6 tracking-tight">
                 Built for{" "}
                 <span className="text-[#411b3f]">Regulated Immigration Practices</span>
               </h2>
 
-              <p className="text-gray-700 text-lg mb-6 italic border-l-4 border-yellow-400 pl-4 font-medium">
+              <p className="text-gray-700 text-lg mb-6 italic border-l-4 border-brand-gold/70 pl-4 font-medium">
                 “For immigration clients, your website feels like the first
                 consultation. If it’s unclear or outdated, they quietly look
                 elsewhere.”
@@ -189,7 +189,7 @@ export default function ImmigrationWebDesign() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 High-Value Client Acquisition
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] tracking-tight">
                 Pages Tailored to Key Visa Practice Areas
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
@@ -257,7 +257,7 @@ export default function ImmigrationWebDesign() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
               Workflow &amp; Client Experience
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] tracking-tight">
               Designed Around Your{" "}
               <span className="text-[#411b3f]">Day-to-Day Casework</span>
             </h2>
@@ -307,16 +307,16 @@ export default function ImmigrationWebDesign() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(65,27,63,0.15),transparent)]" />
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="text-center mb-16">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400 block mb-3">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-muted block mb-3">
                 The Karol Digital Difference
               </span>
-              <h2 className="text-3xl md:text-4xl font-black tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                 Why Immigration Firms Choose to Partner Here
               </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-12">
               <div className="text-center md:text-left">
-                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-yellow-400 font-bold text-lg mb-6">
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-brand-gold-soft font-medium text-lg mb-6">
                   01
                 </div>
                 <h3 className="text-xl font-bold mb-3 tracking-tight">
@@ -330,7 +330,7 @@ export default function ImmigrationWebDesign() {
                 </p>
               </div>
               <div className="text-center md:text-left">
-                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-yellow-400 font-bold text-lg mb-6">
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-brand-gold-soft font-medium text-lg mb-6">
                   02
                 </div>
                 <h3 className="text-xl font-bold mb-3 tracking-tight">
@@ -344,7 +344,7 @@ export default function ImmigrationWebDesign() {
                 </p>
               </div>
               <div className="text-center md:text-left">
-                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-yellow-400 font-bold text-lg mb-6">
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-brand-gold-soft font-medium text-lg mb-6">
                   03
                 </div>
                 <h3 className="text-xl font-bold mb-3 tracking-tight">
@@ -381,7 +381,7 @@ export default function ImmigrationWebDesign() {
                 <span className="text-[#411b3f] font-bold tracking-widest text-sm uppercase mb-3 block">
                   Featured Case Study
                 </span>
-                <h2 className="text-3xl font-black text-[#102f35] mb-6 tracking-tight">
+                <h2 className="text-3xl font-bold text-[#102f35] mb-6 tracking-tight">
                   1st Call UK Immigration Services
                 </h2>
                 <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">
@@ -437,7 +437,7 @@ export default function ImmigrationWebDesign() {
         <section className="py-16 px-6 bg-gradient-to-br from-[#411b3f] to-[#251024] text-white rounded-[2.5rem] max-w-7xl mx-auto my-12 shadow-xl">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
             <div className="bg-white/10 p-4 rounded-2xl shrink-0">
-              <ShieldAlert className="text-yellow-400 w-10 h-10" />
+              <ShieldAlert className="text-brand-gold-soft w-10 h-10" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2 tracking-tight">
@@ -458,7 +458,7 @@ export default function ImmigrationWebDesign() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <HelpCircle className="mx-auto text-[#411b3f] w-10 h-10 mb-4" />
-              <h2 className="text-3xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl font-bold text-[#102f35] tracking-tight">
                 Immigration Website FAQ
               </h2>
               <p className="text-gray-600 mt-2 text-sm">
@@ -526,7 +526,7 @@ export default function ImmigrationWebDesign() {
             </p>
             <Link
               href="/book"
-              className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black px-10 py-4 rounded-full font-black text-sm uppercase tracking-wider shadow-lg transition transform hover:scale-105 active:scale-95"
+              className="inline-block bg-brand-gold hover:bg-brand-gold-deep text-[#102f35] px-10 py-4 rounded-full font-semibold text-sm uppercase tracking-wider shadow-md transition active:scale-95"
             >
               Start Your Project
             </Link>

@@ -22,9 +22,9 @@ export default async function BlogIndexPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6">
-            <h1 className="mb-4 text-5xl font-extrabold md:text-6xl">
+            <h1 className="mb-4 text-5xl font-bold md:text-6xl">
               <span className="text-white">Karol Digital </span>
-              <span className="text-yellow-400">Blog</span>
+              <span className="text-brand-gold-muted">Blog</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-gray-100 md:text-xl">
               Practical guides on web design, SEO, and conversion for UK service businesses

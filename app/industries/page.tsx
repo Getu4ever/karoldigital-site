@@ -80,10 +80,10 @@ export default function IndustriesPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6 max-w-4xl">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-yellow-400 mb-4">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold-muted mb-4">
               Industries
             </p>
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">
               Industry-focused websites for service businesses
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
@@ -128,7 +128,7 @@ export default function IndustriesPage() {
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+              <h2 className="text-4xl font-bold text-[#102f35] mb-4">
                 Industry pages
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
@@ -197,7 +197,7 @@ export default function IndustriesPage() {
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+              <h2 className="text-4xl font-bold text-[#102f35] mb-4">
                 What changes from one sector to another
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">

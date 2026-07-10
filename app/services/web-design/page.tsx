@@ -26,10 +26,10 @@ export default function WebDesignPage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl font-extrabold mb-6"
+              className="text-5xl md:text-6xl font-bold mb-6"
             >
               Professional Web Design{" "}
-              <span className="text-yellow-400">— Built for Growth, Performance & Trust</span>
+              <span className="text-brand-gold-muted">— Built for Growth, Performance & Trust</span>
             </motion.h1>
 
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-4">
@@ -218,7 +218,7 @@ export default function WebDesignPage() {
         {/* === CTA SECTION === */}
         <section className="bg-[#102f35] py-20 px-6 text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold mb-6">
+            <h2 className="text-4xl font-bold mb-6">
               Ready to Build a Website That Works for Your Business?
             </h2>
             <p className="text-lg text-gray-200 mb-8 leading-relaxed">
@@ -229,7 +229,7 @@ export default function WebDesignPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/pricing"
-                className="inline-block bg-[#ffffff] text-[#102f35] font-bold px-10 py-4 rounded-full hover:bg-yellow-300 transition"
+                className="inline-block bg-white text-[#102f35] font-semibold px-10 py-4 rounded-full hover:bg-brand-gold transition"
               >
                 View Web Design Packages &amp; Pricing
               </Link>

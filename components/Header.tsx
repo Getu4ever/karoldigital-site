@@ -110,7 +110,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-black shadow-md" : "bg-transparent backdrop-blur-md"
+        scrolled ? "bg-[#102f35] shadow-md" : "bg-transparent backdrop-blur-md"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -124,7 +124,7 @@ export default function Header() {
             className="h-[60px] w-auto"
           />
           <span className="text-xl md:text-2xl font-semibold text-white">
-            Karol <span className="text-yellow-400">Digital</span>
+            Karol <span className="text-brand-gold-soft">Digital</span>
           </span>
         </Link>
 
@@ -151,7 +151,7 @@ export default function Header() {
                   <button
                     type="button"
                     className={`flex items-center gap-1 transition-all duration-300 ${
-                      dropdownOpen ? "text-yellow-400" : "text-white hover:text-yellow-300"
+                      dropdownOpen ? "text-brand-gold-soft" : "text-white hover:text-brand-gold-muted"
                     }`}
                   >
                     {item.label}
@@ -164,7 +164,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     className={`flex items-center gap-1 transition-all duration-300 ${
-                      pathname === item.href ? "text-yellow-400" : "text-white hover:text-yellow-300"
+                      pathname === item.href ? "text-brand-gold-soft" : "text-white hover:text-brand-gold-muted"
                     }`}
                   >
                     {item.label}
@@ -181,7 +181,7 @@ export default function Header() {
                     >
                       <div className="bg-[#102f35] border border-white/10 rounded-xl shadow-2xl overflow-hidden p-2 flex flex-col">
                         <div className="px-4 py-3 border-b border-white/10">
-                          <p className="text-xs font-bold uppercase tracking-wider text-yellow-400">
+                          <p className="text-xs font-bold uppercase tracking-wider text-brand-gold-soft">
                             {item.label}
                           </p>
                           <p className="text-xs text-gray-300 mt-1">
@@ -196,9 +196,9 @@ export default function Header() {
                             <Link
                               key={`${sub.href}-${index}`}
                               href={sub.href}
-                              className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#411b3f] hover:text-yellow-400 rounded-lg transition"
+                              className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#411b3f] hover:text-brand-gold-soft rounded-lg transition"
                             >
-                              <span className="text-yellow-400">{sub.icon}</span>
+                              <span className="text-brand-gold-soft">{sub.icon}</span>
                               {sub.label}
                             </Link>
                           ))}
@@ -207,7 +207,7 @@ export default function Header() {
                         <div className="mt-2 pt-2 border-t border-white/10 flex flex-col gap-1">
                           <Link
                             href={item.href}
-                            className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-yellow-400 hover:bg-white/5 rounded-lg transition group/btn"
+                            className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-brand-gold-soft hover:bg-white/5 rounded-lg transition group/btn"
                           >
                             <span>
                               {isServices ? "View All Services" : "View All Industries"}
@@ -241,7 +241,7 @@ export default function Header() {
 
           <Link
             href="/book"
-            className="bg-yellow-400 text-[#102f35] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition shadow-md"
+            className="btn-primary px-6 py-3"
           >
             Book Consultation
           </Link>
@@ -290,7 +290,7 @@ export default function Header() {
                 href="/"
                 onClick={closeMobileMenu}
                 className={`flex items-center gap-3 text-lg font-semibold ${
-                  pathname === "/" ? "text-yellow-400" : "text-white"
+                  pathname === "/" ? "text-brand-gold-soft" : "text-white"
                 }`}
               >
                 <Home size={18} />
@@ -317,7 +317,7 @@ export default function Header() {
                             if (isIndustries) setMobileIndustriesOpen(!mobileIndustriesOpen);
                           }}
                           className={`flex w-full items-center justify-between text-lg font-semibold transition ${
-                            mobileOpen ? "text-yellow-400" : "text-gray-200"
+                            mobileOpen ? "text-brand-gold-soft" : "text-gray-200"
                           }`}
                         >
                           <span className="flex items-center gap-3">
@@ -347,11 +347,11 @@ export default function Header() {
                                     onClick={closeMobileMenu}
                                     className={`flex items-center gap-2 text-sm ${
                                       pathname === sub.href
-                                        ? "text-yellow-400 font-medium"
-                                        : "text-gray-300 hover:text-yellow-400"
+                                        ? "text-brand-gold-soft font-medium"
+                                        : "text-gray-300 hover:text-brand-gold-soft"
                                     }`}
                                   >
-                                    <span className="text-yellow-400">{sub.icon}</span>
+                                    <span className="text-brand-gold-soft">{sub.icon}</span>
                                     {sub.label}
                                   </Link>
                                 ))}
@@ -359,7 +359,7 @@ export default function Header() {
                                 <Link
                                   href={item.href}
                                   onClick={closeMobileMenu}
-                                  className="pt-1 text-sm font-medium text-yellow-400 underline decoration-dotted underline-offset-4"
+                                  className="pt-1 text-sm font-medium text-brand-gold-soft underline decoration-dotted underline-offset-4"
                                 >
                                   {isServices ? "All Services Overview" : "All Industries Overview"}
                                 </Link>
@@ -373,7 +373,7 @@ export default function Header() {
                         href={item.href}
                         onClick={closeMobileMenu}
                         className={`flex items-center gap-3 text-lg font-semibold ${
-                          pathname === item.href ? "text-yellow-400" : "text-white"
+                          pathname === item.href ? "text-brand-gold-soft" : "text-white"
                         }`}
                       >
                         {item.icon}
@@ -388,7 +388,7 @@ export default function Header() {
                 <Link
                   href="/book"
                   onClick={closeMobileMenu}
-                  className="bg-white text-[#102f35] py-3 rounded-full text-center font-bold shadow-md active:scale-95 transition"
+                  className="btn-primary py-3 text-center active:scale-95"
                 >
                   Schedule Free Consultation
                 </Link>

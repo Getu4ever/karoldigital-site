@@ -214,8 +214,8 @@ export default function BookingPage() {
           className="object-cover brightness-[0.45]"
         />
         <div className="relative z-10 px-6">
-          <h1 className="text-5xl md:text-6xl font-extrabold">
-            Book a Free <span className="text-yellow-400">Website Consultation</span>
+          <h1 className="text-5xl md:text-6xl font-bold">
+            Book a Free <span className="text-brand-gold-muted">Website Consultation</span>
           </h1>
           <p className="text-lg text-gray-100 max-w-xl mx-auto mt-4">
             Tell us about your business. We will review your goals and recommend the best next

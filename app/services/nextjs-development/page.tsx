@@ -18,9 +18,9 @@ export default function NextJSDevelopmentPage() {
             className="object-cover brightness-[0.4]"
           />
           <div className="relative z-10 px-6 max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Next.js Development{" "}
-              <span className="text-yellow-400">
+              <span className="text-brand-gold-muted">
                 — Blazing Fast, Secure & Scalable Web Apps
               </span>
             </h1>

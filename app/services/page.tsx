@@ -164,10 +164,10 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6 max-w-4xl">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-yellow-400 mb-4">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold-muted mb-4">
               Services
             </p>
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">
               Web design and development services built for enquiries
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
@@ -229,13 +229,13 @@ export default function ServicesPage() {
                   >
                     <span className="absolute inset-0 w-0 bg-gradient-to-r from-[#102f35] to-[#411b3f] transition-all duration-500 ease-out group-hover:w-full" />
                     <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors duration-500">
-                      <span className="text-[#411b3f] group-hover:text-yellow-400 transition-colors duration-500">
+                      <span className="text-[#411b3f] group-hover:text-brand-gold-soft transition-colors duration-500">
                         {pill.icon}
                       </span>
                       <span className="tracking-tight">{pill.label}</span>
                       <ArrowRight
                         size={16}
-                        className="opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-yellow-400"
+                        className="opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-brand-gold-soft"
                       />
                     </span>
                   </Link>
@@ -257,13 +257,13 @@ export default function ServicesPage() {
                   >
                     <span className="absolute inset-0 w-0 bg-gradient-to-r from-[#411b3f] to-[#102f35] transition-all duration-500 ease-out group-hover:w-full" />
                     <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors duration-500">
-                      <span className="text-[#102f35] group-hover:text-yellow-400 transition-colors duration-500">
+                      <span className="text-[#102f35] group-hover:text-brand-gold-soft transition-colors duration-500">
                         {item.icon}
                       </span>
                       <span className="tracking-tight">{item.label}</span>
                       <ArrowRight
                         size={16}
-                        className="opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-yellow-400"
+                        className="opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-brand-gold-soft"
                       />
                     </span>
                   </Link>
@@ -275,7 +275,7 @@ export default function ServicesPage() {
 
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-6xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+            <h2 className="text-4xl font-bold text-[#102f35] mb-4">
               Services designed around trust, speed, and conversion
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
@@ -414,7 +414,7 @@ export default function ServicesPage() {
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+              <h2 className="text-4xl font-bold text-[#102f35] mb-4">
                 A clear process from first conversation to launch
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -430,7 +430,7 @@ export default function ServicesPage() {
                   className="relative bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="text-3xl font-extrabold text-[#411b3f] mb-4">
+                    <div className="text-3xl font-bold text-[#411b3f] mb-4">
                       {step.step}
                     </div>
                     <p className="text-xl font-bold text-[#102f35] mb-3">

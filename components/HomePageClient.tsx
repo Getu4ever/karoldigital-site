@@ -34,7 +34,7 @@ import {
 
 function IconBadge({ icon: Icon }: { icon: LucideIcon }) {
   return (
-    <div className="mx-auto mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-yellow-400 shadow-md ring-1 ring-[#102f35]/10">
+    <div className="mx-auto mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-brand-gold-soft shadow-sm ring-1 ring-[#102f35]/10">
       <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
     </div>
   );
@@ -85,13 +85,13 @@ export default function HomePageClient() {
 
           <div className="relative z-20 w-full px-6 md:px-10">
             <div className="mx-auto max-w-5xl text-center">
-              <p className="mb-5 inline-flex rounded-full border border-yellow-300/60 bg-[#102f35]/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-200 shadow-lg backdrop-blur-md md:text-sm">
+              <p className="mb-5 inline-flex rounded-full border border-brand-gold-muted/40 bg-[#102f35]/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-muted shadow-md backdrop-blur-md md:text-sm">
                 Web design for UK service businesses
               </p>
 
-              <h1 className="text-4xl font-extrabold leading-tight md:text-6xl">
+              <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
                 High-performance websites built to turn
-                <span className="text-yellow-400"> more visitors into qualified enquiries</span>
+                <span className="text-brand-gold-muted"> more visitors into qualified enquiries</span>
               </h1>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200 md:text-2xl">
@@ -102,7 +102,7 @@ export default function HomePageClient() {
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/book"
-                  className="inline-block rounded-full bg-yellow-400 px-10 py-4 text-lg font-bold text-black shadow-xl transition hover:bg-yellow-500 hover:shadow-2xl"
+                  className="btn-primary px-10 py-4 text-lg"
                 >
                   Book a Free Consultation
                 </Link>
@@ -110,7 +110,7 @@ export default function HomePageClient() {
                 <Link
                   href="/book"
                   onClick={() => setBookServicePrefill("Website Audit")}
-                  className="inline-block rounded-full border border-white/30 bg-white/10 px-10 py-4 text-lg font-bold text-white backdrop-blur-sm transition hover:bg-white/20"
+                  className="btn-secondary px-10 py-4 text-lg"
                 >
                   Request a Website Audit
                 </Link>
@@ -152,7 +152,7 @@ export default function HomePageClient() {
 
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 rounded-full bg-[#102f35] px-8 py-3 font-bold text-white transition hover:bg-[#411b3f]"
+                className="btn-teal"
               >
                 Get a free website review
                 <ArrowRight size={18} aria-hidden="true" />
@@ -181,11 +181,11 @@ export default function HomePageClient() {
           <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
             {statItems.map(({ value, label, icon: Icon }) => (
               <div key={label} className="text-center">
-                <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-yellow-400">
+                <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-brand-gold-soft">
                   <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
                 </div>
-                <div className="text-5xl font-bold text-yellow-400">{value}</div>
-                <p className="mt-2 text-sm text-gray-200 md:text-base">{label}</p>
+                <div className="text-5xl font-bold text-white">{value}</div>
+                <p className="mt-2 text-sm text-gray-300 md:text-base">{label}</p>
               </div>
             ))}
           </div>
@@ -210,7 +210,7 @@ export default function HomePageClient() {
               {homeServices.map((service, index) => (
                 <article
                   key={service.title}
-                  className="group flex flex-col rounded-3xl border border-gray-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40 hover:shadow-lg"
+                  className="group flex flex-col rounded-3xl border border-gray-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:shadow-lg"
                 >
                   <IconBadge icon={serviceIcons[index]} />
                   <p className="mb-4 text-2xl font-bold text-[#102f35]">{service.title}</p>
@@ -384,7 +384,7 @@ export default function HomePageClient() {
             </div>
             <Link
               href="/book"
-              className="shrink-0 rounded-full bg-yellow-400 px-8 py-3 font-bold text-[#102f35] shadow-lg transition hover:bg-yellow-500"
+              className="btn-primary shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold-muted"
             >
               Book a Free Call
             </Link>
@@ -410,7 +410,7 @@ export default function HomePageClient() {
                       ? "border-[#411b3f]"
                       : index === 1
                         ? "border-[#102f35]"
-                        : "border-yellow-400"
+                        : "border-[#c9a84b]/70"
                   }`}
                 >
                   <p className="mb-6 italic text-gray-600">
@@ -495,13 +495,13 @@ export default function HomePageClient() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="bg-gray-900 px-6 py-24 text-center text-white">
+        <section className="bg-[#102f35] px-6 py-24 text-center text-white">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
               If your website should be bringing in better enquiries, start there
             </h2>
 
-            <p className="mb-10 text-lg text-gray-400">
+            <p className="mb-10 text-lg text-gray-300">
               Book a consultation if you need a new website, or request an audit if you want
               to improve the one you already have.
             </p>
@@ -509,14 +509,14 @@ export default function HomePageClient() {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/book"
-                className="inline-block rounded-full bg-yellow-400 px-12 py-4 text-lg font-bold text-[#102f35] shadow-xl transition hover:bg-yellow-500"
+                className="btn-primary px-12 py-4 text-lg"
               >
                 Start Your Project
               </Link>
 
               <Link
                 href="/services/website-audits"
-                className="inline-block rounded-full border border-white/20 bg-white/10 px-12 py-4 text-lg font-bold text-white transition hover:bg-white/20"
+                className="btn-secondary px-12 py-4 text-lg"
               >
                 Explore audit services
               </Link>

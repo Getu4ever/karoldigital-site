@@ -94,7 +94,7 @@ function ContactFormSection() {
           </p>
           <Link
             href="/book"
-            className="inline-block mt-8 bg-yellow-400 text-[#102f35] px-8 py-3 rounded-full font-bold hover:bg-yellow-500 transition"
+            className="inline-block mt-8 bg-brand-gold text-[#102f35] px-8 py-3 rounded-full font-semibold hover:bg-brand-gold-deep transition"
           >
             Prefer to book a call instead?
           </Link>
@@ -230,9 +230,9 @@ export default function ContactPage() {
             className="object-cover brightness-[0.45]"
           />
           <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold">
+            <h1 className="text-5xl md:text-6xl font-bold">
               Contact Us About Your{" "}
-              <span className="text-yellow-400">Website Project</span>
+              <span className="text-brand-gold-muted">Website Project</span>
             </h1>
             <p className="text-lg text-gray-100 max-w-xl mx-auto mt-4">
               Get in touch to tell us about your business and what you need from your

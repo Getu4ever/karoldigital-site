@@ -59,12 +59,12 @@ export default function BuildersWebDesign() {
           
           {/* Main Hero Content Box Container - Unified Max Width Footprint */}
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-yellow-400 block mb-4">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
               High-Performance Custom Next.js Systems for the Trade Sector
             </span>
-            <h1 className="text-4xl sm:text-5xl font-black mb-6 tracking-tight leading-tight md:leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Construction Website Design <br className="hidden sm:inline" />
-              That <span className="text-yellow-400">Builds Your Business</span>
+              That <span className="text-brand-gold-muted">Builds Your Business</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
               High-performance, secure web development and trade SEO for UK builders,
@@ -73,7 +73,7 @@ export default function BuildersWebDesign() {
             </p>
             <Link
               href="/book"
-              className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
+              className="bg-white text-[#102f35] hover:bg-brand-gold px-10 py-4.5 rounded-full font-semibold transition-all duration-300 inline-block shadow-md active:scale-95 text-sm uppercase tracking-wider"
             >
               Get My Free Quote
             </Link>
@@ -94,7 +94,7 @@ export default function BuildersWebDesign() {
             </Link>
             <ChevronRight size={12} className="text-gray-400" />
             <span className="flex items-center gap-1 text-[#411b3f]">
-              <HardHat size={14} className="text-yellow-500" />
+              <HardHat size={14} className="text-brand-gold-deep" />
               <span>Building & Trades</span>
             </span>
           </nav>
@@ -121,7 +121,7 @@ export default function BuildersWebDesign() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 UK Local Authority Engineering
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 <span className="block text-[#102f35]">
                   High-Performance Websites for
                 </span>
@@ -152,7 +152,7 @@ export default function BuildersWebDesign() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 Industry Specific Architecture
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] tracking-tight">
                 Targeting Your Target Contracting Segments
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
@@ -195,7 +195,7 @@ export default function BuildersWebDesign() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 Engineered Performance
               </span>
-              <h2 className="text-3xl font-extrabold text-[#102f35] mb-4">
+              <h2 className="text-3xl font-bold text-[#102f35] mb-4">
                 Essential Operational Assets for Trade Sites
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed">
@@ -265,11 +265,11 @@ export default function BuildersWebDesign() {
             </div>
 
             <div className="md:w-1/2 bg-gradient-to-br from-[#411b3f] to-[#102f35] p-10 rounded-3xl text-white shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4 text-white/5 font-black text-7xl select-none">
+              <div className="absolute top-0 right-0 p-4 text-white/5 font-bold text-7xl select-none">
                 UK
               </div>
-              <Briefcase className="text-yellow-400 w-10 h-10 mb-4" />
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">
+              <Briefcase className="text-brand-gold-soft w-10 h-10 mb-4" />
+              <h3 className="text-2xl font-bold mb-4 text-brand-gold-muted">
                 Fixed-Scope Deployments
               </h3>
               <p className="mb-6 text-sm text-gray-200 leading-relaxed">
@@ -277,7 +277,7 @@ export default function BuildersWebDesign() {
               </p>
               <Link 
                 href="/pricing" 
-                className="inline-flex items-center gap-2 text-white font-bold border-b-2 border-yellow-400 pb-1 hover:text-yellow-300 hover:border-yellow-300 transition-all text-sm uppercase tracking-wider"
+                className="inline-flex items-center gap-2 text-white font-bold border-b-2 border-brand-gold pb-1 hover:text-brand-gold-soft hover:border-brand-gold-soft transition-all text-sm uppercase tracking-wider"
               >
                 <span>View Trade Layout Pricing</span>
               </Link>
@@ -290,7 +290,7 @@ export default function BuildersWebDesign() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <HelpCircle className="mx-auto text-[#411b3f] w-10 h-10 mb-4" />
-              <h2 className="text-3xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl font-bold text-[#102f35] tracking-tight">
                 Construction Web Optimization FAQ
               </h2>
               <p className="text-gray-600 mt-2 text-sm">
@@ -334,7 +334,7 @@ export default function BuildersWebDesign() {
             </p>
             <Link
               href="/book"
-              className="inline-block bg-yellow-400 text-black px-10 py-4 rounded-full font-black hover:bg-white transition-all shadow-xl hover:scale-[1.02] active:scale-95"
+              className="inline-block bg-brand-gold text-[#102f35] px-10 py-4 rounded-full font-semibold hover:bg-white transition-all shadow-md active:scale-95"
             >
               Let's Talk Strategy
             </Link>

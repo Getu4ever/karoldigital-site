@@ -27,7 +27,7 @@ export default function SocialMediaPage() {
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 px-6 max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Professional Social Media Setup
           </h1>
 

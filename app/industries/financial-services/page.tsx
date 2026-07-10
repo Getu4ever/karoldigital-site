@@ -66,19 +66,19 @@ export default function FinanceWebDesign() {
           
           {/* Main Hero Content Box Container */}
           <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center justify-center">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-yellow-400 block mb-4">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
               Enterprise Grade Frameworks for Professional Firms
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 tracking-tight leading-tight md:leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Financial Services Web Design <br className="hidden md:inline" />
-              For <span className="text-yellow-400">Corporate Sector Trust</span>
+              For <span className="text-brand-gold-muted">Corporate Sector Trust</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
               High-trust, secure, and professional web platforms for UK Mortgage Brokers, Chartered Accountants, and Certified Financial Advisors.
             </p>
             <Link
               href="/book"
-              className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-base"
+              className="bg-white text-[#102f35] hover:bg-brand-gold px-10 py-4.5 rounded-full font-semibold transition-all duration-300 inline-block shadow-md active:scale-95 text-base"
             >
               Request a Professional Consultation
             </Link>
@@ -99,7 +99,7 @@ export default function FinanceWebDesign() {
             </Link>
             <ChevronRight size={12} className="text-gray-400" />
             <span className="flex items-center gap-1 text-[#411b3f]">
-              <ShieldCheck size={14} className="text-yellow-500" />
+              <ShieldCheck size={14} className="text-brand-gold-deep" />
               <span>Financial & Professional</span>
             </span>
           </nav>
@@ -112,7 +112,7 @@ export default function FinanceWebDesign() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 Institutional Credibility Formats
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] mb-6 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-6 tracking-tight">
                 Built on <span className="text-[#411b3f]">Trust & Security</span>
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -126,8 +126,8 @@ export default function FinanceWebDesign() {
               </p>
             </div>
             
-            <div className="bg-[#102f35]/5 p-8 md:p-10 rounded-3xl border-l-8 border-l-yellow-400 border border-gray-100 shadow-sm">
-              <h3 className="font-black text-xl mb-6 text-[#102f35] tracking-tight">Essential Compliance Assets:</h3>
+            <div className="bg-[#102f35]/5 p-8 md:p-10 rounded-3xl border-l-8 border-l-brand-gold border border-gray-100 shadow-sm">
+              <h3 className="font-bold text-xl mb-6 text-[#102f35] tracking-tight">Essential Compliance Assets:</h3>
               <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                 Every asset we deploy for the professional financial space comes complete with core technical mechanisms required to process user parameters safely.
               </p>
@@ -160,7 +160,7 @@ export default function FinanceWebDesign() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 Tailored Solutions
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] tracking-tight">
                 Specialized Web Architectures for Financial Sectors
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
@@ -220,7 +220,7 @@ export default function FinanceWebDesign() {
               </div>
               <div className="lg:w-1/2 p-8 md:p-14 flex flex-col justify-center">
                 <span className="text-[#411b3f] font-bold text-sm uppercase tracking-widest mb-2">Bespoke Enterprise Project</span>
-                <h3 className="text-3xl font-black text-[#102f35] mb-6">1st Call Financial</h3>
+                <h3 className="text-3xl font-bold text-[#102f35] mb-6">1st Call Financial</h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   We engineered and launched a highly secure corporate platform for <strong className="text-[#102f35]">1st Call Financial</strong>. The architecture focuses completely on flawless typography weights and clarity, incorporating an enterprise navigation track to manage mortgage and brokerage funnels safely while strictly adhering to domain mapping best practices.
                 </p>
@@ -252,10 +252,10 @@ export default function FinanceWebDesign() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(65,27,63,0.2),transparent)]" />
           <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             <div className="md:col-span-3">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400 block mb-3">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-muted block mb-3">
                 Zero-Tolerance Data Compliance
               </span>
-              <h2 className="text-2xl md:text-3xl font-black mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">
                 Designed to Exceed Strict UK Regulatory Standards
               </h2>
               <p className="text-gray-200 text-sm leading-relaxed mb-6">
@@ -263,27 +263,27 @@ export default function FinanceWebDesign() {
               </p>
               <div className="space-y-3 text-sm font-medium text-gray-100">
                 <p className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-yellow-400 shrink-0" />
+                  <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
                   <span>FCA-Ready Header Disclosures & Footer Risk Text Placement Mapping</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-yellow-400 shrink-0" />
+                  <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
                   <span>Cookie Consent Integration with Granular Third-Party Analytics Toggling</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-yellow-400 shrink-0" />
+                  <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
                   <span>Next.js Built-In Content Security Policy (CSP) Headers Setup Support</span>
                 </p>
               </div>
             </div>
             
             <div className="md:col-span-2 bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
-              <FileText className="text-yellow-400 w-10 h-10 mb-4" />
+              <FileText className="text-brand-gold-soft w-10 h-10 mb-4" />
               <h3 className="text-lg font-bold mb-2">Need Compliance Sign-off?</h3>
               <p className="text-gray-300 text-xs leading-relaxed mb-4">
                 We work collaboratively alongside your internal compliance officers or network principal advisors to ensure all copies, forms, and disclosures meet regulatory code.
               </p>
-              <span className="text-xs font-bold uppercase text-yellow-400 tracking-wider">Airtight Protection</span>
+              <span className="text-xs font-bold uppercase text-brand-gold-soft tracking-wider">Airtight Protection</span>
             </div>
           </div>
         </section>
@@ -293,7 +293,7 @@ export default function FinanceWebDesign() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <HelpCircle className="mx-auto text-[#411b3f] w-10 h-10 mb-4" />
-              <h2 className="text-3xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl font-bold text-[#102f35] tracking-tight">
                 Frequently Asked Questions Regarding Finance Web Systems
               </h2>
               <p className="text-gray-600 mt-2 text-sm">
@@ -337,7 +337,7 @@ export default function FinanceWebDesign() {
             </p>
             <Link
               href="/book"
-              className="inline-block bg-yellow-400 text-black px-10 py-4 rounded-full font-black hover:bg-white transition-all shadow-xl hover:scale-[1.02] active:scale-95"
+              className="inline-block bg-brand-gold text-[#102f35] px-10 py-4 rounded-full font-semibold hover:bg-white transition-all shadow-md active:scale-95"
             >
               Start Your Finance Project
             </Link>

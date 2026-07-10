@@ -33,9 +33,9 @@ export default function AILogoDesignPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">
               <span className="text-white">AI Logo </span>
-              <span className="text-yellow-400">Design Support</span>
+              <span className="text-brand-gold-muted">Design Support</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
               Fast, sleek, and professional logo concepts for businesses that need a
@@ -126,7 +126,7 @@ export default function AILogoDesignPage() {
           <section className="py-24 px-6 md:px-12 bg-white">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+                <h2 className="text-4xl font-bold text-[#102f35] mb-4">
                   A Smart Option for Early-Stage or Light-Touch Branding Needs
                 </h2>
                 <p className="text-gray-600 max-w-3xl mx-auto">
@@ -138,7 +138,7 @@ export default function AILogoDesignPage() {
 
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                  <div className="text-yellow-500 mb-5">
+                  <div className="text-brand-gold-deep mb-5">
                     <Sparkles size={30} />
                   </div>
                   <p className="text-xl font-bold text-[#102f35] mb-4">
@@ -152,7 +152,7 @@ export default function AILogoDesignPage() {
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                  <div className="text-yellow-500 mb-5">
+                  <div className="text-brand-gold-deep mb-5">
                     <PenTool size={30} />
                   </div>
                   <p className="text-xl font-bold text-[#411b3f] mb-4">
@@ -166,7 +166,7 @@ export default function AILogoDesignPage() {
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                  <div className="text-yellow-500 mb-5">
+                  <div className="text-brand-gold-deep mb-5">
                     <BadgeCheck size={30} />
                   </div>
                   <p className="text-xl font-bold text-[#102f35] mb-4">
@@ -282,7 +282,7 @@ export default function AILogoDesignPage() {
           <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-white to-[#f9fafb] border-t border-gray-100">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-20">
-                <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
+                <h2 className="text-4xl font-bold text-[#102f35] mb-4">
                   What You Can Expect from the Process
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -292,7 +292,7 @@ export default function AILogoDesignPage() {
 
               <div className="grid md:grid-cols-4 gap-8">
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <div className="text-3xl font-extrabold text-[#411b3f] mb-4">01</div>
+                  <div className="text-3xl font-bold text-[#411b3f] mb-4">01</div>
                   <p className="text-xl font-bold text-[#102f35] mb-3">
                     Brief and Direction
                   </p>
@@ -303,7 +303,7 @@ export default function AILogoDesignPage() {
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <div className="text-3xl font-extrabold text-[#102f35] mb-4">02</div>
+                  <div className="text-3xl font-bold text-[#102f35] mb-4">02</div>
                   <p className="text-xl font-bold text-[#102f35] mb-3">
                     AI Concept Exploration
                   </p>
@@ -314,7 +314,7 @@ export default function AILogoDesignPage() {
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <div className="text-3xl font-extrabold text-[#411b3f] mb-4">03</div>
+                  <div className="text-3xl font-bold text-[#411b3f] mb-4">03</div>
                   <p className="text-xl font-bold text-[#102f35] mb-3">
                     Refinement and Cleanup
                   </p>
@@ -325,7 +325,7 @@ export default function AILogoDesignPage() {
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <div className="text-3xl font-extrabold text-[#102f35] mb-4">04</div>
+                  <div className="text-3xl font-bold text-[#102f35] mb-4">04</div>
                   <p className="text-xl font-bold text-[#102f35] mb-3">
                     Delivery for Use
                   </p>

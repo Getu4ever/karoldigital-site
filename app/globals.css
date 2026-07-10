@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-teal: #102f35;
+  --brand-plum: #411b3f;
+  --brand-gold: #c9a84b;
+  --brand-gold-hover: #b8973f;
+  --brand-gold-soft: #d4b56a;
+  --brand-gold-muted: #e8d9a8;
 }
 
 @theme inline {
@@ -10,17 +16,42 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Brand gold scale — use these instead of default yellow */
+  --color-brand-gold: #c9a84b;
+  --color-brand-gold-soft: #d4b56a;
+  --color-brand-gold-muted: #e8d9a8;
+  --color-brand-gold-deep: #b8973f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Force-soften default yellow utilities still used in the codebase */
+@layer theme {
+  :root,
+  :host {
+    --color-yellow-200: #e8d9a8;
+    --color-yellow-300: #d4b56a;
+    --color-yellow-400: #c9a84b;
+    --color-yellow-500: #b8973f;
   }
 }
 
+/* Site is light-first; avoid OS dark-mode flipping body colors */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #ffffff;
+  color: #171717;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Shared CTA styles — keep primary actions consistent site-wide */
+@layer components {
+  .btn-primary {
+    @apply inline-block rounded-full bg-brand-gold px-8 py-3 font-semibold text-[#102f35] shadow-md transition hover:bg-brand-gold-deep;
+  }
+
+  .btn-secondary {
+    @apply inline-block rounded-full border border-white/40 bg-white/10 px-8 py-3 font-medium text-white transition hover:bg-white/20;
+  }
+
+  .btn-teal {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#102f35] px-8 py-3 font-semibold text-white transition hover:bg-[#411b3f];
+  }
 }

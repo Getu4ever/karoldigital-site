@@ -59,19 +59,19 @@ export default function CateringWebDesign() {
           
           {/* Main Hero Content Box Container - Reduced Max Width to 2xl */}
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-yellow-400 block mb-4">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
               Premium Next.js Frameworks for Food Brands
             </span>
-            <h1 className="text-4xl sm:text-5xl font-black mb-6 tracking-tight leading-tight md:leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Catering Website Design & <br className="hidden sm:inline" />
-              <span className="text-yellow-400">Hospitality Systems</span>
+              <span className="text-brand-gold-muted">Hospitality Systems</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
               Professional catering website design and high-conversion web frameworks for UK food brands. I build custom online ordering systems engineered to turn hungry visitors into booked events.
             </p>
             <Link 
               href="/book" 
-              className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
+              className="bg-white text-[#102f35] hover:bg-brand-gold px-10 py-4.5 rounded-full font-semibold transition-all duration-300 inline-block shadow-md active:scale-95 text-sm uppercase tracking-wider"
             >
               Start My Food Website
             </Link>
@@ -91,7 +91,7 @@ export default function CateringWebDesign() {
             </Link>
             <ChevronRight size={12} className="text-gray-400" />
             <span className="flex items-center gap-1 text-[#411b3f]">
-              <UtensilsCrossed size={14} className="text-yellow-500" />
+              <UtensilsCrossed size={14} className="text-brand-gold-deep" />
               <span>Catering & Hospitality</span>
             </span>
           </nav>
@@ -102,7 +102,7 @@ export default function CateringWebDesign() {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
             Digital Tasting Menus
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-6 tracking-tight">
             Stand Out in the Competitive <span className="text-[#411b3f]">UK Food Scene</span>
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -120,7 +120,7 @@ export default function CateringWebDesign() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
                 Industry Specific Focus
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] tracking-tight">
                 Tailor-Made Platforms for Hospitality Sectors
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
@@ -180,7 +180,7 @@ export default function CateringWebDesign() {
               </div>
               <div className="md:w-1/2 p-8 md:p-14 flex flex-col justify-center">
                 <span className="text-[#411b3f] font-bold text-sm uppercase tracking-widest mb-2">Corporate Catering Integration</span>
-                <h3 className="text-3xl font-black text-[#102f35] mb-6">The Office Lunch</h3>
+                <h3 className="text-3xl font-bold text-[#102f35] mb-6">The Office Lunch</h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   We engineered a fluid, robust headless deployment for <strong className="text-[#102f35]">The Office Lunch</strong>. The platform handles complex bulk corporate orders smoothly, focusing strictly on crisp B2B aesthetics and instant navigational processing.
                 </p>
@@ -197,7 +197,7 @@ export default function CateringWebDesign() {
                 <Link 
                   href="https://the-office-lunch.vercel.app/" 
                   target="_blank" 
-                  className="text-[#411b3f] font-extrabold flex items-center gap-1 hover:text-[#102f35] transition-colors group"
+                  className="text-[#411b3f] font-bold flex items-center gap-1 hover:text-[#102f35] transition-colors group"
                 >
                   <span>Visit The Office Lunch</span> 
                   <span className="inline-block transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
@@ -222,7 +222,7 @@ export default function CateringWebDesign() {
               </div>
               <div className="md:w-1/2 p-8 md:p-14 flex flex-col justify-center">
                 <span className="text-[#411b3f] font-bold text-sm uppercase tracking-widest mb-2">E-commerce Success Story</span>
-                <h3 className="text-3xl font-black text-[#102f35] mb-6">Food Mama Kitchens</h3>
+                <h3 className="text-3xl font-bold text-[#102f35] mb-6">Food Mama Kitchens</h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   We designed and deployed a vibrant, lightning-fast storefront solution for <strong className="text-[#102f35]">Food Mama Kitchens</strong> to perfectly market their authentic West African culinary offerings. The infrastructure targets visual content loading metrics alongside smooth booking forms.
                 </p>
@@ -239,7 +239,7 @@ export default function CateringWebDesign() {
                 <Link 
                   href="https://www.foodmamakitchens.co.uk/" 
                   target="_blank" 
-                  className="text-[#102f35] font-extrabold flex items-center gap-1 hover:text-[#411b3f] transition-colors group"
+                  className="text-[#102f35] font-bold flex items-center gap-1 hover:text-[#411b3f] transition-colors group"
                 >
                   <span>Visit Food Mama Kitchens</span> 
                   <span className="inline-block transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
@@ -254,10 +254,10 @@ export default function CateringWebDesign() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(65,27,63,0.2),transparent)]" />
           <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             <div className="md:col-span-3">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400 block mb-3">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-muted block mb-3">
                 High-Performance Ordering Mechanics
               </span>
-              <h2 className="text-2xl md:text-3xl font-black mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">
                 Eliminate Third-Party App Commission Fees Forever
               </h2>
               <p className="text-gray-200 text-sm leading-relaxed mb-6">
@@ -265,27 +265,27 @@ export default function CateringWebDesign() {
               </p>
               <div className="space-y-3 text-sm font-medium text-gray-100">
                 <p className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-yellow-400 shrink-0" />
+                  <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
                   <span>Blazing-fast Next.js caching algorithms ensure fluid digital menu browsing</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-yellow-400 shrink-0" />
+                  <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
                   <span>Granular custom forms mapping collection locations and allergen requirements</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-yellow-400 shrink-0" />
+                  <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
                   <span>Seamless database synchronization with local merchant printers and POS lines</span>
                 </p>
               </div>
             </div>
             
             <div className="md:col-span-2 bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
-              <ShoppingBag className="text-yellow-400 w-10 h-10 mb-4" />
+              <ShoppingBag className="text-brand-gold-soft w-10 h-10 mb-4" />
               <h3 className="text-lg font-bold mb-2">Want a Commission-Free Funnel?</h3>
               <p className="text-gray-300 text-xs leading-relaxed mb-4">
                 We engineer standalone transactional checkout environments that give your business complete ownership of its sales workflows, lists, and customer lifetime records.
               </p>
-              <span className="text-xs font-bold uppercase text-yellow-400 tracking-wider">Keep 100% of Profits</span>
+              <span className="text-xs font-bold uppercase text-brand-gold-soft tracking-wider">Keep 100% of Profits</span>
             </div>
           </div>
         </section>
@@ -294,7 +294,7 @@ export default function CateringWebDesign() {
         <section className="py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-extrabold text-[#102f35] mb-4">
+              <h2 className="text-3xl font-bold text-[#102f35] mb-4">
                 Conversion Assets Engineered For Food Brands
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -326,7 +326,7 @@ export default function CateringWebDesign() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <HelpCircle className="mx-auto text-[#411b3f] w-10 h-10 mb-4" />
-              <h2 className="text-3xl font-extrabold text-[#102f35] tracking-tight">
+              <h2 className="text-3xl font-bold text-[#102f35] tracking-tight">
                 Catering & Hospitality Web Design FAQ
               </h2>
               <p className="text-gray-600 mt-2 text-sm">
@@ -370,7 +370,7 @@ export default function CateringWebDesign() {
             </p>
             <Link
               href="/book"
-              className="inline-block bg-yellow-400 text-black px-10 py-4 rounded-full font-black hover:bg-white transition-all shadow-xl hover:scale-[1.02] active:scale-95"
+              className="inline-block bg-brand-gold text-[#102f35] px-10 py-4 rounded-full font-semibold hover:bg-white transition-all shadow-md active:scale-95"
             >
               Let's Cook Up Your Website
             </Link>

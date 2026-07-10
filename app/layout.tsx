@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ChatbaseWidget from "@/components/ChatbaseWidget";
 import { Metadata, Viewport } from "next";
 
 export const viewport: Viewport = {
@@ -98,41 +99,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(){
-                if(!window.chatbase || window.chatbase("getState")!=="initialized"){
-                  window.chatbase=(...arguments)=>{
-                    if(!window.chatbase.q){window.chatbase.q=[]}
-                    window.chatbase.q.push(arguments)
-                  };
-                  window.chatbase=new Proxy(window.chatbase,{
-                    get(target,prop){
-                      if(prop==="q"){return target.q}
-                      return(...args)=>target(prop,...args)
-                    }
-                  })
-                }
-                const onLoad=function(){
-                  const script=document.createElement("script");
-                  script.src="https://www.chatbase.co/embed.min.js";
-                  script.id="cn8XxlevKOTIx0z1Oyy4S";
-                  script.domain="www.chatbase.co";
-                  document.body.appendChild(script)
-                };
-                if(document.readyState==="complete"){onLoad()}
-                else{window.addEventListener("load",onLoad)}
-              })();
-            `,
-          }}
-        />
       </head>
       <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
         <GoogleAnalytics />
         <Header />
         <AnimateWrapper>{children}</AnimateWrapper>
         <Footer />
+        <ChatbaseWidget />
       </body>
     </html>
   );

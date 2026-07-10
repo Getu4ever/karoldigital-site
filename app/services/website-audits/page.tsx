@@ -17,9 +17,9 @@ export default function WebsiteAuditPage() {
           className="object-cover brightness-[0.4]"
         />
         <div className="relative z-10 px-6 max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
             <span className="text-white">Website </span>
-            <span className="text-yellow-400">Health Audit</span>
+            <span className="text-brand-gold-muted">Health Audit</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
             Identify what is hurting trust, speed, visibility, and conversions — then fix it in
@@ -122,7 +122,7 @@ export default function WebsiteAuditPage() {
 
           <Link
             href="/book?service=Website+Audit"
-            className="bg-yellow-400 text-[#102f35] px-10 py-4 rounded-full font-bold hover:bg-yellow-300 transition"
+            className="bg-brand-gold text-[#102f35] px-10 py-4 rounded-full font-semibold hover:bg-brand-gold-deep transition"
           >
             Book My Free Audit Call
           </Link>

@@ -25,10 +25,10 @@ export default function CustomDevelopmentPage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-extrabold mb-6"
+              className="text-4xl md:text-6xl font-bold mb-6"
             >
               Custom Web Development{" "}
-              <span className="text-yellow-400">
+              <span className="text-brand-gold-muted">
                 — Bespoke Solutions for Unique Business Challenges
               </span>
             </motion.h1>

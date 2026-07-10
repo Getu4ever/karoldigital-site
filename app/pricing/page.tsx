@@ -29,14 +29,14 @@ const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <div
-      className={`relative bg-white shadow-xl rounded-2xl p-8 border-t-4 ${
+      className={`relative bg-white shadow-lg rounded-2xl p-8 border-t-4 ${
         highlighted
-          ? "border-yellow-400 scale-105 z-10 shadow-2xl"
+          ? "border-brand-gold scale-105 z-10 shadow-xl"
           : "border-[#102f35]"
       } flex flex-col hover:-translate-y-2 transition-all duration-300`}
     >
       {highlighted && (
-        <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-[#102f35] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+        <div className="absolute top-0 right-8 -translate-y-1/2 border border-brand-gold/80 bg-white text-[#102f35] px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wider shadow-sm">
           Best Value
         </div>
       )}
@@ -56,13 +56,13 @@ const PricingCard = ({
       <ul className="space-y-3 text-gray-700 mb-8 flex-grow">
         {features.map((feature, i) => (
           <li key={i} className="flex items-start gap-2">
-            <span className="text-yellow-500">✔</span>
+            <span className="text-[#102f35]/70">✔</span>
             <span>{feature}</span>
           </li>
         ))}
       </ul>
 
-      <p className="text-2xl font-extrabold text-[#102f35] text-center mb-2">
+      <p className="text-2xl font-bold text-[#102f35] text-center mb-2">
         {price}
       </p>
 
@@ -77,7 +77,7 @@ const PricingCard = ({
         }}
         className={`block text-center py-3 rounded-full font-semibold transition ${
           highlighted
-            ? "bg-yellow-400 text-[#102f35] hover:bg-yellow-500"
+            ? "bg-brand-gold text-[#102f35] hover:bg-brand-gold-deep"
             : "bg-[#102f35] text-white hover:bg-[#411b3f]"
         }`}
       >
@@ -108,9 +108,9 @@ export default function PricingPage() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">
               <span className="text-white">Flexible </span>
-              <span className="text-yellow-400">Website Pricing</span>
+              <span className="text-brand-gold-muted">Website Pricing</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
@@ -199,7 +199,7 @@ export default function PricingPage() {
               Not Ready for a Full Website Yet?
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#102f35] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-4">
               Start With a Website Growth Audit
             </h2>
 
@@ -211,7 +211,7 @@ export default function PricingPage() {
             </p>
 
             <div className="inline-block bg-white px-8 py-5 rounded-2xl shadow-md border border-gray-100 mb-8">
-              <p className="text-3xl font-extrabold text-[#102f35]">£95 - £195</p>
+              <p className="text-3xl font-bold text-[#102f35]">£95 - £195</p>
               <p className="text-sm text-gray-500 mt-1">
                 Ideal for businesses that want clarity before committing to a full build
               </p>
@@ -237,8 +237,8 @@ export default function PricingPage() {
         {/* PRICING PACKAGES */}
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-              💼 Website Packages
+            <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-4">
+              Website Packages
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Designed for different stages of business growth, with lower-risk
@@ -411,7 +411,7 @@ export default function PricingPage() {
                   </div>
 
                   <div className="flex-grow">
-                    <div className="text-yellow-400 text-3xl mb-4 opacity-50">
+                    <div className="text-brand-gold text-3xl mb-4 opacity-50">
                       "
                     </div>
                     <p className="italic text-gray-100 mb-6 leading-relaxed text-sm">
@@ -438,7 +438,7 @@ export default function PricingPage() {
 
         {/* MAINTENANCE PACKAGES */}
         <section className="py-24 px-6 md:px-12 bg-gray-50">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] text-center mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] text-center mb-6">
             Website Maintenance
           </h2>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
@@ -511,8 +511,8 @@ export default function PricingPage() {
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-extrabold text-[#102f35] mb-4">
-                📱 Marketing &amp; Growth Retainers
+              <h2 className="text-4xl font-bold text-[#102f35] mb-4">
+                Marketing &amp; Growth Retainers
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Flexible ongoing growth support for businesses that want help
@@ -527,29 +527,22 @@ export default function PricingPage() {
                   desc: "Google Ads and paid social campaigns designed to capture qualified traffic without wasting budget.",
                   price: "From £200/mo",
                   priceNote: "Management fee only — ad spend billed separately",
-                  icon: "🚀",
                 },
                 {
                   title: "SEO & Content",
                   desc: "Technical SEO, content planning, and ongoing optimisation to improve organic visibility over time.",
                   price: "From £400/mo",
-                  icon: "📈",
                 },
                 {
                   title: "Brand Identity",
                   desc: "Ongoing brand support including design updates, assets, and templates to keep your business looking consistent.",
                   price: "Custom Retainer",
-                  icon: "🎨",
                 },
               ].map((item, i) => (
                 <div
                   key={i}
                   className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 text-2xl">
-                    {item.icon}
-                  </div>
-
                   <h3 className="font-bold text-[#102f35] text-xl mb-3">
                     {item.title}
                   </h3>
@@ -575,7 +568,7 @@ export default function PricingPage() {
         {/* DELIVERABLES */}
         <section className="py-24 px-6 md:px-12 bg-gray-50">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-extrabold text-[#102f35] text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#102f35] text-center mb-12">
               What&apos;s Included in Every Project
             </h2>
 
@@ -585,22 +578,22 @@ export default function PricingPage() {
                   Core Deliverables
                 </h3>
                 <ul className="space-y-4 text-gray-700">
-                  <li className="flex items-center gap-3">
-                    ✨
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#102f35]" aria-hidden="true" />
                     <span>
                       <strong>Bespoke Design:</strong> Tailored to your brand,
                       audience, and business goals.
                     </span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    📱
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#102f35]" aria-hidden="true" />
                     <span>
                       <strong>Mobile-First:</strong> Fully responsive across all
                       key devices.
                     </span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    🔒
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#102f35]" aria-hidden="true" />
                     <span>
                       <strong>Secure Deployment:</strong> Professional hosting
                       and deployment setup.
@@ -614,22 +607,22 @@ export default function PricingPage() {
                   Performance &amp; Support
                 </h3>
                 <ul className="space-y-4 text-gray-700">
-                  <li className="flex items-center gap-3">
-                    ⚡
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#411b3f]" aria-hidden="true" />
                     <span>
                       <strong>Speed Optimisation:</strong> Built for strong
                       loading performance and Core Web Vitals.
                     </span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    🛠
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#411b3f]" aria-hidden="true" />
                     <span>
                       <strong>14-Day Post-Launch Support:</strong> Direct help
                       after launch for fixes and questions.
                     </span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    📚
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#411b3f]" aria-hidden="true" />
                     <span>
                       <strong>CMS Training:</strong> So you can update content
                       yourself with confidence.
@@ -645,8 +638,8 @@ export default function PricingPage() {
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-[#102f35] mb-4">
-                🛠 How It Works
+              <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-4">
+                How It Works
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 A clear, low-friction process designed to help you move forward
@@ -677,7 +670,7 @@ export default function PricingPage() {
                   key={i}
                   className="relative p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-[#102f35] transition-colors group"
                 >
-                  <div className="text-[#411b3f]/20 font-black text-6xl mb-4 group-hover:text-[#411b3f]/10 transition-colors">
+                  <div className="text-[#411b3f]/20 font-bold text-6xl mb-4 group-hover:text-[#411b3f]/10 transition-colors">
                     0{i + 1}
                   </div>
 
@@ -705,7 +698,7 @@ export default function PricingPage() {
 
               <Link
                 href="/book"
-                className="inline-block bg-yellow-400 text-[#102f35] px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition shadow-lg"
+                className="btn-primary px-10 py-4 text-lg"
               >
                 Get Started Today
               </Link>
@@ -716,8 +709,8 @@ export default function PricingPage() {
         {/* FAQ */}
         <section className="py-24 px-6 md:px-12 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-[#102f35] text-center mb-12">
-              ❓ FAQ
+            <h2 className="text-4xl font-bold text-[#102f35] text-center mb-12">
+              FAQ
             </h2>
 
             <div className="space-y-6">

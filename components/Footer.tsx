@@ -25,8 +25,8 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-[#102f35] text-gray-200 pt-16 pb-0">
-      {/* Thin yellow separator line */}
-      <div className="absolute top-0 left-0 w-full h-[3px] bg-yellow-400"></div>
+      {/* Soft gold separator */}
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-brand-gold/55"></div>
 
       {/* MAIN CONTENT */}
       <div className="px-6 md:px-12">
@@ -43,7 +43,7 @@ export default function Footer() {
               />
               <span className="text-2xl font-semibold text-white leading-none">
                 Karol{" "}
-                <span className="text-yellow-400 text-xl block sm:inline">
+                <span className="text-brand-gold-soft text-xl block sm:inline">
                   Digital
                 </span>
               </span>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Column 2: Industries */}
           <div className="space-y-4">
-            <p className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
+            <p className="text-lg font-semibold text-white border-l-2 border-brand-gold/70 pl-3">
               Industries
             </p>
             <ul className="space-y-3 text-sm">
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-yellow-400 transition-colors"
+                    className="text-gray-300 hover:text-brand-gold-soft transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -76,30 +76,30 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div className="space-y-4">
-            <p className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
+            <p className="text-lg font-semibold text-white border-l-2 border-brand-gold/70 pl-3">
               Quick Links
             </p>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
                   href="/services/web-design"
-                  className="hover:text-yellow-400 transition"
+                  className="hover:text-brand-gold-soft transition"
                 >
                   Web Development & Coding
                 </Link>
               </li>
               <li>
-                <Link href="/services/social-media" className="hover:text-yellow-400 transition">
+                <Link href="/services/social-media" className="hover:text-brand-gold-soft transition">
                   Social Media Management
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className="hover:text-yellow-400 transition">
+                <Link href="/services/digital-marketing" className="hover:text-brand-gold-soft transition">
                   Digital Marketing Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/ai-logo-design" className="hover:text-yellow-400 transition">
+                <Link href="/services/ai-logo-design" className="hover:text-brand-gold-soft transition">
                   Ai Logo Design Support
                 </Link>
               </li>
@@ -108,14 +108,14 @@ export default function Footer() {
 
           {/* Column 4: Legal */}
           <div className="space-y-4">
-            <p className="text-lg font-semibold text-white border-l-2 border-yellow-400 pl-3">
+            <p className="text-lg font-semibold text-white border-l-2 border-brand-gold/70 pl-3">
               Legal
             </p>
             <ul className="space-y-3 text-sm text-gray-300">
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="hover:text-yellow-400 transition"
+                  className="hover:text-brand-gold-soft transition"
                 >
                   Privacy Policy
                 </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/terms-of-service"
-                  className="hover:text-yellow-400 transition"
+                  className="hover:text-brand-gold-soft transition"
                 >
                   Terms of Service
                 </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/cookie-policy"
-                  className="hover:text-yellow-400 transition"
+                  className="hover:text-brand-gold-soft transition"
                 >
                   Cookie Policy
                 </Link>
@@ -146,7 +146,7 @@ export default function Footer() {
               <p className="text-sm text-gray-400">London, United Kingdom</p>
               <a
                 href="tel:+447565472445"
-                className="block text-sm hover:text-yellow-400 transition"
+                className="block text-sm hover:text-brand-gold-soft transition"
               >
                 07565472445
               </a>
@@ -159,7 +159,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/book"
-                className="inline-block bg-yellow-400 text-[#102f35] px-4 py-2 rounded-full text-xs font-bold leading-none hover:bg-yellow-300 transition shadow-md"
+                className="btn-primary px-4 py-2 text-xs leading-none"
               >
                 Schedule a Free Call
               </Link>
@@ -193,7 +193,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm transition-all duration-300 hover:bg-yellow-400 hover:text-[#102f35]"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm transition-all duration-300 hover:bg-brand-gold hover:text-[#102f35]"
                   >
                     {social.icon}
                   </a>

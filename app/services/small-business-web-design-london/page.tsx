@@ -26,14 +26,14 @@ export default function LondonSmallBusinessWebDesignPage() {
   />
 
   <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
-    <span className="text-xs font-bold uppercase tracking-[0.25em] text-yellow-400 block mb-4">
+    <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
       Bespoke London Web Development Agency
     </span>
 
-    <h1 className="text-4xl sm:text-5xl font-black mb-6 tracking-tight leading-tight md:leading-[1.15]">
+    <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
       Elite Web Design for{" "}
       <br className="hidden sm:inline" />
-      <span className="text-yellow-400">London Small Businesses</span>
+      <span className="text-brand-gold-muted">London Small Businesses</span>
     </h1>
 
     <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 text-gray-200 leading-relaxed font-medium">
@@ -49,7 +49,7 @@ export default function LondonSmallBusinessWebDesignPage() {
 
     <Link
       href="/book?service=Website+Audit"
-      className="bg-white text-[#102f35] hover:bg-yellow-400 hover:scale-105 px-10 py-4.5 rounded-full font-extrabold transition-all duration-300 inline-block shadow-xl active:scale-95 text-sm uppercase tracking-wider"
+      className="bg-white text-[#102f35] hover:bg-brand-gold px-10 py-4.5 rounded-full font-semibold transition-all duration-300 inline-block shadow-md active:scale-95 text-sm uppercase tracking-wider"
     >
       Request a London Lead Audit
     </Link>
@@ -244,7 +244,7 @@ export default function LondonSmallBusinessWebDesignPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                className="bg-white text-[#102f35] hover:bg-yellow-400 font-bold px-8 py-4 rounded-full shadow-xl transition-all"
+                className="bg-white text-[#102f35] hover:bg-brand-gold font-semibold px-8 py-4 rounded-full shadow-md transition-all"
                 href="/book"
               >
                 Book Your London Lead Audit

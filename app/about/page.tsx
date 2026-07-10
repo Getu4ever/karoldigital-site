@@ -26,9 +26,9 @@ export default function About() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">
               <span className="text-white">About </span>
-              <span className="text-yellow-400">Karol Digital</span>
+              <span className="text-brand-gold-muted">Karol Digital</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">

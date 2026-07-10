@@ -51,10 +51,10 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
           <div className="absolute inset-0 bg-black/45" />
 
           <div className="relative z-10 mx-auto max-w-4xl px-6">
-            <p className="mb-4 text-sm uppercase tracking-[0.2em] text-yellow-300">
+            <p className="mb-4 text-sm uppercase tracking-[0.2em] text-brand-gold-soft">
               Karol Digital Blog
             </p>
-            <h1 className="mb-4 text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">
+            <h1 className="mb-4 text-3xl font-bold leading-tight tracking-tight md:text-5xl">
               {post.title}
             </h1>
             {post.subtitle && (
