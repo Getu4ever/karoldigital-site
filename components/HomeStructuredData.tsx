@@ -13,19 +13,33 @@ const faqJsonLd = {
   })),
 };
 
+const homeReviews = homeTestimonials.map(({ quote, author }) => ({
+  "@type": "Review" as const,
+  author: {
+    "@type": "Organization" as const,
+    name: author,
+  },
+  reviewBody: quote,
+  reviewRating: {
+    "@type": "Rating" as const,
+    ratingValue: "5",
+    bestRating: "5",
+  },
+}));
+
 const reviewsJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Karol Digital",
   url: "https://www.karoldigital.co.uk",
-  review: homeTestimonials.map(({ quote, author }) => ({
-    "@type": "Review",
-    author: {
-      "@type": "Organization",
-      name: author,
-    },
-    reviewBody: quote,
-  })),
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    ratingCount: String(homeReviews.length),
+    reviewCount: String(homeReviews.length),
+  },
+  review: homeReviews,
 };
 
 export default function HomeStructuredData() {
