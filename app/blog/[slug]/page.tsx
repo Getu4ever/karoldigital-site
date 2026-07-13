@@ -13,6 +13,7 @@ import CopyLinkButton from "@/components/CopyLinkButton";
 import { blogLinkLabel } from "@/lib/link-label";
 import { getBlogPostBySlug } from "@/lib/sanity-blog";
 import { getBlogServiceLinks } from "@/lib/blog-related-links";
+import { getBlogCtaCopy } from "@/lib/blog-cta";
 
 export const revalidate = 60;
 
@@ -35,6 +36,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
   const heroImage = post.imageUrl || "/hero-page-banner.jpg";
   const heroAlt = post.imageAlt || post.title;
   const serviceLinks = getBlogServiceLinks(slug, post.seoKeywords);
+  const ctaCopy = getBlogCtaCopy(slug, post.seoKeywords);
 
   return (
     <FadeIn>
@@ -88,10 +90,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
             <PortableText value={post.body} components={PortableTextComponents} />
           </article>
 
-          <BlogCta
-            title="Want help applying this to your website?"
-            description="Book a free consultation for a new build, or request an audit if you want to improve the site you already have."
-          />
+          <BlogCta title={ctaCopy.title} description={ctaCopy.description} />
 
           <section className="my-12 rounded-2xl border border-gray-100 bg-gray-50 p-6">
             <h2 className="mb-4 text-xl font-bold text-[#102f35]">Related services</h2>
