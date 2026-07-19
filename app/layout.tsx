@@ -18,10 +18,13 @@ export const metadata: Metadata = {
   description:
     "We build fast, trust-building websites for UK service businesses that want more qualified enquiries, clearer messaging, and stronger online credibility.",
   metadataBase: new URL("https://www.karoldigital.co.uk"),
+  alternates: {
+    canonical: "https://www.karoldigital.co.uk/",
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://www.karoldigital.co.uk",
+    url: "https://www.karoldigital.co.uk/",
     siteName: "Karol Digital",
     title: "Karol Digital — Web Design for UK Service Businesses",
     description:

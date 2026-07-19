@@ -36,6 +36,17 @@ const nextConfig: NextConfig = {
         destination: "/services",
         permanent: true,
       },
+      // Legacy homepage / booking URLs Google still crawls as 404s
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/meeting-request",
+        destination: "/book",
+        permanent: true,
+      },
       {
         source: "/blog/services/immigration-services",
         destination: "/industries/immigration-services",

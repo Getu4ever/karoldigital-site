@@ -135,7 +135,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   industries: {
     title: "Industry Web Design for UK Service Businesses | Karol Digital",
     description:
-      "Industry-focused website design for UK financial, immigration, construction, catering, and other service businesses that need trust, clarity, and more qualified enquiries.",
+      "Website design for UK financial, immigration, construction, catering, and service businesses that need trust, clarity, and more qualified enquiries.",
     url: "https://www.karoldigital.co.uk/industries",
     image: "/seo-cover.jpg",
     keywords:
@@ -149,8 +149,49 @@ export const SEO_TITLE_MAX_LENGTH = 55;
 export const SEO_BRAND_SUFFIX = " | Karol Digital";
 
 /**
+ * Truncates an overlong title by removing words from the middle so the
+ * distinctive ending (and a short lead-in) survive within the SERP limit.
+ */
+function truncateSeoPrimary(primary: string, maxLength: number): string {
+  if (primary.length <= maxLength) return primary;
+
+  const ellipsis = "…";
+  const words = primary.split(/\s+/).filter(Boolean);
+
+  if (words.length < 4) {
+    let cut = primary.slice(0, maxLength - ellipsis.length);
+    const lastSpace = cut.lastIndexOf(" ");
+    if (lastSpace > 12) cut = cut.slice(0, lastSpace);
+    return `${cut.trimEnd()}${ellipsis}`;
+  }
+
+  let best: { text: string; score: number } | null = null;
+
+  for (let rightCount = 1; rightCount < words.length; rightCount++) {
+    for (let leftCount = 1; leftCount < words.length - rightCount; leftCount++) {
+      const text = `${words.slice(0, leftCount).join(" ")}${ellipsis}${words
+        .slice(words.length - rightCount)
+        .join(" ")}`;
+      if (text.length > maxLength) continue;
+
+      // Prefer keeping more words, and when tied keep more of the ending
+      // so titles that share a long prefix stay unique after truncation.
+      const score = leftCount + rightCount * 1.01;
+      if (!best || score > best.score) best = { text, score };
+    }
+  }
+
+  if (best) return best.text;
+
+  let cut = primary.slice(0, maxLength - ellipsis.length);
+  const lastSpace = cut.lastIndexOf(" ");
+  if (lastSpace > 12) cut = cut.slice(0, lastSpace);
+  return `${cut.trimEnd()}${ellipsis}`;
+}
+
+/**
  * Keeps titles within SERP width limits. Adds brand suffix when missing
- * and truncates long titles at a word boundary.
+ * and truncates long titles by removing words from the middle.
  */
 export function formatSeoTitle(title: string): string {
   const normalized = title.replace(/\s+/g, " ").trim();
@@ -164,16 +205,10 @@ export function formatSeoTitle(title: string): string {
 
   const suffixMatch = withBrand.match(/(\s[|–—-]\sKarol Digital(?:\sBlog)?)\s*$/i);
   const suffix = suffixMatch ? suffixMatch[1] : SEO_BRAND_SUFFIX;
-  const maxPrimary = SEO_TITLE_MAX_LENGTH - suffix.length - 1;
+  const primary = withBrand.slice(0, withBrand.length - suffix.length).trim();
+  const maxPrimary = SEO_TITLE_MAX_LENGTH - suffix.length;
 
-  let primary = withBrand.slice(0, withBrand.length - suffix.length).trim();
-  primary = primary.slice(0, maxPrimary);
-  const lastSpace = primary.lastIndexOf(" ");
-  if (lastSpace > 20) {
-    primary = primary.slice(0, lastSpace);
-  }
-
-  return `${primary}…${suffix}`;
+  return `${truncateSeoPrimary(primary, maxPrimary)}${suffix}`;
 }
 
 /**
@@ -193,6 +228,10 @@ export function generateSEOMetadata({
     title: formattedTitle,
     description,
     keywords,
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title: formattedTitle,
       description,

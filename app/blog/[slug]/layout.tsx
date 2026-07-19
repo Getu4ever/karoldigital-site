@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { formatSeoTitle, generateSEOMetadata } from "@/components/seo-server";
+import { getBlogSeoDescription, getBlogSeoTitle } from "@/lib/blog-seo";
 import { getBlogPostSeo } from "@/lib/sanity-blog";
 
 export async function generateMetadata({
@@ -14,11 +15,13 @@ export async function generateMetadata({
     return { title: formatSeoTitle("Blog Post") };
   }
 
-  const title = post.seoTitle || post.title;
-  const description =
+  const title = getBlogSeoTitle(slug, post.seoTitle || post.title);
+  const description = getBlogSeoDescription(
+    slug,
     post.seoDescription ||
-    post.subtitle ||
-    "Practical web design and lead generation advice for UK service businesses.";
+      post.subtitle ||
+      "Practical web design and lead generation advice for UK service businesses."
+  );
   const image = post.seoImageUrl || post.imageUrl || "/hero-page-banner.jpg";
   const url = `https://www.karoldigital.co.uk/blog/${slug}`;
 
@@ -72,8 +75,11 @@ export default async function BlogPostLayout({
     ? {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        headline: post.seoTitle || post.title,
-        description: post.seoDescription || post.subtitle,
+        headline: getBlogSeoTitle(slug, post.seoTitle || post.title),
+        description: getBlogSeoDescription(
+          slug,
+          post.seoDescription || post.subtitle || ""
+        ),
         image: post.seoImageUrl || post.imageUrl ? [post.seoImageUrl || post.imageUrl] : [],
         datePublished: post.publishedAt,
         dateModified: post.updatedAt || post.publishedAt,
