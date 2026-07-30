@@ -1,11 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
 
 async function verifyCaptcha(token: string): Promise<boolean> {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
@@ -62,18 +56,7 @@ export async function POST(req: Request) {
       .filter(Boolean)
       .join("\n\n");
 
-    const { error } = await supabase.from("bookings").insert([
-      {
-        full_name: name.trim(),
-        email: email.trim(),
-        service_type: service.trim(),
-        message: fullMessage || null,
-      },
-    ]);
-
-    if (error) throw error;
-
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "info@karoldigital.co.uk",
       to: "info@karoldigital.co.uk",
       subject: `New Lead: ${service} - ${name}`,
@@ -87,6 +70,8 @@ Service: ${service}
 Message:
 ${fullMessage || "(No additional details provided)"}`,
     });
+
+    if (error) throw error;
 
     return NextResponse.json({ success: true });
   } catch (error: unknown) {

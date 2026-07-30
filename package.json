@@ -12,7 +12,6 @@
     "@sanity/client": "^7.12.1",
     "@sanity/table": "^2.0.1",
     "@sanity/vision": "^4.14.2",
-    "@supabase/supabase-js": "^2.108.2",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.555.0",
     "next": "^16.0.7",
