@@ -8,6 +8,7 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowRight,
+  Bot,
   Calendar,
   Code2,
   Gauge,
@@ -48,7 +49,13 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-const serviceIcons: LucideIcon[] = [LayoutTemplate, Code2, Zap, SearchCheck];
+const serviceIcons: LucideIcon[] = [
+  LayoutTemplate,
+  Code2,
+  Zap,
+  SearchCheck,
+  Bot,
+];
 const differenceIcons: LucideIcon[] = [Target, ShieldCheck, GitBranch];
 const industryIcons: LucideIcon[] = [Landmark, Scale, HardHat];
 
@@ -206,13 +213,13 @@ export default function HomePageClient() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {homeServices.map((service, index) => (
                 <article
                   key={service.title}
                   className="group flex flex-col rounded-3xl border border-gray-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:shadow-lg"
                 >
-                  <IconBadge icon={serviceIcons[index]} />
+                  <IconBadge icon={serviceIcons[index] ?? SearchCheck} />
                   <p className="mb-4 text-2xl font-bold text-[#102f35]">{service.title}</p>
                   <p className="mb-6 flex-grow leading-relaxed text-gray-700">
                     {service.description}
