@@ -90,7 +90,14 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
             <PortableText value={post.body} components={PortableTextComponents} />
           </article>
 
-          <BlogCta title={ctaCopy.title} description={ctaCopy.description} />
+          <BlogCta
+            title={ctaCopy.title}
+            description={ctaCopy.description}
+            primaryHref={ctaCopy.primaryHref}
+            primaryLabel={ctaCopy.primaryLabel}
+            secondaryHref={ctaCopy.secondaryHref}
+            secondaryLabel={ctaCopy.secondaryLabel}
+          />
 
           <section className="my-12 rounded-2xl border border-gray-100 bg-gray-50 p-6">
             <h2 className="mb-4 text-xl font-bold text-[#102f35]">Related services</h2>

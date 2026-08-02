@@ -1,6 +1,10 @@
 export interface BlogCtaCopy {
   title: string;
   description: string;
+  primaryHref?: string;
+  primaryLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
 }
 
 const bySlug: Record<string, BlogCtaCopy> = {
@@ -27,7 +31,11 @@ const bySlug: Record<string, BlogCtaCopy> = {
   "is-your-business-ready-for-ai-search-2026-guide": {
     title: "Want your business cited in AI search results?",
     description:
-      "Book a free consultation for an AI-ready content and schema plan, or request an SEO audit to see where your site is being overlooked.",
+      "Take the free AI Search Readiness Scorecard, or book a consultation for a GEO, content, and lead-magnet plan.",
+    primaryHref: "/tools/ai-search-scorecard",
+    primaryLabel: "Take the Free Scorecard",
+    secondaryHref: "/book?service=AI+Search+Optimisation",
+    secondaryLabel: "Book AI Search Consultation",
   },
   "financial-services-website-design-trust-factor": {
     title: "Does your financial website look as trustworthy as your advice?",
@@ -135,11 +143,15 @@ export function getBlogCtaCopy(
         "Book a free consultation for performance work, or request an audit to find what is slowing visitors down.",
     };
   }
-  if (haystack.match(/ai search|aeo|seo|schema/)) {
+  if (haystack.match(/ai search|aeo|seo|schema|geo/)) {
     return {
-      title: "Ready to improve your search visibility?",
+      title: "Ready to improve your AI and search visibility?",
       description:
-        "Book a free consultation for an SEO and content plan, or request an audit of your current rankings and structure.",
+        "Take the free AI Search Readiness Scorecard, or book a consultation for a GEO and content plan.",
+      primaryHref: "/tools/ai-search-scorecard",
+      primaryLabel: "Take the Free Scorecard",
+      secondaryHref: "/book?service=AI+Search+Optimisation",
+      secondaryLabel: "Book a Consultation",
     };
   }
   if (haystack.match(/pricing|cost|package|diy/)) {

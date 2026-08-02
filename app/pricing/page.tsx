@@ -530,7 +530,7 @@ export default function PricingPage() {
                 },
                 {
                   title: "SEO & Content",
-                  desc: "Technical SEO, content planning, and ongoing optimisation to improve organic visibility over time.",
+                  desc: "Technical SEO, GEO for AI search, content briefs, and ongoing optimisation so you stay visible in Google and answer engines.",
                   price: "From £400/mo",
                 },
                 {

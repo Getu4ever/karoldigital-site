@@ -104,6 +104,15 @@ export default async function BlogPostLayout({
       }
     : null;
 
+  let customStructuredData: unknown = null;
+  if (post?.structuredData?.trim()) {
+    try {
+      customStructuredData = JSON.parse(post.structuredData);
+    } catch {
+      customStructuredData = null;
+    }
+  }
+
   return (
     <>
       <script
@@ -117,6 +126,14 @@ export default async function BlogPostLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(articleJsonLd),
+          }}
+        />
+      )}
+      {customStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(customStructuredData),
           }}
         />
       )}

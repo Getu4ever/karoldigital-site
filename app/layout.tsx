@@ -89,6 +89,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-GB" dir="ltr">
       <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="https://www.karoldigital.co.uk/llms.txt"
+          title="LLM instructions"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -98,6 +98,13 @@ export const homeServices = [
     href: "/services/website-audits",
     cta: "View audit services",
   },
+  {
+    title: "AI Search Optimisation",
+    description:
+      "GEO, content systems, interactive lead magnets, and analytics so AI engines can find, cite, and recommend your business.",
+    href: "/services/ai-search-optimisation",
+    cta: "Explore AI search",
+  },
 ] as const;
 
 export const homeDifference = [

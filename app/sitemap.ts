@@ -61,15 +61,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "custom-web-development",
     "nextjs-development",
     "website-audits",
+    "ai-search-optimisation",
     "digital-marketing",
     "social-media",
     "ai-logo-design",
     "small-business-web-design-london",
   ].map((service) => ({
     url: `${baseUrl}/services/${service}`,
-    lastModified: new Date("2026-05-19"),
+    lastModified: new Date("2026-08-02"),
     changeFrequency: "monthly" as const,
     priority: 0.8,
+  }));
+
+  const tools: MetadataRoute.Sitemap = [
+    "ai-search-scorecard",
+    "content-brief",
+  ].map((tool) => ({
+    url: `${baseUrl}/tools/${tool}`,
+    lastModified: new Date("2026-08-02"),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
   }));
 
   const industries: MetadataRoute.Sitemap = [
@@ -92,5 +103,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...corePages, ...services, ...industries, ...blogs];
+  return [...corePages, ...services, ...tools, ...industries, ...blogs];
 }

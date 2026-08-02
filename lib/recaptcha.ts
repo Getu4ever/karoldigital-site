@@ -7,6 +7,7 @@ export const BOOK_SERVICE_OPTIONS = [
   "Custom Web Development",
   "Next.js Development",
   "Website Audit",
+  "AI Search Optimisation",
   "Digital Marketing",
   "AI Logo Design",
   "Starter Lite",

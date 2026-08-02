@@ -1,19 +1,60 @@
-// app/robots.ts
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.karoldigital.co.uk'
+  const baseUrl = "https://www.karoldigital.co.uk";
+
+  const sharedDisallow = ["/api/", "/studio/"];
 
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: [
-        '/api/',    // Protects internal backend API route endpoints
-        '/studio/', // Prevents search engines from wasting crawl budget indexing Sanity Studio
-      ],
-    },
-    // Explicitly uses interpolation to prevent raw string type mismatches during builds
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      // Allow major AI search / answer-engine crawlers to index public content
+      {
+        userAgent: "GPTBot",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      {
+        userAgent: "ChatGPT-User",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      {
+        userAgent: "ClaudeBot",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      {
+        userAgent: "anthropic-ai",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      {
+        userAgent: "PerplexityBot",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+      {
+        userAgent: "Applebot-Extended",
+        allow: "/",
+        disallow: sharedDisallow,
+      },
+    ],
     sitemap: `${baseUrl}/sitemap.xml`,
-  }
+    host: baseUrl,
+  };
 }

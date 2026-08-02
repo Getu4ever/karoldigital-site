@@ -14,6 +14,7 @@ export interface BlogPostSeo {
   imageUrl?: string;
   imageAlt?: string;
   seoImageUrl?: string;
+  structuredData?: string;
 }
 
 export interface BlogPostListItem {
@@ -42,6 +43,7 @@ const postFields = groq`
   seoTitle,
   seoDescription,
   seoKeywords,
+  structuredData,
   publishedAt,
   "updatedAt": _updatedAt,
   authorName,

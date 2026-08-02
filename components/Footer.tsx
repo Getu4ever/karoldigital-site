@@ -100,6 +100,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/services/ai-search-optimisation"
+                  className="hover:text-brand-gold-soft transition"
+                >
+                  AI Search Optimisation (GEO)
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/ai-logo-design" className="hover:text-brand-gold-soft transition">
                   Ai Logo Design Support
                 </Link>

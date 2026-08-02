@@ -21,6 +21,7 @@ import {
   ArrowRight,
   Home,
   Sparkles,
+  Bot,
 } from "lucide-react";
 
 
@@ -50,6 +51,11 @@ export default function Header() {
       href: "/services/web-design",
       label: "Web Design",
       icon: <Briefcase size={16} />,
+    },
+    {
+      href: "/services/ai-search-optimisation",
+      label: "AI Search (GEO)",
+      icon: <Bot size={16} />,
     },
     {
       href: "/services/digital-marketing",

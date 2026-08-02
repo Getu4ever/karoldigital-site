@@ -39,6 +39,11 @@ export default function ServicesPage() {
       label: "Website Audits",
       icon: <Search size={18} />,
     },
+    {
+      href: "/services/ai-search-optimisation",
+      label: "AI Search (GEO)",
+      icon: <Zap size={18} />,
+    },
   ];
 
   const industryLinks = [
@@ -115,6 +120,18 @@ export default function ServicesPage() {
       ],
       href: "/services/website-audits",
       cta: "Explore Website Audits",
+    },
+    {
+      title: "AI Search Optimisation (GEO)",
+      description:
+        "Get cited by AI engines with structured data, answer-ready content, interactive lead magnets, and analytics that prove progress.",
+      points: [
+        "GEO schema and llms.txt foundations",
+        "Content briefs and publish systems",
+        "Scorecards and tools that capture leads",
+      ],
+      href: "/services/ai-search-optimisation",
+      cta: "Explore AI Search Services",
     },
   ] as const;
 
