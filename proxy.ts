@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  ADMIN_COOKIE_NAME,
+  verifySessionToken,
+} from "@/lib/admin-session";
 
 /**
  * Legacy broken partner hrefs used Markdown link syntax as relative paths
@@ -19,9 +23,7 @@ const LEGACY_MARKDOWN_REDIRECTS: Array<{ match: RegExp; destination: string }> =
   },
 ];
 
-const ADMIN_COOKIE_NAME = "kd_admin_session";
-
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const rawPath = request.nextUrl.pathname;
   const rawUrl = request.nextUrl.href;
 
@@ -31,12 +33,18 @@ export function proxy(request: NextRequest) {
     }
   }
 
-  // Protect /admin/* except the login route (shared-secret session cookie)
+  // Protect /admin/* except the login route (signed session cookie)
   if (rawPath.startsWith("/admin") && !rawPath.startsWith("/admin/login")) {
-    const expected = process.env.ADMIN_DASHBOARD_TOKEN;
+    const secret =
+      process.env.ADMIN_SESSION_SECRET || process.env.ADMIN_DASHBOARD_TOKEN;
     const session = request.cookies.get(ADMIN_COOKIE_NAME)?.value;
 
-    if (!expected || !session || session !== expected) {
+    const ok =
+      Boolean(secret) &&
+      Boolean(session) &&
+      (await verifySessionToken(session!, secret!));
+
+    if (!ok) {
       const loginUrl = request.nextUrl.clone();
       loginUrl.pathname = "/admin/login";
       loginUrl.search = "";

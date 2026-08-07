@@ -1,15 +1,9 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 import type { LeadStatus } from "@prisma/client";
 import { prisma } from "@/lib/db";
-import {
-  ADMIN_COOKIE_NAME,
-  getAdminToken,
-  requireAdmin,
-} from "@/lib/admin-auth";
+import { requireAdmin } from "@/lib/admin-auth";
 import { toPrismaLeadStatus, type LeadStatusLabel } from "@/lib/leads";
 
 export type LeadDTO = {
@@ -60,32 +54,6 @@ function mapLead(lead: {
     createdAt: lead.createdAt.toISOString(),
     updatedAt: lead.updatedAt.toISOString(),
   };
-}
-
-export async function adminLoginAction(formData: FormData) {
-  const password = String(formData.get("password") || "");
-  const expected = getAdminToken();
-
-  if (!password || password !== expected) {
-    redirect("/admin/login?error=1");
-  }
-
-  const jar = await cookies();
-  jar.set(ADMIN_COOKIE_NAME, expected, {
-    httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    maxAge: 60 * 60 * 12, // 12 hours
-  });
-
-  redirect("/admin/dashboard");
-}
-
-export async function adminLogoutAction() {
-  const jar = await cookies();
-  jar.delete(ADMIN_COOKIE_NAME);
-  redirect("/admin/login");
 }
 
 export async function getLeadsAction(): Promise<LeadDTO[]> {

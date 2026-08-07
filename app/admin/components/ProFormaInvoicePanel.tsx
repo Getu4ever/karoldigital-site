@@ -15,6 +15,8 @@ import { PRO_FORMA_LINE_ITEMS } from "@/lib/leads";
 
 type Props = {
   lead: LeadDTO | null;
+  /** When true, panel is rendered inside a lead-row accordion. */
+  embedded?: boolean;
 };
 
 type MilestoneRow = {
@@ -23,51 +25,88 @@ type MilestoneRow = {
   amount: number;
 };
 
+const BRAND_TEAL = "#102f35";
+const BRAND_GOLD = "#c9a84b";
+
 const styles = StyleSheet.create({
   page: {
-    paddingTop: 40,
-    paddingBottom: 48,
-    paddingHorizontal: 44,
+    paddingTop: 0,
+    paddingBottom: 52,
+    paddingHorizontal: 0,
     fontSize: 10,
     fontFamily: "Helvetica",
     color: "#111111",
     lineHeight: 1.45,
   },
-  headerRow: {
+  brandBar: {
+    backgroundColor: BRAND_TEAL,
+    paddingVertical: 18,
+    paddingHorizontal: 36,
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    marginBottom: 10,
-  },
-  brand: {
-    fontSize: 22,
-    fontFamily: "Helvetica-Bold",
-    color: "#111111",
-    letterSpacing: 0.3,
+    alignItems: "center",
+    marginBottom: 22,
   },
   logo: {
-    width: 64,
-    height: 38,
+    width: 92,
+    height: 52,
+    marginRight: 14,
+  },
+  brandTextCol: {
+    flexDirection: "column",
+    justifyContent: "center",
+  },
+  brandWordmarkRow: {
+    flexDirection: "row",
+    alignItems: "baseline",
+  },
+  brandKarol: {
+    fontSize: 18,
+    fontFamily: "Helvetica-Bold",
+    color: "#ffffff",
+  },
+  brandDigital: {
+    fontSize: 18,
+    fontFamily: "Helvetica-Bold",
+    color: BRAND_GOLD,
+    marginLeft: 5,
+  },
+  body: {
+    paddingHorizontal: 44,
+  },
+  titleRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-end",
+    marginBottom: 18,
+    paddingBottom: 14,
+    borderBottomWidth: 1.5,
+    borderBottomColor: BRAND_TEAL,
+  },
+  titleBlock: {
+    flexGrow: 1,
+    paddingRight: 16,
   },
   subtitle: {
-    marginTop: 2,
-    fontSize: 11,
+    fontSize: 26,
     fontFamily: "Helvetica-Bold",
-    letterSpacing: 1.2,
-    color: "#111111",
+    letterSpacing: 3.5,
+    color: BRAND_TEAL,
+    lineHeight: 1.15,
+  },
+  titleAccent: {
+    marginTop: 6,
+    width: 36,
+    height: 3,
+    backgroundColor: BRAND_GOLD,
   },
   agencyMeta: {
-    marginTop: 8,
     fontSize: 9,
     color: "#4b5563",
     lineHeight: 1.55,
+    textAlign: "right",
   },
   metaBlock: {
-    marginTop: 16,
     marginBottom: 18,
-    paddingBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "#d1d5db",
   },
   metaLine: {
     fontSize: 9.5,
@@ -114,15 +153,23 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     lineHeight: 1.5,
   },
-  agreedTotal: {
+  totalsBlock: {
+    marginTop: 4,
+  },
+  totalLine: {
+    fontSize: 10,
+    color: "#111111",
+    marginBottom: 3,
+  },
+  totalStrong: {
     fontSize: 12,
     fontFamily: "Helvetica-Bold",
-    color: "#111111",
+    color: BRAND_TEAL,
     marginTop: 4,
   },
   table: {
-    marginTop: 6,
-    marginBottom: 20,
+    marginTop: 4,
+    marginBottom: 18,
     borderTopWidth: 1,
     borderTopColor: "#111111",
   },
@@ -147,15 +194,11 @@ const styles = StyleSheet.create({
   colStage: { width: "22%", fontSize: 9 },
   colDesc: { width: "56%", fontSize: 9, paddingRight: 8 },
   colAmount: { width: "22%", fontSize: 9, textAlign: "right" },
-  th: {
-    fontFamily: "Helvetica-Bold",
-    fontSize: 9,
-    color: "#111111",
-  },
+  th: { fontFamily: "Helvetica-Bold", fontSize: 9 },
   bold: { fontFamily: "Helvetica-Bold" },
   bankBlock: {
-    marginTop: 8,
-    paddingTop: 14,
+    marginTop: 6,
+    paddingTop: 12,
     borderTopWidth: 1,
     borderTopColor: "#d1d5db",
   },
@@ -164,19 +207,9 @@ const styles = StyleSheet.create({
     fontFamily: "Helvetica-Bold",
     letterSpacing: 0.6,
     marginBottom: 8,
-    color: "#111111",
   },
-  bankHelp: {
-    fontSize: 9,
-    color: "#374151",
-    marginBottom: 8,
-    lineHeight: 1.5,
-  },
-  bankRow: {
-    fontSize: 9.5,
-    color: "#111111",
-    marginBottom: 3,
-  },
+  bankHelp: { fontSize: 9, color: "#374151", marginBottom: 8, lineHeight: 1.5 },
+  bankRow: { fontSize: 9.5, color: "#111111", marginBottom: 3 },
   footer: {
     position: "absolute",
     left: 44,
@@ -212,7 +245,7 @@ function formatLeadSubmitted(iso: string): string {
   }
 }
 
-function ProFormaPdfDocument({
+function ProfessionalInvoicePdf({
   invoiceRef,
   issueDate,
   leadSubmitted,
@@ -223,6 +256,10 @@ function ProFormaPdfDocument({
   packageTitle,
   systemConfiguration,
   agreedTotal,
+  loyaltyDiscount,
+  paidDeposit,
+  showLoyaltyDiscount,
+  showPaidDeposit,
   milestones,
   bankSortCode,
   bankAccountNumber,
@@ -238,158 +275,203 @@ function ProFormaPdfDocument({
   packageTitle: string;
   systemConfiguration: string;
   agreedTotal: number;
+  loyaltyDiscount: number;
+  paidDeposit: number;
+  showLoyaltyDiscount: boolean;
+  showPaidDeposit: boolean;
   milestones: MilestoneRow[];
   bankSortCode: string;
   bankAccountNumber: string;
   logoSrc: string;
 }) {
   const tableTotal = milestones.reduce((sum, row) => sum + row.amount, 0);
+  const appliedLoyalty = showLoyaltyDiscount ? loyaltyDiscount : 0;
+  const appliedDeposit = showPaidDeposit ? paidDeposit : 0;
+  const balanceDue = Math.max(0, agreedTotal - appliedLoyalty - appliedDeposit);
 
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        {/* Header */}
-        <View style={styles.headerRow}>
-          <Text style={styles.brand}>Karol Digital</Text>
+        {/* Brand header matching site screenshot */}
+        <View style={styles.brandBar}>
           {logoSrc ? <Image src={logoSrc} style={styles.logo} /> : null}
-        </View>
-        <Text style={styles.subtitle}>PRO-FORMA INVOICE</Text>
-        <Text style={styles.agencyMeta}>
-          616A Kingston Rd, London SW20 8DN{"\n"}
-          info@karoldigital.co.uk{"\n"}
-          https://karoldigital.co.uk
-        </Text>
-
-        <View style={styles.metaBlock}>
-          <Text style={styles.metaLine}>
-            <Text style={styles.metaLabel}>Reference: </Text>
-            {invoiceRef || "—"}
-          </Text>
-          <Text style={styles.metaLine}>
-            <Text style={styles.metaLabel}>Date: </Text>
-            {issueDate || "—"}
-          </Text>
-          <Text style={styles.metaLine}>
-            <Text style={styles.metaLabel}>Lead Submitted: </Text>
-            {leadSubmitted || "—"}
-          </Text>
-        </View>
-
-        {/* Bill to + Project summary */}
-        <View style={styles.twoCol}>
-          <View style={styles.col}>
-            <Text style={styles.sectionTitle}>BILL TO</Text>
-            <Text style={styles.stackLine}>
-              <Text style={styles.stackLabel}>Client Name: </Text>
-              {clientName || "—"}
-            </Text>
-            <Text style={styles.stackLine}>
-              <Text style={styles.stackLabel}>Company Name: </Text>
-              {companyName || "—"}
-            </Text>
-            <Text style={styles.stackLine}>
-              <Text style={styles.stackLabel}>Email Address: </Text>
-              {email || "—"}
-            </Text>
-            <Text style={styles.stackLine}>
-              <Text style={styles.stackLabel}>Phone Number: </Text>
-              {phone || "—"}
-            </Text>
-          </View>
-
-          <View style={styles.col}>
-            <Text style={styles.sectionTitle}>PROJECT SUMMARY</Text>
-            <Text style={styles.packageLine}>
-              Package: {packageTitle || "Custom Development"}
-            </Text>
-            <Text style={styles.stackLabel}>System Configuration</Text>
-            <Text style={styles.configLine}>
-              {systemConfiguration ||
-                "Scoped technical architecture, engineering deliverables, and launch infrastructure as agreed."}
-            </Text>
-            <Text style={styles.agreedTotal}>
-              Agreed Project Total: {formatMoney(agreedTotal)}
-            </Text>
-          </View>
-        </View>
-
-        {/* Milestone / infrastructure table */}
-        <Text style={styles.sectionTitle}>MILESTONES &amp; INFRASTRUCTURE</Text>
-        <View style={styles.table}>
-          <View style={styles.tableHeader}>
-            <Text style={[styles.colStage, styles.th]}>Stage</Text>
-            <Text style={[styles.colDesc, styles.th]}>Description</Text>
-            <Text style={[styles.colAmount, styles.th]}>Amount</Text>
-          </View>
-          {milestones.map((row) => (
-            <View key={`${row.stage}-${row.description}`} style={styles.tableRow}>
-              <Text style={styles.colStage}>{row.stage}</Text>
-              <Text style={styles.colDesc}>{row.description}</Text>
-              <Text style={styles.colAmount}>{formatMoney(row.amount)}</Text>
+          <View style={styles.brandTextCol}>
+            <View style={styles.brandWordmarkRow}>
+              <Text style={styles.brandKarol}>Karol</Text>
+              <Text style={styles.brandDigital}>Digital</Text>
             </View>
-          ))}
-          <View style={styles.tableTotalRow}>
-            <Text style={[styles.colStage, styles.bold]}>Total</Text>
-            <Text style={styles.colDesc} />
-            <Text style={[styles.colAmount, styles.bold]}>
-              {formatMoney(tableTotal)}
-            </Text>
           </View>
         </View>
 
-        {/* Bank details */}
-        <View style={styles.bankBlock}>
-          <Text style={styles.bankTitle}>BANK TRANSFER TERMS</Text>
-          <Text style={styles.bankHelp}>
-            Please pay by BACS using the milestone amounts above. Quote
-            reference {invoiceRef || "—"} on your payment.
-          </Text>
-          <Text style={styles.bankRow}>
-            Account Name: Karol Digital Ltd | Sort Code:{" "}
-            {bankSortCode || "00-00-00"} | Account Number:{" "}
-            {bankAccountNumber || "00000000"}
-          </Text>
+        <View style={styles.body}>
+          <View style={styles.titleRow}>
+            <View style={styles.titleBlock}>
+              <Text style={styles.subtitle}>INVOICE</Text>
+              <View style={styles.titleAccent} />
+            </View>
+            <Text style={styles.agencyMeta}>
+              info@karoldigital.co.uk{"\n"}
+              https://karoldigital.co.uk
+            </Text>
+          </View>
+
+          <View style={styles.metaBlock}>
+            <Text style={styles.metaLine}>
+              <Text style={styles.metaLabel}>Reference: </Text>
+              {invoiceRef || "—"}
+            </Text>
+            <Text style={styles.metaLine}>
+              <Text style={styles.metaLabel}>Date: </Text>
+              {issueDate || "—"}
+            </Text>
+            <Text style={styles.metaLine}>
+              <Text style={styles.metaLabel}>Lead Submitted: </Text>
+              {leadSubmitted || "—"}
+            </Text>
+          </View>
+
+          <View style={styles.twoCol}>
+            <View style={styles.col}>
+              <Text style={styles.sectionTitle}>BILL TO</Text>
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Client Name: </Text>
+                {clientName || "—"}
+              </Text>
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Company Name: </Text>
+                {companyName || "—"}
+              </Text>
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Email Address: </Text>
+                {email || "—"}
+              </Text>
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Phone Number: </Text>
+                {phone || "—"}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={styles.sectionTitle}>PROJECT SUMMARY</Text>
+              <Text style={styles.packageLine}>
+                Package: {packageTitle || "Custom Development"}
+              </Text>
+              <Text style={styles.stackLabel}>System Configuration</Text>
+              <Text style={styles.configLine}>
+                {systemConfiguration ||
+                  "Scoped technical architecture, engineering deliverables, and launch infrastructure as agreed."}
+              </Text>
+              <View style={styles.totalsBlock}>
+                <Text style={styles.totalLine}>
+                  Project Total: {formatMoney(agreedTotal)}
+                </Text>
+                {showLoyaltyDiscount ? (
+                  <Text style={styles.totalLine}>
+                    Loyalty &amp; Friendship Discount:{" "}
+                    {formatMoney(loyaltyDiscount)}
+                  </Text>
+                ) : null}
+                {showPaidDeposit ? (
+                  <Text style={styles.totalLine}>
+                    Paid Deposit: {formatMoney(paidDeposit)}
+                  </Text>
+                ) : null}
+                <Text style={styles.totalStrong}>
+                  Balance Due: {formatMoney(balanceDue)}
+                </Text>
+              </View>
+            </View>
+          </View>
+
+          <Text style={styles.sectionTitle}>SERVICES</Text>
+          <View style={styles.table}>
+            <View style={styles.tableHeader}>
+              <Text style={[styles.colStage, styles.th]}>#</Text>
+              <Text style={[styles.colDesc, styles.th]}>Service</Text>
+              <Text style={[styles.colAmount, styles.th]}>Amount</Text>
+            </View>
+            {milestones.map((row) => (
+              <View
+                key={`${row.stage}-${row.description}`}
+                style={styles.tableRow}
+              >
+                <Text style={styles.colStage}>{row.stage}</Text>
+                <Text style={styles.colDesc}>{row.description}</Text>
+                <Text style={styles.colAmount}>{formatMoney(row.amount)}</Text>
+              </View>
+            ))}
+            <View style={styles.tableTotalRow}>
+              <Text style={[styles.colStage, styles.bold]}>Total</Text>
+              <Text style={styles.colDesc} />
+              <Text style={[styles.colAmount, styles.bold]}>
+                {formatMoney(tableTotal)}
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.bankBlock}>
+            <Text style={styles.bankTitle}>BANK TRANSFER TERMS</Text>
+            <Text style={styles.bankHelp}>
+              Please pay the balance due by BACS using the details below. Quote
+              reference {invoiceRef || "—"} on your payment.
+            </Text>
+            <Text style={styles.bankRow}>
+              Account Name: Karol Digital Ltd | Sort Code:{" "}
+              {bankSortCode || "00-00-00"} | Account Number:{" "}
+              {bankAccountNumber || "00000000"}
+            </Text>
+          </View>
         </View>
 
         <Text style={styles.footer} fixed>
-          LEGAL DISCLAIMER: This document is a Pro Forma invoice issued for
-          scoping, quotation, and planning purposes only. It is not a VAT
-          invoice, tax invoice, or demand for immediate payment unless expressly
-          agreed in a signed statement of work. Final fees, deliverables, and
-          payment terms are confirmed in a separate commercial agreement. Karol
-          Digital — Custom Web &amp; App Development UK.
+          This is a commercial invoice issued by Karol Digital Ltd for services
+          rendered or to be rendered under the agreed project scope. Payment of
+          the balance due is requested according to the bank transfer terms
+          above. VAT treatment will be stated separately where applicable. For
+          queries contact info@karoldigital.co.uk. Karol Digital — Custom Web
+          &amp; App Development UK.
         </Text>
       </Page>
     </Document>
   );
 }
 
-export default function ProFormaInvoicePanel({ lead }: Props) {
-  const [invoiceRef, setInvoiceRef] = useState("KD-PF-001");
+export default function ProFormaInvoicePanel({
+  lead,
+  embedded = false,
+}: Props) {
+  const [invoiceRef, setInvoiceRef] = useState("KD-INV-001");
   const [issueDate, setIssueDate] = useState("");
   const [bankSortCode, setBankSortCode] = useState("00-00-00");
   const [bankAccountNumber, setBankAccountNumber] = useState("00000000");
   const [selected, setSelected] = useState<string[]>([
     PRO_FORMA_LINE_ITEMS[0],
-    PRO_FORMA_LINE_ITEMS[1],
   ]);
   const [prices, setPrices] = useState<Record<string, number>>({
-    [PRO_FORMA_LINE_ITEMS[0]]: 950,
+    [PRO_FORMA_LINE_ITEMS[0]]: 2500,
     [PRO_FORMA_LINE_ITEMS[1]]: 3500,
-    [PRO_FORMA_LINE_ITEMS[2]]: 1200,
-    [PRO_FORMA_LINE_ITEMS[3]]: 850,
-    [PRO_FORMA_LINE_ITEMS[4]]: 2200,
+    [PRO_FORMA_LINE_ITEMS[2]]: 4500,
+    [PRO_FORMA_LINE_ITEMS[3]]: 450,
+    [PRO_FORMA_LINE_ITEMS[4]]: 1200,
+    [PRO_FORMA_LINE_ITEMS[5]]: 950,
   });
   const [domainFee, setDomainFee] = useState(25);
   const [hostingFee, setHostingFee] = useState(180);
   const [infraFee, setInfraFee] = useState(350);
+  const [paidDeposit, setPaidDeposit] = useState(0);
+  const [loyaltyDiscount, setLoyaltyDiscount] = useState(0);
+  const [includeDomain, setIncludeDomain] = useState(false);
+  const [includeHosting, setIncludeHosting] = useState(false);
+  const [includeInfra, setIncludeInfra] = useState(false);
+  const [includeLoyalty, setIncludeLoyalty] = useState(false);
+  const [includeDeposit, setIncludeDeposit] = useState(false);
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
     if (!lead) return;
     const today = new Date();
     setIssueDate(today.toISOString().slice(0, 10));
-    setInvoiceRef(`KD-PF-${lead.id.slice(-6).toUpperCase()}`);
+    setInvoiceRef(`KD-INV-${lead.id.slice(-6).toUpperCase()}`);
   }, [lead]);
 
   const packageTotal = useMemo(
@@ -398,38 +480,71 @@ export default function ProFormaInvoicePanel({ lead }: Props) {
     [selected, prices]
   );
 
-  const agreedTotal = packageTotal + domainFee + hostingFee + infraFee;
+  const appliedDomain = includeDomain ? domainFee : 0;
+  const appliedHosting = includeHosting ? hostingFee : 0;
+  const appliedInfra = includeInfra ? infraFee : 0;
+  const appliedLoyalty = includeLoyalty ? loyaltyDiscount : 0;
+  const appliedDeposit = includeDeposit ? paidDeposit : 0;
 
-  const milestones: MilestoneRow[] = useMemo(
-    () => [
-      {
-        stage: "Infra 01",
+  const agreedTotal =
+    packageTotal + appliedDomain + appliedHosting + appliedInfra;
+  const balanceDue = Math.max(0, agreedTotal - appliedLoyalty - appliedDeposit);
+
+  const missingTickedValues =
+    (includeDomain && domainFee <= 0) ||
+    (includeHosting && hostingFee <= 0) ||
+    (includeInfra && infraFee <= 0) ||
+    (includeLoyalty && loyaltyDiscount <= 0) ||
+    (includeDeposit && paidDeposit <= 0);
+
+  const milestones: MilestoneRow[] = useMemo(() => {
+    const rows: MilestoneRow[] = [];
+    let index = 1;
+
+    for (const description of selected) {
+      rows.push({
+        stage: String(index).padStart(2, "0"),
+        description,
+        amount: prices[description] ?? 0,
+      });
+      index += 1;
+    }
+
+    if (includeDomain) {
+      rows.push({
+        stage: String(index).padStart(2, "0"),
         description: "Domain Registration Fee",
         amount: domainFee,
-      },
-      {
-        stage: "Infra 02",
+      });
+      index += 1;
+    }
+    if (includeHosting) {
+      rows.push({
+        stage: String(index).padStart(2, "0"),
         description: "Hosting & Cloud Server Infrastructure Fee",
         amount: hostingFee,
-      },
-      {
-        stage: "Infra 03",
+      });
+      index += 1;
+    }
+    if (includeInfra) {
+      rows.push({
+        stage: String(index).padStart(2, "0"),
         description: "Additional Web/App Development Infrastructure Fees",
         amount: infraFee,
-      },
-      {
-        stage: "Build",
-        description:
-          selected.length > 0
-            ? `Custom engineering package (${selected.length} scoped deliverable${
-                selected.length === 1 ? "" : "s"
-              })`
-            : "Custom engineering package",
-        amount: packageTotal,
-      },
-    ],
-    [domainFee, hostingFee, infraFee, packageTotal, selected]
-  );
+      });
+    }
+
+    return rows;
+  }, [
+    includeDomain,
+    includeHosting,
+    includeInfra,
+    domainFee,
+    hostingFee,
+    infraFee,
+    prices,
+    selected,
+  ]);
 
   const systemConfiguration = useMemo(() => {
     if (selected.length === 0) {
@@ -452,7 +567,7 @@ export default function ProFormaInvoicePanel({ lead }: Props) {
     try {
       const logoSrc = `${window.location.origin}/logo-pdf.png`;
       const blob = await pdf(
-        <ProFormaPdfDocument
+        <ProfessionalInvoicePdf
           invoiceRef={invoiceRef}
           issueDate={issueDate}
           leadSubmitted={formatLeadSubmitted(lead.createdAt)}
@@ -467,6 +582,10 @@ export default function ProFormaInvoicePanel({ lead }: Props) {
           }
           systemConfiguration={systemConfiguration}
           agreedTotal={agreedTotal}
+          loyaltyDiscount={loyaltyDiscount}
+          paidDeposit={paidDeposit}
+          showLoyaltyDiscount={includeLoyalty}
+          showPaidDeposit={includeDeposit}
           milestones={milestones}
           bankSortCode={bankSortCode}
           bankAccountNumber={bankAccountNumber}
@@ -476,7 +595,7 @@ export default function ProFormaInvoicePanel({ lead }: Props) {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `${invoiceRef || "pro-forma"}.pdf`;
+      a.download = `${invoiceRef || "invoice"}.pdf`;
       a.click();
       URL.revokeObjectURL(url);
     } finally {
@@ -485,20 +604,27 @@ export default function ProFormaInvoicePanel({ lead }: Props) {
   }
 
   if (!lead) {
+    if (embedded) return null;
     return (
       <section className="rounded-2xl border border-dashed border-gray-200 bg-white p-6 text-sm text-gray-500">
-        Select a lead from the pipeline to generate a Pro Forma invoice.
+        Select a lead from the pipeline to generate a professional invoice.
       </section>
     );
   }
 
   return (
-    <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+    <section
+      className={
+        embedded
+          ? "p-5"
+          : "rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+      }
+    >
       <p className="text-xs font-bold uppercase tracking-widest text-[#411b3f]">
         Billing
       </p>
       <h2 className="mb-4 text-xl font-bold text-[#102f35]">
-        Pro Forma invoice generator
+        Invoice generator
       </h2>
       <p className="mb-6 text-sm text-gray-600">
         Mapped from <strong>{lead.name}</strong>
@@ -551,51 +677,109 @@ export default function ProFormaInvoicePanel({ lead }: Props) {
         </label>
       </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
-        <label className="text-sm">
-          <span className="mb-1 block font-semibold text-[#102f35]">
-            Domain registration fee (£)
-          </span>
-          <input
-            type="number"
-            min={0}
-            step={1}
-            value={domainFee}
-            onChange={(e) => setDomainFee(Number(e.target.value || 0))}
-            className="w-full rounded-lg border border-gray-200 px-3 py-2"
-          />
-        </label>
-        <label className="text-sm">
-          <span className="mb-1 block font-semibold text-[#102f35]">
-            Hosting &amp; cloud fee (£)
-          </span>
-          <input
-            type="number"
-            min={0}
-            step={10}
-            value={hostingFee}
-            onChange={(e) => setHostingFee(Number(e.target.value || 0))}
-            className="w-full rounded-lg border border-gray-200 px-3 py-2"
-          />
-        </label>
-        <label className="text-sm">
-          <span className="mb-1 block font-semibold text-[#102f35]">
-            Additional infrastructure (£)
-          </span>
-          <input
-            type="number"
-            min={0}
-            step={10}
-            value={infraFee}
-            onChange={(e) => setInfraFee(Number(e.target.value || 0))}
-            className="w-full rounded-lg border border-gray-200 px-3 py-2"
-          />
-        </label>
+      <div className="mt-6">
+        <p className="mb-3 text-sm font-semibold text-[#102f35]">
+          Optional fees &amp; adjustments
+        </p>
+        <p className="mb-3 text-xs text-gray-500">
+          Tick a field to include it on the invoice and in the live total.
+        </p>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {(
+            [
+              {
+                id: "domain",
+                label: "Domain registration fee (£)",
+                checked: includeDomain,
+                onCheck: setIncludeDomain,
+                value: domainFee,
+                onValue: setDomainFee,
+                step: 1,
+              },
+              {
+                id: "hosting",
+                label: "Hosting & cloud fee (£)",
+                checked: includeHosting,
+                onCheck: setIncludeHosting,
+                value: hostingFee,
+                onValue: setHostingFee,
+                step: 10,
+              },
+              {
+                id: "infra",
+                label: "Additional infrastructure (£)",
+                checked: includeInfra,
+                onCheck: setIncludeInfra,
+                value: infraFee,
+                onValue: setInfraFee,
+                step: 10,
+              },
+              {
+                id: "loyalty",
+                label: "Loyalty & Friendship Discount (£)",
+                checked: includeLoyalty,
+                onCheck: setIncludeLoyalty,
+                value: loyaltyDiscount,
+                onValue: setLoyaltyDiscount,
+                step: 50,
+              },
+              {
+                id: "deposit",
+                label: "Paid deposit (£)",
+                checked: includeDeposit,
+                onCheck: setIncludeDeposit,
+                value: paidDeposit,
+                onValue: setPaidDeposit,
+                step: 50,
+              },
+            ] as const
+          ).map((field) => (
+            <div
+              key={field.id}
+              className={`rounded-xl border p-3 ${
+                field.checked
+                  ? "border-[#102f35]/30 bg-white"
+                  : "border-gray-100 bg-gray-50/70"
+              }`}
+            >
+              <label className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#102f35]">
+                <input
+                  type="checkbox"
+                  checked={field.checked}
+                  onChange={(e) => field.onCheck(e.target.checked)}
+                  className="h-4 w-4 accent-[#102f35]"
+                />
+                <span>{field.label}</span>
+              </label>
+              <input
+                type="number"
+                min={0}
+                step={field.step}
+                value={field.value}
+                disabled={!field.checked}
+                required={field.checked}
+                onChange={(e) =>
+                  field.onValue(Number(e.target.value || 0))
+                }
+                className={`w-full rounded-lg border px-3 py-2 text-sm disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 ${
+                  field.checked && field.value <= 0
+                    ? "border-red-400 bg-red-50"
+                    : "border-gray-200"
+                }`}
+              />
+              {field.checked && field.value <= 0 ? (
+                <p className="mt-1 text-xs text-red-600">
+                  Enter an amount greater than 0.
+                </p>
+              ) : null}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="mt-6">
         <p className="mb-3 text-sm font-semibold text-[#102f35]">
-          Service line items (system configuration)
+          Services
         </p>
         <div className="space-y-2">
           {PRO_FORMA_LINE_ITEMS.map((item) => (
@@ -628,18 +812,52 @@ export default function ProFormaInvoicePanel({ lead }: Props) {
             </div>
           ))}
         </div>
-        <p className="mt-3 text-sm font-semibold text-[#102f35]">
-          Agreed project total: {formatMoney(agreedTotal)}
-        </p>
+        <div className="mt-4 space-y-1 text-sm text-[#102f35]">
+          <p>
+            Project total:{" "}
+            <span className="font-semibold">{formatMoney(agreedTotal)}</span>
+          </p>
+          {includeLoyalty ? (
+            <p>
+              Loyalty &amp; Friendship Discount:{" "}
+              <span className="font-semibold">
+                {formatMoney(loyaltyDiscount)}
+              </span>
+            </p>
+          ) : null}
+          {includeDeposit ? (
+            <p>
+              Paid deposit:{" "}
+              <span className="font-semibold">{formatMoney(paidDeposit)}</span>
+            </p>
+          ) : null}
+          <p className="font-bold">
+            Balance due: {formatMoney(balanceDue)}
+          </p>
+        </div>
       </div>
+
+      {missingTickedValues ? (
+        <p className="mt-4 text-sm text-red-600">
+          Every ticked fee must have a value greater than 0 before you can
+          download.
+        </p>
+      ) : null}
 
       <button
         type="button"
-        disabled={busy || selected.length === 0}
+        disabled={
+          busy ||
+          missingTickedValues ||
+          (selected.length === 0 &&
+            !includeDomain &&
+            !includeHosting &&
+            !includeInfra)
+        }
         onClick={downloadPdf}
         className="mt-6 rounded-full bg-brand-gold px-6 py-3 text-sm font-bold text-[#102f35] transition hover:bg-brand-gold-deep disabled:opacity-60"
       >
-        {busy ? "Generating PDF…" : "Download Pro Forma PDF"}
+        {busy ? "Generating PDF…" : "Download Invoice PDF"}
       </button>
     </section>
   );

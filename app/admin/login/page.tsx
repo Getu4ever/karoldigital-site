@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { adminLoginAction } from "@/app/admin/actions/leads";
+import { redirect } from "next/navigation";
+import { adminLoginAction } from "@/app/admin/actions/auth";
+import { isAdminAuthenticated } from "@/lib/admin-auth";
 
 export const metadata = {
   title: "Admin Login | Karol Digital",
@@ -11,6 +13,10 @@ export default async function AdminLoginPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
+  if (await isAdminAuthenticated()) {
+    redirect("/admin/dashboard");
+  }
+
   const params = await searchParams;
   const hasError = params.error === "1";
 
@@ -24,20 +30,19 @@ export default async function AdminLoginPage({
           Admin dashboard
         </h1>
         <p className="mt-2 text-sm text-gray-600">
-          Enter the shared admin token configured as{" "}
-          <code className="text-xs">ADMIN_DASHBOARD_TOKEN</code>.
+          Sign in with your admin password.
         </p>
 
         {hasError && (
           <p className="mt-4 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">
-            Invalid token. Try again.
+            Invalid password. Try again.
           </p>
         )}
 
         <form action={adminLoginAction} className="mt-6 space-y-4">
           <label className="block text-sm">
             <span className="mb-1 block font-semibold text-[#102f35]">
-              Access token
+              Password
             </span>
             <input
               type="password"
@@ -45,7 +50,7 @@ export default async function AdminLoginPage({
               required
               autoComplete="current-password"
               className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-[#102f35]"
-              placeholder="Admin token"
+              placeholder="Enter password"
             />
           </label>
           <button

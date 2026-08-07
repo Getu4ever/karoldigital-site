@@ -153,20 +153,11 @@ export default function Footer() {
             <div className="space-y-2">
               <p className="text-lg font-semibold text-white">Let&apos;s Connect</p>
               <p className="text-sm text-gray-400">London, United Kingdom</p>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                616A Kingston Rd, London SW20 8DN
-              </p>
               <a
                 href="mailto:info@karoldigital.co.uk"
                 className="block text-sm hover:text-brand-gold-soft transition"
               >
                 info@karoldigital.co.uk
-              </a>
-              <a
-                href="tel:+442081234567"
-                className="block text-sm hover:text-brand-gold-soft transition"
-              >
-                020 8123 4567
               </a>
               <p className="text-xs text-gray-400">
                 Clear advice, honest pricing, and a practical recommendation for

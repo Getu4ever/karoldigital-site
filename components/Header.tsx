@@ -145,12 +145,6 @@ export default function Header() {
             >
               Karol <span className="text-brand-gold-soft">Digital</span>
             </Link>
-            <a
-              href="tel:+442081234567"
-              className="mt-0.5 text-[11px] md:text-xs font-medium tracking-wide text-white/80 hover:text-brand-gold-soft transition-colors"
-            >
-              020 8123 4567
-            </a>
           </div>
         </div>
 

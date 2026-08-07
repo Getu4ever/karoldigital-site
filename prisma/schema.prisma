@@ -37,3 +37,11 @@ model Lead {
   @@index([createdAt])
   @@index([email])
 }
+
+/// Single-row admin credential (password hash). Bootstrap from ADMIN_PASSWORD.
+model AdminAccount {
+  id           String   @id @default("default")
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

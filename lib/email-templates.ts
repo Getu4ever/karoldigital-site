@@ -5,10 +5,7 @@
 
 const BRAND = {
   name: "Karol Digital",
-  phoneDisplay: "020 8123 4567",
-  phoneTel: "+442081234567",
   email: "info@karoldigital.co.uk",
-  address: "616A Kingston Rd, London SW20 8DN",
   siteUrl: "https://www.karoldigital.co.uk",
   logoUrl: "https://www.karoldigital.co.uk/logo.WebP",
   teal: "#102f35",
@@ -70,13 +67,8 @@ function emailShell(title: string, bodyHtml: string): string {
               <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:${BRAND.teal};">
                 ${BRAND.name}
               </p>
-              <p style="margin:0 0 4px;font-size:12px;color:${BRAND.muted};line-height:1.6;">
-                <a href="tel:${BRAND.phoneTel}" style="color:${BRAND.teal};text-decoration:none;">${BRAND.phoneDisplay}</a>
-                &nbsp;·&nbsp;
-                <a href="mailto:${BRAND.email}" style="color:${BRAND.teal};text-decoration:none;">${BRAND.email}</a>
-              </p>
               <p style="margin:0 0 12px;font-size:12px;color:${BRAND.muted};line-height:1.6;">
-                ${BRAND.address}
+                <a href="mailto:${BRAND.email}" style="color:${BRAND.teal};text-decoration:none;">${BRAND.email}</a>
               </p>
               <p style="margin:0;font-size:11px;color:#9ca3af;">
                 &copy; ${new Date().getFullYear()} ${BRAND.name}. All rights reserved.
@@ -122,8 +114,8 @@ export function buildUserConfirmationEmail(input: {
       </p>
       <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#374151;">
         You can expect a thoughtful follow-up from us within <strong>24 hours</strong> on
-        UK business days. If your enquiry is urgent, call us on
-        <a href="tel:${BRAND.phoneTel}" style="color:${BRAND.teal};font-weight:700;text-decoration:none;">${BRAND.phoneDisplay}</a>.
+        UK business days. If your enquiry is urgent, reply to this email or contact us at
+        <a href="mailto:${BRAND.email}" style="color:${BRAND.teal};font-weight:700;text-decoration:none;">${BRAND.email}</a>.
       </p>
       <table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0;width:100%;background:#f9fafb;border:1px solid ${BRAND.border};border-radius:12px;">
         <tr>
@@ -145,9 +137,7 @@ export function buildUserConfirmationEmail(input: {
 
 Thank you for contacting Karol Digital. We have received your enquiry and will follow up within 24 hours on UK business days.
 
-Phone: ${BRAND.phoneDisplay}
 Email: ${BRAND.email}
-Address: ${BRAND.address}
 
 — Karol Digital`;
 
@@ -240,8 +230,7 @@ Message:
 ${input.message || "(No message provided)"}
 
 — ${BRAND.name}
-${BRAND.phoneDisplay} | ${BRAND.email}
-${BRAND.address}`;
+${BRAND.email}`;
 
   return { subject, html, text };
 }

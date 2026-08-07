@@ -1,10 +1,7 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import AnimateWrapper from "@/components/AnimateWrapper";
+import SiteChrome from "@/components/SiteChrome";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import ChatbaseWidget from "@/components/ChatbaseWidget";
 import { Metadata, Viewport } from "next";
 
 export const viewport: Viewport = {
@@ -51,12 +48,6 @@ const professionalServiceJsonLd = {
   image: "https://www.karoldigital.co.uk/seo-cover.jpg",
   logo: "https://www.karoldigital.co.uk/logo.png",
   priceRange: "££",
-  telephone: "07565472445",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "London",
-    addressCountry: "GB",
-  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -110,10 +101,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
         <GoogleAnalytics />
-        <Header />
-        <AnimateWrapper>{children}</AnimateWrapper>
-        <Footer />
-        <ChatbaseWidget />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

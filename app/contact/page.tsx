@@ -298,33 +298,29 @@ export default function ContactPage() {
             <div className="flex flex-col gap-6">
               <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
                 <p className="text-xs font-bold text-[#411b3f] mb-2 uppercase tracking-wide">
-                  Visit us
+                  Contact
                 </p>
                 <h2 className="text-2xl font-bold text-[#102f35] mb-3">
-                  Our London office
+                  Email us
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
-                  616A Kingston Rd, London SW20 8DN
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Prefer email? Reach the team directly and we&apos;ll get back
+                  to you on UK business days.
                 </p>
-                <div className="mt-4 space-y-1 text-sm text-gray-600">
-                  <a
-                    href="mailto:info@karoldigital.co.uk"
-                    className="block font-medium text-[#102f35] hover:text-[#411b3f] transition"
-                  >
-                    info@karoldigital.co.uk
-                  </a>
-                  <a
-                    href="tel:+442081234567"
-                    className="block font-medium text-[#102f35] hover:text-[#411b3f] transition"
-                  >
-                    020 8123 4567
-                  </a>
-                </div>
+                <a
+                  href="mailto:info@karoldigital.co.uk"
+                  className="block font-medium text-[#102f35] hover:text-[#411b3f] transition"
+                >
+                  info@karoldigital.co.uk
+                </a>
+                <p className="mt-4 text-sm text-gray-500">
+                  London, United Kingdom
+                </p>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex-1">
                 <iframe
-                  title="Karol Digital office location map"
-                  src="https://www.google.com/maps?q=616A+Kingston+Rd,+London+SW20+8DN&output=embed"
+                  title="Karol Digital — London, United Kingdom"
+                  src="https://www.google.com/maps?q=London,+United+Kingdom&z=10&output=embed"
                   className="w-full h-full min-h-[380px]"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

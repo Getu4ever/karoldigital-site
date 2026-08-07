@@ -49,8 +49,11 @@ export default function AnalyticsPanel({ metrics }: { metrics: GaDashboardMetric
                   </tr>
                 </thead>
                 <tbody>
-                  {metrics.pageViews.map((row) => (
-                    <tr key={row.pagePath} className="border-t border-gray-100">
+                  {metrics.pageViews.map((row, index) => (
+                    <tr
+                      key={`${row.pagePath}::${row.pageTitle}::${index}`}
+                      className="border-t border-gray-100"
+                    >
                       <td className="px-3 py-2">
                         <p className="font-medium text-[#102f35] line-clamp-1">
                           {row.pageTitle}
@@ -78,9 +81,9 @@ export default function AnalyticsPanel({ metrics }: { metrics: GaDashboardMetric
                   </tr>
                 </thead>
                 <tbody>
-                  {metrics.trafficSources.map((row) => (
+                  {metrics.trafficSources.map((row, index) => (
                     <tr
-                      key={`${row.source}-${row.medium}`}
+                      key={`${row.source}::${row.medium}::${index}`}
                       className="border-t border-gray-100"
                     >
                       <td className="px-3 py-2 text-[#102f35]">

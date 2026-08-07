@@ -38,9 +38,10 @@ export function toLeadStatusLabel(enumValue: string): LeadStatusLabel {
 }
 
 export const PRO_FORMA_LINE_ITEMS = [
-  "Bespoke Discovery & Technical Architecture Mapping",
-  "High-Performance Next.js Web Engineering",
-  "Headless CMS Configuration (Sanity Studio)",
-  "Core Web Vitals Optimization",
-  "Secure E-Commerce API Integration",
+  "High-Performance Websites",
+  "Custom Web Development & E-commerce",
+  "Custom Mobile Applications",
+  "Website Audits",
+  "AI Search (GEO)",
+  "Digital Marketing",
 ] as const;
