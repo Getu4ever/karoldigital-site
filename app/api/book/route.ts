@@ -5,6 +5,7 @@ import {
   buildAdminNotificationEmail,
   buildUserConfirmationEmail,
 } from "@/lib/email-templates";
+import { normalizeBookService } from "@/lib/recaptcha";
 
 async function verifyCaptcha(token: string): Promise<boolean> {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
@@ -54,6 +55,10 @@ export async function POST(req: Request) {
 
     const resend = new Resend(resendKey);
 
+    const selectedService = normalizeBookService(
+      typeof service === "string" ? service : null
+    );
+
     const fullMessage = [
       phone?.trim() ? `Phone: ${phone.trim()}` : null,
       message?.trim() || null,
@@ -63,14 +68,14 @@ export async function POST(req: Request) {
 
     const userEmail = buildUserConfirmationEmail({
       name: String(name),
-      contextLabel: String(service),
+      contextLabel: selectedService,
     });
     const adminEmail = buildAdminNotificationEmail({
       name: String(name),
       email: String(email),
       phone: phone ? String(phone) : null,
       source: "Book a call",
-      service: String(service),
+      service: selectedService,
       message: fullMessage || null,
     });
 
@@ -99,7 +104,7 @@ export async function POST(req: Request) {
       name: String(name),
       email: String(email),
       phone: phone ? String(phone) : null,
-      serviceOfInterest: String(service),
+      serviceOfInterest: selectedService,
       message: fullMessage || null,
     });
 

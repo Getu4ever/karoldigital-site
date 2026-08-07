@@ -22,7 +22,7 @@ function BookingForm() {
     name: "",
     email: "",
     phone: "",
-    service: "Web Design",
+    service: "High-Performance Website Development",
     message: "",
   });
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
@@ -67,7 +67,7 @@ function BookingForm() {
       });
 
       if (response.ok) {
-        const isAudit = formData.service === "Website Audit";
+        const isAudit = formData.service === "Website Performance & Growth Audit";
         trackLead(isAudit ? "audit" : "consultation");
         setStatus("Thank you! Your request has been received. We will respond within 24 hours.");
         setFormData({
