@@ -21,6 +21,7 @@ function BookingForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    company: "",
     phone: "",
     service: "High-Performance Website Development",
     message: "",
@@ -73,6 +74,7 @@ function BookingForm() {
         setFormData({
           name: "",
           email: "",
+          company: "",
           phone: "",
           service: normalizeBookService(searchParams.get("service")),
           message: "",
@@ -122,6 +124,21 @@ function BookingForm() {
         </div>
 
         <div>
+          <label htmlFor="book-company" className="block text-sm font-bold text-[#102f35] mb-2">
+            Company
+          </label>
+          <input
+            id="book-company"
+            type="text"
+            className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#102f35] outline-none transition"
+            value={formData.company}
+            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+            placeholder="Business or organisation name"
+            required
+          />
+        </div>
+
+        <div>
           <label htmlFor="book-phone" className="block text-sm font-bold text-[#102f35] mb-2">
             Phone Number
           </label>
@@ -131,7 +148,8 @@ function BookingForm() {
             className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#102f35] outline-none transition"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            placeholder="Optional but recommended for a faster response"
+            placeholder="Best number to reach you"
+            required
           />
         </div>
 

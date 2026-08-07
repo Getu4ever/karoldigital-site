@@ -24,11 +24,20 @@ async function verifyCaptcha(token: string): Promise<boolean> {
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, phone, service, message, captchaToken } = body;
+    const { name, email, company, phone, service, message, captchaToken } = body;
 
-    if (!name?.trim() || !email?.trim() || !service?.trim()) {
+    if (
+      !name?.trim() ||
+      !email?.trim() ||
+      !company?.trim() ||
+      !phone?.trim() ||
+      !service?.trim()
+    ) {
       return NextResponse.json(
-        { error: "Name, email, and service are required." },
+        {
+          error:
+            "Name, email, company, phone, and service are required.",
+        },
         { status: 400 }
       );
     }
@@ -59,12 +68,9 @@ export async function POST(req: Request) {
       typeof service === "string" ? service : null
     );
 
-    const fullMessage = [
-      phone?.trim() ? `Phone: ${phone.trim()}` : null,
-      message?.trim() || null,
-    ]
-      .filter(Boolean)
-      .join("\n\n");
+    const companyValue = String(company).trim();
+    const phoneValue = String(phone).trim();
+    const messageValue = typeof message === "string" ? message.trim() : "";
 
     const userEmail = buildUserConfirmationEmail({
       name: String(name),
@@ -73,10 +79,11 @@ export async function POST(req: Request) {
     const adminEmail = buildAdminNotificationEmail({
       name: String(name),
       email: String(email),
-      phone: phone ? String(phone) : null,
+      company: companyValue,
+      phone: phoneValue,
       source: "Book a call",
       service: selectedService,
-      message: fullMessage || null,
+      message: messageValue || null,
     });
 
     const [{ error: adminError }, { error: userError }] = await Promise.all([
@@ -103,9 +110,10 @@ export async function POST(req: Request) {
     await persistPublicLead({
       name: String(name),
       email: String(email),
-      phone: phone ? String(phone) : null,
+      company: companyValue,
+      phone: phoneValue,
       serviceOfInterest: selectedService,
-      message: fullMessage || null,
+      message: messageValue || null,
     });
 
     return NextResponse.json({ success: true });

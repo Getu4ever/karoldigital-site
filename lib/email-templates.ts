@@ -158,6 +158,7 @@ Address: ${BRAND.address}
 export function buildAdminNotificationEmail(input: {
   name: string;
   email: string;
+  company?: string | null;
   phone?: string | null;
   source?: string | null;
   service?: string | null;
@@ -165,6 +166,7 @@ export function buildAdminNotificationEmail(input: {
 }): { subject: string; html: string; text: string } {
   const name = escapeHtml(input.name.trim());
   const email = escapeHtml(input.email.trim());
+  const company = escapeHtml((input.company || "").trim() || "Not provided");
   const phone = escapeHtml((input.phone || "").trim() || "Not provided");
   const source = escapeHtml((input.source || "").trim() || "Website");
   const service = escapeHtml((input.service || "").trim() || "Not specified");
@@ -193,6 +195,10 @@ export function buildAdminNotificationEmail(input: {
         <tr>
           <td style="padding:12px 16px;background:#f9fafb;font-size:12px;font-weight:700;color:${BRAND.muted};width:34%;border-bottom:1px solid ${BRAND.border};">Name</td>
           <td style="padding:12px 16px;font-size:14px;color:${BRAND.teal};border-bottom:1px solid ${BRAND.border};">${name}</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;background:#f9fafb;font-size:12px;font-weight:700;color:${BRAND.muted};border-bottom:1px solid ${BRAND.border};">Company</td>
+          <td style="padding:12px 16px;font-size:14px;color:${BRAND.teal};border-bottom:1px solid ${BRAND.border};">${company}</td>
         </tr>
         <tr>
           <td style="padding:12px 16px;background:#f9fafb;font-size:12px;font-weight:700;color:${BRAND.muted};border-bottom:1px solid ${BRAND.border};">Email</td>
@@ -224,6 +230,7 @@ export function buildAdminNotificationEmail(input: {
   const text = `New Karol Digital enquiry
 
 Name: ${input.name}
+Company: ${input.company || "Not provided"}
 Email: ${input.email}
 Phone: ${input.phone || "Not provided"}
 Service: ${input.service || "Not specified"}
