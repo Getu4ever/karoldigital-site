@@ -109,8 +109,8 @@ export default function AILogoDesignPage() {
               <div className="min-w-0">
                 <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-white">
                   <Image
-                    src="/ai-logo-design01.webp"
-                    alt="Professional logo concept development"
+                    src="/services-ai-logo-concepts.webp"
+                    alt="Professional logo concept development for small business brands"
                     fill
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -191,8 +191,8 @@ export default function AILogoDesignPage() {
               <div className="min-w-0">
                 <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-white">
                   <Image
-                    src="/ai-logo-design-new.webp"
-                    alt="AI-assisted brand identity workflow"
+                    src="/services-ai-logo-workflow.webp"
+                    alt="AI-assisted brand identity workflow for cohesive small business branding"
                     fill
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -225,7 +225,7 @@ export default function AILogoDesignPage() {
                 <p className="text-gray-700 leading-relaxed">
                   In other words, this service is not about novelty. It is about helping
                   you get to a professional result faster when a full custom brand project
-                  would be unnecessary, premature, or outside your current budget.
+                  would be unnecessary or premature for your current stage.
                 </p>
               </div>
             </div>

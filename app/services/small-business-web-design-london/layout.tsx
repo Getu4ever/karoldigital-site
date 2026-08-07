@@ -6,11 +6,13 @@ const PAGE_URL =
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
-    title: "Small Business Web Design London | Karol Digital",
+    title: "High-Performance Web Engineering London",
     description:
-      "Professional web design for London small businesses that need a credible online presence, faster load times, and more qualified enquiries.",
+      "Custom high-performance websites for London small businesses — fast, secure, and conversion-focused. Premium web engineering without template bloat.",
     url: PAGE_URL,
-    image: "/hero-page-banner.jpg",
+    image: "/services-london-web-engineering.webp",
+    keywords:
+      "high-performance web design London, custom web engineering London, conversion-focused websites London, premium websites for London small business",
   }),
   alternates: {
     canonical: PAGE_URL,
@@ -37,7 +39,7 @@ const serviceSchema = [
       {
         "@type": "ListItem",
         position: 3,
-        name: "Small Business Web Design London",
+        name: "High-Performance Web Engineering London",
         item: PAGE_URL,
       },
     ],
@@ -45,9 +47,9 @@ const serviceSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Small Business Web Design London",
+    name: "High-Performance Custom Web Engineering London",
     description:
-      "Custom web design for London small businesses focused on trust, performance, and lead generation.",
+      "Premium custom-built websites for London small businesses focused on speed, security, trust, and lead generation.",
     provider: {
       "@type": "ProfessionalService",
       name: "Karol Digital",

@@ -2,23 +2,31 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Karol Digital – Web Design for UK Small Businesses",
+  title:
+    "About Karol Digital | Premium Small Business App Developers & Custom Web Engineering UK",
   description:
-    "Affordable, SEO-ready websites and growth-focused digital marketing for UK small businesses. Meet our team and request a free project quote today.",
+    "About Karol Digital — premium small business app developers and high-performance e-commerce developers. Custom web engineering UK for ambitious businesses ready to move beyond slow templates.",
+  keywords: [
+    "About Karol Digital",
+    "Premium Small Business App Developers",
+    "Custom Web Engineering UK",
+    "High-Performance E-Commerce Developers",
+  ],
   alternates: {
     canonical: "https://www.karoldigital.co.uk/about",
   },
   openGraph: {
-    title: "About Karol Digital",
+    title:
+      "About Karol Digital | Premium Small Business App Developers & Custom Web Engineering UK",
     description:
-      "Learn about Karol Digital’s mission to support small businesses with professional and affordable web design.",
+      "Meet Karol Digital — a high-performance technical partner building custom websites, e-commerce platforms, and mobile apps for ambitious small businesses.",
     url: "https://www.karoldigital.co.uk/about",
     images: [
       {
-        url: "/about-team.jpg",
+        url: "/about-our-story.webp",
         width: 1200,
         height: 630,
-        alt: "Karol Digital Team",
+        alt: "About Karol Digital — high-performance technical partner",
       },
     ],
     type: "website",

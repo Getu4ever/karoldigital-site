@@ -32,13 +32,14 @@ export type PageKey =
 
 export const seoConfig: Record<PageKey, SEOProps> = {
   home: {
-    title: "Karol Digital — Web Design for UK Service Businesses",
+    title:
+      "High-Performance Small Business Web Development | Custom Mobile App Development UK | Karol Digital",
     description:
-      "We build fast, trust-building websites for UK service businesses that want more qualified enquiries, clearer messaging, and stronger online credibility.",
+      "Conversion-focused e-commerce websites, custom mobile app development UK, and high-performance small business web development. Modern, fast digital solutions that turn visitors into customers.",
     url: "https://www.karoldigital.co.uk/",
     image: "/seo-cover.jpg",
     keywords:
-      "web design UK, service business websites, lead generation websites, website audits, Next.js development",
+      "High-Performance Small Business Web Development, Custom Mobile App Development UK, Conversion-Focused E-Commerce Websites, custom websites for small businesses, high-performance web and app development",
     type: "website",
   },
 
@@ -52,18 +53,20 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   },
 
   contact: {
-    title: "Contact Karol Digital",
+    title: "Contact Karol Digital | Custom Web & App Development Inquiries",
     description:
-      "Get in touch for web design, digital marketing and social media setup services. Request a free quote today.",
+      "Request a custom mobile app quote or bespoke small business web engineering London. Contact Karol Digital for high-performance websites, e-commerce, and custom applications.",
     url: "https://www.karoldigital.co.uk/contact",
     image: "/hero-page-banner.jpg",
+    keywords:
+      "Contact Karol Digital, Custom Web & App Development Inquiries, Request a Custom Mobile App Quote, Bespoke Small Business Web Engineering London",
     type: "website",
   },
 
   services: {
     title: "Services & Pricing — Karol Digital",
     description:
-      "Affordable and professional web design, social media setup and digital marketing for small businesses.",
+      "Premium custom-built websites, mobile apps, and digital systems for UK small businesses — modern, fast, and conversion-focused.",
     url: "https://www.karoldigital.co.uk/services",
     image: "/seo-cover.jpg",
     type: "website",
@@ -72,7 +75,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   services_web_design: {
     title: "Web Design Services — Karol Digital",
     description:
-      "Mobile-friendly, affordable and professional web design services for small businesses. View Starter, Growth and Premium website packages.",
+      "High-performance custom web design for small businesses. Modern, fast, conversion-focused websites — view Starter, Growth and Premium packages.",
     url: "https://www.karoldigital.co.uk/services/web-design",
     image: "/seo-cover.jpg",
     type: "website",
@@ -90,7 +93,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   services_digital_marketing: {
     title: "Digital Marketing Services | Karol Digital",
     description:
-      "Digital marketing for small businesses — SEO guidance, email marketing, content strategy, branding and visibility improvements. Affordable and effective.",
+      "Digital marketing for small businesses — SEO guidance, email marketing, content strategy, branding and visibility improvements that drive real results.",
     url: "https://www.karoldigital.co.uk/services/digital-marketing",
     image: "/service-marketing.jpg",
     type: "website",

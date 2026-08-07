@@ -3,11 +3,13 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
-    title: "Web Design & Digital Services | Karol Digital",
+    title: "Custom Websites & Digital Services | Karol Digital",
     description:
-      "Explore our core web design and digital services for UK businesses. From strategy and design to SEO and automation systems.",
+      "Premium custom-built websites, mobile apps, and digital systems for UK small businesses — modern, fast, secure, and conversion-focused.",
     url: "https://www.karoldigital.co.uk/services",
-    image: "/hero-page-banner.jpg",
+    image: "/services-strategic-engineering.webp",
+    keywords:
+      "custom websites UK, high-performance web design, custom mobile applications, website audits UK, premium digital services",
   }),
   alternates: {
     canonical: "https://www.karoldigital.co.uk/services",
@@ -36,10 +38,10 @@ const servicesSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Karol Digital Web Design & Digital Services",
-    "serviceType": "Web Design and Digital Services for UK Businesses",
+    "name": "Karol Digital Custom Websites & Digital Services",
+    "serviceType": "High-Performance Web Design and Digital Services for UK Businesses",
     "description":
-      "Explore core digital services including web design, SEO, branding, and automation systems designed to help UK businesses grow online.",
+      "Premium custom-built websites, mobile apps, SEO, and digital systems designed to help UK small businesses grow online.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Karol Digital",

@@ -13,7 +13,7 @@ export default function CustomDevelopmentPage() {
         <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24">
           <Image
             src="/hero-page-banner.jpg"
-            alt="Custom Web Development Services"
+            alt="Custom web development and bespoke digital systems"
             fill
             priority
             className="object-cover brightness-[0.4]"
@@ -29,14 +29,14 @@ export default function CustomDevelopmentPage() {
             >
               Custom Web Development{" "}
               <span className="text-brand-gold-muted">
-                — Bespoke Solutions for Unique Business Challenges
+                — Bespoke Systems Engineered for Your Business
               </span>
             </motion.h1>
 
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-8">
-              Move beyond the limitations of off-the-shelf templates. We build bespoke,
-              high-performance, custom-coded digital applications tailored to your unique
-              workflows and business goals.
+              Move beyond the limitations of off-the-shelf platforms. We engineer
+              high-performance, custom-coded digital systems from scratch — tailored
+              to your workflows, e-commerce needs, and growth goals, without template bloat.
             </p>
           </div>
         </section>
@@ -76,13 +76,14 @@ export default function CustomDevelopmentPage() {
                 Engineered for Your Specific Needs
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Standard platforms often carry unnecessary "bloat" that slows down your site and 
-                limits your functionality. At Karol Digital, we specialise in crafting 
-                clean, efficient, and secure web applications from the ground up.
+                Standard platforms often carry unnecessary bloat that slows down your site and
+                limits what you can do. At Karol Digital, we specialise in crafting
+                clean, efficient, and secure web applications from the ground up —
+                rock-solid security and lightning-fast performance included.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Whether you need a specialized client portal, a custom e-commerce engine, 
-                or a complex data-driven web app, our development process focuses on 
+                Whether you need a specialised client portal, a high-conversion e-commerce
+                store, or a complex data-driven web app, our development process focuses on
                 long-term maintainability, superior speed, and seamless user experiences.
               </p>
             </div>
@@ -90,8 +91,8 @@ export default function CustomDevelopmentPage() {
             {/* Updated Image Section */}
             <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/custom-architecture.webp"
-                alt="Custom software architecture and development"
+                src="/services-custom-web-development.webp"
+                alt="Custom web development and bespoke digital systems engineered from scratch"
                 fill
                 className="object-cover"
               />
@@ -106,9 +107,9 @@ export default function CustomDevelopmentPage() {
             <h2 className="text-3xl font-bold text-[#102f35] text-center mb-16">Our Development Approach</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: "Modern Tech Stack", desc: "We build with cutting-edge tools like Next.js, Tailwind CSS, and headless architectures for maximum speed." },
-                { title: "Secure & Reliable", desc: "Security is built-in, not bolted on. We implement robust authentication and data handling to protect your business." },
-                { title: "Scalable Growth", desc: "Our modular codebases allow your platform to evolve alongside your business without requiring a full rebuild." }
+                { title: "Lightning-Fast Performance", desc: "Every build is engineered for speed — so pages load instantly, visitors stay engaged, and search engines reward your site." },
+                { title: "Modern Secure Content Systems", desc: "Update content with confidence. We implement secure, modern content systems that keep your site easy to manage without sacrificing performance." },
+                { title: "Seamless Sync & Scalability", desc: "Connect your website with the tools you already use. Modular systems evolve with your business — including e-commerce and custom portals — without a full rebuild." }
               ].map((item, index) => (
                 <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                   <h3 className="text-xl font-bold text-[#411b3f] mb-4">{item.title}</h3>
@@ -124,8 +125,8 @@ export default function CustomDevelopmentPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-[#102f35] mb-6">Have a complex project in mind?</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Let's discuss your requirements. We provide expert guidance on the best 
-              technologies to bring your vision to life.
+              Let&apos;s discuss your requirements — from custom e-commerce to
+              bespoke portals. We&apos;ll map the right approach to bring your vision to life.
             </p>
             <Link
               href="/book"

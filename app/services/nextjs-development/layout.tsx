@@ -3,11 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = generateSEOMetadata({
-  title: "Next.js Development | Karol Digital",
+  title: "High-Performance Website Engineering | Karol Digital",
   description:
-    "Expert Next.js development for fast, secure, and scalable web applications. Improve your SEO and user experience with our custom-coded solutions.",
+    "Custom high-performance website engineering for speed, security, and scalability. Premium builds that convert — without template bloat.",
   url: "https://www.karoldigital.co.uk/services/nextjs-development",
-  image: "/service-nextjs.jpg",
+  image: "/services-high-performance-engineering.webp",
+  keywords:
+    "high-performance website engineering UK, fast secure custom websites, scalable web development for small business",
 });
 
 const nextjsSchema = [
@@ -23,9 +25,9 @@ const nextjsSchema = [
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Next.js Development Service",
+    "name": "High-Performance Website Engineering",
     "applicationCategory": "Web Development",
-    "description": "High-performance web development using the Next.js framework for superior SEO, speed, and scalability.",
+    "description": "Custom website engineering focused on speed, security, search visibility, and long-term scalability.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Karol Digital",

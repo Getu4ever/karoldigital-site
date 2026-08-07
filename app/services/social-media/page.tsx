@@ -63,8 +63,8 @@ export default function SocialMediaPage() {
 
           {/* IMAGE */}
           <Image
-            src="/social-media.webp"
-            alt="Social Media Branding Illustration"
+            src="/services-social-media.webp"
+            alt="Professional social media and Google Business profile setup for UK small businesses"
             width={900}
             height={600}
             loading="lazy"

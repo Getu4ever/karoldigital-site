@@ -11,6 +11,7 @@ import {
   Code2,
   Search,
   Zap,
+  Smartphone,
   Landmark,
   Scale,
   HardHat,
@@ -21,7 +22,7 @@ export default function ServicesPage() {
   const servicePills = [
     {
       href: "/services/web-design",
-      label: "Web Design",
+      label: "High-Performance Websites",
       icon: <Monitor size={18} />,
     },
     {
@@ -30,9 +31,9 @@ export default function ServicesPage() {
       icon: <Code2 size={18} />,
     },
     {
-      href: "/services/nextjs-development",
-      label: "Next.js Development",
-      icon: <Zap size={18} />,
+      href: "/services/custom-mobile-applications",
+      label: "Custom Mobile Applications",
+      icon: <Smartphone size={18} />,
     },
     {
       href: "/services/website-audits",
@@ -71,24 +72,24 @@ export default function ServicesPage() {
 
   const serviceCards = [
     {
-      title: "Web Design for Service Businesses",
+      title: "High-Performance Custom Websites",
       description:
-        "Professional website design built around trust, clarity, and lead generation. Ideal for businesses that need a stronger first impression and a clearer path to enquiry.",
+        "Premium custom-built websites designed for trust, clarity, and conversion. Ideal for small businesses that need a stronger first impression and a clearer path to enquiry — without template bloat.",
       points: [
-        "Clear messaging and page structure",
-        "Mobile-responsive layouts",
+        "Conversion-focused messaging and structure",
+        "Lightning-fast, mobile-ready performance",
         "Stronger trust and credibility signals",
       ],
       href: "/book",
       servicePrefill: "Web Design",
-      cta: "Discuss Web Design Needs",
+      cta: "Discuss Custom Website Needs",
     },
     {
       title: "Custom Web Development",
       description:
-        "Custom website development for businesses that need more flexibility, better performance, and a build shaped around how they actually sell and operate.",
+        "Bespoke systems engineered from scratch for businesses that need more flexibility, better performance, and builds shaped around how they actually sell and operate.",
       points: [
-        "Tailored functionality",
+        "Tailored functionality and e-commerce",
         "No template bloat",
         "Built around your goals and user journey",
       ],
@@ -97,24 +98,23 @@ export default function ServicesPage() {
       cta: "Discuss Custom Development",
     },
     {
-      title: "Next.js Development Services",
+      title: "Custom Mobile Applications",
       description:
-        "High-performance websites built with a modern technical foundation for speed, maintainability, and long-term scalability.",
+        "High-quality mobile apps built to increase customer loyalty and sync seamlessly with your business systems — so your website and app work as one.",
       points: [
-        "Fast load times",
-        "Clean technical foundation",
-        "Better performance across devices",
+        "Native-feeling, high-quality experiences",
+        "Seamless sync with your website and tools",
+        "Built for retention and growth",
       ],
-      href: "/book",
-      servicePrefill: "Next.js Development",
-      cta: "Talk About Next.js",
+      href: "/services/custom-mobile-applications",
+      cta: "Explore Mobile Apps",
     },
     {
       title: "Website Audits and Improvement Plans",
       description:
-        "A practical review of your current website to identify what is hurting trust, visibility, speed, or conversions - and what to fix first.",
+        "A practical review of your current website to identify what is hurting speed, security, trust, or conversions — and what to fix first.",
       points: [
-        "Messaging and UX review",
+        "Speed, security, and UX review",
         "Performance and SEO checks",
         "Clear next-step recommendations",
       ],
@@ -173,7 +173,7 @@ export default function ServicesPage() {
         >
           <Image
             src="/hero-page-banner.jpg"
-            alt="Web design and development services for UK service businesses"
+            alt="High-performance custom websites and digital services for UK businesses"
             fill
             priority
             className="object-cover brightness-[0.5]"
@@ -185,11 +185,11 @@ export default function ServicesPage() {
               Services
             </p>
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              Web design and development services built for enquiries
+              Premium custom websites and digital systems for growth
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
-              Fast, conversion-focused websites for UK service businesses that need
-              stronger credibility, clearer messaging, and better lead generation.
+              Modern, fast, conversion-focused websites for UK small businesses —
+              engineered from scratch with rock-solid security and no template bloat.
             </p>
           </div>
         </motion.section>
@@ -205,13 +205,14 @@ export default function ServicesPage() {
                   Strategic Solutions Rooted in Technical Excellence
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  At Karol Digital, we don’t just design good-looking websites. We build
+                  At Karol Digital, we don&apos;t just design good-looking websites. We build
                   fast, reliable, and conversion-focused platforms that support how you
-                  actually sell, deliver, and communicate as a business.
+                  actually sell, deliver, and communicate as a business — custom-engineered
+                  without template bloat.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
                   By combining clean, professional layouts with strong technical SEO and
-                  modern architecture, we create websites that feel effortless to use,
+                  high-performance engineering, we create websites that feel effortless to use,
                   load quickly on any device, and act as a dependable source of new
                   enquiries.
                 </p>
@@ -219,8 +220,8 @@ export default function ServicesPage() {
 
               <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/strategic-engineering-visual.webp"
-                  alt="Karol Digital Strategic Infrastructure"
+                  src="/services-strategic-engineering.webp"
+                  alt="High-performance custom websites and strategic digital systems for UK small businesses"
                   fill
                   className="object-cover"
                 />
@@ -297,7 +298,7 @@ export default function ServicesPage() {
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               The goal is not just to launch a better-looking website. The goal is to
-              give your business a stronger digital presence that helps the right people
+              give your business a premium digital presence that helps the right people
               trust you faster and get in touch more easily.
             </p>
           </div>
@@ -483,10 +484,10 @@ export default function ServicesPage() {
                   </span>
                 </summary>
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                  We focus on custom website design and development built around your
-                  business goals, messaging, and user journey. That usually leads to a
-                  cleaner, faster, and more effective result than forcing a business into
-                  a generic template.
+                  We build premium custom websites engineered from scratch around your
+                  business goals, messaging, and user journey — without template bloat.
+                  That usually leads to a cleaner, faster, and more effective result than
+                  forcing a business into a generic platform.
                 </p>
               </details>
 
@@ -506,15 +507,15 @@ export default function ServicesPage() {
 
               <details className="border rounded-xl p-6 shadow-sm group transition-all">
                 <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
-                  <span>Is Next.js the right fit for every website?</span>
+                  <span>Is a custom high-performance build right for every website?</span>
                   <span className="text-xl group-open:rotate-45 transition-transform">
                     +
                   </span>
                 </summary>
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                  Not always. It is a strong fit when speed, flexibility, and performance
-                  matter, but the right solution depends on your business goals, content
-                  needs, and how the site will be managed.
+                  It is a strong fit when speed, security, flexibility, and conversion
+                  matter. The right solution depends on your business goals, content
+                  needs, and how the site will be managed day to day.
                 </p>
               </details>
             </div>

@@ -5,7 +5,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Professional social media setup for UK small businesses. Optimize your Facebook, Instagram, and Google Business profiles for local visibility.",
   url: "https://www.karoldigital.co.uk/services/social-media",
-  image: "/service-socialmedia.jpg",
+  image: "/services-social-media.webp",
 });
 
 const socialMediaSchema = [

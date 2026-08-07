@@ -4,11 +4,13 @@ import { Metadata } from "next";
 const PAGE_URL = "https://www.karoldigital.co.uk/services/website-audits";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Website Health Audit & Conversion Analysis | Karol Digital",
+  title: "Website Audit — Speed, Security & Conversion",
   description:
-    "Expert website health audit to fix performance, SEO, UX and conversion issues. Improve conversions and recover lost revenue with actionable insights.",
+    "Website audits for UK businesses: speed, security, and conversion analysis. Spot template bloat, fix priorities, and recover lost enquiries.",
   url: PAGE_URL,
-  image: "/hero-page-banner.jpg",
+  image: "/services-website-audits.webp",
+  keywords:
+    "website audit UK, website speed audit, conversion audit, website security review, template bloat audit",
 });
 
 const websiteAuditSchema = {
@@ -40,9 +42,9 @@ const websiteAuditSchema = {
     {
       "@type": "Service",
       "name": "Website Health Audit",
-      "serviceType": "Website Performance & Conversion Optimisation",
+      "serviceType": "Website Speed, Security & Conversion Optimisation",
       "description":
-        "Comprehensive website health audit covering performance, UX, technical SEO, and conversion optimisation.",
+        "Comprehensive website audit covering speed, security, UX, technical SEO, and conversion optimisation.",
       "provider": {
         "@type": "ProfessionalService",
         "name": "Karol Digital",

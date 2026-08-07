@@ -19,13 +19,28 @@ const LEGACY_MARKDOWN_REDIRECTS: Array<{ match: RegExp; destination: string }> =
   },
 ];
 
-export function middleware(request: NextRequest) {
+const ADMIN_COOKIE_NAME = "kd_admin_session";
+
+export function proxy(request: NextRequest) {
   const rawPath = request.nextUrl.pathname;
   const rawUrl = request.nextUrl.href;
 
   for (const rule of LEGACY_MARKDOWN_REDIRECTS) {
     if (rule.match.test(rawPath) || rule.match.test(rawUrl)) {
       return NextResponse.redirect(rule.destination, 308);
+    }
+  }
+
+  // Protect /admin/* except the login route (shared-secret session cookie)
+  if (rawPath.startsWith("/admin") && !rawPath.startsWith("/admin/login")) {
+    const expected = process.env.ADMIN_DASHBOARD_TOKEN;
+    const session = request.cookies.get(ADMIN_COOKIE_NAME)?.value;
+
+    if (!expected || !session || session !== expected) {
+      const loginUrl = request.nextUrl.clone();
+      loginUrl.pathname = "/admin/login";
+      loginUrl.search = "";
+      return NextResponse.redirect(loginUrl);
     }
   }
 

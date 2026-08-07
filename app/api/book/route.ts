@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { persistPublicLead } from "@/lib/persist-lead";
+import {
+  buildAdminNotificationEmail,
+  buildUserConfirmationEmail,
+} from "@/lib/email-templates";
 
 async function verifyCaptcha(token: string): Promise<boolean> {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
@@ -56,22 +61,47 @@ export async function POST(req: Request) {
       .filter(Boolean)
       .join("\n\n");
 
-    const { error } = await resend.emails.send({
-      from: "info@karoldigital.co.uk",
-      to: "info@karoldigital.co.uk",
-      subject: `New Lead: ${service} - ${name}`,
-      text: `You have a new booking request!
-
-Name: ${name}
-Email: ${email}
-${phone ? `Phone: ${phone}` : ""}
-Service: ${service}
-
-Message:
-${fullMessage || "(No additional details provided)"}`,
+    const userEmail = buildUserConfirmationEmail({
+      name: String(name),
+      contextLabel: String(service),
+    });
+    const adminEmail = buildAdminNotificationEmail({
+      name: String(name),
+      email: String(email),
+      phone: phone ? String(phone) : null,
+      source: "Book a call",
+      service: String(service),
+      message: fullMessage || null,
     });
 
-    if (error) throw error;
+    const [{ error: adminError }, { error: userError }] = await Promise.all([
+      resend.emails.send({
+        from: "Karol Digital <info@karoldigital.co.uk>",
+        to: "info@karoldigital.co.uk",
+        replyTo: String(email),
+        subject: adminEmail.subject,
+        text: adminEmail.text,
+        html: adminEmail.html,
+      }),
+      resend.emails.send({
+        from: "Karol Digital <info@karoldigital.co.uk>",
+        to: String(email),
+        subject: userEmail.subject,
+        text: userEmail.text,
+        html: userEmail.html,
+      }),
+    ]);
+
+    if (adminError) throw adminError;
+    if (userError) throw userError;
+
+    await persistPublicLead({
+      name: String(name),
+      email: String(email),
+      phone: phone ? String(phone) : null,
+      serviceOfInterest: String(service),
+      message: fullMessage || null,
+    });
 
     return NextResponse.json({ success: true });
   } catch (error: unknown) {

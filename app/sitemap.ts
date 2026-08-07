@@ -65,6 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "digital-marketing",
     "social-media",
     "ai-logo-design",
+    "custom-mobile-applications",
     "small-business-web-design-london",
   ].map((service) => ({
     url: `${baseUrl}/services/${service}`,

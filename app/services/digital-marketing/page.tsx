@@ -64,8 +64,8 @@ export default function DigitalMarketingPage() {
 
               {/* IMAGE */}
               <Image
-                src="/service-marketing.jpg"
-                alt="Digital Marketing Strategy Illustration"
+                src="/services-digital-marketing.webp"
+                alt="Digital marketing strategy and growth systems for UK small businesses"
                 width={900}
                 height={600}
                 loading="lazy"

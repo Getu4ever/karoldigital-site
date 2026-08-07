@@ -5,7 +5,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Practical digital marketing support for small businesses. SEO guidance, email marketing setup, and actionable growth strategies to attract more customers online.",
   url: "https://www.karoldigital.co.uk/services/digital-marketing",
-  image: "/service-marketing.jpg",
+  image: "/services-digital-marketing.webp",
 });
 
 const digitalMarketingSchema = [

@@ -1,7 +1,7 @@
 export const homeFaqs = [
   {
     q: "Who do you work best with?",
-    a: "We work best with UK service businesses that rely on trust, clarity, and enquiries to win work. That includes legal, financial, immigration, construction, trade, and other service-led businesses that need a stronger website presence.",
+    a: "We work best with growing small businesses and service providers that need modern, fast digital systems—whether that is a high-performance website, a conversion-focused e-commerce store, or a custom mobile application that keeps customers coming back.",
   },
   {
     q: "Can you improve an existing website?",
@@ -9,7 +9,7 @@ export const homeFaqs = [
   },
   {
     q: "Do you build custom websites or use templates?",
-    a: "We focus on custom website design and development built around your business goals, messaging, and user journey. The aim is to create a website that feels credible, performs well, and supports long-term growth.",
+    a: "We build 100% custom digital solutions—no template bloat and no slow drag-and-drop platforms. Custom-built websites and apps load faster, stay more secure, and are shaped around how your business actually wins customers.",
   },
   {
     q: "What if I am not ready for a full website project?",
@@ -17,7 +17,7 @@ export const homeFaqs = [
   },
   {
     q: "How long does a typical project take?",
-    a: "Most website projects take between 3 and 6 weeks depending on the scope, number of pages, and feedback turnaround.",
+    a: "Most website projects take between 3 and 6 weeks depending on the scope, number of pages, and feedback turnaround. E-commerce and custom mobile app projects are scoped separately based on features and complexity.",
   },
 ] as const;
 
@@ -59,37 +59,44 @@ export const homeCaseStudies = [
     industryLabel: "Immigration services",
   },
   {
-    title: "Food Mama's Kitchen",
-    logo: "/logos/food-mama-kitchen.webp",
-    logoAlt: "Food Mama's Kitchen logo",
+    title: "British Solar Direct",
+    logo: "/logos/british-solar-direct-logo.png",
+    logoAlt: "British Solar Direct logo",
     description:
-      "A fast, well-structured website experience supported by strong page quality, clean metadata, and a clear technical foundation.",
-    industryHref: "/industries/catering-services",
-    industryLabel: "Catering services",
+      "A conversion-focused website for Nottingham’s turnkey home solar specialist—clear installation packages, fixed-quote journeys, and a fast path from enquiry to booking.",
+    industryHref: "https://www.britishsolardirect.co.uk/",
+    industryLabel: "Visit live site",
   },
 ] as const;
 
 export const homeServices = [
   {
-    title: "Web Design",
+    title: "High-Performance Websites",
     description:
-      "Professional website design for service businesses that need a stronger first impression, clearer messaging, and better conversion.",
+      "100% custom-built, modern digital solutions for growing small businesses—designed for clarity, credibility, and conversion, without template bloat or slow loading speeds.",
     href: "/services/web-design",
     cta: "Explore services",
   },
   {
     title: "Custom Web Development",
     description:
-      "Custom-built websites for businesses that need more flexibility, better performance, and a site tailored to how they actually sell.",
+      "Modern, fast websites built from the ground up around how you sell—eliminating drag-and-drop limitations so your site stays quick, flexible, and ready to grow.",
     href: "/services/custom-web-development",
     cta: "View development options",
   },
   {
-    title: "Next.js Development",
+    title: "High-Quality E-Commerce Websites",
     description:
-      "High-performance websites with a modern technical foundation, designed for speed, usability, and long-term scalability.",
-    href: "/services/nextjs-development",
-    cta: "Learn more",
+      "Conversion-focused online stores built for speed, secure payments, and a smooth checkout experience that turns browsers into paying customers.",
+    href: "/services/custom-web-development",
+    cta: "Explore e-commerce",
+  },
+  {
+    title: "Custom Mobile Applications",
+    description:
+      "High-quality mobile apps built to increase customer loyalty and sync seamlessly with your business systems—so your website and app work as one.",
+    href: "/services/custom-mobile-applications",
+    cta: "Discuss your app",
   },
   {
     title: "Website Audits",
@@ -109,19 +116,19 @@ export const homeServices = [
 
 export const homeDifference = [
   {
-    title: "Clear positioning",
+    title: "Lightning-fast performance",
     description:
-      "Visitors should quickly understand what you do, who you help, and why your business is the right fit.",
+      "Custom-built websites and apps load faster than template platforms—so visitors stay engaged and search engines reward your speed.",
   },
   {
-    title: "Faster trust-building",
+    title: "Rock-solid security",
     description:
-      "Better branding, stronger presentation, and a cleaner user experience help your business feel more credible from the first few seconds.",
+      "Modern custom builds avoid the plugin bloat and weak spots common in template sites, giving your business a safer digital foundation.",
   },
   {
-    title: "Better enquiry flow",
+    title: "Unified enquiry systems",
     description:
-      "Clearer calls-to-action, stronger hierarchy, and less friction make it easier for the right people to get in touch.",
+      "Clearer calls-to-action and shared modern databases mean your website and mobile app can work together—so leads and customers flow into one place.",
   },
 ] as const;
 

@@ -3,11 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = generateSEOMetadata({
-  title: "Custom Web Development | Karol Digital",
+  title: "Custom Web Development | Bespoke Systems",
   description:
-    "Expert custom web development services. We build high-performance, secure, and scalable web applications tailored to your unique business workflows.",
+    "Bespoke web systems engineered from scratch for small businesses — lightning-fast, secure, and built for e-commerce, portals, and scalable growth.",
   url: "https://www.karoldigital.co.uk/services/custom-web-development",
-  image: "/service-custom-dev.jpg",
+  image: "/services-custom-web-development.webp",
+  keywords:
+    "custom web development UK, bespoke web systems, high-performance e-commerce websites, custom portals for small business",
 });
 
 const customDevSchema = [
@@ -25,7 +27,7 @@ const customDevSchema = [
     "@type": "Service",
     "name": "Custom Web Development",
     "serviceType": "Bespoke Web Application Development",
-    "description": "High-performance, secure, and custom-coded digital applications tailored to specific business goals.",
+    "description": "High-performance, secure, custom-coded digital systems — including e-commerce and portals — engineered for specific business goals.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Karol Digital",

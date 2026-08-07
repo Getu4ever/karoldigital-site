@@ -5,11 +5,13 @@ import { Metadata } from "next";
 const PAGE_URL = "https://www.karoldigital.co.uk/services/web-design";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Professional Web Design Services | Karol Digital",
+  title: "High-Performance Web Design UK | Custom Websites",
   description:
-    "Expert web design services for UK service businesses. Built for trust, performance, and lead generation. Move beyond basic templates today.",
+    "Premium custom-built websites for UK small businesses. Modern, fast, conversion-focused, and engineered from scratch without template bloat.",
   url: PAGE_URL,
-  image: "/web-design-services.webp", // Ensure this image exists
+  image: "/services-web-design.webp",
+  keywords:
+    "high-performance web design UK, custom websites for small business, conversion-focused websites, premium web design UK",
 });
 
 const webDesignSchema = [
@@ -40,8 +42,8 @@ const webDesignSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Professional Web Design Services",
-    "description": "High-impact web design for UK service businesses focused on trust, clarity, and conversion.",
+    "name": "High-Performance Custom Web Design",
+    "description": "Premium custom-built websites for UK small businesses — modern, fast, secure, and conversion-focused.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Karol Digital",

@@ -1,0 +1,39 @@
+// prisma/schema.prisma
+// Karol Digital — Vercel Postgres (carol-digital-db) via Prisma ORM
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// Pipeline status values (exact strings stored in Postgres)
+enum LeadStatus {
+  New_Lead             @map("New Lead")
+  Scheduled            @map("Scheduled")
+  Deposit_Paid         @map("Deposit Paid")
+  Project_In_Progress  @map("Project In Progress")
+  Project_Completed    @map("Project Completed")
+
+  @@map("LeadStatus")
+}
+
+model Lead {
+  id                String     @id @default(cuid())
+  name              String
+  email             String
+  company           String?
+  phone             String?
+  serviceOfInterest String?
+  message           String?    @db.Text
+  status            LeadStatus @default(New_Lead)
+  customNotes       String?    @db.Text
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([email])
+}

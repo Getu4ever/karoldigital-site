@@ -11,7 +11,7 @@ export default function WebsiteAuditPage() {
       <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24 pb-12">
         <Image
           src="/hero-page-banner.jpg"
-          alt="Website Health Audit"
+          alt="Website audit for speed, security, and conversion"
           fill
           priority
           className="object-cover brightness-[0.4]"
@@ -22,8 +22,8 @@ export default function WebsiteAuditPage() {
             <span className="text-brand-gold-muted">Health Audit</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-            Identify what is hurting trust, speed, visibility, and conversions — then fix it in
-            the right order.
+            Uncover what is holding back speed, security, and conversions — including
+            template bloat and weak user journeys — then fix it in the right order.
           </p>
         </div>
       </section>
@@ -54,26 +54,35 @@ export default function WebsiteAuditPage() {
           </h2>
 
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            A website health audit is a structured review of your site&apos;s technical performance,
-            user experience, SEO foundations, and conversion path. It shows why visitors are not
-            enquiring and what to fix first.
+            A website health audit is a structured review of your site&apos;s speed,
+            security posture, user experience, SEO foundations, and conversion path. It shows
+            why visitors are not enquiring and what to fix first.
           </p>
 
           <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-            Most underperforming websites have fixable issues hidden beneath the surface — slow
-            load times, unclear messaging, weak calls-to-action, or poor mobile usability. An audit
-            turns those problems into a practical improvement plan.
+            Most underperforming websites carry hidden drag — slow load times from template
+            bloat, unclear messaging, weak calls-to-action, or fragile security. An audit
+            turns those problems into a practical, prioritised improvement plan.
           </p>
+
+          <div className="relative h-[320px] md:h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl mb-10">
+            <Image
+              src="/services-website-audits.webp"
+              alt="Website health audit for speed, security, and conversion performance"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           <div className="grid gap-6">
             {[
               {
-                title: "Technical Performance",
-                desc: "Load speed, rendering stability, and core technical issues that affect user experience.",
+                title: "Speed & Technical Performance",
+                desc: "Load speed, stability, and excess weight that slow visitors down — including common template and plugin bloat.",
               },
               {
-                title: "User Experience (UX)",
-                desc: "Friction points in the user journey that stop visitors from taking action.",
+                title: "Security & Reliability",
+                desc: "Risks that undermine trust: outdated setups, weak protections, and fragile foundations.",
               },
               {
                 title: "SEO Health",
@@ -99,11 +108,11 @@ export default function WebsiteAuditPage() {
           <h2 className="text-3xl font-bold text-[#102f35] mb-6">What the audit covers</h2>
 
           <ul className="list-disc pl-6 text-lg text-gray-700 space-y-3 mb-10">
-            <li>Technical performance and page speed analysis</li>
+            <li>Speed and technical performance analysis</li>
+            <li>Security and reliability review</li>
             <li>SEO structure, indexing, and crawlability review</li>
             <li>User experience and conversion path evaluation</li>
             <li>Mobile responsiveness and accessibility testing</li>
-            <li>Analytics and behavioural data interpretation</li>
           </ul>
 
           <p className="text-lg text-gray-700 leading-relaxed">

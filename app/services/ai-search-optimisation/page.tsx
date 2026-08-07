@@ -38,7 +38,7 @@ const pillars = [
       "SEO content briefs generated from your services and audience",
       "Topic clusters tied to real service and industry pages",
       "On-page SEO structure: titles, FAQs, internal links",
-      "Sanity CMS workflow so updates stay easy after launch",
+      "Modern secure content systems so updates stay easy after launch",
     ],
   },
   {
@@ -156,6 +156,15 @@ export default function AiSearchOptimisationPage() {
             engine optimisation), content systems, interactive lead magnets, and
             analytics so UK service businesses stay findable and measurable.
           </p>
+
+          <div className="relative h-[320px] md:h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl mt-10">
+            <Image
+              src="/services-ai-search-optimisation.webp"
+              alt="AI search optimisation and GEO systems for UK service businesses"
+              fill
+              className="object-cover"
+            />
+          </div>
         </section>
 
         <section className="pb-8 px-6 md:px-12 max-w-5xl mx-auto">

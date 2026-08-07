@@ -19,7 +19,7 @@ export default function LondonSmallBusinessWebDesignPage() {
 >
   <Image
     src="/hero-page-banner.jpg"
-    alt="Elite London small business web design agency"
+    alt="High-performance custom web engineering for London businesses"
     fill
     priority
     className="object-cover brightness-[0.5]"
@@ -27,24 +27,24 @@ export default function LondonSmallBusinessWebDesignPage() {
 
   <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
     <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
-      Bespoke London Web Development Agency
+      High-Performance Web Engineering · London
     </span>
 
     <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
-      Elite Web Design for{" "}
+      Custom Web Engineering for{" "}
       <br className="hidden sm:inline" />
       <span className="text-brand-gold-muted">London Small Businesses</span>
     </h1>
 
     <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 text-gray-200 leading-relaxed font-medium">
-      Ultra-fast, conversion-focused websites engineered for London’s competitive 
-      landscape — built to dominate local search results and transform your digital 
+      Ultra-fast, conversion-focused websites engineered for London&apos;s competitive
+      landscape — built to dominate local search results and transform your digital
       traffic into high-value client inquiries.
     </p>
 
     <p className="text-xs sm:text-sm text-gray-300 mb-8 max-w-md">
-      Professional, Next.js-powered digital experiences for growing London enterprises 
-      that demand speed, security, and measurable growth.
+      Premium, custom-built digital experiences for growing London enterprises
+      that demand speed, rock-solid security, and measurable growth.
     </p>
 
     <Link
@@ -75,7 +75,7 @@ export default function LondonSmallBusinessWebDesignPage() {
             </li>
             <li className="text-gray-400">/</li>
             <li className="text-[#102f35] font-semibold">
-              London Small Business Web Design
+              London Custom Web Engineering
             </li>
           </ol>
         </nav>
@@ -90,16 +90,16 @@ export default function LondonSmallBusinessWebDesignPage() {
                   Based in London
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-6">
-                  Stop Losing High-Value Regional Leads to Outdated Templates
+                  Stop Losing High-Value Regional Leads to Template Bloat
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                  The London B2B market is fiercely competitive. If your website is built on a bloated WordPress setup or a basic DIY template, your mobile speed suffers and potential clients will bounce straight back to the search results page within seconds.
+                  The London B2B market is fiercely competitive. If your website is weighed down by heavy plugins, bloated templates, or a fragile low-tier setup, your mobile speed suffers and potential clients bounce back to the search results within seconds.
                 </p>
               </div>
 
               <div className="space-y-6 text-gray-700 text-base leading-relaxed">
                 <p>
-                  At Karol Digital, we build tailored, high-performance websites for ambitious local firms. By eliminating heavy plugins and writing pure, lightweight React code, we ensure your brand delivers an unmatched user experience that wins customer trust immediately.
+                  At Karol Digital, we build tailored, high-performance websites for ambitious local firms. By eliminating unnecessary weight and engineering lean, custom systems from scratch, we ensure your brand delivers an unmatched user experience that wins customer trust immediately.
                 </p>
 
                 {/* Local Client Validation Box */}
@@ -119,8 +119,8 @@ export default function LondonSmallBusinessWebDesignPage() {
             {/* Image Column */}
             <div className="relative h-[400px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
               <Image
-                src="/workspace-design.png"
-                alt="Bespoke London small business web development agency"
+                src="/services-london-web-engineering.webp"
+                alt="High-performance custom web engineering for London small businesses"
                 fill
                 className="object-cover"
               />
@@ -133,7 +133,7 @@ export default function LondonSmallBusinessWebDesignPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-[#102f35] mb-4">
-                Why Local Growth Starts with Elite Technical Code
+                Why Local Growth Starts with Elite Performance
               </h2>
               <p className="text-gray-600">
                 We bridge the gap between abstract design principles and actual commercial lead acquisition metrics.
@@ -146,7 +146,7 @@ export default function LondonSmallBusinessWebDesignPage() {
                   Advanced Local SEO Setup
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  We program regional structured schema data and high-intent local metadata directly into your Next.js build. This gives your business the ultimate visibility boost on Google Maps and regional search blocks.
+                  We embed regional structured data and high-intent local metadata directly into your custom build. This gives your business a stronger visibility boost on Google Maps and regional search blocks.
                 </p>
               </div>
 
@@ -164,7 +164,7 @@ export default function LondonSmallBusinessWebDesignPage() {
                   Sub-2 Second Mobile Speeds
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  With the majority of London business searches occurring on mobile devices on the go, our server-side rendering architecture means pages load instantly — capturing leads before they change their minds.
+                  With the majority of London business searches occurring on mobile devices on the go, our performance-first engineering means pages load instantly — capturing leads before they change their minds.
                 </p>
               </div>
             </div>
@@ -213,21 +213,21 @@ export default function LondonSmallBusinessWebDesignPage() {
           </div>
         </section>
 
-        {/* === ADDITIONAL SEO CONTENT: WHY LONDON BUSINESSES NEED NEXT.JS === */}
+        {/* === ADDITIONAL SEO CONTENT: WHY LONDON BUSINESSES NEED HIGH PERFORMANCE === */}
         <section className="py-20 px-6 md:px-12 bg-white border-t border-gray-100">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-[#102f35] mb-8 text-center">
-              Why London’s Competitive Market Demands Bespoke Performance
+              Why London&apos;s Competitive Market Demands Bespoke Performance
             </h2>
             <div className="prose prose-lg text-gray-700 mx-auto">
               <p>
-                In a city where attention spans are short and competition is everywhere, a template-based website is a liability. London enterprises require <strong>high-performance, search-optimized infrastructure</strong> to stand out. At Karol Digital, we move beyond the limitations of standard CMS platforms by leveraging <strong>Next.js and React</strong>, providing you with a lightning-fast, highly secure, and SEO-dominant foundation.
+                In a city where attention spans are short and competition is everywhere, a template-based website is a liability. London enterprises require <strong>high-performance, search-optimised infrastructure</strong> to stand out. At Karol Digital, we move beyond the limitations of bloated platforms by engineering <strong>custom systems from scratch</strong> — giving you a lightning-fast, highly secure, and conversion-focused foundation.
               </p>
               <p>
-                Our <strong>London-centric SEO approach</strong> ensures your business isn't just visible — it's dominant. We map your site to local search intent, integrating specific borough-based keywords and location-aware schema markup. This strategy helps your business capture high-intent traffic, turning searchers into booked appointments and long-term clients.
+                Our <strong>London-centric SEO approach</strong> ensures your business isn&apos;t just visible — it&apos;s dominant. We map your site to local search intent, integrating specific borough-based keywords and location-aware structured data. This strategy helps your business capture high-intent traffic, turning searchers into booked appointments and long-term clients.
               </p>
               <p>
-                Whether you are looking for <strong>small business web design in London</strong>, regional SEO optimization, or a complete digital brand overhaul, we provide the technical expertise to ensure your website is a powerful engine for commercial growth.
+                Whether you are looking for <strong>high-performance custom web engineering in London</strong>, regional SEO optimisation, or a complete digital brand overhaul, we provide the expertise to ensure your website is a powerful engine for commercial growth.
               </p>
             </div>
           </div>

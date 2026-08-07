@@ -14,7 +14,7 @@ export default function WebDesignPage() {
         
 <section className="relative min-h-[80vh] flex items-center justify-center text-center text-white pt-24 pb-12">          <Image
             src="/hero-page-banner.jpg"
-            alt="Professional Web Design Services"
+            alt="High-performance custom websites for small businesses"
             fill
             priority
             className="object-cover brightness-[0.5]"
@@ -28,18 +28,18 @@ export default function WebDesignPage() {
               transition={{ duration: 0.6 }}
               className="text-5xl md:text-6xl font-bold mb-6"
             >
-              Professional Web Design{" "}
-              <span className="text-brand-gold-muted">— Built for Growth, Performance & Trust</span>
+              High-Performance Custom Websites{" "}
+              <span className="text-brand-gold-muted">— Built for Growth, Speed & Trust</span>
             </motion.h1>
 
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-4">
-              We design high-impact websites built for growth — credible, authoritative,
-              and conversion-ready — engineered to support long-term performance in
-              competitive digital markets.
+              Premium custom-built websites for small businesses — modern, fast, and
+              conversion-focused — engineered from scratch without template bloat so
+              every page supports growth and trust.
             </p>
             <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto">
-              Ideal for UK service businesses and SMEs who are ready to move beyond
-              basic templates and turn their website into a reliable source of enquiries.
+              Ideal for UK service businesses and SMEs who want a high-performance
+              website that turns visitors into qualified enquiries.
             </p>
           </div>
         </section>
@@ -67,7 +67,7 @@ export default function WebDesignPage() {
             <li className="text-gray-400">/</li>
 
             <li className="text-[#102f35] font-semibold">
-              Web Design
+              High-Performance Web Design
             </li>
           </ol>
         </nav>
@@ -79,13 +79,13 @@ export default function WebDesignPage() {
             <div>
               <div className="max-w-5xl mb-10">
                 <h2 className="text-4xl font-bold text-[#102f35] mb-8">
-                  Web Design That Goes Beyond Visual Appeal
+                  Custom Websites That Go Beyond Visual Appeal
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  At Karol Digital, web design is not treated as a cosmetic exercise.
-                  Every website we create is built with a clear strategic purpose —
-                  to communicate value, build trust, guide user behaviour, and support
-                  measurable business objectives.
+                  At Karol Digital, every website is a bespoke system — not a cosmetic
+                  exercise. We engineer high-performance sites with a clear strategic
+                  purpose: communicate value, build trust, guide user behaviour, and
+                  support measurable business objectives.
                 </p>
               </div>
 
@@ -94,20 +94,20 @@ export default function WebDesignPage() {
                   Your website is often the first meaningful interaction a potential
                   customer has with your brand. In seconds, visitors decide whether
                   they trust your business, understand your offer, and feel confident
-                  enough to engage further. Poor design, slow performance, or unclear
+                  enough to engage further. Slow load times, weak security, or unclear
                   messaging can silently cost you opportunities every single day.
                 </p>
 
                 <p>
-                  Our approach to web design combines strategic planning, user-centred
-                  design principles, and modern development standards. We focus on
-                  clarity, usability, and performance to ensure that your website
-                  functions as a powerful business asset rather than a static brochure.
+                  Our approach combines strategic planning, user-centred design, and
+                  rock-solid engineering. We focus on clarity, usability, and speed so
+                  your website functions as a powerful business asset — custom-built
+                  from scratch without the drag of template-heavy platforms.
                 </p>
 
                 <p>
-                  Whether you&apos;re refreshing an outdated website or starting from
-                  scratch, we align design decisions with your sales process, marketing
+                  Whether you&apos;re refreshing an outdated site or starting from
+                  scratch, we align every decision with your sales process, marketing
                   activity, and long-term positioning — so your website actively helps
                   you win more of the right clients.
                 </p>
@@ -117,8 +117,8 @@ export default function WebDesignPage() {
             {/* Image Column */}
             <div className="relative h-[360px] md:h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/web-design-services.webp"
-                alt="High-performance web design by Karol Digital"
+                src="/services-web-design.webp"
+                alt="High-performance custom website design for growing small businesses"
                 fill
                 className="object-cover"
               />
@@ -131,7 +131,7 @@ export default function WebDesignPage() {
           <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-[#411b3f] mb-4">
-                Strategy-Driven Design
+                Conversion-Focused Design
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 We design with intent. Layouts, content structure, and user flows
@@ -142,23 +142,23 @@ export default function WebDesignPage() {
 
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-[#411b3f] mb-4">
-                Performance &amp; Accessibility
+                Speed, Security &amp; Accessibility
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Fast load times, mobile optimisation, and accessibility best
-                practices are baked into every project. This ensures a smooth
-                experience for users and improved visibility in search engines.
+                Lightning-fast load times, rock-solid security, mobile optimisation,
+                and accessibility best practices are baked into every project —
+                for a smooth experience and stronger search visibility.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-[#411b3f] mb-4">
-                Scalable Architecture
+                Built to Scale
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Your website is built to grow with your business. From simple
-                brochure sites to advanced digital systems, our solutions are
-                designed with scalability and future expansion in mind.
+                Your website is engineered to grow with your business. From polished
+                service sites to advanced digital systems, every build is designed
+                for long-term performance and future expansion.
               </p>
             </div>
           </div>
@@ -168,11 +168,11 @@ export default function WebDesignPage() {
         <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
           <div className="max-w-5xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold text-[#102f35] mb-8">
-              Our Web Design Process
+              Our Custom Website Process
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               A structured and transparent process ensures clarity, efficiency,
-              and results at every stage of your project.
+              and high-performance results at every stage of your project.
             </p>
           </div>
 
@@ -198,9 +198,9 @@ export default function WebDesignPage() {
             <div className="p-6 border-l-4 border-[#102f35]">
               <h4 className="text-xl font-bold mb-3">Development</h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Clean, modern code brings the design to life, focusing on speed,
-                security, and technical excellence. We build with maintainability
-                in mind so updates are easier later on.
+                Clean, modern engineering brings the design to life — focusing on
+                speed, security, and long-term maintainability so updates stay
+                simple as your business grows.
               </p>
             </div>
 
@@ -219,11 +219,11 @@ export default function WebDesignPage() {
         <section className="bg-[#102f35] py-20 px-6 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-6">
-              Ready to Build a Website That Works for Your Business?
+              Ready to Build a High-Performance Website for Your Business?
             </h2>
             <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-              Explore our structured packages and find the solution that aligns
-              with your business goals, growth stage, and budget.
+              Explore our structured packages and find the custom solution that
+              aligns with your business goals and growth stage.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

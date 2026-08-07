@@ -20,8 +20,9 @@ import {
   Scale,
   SearchCheck,
   ShieldCheck,
+  ShoppingBag,
+  Smartphone,
   Sparkles,
-  Target,
   Zap,
 } from "lucide-react";
 import {
@@ -52,11 +53,12 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
 const serviceIcons: LucideIcon[] = [
   LayoutTemplate,
   Code2,
-  Zap,
+  ShoppingBag,
+  Smartphone,
   SearchCheck,
   Bot,
 ];
-const differenceIcons: LucideIcon[] = [Target, ShieldCheck, GitBranch];
+const differenceIcons: LucideIcon[] = [Zap, ShieldCheck, GitBranch];
 const industryIcons: LucideIcon[] = [Landmark, Scale, HardHat];
 
 const statItems = [
@@ -79,7 +81,7 @@ export default function HomePageClient() {
         >
           <Image
             src="/home-banner03.png"
-            alt="Web design for UK service businesses"
+            alt="High-performance web and app development for growing small businesses"
             fill
             priority
             className="object-cover brightness-[0.45]"
@@ -93,17 +95,17 @@ export default function HomePageClient() {
           <div className="relative z-20 w-full px-6 md:px-10">
             <div className="mx-auto max-w-5xl text-center">
               <p className="mb-5 inline-flex rounded-full border border-brand-gold-muted/40 bg-[#102f35]/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-muted shadow-md backdrop-blur-md md:text-sm">
-                Web design for UK service businesses
+                High-Performance Web &amp; App Development
               </p>
 
               <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
-                High-performance websites built to turn
+                High-performance websites and applications built to turn
                 <span className="text-brand-gold-muted"> more visitors into qualified enquiries</span>
               </h1>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200 md:text-2xl">
-                Custom web design and development for businesses that need clearer messaging,
-                stronger credibility, faster load times, and a better flow of leads.
+                Modern, fast, and high-quality websites, e-commerce stores, and custom mobile
+                applications tailored for growing small businesses.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -124,8 +126,8 @@ export default function HomePageClient() {
               </div>
 
               <p className="mx-auto mt-6 max-w-2xl text-sm text-gray-300">
-                Built for service businesses that want a website to look credible, load fast,
-                and help the right people get in touch.
+                Built for small businesses and service providers that need digital solutions to
+                look credible, load fast, and help the right people get in touch—or check out.
               </p>
             </div>
           </div>
@@ -137,24 +139,23 @@ export default function HomePageClient() {
             <div>
               <SectionEyebrow>Why it matters</SectionEyebrow>
               <h2 className="mb-8 text-4xl font-bold leading-tight text-[#102f35] md:text-5xl">
-                If your website is not generating enquiries,
+                Custom-built beats template builders
                 <br />
-                it is not doing its job
+                when growth is the goal
               </h2>
 
               <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                Many UK service businesses have a traffic problem, but most have a conversion problem.
-                We focus on building <strong>high-performance websites</strong> that do more than just exist—they are engineered to turn <strong>more visitors into qualified enquiries</strong>.
+                Template platforms and drag-and-drop builders are easy to start with—but they often leave small businesses with slow pages, weak security, and messy enquiry flows.
+                We build <strong>high-performance websites and applications</strong> that turn <strong>more visitors into qualified enquiries and customers</strong>.
               </p>
 
               <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                Slow page speeds, vague messaging, and outdated design are quietly costing you leads.
-                Even when people are interested in your services, a lack of clarity stops them from taking action.
-                We transform these barriers into a seamless journey that builds trust and authority.
+                Custom code delivers lightning-fast speeds, rock-solid security, and a clearer path from first visit to contact or checkout.
+                No template bloat. No plugin overload. Just modern digital systems built around how your business actually wins work.
               </p>
 
               <p className="mb-8 text-lg leading-relaxed text-gray-700">
-                Karol Digital designs custom <strong>websites</strong> for service businesses that need better positioning, stronger trust signals, and a clearer path from a first visit to a <strong>qualified enquiry</strong>.
+                When you need both a website and a mobile app, we can connect them to the <strong>same modern database</strong>—so your customer data, enquiries, and operations stay unified instead of scattered across disconnected tools.
               </p>
 
               <Link
@@ -168,8 +169,8 @@ export default function HomePageClient() {
 
             <div className="flex flex-col gap-5">
               <Image
-                src="/karol-digital-home.WebP"
-                alt="Custom website design for UK service businesses"
+                src="/home-why-it-matters.webp"
+                alt="High-performance custom websites and mobile apps that sync together for growing small businesses"
                 width={640}
                 height={400}
                 className="w-full rounded-3xl shadow-2xl ring-1 ring-gray-200/80"
@@ -177,7 +178,7 @@ export default function HomePageClient() {
                 quality={82}
               />
               <p className="text-center text-sm text-gray-500">
-                Fast, modern websites designed around trust, clarity, and lead generation
+                Fast, modern websites and apps designed around trust, speed, and conversion
               </p>
             </div>
           </div>
@@ -204,12 +205,12 @@ export default function HomePageClient() {
             <div className="mb-12 text-center">
               <SectionEyebrow>What we offer</SectionEyebrow>
               <h2 className="mb-4 text-4xl font-bold text-[#102f35] md:text-5xl">
-                Website services built around growth
+                Digital services built around growth
               </h2>
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
-                From full website builds to audits and performance improvements, the focus is
-                always the same: a stronger website that helps your business win more of the
-                right enquiries.
+                From high-performance websites and conversion-focused e-commerce stores to custom
+                mobile applications and audits—the focus is always the same: modern digital
+                solutions that help your business win more of the right customers.
               </p>
             </div>
 
@@ -257,11 +258,11 @@ export default function HomePageClient() {
             <div className="mb-12 text-center">
               <SectionEyebrow>Our approach</SectionEyebrow>
               <h2 className="mb-4 text-4xl font-bold text-[#102f35] md:text-5xl">
-                Why service businesses choose Karol Digital
+                Why growing small businesses choose Karol Digital
               </h2>
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
-                The goal is not just to make your website look better. The goal is to make it
-                easier for the right people to trust you and get in touch.
+                The goal is not just a prettier site. It is a faster, safer, and more connected
+                digital system that makes it easier for the right people to trust you and take action.
               </p>
             </div>
 
@@ -367,6 +368,9 @@ export default function HomePageClient() {
                   </p>
                   <Link
                     href={study.industryHref}
+                    {...(study.industryHref.startsWith("http")
+                      ? { target: "_blank" as const, rel: "noopener noreferrer" }
+                      : {})}
                     className="inline-flex items-center gap-1 font-semibold text-[#102f35] hover:text-[#411b3f]"
                   >
                     {study.industryLabel}
@@ -383,7 +387,7 @@ export default function HomePageClient() {
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
             <div>
               <p className="text-2xl font-bold md:text-3xl">
-                Ready to turn your website into a lead generation asset?
+                Ready to turn your website—or app—into a growth asset?
               </p>
               <p className="mt-2 text-gray-200">
                 Free consultation. Clear advice. No pressure to commit.
@@ -505,12 +509,12 @@ export default function HomePageClient() {
         <section className="bg-[#102f35] px-6 py-24 text-center text-white">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              If your website should be bringing in better enquiries, start there
+              If your digital presence should be bringing in better enquiries, start there
             </h2>
 
             <p className="mb-10 text-lg text-gray-300">
-              Book a consultation if you need a new website, or request an audit if you want
-              to improve the one you already have.
+              Book a consultation if you need a high-performance website, e-commerce store, or
+              custom mobile app—or request an audit if you want to improve what you already have.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

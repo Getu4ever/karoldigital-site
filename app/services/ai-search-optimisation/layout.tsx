@@ -9,7 +9,7 @@ export const metadata: Metadata = generateSEOMetadata({
   description:
     "Get found in AI search engines with GEO, automated SEO content systems, interactive lead magnets, and analytics that track real enquiry progress.",
   url: PAGE_URL,
-  image: "/seo-cover.jpg",
+  image: "/services-ai-search-optimisation.webp",
   keywords:
     "AI search optimisation, GEO, generative engine optimisation, AI SEO UK, lead magnets, content automation",
 });

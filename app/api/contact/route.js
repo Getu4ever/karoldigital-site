@@ -1,4 +1,9 @@
 import nodemailer from "nodemailer";
+import { persistPublicLead } from "@/lib/persist-lead";
+import {
+  buildAdminNotificationEmail,
+  buildUserConfirmationEmail,
+} from "@/lib/email-templates";
 
 export async function POST(req) {
   try {
@@ -35,23 +40,26 @@ export async function POST(req) {
       },
     });
 
+    const userEmail = buildUserConfirmationEmail({
+      name,
+      contextLabel: "your project enquiry",
+    });
+    const adminEmail = buildAdminNotificationEmail({
+      name,
+      email,
+      phone,
+      source,
+      service: source,
+      message,
+    });
+
     /* 3. Send Emails */
     const customerMail = {
       from: `"Karol Digital" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: `We've received your inquiry, ${name}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: auto;">
-          <header style="border-bottom: 2px solid #d91e18; padding-bottom: 10px;">
-            <h2 style="color: #d91e18;">Karol Digital</h2>
-          </header>
-          <p>Hi ${name},</p>
-          <p>Thank you for reaching out. We have received your inquiry and are currently reviewing your project requirements. Our team will contact you within 24 hours.</p>
-          <footer style="font-size: 12px; color: #777; margin-top: 30px;">
-            <p>&copy; 2026 Karol Digital. All rights reserved.</p>
-          </footer>
-        </div>
-      `,
+      subject: userEmail.subject,
+      text: userEmail.text,
+      html: userEmail.html,
     };
 
     const adminMail = {
@@ -59,29 +67,21 @@ export async function POST(req) {
       to: "info@karoldigital.co.uk",
       cc: "getu4ever@gmail.com",
       replyTo: email,
-      subject: `New Web Inquiry: ${name} via ${source}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: auto;">
-          <header style="border-bottom: 2px solid #d91e18; padding-bottom: 10px;">
-             <h2 style="color: #d91e18;">New Lead Notification</h2>
-          </header>
-          <div style="background:#f9f9f9; padding:15px; border-radius:5px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-            <p><strong>Source:</strong> ${source}</p>
-            <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
-          </div>
-          <footer style="font-size: 12px; color: #777;">
-            <p>Internal Notification | Karol Digital</p>
-          </footer>
-        </div>
-      `,
+      subject: adminEmail.subject,
+      text: adminEmail.text,
+      html: adminEmail.html,
     };
 
     await Promise.all([
       transporter.sendMail(customerMail),
-      transporter.sendMail(adminMail)
+      transporter.sendMail(adminMail),
+      persistPublicLead({
+        name,
+        email,
+        phone,
+        serviceOfInterest: source || "Contact form",
+        message,
+      }),
     ]);
 
     return Response.json({ success: true });

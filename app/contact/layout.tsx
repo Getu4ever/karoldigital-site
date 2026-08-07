@@ -3,11 +3,14 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title: "Contact Karol Digital – Website Enquiries & Support",
+  title:
+    "Contact Karol Digital | Custom Web & App Development Inquiries",
   description:
-    "Contact Karol Digital about web design, website audits, or digital services for UK service businesses. Clear advice and a response within 24 hours.",
+    "Request a custom mobile app quote or bespoke small business web engineering London. Contact Karol Digital for high-performance websites, e-commerce platforms, and custom applications.",
   url: "https://www.karoldigital.co.uk/contact",
   image: "/hero-page-banner.jpg",
+  keywords:
+    "Contact Karol Digital, Custom Web & App Development Inquiries, Request a Custom Mobile App Quote, Bespoke Small Business Web Engineering London",
 });
 
 // Breadcrumb Schema

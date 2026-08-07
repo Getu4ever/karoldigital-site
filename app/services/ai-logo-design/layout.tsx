@@ -5,7 +5,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Fast, professional AI-assisted logo design and brand identity support for UK businesses. Get a polished visual identity without the long agency wait.",
   url: "https://www.karoldigital.co.uk/services/ai-logo-design",
-  image: "/service-ai-logo.jpg",
+  image: "/services-ai-logo-concepts.webp",
 });
 
 const aiLogoSchema = [

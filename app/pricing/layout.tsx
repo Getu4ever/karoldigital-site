@@ -3,24 +3,30 @@ import React from "react";
 import { homeTestimonials } from "@/lib/home-content";
 
 export const metadata: Metadata = {
-  title: "Website Pricing & Web Design Packages UK | Karol Digital",
-  // Shortened to ensure it fits within the recommended pixel width
+  title:
+    "High-Performance Web Development Pricing | Custom Mobile App Development Quotes | Karol Digital",
   description:
-    "Flexible website pricing for UK businesses. Choose from Growth Audits, Starter, Growth, Premium, or Enterprise web design solutions tailored to your needs.",
+    "High-performance web development pricing, custom mobile app development quotes, and conversion-focused e-commerce costs. Bespoke small business web engineering UK — 100% custom-built.",
+  keywords: [
+    "High-Performance Web Development Pricing",
+    "Custom Mobile App Development Quotes",
+    "Conversion-Focused E-Commerce Costs",
+    "Bespoke Small Business Web Engineering UK",
+  ],
   alternates: {
-    // Corrected format: provide the full string only
     canonical: "https://www.karoldigital.co.uk/pricing",
   },
   openGraph: {
-    title: "Flexible Website Pricing & Packages | Karol Digital",
+    title:
+      "High-Performance Web Development Pricing | Custom Mobile App Quotes | Karol Digital",
     description:
-      "Clear and affordable website pricing for UK businesses. Choose from Website Growth Audits, Starter, Growth, Premium, or Enterprise web design packages.",
+      "Premium pricing for custom websites, conversion-focused e-commerce platforms, and bespoke mobile applications for ambitious small businesses.",
     images: [
       {
         url: "https://www.karoldigital.co.uk/hero-page-banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Karol Digital Website Pricing",
+        alt: "Karol Digital High-Performance Web & App Pricing",
       },
     ],
   },
@@ -43,9 +49,9 @@ const pricingReviews = homeTestimonials.map(({ quote, author }) => ({
 const pricingServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Website Design & Digital Growth Services",
+  name: "High-Performance Web & Application Development Packages",
   description:
-    "Flexible web design and digital growth services for UK businesses, including Website Growth Audits, Starter, Growth, Premium, and Enterprise solutions.",
+    "Bespoke small business web engineering UK — high-performance custom websites, conversion-focused e-commerce platforms, and custom mobile applications.",
   brand: {
     "@type": "Brand",
     name: "Karol Digital",
@@ -63,51 +69,51 @@ const pricingServiceSchema = {
     priceCurrency: "GBP",
     lowPrice: "95",
     highPrice: "6000",
-    offerCount: "6",
+    offerCount: "7",
     offers: [
       {
         "@type": "Offer",
-        name: "Website Growth Audit",
+        name: "Website Performance Audit",
         price: "95",
         priceCurrency: "GBP",
         description:
-          "A practical review of your website covering messaging, structure, speed, SEO, and lead generation opportunities.",
+          "A practical review of your website covering speed, security signals, messaging, structure, and conversion opportunities.",
         url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
-        name: "Starter Lite Website Package",
-        price: "450",
+        name: "Professional Custom Build",
+        price: "1250",
         priceCurrency: "GBP",
         description:
-          "A lean 1-3 page professional website for new businesses or simple service offers, including mobile responsiveness, contact form, and basic SEO setup.",
+          "A modern, high-performance custom website engineered from scratch with zero template bloat, secure content management, and strong search visibility.",
         url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
-        name: "Starter Website Package",
-        price: "795",
+        name: "Core Growth Custom Build",
+        price: "1750",
         priceCurrency: "GBP",
         description:
-          "A professional 5-7 page website for local businesses and growing service brands, including CMS setup, responsive design, and core SEO setup.",
+          "A bespoke multi-page custom website with conversion-focused structure, performance tuning, and modern secure content management.",
         url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
         name: "Growth Website Package",
-        price: "1750",
+        price: "2450",
         priceCurrency: "GBP",
         description:
-          "A conversion-focused website package for businesses that need more enquiries, including conversion UX on key pages, priority on-page SEO, performance tuning, and lead capture systems.",
+          "Conversion-focused platforms with lightning-fast performance tuning, secure lead capture, and priority SEO for high-intent pages.",
         url: "https://www.karoldigital.co.uk/pricing",
       },
       {
         "@type": "Offer",
-        name: "Premium Website Package",
+        name: "Premium Website & E-Commerce Package",
         price: "3200",
         priceCurrency: "GBP",
         description:
-          "A complete digital growth system with branding, custom pages, advanced development, and conversion strategy for established brands ready to scale.",
+          "Conversion-focused modern e-commerce and growth systems with advanced custom features, branding, and secure data infrastructure.",
         url: "https://www.karoldigital.co.uk/pricing",
       },
       {
@@ -116,7 +122,15 @@ const pricingServiceSchema = {
         price: "6000",
         priceCurrency: "GBP",
         description:
-          "Custom enterprise websites and ecommerce systems with advanced integrations, CRM connectivity, payment systems, and high-level security.",
+          "Custom enterprise websites and conversion-focused ecommerce systems with advanced integrations, CRM connectivity, payment systems, and rock-solid security.",
+        url: "https://www.karoldigital.co.uk/pricing",
+      },
+      {
+        "@type": "Offer",
+        name: "Custom Mobile Applications",
+        priceCurrency: "GBP",
+        description:
+          "Custom iOS and Android app engineering for growing small businesses — modern, fast, secure, and seamlessly integrated with website and store systems. Custom scoped packaging.",
         url: "https://www.karoldigital.co.uk/pricing",
       },
     ],
@@ -140,4 +154,3 @@ export default function PricingLayout({
     </>
   );
 }
-//website updated

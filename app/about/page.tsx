@@ -32,9 +32,9 @@ export default function About() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              We build high-performance websites for UK service businesses that
-              want to look more credible, communicate more clearly, and generate
-              more qualified enquiries.
+              A high-performance technical partner for ambitious small
+              businesses—building modern, lightning-fast websites, conversion-focused
+              e-commerce platforms, and custom mobile applications from the ground up.
             </p>
           </div>
         </motion.section>
@@ -44,15 +44,15 @@ export default function About() {
           <section className="pt-20 pb-12 px-6 md:px-12 bg-white">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#102f35]">
-                Built for Service Businesses That Need More Than Just a Better-Looking Website
+                Built for Ambitious Small Businesses Ready to Move Beyond Templates
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg">
-                Your website is often the first impression people have of your
-                business. At Karol Digital, we believe that impression should
-                build trust quickly, explain your value clearly, and make it
-                easier for the right people to get in touch. Everything we
-                create is designed around real business goals - not vanity, not
-                unnecessary complexity, and not design for its own sake.
+                Restrictive, slow website templates hold growing businesses back.
+                At Karol Digital, we build 100% custom digital assets from scratch—
+                so your online presence delivers optimal speed, stronger conversion,
+                and long-term business value. We are not a standard web design agency;
+                we are the technical partner ambitious small businesses turn to when
+                they need systems that scale with them.
               </p>
             </div>
           </section>
@@ -70,29 +70,28 @@ export default function About() {
 
                 <p className="text-gray-700 leading-relaxed mb-6">
                   <strong>Karol Digital</strong> was built around a simple idea:
-                  UK service businesses should be able to access professional,
-                  high-performance web design without inflated agency pricing,
-                  vague strategy, or technical jargon that gets in the way.
+                  ambitious small businesses deserve a high-performance technical
+                  partner—not another agency selling slow templates, vague strategy,
+                  or jargon that gets in the way.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Too many businesses are held back by slow websites, unclear
-                  messaging, weak positioning, or outdated design that quietly
-                  costs them trust and enquiries. We set out to change that by
-                  building websites that are modern, fast, clear, and focused on
-                  conversion from the start.
+                  Too many businesses are held back by template platforms that feel
+                  limited, load slowly, and break when plugins conflict. We set out
+                  to change that by building 100% custom-built digital assets from
+                  scratch—modern, lightning-fast, and focused on conversion from day one.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  From legal, financial, and immigration firms to construction,
-                  local trades, and other service-led businesses, we help
-                  companies present themselves more credibly online and turn
-                  more visitors into genuine enquiries.
+                  Today we help small businesses and service providers scale with
+                  high-performing websites, high-quality e-commerce platforms, and
+                  custom mobile applications—digital systems designed to win trust,
+                  capture enquiries, and grow with the business.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  We believe good web design should do more than look polished.
-                  It should make your business easier to trust, easier to
+                  We believe custom digital assets should do more than look polished.
+                  They should make your business easier to trust, easier to
                   understand, and easier to choose.
                 </p>
 
@@ -107,8 +106,8 @@ export default function About() {
               {/* Image */}
               <div className="flex justify-center md:justify-end self-start">
                 <Image
-                  src="/karol-digital-about.jpg"
-                  alt="Karol Digital team and brand story"
+                  src="/about-our-story.webp"
+                  alt="Karol Digital — high-performance technical partner crafting custom digital assets for ambitious small businesses"
                   width={500}
                   height={400}
                   loading="lazy"
@@ -126,8 +125,8 @@ export default function About() {
               {/* Image */}
               <div className="flex justify-center">
                 <Image
-                  src="/karol-digital-about-02.jpg"
-                  alt="Karol Digital web design services"
+                  src="/about-what-we-do.webp"
+                  alt="Custom websites, conversion-focused e-commerce platforms, and mobile apps that sync together in real time"
                   width={550}
                   height={420}
                   loading="lazy"
@@ -142,37 +141,37 @@ export default function About() {
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  We design, build, and improve websites that help service
+                  We design and engineer custom digital assets that help small
                   businesses look credible and perform better online. That means
-                  clean design, strong mobile usability, fast loading times, and
-                  clear page structures that guide the right people toward
-                  making contact.
+                  lightning-fast speeds that keep visitors from bouncing, modern
+                  secure content systems that are easy to use, and clear journeys
+                  that guide people toward enquiry or checkout.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Whether you need a simpler launch website, a stronger
-                  service-led website, or a more advanced build with custom
-                  functionality, we shape the project around what your business
-                  actually needs - not a one-size-fits-all template.
+                  Because we write custom code rather than installing unstable
+                  third-party template plugins, our clients get safer, more robust
+                  systems that do not randomly break during updates—shaped around
+                  what your business actually needs, not a one-size-fits-all template.
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                   <li>
-                    <strong>High-performance website design:</strong> built to
-                    work smoothly across phones, tablets, and desktops.
+                    <strong>High-performing websites:</strong> 100% custom-built
+                    for speed, clarity, and conversion across phones, tablets, and desktops.
                   </li>
                   <li>
-                    <strong>WordPress or custom-built websites:</strong> based
-                    on your goals, growth stage, and the flexibility you need.
+                    <strong>High-quality e-commerce platforms:</strong>{" "}
+                    conversion-focused online stores with secure payments and a
+                    smooth path from browse to buy.
                   </li>
                   <li>
-                    <strong>Clearer positioning and stronger trust signals:</strong>{" "}
-                    helping visitors understand what you do and why they should
-                    choose you.
+                    <strong>Custom mobile applications:</strong> built to deepen
+                    customer loyalty and sync with your business systems.
                   </li>
                   <li>
-                    <strong>SEO and local visibility support:</strong> so the
-                    right people can find you and take action.
+                    <strong>Seamless shared databases:</strong> so your website,
+                    store, and mobile app stay connected and easy to manage.
                   </li>
                 </ul>
 
@@ -199,17 +198,17 @@ export default function About() {
                 {[
                   {
                     title: "Clarity",
-                    desc: "Visitors should quickly understand what you do, who you help, and why your business is the right fit. We value clear messaging over vague marketing language.",
+                    desc: "Visitors should quickly understand what you do, who you help, and why your business is the right fit. We value clear messaging—and modern, secure content systems that are easy for your team to use.",
                     icon: "🎯",
                   },
                   {
                     title: "Transparency",
-                    desc: "We believe in honest advice, clear pricing, and straightforward communication. No hidden extras, no inflated promises, and no unnecessary complexity.",
+                    desc: "We believe in honest advice, clear pricing, and straightforward communication. No hidden extras, no inflated promises, and no unstable template plugins that break without warning.",
                     icon: "🤝",
                   },
                   {
                     title: "Performance",
-                    desc: "A website should help your business move forward. We focus on practical decisions that improve trust, usability, visibility, and the quality of the enquiries you receive.",
+                    desc: "Lightning-fast speeds keep visitors from bouncing. Custom code keeps systems safer and more robust. We focus on practical decisions that improve trust, conversion, and long-term business value.",
                     icon: "🚀",
                   },
                 ].map((value) => (
@@ -233,12 +232,12 @@ export default function About() {
         <FadeIn>
           <section className="py-20 bg-gradient-to-r from-[#411b3f] via-[#513356] to-[#102f35] text-white text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready for a website that brings more of the right enquiries?
+              Ready for digital systems that help your business scale?
             </h2>
             <p className="text-lg mb-8 text-gray-100 max-w-2xl mx-auto">
-              If you need a website that looks credible, feels trustworthy, and
-              helps turn visitors into genuine enquiries, Karol Digital can help
-              you take the next step.
+              If you need a high-performing website, conversion-focused e-commerce
+              platform, or custom mobile application—built from scratch for speed,
+              security, and growth—Karol Digital can help you take the next step.
             </p>
             <Link
               href="/book"

@@ -20,6 +20,7 @@ import {
   Search,
   ArrowRight,
   Home,
+  Smartphone,
   Sparkles,
   Bot,
 } from "lucide-react";
@@ -49,8 +50,23 @@ export default function Header() {
   const servicesItems = [
     {
       href: "/services/web-design",
-      label: "Web Design",
+      label: "High-Performance Websites",
       icon: <Briefcase size={16} />,
+    },
+    {
+      href: "/services/custom-web-development",
+      label: "Custom Web Development",
+      icon: <Code2 size={16} />,
+    },
+    {
+      href: "/services/custom-mobile-applications",
+      label: "Custom Mobile Applications",
+      icon: <Smartphone size={16} />,
+    },
+    {
+      href: "/services/website-audits",
+      label: "Website Audits",
+      icon: <Search size={16} />,
     },
     {
       href: "/services/ai-search-optimisation",
@@ -61,16 +77,6 @@ export default function Header() {
       href: "/services/digital-marketing",
       label: "Digital Marketing",
       icon: <Sparkles size={16} />,
-    },
-    {
-      href: "/services/ai-logo-design",
-      label: "AI Logo Design",
-      icon: <Code2 size={16} />,
-    },
-    {
-      href: "/services/website-audits",
-      label: "Website Audits",
-      icon: <Search size={16} />,
     },
   ];
 
@@ -120,20 +126,33 @@ export default function Header() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/logo.WebP"
-            alt="Karol Digital logo"
-            width={100}
-            height={60}
-            priority
-            className="h-[60px]"
-            style={{ width: "auto" }}
-          />
-          <span className="text-xl md:text-2xl font-semibold text-white">
-            Karol <span className="text-brand-gold-soft">Digital</span>
-          </span>
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.WebP"
+              alt="Karol Digital logo"
+              width={100}
+              height={60}
+              priority
+              className="h-[60px]"
+              style={{ width: "auto" }}
+            />
+          </Link>
+          <div className="flex flex-col leading-tight">
+            <Link
+              href="/"
+              className="text-xl md:text-2xl font-semibold text-white"
+            >
+              Karol <span className="text-brand-gold-soft">Digital</span>
+            </Link>
+            <a
+              href="tel:+442081234567"
+              className="mt-0.5 text-[11px] md:text-xs font-medium tracking-wide text-white/80 hover:text-brand-gold-soft transition-colors"
+            >
+              020 8123 4567
+            </a>
+          </div>
+        </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           {menuItems.map((item) => {

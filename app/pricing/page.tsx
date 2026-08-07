@@ -15,6 +15,7 @@ interface PricingCardProps {
   highlighted?: boolean;
   servicePrefill?: string;
   fit?: string;
+  href?: string;
 }
 
 const PricingCard = ({
@@ -26,6 +27,7 @@ const PricingCard = ({
   highlighted = false,
   servicePrefill,
   fit,
+  href = "/book",
 }: PricingCardProps) => {
   return (
     <div
@@ -71,7 +73,7 @@ const PricingCard = ({
       </p>
 
       <Link
-        href="/book"
+        href={href}
         onClick={() => {
           if (servicePrefill) setBookServicePrefill(servicePrefill);
         }}
@@ -109,21 +111,19 @@ export default function PricingPage() {
 
           <div className="relative z-10 px-6">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">Flexible </span>
-              <span className="text-brand-gold-muted">Website Pricing</span>
+              <span className="text-white">High-Performance Website &amp; </span>
+              <span className="text-brand-gold-muted">Application Pricing</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Professional websites and digital growth support for UK service
-              businesses that want stronger credibility, clearer messaging, and
-              more enquiries without jumping straight into a huge upfront
-              investment.
+              Premium pricing for ambitious small businesses investing in modern,
+              high-quality digital assets—websites, conversion-focused stores, and
+              custom mobile applications built completely from scratch.
             </p>
 
             <p className="text-sm md:text-base text-gray-200 max-w-3xl mx-auto mt-4">
-              Start smaller if you need to. Scale when the business is ready.
-              Every package is designed to give you a clear next step, not lock
-              you into more than you need.
+              Every package is engineered without template bloat: fast, secure,
+              conversion-focused systems designed to grow with your business.
             </p>
           </div>
         </motion.section>
@@ -152,38 +152,38 @@ export default function PricingPage() {
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
                 <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f]">
-                  Pricing That Makes Sense
+                  Premium Value, Clear Investment
                 </span>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-[#102f35]">
-                  Start With What You Need, Not What You Don&apos;t
+                  High-Performance Website &amp; Application Pricing for Ambitious Small Businesses
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Not every business needs a full-scale custom build on day one.
-                  Some need a professional launch site. Others need a better
-                  conversion path, stronger messaging, clearer positioning, or a
-                  more reliable flow of enquiries.
+                  Ambitious small businesses deserve digital systems built to
+                  perform—not slow templates that limit growth. We invest our
+                  craft in modern, high-quality digital assets engineered
+                  completely from scratch, without template bloat.
                 </p>
 
                 <p className="text-gray-600 leading-relaxed">
-                  These packages are designed to give you a sensible starting
-                  point. If you are budget-conscious but still want quality,
-                  speed, and a site that helps your business grow, this page is
-                  built for you.
+                  These packages cover high-performance custom websites,
+                  conversion-focused e-commerce platforms, and bespoke mobile
+                  applications—each scoped for speed, security, and long-term
+                  business value.
                 </p>
 
                 <p className="text-gray-600 leading-relaxed">
                   We keep the process transparent, recommend the best-fit option
-                  honestly, and make sure you only pay for what will genuinely
-                  help your business move forward.
+                  honestly, and make sure every investment strengthens how your
+                  business wins customers online.
                 </p>
               </div>
 
               <div className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
                 <Image
-                  src="/strategic-web-development-visual.webp"
-                  alt="Karol Digital pricing and project planning"
+                  src="/pricing-strategic-planning.webp"
+                  alt="High-performance web and app pricing planning — custom websites and mobile applications for ambitious small businesses"
                   fill
                   className="object-cover"
                 />
@@ -196,24 +196,24 @@ export default function PricingPage() {
         <section className="py-20 px-6 md:px-12 bg-white border-b border-gray-100">
           <div className="max-w-5xl mx-auto text-center bg-gray-50 rounded-3xl p-10 md:p-14 border border-gray-100 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-widest text-[#411b3f] mb-3">
-              Not Ready for a Full Website Yet?
+              Clarity Before You Build
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-4">
-              Start With a Website Growth Audit
+              Start With a Website Performance Audit
             </h2>
 
             <p className="text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-              If you already have a site but are not getting enough enquiries,
-              this is the easiest place to start. We review your homepage,
-              messaging, structure, speed, trust signals, and conversion flow,
-              then give you practical, prioritised actions.
+              If your current site feels slow, unclear, or underperforming, we
+              review speed, security signals, messaging, structure, and
+              conversion flow—then give you prioritised actions toward a
+              high-performance custom rebuild.
             </p>
 
             <div className="inline-block bg-white px-8 py-5 rounded-2xl shadow-md border border-gray-100 mb-8">
               <p className="text-3xl font-bold text-[#102f35]">£95 - £195</p>
               <p className="text-sm text-gray-500 mt-1">
-                Ideal for businesses that want clarity before committing to a full build
+                Ideal for businesses that want a clear roadmap before investing in a custom build
               </p>
             </div>
 
@@ -238,56 +238,55 @@ export default function PricingPage() {
         <section className="py-24 px-6 md:px-12 bg-white">
           <div className="max-w-7xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-4">
-              Website Packages
+              Custom Website &amp; Application Packages
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Designed for different stages of business growth, with lower-risk
-              options for smaller budgets and scalable options when you are
-              ready to invest more.
+              Premium packages for ambitious small businesses—100% custom-built,
+              modern, fast, and engineered for conversion without template bloat.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6 max-w-7xl mx-auto">
             <PricingCard
-              title="Starter Lite"
-              desc="A lean professional site with a focused scope to keep costs down while still looking credible."
-              price="£450-£750"
-              fit="Best for new businesses or simple service offers"
+              title="Professional Custom Build"
+              desc="A modern, high-performance custom website engineered from scratch—fast, secure, and built for credibility from day one."
+              price="From £1,250"
+              fit="Best for ambitious small businesses ready for a premium custom foundation"
               features={[
-                "1-3 Pages",
-                "Mobile Responsive",
-                "Contact Form",
-                "Basic SEO Setup",
+                "100% custom code — zero template bloat",
+                "Modern, secure content management",
+                "Lightning-fast, mobile-ready performance",
+                "Built for high search engine visibility and speed",
               ]}
-              buttonText="Book Starter Lite Consultation"
-              servicePrefill="Starter Lite"
+              buttonText="Book Professional Build Consultation"
+              servicePrefill="Professional Custom Build"
             />
 
             <PricingCard
-              title="Starter"
-              desc="A stronger foundation for businesses ready to present themselves properly online."
-              price="From £795"
-              fit="Best for local businesses and growing service brands"
+              title="Core Growth Custom Build"
+              desc="A stronger bespoke foundation with conversion-focused structure, polished UX, and room to scale as enquiries grow."
+              price="From £1,750"
+              fit="Best for growing service brands that need more qualified enquiries"
               features={[
-                "5-7 Pages",
-                "CMS Setup",
-                "Mobile Responsive",
-                "Core SEO Setup",
+                "Bespoke multi-page custom architecture",
+                "Modern, secure content management",
+                "Conversion-focused page structure & CTAs",
+                "Performance tuning and core SEO foundation",
               ]}
-              buttonText="Book Starter Consultation"
-              servicePrefill="Starter"
+              buttonText="Book Core Growth Consultation"
+              servicePrefill="Core Growth Custom Build"
             />
 
             <PricingCard
               title="Growth"
-              desc="Built for businesses that need more enquiries — with conversion work scoped to your highest-impact pages."
-              price="From £1,750"
-              fit="Best for businesses already getting traffic"
+              desc="Conversion-focused, modern platforms for businesses ready to turn more visitors into customers—with lightning-fast performance and secure data setups."
+              price="From £2,450"
+              fit="Best for businesses already attracting traffic and ready to convert"
               features={[
-                "Conversion-Focused UX (Key Pages)",
-                "Priority On-page SEO (Core Pages)",
-                "Performance Tuning",
-                "Lead Capture System",
+                "Conversion-focused UX across key journeys",
+                "Lightning-fast performance tuning",
+                "Secure lead capture and data handling",
+                "Priority on-page SEO for high-intent pages",
               ]}
               buttonText="Book Growth Consultation"
               servicePrefill="Growth"
@@ -296,14 +295,14 @@ export default function PricingPage() {
 
             <PricingCard
               title="Premium"
-              desc="A full digital growth system with stronger branding, positioning, and custom functionality."
+              desc="A conversion-focused, modern e-commerce and growth system with advanced custom features, branding, and secure infrastructure."
               price="From £3,200"
-              fit="Best for established brands ready to scale"
+              fit="Best for established brands scaling online sales and enquiries"
               features={[
-                "Full Brand Identity",
-                "6-10+ Custom Pages",
-                "Advanced Custom Development",
-                "Conversion Strategy",
+                "Conversion-focused modern e-commerce capability",
+                "Advanced custom features engineered from scratch",
+                "Full brand identity and positioning system",
+                "Secure data setups and performance architecture",
               ]}
               buttonText="Book Premium Consultation"
               servicePrefill="Premium"
@@ -311,17 +310,33 @@ export default function PricingPage() {
 
             <PricingCard
               title="Enterprise"
-              desc="For complex ecommerce, custom systems, and advanced integrations."
+              desc="For complex conversion-focused e-commerce platforms, custom systems, and advanced integrations that need rock-solid security."
               price="Custom Quote"
-              fit="Best for advanced businesses with technical requirements"
+              fit="Best for advanced businesses with complex digital requirements"
               features={[
-                "Full Ecommerce / Shop",
-                "Payment Integration",
-                "CRM Integration",
-                "High-Level Security",
+                "Full conversion-focused e-commerce platform",
+                "Secure payment and CRM integrations",
+                "100% custom-coded systems — zero template bloat",
+                "Rock-solid security and scalable architecture",
               ]}
               buttonText="Request Enterprise Quote"
               servicePrefill="Enterprise"
+            />
+
+            <PricingCard
+              title="Custom Mobile Applications"
+              desc="High-quality iOS and Android apps engineered to deepen loyalty, streamline bookings, and keep customers coming back."
+              price="Custom Scoped"
+              fit="Best for growing businesses looking to increase customer loyalty, handle mobile bookings, and streamline user retention"
+              features={[
+                "Custom iOS & Android App Engineering",
+                "Modern, Incredibly Fast & Secure Performance",
+                "Seamless Integration (Website, Store, and Mobile App sync together perfectly in real-time)",
+                "Bespoke User Interface (UI) Design",
+              ]}
+              buttonText="Request Application Quote"
+              servicePrefill="Custom Mobile Applications"
+              href="/contact"
             />
           </div>
         </section>
@@ -334,9 +349,9 @@ export default function PricingPage() {
             </h3>
 
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Tell us about your business, budget, and goals, and we&apos;ll point
-              you toward the most sensible option - even if that means starting
-              smaller than you expected.
+              Tell us about your business goals and the digital systems you need—
+              website, e-commerce, or mobile app—and we&apos;ll recommend the
+              strongest custom-built package for your growth stage.
             </p>
 
             <Link
@@ -356,8 +371,9 @@ export default function PricingPage() {
                 Trusted by Growing UK Businesses
               </h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Businesses come to Karol Digital when they want a site that
-                looks professional, feels fast, and supports better enquiries.
+                Businesses come to Karol Digital when they want modern,
+                high-performance digital systems that feel fast, look premium,
+                and convert more of the right customers.
               </p>
             </div>
 
@@ -431,8 +447,8 @@ export default function PricingPage() {
         {/* TRUST BANNER */}
         <section className="bg-[#102f35] py-8 text-center text-white">
           <p className="px-6 font-medium">
-            All projects include 14-day post-launch support, CMS training, and
-            performance-focused deployment.
+            All projects include 14-day post-launch support, modern content-system
+            training, and performance-focused deployment.
           </p>
         </section>
 
@@ -442,21 +458,22 @@ export default function PricingPage() {
             Website Maintenance
           </h2>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
-            Ongoing support options for businesses that want peace of mind
-            without hiring a full-time developer.
+            Proactive support for custom-coded infrastructure—security,
+            dependency optimisation, and ongoing feature development without
+            hiring a full-time developer.
           </p>
 
           <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
             <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] text-center">
               <p className="text-2xl font-bold mb-4">Basic</p>
               <ul className="text-gray-600 space-y-2 mb-6">
-                <li>Fixing bugs</li>
-                <li>Minor edits</li>
-                <li>Dependency updates</li>
+                <li>Proactive security monitoring</li>
+                <li>Minor content and UI edits</li>
+                <li>Dependency optimisation &amp; updates</li>
               </ul>
               <p className="font-bold text-xl mb-2">£150-£250/mo</p>
               <p className="text-sm text-gray-500 mb-6">
-                Best for stable brochure-style websites
+                Best for stable modern custom websites
               </p>
               <Link
                 href="/book"
@@ -470,12 +487,12 @@ export default function PricingPage() {
               <p className="text-2xl font-bold mb-4">Premium</p>
               <ul className="text-gray-600 space-y-2 mb-6">
                 <li>Everything in Basic</li>
-                <li>New Feature Development</li>
-                <li>Priority Response</li>
+                <li>Custom feature development</li>
+                <li>Priority response for custom systems</li>
               </ul>
               <p className="font-bold text-xl mb-2">£250-£350/mo</p>
               <p className="text-sm text-gray-500 mb-6">
-                Best for growing websites that need regular updates
+                Best for growing custom websites and apps that need regular enhancements
               </p>
               <Link
                 href="/book"
@@ -488,14 +505,14 @@ export default function PricingPage() {
             <div className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#102f35] text-center">
               <p className="text-2xl font-bold mb-4">Custom</p>
               <ul className="text-gray-600 space-y-2 mb-6">
-                <li>Major redesigns</li>
+                <li>Major redesigns of custom systems</li>
                 <li>Feature development</li>
-                <li>Troubleshooting</li>
+                <li>Advanced troubleshooting</li>
               </ul>
               <p className="font-bold text-xl mb-2">From £150/update</p>
               <p className="text-sm text-gray-500 mb-6">
                 Small tasks billed in 1-hour minimum blocks — best for one-off
-                work without a monthly plan
+                work on custom-coded systems without a monthly plan
               </p>
               <Link
                 href="/book"
@@ -524,7 +541,7 @@ export default function PricingPage() {
               {[
                 {
                   title: "Paid Advertising",
-                  desc: "Google Ads and paid social campaigns designed to capture qualified traffic without wasting budget.",
+                  desc: "Google Ads and paid social campaigns designed to capture qualified traffic efficiently.",
                   price: "From £200/mo",
                   priceNote: "Management fee only — ad spend billed separately",
                 },
@@ -624,8 +641,8 @@ export default function PricingPage() {
                   <li className="flex items-start gap-3">
                     <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#411b3f]" aria-hidden="true" />
                     <span>
-                      <strong>CMS Training:</strong> So you can update content
-                      yourself with confidence.
+                      <strong>Modern Content Training:</strong> So you can update
+                      your secure content system yourself with confidence.
                     </span>
                   </li>
                 </ul>
@@ -642,8 +659,8 @@ export default function PricingPage() {
                 How It Works
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                A clear, low-friction process designed to help you move forward
-                without confusion or pressure.
+                A clear process designed to help you invest confidently in
+                high-performance custom digital systems.
               </p>
             </div>
 
@@ -651,15 +668,15 @@ export default function PricingPage() {
               {[
                 {
                   title: "Discovery Call",
-                  desc: "We discuss your business, budget, current site, and what success looks like.",
+                  desc: "We discuss your business, current digital assets, and what success looks like for your growth goals.",
                 },
                 {
                   title: "Best-Fit Recommendation",
-                  desc: "You get a clear recommendation based on what you actually need, not the most expensive option.",
+                  desc: "You get a clear recommendation based on the custom systems you need—website, store, or mobile app.",
                 },
                 {
                   title: "Build & Refine",
-                  desc: "We build the project with clear checkpoints, feedback rounds, and transparent communication.",
+                  desc: "We engineer your project from scratch with clear checkpoints, feedback rounds, and transparent communication.",
                 },
                 {
                   title: "Launch & Improve",
@@ -691,7 +708,7 @@ export default function PricingPage() {
               </h3>
 
               <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-                Share a few details about your business and budget, and you&apos;ll
+                Share a few details about your business and goals, and you&apos;ll
                 get a practical recommendation with clear pricing and no
                 pressure.
               </p>
@@ -717,19 +734,19 @@ export default function PricingPage() {
               {[
                 {
                   q: "Do I need to choose a package before contacting you?",
-                  a: "No. If you're unsure, just send your goals and approximate budget. We’ll recommend the most suitable option, even if that means starting smaller.",
+                  a: "No. Share your goals and the digital systems you need—custom website, e-commerce, or mobile app—and we’ll recommend the strongest fit.",
                 },
                 {
-                  q: "Can I start with a smaller package and upgrade later?",
-                  a: "Yes. That’s exactly how many businesses begin. We can start with a leaner site or audit, then expand once you’re ready.",
+                  q: "Can I start with one package and expand later?",
+                  a: "Yes. Many businesses begin with a Professional or Core Growth custom build, then add e-commerce capability or a mobile app as they scale.",
                 },
                 {
                   q: "How long does a project take?",
-                  a: "Most projects take between 3 and 6 weeks depending on scope, feedback speed, and whether extra integrations are needed.",
+                  a: "Most custom website projects take between 3 and 6 weeks depending on scope and feedback speed. E-commerce and mobile app projects are scoped separately.",
                 },
                 {
                   q: "Can I update content myself?",
-                  a: "Yes. We provide a user-friendly CMS setup and training so you can manage content without relying on a developer.",
+                  a: "Yes. We provide a modern, secure content system and training so you can manage updates without relying on a developer for everyday changes.",
                 },
               ].map((item, i) => (
                 <details key={i} className="border rounded-lg p-6 bg-white">
