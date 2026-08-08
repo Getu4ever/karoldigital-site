@@ -5,26 +5,7 @@ import { setBookServicePrefill } from "@/lib/book-prefill";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import type { LucideIcon } from "lucide-react";
-import {
-  ArrowRight,
-  Bot,
-  Calendar,
-  Code2,
-  Gauge,
-  GitBranch,
-  HardHat,
-  Landmark,
-  LayoutTemplate,
-  MapPin,
-  Scale,
-  SearchCheck,
-  ShieldCheck,
-  ShoppingBag,
-  Smartphone,
-  Sparkles,
-  Zap,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import {
   homeCaseStudies,
   homeDifference,
@@ -34,14 +15,6 @@ import {
   homeTestimonials,
 } from "@/lib/home-content";
 
-function IconBadge({ icon: Icon }: { icon: LucideIcon }) {
-  return (
-    <div className="mx-auto mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-brand-gold-soft shadow-sm ring-1 ring-[#102f35]/10">
-      <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
-    </div>
-  );
-}
-
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
     <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#411b3f]">
@@ -50,22 +23,89 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-const serviceIcons: LucideIcon[] = [
-  LayoutTemplate,
-  Code2,
-  ShoppingBag,
-  Smartphone,
-  SearchCheck,
-  Bot,
-];
-const differenceIcons: LucideIcon[] = [Zap, ShieldCheck, GitBranch];
-const industryIcons: LucideIcon[] = [Landmark, Scale, HardHat];
+function SectionImage({
+  src,
+  alt,
+  size = "md",
+}: {
+  src: string;
+  alt: string;
+  size?: "sm" | "md" | "lg";
+}) {
+  const sizeClass =
+    size === "sm"
+      ? "h-14 w-14"
+      : size === "lg"
+        ? "mb-5 aspect-[4/3] w-full"
+        : "mb-5 aspect-square w-full max-w-[11rem]";
+
+  return (
+    <div
+      className={`relative mx-auto overflow-hidden rounded-2xl ring-1 ring-black/5 ${sizeClass}`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover"
+        sizes={
+          size === "sm"
+            ? "56px"
+            : size === "lg"
+              ? "(max-width: 768px) 100vw, 360px"
+              : "(max-width: 768px) 50vw, 176px"
+        }
+      />
+    </div>
+  );
+}
+
+const serviceImages = [
+  { src: "/home/sections/svc-websites.jpg", alt: "High-performance custom website design" },
+  { src: "/home/sections/svc-web-dev.jpg", alt: "Custom web development and engineering" },
+  { src: "/home/sections/svc-ecommerce.jpg", alt: "Conversion-focused e-commerce storefront" },
+  { src: "/home/sections/svc-mobile.jpg", alt: "Custom mobile application development" },
+  { src: "/home/sections/svc-audits.jpg", alt: "Website performance and growth audit" },
+  { src: "/home/sections/svc-ai-search.jpg", alt: "AI search optimisation and visibility" },
+] as const;
+
+const differenceImages = [
+  { src: "/home/sections/diff-speed.jpg", alt: "Lightning-fast website performance" },
+  { src: "/home/sections/diff-security.jpg", alt: "Secure custom digital systems" },
+  { src: "/home/sections/diff-unified.jpg", alt: "Unified website and app enquiry systems" },
+] as const;
+
+const industryImages = [
+  { src: "/home/sections/ind-financial.jpg", alt: "Financial services website design" },
+  { src: "/home/sections/ind-immigration.jpg", alt: "Immigration law firm website design" },
+  { src: "/home/sections/ind-construction.jpg", alt: "Construction and trades website design" },
+] as const;
 
 const statItems = [
-  { value: "98+", label: "PageSpeed scores on core pages", icon: Gauge },
-  { value: "3-6", label: "Weeks for most website projects", icon: Calendar },
-  { value: "100%", label: "Custom-built, no template bloat", icon: Sparkles },
-  { value: "UK", label: "Focused on service-led businesses", icon: MapPin },
+  {
+    value: "98+",
+    label: "PageSpeed scores on core pages",
+    image: "/home/sections/stat-speed.jpg",
+    alt: "Website performance speed",
+  },
+  {
+    value: "3-6",
+    label: "Weeks for most website projects",
+    image: "/home/sections/stat-timeline.jpg",
+    alt: "Project delivery timeline",
+  },
+  {
+    value: "100%",
+    label: "Custom-built, no template bloat",
+    image: "/home/sections/stat-custom.jpg",
+    alt: "Fully custom-built digital solutions",
+  },
+  {
+    value: "UK",
+    label: "Focused on service-led businesses",
+    image: "/home/sections/stat-uk.jpg",
+    alt: "UK service business focus",
+  },
 ] as const;
 
 export default function HomePageClient() {
@@ -187,10 +227,10 @@ export default function HomePageClient() {
         {/* STATS */}
         <section className="bg-[#102f35] py-16 text-white">
           <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
-            {statItems.map(({ value, label, icon: Icon }) => (
+            {statItems.map(({ value, label, image, alt }) => (
               <div key={label} className="text-center">
-                <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-brand-gold-soft">
-                  <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
+                <div className="mx-auto mb-3">
+                  <SectionImage src={image} alt={alt} size="sm" />
                 </div>
                 <div className="text-5xl font-bold text-white">{value}</div>
                 <p className="mt-2 text-sm text-gray-300 md:text-base">{label}</p>
@@ -220,7 +260,11 @@ export default function HomePageClient() {
                   key={service.title}
                   className="group flex flex-col rounded-3xl border border-gray-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:shadow-lg"
                 >
-                  <IconBadge icon={serviceIcons[index] ?? SearchCheck} />
+                  <SectionImage
+                    src={serviceImages[index].src}
+                    alt={serviceImages[index].alt}
+                    size="lg"
+                  />
                   <p className="mb-4 text-2xl font-bold text-[#102f35]">{service.title}</p>
                   <p className="mb-6 flex-grow leading-relaxed text-gray-700">
                     {service.description}
@@ -272,7 +316,10 @@ export default function HomePageClient() {
                   key={item.title}
                   className="rounded-3xl border border-gray-100 bg-gray-50 p-8 text-center shadow-sm transition hover:border-[#102f35]/15 hover:shadow-md"
                 >
-                  <IconBadge icon={differenceIcons[index]} />
+                  <SectionImage
+                    src={differenceImages[index].src}
+                    alt={differenceImages[index].alt}
+                  />
                   <p className="mb-4 text-2xl font-bold text-[#102f35]">{item.title}</p>
                   <p className="leading-relaxed text-gray-700">{item.description}</p>
                 </article>
@@ -301,7 +348,11 @@ export default function HomePageClient() {
                   key={industry.title}
                   className="flex flex-col rounded-3xl border border-gray-200 bg-white p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[#102f35]/20 hover:shadow-lg"
                 >
-                  <IconBadge icon={industryIcons[index]} />
+                  <SectionImage
+                    src={industryImages[index].src}
+                    alt={industryImages[index].alt}
+                    size="lg"
+                  />
                   <p className="mb-3 text-2xl font-bold text-[#102f35]">{industry.title}</p>
                   <p className="mb-6 flex-grow text-gray-700">{industry.description}</p>
                   <Link
