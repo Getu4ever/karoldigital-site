@@ -17,7 +17,7 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/about.png"
             alt="About Karol Digital"
             fill
             priority

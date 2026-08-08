@@ -7,7 +7,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Read Karol Digital’s Disclaimer outlining accuracy, liability limits, external links and the use of information on our website.",
   url: "https://www.karoldigital.co.uk/disclaimer",
-  image: "/hero-page-banner.jpg",
+  image: "/heroes/legal.png",
 });
 
 export default function DisclaimerLayout({

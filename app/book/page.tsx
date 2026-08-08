@@ -225,7 +225,7 @@ export default function BookingPage() {
         className="relative h-[60vh] flex items-center justify-center text-center text-white"
       >
         <Image
-          src="/hero-page-banner.jpg"
+          src="/heroes/book.png"
           alt="Book a free website consultation with Karol Digital"
           fill
           priority

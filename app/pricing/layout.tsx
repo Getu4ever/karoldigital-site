@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Premium pricing for custom websites, conversion-focused e-commerce platforms, and bespoke mobile applications for ambitious small businesses.",
     images: [
       {
-        url: "https://www.karoldigital.co.uk/hero-page-banner.jpg",
+        url: "https://www.karoldigital.co.uk/heroes/pricing.png",
         width: 1200,
         height: 630,
         alt: "Karol Digital High-Performance Web & App Pricing",

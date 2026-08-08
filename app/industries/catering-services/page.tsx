@@ -50,7 +50,7 @@ export default function CateringWebDesign() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/hero-page-banner.jpg" 
+            src="/heroes/catering-services.png" 
             alt="Premium Web Design for Catering and Hospitality Businesses"
             fill
             priority

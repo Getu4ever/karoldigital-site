@@ -50,7 +50,7 @@ export default function BuildersWebDesign() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/building-services.png"
             alt="Custom Web Design and Local SEO Architecture for Builders and Contractors UK"
             fill
             priority

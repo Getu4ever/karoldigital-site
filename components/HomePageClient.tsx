@@ -80,17 +80,17 @@ export default function HomePageClient() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/home-banner03.png"
+            src="/heroes/home.png"
             alt="High-performance web and app development for growing small businesses"
             fill
             priority
-            className="object-cover brightness-[0.45]"
+            className="object-cover brightness-[0.55]"
             sizes="100vw"
             quality={82}
             style={{ objectPosition: "center" }}
           />
 
-          <div className="absolute inset-0 bg-gradient-to-br from-[#102f35]/75 via-[#102f35]/45 to-[#411b3f]/55" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#102f35]/65 via-[#102f35]/35 to-[#411b3f]/45" />
 
           <div className="relative z-20 w-full px-6 md:px-10">
             <div className="mx-auto max-w-5xl text-center">

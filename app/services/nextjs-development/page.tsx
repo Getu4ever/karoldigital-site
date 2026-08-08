@@ -10,7 +10,7 @@ export default function NextJSDevelopmentPage() {
       <main className="min-h-screen bg-white text-gray-900">
         {/* HERO SECTION */}
 <section className="relative min-h-[80vh] flex items-center justify-center text-center text-white pt-24 pb-12">          <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/nextjs-development.png"
             alt="High-performance website engineering for growing businesses"
             fill
             priority

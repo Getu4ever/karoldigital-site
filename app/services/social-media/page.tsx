@@ -17,7 +17,7 @@ export default function SocialMediaPage() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <Image
-          src="/hero-page-banner.jpg"
+          src="/heroes/social-media.png"
           alt="Social Media Setup UK"
           fill
           priority

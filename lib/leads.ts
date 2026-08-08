@@ -37,6 +37,12 @@ export function toLeadStatusLabel(enumValue: string): LeadStatusLabel {
   return LEAD_STATUS_LABEL[enumValue] ?? "New Lead";
 }
 
+/** Display label for Source / Channel — blank metadata → Direct Traffic */
+export function leadSourceLabel(sourceChannel: string | null | undefined): string {
+  const trimmed = (sourceChannel || "").trim();
+  return trimmed || "Direct Traffic";
+}
+
 export const PRO_FORMA_LINE_ITEMS = [
   "High-Performance Websites",
   "Custom Web Development & E-commerce",

@@ -12,13 +12,13 @@ export default function CustomMobileApplicationsPage() {
         {/* === HERO SECTION === */}
         <section className="relative min-h-[80vh] flex items-center justify-center text-center text-white pt-24 pb-12">
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/custom-mobile-applications.png"
             alt="Custom mobile app development UK for growing small businesses"
             fill
             priority
-            className="object-cover brightness-[0.5]"
+            className="object-cover brightness-[0.7]"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/25" />
 
           <div className="relative z-10 px-6 max-w-4xl">
             <motion.h1

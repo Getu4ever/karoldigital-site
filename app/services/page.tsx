@@ -172,7 +172,7 @@ export default function ServicesPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/services.png"
             alt="High-performance custom websites and digital services for UK businesses"
             fill
             priority

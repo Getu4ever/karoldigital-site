@@ -12,13 +12,13 @@ export default function CustomDevelopmentPage() {
         {/* === HERO SECTION === */}
         <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24">
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/custom-web-development.png"
             alt="Custom web development and bespoke digital systems"
             fill
             priority
-            className="object-cover brightness-[0.4]"
+            className="object-cover brightness-[0.7]"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/25" />
 
           <div className="relative z-10 px-6 max-w-4xl">
             <motion.h1

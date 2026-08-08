@@ -7,7 +7,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Read Karol Digital’s Privacy Policy to understand how we collect, use, store and protect your personal information in compliance with GDPR.",
   url: "https://www.karoldigital.co.uk/privacy-policy",
-  image: "/hero-page-banner.jpg",
+  image: "/heroes/legal.png",
 });
 
 export default function PrivacyPolicyLayout({

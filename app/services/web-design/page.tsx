@@ -13,7 +13,7 @@ export default function WebDesignPage() {
         {/* === HERO SECTION === */}
         
 <section className="relative min-h-[80vh] flex items-center justify-center text-center text-white pt-24 pb-12">          <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/web-design.png"
             alt="High-performance custom websites for small businesses"
             fill
             priority

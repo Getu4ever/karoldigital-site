@@ -19,14 +19,14 @@ export default function DigitalMarketingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/digital-marketing.png"
             alt="Digital Marketing Services UK"
             fill
             priority
-            className="object-cover brightness-[0.5]"
+            className="object-cover brightness-[0.7]"
           />
 
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/25" />
 
           <div className="relative z-10 px-6 max-w-3xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">

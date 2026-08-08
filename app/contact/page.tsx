@@ -265,7 +265,7 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/contact.png"
             alt="Contact Karol Digital"
             fill
             priority

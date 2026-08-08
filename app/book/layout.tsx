@@ -5,7 +5,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Book a free consultation with Karol Digital. Discuss web design, development, audits, or marketing for your UK service business.",
   url: "https://www.karoldigital.co.uk/book",
-  image: "/hero-page-banner.jpg",
+  image: "/heroes/book.png",
 });
 
 const bookBreadcrumbJsonLd = {

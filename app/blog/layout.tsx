@@ -7,7 +7,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Read practical guides on web design, SEO, conversion, and digital growth for UK service businesses. Updated regularly by Karol Digital.",
   url: "https://www.karoldigital.co.uk/blog",
-  image: "/hero-page-banner.jpg",
+  image: "/heroes/blog.png",
 });
 
 // Breadcrumb Schema for Blog home

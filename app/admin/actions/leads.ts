@@ -13,6 +13,7 @@ export type LeadDTO = {
   company: string | null;
   phone: string | null;
   serviceOfInterest: string | null;
+  sourceChannel: string | null;
   message: string | null;
   status: LeadStatusLabel;
   customNotes: string | null;
@@ -27,6 +28,7 @@ function mapLead(lead: {
   company: string | null;
   phone: string | null;
   serviceOfInterest: string | null;
+  sourceChannel: string | null;
   message: string | null;
   status: LeadStatus;
   customNotes: string | null;
@@ -48,6 +50,7 @@ function mapLead(lead: {
     company: lead.company,
     phone: lead.phone,
     serviceOfInterest: lead.serviceOfInterest,
+    sourceChannel: lead.sourceChannel,
     message: lead.message,
     status: statusMap[lead.status],
     customNotes: lead.customNotes,
@@ -70,6 +73,7 @@ export async function createLeadAction(input: {
   company?: string;
   phone?: string;
   serviceOfInterest?: string;
+  sourceChannel?: string;
   message?: string;
 }) {
   await requireAdmin();
@@ -80,6 +84,7 @@ export async function createLeadAction(input: {
       company: input.company?.trim() || null,
       phone: input.phone?.trim() || null,
       serviceOfInterest: input.serviceOfInterest?.trim() || null,
+      sourceChannel: input.sourceChannel?.trim() || null,
       message: input.message?.trim() || null,
       status: "New_Lead",
     },

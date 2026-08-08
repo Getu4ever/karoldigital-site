@@ -1,18 +1,30 @@
 "use client";
 
+import { useMemo } from "react";
 import type { LeadDTO } from "@/app/admin/actions/leads";
 import { adminLogoutAction } from "@/app/admin/actions/auth";
 import type { GaDashboardMetrics } from "@/lib/ga4";
 import AnalyticsPanel from "@/app/admin/components/AnalyticsPanel";
 import ChangePasswordPanel from "@/app/admin/components/ChangePasswordPanel";
 import LeadsTable from "@/app/admin/components/LeadsTable";
+import SystemStatusBanner from "@/app/admin/components/SystemStatusBanner";
 
 type Props = {
   leads: LeadDTO[];
   metrics: GaDashboardMetrics;
+  dbConnected: boolean;
 };
 
-export default function AdminDashboardClient({ leads, metrics }: Props) {
+export default function AdminDashboardClient({
+  leads,
+  metrics,
+  dbConnected,
+}: Props) {
+  const newLeadCount = useMemo(
+    () => leads.filter((lead) => lead.status === "New Lead").length,
+    [leads]
+  );
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#f9fafb] to-[#f1f5f9] text-gray-900">
       <header className="border-b border-gray-200 bg-[#102f35] text-white">
@@ -38,6 +50,10 @@ export default function AdminDashboardClient({ leads, metrics }: Props) {
       </header>
 
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10">
+        <SystemStatusBanner
+          dbConnected={dbConnected}
+          newLeadCount={newLeadCount}
+        />
         <LeadsTable initialLeads={leads} />
         <AnalyticsPanel metrics={metrics} />
       </div>

@@ -18,7 +18,7 @@ export default function LondonSmallBusinessWebDesignPage() {
   transition={{ duration: 1 }}
 >
   <Image
-    src="/hero-page-banner.jpg"
+    src="/heroes/london-web-design.png"
     alt="High-performance custom web engineering for London businesses"
     fill
     priority

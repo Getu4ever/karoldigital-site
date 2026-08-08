@@ -71,13 +71,13 @@ export default function IndustriesPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/industries.png"
             alt="Industry-focused web design for UK service businesses"
             fill
             priority
-            className="object-cover brightness-[0.5]"
+            className="object-cover brightness-[0.7]"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/25" />
 
           <div className="relative z-10 px-6 max-w-4xl">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold-muted mb-4">

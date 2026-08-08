@@ -44,7 +44,7 @@ export default async function NewsPage() {
          ====================================================== */}
       <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white pt-8 md:pt-4 hero-fade-in">
         <Image
-          src="/hero-page-banner.jpg"
+          src="/heroes/news.png"
           alt="Latest News and Updates"
           fill
           priority

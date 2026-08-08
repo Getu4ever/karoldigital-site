@@ -13,7 +13,7 @@ export default async function BlogIndexPage() {
       <main className="min-h-screen bg-white text-gray-900">
         <section className="relative flex min-h-[60vh] items-center justify-center pt-8 text-center text-white md:pt-4">
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/blog.png"
             alt="Karol Digital Blog — web design and lead generation for UK service businesses"
             fill
             priority

@@ -57,7 +57,7 @@ export default function FinanceWebDesign() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/hero-page-banner.jpg" 
+            src="/heroes/financial-services.png" 
             alt="Financial Services Corporate Website Design and Architecture"
             fill
             priority

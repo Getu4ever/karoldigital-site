@@ -22,7 +22,7 @@ export async function generateMetadata({
       post.subtitle ||
       "Practical web design and lead generation advice for UK service businesses."
   );
-  const image = post.seoImageUrl || post.imageUrl || "/hero-page-banner.jpg";
+  const image = post.seoImageUrl || post.imageUrl || "/heroes/blog-post.png";
   const url = `https://www.karoldigital.co.uk/blog/${slug}`;
 
   return generateSEOMetadata({

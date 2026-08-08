@@ -8,7 +8,7 @@ import {
   updateLeadNotesAction,
   updateLeadStatusAction,
 } from "@/app/admin/actions/leads";
-import { LEAD_STATUS_VALUES } from "@/lib/leads";
+import { LEAD_STATUS_VALUES, leadSourceLabel } from "@/lib/leads";
 import { BOOK_SERVICE_OPTIONS } from "@/lib/recaptcha";
 import ProFormaInvoicePanel from "@/app/admin/components/ProFormaInvoicePanel";
 
@@ -139,6 +139,7 @@ export default function LeadsTable({ initialLeads }: Props) {
             <tr>
               <th className="px-4 py-3 font-semibold">Lead</th>
               <th className="px-4 py-3 font-semibold">Service</th>
+              <th className="px-4 py-3 font-semibold">Source / Channel</th>
               <th className="px-4 py-3 font-semibold">Status</th>
               <th className="px-4 py-3 font-semibold">Notes</th>
               <th className="px-4 py-3 font-semibold">Created</th>
@@ -148,7 +149,7 @@ export default function LeadsTable({ initialLeads }: Props) {
           <tbody>
             {visible.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-4 py-10 text-center text-gray-500">
+                <td colSpan={7} className="px-4 py-10 text-center text-gray-500">
                   No leads yet. New enquiries will appear here after DB sync.
                 </td>
               </tr>
@@ -247,6 +248,11 @@ export default function LeadsTable({ initialLeads }: Props) {
                       ) : (
                         lead.serviceOfInterest || "—"
                       )}
+                    </td>
+                    <td className="px-4 py-3 align-top">
+                      <span className="inline-flex rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-medium text-[#102f35]">
+                        {leadSourceLabel(lead.sourceChannel)}
+                      </span>
                     </td>
                     <td className="px-4 py-3 align-top">
                       <select
@@ -349,7 +355,7 @@ export default function LeadsTable({ initialLeads }: Props) {
                   </tr>
                   {invoiceOpen ? (
                     <tr className="border-t border-gray-50">
-                      <td colSpan={6} className="bg-gray-50/80 px-4 py-4">
+                      <td colSpan={7} className="bg-gray-50/80 px-4 py-4">
                         <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
                           <ProFormaInvoicePanel lead={lead} embedded />
                         </div>

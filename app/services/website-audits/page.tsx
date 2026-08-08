@@ -10,7 +10,7 @@ export default function WebsiteAuditPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24 pb-12">
         <Image
-          src="/hero-page-banner.jpg"
+          src="/heroes/website-audits.png"
           alt="Website audit for speed, security, and conversion"
           fill
           priority

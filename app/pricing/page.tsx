@@ -101,7 +101,7 @@ export default function PricingPage() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/pricing.png"
             alt="Karol Digital Pricing"
             fill
             priority

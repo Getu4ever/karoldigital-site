@@ -27,6 +27,8 @@ model Lead {
   company           String?
   phone             String?
   serviceOfInterest String?
+  /// How the lead found us (e.g. Online Search, Social Media, Book a call)
+  sourceChannel     String?
   message           String?    @db.Text
   status            LeadStatus @default(New_Lead)
   customNotes       String?    @db.Text

@@ -7,7 +7,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Review Karol Digital’s Terms of Service, including usage guidelines, payments, intellectual property, and liability information.",
   url: "https://www.karoldigital.co.uk/terms-of-service",
-  image: "/hero-page-banner.jpg",
+  image: "/heroes/legal.png",
 });
 
 export default function TermsLayout({ children }: { children: React.ReactNode }) {

@@ -486,9 +486,16 @@ export default function ProFormaInvoicePanel({
   const appliedLoyalty = includeLoyalty ? loyaltyDiscount : 0;
   const appliedDeposit = includeDeposit ? paidDeposit : 0;
 
+  const totalInfrastructureCost =
+    appliedDomain + appliedHosting + appliedInfra;
   const agreedTotal =
-    packageTotal + appliedDomain + appliedHosting + appliedInfra;
+    packageTotal + totalInfrastructureCost;
   const balanceDue = Math.max(0, agreedTotal - appliedLoyalty - appliedDeposit);
+
+  const estimatedGrossMarginPct: number =
+    agreedTotal > 0
+      ? ((agreedTotal - totalInfrastructureCost) / agreedTotal) * 100
+      : 0;
 
   const missingTickedValues =
     (includeDomain && domainFee <= 0) ||
@@ -812,28 +819,62 @@ export default function ProFormaInvoicePanel({
             </div>
           ))}
         </div>
-        <div className="mt-4 space-y-1 text-sm text-[#102f35]">
-          <p>
-            Project total:{" "}
-            <span className="font-semibold">{formatMoney(agreedTotal)}</span>
-          </p>
-          {includeLoyalty ? (
+        <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+          <div className="space-y-1 text-sm text-[#102f35]">
             <p>
-              Loyalty &amp; Friendship Discount:{" "}
-              <span className="font-semibold">
-                {formatMoney(loyaltyDiscount)}
-              </span>
+              Project total:{" "}
+              <span className="font-semibold">{formatMoney(agreedTotal)}</span>
             </p>
-          ) : null}
-          {includeDeposit ? (
-            <p>
-              Paid deposit:{" "}
-              <span className="font-semibold">{formatMoney(paidDeposit)}</span>
+            {includeLoyalty ? (
+              <p>
+                Loyalty &amp; Friendship Discount:{" "}
+                <span className="font-semibold">
+                  {formatMoney(loyaltyDiscount)}
+                </span>
+              </p>
+            ) : null}
+            {includeDeposit ? (
+              <p>
+                Paid deposit:{" "}
+                <span className="font-semibold">{formatMoney(paidDeposit)}</span>
+              </p>
+            ) : null}
+            <p className="font-bold">
+              Balance due: {formatMoney(balanceDue)}
             </p>
-          ) : null}
-          <p className="font-bold">
-            Balance due: {formatMoney(balanceDue)}
-          </p>
+          </div>
+
+          <aside
+            className="w-full max-w-sm rounded-xl border border-dashed border-[#411b3f]/25 bg-[#411b3f]/5 p-4 text-sm text-[#102f35]"
+            aria-label="Agency financial breakdown (admin only)"
+          >
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#411b3f]">
+              Agency Financial Breakdown
+            </p>
+            <p className="text-xs text-gray-500 mb-3">
+              Private admin view — not shown on the client PDF.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-baseline justify-between gap-3">
+                <span className="text-xs font-medium text-gray-600">
+                  Total Infrastructure Cost
+                </span>
+                <span className="font-semibold tabular-nums">
+                  {formatMoney(totalInfrastructureCost)}
+                </span>
+              </div>
+              <div className="flex items-baseline justify-between gap-3 border-t border-[#411b3f]/10 pt-2">
+                <span className="text-xs font-medium text-gray-600">
+                  Estimated Gross Profit Margin %
+                </span>
+                <span className="font-bold tabular-nums text-[#102f35]">
+                  {agreedTotal > 0
+                    ? `${estimatedGrossMarginPct.toFixed(1)}%`
+                    : "—"}
+                </span>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
 

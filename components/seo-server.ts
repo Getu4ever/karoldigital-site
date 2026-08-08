@@ -35,7 +35,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
     title:
       "High-Performance Small Business Web Development | Custom Mobile App Development UK | Karol Digital",
     description:
-      "Conversion-focused e-commerce websites, custom mobile app development UK, and high-performance small business web development. Modern, fast digital solutions that turn visitors into customers.",
+      "Conversion-focused e-commerce, custom mobile app development UK, and high-performance small business websites that turn visitors into customers.",
     url: "https://www.karoldigital.co.uk/",
     image: "/seo-cover.jpg",
     keywords:
@@ -57,7 +57,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
     description:
       "Request a custom mobile app quote or bespoke small business web engineering London. Contact Karol Digital for high-performance websites, e-commerce, and custom applications.",
     url: "https://www.karoldigital.co.uk/contact",
-    image: "/hero-page-banner.jpg",
+    image: "/heroes/contact.png",
     keywords:
       "Contact Karol Digital, Custom Web & App Development Inquiries, Request a Custom Mobile App Quote, Bespoke Small Business Web Engineering London",
     type: "website",

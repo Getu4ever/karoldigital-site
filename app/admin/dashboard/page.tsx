@@ -39,7 +39,11 @@ export default async function AdminDashboardPage() {
           <code>POSTGRES_PRISMA_URL</code> / migrate, then refresh.
         </div>
       )}
-      <AdminDashboardClient leads={leads} metrics={metrics} />
+      <AdminDashboardClient
+        leads={leads}
+        metrics={metrics}
+        dbConnected={!dbError}
+      />
     </>
   );
 }

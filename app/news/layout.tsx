@@ -7,7 +7,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Stay updated with the latest digital marketing insights, SEO trends, social media updates, and web industry news. Curated automatically by Karol Digital.",
   url: "https://www.karoldigital.co.uk/news",
-  image: "/hero-page-banner.jpg",
+  image: "/heroes/news.png",
 });
 
 // Breadcrumb Schema for News home

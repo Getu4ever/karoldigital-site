@@ -79,7 +79,8 @@ export async function POST(req) {
         name,
         email,
         phone,
-        serviceOfInterest: source || "Contact form",
+        serviceOfInterest: "Contact form",
+        sourceChannel: source || null,
         message,
       }),
     ]);

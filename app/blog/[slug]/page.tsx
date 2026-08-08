@@ -33,7 +33,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
   if (!post) notFound();
 
   const articleUrl = `https://www.karoldigital.co.uk/blog/${slug}`;
-  const heroImage = post.imageUrl || "/hero-page-banner.jpg";
+  const heroImage = post.imageUrl || "/heroes/blog-post.png";
   const heroAlt = post.imageAlt || post.title;
   const serviceLinks = getBlogServiceLinks(slug, post.seoKeywords);
   const ctaCopy = getBlogCtaCopy(slug, post.seoKeywords);

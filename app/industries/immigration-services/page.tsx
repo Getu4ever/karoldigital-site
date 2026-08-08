@@ -50,7 +50,7 @@ export default function ImmigrationWebDesign() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/immigration-services.png"
             alt="Premium web design and SEO for immigration law firms"
             fill
             priority

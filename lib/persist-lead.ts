@@ -10,6 +10,7 @@ export async function persistPublicLead(input: {
   company?: string | null;
   phone?: string | null;
   serviceOfInterest?: string | null;
+  sourceChannel?: string | null;
   message?: string | null;
 }): Promise<void> {
   try {
@@ -20,6 +21,7 @@ export async function persistPublicLead(input: {
         company: input.company?.trim() || null,
         phone: input.phone?.trim() || null,
         serviceOfInterest: input.serviceOfInterest?.trim() || null,
+        sourceChannel: input.sourceChannel?.trim() || null,
         message: input.message?.trim() || null,
         status: "New_Lead",
       },

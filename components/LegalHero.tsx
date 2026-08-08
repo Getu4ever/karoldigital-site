@@ -18,7 +18,7 @@ export default function LegalHero({ title, subtitle }: LegalHeroProps) {
     >
       {/* Background Image */}
       <Image
-        src="/hero-page-banner.jpg"
+        src="/heroes/legal.png"
         alt={title}
         fill
         priority

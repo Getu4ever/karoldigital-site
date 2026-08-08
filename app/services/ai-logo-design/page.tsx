@@ -23,7 +23,7 @@ export default function AILogoDesignPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
-            src="/hero-page-banner.jpg"
+            src="/heroes/ai-logo-design.png"
             alt="AI Logo Design Support"
             fill
             priority

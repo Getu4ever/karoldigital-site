@@ -74,11 +74,11 @@ export default function AiSearchOptimisationPage() {
     <main className="min-h-screen bg-white text-gray-900">
       <section className="relative min-h-[70vh] flex items-center justify-center text-center text-white pt-24 pb-12">
         <Image
-          src="/hero-page-banner.jpg"
+          src="/heroes/ai-search-optimisation.png"
           alt="AI search optimisation for UK service businesses"
           fill
           priority
-          className="object-cover brightness-[0.4]"
+          className="object-cover brightness-[0.7]"
         />
         <div className="relative z-10 px-6 max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold-muted mb-4">

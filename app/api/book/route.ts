@@ -113,6 +113,7 @@ export async function POST(req: Request) {
       company: companyValue,
       phone: phoneValue,
       serviceOfInterest: selectedService,
+      sourceChannel: "Book a call",
       message: messageValue || null,
     });
 

@@ -8,7 +8,7 @@ export const metadata = generateSEOMetadata({
   description:
     "Request a custom mobile app quote or bespoke small business web engineering London. Contact Karol Digital for high-performance websites, e-commerce platforms, and custom applications.",
   url: "https://www.karoldigital.co.uk/contact",
-  image: "/hero-page-banner.jpg",
+  image: "/heroes/contact.png",
   keywords:
     "Contact Karol Digital, Custom Web & App Development Inquiries, Request a Custom Mobile App Quote, Bespoke Small Business Web Engineering London",
 });
