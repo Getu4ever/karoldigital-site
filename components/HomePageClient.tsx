@@ -37,10 +37,12 @@ function SectionImage({
   src,
   alt,
   size = "md",
+  className = "",
 }: {
   src: string;
   alt: string;
   size?: "sm" | "md" | "lg";
+  className?: string;
 }) {
   const sizeClass =
     size === "sm"
@@ -51,7 +53,7 @@ function SectionImage({
 
   return (
     <div
-      className={`relative mx-auto overflow-hidden rounded-2xl ring-1 ring-black/5 ${sizeClass}`}
+      className={`relative mx-auto overflow-hidden rounded-2xl ring-1 ring-black/5 ${sizeClass} ${className}`}
     >
       <Image
         src={src}
@@ -392,9 +394,9 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Sticky stack: Approach → Industries */}
+      {/* Sticky stack: Approach → Industries (spacer = dwell before cover) */}
       <div className="home-stack">
-        <section className="home-stack-card home-stack-card--approach px-6 py-20 md:px-10 md:py-24">
+        <section className="home-stack-card home-stack-card--approach px-6 py-20 md:px-10 lg:py-0">
           <motion.div
             className="home-stack-card__inner mx-auto w-full max-w-5xl"
             initial={{ opacity: 0 }}
@@ -402,7 +404,7 @@ export default function HomePageClient() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.65, ease: "easeOut" }}
           >
-            <div className="mb-12 text-center">
+            <div className="home-stack-heading mb-12 text-center">
               <SectionEyebrow tone="dark">Our approach</SectionEyebrow>
               <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
                 Why growing small businesses choose Karol Digital
@@ -414,25 +416,31 @@ export default function HomePageClient() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="home-stack-grid grid gap-8 lg:grid-cols-3">
               {homeDifference.map((item, index) => (
                 <article
                   key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur-sm transition hover:border-brand-gold/40 hover:bg-white/[0.1]"
+                  className="home-stack-tile overflow-visible rounded-2xl border border-white/10 bg-white/[0.06] p-8 pb-10 text-center backdrop-blur-sm transition hover:border-brand-gold/40 hover:bg-white/[0.1]"
                 >
                   <SectionImage
                     src={differenceImages[index].src}
                     alt={differenceImages[index].alt}
+                    className="home-stack-media"
                   />
                   <p className="mb-4 text-2xl font-bold text-white">{item.title}</p>
-                  <p className="leading-relaxed text-white/70">{item.description}</p>
+                  <p className="home-stack-tile__body leading-relaxed text-white/70">
+                    {item.description}
+                  </p>
                 </article>
               ))}
             </div>
           </motion.div>
         </section>
 
-        <section className="home-stack-card home-stack-card--industries px-6 py-20 md:px-10 md:py-24">
+        {/* Holds Approach on screen before Industries scrolls up to cover it */}
+        <div className="home-stack-spacer" aria-hidden="true" />
+
+        <section className="home-stack-card home-stack-card--industries px-6 py-20 md:px-10 lg:py-0">
           <motion.div
             className="home-stack-card__inner mx-auto w-full max-w-6xl"
             initial={{ opacity: 0 }}
@@ -440,7 +448,7 @@ export default function HomePageClient() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.65, ease: "easeOut" }}
           >
-            <div className="mb-12 text-center">
+            <div className="home-stack-heading mb-12 text-center">
               <SectionEyebrow tone="dark">Sectors we know</SectionEyebrow>
               <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
                 Industry-focused website design
@@ -451,19 +459,22 @@ export default function HomePageClient() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="home-stack-grid grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {homeIndustries.map((industry, index) => (
                 <article
                   key={industry.title}
-                  className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:bg-white/[0.1]"
+                  className="home-stack-tile flex flex-col rounded-2xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:bg-white/[0.1]"
                 >
                   <SectionImage
                     src={industryImages[index].src}
                     alt={industryImages[index].alt}
                     size="lg"
+                    className="home-stack-media home-stack-media--lg"
                   />
                   <p className="mb-3 text-2xl font-bold text-white">{industry.title}</p>
-                  <p className="mb-6 flex-grow text-white/70">{industry.description}</p>
+                  <p className="home-stack-tile__body mb-6 flex-grow text-white/70">
+                    {industry.description}
+                  </p>
                   <Link
                     href={industry.href}
                     className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-brand-gold-muted transition hover:text-brand-gold"
@@ -475,7 +486,7 @@ export default function HomePageClient() {
               ))}
             </div>
 
-            <div className="mt-12 text-center">
+            <div className="mt-8 text-center md:mt-6">
               <Link
                 href="/industries"
                 className="inline-flex items-center gap-2 font-semibold text-brand-gold-muted transition hover:text-brand-gold"
