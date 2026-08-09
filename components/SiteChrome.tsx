@@ -16,10 +16,13 @@ export default function SiteChrome({ children }: { children: ReactNode }) {
     return <>{children}</>;
   }
 
+  // Homepage sticky card stack breaks if a parent has transform — skip page motion there.
+  const isHome = pathname === "/";
+
   return (
     <>
       <Header />
-      <AnimateWrapper>{children}</AnimateWrapper>
+      {isHome ? <div className="flex-1">{children}</div> : <AnimateWrapper>{children}</AnimateWrapper>}
       <Footer />
       <ChatbaseWidget />
     </>

@@ -12,9 +12,10 @@ export default function AnimateWrapper({ children }: Props) {
     <AnimatePresence mode="wait">
       <motion.div
         key={typeof window !== "undefined" ? window.location.pathname : "page"}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -15 }}
+        /* Opacity only — any transform on this ancestor breaks position:sticky */
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="flex-1"
       >

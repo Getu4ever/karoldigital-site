@@ -1,0 +1,148 @@
+/**
+ * Homepage sticky card stack — Approach covers under Industries on scroll.
+ * Desktop only; mobile stays in normal document flow.
+ */
+
+.home-stack {
+  position: relative;
+  width: 100%;
+}
+
+.home-stack-card {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Sleek opaque panels — required so later cards fully cover earlier ones */
+.home-stack-card--approach {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 20%, rgba(201, 168, 75, 0.12), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 90% 80%, rgba(28, 72, 80, 0.55), transparent 50%),
+    linear-gradient(165deg, #0a1f24 0%, #102f35 48%, #0d262b 100%);
+  color: #f3f4f6;
+}
+
+.home-stack-card--industries {
+  background:
+    radial-gradient(ellipse 75% 55% at 85% 15%, rgba(65, 27, 63, 0.35), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 10% 85%, rgba(201, 168, 75, 0.1), transparent 55%),
+    linear-gradient(165deg, #0c1a22 0%, #14343b 45%, #1a2f38 100%);
+  color: #f3f4f6;
+}
+
+/* Continues the stack polish into Client work / proof */
+.home-proof {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201, 168, 75, 0.08), transparent 55%),
+    linear-gradient(180deg, #1a2f38 0%, #102f35 40%, #0c1a22 100%);
+}
+
+/* Hero — photo + gentle brand veil (keeps stack-system colour language) */
+.home-hero {
+  isolation: isolate;
+  background-color: #0a1f24;
+  color: #f3f4f6;
+}
+
+.home-hero__media {
+  transform: scale(1.04);
+  animation: home-hero-ken 20s ease-out forwards;
+}
+
+.home-hero__veil {
+  background:
+    radial-gradient(ellipse 75% 60% at 50% 42%, rgba(10, 31, 36, 0.28), transparent 68%),
+    radial-gradient(ellipse 50% 40% at 85% 15%, rgba(65, 27, 63, 0.18), transparent 55%),
+    linear-gradient(
+      180deg,
+      rgba(10, 31, 36, 0.58) 0%,
+      rgba(16, 47, 53, 0.32) 42%,
+      rgba(10, 31, 36, 0.72) 100%
+    );
+}
+
+.home-hero__brand {
+  letter-spacing: 0.32em;
+}
+
+.home-hero__rule {
+  width: 3.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c9a84b, transparent);
+}
+
+.home-hero__scroll {
+  animation: home-hero-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes home-hero-ken {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes home-hero-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__media {
+    animation: none;
+    transform: none;
+  }
+
+  .home-hero__scroll {
+    animation: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-stack-card {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home-stack-card--approach {
+    z-index: 10;
+  }
+
+  .home-stack-card--industries {
+    z-index: 20;
+  }
+}
+
+/* Soft enter for stack content — opacity only (keeps sticky intact) */
+@keyframes home-stack-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-stack-card__inner {
+  animation: home-stack-in 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-stack-card__inner {
+    animation: none;
+  }
+}

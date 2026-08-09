@@ -46,8 +46,11 @@ export const homeCaseStudies = [
     logoAlt: "1st Call UK Financial logo",
     description:
       "A mobile-first website experience with strong speed, accessibility, best practices, and SEO performance.",
+    metric: "98+",
+    metricLabel: "PageSpeed on core pages",
     industryHref: "/industries/financial-services",
     industryLabel: "Financial services",
+    featured: true,
   },
   {
     title: "1st Call UK Immigration",
@@ -55,8 +58,11 @@ export const homeCaseStudies = [
     logoAlt: "1st Call UK Immigration logo",
     description:
       "A high-performing service website built to combine trust, clarity, and strong mobile usability.",
+    metric: "↑ Lead quality",
+    metricLabel: "Clearer enquiry journeys",
     industryHref: "/industries/immigration-services",
     industryLabel: "Immigration services",
+    featured: false,
   },
   {
     title: "British Solar Direct",
@@ -64,8 +70,11 @@ export const homeCaseStudies = [
     logoAlt: "British Solar Direct logo",
     description:
       "A conversion-focused website for Nottingham’s turnkey home solar specialist—clear installation packages, fixed-quote journeys, and a fast path from enquiry to booking.",
+    metric: "3–6 wks",
+    metricLabel: "Launch-ready build cycle",
     industryHref: "https://www.britishsolardirect.co.uk/",
     industryLabel: "Visit live site",
+    featured: false,
   },
 ] as const;
 
