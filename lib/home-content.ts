@@ -35,7 +35,7 @@ export const homeTestimonials = [
   {
     quote:
       "Professional, fast, and results-driven. The new branding and website gave the business a much stronger online presence.",
-    author: "Food Mama's Kitchen",
+    author: "British Solar Direct",
   },
 ] as const;
 

@@ -70,6 +70,35 @@ function SectionImage({
   );
 }
 
+function ProofLogoPlate({
+  src,
+  alt,
+  className = "mb-5",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) {
+  // White-backed logos blend into the plate; dark circular marks stay as-is.
+  const blendWhiteBg = !src.includes("british-solar");
+
+  return (
+    <div
+      className={`flex h-16 items-center rounded-2xl border border-white/10 bg-[#e4ecee] px-4 py-3 ${className}`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={180}
+        height={56}
+        className={`h-10 w-auto max-w-[180px] object-contain object-left ${
+          blendWhiteBg ? "mix-blend-multiply" : ""
+        }`}
+      />
+    </div>
+  );
+}
+
 function PrimaryCta({
   className = "",
   label = "Book a Free Consultation",
@@ -476,15 +505,11 @@ export default function HomePageClient() {
           {/* Featured case */}
           <article className="mb-8 grid gap-8 rounded-3xl border border-white/10 bg-white/[0.06] p-8 backdrop-blur-sm md:grid-cols-[1.2fr_1fr] md:items-center md:p-10">
             <div>
-              <div className="mb-6 flex h-16 items-center rounded-2xl bg-white px-4 py-3">
-                <Image
-                  src={featuredCase.logo}
-                  alt={featuredCase.logoAlt}
-                  width={180}
-                  height={56}
-                  className="h-10 w-auto max-w-[180px] object-contain object-left"
-                />
-              </div>
+              <ProofLogoPlate
+                src={featuredCase.logo}
+                alt={featuredCase.logoAlt}
+                className="mb-6"
+              />
               <p className="mb-3 text-2xl font-bold md:text-3xl">{featuredCase.title}</p>
               <p className="mb-6 leading-relaxed text-white/70">{featuredCase.description}</p>
               <Link
@@ -514,15 +539,7 @@ export default function HomePageClient() {
                 key={study.title}
                 className="flex flex-col rounded-3xl border border-white/10 bg-white/[0.06] p-8 backdrop-blur-sm transition hover:border-brand-gold/35"
               >
-                <div className="mb-5 flex h-16 items-center rounded-2xl bg-white px-4 py-3">
-                  <Image
-                    src={study.logo}
-                    alt={study.logoAlt}
-                    width={180}
-                    height={56}
-                    className="h-10 w-auto max-w-[180px] object-contain object-left"
-                  />
-                </div>
+                <ProofLogoPlate src={study.logo} alt={study.logoAlt} />
                 <div className="mb-4 flex items-end justify-between gap-4">
                   <p className="text-xl font-bold md:text-2xl">{study.title}</p>
                   <div className="shrink-0 text-right">
@@ -590,49 +607,118 @@ export default function HomePageClient() {
       </section>
 
       {/* PARTNERS */}
-      <section className="border-b border-gray-200 bg-white px-6 py-20 md:px-10">
-        <div className="mx-auto max-w-5xl text-center">
-          <SectionEyebrow>Partners</SectionEyebrow>
-          <p className="mb-12 text-3xl font-bold text-[#102f35] md:text-4xl">
-            Selected clients and partners
-          </p>
+      <section className="border-b border-[#102f35]/10 bg-gradient-to-b from-[#eef3f4] to-[#f7f9fa] px-6 py-20 md:px-10 md:py-24">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-12 text-center">
+            <SectionEyebrow>Partners</SectionEyebrow>
+            <h2 className="mb-4 text-3xl font-bold text-[#102f35] md:text-4xl">
+              Selected clients and partners
+            </h2>
+            <p className="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
+              Long-term relationships with UK marketing and service brands that value clarity,
+              speed, and conversion-focused digital work.
+            </p>
+          </div>
 
-          <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Link
               href="https://sbc-marketing.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-[180px] items-center justify-center rounded-2xl bg-gray-50 p-8 shadow-sm ring-1 ring-gray-100 transition hover:shadow-md"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
             >
-              <Image
-                src="/logos/sbc.webp"
-                alt="SBC Marketing"
-                width={220}
-                height={80}
-                className="h-auto max-h-20 w-auto object-contain"
-              />
+              <div className="mb-6 flex h-16 items-center">
+                <Image
+                  src="/logos/sbc.webp"
+                  alt="SBC Marketing"
+                  width={200}
+                  height={64}
+                  className="h-auto max-h-14 w-auto object-contain object-left"
+                />
+              </div>
+              <p className="mb-2 text-xl font-bold text-[#102f35]">SBC Marketing</p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                A growth-focused marketing partner known for sharp branding and high-converting
+                campaigns — collaborating with Karol Digital on digital experiences that look
+                premium and perform.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Visit SBC Marketing
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
             </Link>
 
             <Link
               href="https://www.1stcalluk.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-[180px] items-center justify-center rounded-2xl bg-gray-50 p-8 shadow-sm ring-1 ring-gray-100 transition hover:shadow-md"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
             >
-              <Image
-                src="/1stcalluk-logo.jpg"
-                alt="1st Call UK Group"
-                width={220}
-                height={80}
-                className="h-auto max-h-20 w-auto object-contain"
-              />
+              <div className="mb-6 flex h-16 items-center">
+                <Image
+                  src="/1stcalluk-logo.jpg"
+                  alt="1st Call UK Group"
+                  width={200}
+                  height={64}
+                  className="h-auto max-h-14 w-auto object-contain object-left"
+                />
+              </div>
+              <p className="mb-2 text-xl font-bold text-[#102f35]">1st Call UK Group</p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                A multi-service UK group spanning finance and immigration — with high-performance
+                websites engineered to build trust quickly and turn visitors into qualified
+                enquiries.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Visit 1st Call UK
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+
+            <Link
+              href="https://www.britishsolardirect.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <div className="mb-6 flex h-16 items-center">
+                <Image
+                  src="/logos/british-solar-direct-logo.png"
+                  alt="British Solar Direct"
+                  width={200}
+                  height={64}
+                  className="h-auto max-h-14 w-auto object-contain object-left"
+                />
+              </div>
+              <p className="mb-2 text-xl font-bold text-[#102f35]">British Solar Direct</p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                Nottingham’s turnkey home solar specialist — with a conversion-focused website
+                built around clear installation packages, fixed quotes, and a fast path from
+                enquiry to booking.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Visit British Solar Direct
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-gray-50 px-6 py-20 md:px-10 md:py-24">
+      <section className="border-t border-gray-200/80 bg-white px-6 py-20 md:px-10 md:py-24">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <SectionEyebrow>Questions</SectionEyebrow>
@@ -645,9 +731,9 @@ export default function HomePageClient() {
             {homeFaqs.map((faq) => (
               <details
                 key={faq.q}
-                className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm"
+                className="group overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between p-6 font-bold text-[#102f35] hover:bg-gray-50">
+                <summary className="flex cursor-pointer list-none items-center justify-between p-6 font-bold text-[#102f35] hover:bg-gray-100/80">
                   {faq.q}
                   <span className="text-2xl text-[#411b3f] transition-transform group-open:rotate-45">
                     +
