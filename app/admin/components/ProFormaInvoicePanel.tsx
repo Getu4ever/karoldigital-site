@@ -261,6 +261,7 @@ function ProfessionalInvoicePdf({
   showLoyaltyDiscount,
   showPaidDeposit,
   milestones,
+  bankAccountName,
   bankSortCode,
   bankAccountNumber,
   logoSrc,
@@ -280,6 +281,7 @@ function ProfessionalInvoicePdf({
   showLoyaltyDiscount: boolean;
   showPaidDeposit: boolean;
   milestones: MilestoneRow[];
+  bankAccountName: string;
   bankSortCode: string;
   bankAccountNumber: string;
   logoSrc: string;
@@ -416,8 +418,8 @@ function ProfessionalInvoicePdf({
               reference {invoiceRef || "—"} on your payment.
             </Text>
             <Text style={styles.bankRow}>
-              Account Name: Karol Digital Ltd | Sort Code:{" "}
-              {bankSortCode || "00-00-00"} | Account Number:{" "}
+              Account Name: {bankAccountName || "Karol Digital Ltd"} | Sort
+              Code: {bankSortCode || "00-00-00"} | Account Number:{" "}
               {bankAccountNumber || "00000000"}
             </Text>
           </View>
@@ -442,6 +444,7 @@ export default function ProFormaInvoicePanel({
 }: Props) {
   const [invoiceRef, setInvoiceRef] = useState("KD-INV-001");
   const [issueDate, setIssueDate] = useState("");
+  const [bankAccountName, setBankAccountName] = useState("Karol Digital Ltd");
   const [bankSortCode, setBankSortCode] = useState("00-00-00");
   const [bankAccountNumber, setBankAccountNumber] = useState("00000000");
   const [selected, setSelected] = useState<string[]>([
@@ -594,6 +597,7 @@ export default function ProFormaInvoicePanel({
           showLoyaltyDiscount={includeLoyalty}
           showPaidDeposit={includeDeposit}
           milestones={milestones}
+          bankAccountName={bankAccountName}
           bankSortCode={bankSortCode}
           bankAccountNumber={bankAccountNumber}
           logoSrc={logoSrc}
@@ -657,6 +661,17 @@ export default function ProFormaInvoicePanel({
             type="date"
             value={issueDate}
             onChange={(e) => setIssueDate(e.target.value)}
+            className="w-full rounded-lg border border-gray-200 px-3 py-2"
+          />
+        </label>
+        <label className="text-sm md:col-span-2">
+          <span className="mb-1 block font-semibold text-[#102f35]">
+            Name on account
+          </span>
+          <input
+            value={bankAccountName}
+            onChange={(e) => setBankAccountName(e.target.value)}
+            placeholder="Karol Digital Ltd"
             className="w-full rounded-lg border border-gray-200 px-3 py-2"
           />
         </label>
