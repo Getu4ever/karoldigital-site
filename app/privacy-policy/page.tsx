@@ -43,8 +43,16 @@ export default function PrivacyPolicy() {
           Cookies & Analytics
         </h2>
         <p className="leading-7 mb-6">
-          Cookies help us analyse website behaviour and improve performance. You may
-          disable cookies in your browser settings at any time.
+          Cookies help us analyse website behaviour and improve performance.
+          Necessary cookies keep the site working. Analytics and marketing
+          cookies only run after you give consent. See our{" "}
+          <a
+            href="/cookie-policy"
+            className="font-semibold text-[#102f35] underline underline-offset-2"
+          >
+            Cookie Policy
+          </a>{" "}
+          for full details and preference controls.
         </p>
 
         <h2 className="text-2xl font-semibold text-[#411b3f] mt-10 mb-4">

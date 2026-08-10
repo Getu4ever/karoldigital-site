@@ -111,7 +111,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   cookie_policy: {
     title: "Cookie Policy — Karol Digital",
     description:
-      "Understand how Karol Digital uses cookies for performance, analytics, and user experience improvement.",
+      "Understand how Karol Digital uses necessary, analytics, and marketing cookies, and how to manage preferences under UK GDPR and PECR.",
     url: "https://www.karoldigital.co.uk/cookie-policy",
     image: "/seo-cover.jpg",
     type: "website",

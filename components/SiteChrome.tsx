@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimateWrapper from "@/components/AnimateWrapper";
 import ChatbaseWidget from "@/components/ChatbaseWidget";
+import CookieConsentDialog from "@/components/CookieConsentDialog";
 
 /** Public site chrome — omitted on /admin so the dashboard header (Sign Out, etc.) is visible. */
 export default function SiteChrome({ children }: { children: ReactNode }) {
@@ -25,6 +26,7 @@ export default function SiteChrome({ children }: { children: ReactNode }) {
       {isHome ? <div className="flex-1">{children}</div> : <AnimateWrapper>{children}</AnimateWrapper>}
       <Footer />
       <ChatbaseWidget />
+      <CookieConsentDialog />
     </>
   );
 }
