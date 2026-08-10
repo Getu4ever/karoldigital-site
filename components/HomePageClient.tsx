@@ -118,9 +118,11 @@ function PrimaryCta({
 function AuditCta({
   className = "",
   asButton = false,
+  label = "Website Audit",
 }: {
   className?: string;
   asButton?: boolean;
+  label?: string;
 }) {
   return (
     <Link
@@ -132,7 +134,7 @@ function AuditCta({
           : `inline-flex items-center gap-1 font-semibold text-brand-gold-muted transition hover:text-brand-gold ${className}`
       }
     >
-      Website Audit
+      {label}
       {!asButton && <ArrowRight size={16} aria-hidden="true" />}
     </Link>
   );
@@ -300,7 +302,7 @@ export default function HomePageClient() {
             </p>
 
             <Link href="/book" className="btn-teal">
-              Book a Free Consultation
+              Talk through your project
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
@@ -387,7 +389,7 @@ export default function HomePageClient() {
               href="/services"
               className="inline-flex items-center gap-2 rounded-full border border-[#102f35]/20 bg-white px-8 py-3 font-semibold text-[#102f35] shadow-sm transition hover:border-[#102f35] hover:shadow-md"
             >
-              View all services
+              Browse all services
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
@@ -611,8 +613,11 @@ export default function HomePageClient() {
             </p>
           </div>
           <div className="flex shrink-0 flex-col items-center gap-3 sm:flex-row">
-            <PrimaryCta className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold-muted" />
-            <AuditCta className="text-sm" />
+            <PrimaryCta
+              label="Book a strategy call"
+              className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold-muted"
+            />
+            <AuditCta label="Request an audit" className="text-sm" />
           </div>
         </div>
       </section>
@@ -716,7 +721,7 @@ export default function HomePageClient() {
                 enquiry to booking.
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
-                Visit British Solar Direct
+                See solar partner site
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"

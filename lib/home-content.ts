@@ -49,7 +49,7 @@ export const homeCaseStudies = [
     metric: "98+",
     metricLabel: "PageSpeed on core pages",
     industryHref: "/industries/financial-services",
-    industryLabel: "Financial services",
+    industryLabel: "Financial case study",
     featured: true,
   },
   {
@@ -61,7 +61,7 @@ export const homeCaseStudies = [
     metric: "↑ Lead quality",
     metricLabel: "Clearer enquiry journeys",
     industryHref: "/industries/immigration-services",
-    industryLabel: "Immigration services",
+    industryLabel: "Immigration case study",
     featured: false,
   },
   {
@@ -73,7 +73,7 @@ export const homeCaseStudies = [
     metric: "3–6 wks",
     metricLabel: "Launch-ready build cycle",
     industryHref: "https://www.britishsolardirect.co.uk/",
-    industryLabel: "Visit live site",
+    industryLabel: "British Solar Direct",
     featured: false,
   },
 ] as const;
@@ -84,14 +84,14 @@ export const homeServices = [
     description:
       "100% custom-built, modern digital solutions for growing small businesses—designed for clarity, credibility, and conversion, without template bloat or slow loading speeds.",
     href: "/services/web-design",
-    cta: "Explore services",
+    cta: "Custom website design",
   },
   {
     title: "Custom Web Development",
     description:
       "Modern, fast websites built from the ground up around how you sell—eliminating drag-and-drop limitations so your site stays quick, flexible, and ready to grow.",
     href: "/services/custom-web-development",
-    cta: "View development options",
+    cta: "Bespoke web builds",
   },
   {
     title: "High-Quality E-Commerce Websites",
@@ -105,21 +105,21 @@ export const homeServices = [
     description:
       "High-quality mobile apps built to increase customer loyalty and sync seamlessly with your business systems—so your website and app work as one.",
     href: "/services/custom-mobile-applications",
-    cta: "Discuss your app",
+    cta: "Mobile app builds",
   },
   {
     title: "Website Audits",
     description:
       "Clear advice for businesses whose current site feels slow, unclear, outdated, or underperforming.",
     href: "/services/website-audits",
-    cta: "View audit services",
+    cta: "Site audit details",
   },
   {
     title: "AI Search Optimisation",
     description:
       "GEO, content systems, interactive lead magnets, and analytics so AI engines can find, cite, and recommend your business.",
     href: "/services/ai-search-optimisation",
-    cta: "Explore AI search",
+    cta: "AI search optimisation",
   },
 ] as const;
 
