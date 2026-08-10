@@ -401,11 +401,11 @@ export default function PricingPage() {
                     "Professional, efficient, and results-driven. Our lead generation has never been better.",
                 },
                 {
-                  name: "Food Mama’s Kitchen",
-                  link: "https://www.foodmamakitchens.co.uk/",
-                  logo: "/logos/food-mama-kitchen.webp",
+                  name: "British Solar Direct",
+                  link: "https://www.britishsolardirect.co.uk/",
+                  logo: "/logos/british-solar-direct-logo.png",
                   quote:
-                    "The branding and website have truly elevated our business. Highly recommended.",
+                    "Professional, fast, and results-driven. The new branding and website gave the business a much stronger online presence.",
                 },
               ].map((t, i) => (
                 <a
