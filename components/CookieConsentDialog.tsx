@@ -65,69 +65,63 @@ export default function CookieConsentDialog() {
       role="dialog"
       aria-modal="false"
       aria-labelledby={titleId}
-      className="fixed inset-x-0 bottom-0 z-[100] w-full bg-white shadow-[0_-4px_40px_rgba(0,0,0,0.08)]"
+      className="fixed inset-x-0 bottom-0 z-[100] w-full border-t border-[#102f35]/15 bg-white shadow-[0_-8px_30px_rgba(16,47,53,0.12)]"
     >
-      {/* Top bar: logo + brand left, tabs right */}
-      <div className="border-b border-gray-100 bg-gray-50/60">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 sm:px-8">
-          <Link href="/" className="flex items-center gap-3 no-underline">
-            <Image
-              src="/logo.WebP"
-              alt="Karol Digital logo"
-              width={44}
-              height={28}
-              className="h-7 w-auto shrink-0"
-              priority
-            />
-            <span className="text-[13px] font-semibold tracking-tight text-[#102f35]">
-              Karol{" "}
-              <span className="text-[#c9a84b]">Digital</span>
-            </span>
-          </Link>
-
-          <nav
-            aria-label="Cookie policy sections"
-            className="flex items-center gap-0.5"
-          >
-            {tabs.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setTab(item.id)}
-                className={`relative px-3 py-1.5 text-[13px] font-medium transition-colors ${
-                  tab === item.id
-                    ? "text-[#102f35]"
-                    : "text-gray-400 hover:text-gray-600"
-                }`}
-              >
-                {item.label}
-                {tab === item.id && (
-                  <span className="absolute inset-x-1 -bottom-[11px] h-[2px] rounded-full bg-[#102f35]" />
-                )}
-              </button>
-            ))}
-          </nav>
+      {/* Thin top strip: logo left + tabs */}
+      <div className="flex items-center justify-between gap-3 border-b border-gray-100 px-4 py-2.5 sm:px-6">
+        <div className="flex min-w-0 items-center gap-2.5">
+          <Image
+            src="/logo.WebP"
+            alt="Karol Digital logo"
+            width={56}
+            height={34}
+            className="h-8 w-auto shrink-0"
+            priority
+          />
+          <p className="truncate text-sm font-semibold text-[#102f35]">
+            Karol <span className="text-[#c9a84b]">Digital</span>
+          </p>
         </div>
+
+        <nav
+          aria-label="Cookie policy sections"
+          className="flex shrink-0 items-center gap-1 sm:gap-3"
+        >
+          {tabs.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => setTab(item.id)}
+              className={`border-b-2 px-2 py-1 text-xs font-medium transition sm:text-sm ${
+                tab === item.id
+                  ? "border-[#102f35] text-[#102f35]"
+                  : "border-transparent text-gray-500 hover:text-[#102f35]"
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </nav>
       </div>
 
-      {/* Body */}
-      <div className="mx-auto max-w-7xl px-5 py-4 sm:px-8 sm:py-5">
-        {tab === "consent" && (
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
+      {/* Compact body + actions */}
+      <div className="px-4 py-3 sm:px-6 sm:py-3.5">
+        {tab === "consent" ? (
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
             <div className="min-w-0 flex-1">
               <h2
                 id={titleId}
-                className="mb-1.5 text-[15px] font-bold text-[#102f35] sm:text-base"
+                className="mb-1 text-base font-bold text-[#102f35] sm:text-lg"
               >
                 This website uses cookies
               </h2>
-              <p className="max-w-2xl text-[13px] leading-relaxed text-gray-500">
+              <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
                 We use cookies to keep the site working, understand traffic, and
                 improve our services. You can accept all, refuse non-essential
                 cookies, or customise your choices.{" "}
                 <Link
                   href="/cookie-policy"
-                  className="font-semibold text-[#102f35] underline decoration-[#102f35]/30 underline-offset-2 transition hover:decoration-[#102f35]"
+                  className="font-semibold text-[#102f35] underline underline-offset-2 hover:text-[#411b3f]"
                 >
                   Cookie Policy
                 </Link>
@@ -141,18 +135,18 @@ export default function CookieConsentDialog() {
               onAllowAll={() => save({ analytics: true, marketing: true })}
             />
           </div>
-        )}
+        ) : null}
 
-        {tab === "details" && (
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:gap-10">
+        {tab === "details" ? (
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
             <div className="min-w-0 flex-1">
               <h2
                 id={titleId}
-                className="mb-3 text-[15px] font-bold text-[#102f35] sm:text-base"
+                className="mb-2 text-base font-bold text-[#102f35] sm:text-lg"
               >
-                Manage cookie categories
+                Cookie details
               </h2>
-              <div className="grid gap-2.5 sm:grid-cols-3">
+              <div className="grid gap-2 sm:grid-cols-3">
                 <CategoryRow
                   title="Necessary"
                   description="Security, forms, and consent storage. Always on."
@@ -161,13 +155,13 @@ export default function CookieConsentDialog() {
                 />
                 <CategoryRow
                   title="Analytics"
-                  description="Google Analytics — enabled only after you opt in."
+                  description="Google Analytics after you opt in."
                   checked={analytics}
                   onChange={setAnalytics}
                 />
                 <CategoryRow
                   title="Marketing"
-                  description="Optional campaign and promotional tools."
+                  description="Optional campaign and promo tools."
                   checked={marketing}
                   onChange={setMarketing}
                 />
@@ -181,32 +175,31 @@ export default function CookieConsentDialog() {
               onAllowAll={() => save({ analytics: true, marketing: true })}
             />
           </div>
-        )}
+        ) : null}
 
-        {tab === "about" && (
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
+        {tab === "about" ? (
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
             <div className="min-w-0 flex-1">
               <h2
                 id={titleId}
-                className="mb-1.5 text-[15px] font-bold text-[#102f35] sm:text-base"
+                className="mb-1 text-base font-bold text-[#102f35] sm:text-lg"
               >
                 About this notice
               </h2>
-              <p className="max-w-2xl text-[13px] leading-relaxed text-gray-500">
+              <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
                 This consent bar helps Karol Digital comply with UK GDPR and
-                PECR. Necessary cookies always run; analytics and marketing
-                cookies are only activated after you give consent. You can update
-                your preferences at any time from our{" "}
+                PECR. Necessary cookies always run; analytics and marketing only
+                run after you allow them. Change preferences anytime from the{" "}
                 <Link
                   href="/cookie-policy"
-                  className="font-semibold text-[#102f35] underline decoration-[#102f35]/30 underline-offset-2 transition hover:decoration-[#102f35]"
+                  className="font-semibold text-[#102f35] underline underline-offset-2 hover:text-[#411b3f]"
                 >
                   Cookie Policy
                 </Link>{" "}
-                page or by emailing{" "}
+                or email{" "}
                 <a
                   href="mailto:info@karoldigital.co.uk"
-                  className="font-semibold text-[#102f35] underline decoration-[#102f35]/30 underline-offset-2 transition hover:decoration-[#102f35]"
+                  className="font-semibold text-[#102f35] underline underline-offset-2 hover:text-[#411b3f]"
                 >
                   info@karoldigital.co.uk
                 </a>
@@ -221,7 +214,7 @@ export default function CookieConsentDialog() {
               onAllowAll={() => save({ analytics: true, marketing: true })}
             />
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
@@ -241,11 +234,11 @@ function ActionButtons({
   onAllowAll: () => void;
 }) {
   return (
-    <div className="flex shrink-0 items-center gap-2.5">
+    <div className="flex shrink-0 flex-wrap items-center gap-2 pr-16 sm:justify-end md:pr-20">
       <button
         type="button"
         onClick={onDeny}
-        className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-[13px] font-semibold text-[#102f35] transition hover:border-[#102f35]/40 hover:bg-gray-50"
+        className="rounded-md border border-[#102f35]/20 bg-white px-3.5 py-2 text-xs font-semibold text-[#102f35] transition hover:border-[#102f35] sm:text-sm"
       >
         Deny
       </button>
@@ -253,7 +246,7 @@ function ActionButtons({
         <button
           type="button"
           onClick={onCustomize}
-          className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-[13px] font-semibold text-[#102f35] transition hover:border-[#102f35]/40 hover:bg-gray-50"
+          className="rounded-md border border-[#102f35]/20 bg-white px-3.5 py-2 text-xs font-semibold text-[#102f35] transition hover:border-[#102f35] sm:text-sm"
         >
           Customize ›
         </button>
@@ -261,7 +254,7 @@ function ActionButtons({
         <button
           type="button"
           onClick={onSave}
-          className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-[13px] font-semibold text-[#102f35] transition hover:border-[#102f35]/40 hover:bg-gray-50"
+          className="rounded-md border border-[#102f35]/20 bg-white px-3.5 py-2 text-xs font-semibold text-[#102f35] transition hover:border-[#102f35] sm:text-sm"
         >
           Save selection
         </button>
@@ -269,7 +262,7 @@ function ActionButtons({
       <button
         type="button"
         onClick={onAllowAll}
-        className="rounded-lg bg-[#102f35] px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-[#1a4a52]"
+        className="rounded-md bg-[#102f35] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-[#411b3f] sm:text-sm"
       >
         Allow all
       </button>
@@ -292,44 +285,20 @@ function CategoryRow({
 }) {
   return (
     <label
-      className={`flex items-start gap-3 rounded-xl border px-3.5 py-3 transition ${
-        disabled
-          ? "border-gray-100 bg-gray-50/80"
-          : "cursor-pointer border-gray-200 bg-white hover:border-[#102f35]/20 hover:shadow-sm"
+      className={`flex gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 ${
+        disabled ? "opacity-90" : "cursor-pointer hover:border-[#102f35]/25"
       }`}
     >
-      <span className="relative mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center">
-        <input
-          type="checkbox"
-          className="peer sr-only"
-          checked={Boolean(checked)}
-          disabled={disabled}
-          onChange={(e) => onChange?.(e.target.checked)}
-        />
-        <span
-          className={`flex h-4 w-4 items-center justify-center rounded border transition ${
-            checked
-              ? "border-[#102f35] bg-[#102f35]"
-              : "border-gray-300 bg-white"
-          } ${disabled ? "opacity-70" : ""}`}
-        >
-          {checked && (
-            <svg className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          )}
-        </span>
-      </span>
+      <input
+        type="checkbox"
+        className="mt-0.5 h-3.5 w-3.5 shrink-0 accent-[#102f35]"
+        checked={Boolean(checked)}
+        disabled={disabled}
+        onChange={(e) => onChange?.(e.target.checked)}
+      />
       <span className="min-w-0">
-        <span className="block text-[13px] font-bold text-[#102f35]">
-          {title}
-          {disabled && (
-            <span className="ml-1.5 text-[11px] font-medium text-gray-400">
-              Always on
-            </span>
-          )}
-        </span>
-        <span className="mt-0.5 block text-[11px] leading-snug text-gray-500">
+        <span className="block text-xs font-bold text-[#102f35]">{title}</span>
+        <span className="mt-0.5 block text-[11px] leading-snug text-gray-600 sm:text-xs">
           {description}
         </span>
       </span>
