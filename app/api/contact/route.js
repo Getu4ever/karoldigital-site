@@ -1,6 +1,5 @@
 import nodemailer from "nodemailer";
 import { persistPublicLead } from "@/lib/persist-lead";
-import { forwardPortalEnquiry } from "@/lib/forward-portal-enquiry";
 import {
   buildAdminNotificationEmail,
   buildUserConfirmationEmail,
@@ -82,16 +81,6 @@ export async function POST(req) {
         phone,
         serviceOfInterest: "Contact form",
         sourceChannel: source || null,
-        message,
-      }),
-      forwardPortalEnquiry({
-        service: "web",
-        sourceSite: "karoldigital.co.uk",
-        sourceKind: "contact",
-        sourceChannel: source || data.service || null,
-        name,
-        email,
-        phone,
         message,
       }),
     ]);

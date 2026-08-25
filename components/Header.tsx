@@ -24,7 +24,6 @@ import {
   Sparkles,
   Bot,
 } from "lucide-react";
-import DownloadAppButton from "./DownloadAppButton";
 
 
 export default function Header() {
@@ -126,24 +125,6 @@ export default function Header() {
         scrolled ? "bg-[#102f35] shadow-md" : "bg-transparent backdrop-blur-md"
       }`}
     >
-      <div className="border-b border-brand-gold/20 bg-[#0a1f24]">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-end gap-x-3 gap-y-1.5 px-4 py-1.5 sm:gap-x-4 sm:px-6">
-          <DownloadAppButton source="web" variant="gold" />
-          <Link
-            href="https://www.1stcalluk.co.uk/"
-            className="text-[11px] font-medium tracking-wide text-white/80 transition hover:text-brand-gold-soft sm:text-xs"
-          >
-            1st Call UK Group
-          </Link>
-          <Link
-            href="https://1st-calluk-portal.vercel.app/unlock?service=web"
-            className="inline-flex items-center rounded-full border border-brand-gold/40 px-3 py-1 text-[11px] font-medium text-brand-gold-soft transition hover:bg-white/5 sm:px-3.5 sm:py-1.5 sm:text-xs"
-          >
-            Client portal
-          </Link>
-        </div>
-      </div>
-
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">
@@ -322,7 +303,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden absolute left-3 right-3 top-full mt-2 rounded-2xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-white p-6 shadow-2xl border border-white/10"
+            className="md:hidden absolute left-3 right-3 top-[100px] rounded-2xl bg-gradient-to-br from-[#102f35] to-[#411b3f] text-white p-6 shadow-2xl border border-white/10"
           >
             <nav className="flex flex-col space-y-4">
               <Link

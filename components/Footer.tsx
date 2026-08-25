@@ -8,7 +8,6 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
-import DownloadAppButton from "./DownloadAppButton";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -166,7 +165,6 @@ export default function Footer() {
               </p>
             </div>
 
-            <DownloadAppButton source="web" variant="gold" placement="footer" />
             <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/book"
