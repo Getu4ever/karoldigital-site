@@ -634,12 +634,35 @@ export default function HomePageClient() {
               Start with a free interactive assessment
             </h2>
             <p className="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
-              Use these lead magnets to check AI search readiness or plan SEO content —
-              then book a call if you want help implementing the next steps.
+              Start with a live homepage snapshot, a 9-question GEO scorecard, or an
+              SEO brief — then book a call if you want help implementing the next steps.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-3">
+            <Link
+              href="/tools/website-checker"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-gradient-to-b from-[#f7f9fa] to-white p-8 text-left transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]">
+                Free snapshot
+              </p>
+              <p className="mb-3 text-xl font-bold text-[#102f35]">
+                GEO & SEO Website Checker
+              </p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                Paste a URL for a homepage check of titles, schema, robots.txt, and
+                llms.txt — then contact Karol if the snapshot flags issues.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Check a website
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
             <Link
               href="/tools/ai-search-scorecard"
               className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-gradient-to-b from-[#f7f9fa] to-white p-8 text-left transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"

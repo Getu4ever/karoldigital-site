@@ -275,10 +275,10 @@ export default function ContentBriefPage() {
                   Turn this into a content system
                 </Link>
                 <Link
-                  href="/tools/ai-search-scorecard"
+                  href="/tools/website-checker"
                   className="rounded-lg border border-gray-300 px-6 py-3 text-center font-semibold text-[#102f35]"
                 >
-                  Take the AI Search Scorecard
+                  Check a live website
                 </Link>
               </div>
             </article>

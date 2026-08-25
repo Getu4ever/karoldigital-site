@@ -26,6 +26,7 @@ Karol Digital is a London-based web design and digital agency serving service bu
 
 ## AI growth tools
 
+- [GEO & SEO Website Checker](https://www.karoldigital.co.uk/tools/website-checker): Free homepage snapshot of titles, schema, robots.txt, and llms.txt.
 - [AI Search Readiness Scorecard](https://www.karoldigital.co.uk/tools/ai-search-scorecard): Free interactive assessment of AI search readiness.
 - [Content Brief Generator](https://www.karoldigital.co.uk/tools/content-brief): Free SEO content brief builder for service businesses.
 

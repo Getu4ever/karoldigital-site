@@ -105,6 +105,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const tools: MetadataRoute.Sitemap = [
+    "website-checker",
     "ai-search-scorecard",
     "content-brief",
   ].map((tool) => ({

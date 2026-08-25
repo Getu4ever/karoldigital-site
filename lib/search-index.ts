@@ -122,6 +122,12 @@ const STATIC_DOCS: SearchDoc[] = [
     description: "Class booking and brand websites for studios.",
   },
   {
+    title: "GEO and SEO website checker",
+    url: "/tools/website-checker",
+    description:
+      "Free homepage snapshot of titles, schema, robots.txt, and llms.txt, with a way to contact Karol if issues show up.",
+  },
+  {
     title: "AI Search Readiness Scorecard",
     url: "/tools/ai-search-scorecard",
     description: "Free interactive GEO scorecard for schema, content, and lead capture.",

@@ -27,6 +27,7 @@ import {
   UtensilsCrossed,
   Wrench,
   ClipboardList,
+  ScanSearch,
 } from "lucide-react";
 
 
@@ -117,6 +118,11 @@ export default function Header() {
 
   const toolsItems = [
     {
+      href: "/tools/website-checker",
+      label: "GEO & SEO Checker",
+      icon: <ScanSearch size={16} />,
+    },
+    {
       href: "/tools/ai-search-scorecard",
       label: "AI Search Scorecard",
       icon: <ClipboardList size={16} />,
@@ -145,7 +151,7 @@ export default function Header() {
       type: "industries",
     },
     {
-      href: "/tools/ai-search-scorecard",
+      href: "/tools/website-checker",
       label: "Free Tools",
       icon: <Wrench size={18} />,
       dropdown: toolsItems,

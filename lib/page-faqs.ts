@@ -77,6 +77,10 @@ export const auditsFaqs: FaqItem[] = [
     q: "Do I have to rebuild after an audit?",
     a: "No. Some sites only need focused fixes. The audit tells you whether improvement, a partial rebuild, or a full custom build is the better investment.",
   },
+  {
+    q: "Is there a free check before a paid audit?",
+    a: "Yes. The GEO & SEO website checker takes a homepage snapshot of titles, schema, robots.txt, and llms.txt. It is not a full audit — use it to see obvious gaps, then book a £95 audit or contact Karol if you want the issues fixed.",
+  },
 ];
 
 export const geoFaqs: FaqItem[] = [
@@ -90,7 +94,7 @@ export const geoFaqs: FaqItem[] = [
   },
   {
     q: "What should UK service businesses do first?",
-    a: "Start with an AI search readiness scorecard, fix schema and answer-ready service pages, then add one interactive lead magnet and track completions in analytics.",
+    a: "Start with the free GEO and SEO website checker or the AI search readiness scorecard, fix schema and answer-ready service pages, then add one interactive lead magnet and track completions in analytics.",
   },
 ];
 
@@ -316,6 +320,25 @@ export const bookFaqs: FaqItem[] = [
   {
     q: "Is booking a call a commitment to buy?",
     a: "No. The call is a free consultation so you can decide whether a custom website or audit is the right move.",
+  },
+];
+
+export const websiteCheckerFaqs: FaqItem[] = [
+  {
+    q: "What does the GEO and SEO website checker actually scan?",
+    a: "It takes a homepage snapshot: title, meta description, H1, canonical, Open Graph image, JSON-LD, robots.txt, and llms.txt / llms-full.txt. It does not run Lighthouse, crawl every page, or predict whether ChatGPT will cite you.",
+  },
+  {
+    q: "Is this the same as the AI Search Readiness Scorecard?",
+    a: "No. The checker reads a live URL. The scorecard is nine questions about schema, content systems, lead magnets, and analytics — useful when you do not want to paste a URL, or when the snapshot cannot see those things.",
+  },
+  {
+    q: "What should I do if the checker finds issues?",
+    a: "Use the contact or booking button on the results screen. Karol Digital can explain which gaps actually affect enquiries and quote a website audit or GEO work. A paid audit starts at £95.",
+  },
+  {
+    q: "Why did my site fail llms.txt or schema?",
+    a: "Many UK service sites have never published a machine-readable summary or JSON-LD. Those are GEO foundations, not a Google penalty by themselves — but they are why answer engines often skip a business.",
   },
 ];
 

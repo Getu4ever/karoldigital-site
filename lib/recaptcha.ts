@@ -31,6 +31,8 @@ const BOOK_SERVICE_ALIASES: Record<string, BookServiceOption> = {
   "ai logo design": "High-Performance Website Development",
   "ai search optimisation": "Website Performance & Growth Audit",
   "website audit": "Website Performance & Growth Audit",
+  "website checker": "Website Performance & Growth Audit",
+  "geo seo checker": "Website Performance & Growth Audit",
   "conversion-focused e-commerce store":
     "Conversion-Focused E-Commerce Platform",
   "custom mobile applications":

@@ -4,13 +4,16 @@ type LeadEventLabel =
   | "contact"
   | "pricing"
   | "scorecard"
-  | "content_brief";
+  | "content_brief"
+  | "website_checker";
 
 type AnalyticsEventName =
   | "generate_lead"
   | "scorecard_started"
   | "scorecard_completed"
   | "content_brief_generated"
+  | "website_checker_started"
+  | "website_checker_completed"
   | "cta_click"
   | "tool_step";
 

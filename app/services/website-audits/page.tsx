@@ -115,6 +115,15 @@ export default function WebsiteAuditPage() {
             <li>Mobile responsiveness and accessibility testing</li>
           </ul>
 
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Want a free first look? The{" "}
+            <Link href="/tools/website-checker" className="font-semibold text-[#102f35] underline">
+              GEO & SEO website checker
+            </Link>{" "}
+            snapshots your homepage. A paid audit then covers speed, conversions,
+            and the issues a public HTML check cannot see.
+          </p>
+
           <p className="text-lg text-gray-700 leading-relaxed">
             Businesses that act on audit recommendations typically see clearer enquiry paths,
             stronger trust signals, and measurable improvements in engagement and lead quality.

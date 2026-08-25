@@ -36,6 +36,7 @@ export default function Footer() {
     { name: "Search", href: "/search" },
     { name: "Blog RSS", href: "/blog/rss.xml" },
     { name: "Contact", href: "/contact" },
+    { name: "GEO & SEO Checker", href: "/tools/website-checker" },
     { name: "AI Search Scorecard", href: "/tools/ai-search-scorecard" },
     { name: "Content Brief Generator", href: "/tools/content-brief" },
     { name: "Web Development & Coding", href: "/services/web-design" },

@@ -220,7 +220,25 @@ export default function AiSearchOptimisationPage() {
             Experience the lead magnets before you commission a full build —
             then book a consultation to turn the results into a plan.
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link
+              href="/tools/website-checker"
+              onClick={() =>
+                trackCtaClick("website_checker", "ai-search-tools")
+              }
+              className="group block p-8 rounded-xl border border-gray-200 hover:border-[#102f35] transition"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wide text-brand-gold mb-2">
+                Live snapshot
+              </p>
+              <h3 className="text-xl font-bold text-[#102f35] mb-2 group-hover:underline">
+                GEO & SEO Website Checker
+              </h3>
+              <p className="text-gray-600">
+                Paste a URL for a homepage check of titles, schema, robots.txt,
+                and llms.txt.
+              </p>
+            </Link>
             <Link
               href="/tools/ai-search-scorecard"
               onClick={() =>

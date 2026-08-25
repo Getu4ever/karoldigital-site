@@ -263,12 +263,19 @@ export default function AiSearchScorecardPage() {
           </div>
 
           <p className="mt-6 text-center text-sm text-gray-500">
-            Prefer a full review?{" "}
+            Want a live URL check instead?{" "}
+            <Link
+              href="/tools/website-checker"
+              className="text-[#102f35] font-semibold underline"
+            >
+              Run the GEO & SEO website checker
+            </Link>
+            , or{" "}
             <Link
               href="/services/website-audits"
               className="text-[#102f35] font-semibold underline"
             >
-              Request a website audit
+              request a website audit
             </Link>
             .
           </p>
