@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { financialFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "Financial Services Web Design & Systems | Karol Digital",
@@ -53,6 +55,7 @@ export default function FinanceLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={financialFaqs} title="Financial services websites FAQ" />
     </>
   );
 }

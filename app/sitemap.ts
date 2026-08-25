@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const corePages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date("2026-06-17"),
+      lastModified: new Date("2026-08-25"),
       changeFrequency: "weekly",
       priority: 1.0,
     },
@@ -20,13 +20,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date("2026-06-17"),
+      lastModified: new Date("2026-08-25"),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/industries`,
-      lastModified: new Date("2026-06-17"),
+      lastModified: new Date("2026-08-25"),
       changeFrequency: "weekly",
       priority: 0.85,
     },
@@ -38,21 +38,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/book`,
-      lastModified: new Date("2026-06-17"),
+      lastModified: new Date("2026-08-25"),
       changeFrequency: "monthly",
       priority: 0.95,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date("2026-06-17"),
+      lastModified: new Date("2026-08-25"),
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date("2026-05-19"),
+      lastModified: new Date("2026-08-25"),
       changeFrequency: "yearly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/search`,
+      lastModified: new Date("2026-08-25"),
+      changeFrequency: "weekly",
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: new Date("2026-08-25"),
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/cookie-policy`,
+      lastModified: new Date("2026-08-25"),
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/terms-of-service`,
+      lastModified: new Date("2026-08-25"),
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/disclaimer`,
+      lastModified: new Date("2026-08-25"),
+      changeFrequency: "yearly",
+      priority: 0.2,
     },
   ];
 

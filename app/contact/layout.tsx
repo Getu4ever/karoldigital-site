@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { contactFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "Contact Karol Digital | Book a Call",
@@ -43,6 +45,7 @@ export default function ContactLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={contactFaqs} title="Contact FAQ" />
     </>
   );
 }

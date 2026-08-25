@@ -2,13 +2,21 @@
 
 import { generateSEOMetadata } from "@/components/seo-server";
 
-export const metadata = generateSEOMetadata({
-  title: "Web Design & SEO Blog | Karol Digital",
-  description:
-    "Read practical guides on web design, SEO, conversion, and digital growth for UK service businesses. Updated regularly by Karol Digital.",
-  url: "https://www.karoldigital.co.uk/blog",
-  image: "/heroes/blog.png",
-});
+export const metadata = {
+  ...generateSEOMetadata({
+    title: "Web Design & SEO Blog | Karol Digital",
+    description:
+      "Read practical guides on web design, SEO, conversion, and digital growth for UK service businesses. Written by Karol, founder of Karol Digital.",
+    url: "https://www.karoldigital.co.uk/blog",
+    image: "/heroes/blog.png",
+  }),
+  alternates: {
+    canonical: "https://www.karoldigital.co.uk/blog",
+    types: {
+      "application/rss+xml": "https://www.karoldigital.co.uk/blog/rss.xml",
+    },
+  },
+};
 
 // Breadcrumb Schema for Blog home
 const breadcrumbJsonLd = {

@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { londonWebDesignFaqs } from "@/lib/page-faqs";
 import type { Metadata } from "next";
 
 const PAGE_URL =
@@ -72,6 +74,7 @@ export default function ServiceLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={londonWebDesignFaqs} title="London web design FAQ" />
     </>
   );
 }

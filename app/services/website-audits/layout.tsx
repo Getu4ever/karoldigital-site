@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { auditsFaqs } from "@/lib/page-faqs";
 import { Metadata } from "next";
 
 const PAGE_URL = "https://www.karoldigital.co.uk/services/website-audits";
@@ -69,6 +71,7 @@ export default function WebsiteAuditLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={auditsFaqs} title="Website audit FAQ" />
     </>
   );
 }

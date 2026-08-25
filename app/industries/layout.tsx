@@ -1,4 +1,6 @@
 import { getPageMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { industriesFaqs } from "@/lib/page-faqs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata("industries");
@@ -36,6 +38,7 @@ export default function IndustriesLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={industriesFaqs} title="Industry websites FAQ" />
     </>
   );
 }

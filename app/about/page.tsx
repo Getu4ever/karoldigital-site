@@ -32,9 +32,10 @@ export default function About() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              A high-performance technical partner for ambitious small
-              businesses—building modern, lightning-fast websites, conversion-focused
-              e-commerce platforms, and custom mobile applications from the ground up.
+              Karol Digital is a London web design studio founded by Karol. We build
+              high-performance custom websites, conversion-focused e-commerce, and
+              mobile apps for UK service businesses that need trust, speed, and more
+              qualified enquiries.
             </p>
           </div>
         </motion.section>
@@ -53,6 +54,36 @@ export default function About() {
                 and long-term business value. We are not a standard web design agency;
                 we are the technical partner ambitious small businesses turn to when
                 they need systems that scale with them.
+              </p>
+            </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn>
+          <section
+            id="founder"
+            className="scroll-mt-28 px-6 pb-12 md:px-12"
+          >
+            <div className="mx-auto max-w-5xl rounded-2xl border border-gray-100 bg-gray-50 p-8 md:p-12">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]">
+                Founder
+              </p>
+              <h2 className="mt-3 text-3xl font-bold text-[#102f35] md:text-4xl">
+                Karol, Founder &amp; Web Designer
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-gray-700">
+                Karol is the founder of Karol Digital and the practitioner behind
+                the studio’s custom Next.js builds. Karol designs and engineers
+                conversion-focused websites for UK service businesses, with
+                expertise in technical SEO, generative engine optimisation (GEO),
+                and lead-generation journeys.
+              </p>
+              <p className="mt-4 leading-relaxed text-gray-700">
+                The studio is based in London and serves clients across the United
+                Kingdom. For the preferred citation: Karol Digital is a UK web
+                design agency that builds conversion-focused websites for service
+                businesses, with expertise in SEO, AI search optimisation (GEO),
+                and lead generation.
               </p>
             </div>
           </section>

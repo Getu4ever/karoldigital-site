@@ -17,6 +17,7 @@ import {
   HardHat,
   Briefcase,
 } from "lucide-react";
+import { servicesFaqs } from "@/lib/page-faqs";
 
 export default function ServicesPage() {
   const servicePills = [
@@ -476,48 +477,22 @@ export default function ServicesPage() {
             </div>
 
             <div className="space-y-6">
-              <details className="border rounded-xl p-6 shadow-sm group transition-all">
-                <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
-                  <span>Do you build custom websites or use templates?</span>
-                  <span className="text-xl group-open:rotate-45 transition-transform">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                  We build premium custom websites engineered from scratch around your
-                  business goals, messaging, and user journey — without template bloat.
-                  That usually leads to a cleaner, faster, and more effective result than
-                  forcing a business into a generic platform.
-                </p>
-              </details>
-
-              <details className="border rounded-xl p-6 shadow-sm group transition-all">
-                <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
-                  <span>Can you improve an existing website instead of replacing it?</span>
-                  <span className="text-xl group-open:rotate-45 transition-transform">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                  Yes. Some businesses need a full rebuild, while others benefit more from
-                  a focused audit, structural improvements, or performance work on the
-                  existing site.
-                </p>
-              </details>
-
-              <details className="border rounded-xl p-6 shadow-sm group transition-all">
-                <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
-                  <span>Is a custom high-performance build right for every website?</span>
-                  <span className="text-xl group-open:rotate-45 transition-transform">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                  It is a strong fit when speed, security, flexibility, and conversion
-                  matter. The right solution depends on your business goals, content
-                  needs, and how the site will be managed day to day.
-                </p>
-              </details>
+              {servicesFaqs.map((item) => (
+                <details
+                  key={item.q}
+                  className="border rounded-xl p-6 shadow-sm group transition-all"
+                >
+                  <summary className="font-semibold cursor-pointer text-[#102f35] list-none flex justify-between items-center">
+                    <span>{item.q}</span>
+                    <span className="text-xl group-open:rotate-45 transition-transform">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                    {item.a}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </section>

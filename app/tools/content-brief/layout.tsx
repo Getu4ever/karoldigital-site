@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { contentBriefFaqs } from "@/lib/page-faqs";
 import type { Metadata } from "next";
 
 const PAGE_URL = "https://www.karoldigital.co.uk/tools/content-brief";
@@ -46,6 +48,7 @@ export default function ContentBriefLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       {children}
+      <GeoExtras faqs={contentBriefFaqs} title="Content brief FAQ" />
     </>
   );
 }

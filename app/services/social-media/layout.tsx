@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { socialFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "Social Media Setup & Google Business Profile UK | Karol Digital",
@@ -66,6 +68,7 @@ export default function SocialMediaLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={socialFaqs} title="Social media setup FAQ" />
     </>
   );
 }

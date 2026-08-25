@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { formatSeoTitle, generateSEOMetadata } from "@/components/seo-server";
+import { generateSEOMetadata } from "@/components/seo-server";
 import { getBlogSeoDescription, getBlogSeoTitle } from "@/lib/blog-seo";
+import { authorRef, ORG_ID, SITE_ORIGIN } from "@/lib/geo";
 import { getBlogPostSeo } from "@/lib/sanity-blog";
 
 export async function generateMetadata({
@@ -12,7 +13,13 @@ export async function generateMetadata({
   const post = await getBlogPostSeo(slug);
 
   if (!post) {
-    return { title: formatSeoTitle("Blog Post") };
+    return generateSEOMetadata({
+      title: "Blog Post",
+      description: "This article was not found on the Karol Digital blog.",
+      url: `https://www.karoldigital.co.uk/blog/${slug}`,
+      image: "/heroes/blog-post.png",
+      noIndex: true,
+    });
   }
 
   const title = getBlogSeoTitle(slug, post.seoTitle || post.title);
@@ -32,6 +39,9 @@ export async function generateMetadata({
     image,
     type: "article",
     keywords: post.seoKeywords?.join(", "),
+    publishedTime: post.publishedAt,
+    modifiedTime: post.updatedAt || post.publishedAt,
+    authors: [post.authorName || "Karol"],
   });
 }
 
@@ -83,16 +93,14 @@ export default async function BlogPostLayout({
         image: post.seoImageUrl || post.imageUrl ? [post.seoImageUrl || post.imageUrl] : [],
         datePublished: post.publishedAt,
         dateModified: post.updatedAt || post.publishedAt,
-        author: {
-          "@type": "Person",
-          name: post.authorName || "Karol Digital",
-        },
+        author: authorRef(post.authorName),
         publisher: {
           "@type": "Organization",
+          "@id": ORG_ID,
           name: "Karol Digital",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.karoldigital.co.uk/logo.png",
+            url: `${SITE_ORIGIN}/logo.png`,
           },
         },
         mainEntityOfPage: {

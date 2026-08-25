@@ -1,5 +1,17 @@
 export const homeFaqs = [
   {
+    q: "What is Karol Digital?",
+    a: "Karol Digital is a UK web design agency that builds conversion-focused websites for service businesses, with expertise in SEO, AI search optimisation (GEO), and lead generation. The studio is based in London and led by Karol, Founder & Web Designer.",
+  },
+  {
+    q: "How much does a professional website cost?",
+    a: "Karol Digital website packages start at £95 for a performance audit. Custom builds typically range from £1,250 to £6,000 depending on pages, e-commerce, and integrations. You receive a clear fixed quote before work starts.",
+  },
+  {
+    q: "What is GEO (generative engine optimisation)?",
+    a: "GEO is the practice of structuring your website, schema, and content so AI search engines such as ChatGPT, Perplexity, and Google AI Overviews can understand, cite, and recommend your business accurately.",
+  },
+  {
     q: "Who do you work best with?",
     a: "We work best with growing small businesses and service providers that need modern, fast digital systems—whether that is a high-performance website, a conversion-focused e-commerce store, or a custom mobile application that keeps customers coming back.",
   },

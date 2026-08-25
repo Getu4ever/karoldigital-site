@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { cateringFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "Catering Website Design & Hospitality Systems | Karol Digital",
@@ -45,6 +47,7 @@ export default function CateringLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={cateringFaqs} title="Catering website FAQ" />
     </>
   );
 }

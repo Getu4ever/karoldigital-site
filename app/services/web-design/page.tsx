@@ -33,9 +33,9 @@ export default function WebDesignPage() {
             </motion.h1>
 
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-4">
-              Premium custom-built websites for small businesses — modern, fast, and
-              conversion-focused — engineered from scratch without template bloat so
-              every page supports growth and trust.
+              Karol Digital is a UK web design agency that builds conversion-focused
+              custom websites for service businesses — modern, fast, and engineered
+              from scratch without template bloat so every page supports growth and trust.
             </p>
             <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto">
               Ideal for UK service businesses and SMEs who want a high-performance

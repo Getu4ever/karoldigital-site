@@ -241,13 +241,15 @@ export default function HomePageClient() {
             </motion.h1>
 
             <motion.p
-              className="mx-auto mt-7 max-w-xl text-base text-white/80 md:text-lg"
+              className="geo-citation mx-auto mt-7 max-w-2xl text-base text-white/80 md:text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.7 }}
             >
-              Custom digital systems for growing UK service businesses — fast, credible, and built
-              to convert.
+              Karol Digital is a UK web design agency that builds conversion-focused
+              websites for service businesses, with expertise in SEO, AI search
+              optimisation (GEO), and lead generation. Custom sites for growing UK
+              firms — fast, credible, and typically live in 3–6 weeks.
             </motion.p>
 
             <motion.div

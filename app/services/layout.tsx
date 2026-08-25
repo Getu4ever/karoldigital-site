@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { servicesFaqs } from "@/lib/page-faqs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -68,6 +70,7 @@ export default function ServicesLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={servicesFaqs} title="Services FAQ" showFaqs={false} />
     </>
   );
 }

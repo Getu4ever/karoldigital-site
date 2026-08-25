@@ -8,12 +8,14 @@ import AnimateWrapper from "@/components/AnimateWrapper";
 import ChatbaseWidget from "@/components/ChatbaseWidget";
 import CookieConsentDialog from "@/components/CookieConsentDialog";
 
-/** Public site chrome — omitted on /admin so the dashboard header (Sign Out, etc.) is visible. */
+/** Public site chrome — omitted on /admin and /studio. */
 export default function SiteChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const isAdmin = pathname?.startsWith("/admin") ?? false;
+  const hideChrome =
+    (pathname?.startsWith("/admin") ?? false) ||
+    (pathname?.startsWith("/studio") ?? false);
 
-  if (isAdmin) {
+  if (hideChrome) {
     return <>{children}</>;
   }
 
@@ -22,8 +24,22 @@ export default function SiteChrome({ children }: { children: ReactNode }) {
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-[#102f35]"
+      >
+        Skip to content
+      </a>
       <Header />
-      {isHome ? <div className="flex-1">{children}</div> : <AnimateWrapper>{children}</AnimateWrapper>}
+      {isHome ? (
+        <div id="main-content" className="flex-1" tabIndex={-1}>
+          {children}
+        </div>
+      ) : (
+        <div id="main-content" className="flex-1" tabIndex={-1}>
+          <AnimateWrapper>{children}</AnimateWrapper>
+        </div>
+      )}
       <Footer />
       <ChatbaseWidget />
       <CookieConsentDialog />

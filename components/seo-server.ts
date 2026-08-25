@@ -10,6 +10,11 @@ interface SEOProps {
   image: string;
   type?: SeoType;
   keywords?: string;
+  imageAlt?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  authors?: string[];
+  noIndex?: boolean;
 }
 
 /**
@@ -34,7 +39,7 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   home: {
     title: "Web Design for UK Service Businesses | Karol Digital",
     description:
-      "Fast, conversion-focused websites for UK service businesses. Clear messaging, stronger credibility, and more qualified enquiries — built by Karol Digital in London.",
+      "Karol Digital is a UK web design agency that builds conversion-focused websites for service businesses, with expertise in SEO, AI search optimisation (GEO), and lead generation.",
     url: "https://www.karoldigital.co.uk/",
     image: "/seo-cover.jpg",
     keywords:
@@ -45,7 +50,9 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   about: {
     title: "About Karol Digital | UK Web Design Studio",
     description:
-      "Meet Karol Digital — a London web design studio building high-performance websites for UK service businesses that need trust, clarity, and more enquiries.",
+      "Meet Karol, founder of Karol Digital — a London web design studio building high-performance websites for UK service businesses that need trust, clarity, and more enquiries.",
+    keywords:
+      "about Karol Digital, London web designer, founder Karol, UK web design studio",
     url: "https://www.karoldigital.co.uk/about",
     image: "/about-team.jpg",
     type: "website",
@@ -149,6 +156,21 @@ export const seoConfig: Record<PageKey, SEOProps> = {
 /** ~580px in Google SERP preview (Seobility limit) */
 export const SEO_TITLE_MAX_LENGTH = 55;
 export const SEO_BRAND_SUFFIX = " | Karol Digital";
+export const SEO_DESCRIPTION_MAX_LENGTH = 160;
+
+export function clampSeoDescription(
+  description: string,
+  maxLength = SEO_DESCRIPTION_MAX_LENGTH
+): string {
+  const normalized = description.replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxLength) return normalized;
+
+  const ellipsis = "…";
+  let cut = normalized.slice(0, maxLength - ellipsis.length);
+  const lastSpace = cut.lastIndexOf(" ");
+  if (lastSpace > 80) cut = cut.slice(0, lastSpace);
+  return `${cut.trimEnd()}${ellipsis}`;
+}
 
 /**
  * Truncates an overlong title by removing words from the middle so the
@@ -223,32 +245,72 @@ export function generateSEOMetadata({
   image,
   type = "website",
   keywords,
+  imageAlt,
+  publishedTime,
+  modifiedTime,
+  authors,
+  noIndex = false,
 }: SEOProps): Metadata {
   const formattedTitle = formatSeoTitle(title);
+  const clampedDescription = clampSeoDescription(description);
+  const ogImage = {
+    url: image,
+    width: 1200,
+    height: 630,
+    alt: imageAlt || formattedTitle,
+  };
 
   return {
     title: formattedTitle,
-    description,
+    description: clampedDescription,
     keywords,
-    robots: {
-      index: true,
-      follow: true,
-    },
+    authors: (authors ?? ["Karol"]).map((name) => ({
+      name,
+      url: "https://www.karoldigital.co.uk/about#founder",
+    })),
+    creator: "Karol",
+    publisher: "Karol Digital",
+    robots: noIndex
+      ? { index: false, follow: true }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+          },
+        },
     openGraph: {
       title: formattedTitle,
-      description,
+      description: clampedDescription,
       url,
-      images: [{ url: image }],
-      type,
+      siteName: "Karol Digital",
+      locale: "en_GB",
+      images: [ogImage],
+      ...(type === "article"
+        ? {
+            type: "article" as const,
+            publishedTime,
+            modifiedTime,
+            authors: authors ?? ["Karol"],
+          }
+        : { type: "website" as const }),
     },
     twitter: {
       card: "summary_large_image",
       title: formattedTitle,
-      description,
+      description: clampedDescription,
       images: [image],
     },
     alternates: {
       canonical: url,
+      languages: {
+        "en-GB": url,
+        "x-default": url,
+      },
     },
   };
 }

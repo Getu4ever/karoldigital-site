@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { fitnessFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "Fitness & Wellness Studio Websites | Karol Digital",
@@ -46,6 +48,7 @@ export default function FitnessStudiosLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={fitnessFaqs} title="Fitness studio website FAQ" />
     </>
   );
 }

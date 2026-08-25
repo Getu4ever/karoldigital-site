@@ -33,6 +33,8 @@ export default function Footer() {
 
   const exploreLinks = [
     { name: "Blog", href: "/blog" },
+    { name: "Search", href: "/search" },
+    { name: "Blog RSS", href: "/blog/rss.xml" },
     { name: "Contact", href: "/contact" },
     { name: "AI Search Scorecard", href: "/tools/ai-search-scorecard" },
     { name: "Content Brief Generator", href: "/tools/content-brief" },

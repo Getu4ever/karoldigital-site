@@ -1,28 +1,13 @@
-import type { Metadata } from "next";
-import { formatSeoTitle } from "@/components/seo-server";
+import { generateSEOMetadata } from "@/components/seo-server";
 
-const title = formatSeoTitle("Digital Marketing & SEO News");
-const description =
-  "Curated digital marketing and SEO headlines. For original Karol Digital advice, visit the blog.";
-
-export const metadata: Metadata = {
-  title,
-  description,
-  robots: {
-    index: false,
-    follow: false,
-  },
-  alternates: {
-    canonical: "https://www.karoldigital.co.uk/news",
-  },
-  openGraph: {
-    title,
-    description,
-    url: "https://www.karoldigital.co.uk/news",
-    images: [{ url: "/heroes/news.png" }],
-    type: "website",
-  },
-};
+export const metadata = generateSEOMetadata({
+  title: "Digital Marketing & SEO News",
+  description:
+    "Curated digital marketing and SEO headlines. For original Karol Digital advice, visit the blog.",
+  url: "https://www.karoldigital.co.uk/news",
+  image: "/heroes/news.png",
+  noIndex: true,
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

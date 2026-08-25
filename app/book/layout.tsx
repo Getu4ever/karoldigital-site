@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { bookFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "Book a Free Website Consultation | Karol Digital",
@@ -37,6 +39,7 @@ export default function BookLayout({ children }: { children: React.ReactNode }) 
         }}
       />
       {children}
+      <GeoExtras faqs={bookFaqs} title="Booking FAQ" />
     </>
   );
 }

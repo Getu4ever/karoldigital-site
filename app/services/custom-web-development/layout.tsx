@@ -1,6 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import GeoExtras from "@/components/GeoExtras";
+import { customWebDevFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "Custom Web Development | Bespoke Systems",
@@ -50,9 +50,8 @@ export default function CustomDevelopmentLayout({
           __html: JSON.stringify(customDevSchema),
         }}
       />
-      <Header />
       {children}
-      <Footer />
+      <GeoExtras faqs={customWebDevFaqs} title="Custom web development FAQ" />
     </>
   );
 }

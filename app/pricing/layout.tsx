@@ -1,6 +1,8 @@
+import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { pricingFaqs } from "@/lib/page-faqs";
 import { Metadata } from "next";
 import React from "react";
-import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata: Metadata = generateSEOMetadata({
   title: "Website Design Pricing UK | Karol Digital",
@@ -109,6 +111,7 @@ export default function PricingLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={pricingFaqs} title="Website pricing FAQ" />
     </>
   );
 }

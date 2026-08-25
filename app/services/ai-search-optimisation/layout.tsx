@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { geoFaqs } from "@/lib/page-faqs";
 import { Metadata } from "next";
 
 const PAGE_URL =
@@ -91,35 +93,6 @@ const schema = {
         ],
       },
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What is GEO (Generative Engine Optimisation)?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "GEO is the practice of structuring your website, content, and schema so AI search engines and answer tools can understand, cite, and recommend your business accurately.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How is AI search different from traditional SEO?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Traditional SEO ranks pages in link lists. AI search summarises answers from entities it trusts. You still need strong technical SEO, plus clear definitions, structured data, and citable content.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What should UK service businesses do first?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Start with an AI search readiness scorecard, fix schema and answer-ready service pages, then add one interactive lead magnet and track completions in analytics.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -135,6 +108,7 @@ export default function AiSearchOptimisationLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       {children}
+      <GeoExtras faqs={geoFaqs} title="AI search optimisation FAQ" />
     </>
   );
 }

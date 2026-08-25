@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { aiLogoFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "AI Logo Design Support & Brand Identity | Karol Digital",
@@ -66,6 +68,7 @@ export default function AILogoDesignLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={aiLogoFaqs} title="AI logo FAQ" showFaqs={false} />
     </>
   );
 }

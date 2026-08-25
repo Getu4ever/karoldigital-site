@@ -89,9 +89,10 @@ export default function AiSearchOptimisationPage() {
             <span className="text-brand-gold-muted">Optimisation</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-            Get cited by AI engines, publish content that compounds, capture
-            leads with interactive tools, and track the progress that turns
-            visibility into enquiries.
+            GEO (generative engine optimisation) structures your website, schema,
+            and content so ChatGPT, Perplexity, and Google AI Overviews can cite
+            your business accurately — then we add content systems, lead magnets,
+            and analytics so visibility turns into enquiries.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link

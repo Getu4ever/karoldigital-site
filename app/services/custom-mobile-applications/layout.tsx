@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { mobileAppFaqs } from "@/lib/page-faqs";
 import { Metadata } from "next";
 
 const PAGE_URL =
@@ -72,6 +74,7 @@ export default function CustomMobileApplicationsLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={mobileAppFaqs} title="Custom mobile app FAQ" />
     </>
   );
 }

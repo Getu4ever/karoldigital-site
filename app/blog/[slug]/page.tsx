@@ -78,12 +78,16 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                 })}
               </time>
             )}
-            {post.authorName && (
-              <>
-                <span aria-hidden="true">·</span>
-                <span>By {post.authorName}</span>
-              </>
-            )}
+            <span aria-hidden="true">·</span>
+            <span>
+              By{" "}
+              <Link href="/about#founder" className="font-medium text-[#102f35] hover:underline">
+                {post.authorName && post.authorName !== "Karol Digital"
+                  ? post.authorName
+                  : "Karol"}
+              </Link>
+              , Founder &amp; Web Designer
+            </span>
           </div>
 
           <article className="prose prose-lg mb-16 max-w-none">

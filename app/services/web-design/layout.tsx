@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { webDesignFaqs } from "@/lib/page-faqs";
 import { Metadata } from "next";
 
 // 1. Correct the URL to the specific web design page
@@ -70,6 +72,7 @@ export default function WebDesignLayout({
         }}
       />
       {children}
+      <GeoExtras faqs={webDesignFaqs} title="Web design FAQ" />
     </>
   );
 }

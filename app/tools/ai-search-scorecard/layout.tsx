@@ -1,4 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
+import GeoExtras from "@/components/GeoExtras";
+import { scorecardFaqs } from "@/lib/page-faqs";
 import type { Metadata } from "next";
 
 const PAGE_URL =
@@ -47,6 +49,7 @@ export default function ScorecardLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       {children}
+      <GeoExtras faqs={scorecardFaqs} title="AI search scorecard FAQ" />
     </>
   );
 }

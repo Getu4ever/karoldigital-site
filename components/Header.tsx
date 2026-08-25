@@ -310,6 +310,13 @@ export default function Header() {
           })}
 
           <Link
+            href="/search"
+            aria-label="Search Karol Digital"
+            className="text-white hover:text-brand-gold-muted"
+          >
+            <Search size={18} />
+          </Link>
+          <Link
             href="/book"
             className="btn-primary px-6 py-3"
           >
@@ -464,6 +471,14 @@ export default function Header() {
               })}
 
               <div className="flex flex-col gap-2 pt-2 border-t border-white/10">
+                <Link
+                  href="/search"
+                  onClick={closeMobileMenu}
+                  className="flex items-center gap-3 text-lg font-semibold text-white"
+                >
+                  <Search size={18} />
+                  Search
+                </Link>
                 <Link
                   href="/book"
                   onClick={closeMobileMenu}

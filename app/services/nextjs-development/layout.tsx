@@ -1,6 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import GeoExtras from "@/components/GeoExtras";
+import { nextjsFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
   title: "High-Performance Website Engineering | Karol Digital",
@@ -50,9 +50,8 @@ export default function NextJSLayout({
           __html: JSON.stringify(nextjsSchema),
         }}
       />
-      <Header />
       {children}
-      <Footer />
+      <GeoExtras faqs={nextjsFaqs} title="Next.js development FAQ" />
     </>
   );
 }

@@ -116,9 +116,10 @@ export default function PricingPage() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Premium pricing for ambitious small businesses investing in modern,
-              high-quality digital assets—websites, conversion-focused stores, and
-              custom mobile applications built completely from scratch.
+              Karol Digital is a London web design studio. Custom website packages
+              for UK service businesses start at £95 for an audit; typical custom
+              builds range from £1,250 to £6,000 with a clear fixed quote before
+              work starts.
             </p>
 
             <p className="text-sm md:text-base text-gray-200 max-w-3xl mx-auto mt-4">
