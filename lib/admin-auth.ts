@@ -64,12 +64,16 @@ function timingSafeEqualString(a: string, b: string): boolean {
 export async function verifyAdminPassword(password: string): Promise<boolean> {
   if (!password) return false;
 
-  const account = await prisma.adminAccount.findUnique({
-    where: { id: ADMIN_ACCOUNT_ID },
-  });
+  try {
+    const account = await prisma.adminAccount.findUnique({
+      where: { id: ADMIN_ACCOUNT_ID },
+    });
 
-  if (account) {
-    return verifyPassword(password, account.passwordHash);
+    if (account) {
+      return verifyPassword(password, account.passwordHash);
+    }
+  } catch (error) {
+    console.error("[adminAuth] Database lookup failed; trying bootstrap password:", error);
   }
 
   const bootstrap = getBootstrapPassword();

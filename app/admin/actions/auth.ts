@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { unstable_rethrow } from "next/navigation";
 import {
   clearAdminSessionCookie,
   getBootstrapPassword,
@@ -17,20 +18,32 @@ import { prisma } from "@/lib/db";
 export async function adminLoginAction(formData: FormData) {
   const password = String(formData.get("password") || "");
 
-  const ok = await verifyAdminPassword(password);
-  if (!ok) {
+  try {
+    const ok = await verifyAdminPassword(password);
+    if (!ok) {
+      redirect("/admin/login?error=1");
+    }
+
+    // First successful login with bootstrap password: persist hash so change-password works.
+    try {
+      const account = await prisma.adminAccount.findUnique({
+        where: { id: ADMIN_ACCOUNT_ID },
+      });
+      if (!account) {
+        await upsertAdminPassword(password);
+      }
+    } catch (persistError) {
+      console.error("[adminLogin] Could not persist admin account hash:", persistError);
+      // Still allow session — bootstrap password already verified.
+    }
+
+    await setAdminSessionCookie();
+  } catch (error) {
+    unstable_rethrow(error);
+    console.error("[adminLogin] Login failed:", error);
     redirect("/admin/login?error=1");
   }
 
-  // First successful login with bootstrap password: persist hash so change-password works.
-  const account = await prisma.adminAccount.findUnique({
-    where: { id: ADMIN_ACCOUNT_ID },
-  });
-  if (!account) {
-    await upsertAdminPassword(password);
-  }
-
-  await setAdminSessionCookie();
   redirect("/admin/dashboard");
 }
 

@@ -251,6 +251,7 @@ function ProfessionalInvoicePdf({
   leadSubmitted,
   clientName,
   companyName,
+  clientAddress,
   email,
   phone,
   packageTitle,
@@ -271,6 +272,7 @@ function ProfessionalInvoicePdf({
   leadSubmitted: string;
   clientName: string;
   companyName: string;
+  clientAddress: string;
   email: string;
   phone: string;
   packageTitle: string;
@@ -342,6 +344,16 @@ function ProfessionalInvoicePdf({
               <Text style={styles.stackLine}>
                 <Text style={styles.stackLabel}>Company Name: </Text>
                 {companyName || "—"}
+              </Text>
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Client Address: </Text>
+                {clientAddress
+                  ? clientAddress
+                      .split(/\r?\n/)
+                      .map((line) => line.trim())
+                      .filter(Boolean)
+                      .join(", ")
+                  : "—"}
               </Text>
               <Text style={styles.stackLine}>
                 <Text style={styles.stackLabel}>Email Address: </Text>
@@ -444,6 +456,7 @@ export default function ProFormaInvoicePanel({
 }: Props) {
   const [invoiceRef, setInvoiceRef] = useState("KD-INV-001");
   const [issueDate, setIssueDate] = useState("");
+  const [clientAddress, setClientAddress] = useState("");
   const [bankAccountName, setBankAccountName] = useState("Karol Digital Ltd");
   const [bankSortCode, setBankSortCode] = useState("00-00-00");
   const [bankAccountNumber, setBankAccountNumber] = useState("00000000");
@@ -475,6 +488,7 @@ export default function ProFormaInvoicePanel({
     const today = new Date();
     setIssueDate(today.toISOString().slice(0, 10));
     setInvoiceRef(`KD-INV-${lead.id.slice(-6).toUpperCase()}`);
+    setClientAddress("");
   }, [lead]);
 
   const packageTotal = useMemo(
@@ -583,6 +597,7 @@ export default function ProFormaInvoicePanel({
           leadSubmitted={formatLeadSubmitted(lead.createdAt)}
           clientName={lead.name}
           companyName={lead.company || ""}
+          clientAddress={clientAddress}
           email={lead.email}
           phone={lead.phone || ""}
           packageTitle={
@@ -661,6 +676,18 @@ export default function ProFormaInvoicePanel({
             type="date"
             value={issueDate}
             onChange={(e) => setIssueDate(e.target.value)}
+            className="w-full rounded-lg border border-gray-200 px-3 py-2"
+          />
+        </label>
+        <label className="text-sm md:col-span-2">
+          <span className="mb-1 block font-semibold text-[#102f35]">
+            Client address
+          </span>
+          <textarea
+            value={clientAddress}
+            onChange={(e) => setClientAddress(e.target.value)}
+            placeholder="Street, city, postcode"
+            rows={2}
             className="w-full rounded-lg border border-gray-200 px-3 py-2"
           />
         </label>

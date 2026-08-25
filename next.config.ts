@@ -2,6 +2,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Allow both localhost and 127.0.0.1 in dev so Server Actions / HMR
+  // are not blocked when the browser origin differs from the Next host.
+  allowedDevOrigins: ["127.0.0.1", "localhost"],
   images: {
     qualities: [75, 82],
     remotePatterns: [

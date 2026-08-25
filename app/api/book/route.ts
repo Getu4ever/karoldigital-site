@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { persistPublicLead } from "@/lib/persist-lead";
+import { forwardPortalEnquiry } from "@/lib/forward-portal-enquiry";
 import {
   buildAdminNotificationEmail,
   buildUserConfirmationEmail,
@@ -114,6 +115,18 @@ export async function POST(req: Request) {
       phone: phoneValue,
       serviceOfInterest: selectedService,
       sourceChannel: "Book a call",
+      message: messageValue || null,
+    });
+
+    await forwardPortalEnquiry({
+      service: "web",
+      sourceSite: "karoldigital.co.uk",
+      sourceKind: "book",
+      sourceChannel: selectedService,
+      name: String(name),
+      email: String(email),
+      phone: phoneValue,
+      company: companyValue,
       message: messageValue || null,
     });
 
