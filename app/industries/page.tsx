@@ -39,7 +39,7 @@ export default function IndustriesPage() {
       linkLabel: "Construction sites",
       icon: <HardHat size={20} />,
       description:
-        "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
+        "High-performance websites for builders and specialist trades — featuring British Solar Direct.",
     },
     {
       href: "/industries/fitness-studios",

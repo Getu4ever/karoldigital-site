@@ -158,7 +158,7 @@ const differenceImages = [
 const industryImages = [
   { src: "/home/sections/ind-financial.jpg", alt: "Financial services website design" },
   { src: "/home/sections/ind-immigration.jpg", alt: "Immigration law firm website design" },
-  { src: "/home/sections/ind-construction.jpg", alt: "Construction and trades website design" },
+  { src: "/home/sections/ind-construction.png", alt: "Construction and trades website design" },
   { src: "/home/sections/ind-fitness.png", alt: "Fitness and wellness studio website design" },
 ] as const;
 

@@ -159,7 +159,7 @@ export const homeIndustries = [
   {
     title: "Construction and Trades",
     description:
-      "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
+      "High-performance websites for builders and specialist trades — clear packages, local trust, and quote-ready journeys.",
     href: "/industries/building-services",
     linkLabel: "Construction sites",
   },
