@@ -25,6 +25,24 @@ type MilestoneRow = {
   amount: number;
 };
 
+type UkClientAddress = {
+  addressLine1: string;
+  addressLine2: string;
+  townCity: string;
+  county: string;
+  postcode: string;
+  country: string;
+};
+
+const EMPTY_UK_ADDRESS: UkClientAddress = {
+  addressLine1: "",
+  addressLine2: "",
+  townCity: "",
+  county: "",
+  postcode: "",
+  country: "United Kingdom",
+};
+
 const BRAND_TEAL = "#102f35";
 const BRAND_GOLD = "#c9a84b";
 
@@ -251,7 +269,12 @@ function ProfessionalInvoicePdf({
   leadSubmitted,
   clientName,
   companyName,
-  clientAddress,
+  addressLine1,
+  addressLine2,
+  townCity,
+  county,
+  postcode,
+  country,
   email,
   phone,
   packageTitle,
@@ -272,7 +295,12 @@ function ProfessionalInvoicePdf({
   leadSubmitted: string;
   clientName: string;
   companyName: string;
-  clientAddress: string;
+  addressLine1: string;
+  addressLine2: string;
+  townCity: string;
+  county: string;
+  postcode: string;
+  country: string;
   email: string;
   phone: string;
   packageTitle: string;
@@ -346,14 +374,32 @@ function ProfessionalInvoicePdf({
                 {companyName || "—"}
               </Text>
               <Text style={styles.stackLine}>
-                <Text style={styles.stackLabel}>Client Address: </Text>
-                {clientAddress
-                  ? clientAddress
-                      .split(/\r?\n/)
-                      .map((line) => line.trim())
-                      .filter(Boolean)
-                      .join(", ")
-                  : "—"}
+                <Text style={styles.stackLabel}>Address Line 1: </Text>
+                {addressLine1 || "—"}
+              </Text>
+              {addressLine2 ? (
+                <Text style={styles.stackLine}>
+                  <Text style={styles.stackLabel}>Address Line 2: </Text>
+                  {addressLine2}
+                </Text>
+              ) : null}
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Town / City: </Text>
+                {townCity || "—"}
+              </Text>
+              {county ? (
+                <Text style={styles.stackLine}>
+                  <Text style={styles.stackLabel}>County: </Text>
+                  {county}
+                </Text>
+              ) : null}
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Postcode: </Text>
+                {postcode || "—"}
+              </Text>
+              <Text style={styles.stackLine}>
+                <Text style={styles.stackLabel}>Country: </Text>
+                {country || "United Kingdom"}
               </Text>
               <Text style={styles.stackLine}>
                 <Text style={styles.stackLabel}>Email Address: </Text>
@@ -456,7 +502,8 @@ export default function ProFormaInvoicePanel({
 }: Props) {
   const [invoiceRef, setInvoiceRef] = useState("KD-INV-001");
   const [issueDate, setIssueDate] = useState("");
-  const [clientAddress, setClientAddress] = useState("");
+  const [clientAddress, setClientAddress] =
+    useState<UkClientAddress>(EMPTY_UK_ADDRESS);
   const [bankAccountName, setBankAccountName] = useState("Karol Digital Ltd");
   const [bankSortCode, setBankSortCode] = useState("00-00-00");
   const [bankAccountNumber, setBankAccountNumber] = useState("00000000");
@@ -488,7 +535,7 @@ export default function ProFormaInvoicePanel({
     const today = new Date();
     setIssueDate(today.toISOString().slice(0, 10));
     setInvoiceRef(`KD-INV-${lead.id.slice(-6).toUpperCase()}`);
-    setClientAddress("");
+    setClientAddress(EMPTY_UK_ADDRESS);
   }, [lead]);
 
   const packageTotal = useMemo(
@@ -597,7 +644,12 @@ export default function ProFormaInvoicePanel({
           leadSubmitted={formatLeadSubmitted(lead.createdAt)}
           clientName={lead.name}
           companyName={lead.company || ""}
-          clientAddress={clientAddress}
+          addressLine1={clientAddress.addressLine1}
+          addressLine2={clientAddress.addressLine2}
+          townCity={clientAddress.townCity}
+          county={clientAddress.county}
+          postcode={clientAddress.postcode}
+          country={clientAddress.country}
           email={lead.email}
           phone={lead.phone || ""}
           packageTitle={
@@ -681,13 +733,99 @@ export default function ProFormaInvoicePanel({
         </label>
         <label className="text-sm md:col-span-2">
           <span className="mb-1 block font-semibold text-[#102f35]">
-            Client address
+            Address line 1
           </span>
-          <textarea
-            value={clientAddress}
-            onChange={(e) => setClientAddress(e.target.value)}
-            placeholder="Street, city, postcode"
-            rows={2}
+          <input
+            value={clientAddress.addressLine1}
+            onChange={(e) =>
+              setClientAddress((prev) => ({
+                ...prev,
+                addressLine1: e.target.value,
+              }))
+            }
+            placeholder="House number and street name"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2"
+          />
+        </label>
+        <label className="text-sm md:col-span-2">
+          <span className="mb-1 block font-semibold text-[#102f35]">
+            Address line 2{" "}
+            <span className="font-normal text-gray-500">(optional)</span>
+          </span>
+          <input
+            value={clientAddress.addressLine2}
+            onChange={(e) =>
+              setClientAddress((prev) => ({
+                ...prev,
+                addressLine2: e.target.value,
+              }))
+            }
+            placeholder="Flat, building, or locality"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2"
+          />
+        </label>
+        <label className="text-sm">
+          <span className="mb-1 block font-semibold text-[#102f35]">
+            Town / City
+          </span>
+          <input
+            value={clientAddress.townCity}
+            onChange={(e) =>
+              setClientAddress((prev) => ({
+                ...prev,
+                townCity: e.target.value,
+              }))
+            }
+            placeholder="e.g. London"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2"
+          />
+        </label>
+        <label className="text-sm">
+          <span className="mb-1 block font-semibold text-[#102f35]">
+            County{" "}
+            <span className="font-normal text-gray-500">(optional)</span>
+          </span>
+          <input
+            value={clientAddress.county}
+            onChange={(e) =>
+              setClientAddress((prev) => ({
+                ...prev,
+                county: e.target.value,
+              }))
+            }
+            placeholder="e.g. Greater London"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2"
+          />
+        </label>
+        <label className="text-sm">
+          <span className="mb-1 block font-semibold text-[#102f35]">
+            Postcode
+          </span>
+          <input
+            value={clientAddress.postcode}
+            onChange={(e) =>
+              setClientAddress((prev) => ({
+                ...prev,
+                postcode: e.target.value.toUpperCase(),
+              }))
+            }
+            placeholder="e.g. SW1A 1AA"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 uppercase"
+          />
+        </label>
+        <label className="text-sm">
+          <span className="mb-1 block font-semibold text-[#102f35]">
+            Country
+          </span>
+          <input
+            value={clientAddress.country}
+            onChange={(e) =>
+              setClientAddress((prev) => ({
+                ...prev,
+                country: e.target.value,
+              }))
+            }
+            placeholder="United Kingdom"
             className="w-full rounded-lg border border-gray-200 px-3 py-2"
           />
         </label>
