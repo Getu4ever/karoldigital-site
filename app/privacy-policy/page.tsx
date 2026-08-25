@@ -77,6 +77,7 @@ export default function PrivacyPolicy() {
         <p className="leading-7">
           Karol Digital - Web Design & Digital Marketing for UK Small Business <br />
           Email: info@karoldigital.co.uk <br />
+          Phone: 07565 472445 <br />
           Location: London, United Kingdom
         </p>
       </div>

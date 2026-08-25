@@ -125,7 +125,7 @@ function BookingForm() {
 
         <div>
           <label htmlFor="book-company" className="block text-sm font-bold text-[#102f35] mb-2">
-            Company
+            Company <span className="font-normal text-gray-500">(optional)</span>
           </label>
           <input
             id="book-company"
@@ -134,13 +134,12 @@ function BookingForm() {
             value={formData.company}
             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
             placeholder="Business or organisation name"
-            required
           />
         </div>
 
         <div>
           <label htmlFor="book-phone" className="block text-sm font-bold text-[#102f35] mb-2">
-            Phone Number
+            Phone Number <span className="font-normal text-gray-500">(optional)</span>
           </label>
           <input
             id="book-phone"
@@ -149,7 +148,6 @@ function BookingForm() {
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             placeholder="Best number to reach you"
-            required
           />
         </div>
 

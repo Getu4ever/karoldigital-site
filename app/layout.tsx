@@ -3,6 +3,17 @@ import { ReactNode } from "react";
 import SiteChrome from "@/components/SiteChrome";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Metadata, Viewport } from "next";
+import {
+  SITE_EMAIL,
+  SITE_LOCALITY,
+  SITE_LOCATION_LABEL,
+  SITE_PHONE_DISPLAY,
+  SITE_PHONE_E164,
+  SITE_REGION,
+  SITE_COUNTRY,
+  SITE_COUNTRY_NAME,
+  SITE_SOCIAL,
+} from "@/lib/site-contact";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -11,9 +22,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Karol Digital — Web Design for UK Service Businesses",
+  title: "Web Design for UK Service Businesses | Karol Digital",
   description:
-    "We build fast, trust-building websites for UK service businesses that want more qualified enquiries, clearer messaging, and stronger online credibility.",
+    "Fast, conversion-focused websites for UK service businesses. Clear messaging, stronger credibility, and more qualified enquiries.",
   metadataBase: new URL("https://www.karoldigital.co.uk"),
   alternates: {
     canonical: "https://www.karoldigital.co.uk/",
@@ -23,7 +34,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://www.karoldigital.co.uk/",
     siteName: "Karol Digital",
-    title: "Karol Digital — Web Design for UK Service Businesses",
+    title: "Web Design for UK Service Businesses | Karol Digital",
     description:
       "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
     images: [
@@ -47,7 +58,15 @@ const professionalServiceJsonLd = {
   url: "https://www.karoldigital.co.uk",
   image: "https://www.karoldigital.co.uk/seo-cover.jpg",
   logo: "https://www.karoldigital.co.uk/logo.png",
+  email: SITE_EMAIL,
+  telephone: SITE_PHONE_E164,
   priceRange: "££",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: SITE_LOCALITY,
+    addressRegion: SITE_REGION,
+    addressCountry: SITE_COUNTRY,
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -58,14 +77,15 @@ const professionalServiceJsonLd = {
   ],
   areaServed: {
     "@type": "Country",
-    name: "United Kingdom",
+    name: SITE_COUNTRY_NAME,
   },
   description:
     "Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, stronger credibility, and clearer online messaging.",
   sameAs: [
-    "https://www.facebook.com/karoldigital",
-    "https://www.linkedin.com/company/karoldigital",
-    "https://x.com/karoldigital",
+    SITE_SOCIAL.facebook,
+    SITE_SOCIAL.instagram,
+    SITE_SOCIAL.linkedin,
+    SITE_SOCIAL.youtube,
   ],
 };
 
@@ -74,6 +94,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: "Karol Digital",
   url: "https://www.karoldigital.co.uk",
+  description: `London web design studio. Call ${SITE_PHONE_DISPLAY} or email ${SITE_EMAIL}. Serving ${SITE_LOCATION_LABEL}.`,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

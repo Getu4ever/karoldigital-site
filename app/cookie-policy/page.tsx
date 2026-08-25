@@ -152,6 +152,11 @@ export default function CookiePolicy() {
           </a>
           <br />
           Location: London, United Kingdom
+          <br />
+          Phone:{" "}
+          <a href="tel:+447565472445" className="text-[#102f35] hover:underline">
+            07565 472445
+          </a>
         </p>
       </div>
     </>

@@ -1,37 +1,12 @@
-// /about/layout.tsx
-import { Metadata } from "next";
+import { generateSEOMetadata } from "@/components/seo-server";
 
-export const metadata: Metadata = {
-  title:
-    "About Karol Digital | Premium Small Business App Developers & Custom Web Engineering UK",
+export const metadata = generateSEOMetadata({
+  title: "About Karol Digital | UK Web Design Studio",
   description:
-    "About Karol Digital — premium small business app developers and high-performance e-commerce developers. Custom web engineering UK for ambitious businesses ready to move beyond slow templates.",
-  keywords: [
-    "About Karol Digital",
-    "Premium Small Business App Developers",
-    "Custom Web Engineering UK",
-    "High-Performance E-Commerce Developers",
-  ],
-  alternates: {
-    canonical: "https://www.karoldigital.co.uk/about",
-  },
-  openGraph: {
-    title:
-      "About Karol Digital | Premium Small Business App Developers & Custom Web Engineering UK",
-    description:
-      "Meet Karol Digital — a high-performance technical partner building custom websites, e-commerce platforms, and mobile apps for ambitious small businesses.",
-    url: "https://www.karoldigital.co.uk/about",
-    images: [
-      {
-        url: "/about-our-story.webp",
-        width: 1200,
-        height: 630,
-        alt: "About Karol Digital — high-performance technical partner",
-      },
-    ],
-    type: "website",
-  },
-};
+    "Meet Karol Digital — a London web design studio building high-performance websites for UK service businesses that need trust, clarity, and more enquiries.",
+  url: "https://www.karoldigital.co.uk/about",
+  image: "/about-our-story.webp",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -55,7 +30,6 @@ const breadcrumbJsonLd = {
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* Breadcrumb schema for improved Google sitelinks */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

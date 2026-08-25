@@ -10,6 +10,7 @@ Karol Digital is a London-based web design and digital agency serving service bu
 - Contact: https://www.karoldigital.co.uk/contact
 - Book a consultation: https://www.karoldigital.co.uk/book
 - Email: info@karoldigital.co.uk
+- Phone: 07565 472445
 - Location: London, United Kingdom
 
 ## Core services
@@ -34,6 +35,12 @@ Karol Digital is a London-based web design and digital agency serving service bu
 - [Immigration Services](https://www.karoldigital.co.uk/industries/immigration-services)
 - [Building Services](https://www.karoldigital.co.uk/industries/building-services)
 - [Catering Services](https://www.karoldigital.co.uk/industries/catering-services)
+- [Fitness & Wellness Studios](https://www.karoldigital.co.uk/industries/fitness-studios)
+
+## Featured projects
+
+- [British Solar Direct](https://www.britishsolardirect.co.uk/): Turnkey home solar website for Nottingham.
+- [Wild Hearts Collective](https://www.wildheartscollective.org/): Fitness studio website with class booking and admin.
 
 ## Content
 

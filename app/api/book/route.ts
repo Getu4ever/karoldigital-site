@@ -26,17 +26,10 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, company, phone, service, message, captchaToken } = body;
 
-    if (
-      !name?.trim() ||
-      !email?.trim() ||
-      !company?.trim() ||
-      !phone?.trim() ||
-      !service?.trim()
-    ) {
+    if (!name?.trim() || !email?.trim() || !service?.trim()) {
       return NextResponse.json(
         {
-          error:
-            "Name, email, company, phone, and service are required.",
+          error: "Name, email, and service are required.",
         },
         { status: 400 }
       );
@@ -68,8 +61,10 @@ export async function POST(req: Request) {
       typeof service === "string" ? service : null
     );
 
-    const companyValue = String(company).trim();
-    const phoneValue = String(phone).trim();
+    const companyValue =
+      typeof company === "string" && company.trim() ? company.trim() : null;
+    const phoneValue =
+      typeof phone === "string" && phone.trim() ? phone.trim() : null;
     const messageValue = typeof message === "string" ? message.trim() : "";
 
     const userEmail = buildUserConfirmationEmail({

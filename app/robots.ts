@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = "https://www.karoldigital.co.uk";
 
-  const sharedDisallow = ["/api/", "/studio/"];
+  const sharedDisallow = ["/api/", "/studio/", "/admin/", "/news"];
 
   return {
     rules: [

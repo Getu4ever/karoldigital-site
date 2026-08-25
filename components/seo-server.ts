@@ -32,41 +32,40 @@ export type PageKey =
 
 export const seoConfig: Record<PageKey, SEOProps> = {
   home: {
-    title:
-      "High-Performance Small Business Web Development | Custom Mobile App Development UK | Karol Digital",
+    title: "Web Design for UK Service Businesses | Karol Digital",
     description:
-      "Conversion-focused e-commerce, custom mobile app development UK, and high-performance small business websites that turn visitors into customers.",
+      "Fast, conversion-focused websites for UK service businesses. Clear messaging, stronger credibility, and more qualified enquiries — built by Karol Digital in London.",
     url: "https://www.karoldigital.co.uk/",
     image: "/seo-cover.jpg",
     keywords:
-      "High-Performance Small Business Web Development, Custom Mobile App Development UK, Conversion-Focused E-Commerce Websites, custom websites for small businesses, high-performance web and app development",
+      "web design UK, website design for service businesses, London web designer, conversion-focused websites",
     type: "website",
   },
 
   about: {
-    title: "About Karol Digital",
+    title: "About Karol Digital | UK Web Design Studio",
     description:
-      "Learn about Karol Digital’s mission to support small businesses with professional and affordable web design.",
+      "Meet Karol Digital — a London web design studio building high-performance websites for UK service businesses that need trust, clarity, and more enquiries.",
     url: "https://www.karoldigital.co.uk/about",
     image: "/about-team.jpg",
     type: "website",
   },
 
   contact: {
-    title: "Contact Karol Digital | Custom Web & App Development Inquiries",
+    title: "Contact Karol Digital | Book a Call",
     description:
-      "Request a custom mobile app quote or bespoke small business web engineering London. Contact Karol Digital for high-performance websites, e-commerce, and custom applications.",
+      "Contact Karol Digital for a free website consultation. Call 07565 472445 or email info@karoldigital.co.uk — London-based, serving UK service businesses.",
     url: "https://www.karoldigital.co.uk/contact",
     image: "/heroes/contact.png",
     keywords:
-      "Contact Karol Digital, Custom Web & App Development Inquiries, Request a Custom Mobile App Quote, Bespoke Small Business Web Engineering London",
+      "contact Karol Digital, website consultation UK, book web design call London",
     type: "website",
   },
 
   services: {
-    title: "Services & Pricing — Karol Digital",
+    title: "Web Design & Digital Services | Karol Digital",
     description:
-      "Premium custom-built websites, mobile apps, and digital systems for UK small businesses — modern, fast, and conversion-focused.",
+      "Custom websites, audits, AI search optimisation, and digital marketing for UK small businesses — modern, fast, and conversion-focused.",
     url: "https://www.karoldigital.co.uk/services",
     image: "/seo-cover.jpg",
     type: "website",
@@ -136,9 +135,9 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   },
 
   industries: {
-    title: "Industry Web Design for UK Service Businesses | Karol Digital",
+    title: "Industry Web Design UK | Karol Digital",
     description:
-      "Website design for UK financial, immigration, construction, catering, and service businesses that need trust, clarity, and more qualified enquiries.",
+      "Website design for UK financial, immigration, construction, catering, fitness, and service businesses that need trust, clarity, and more qualified enquiries.",
     url: "https://www.karoldigital.co.uk/industries",
     image: "/seo-cover.jpg",
     keywords:

@@ -10,6 +10,7 @@ import {
   HardHat,
   Landmark,
   Heart,
+  UtensilsCrossed,
   Briefcase,
   Building2,
   Calculator,
@@ -40,6 +41,14 @@ export default function IndustriesPage() {
       icon: <HardHat size={20} />,
       description:
         "High-performance websites for builders and specialist trades — featuring British Solar Direct.",
+    },
+    {
+      href: "/industries/catering-services",
+      label: "Catering & Hospitality",
+      linkLabel: "Catering sites",
+      icon: <UtensilsCrossed size={20} />,
+      description:
+        "Websites and ordering systems for caterers and food brands that need clear menus and more bookings.",
     },
     {
       href: "/industries/fitness-studios",

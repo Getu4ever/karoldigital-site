@@ -24,6 +24,9 @@ import {
   Sparkles,
   Bot,
   Heart,
+  UtensilsCrossed,
+  Wrench,
+  ClipboardList,
 } from "lucide-react";
 
 
@@ -31,8 +34,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -46,6 +51,7 @@ export default function Header() {
     setOpen(false);
     setMobileServicesOpen(false);
     setMobileIndustriesOpen(false);
+    setMobileToolsOpen(false);
   };
 
   const servicesItems = [
@@ -98,9 +104,27 @@ export default function Header() {
       icon: <HardHat size={16} />,
     },
     {
+      href: "/industries/catering-services",
+      label: "Catering & Hospitality",
+      icon: <UtensilsCrossed size={16} />,
+    },
+    {
       href: "/industries/fitness-studios",
       label: "Fitness & Wellness Studios",
       icon: <Heart size={16} />,
+    },
+  ];
+
+  const toolsItems = [
+    {
+      href: "/tools/ai-search-scorecard",
+      label: "AI Search Scorecard",
+      icon: <ClipboardList size={16} />,
+    },
+    {
+      href: "/tools/content-brief",
+      label: "Content Brief Generator",
+      icon: <Wrench size={16} />,
     },
   ];
 
@@ -119,6 +143,13 @@ export default function Header() {
       icon: <Layers size={18} />,
       dropdown: industryItems,
       type: "industries",
+    },
+    {
+      href: "/tools/ai-search-scorecard",
+      label: "Free Tools",
+      icon: <Wrench size={18} />,
+      dropdown: toolsItems,
+      type: "tools",
     },
     { href: "/pricing", label: "Pricing", icon: <Tag size={18} /> },
     { href: "/blog", label: "Blog", icon: <FileText size={18} /> },
@@ -158,7 +189,14 @@ export default function Header() {
           {menuItems.map((item) => {
             const isServices = item.type === "services";
             const isIndustries = item.type === "industries";
-            const dropdownOpen = isServices ? servicesOpen : isIndustries ? industriesOpen : false;
+            const isTools = item.type === "tools";
+            const dropdownOpen = isServices
+              ? servicesOpen
+              : isIndustries
+                ? industriesOpen
+                : isTools
+                  ? toolsOpen
+                  : false;
 
             return (
               <div
@@ -167,10 +205,12 @@ export default function Header() {
                 onMouseEnter={() => {
                   if (isServices) setServicesOpen(true);
                   if (isIndustries) setIndustriesOpen(true);
+                  if (isTools) setToolsOpen(true);
                 }}
                 onMouseLeave={() => {
                   if (isServices) setServicesOpen(false);
                   if (isIndustries) setIndustriesOpen(false);
+                  if (isTools) setToolsOpen(false);
                 }}
               >
                 {item.dropdown ? (
@@ -213,7 +253,9 @@ export default function Header() {
                           <p className="text-xs text-gray-300 mt-1">
                             {isServices
                               ? "Explore the website services available for your business."
-                              : "Find the right industry fit for your business."}
+                              : isTools
+                                ? "Free interactive tools to assess AI search readiness and plan content."
+                                : "Find the right industry fit for your business."}
                           </p>
                         </div>
 
@@ -230,33 +272,35 @@ export default function Header() {
                           ))}
                         </div>
 
-                        <div className="mt-2 pt-2 border-t border-white/10 flex flex-col gap-1">
-                          <Link
-                            href={item.href}
-                            className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-brand-gold-soft hover:bg-white/5 rounded-lg transition group/btn"
-                          >
-                            <span>
-                              {isServices ? "View All Services" : "View All Industries"}
-                            </span>
-                            <ArrowRight
-                              size={14}
-                              className="transition-transform group-hover/btn:translate-x-1"
-                            />
-                          </Link>
+                        {!isTools && (
+                          <div className="mt-2 pt-2 border-t border-white/10 flex flex-col gap-1">
+                            <Link
+                              href={item.href}
+                              className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-brand-gold-soft hover:bg-white/5 rounded-lg transition group/btn"
+                            >
+                              <span>
+                                {isServices ? "View All Services" : "View All Industries"}
+                              </span>
+                              <ArrowRight
+                                size={14}
+                                className="transition-transform group-hover/btn:translate-x-1"
+                              />
+                            </Link>
 
-                          <Link
-                            href="/pricing"
-                            className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-white/5 rounded-lg transition group/btn"
-                          >
-                            <span>
-                              {isServices ? "View Pricing" : "Compare Website Packages"}
-                            </span>
-                            <ArrowRight
-                              size={14}
-                              className="transition-transform group-hover/btn:translate-x-1"
-                            />
-                          </Link>
-                        </div>
+                            <Link
+                              href="/pricing"
+                              className="flex items-center justify-between w-full px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-white/5 rounded-lg transition group/btn"
+                            >
+                              <span>
+                                {isServices ? "View Pricing" : "Compare Website Packages"}
+                              </span>
+                              <ArrowRight
+                                size={14}
+                                className="transition-transform group-hover/btn:translate-x-1"
+                              />
+                            </Link>
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   </AnimatePresence>
@@ -279,6 +323,7 @@ export default function Header() {
             if (open) {
               setMobileServicesOpen(false);
               setMobileIndustriesOpen(false);
+              setMobileToolsOpen(false);
             }
           }}
           className="md:hidden flex flex-col items-center space-y-1.5"
@@ -326,11 +371,14 @@ export default function Header() {
               {menuItems.map((item) => {
                 const isServices = item.type === "services";
                 const isIndustries = item.type === "industries";
+                const isTools = item.type === "tools";
                 const mobileOpen = isServices
                   ? mobileServicesOpen
                   : isIndustries
-                  ? mobileIndustriesOpen
-                  : false;
+                    ? mobileIndustriesOpen
+                    : isTools
+                      ? mobileToolsOpen
+                      : false;
 
                 return (
                   <div key={item.href}>
@@ -341,6 +389,7 @@ export default function Header() {
                           onClick={() => {
                             if (isServices) setMobileServicesOpen(!mobileServicesOpen);
                             if (isIndustries) setMobileIndustriesOpen(!mobileIndustriesOpen);
+                            if (isTools) setMobileToolsOpen(!mobileToolsOpen);
                           }}
                           className={`flex w-full items-center justify-between text-lg font-semibold transition ${
                             mobileOpen ? "text-brand-gold-soft" : "text-gray-200"
@@ -382,13 +431,17 @@ export default function Header() {
                                   </Link>
                                 ))}
 
-                                <Link
-                                  href={item.href}
-                                  onClick={closeMobileMenu}
-                                  className="pt-1 text-sm font-medium text-brand-gold-soft underline decoration-dotted underline-offset-4"
-                                >
-                                  {isServices ? "All Services Overview" : "All Industries Overview"}
-                                </Link>
+                                {!isTools && (
+                                  <Link
+                                    href={item.href}
+                                    onClick={closeMobileMenu}
+                                    className="pt-1 text-sm font-medium text-brand-gold-soft underline decoration-dotted underline-offset-4"
+                                  >
+                                    {isServices
+                                      ? "All Services Overview"
+                                      : "All Industries Overview"}
+                                  </Link>
+                                )}
                               </div>
                             </motion.div>
                           )}

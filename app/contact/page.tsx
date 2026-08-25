@@ -301,15 +301,21 @@ export default function ContactPage() {
                   Contact
                 </p>
                 <h2 className="text-2xl font-bold text-[#102f35] mb-3">
-                  Email us
+                  Call or email us
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Prefer email? Reach the team directly and we&apos;ll get back
-                  to you on UK business days.
+                  Prefer to talk? Call during UK business hours, or email and
+                  we&apos;ll get back to you on the next business day.
                 </p>
                 <a
+                  href="tel:+447565472445"
+                  className="block text-lg font-semibold text-[#102f35] hover:text-[#411b3f] transition"
+                >
+                  07565 472445
+                </a>
+                <a
                   href="mailto:info@karoldigital.co.uk"
-                  className="block font-medium text-[#102f35] hover:text-[#411b3f] transition"
+                  className="mt-2 block font-medium text-[#102f35] hover:text-[#411b3f] transition"
                 >
                   info@karoldigital.co.uk
                 </a>

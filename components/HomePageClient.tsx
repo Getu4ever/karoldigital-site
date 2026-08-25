@@ -623,6 +623,73 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* FREE TOOLS */}
+      <section className="border-b border-[#102f35]/10 bg-white px-6 py-20 md:px-10 md:py-24">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-12 text-center">
+            <SectionEyebrow>Free tools</SectionEyebrow>
+            <h2 className="mb-4 text-3xl font-bold text-[#102f35] md:text-4xl">
+              Start with a free interactive assessment
+            </h2>
+            <p className="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
+              Use these lead magnets to check AI search readiness or plan SEO content —
+              then book a call if you want help implementing the next steps.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <Link
+              href="/tools/ai-search-scorecard"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-gradient-to-b from-[#f7f9fa] to-white p-8 text-left transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]">
+                Free scorecard
+              </p>
+              <p className="mb-3 text-xl font-bold text-[#102f35]">
+                AI Search Readiness Scorecard
+              </p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                A practical check of schema, answer-ready content, lead magnets, and
+                analytics — so you know what to fix before AI engines overlook your
+                business.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Take the free scorecard
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+
+            <Link
+              href="/tools/content-brief"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-gradient-to-b from-[#f7f9fa] to-white p-8 text-left transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]">
+                Free generator
+              </p>
+              <p className="mb-3 text-xl font-bold text-[#102f35]">
+                SEO Content Brief Generator
+              </p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                Build a focused content brief for service-business pages — clearer
+                targeting, stronger structure, and a faster path from idea to publish.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Generate a free brief
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* PARTNERS */}
       <section className="border-b border-[#102f35]/10 bg-gradient-to-b from-[#eef3f4] to-[#f7f9fa] px-6 py-20 md:px-10 md:py-24">
         <div className="mx-auto max-w-5xl">
@@ -723,6 +790,36 @@ export default function HomePageClient() {
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
                 See solar partner site
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+
+            <Link
+              href="https://www.wildheartscollective.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <div className="mb-6 flex h-16 items-center overflow-hidden rounded-xl">
+                <Image
+                  src="/heroes/fitness-studios.png"
+                  alt="Wild Hearts Collective"
+                  width={200}
+                  height={64}
+                  className="h-16 w-full object-cover object-center"
+                />
+              </div>
+              <p className="mb-2 text-xl font-bold text-[#102f35]">Wild Hearts Collective</p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                An inclusive aerial and pole studio in Mansfield — with a high-performance
+                website, online class booking, and an admin area for memberships and operations.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Visit Wild Hearts Collective
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"

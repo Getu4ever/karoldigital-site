@@ -8,6 +8,13 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
+import {
+  SITE_EMAIL,
+  SITE_LOCATION_LABEL,
+  SITE_PHONE_DISPLAY,
+  SITE_PHONE_TEL,
+  SITE_SOCIAL,
+} from "@/lib/site-contact";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -24,15 +31,22 @@ export default function Footer() {
     },
   ];
 
+  const exploreLinks = [
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
+    { name: "AI Search Scorecard", href: "/tools/ai-search-scorecard" },
+    { name: "Content Brief Generator", href: "/tools/content-brief" },
+    { name: "Web Development & Coding", href: "/services/web-design" },
+    { name: "AI Search Optimisation (GEO)", href: "/services/ai-search-optimisation" },
+    { name: "Digital Marketing Services", href: "/services/digital-marketing" },
+  ];
+
   return (
     <footer className="relative bg-[#102f35] text-gray-200 pt-16 pb-0">
-      {/* Soft gold separator */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-brand-gold/55"></div>
 
-      {/* MAIN CONTENT */}
       <div className="px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-10 gap-x-12 border-b border-gray-700 pb-12 mt-4">
-          {/* Column 1: Brand */}
           <div className="space-y-4 lg:col-span-1">
             <div className="flex items-center space-x-2">
               <Image
@@ -57,7 +71,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2: Industries */}
           <div className="space-y-4">
             <p className="text-lg font-semibold text-white border-l-2 border-brand-gold/70 pl-3">
               Industries
@@ -76,47 +89,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Quick Links */}
           <div className="space-y-4">
             <p className="text-lg font-semibold text-white border-l-2 border-brand-gold/70 pl-3">
-              Quick Links
+              Explore
             </p>
             <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="/services/web-design"
-                  className="hover:text-brand-gold-soft transition"
-                >
-                  Web Development & Coding
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/social-media" className="hover:text-brand-gold-soft transition">
-                  Social Media Management
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/digital-marketing" className="hover:text-brand-gold-soft transition">
-                  Digital Marketing Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/ai-search-optimisation"
-                  className="hover:text-brand-gold-soft transition"
-                >
-                  AI Search Optimisation (GEO)
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ai-logo-design" className="hover:text-brand-gold-soft transition">
-                  Ai Logo Design Support
-                </Link>
-              </li>
+              {exploreLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-brand-gold-soft transition"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 4: Legal */}
           <div className="space-y-4">
             <p className="text-lg font-semibold text-white border-l-2 border-brand-gold/70 pl-3">
               Legal
@@ -149,16 +139,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 5: Social & Contact */}
           <div className="space-y-6">
             <div className="space-y-2">
               <p className="text-lg font-semibold text-white">Let&apos;s Connect</p>
-              <p className="text-sm text-gray-400">London, United Kingdom</p>
+              <p className="text-sm text-gray-400">{SITE_LOCATION_LABEL}</p>
               <a
-                href="mailto:info@karoldigital.co.uk"
+                href={SITE_PHONE_TEL}
+                className="block text-sm font-medium text-brand-gold-soft hover:text-brand-gold transition"
+              >
+                {SITE_PHONE_DISPLAY}
+              </a>
+              <a
+                href={`mailto:${SITE_EMAIL}`}
                 className="block text-sm hover:text-brand-gold-soft transition"
               >
-                info@karoldigital.co.uk
+                {SITE_EMAIL}
               </a>
               <p className="text-xs text-gray-400">
                 Clear advice, honest pricing, and a practical recommendation for
@@ -178,22 +173,22 @@ export default function Footer() {
                 {[
                   {
                     icon: <FaFacebookF />,
-                    url: "https://www.facebook.com/karolgraphics",
+                    url: SITE_SOCIAL.facebook,
                     label: "Follow us on Facebook",
                   },
                   {
                     icon: <FaInstagram />,
-                    url: "https://www.instagram.com/karoldigital2025/",
+                    url: SITE_SOCIAL.instagram,
                     label: "Follow us on Instagram",
                   },
                   {
                     icon: <FaLinkedinIn />,
-                    url: "https://www.linkedin.com/in/karol-digital/",
+                    url: SITE_SOCIAL.linkedin,
                     label: "Follow us on LinkedIn",
                   },
                   {
                     icon: <FaYoutube />,
-                    url: "https://www.youtube.com/@KarolDigital-26",
+                    url: SITE_SOCIAL.youtube,
                     label: "Subscribe to our YouTube channel",
                   },
                 ].map((social) => (
@@ -214,7 +209,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* COPYRIGHT BAR */}
       <div className="w-full bg-black py-6 mt-12">
         <p className="text-center text-[10px] leading-tight text-gray-300 tracking-wider">
           © {year} KAROL DIGITAL. ALL RIGHTS RESERVED. CRAFTED IN THE UK.

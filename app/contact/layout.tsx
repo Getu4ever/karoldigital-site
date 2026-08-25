@@ -1,19 +1,15 @@
-// /app/contact/layout.tsx
-
 import { generateSEOMetadata } from "@/components/seo-server";
 
 export const metadata = generateSEOMetadata({
-  title:
-    "Contact Karol Digital | Custom Web & App Development Inquiries",
+  title: "Contact Karol Digital | Book a Call",
   description:
-    "Request a custom mobile app quote or bespoke small business web engineering London. Contact Karol Digital for high-performance websites, e-commerce platforms, and custom applications.",
+    "Contact Karol Digital for a free website consultation. Call 07565 472445 or email info@karoldigital.co.uk — London-based, serving UK service businesses.",
   url: "https://www.karoldigital.co.uk/contact",
   image: "/heroes/contact.png",
   keywords:
-    "Contact Karol Digital, Custom Web & App Development Inquiries, Request a Custom Mobile App Quote, Bespoke Small Business Web Engineering London",
+    "contact Karol Digital, website consultation UK, book web design call London",
 });
 
-// Breadcrumb Schema
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -33,10 +29,13 @@ const breadcrumbJsonLd = {
   ],
 };
 
-export default function ContactLayout({ children }: { children: React.ReactNode }) {
+export default function ContactLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
-      {/* Breadcrumb Schema for SEO & Sitelinks */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

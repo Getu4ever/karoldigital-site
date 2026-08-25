@@ -6,6 +6,8 @@
 const BRAND = {
   name: "Karol Digital",
   email: "info@karoldigital.co.uk",
+  phone: "07565 472445",
+  phoneTel: "+447565472445",
   siteUrl: "https://www.karoldigital.co.uk",
   logoUrl: "https://www.karoldigital.co.uk/logo.WebP",
   teal: "#102f35",
@@ -68,6 +70,8 @@ function emailShell(title: string, bodyHtml: string): string {
                 ${BRAND.name}
               </p>
               <p style="margin:0 0 12px;font-size:12px;color:${BRAND.muted};line-height:1.6;">
+                <a href="tel:${BRAND.phoneTel}" style="color:${BRAND.teal};text-decoration:none;">${BRAND.phone}</a>
+                &nbsp;·&nbsp;
                 <a href="mailto:${BRAND.email}" style="color:${BRAND.teal};text-decoration:none;">${BRAND.email}</a>
               </p>
               <p style="margin:0;font-size:11px;color:#9ca3af;">

@@ -1,16 +1,29 @@
-// /app/news/layout.tsx
+import type { Metadata } from "next";
+import { formatSeoTitle } from "@/components/seo-server";
 
-import { generateSEOMetadata } from "@/components/seo-server";
+const title = formatSeoTitle("Digital Marketing & SEO News");
+const description =
+  "Curated digital marketing and SEO headlines. For original Karol Digital advice, visit the blog.";
 
-export const metadata = generateSEOMetadata({
-  title: "Digital Marketing & SEO News | Karol Digital",
-  description:
-    "Stay updated with the latest digital marketing insights, SEO trends, social media updates, and web industry news. Curated automatically by Karol Digital.",
-  url: "https://www.karoldigital.co.uk/news",
-  image: "/heroes/news.png",
-});
+export const metadata: Metadata = {
+  title,
+  description,
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: {
+    canonical: "https://www.karoldigital.co.uk/news",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "https://www.karoldigital.co.uk/news",
+    images: [{ url: "/heroes/news.png" }],
+    type: "website",
+  },
+};
 
-// Breadcrumb Schema for News home
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -33,14 +46,12 @@ const breadcrumbJsonLd = {
 export default function NewsLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* Breadcrumb Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbJsonLd),
         }}
       />
-
       {children}
     </>
   );
