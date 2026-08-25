@@ -1,5 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 import GeoExtras from "@/components/GeoExtras";
+import ToolPageHero from "@/components/ToolPageHero";
 import { scorecardFaqs } from "@/lib/page-faqs";
 import type { Metadata } from "next";
 
@@ -48,7 +49,17 @@ export default function ScorecardLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      {children}
+      <main className="min-h-screen bg-gradient-to-b from-[#f7fafb] to-white text-gray-900">
+        <ToolPageHero
+          eyebrow="Free interactive lead magnet"
+          title="AI Search Readiness"
+          titleAccent="Scorecard"
+          description="Nine questions. A clear score. Your top priorities for GEO, content, lead magnets, and analytics."
+          imageSrc="/heroes/ai-search-optimisation.png"
+          imageAlt="AI search readiness scorecard for UK service businesses"
+        />
+        {children}
+      </main>
       <GeoExtras faqs={scorecardFaqs} title="AI search scorecard FAQ" />
     </>
   );

@@ -42,6 +42,11 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  const lightTopRoutes = ["/search"];
+  const solidHeader =
+    scrolled ||
+    Boolean(pathname && lightTopRoutes.includes(pathname));
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -165,7 +170,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-[#102f35] shadow-md" : "bg-transparent backdrop-blur-md"
+        solidHeader ? "bg-[#102f35] shadow-md" : "bg-transparent backdrop-blur-md"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">

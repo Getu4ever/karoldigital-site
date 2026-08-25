@@ -1,5 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 import GeoExtras from "@/components/GeoExtras";
+import ToolPageHero from "@/components/ToolPageHero";
 import { websiteCheckerFaqs } from "@/lib/page-faqs";
 import type { Metadata } from "next";
 
@@ -47,7 +48,17 @@ export default function WebsiteCheckerLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      {children}
+      <main className="min-h-screen bg-gradient-to-b from-[#f7fafb] to-white text-gray-900">
+        <ToolPageHero
+          eyebrow="Free GEO & SEO snapshot"
+          title="Website"
+          titleAccent="Checker"
+          description="Paste a URL. We read the public homepage, robots.txt, and llms.txt — then show a plain-English snapshot and a way to talk to Karol if something looks off."
+          imageSrc="/heroes/website-audits.png"
+          imageAlt="GEO and SEO website checker for UK service businesses"
+        />
+        {children}
+      </main>
       <GeoExtras faqs={websiteCheckerFaqs} title="Website checker FAQ" />
     </>
   );

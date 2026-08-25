@@ -1,5 +1,6 @@
 import { generateSEOMetadata } from "@/components/seo-server";
 import GeoExtras from "@/components/GeoExtras";
+import ToolPageHero from "@/components/ToolPageHero";
 import { contentBriefFaqs } from "@/lib/page-faqs";
 import type { Metadata } from "next";
 
@@ -47,7 +48,17 @@ export default function ContentBriefLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      {children}
+      <main className="min-h-screen bg-gradient-to-b from-[#f7fafb] to-white text-gray-900">
+        <ToolPageHero
+          eyebrow="Content production & SEO"
+          title="SEO Content Brief"
+          titleAccent="Generator"
+          description="Instant title options, outline, FAQs, and GEO tips — built for UK service businesses that need a repeatable content system."
+          imageSrc="/heroes/digital-marketing.png"
+          imageAlt="SEO content brief generator for UK service businesses"
+        />
+        {children}
+      </main>
       <GeoExtras faqs={contentBriefFaqs} title="Content brief FAQ" />
     </>
   );

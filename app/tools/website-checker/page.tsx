@@ -169,23 +169,8 @@ export default function WebsiteCheckerPage() {
   const geoChecks = result?.checks.filter((item) => item.group === "geo") ?? [];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#f7fafb] to-white text-gray-900">
-      <FadeIn>
-        <section className="pt-28 pb-8 px-6 max-w-3xl mx-auto text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#102f35]/70 mb-3">
-            Free GEO & SEO snapshot
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-4">
-            Website Checker
-          </h1>
-          <p className="text-lg text-gray-600">
-            Paste a URL. We read the public homepage, robots.txt, and llms.txt —
-            then show a plain-English snapshot and a way to talk to Karol if
-            something looks off.
-          </p>
-        </section>
-
-        <section className="px-6 pb-20 max-w-3xl mx-auto space-y-8">
+    <FadeIn>
+      <section className="px-6 pb-20 max-w-3xl mx-auto space-y-8 pt-8">
           <form
             onSubmit={handleScan}
             className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm space-y-4"
@@ -398,6 +383,5 @@ export default function WebsiteCheckerPage() {
           )}
         </section>
       </FadeIn>
-    </main>
   );
 }

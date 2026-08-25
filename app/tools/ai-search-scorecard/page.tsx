@@ -101,22 +101,8 @@ export default function AiSearchScorecardPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#f7fafb] to-white text-gray-900">
-      <FadeIn>
-        <section className="pt-28 pb-8 px-6 max-w-2xl mx-auto text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#102f35]/70 mb-3">
-            Free interactive lead magnet
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-4">
-            AI Search Readiness Scorecard
-          </h1>
-          <p className="text-lg text-gray-600">
-            Nine questions. A clear score. Your top priorities for GEO, content,
-            lead magnets, and analytics.
-          </p>
-        </section>
-
-        <section className="px-6 pb-20 max-w-2xl mx-auto">
+    <FadeIn>
+      <section className="px-6 pb-20 max-w-2xl mx-auto pt-8">
           <div className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
             {isQuestions && current && (
               <>
@@ -281,6 +267,5 @@ export default function AiSearchScorecardPage() {
           </p>
         </section>
       </FadeIn>
-    </main>
   );
 }
