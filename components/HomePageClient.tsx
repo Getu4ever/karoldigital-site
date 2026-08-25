@@ -160,6 +160,8 @@ const industryImages = [
   { src: "/home/sections/ind-immigration.jpg", alt: "Immigration law firm website design" },
   { src: "/home/sections/ind-construction.png", alt: "Construction and trades website design" },
   { src: "/home/sections/ind-fitness.png", alt: "Fitness and wellness studio website design" },
+  { src: "/heroes/catering-services.png", alt: "Catering and hospitality website design" },
+  { src: "/heroes/catering-services.png", alt: "Corporate office catering website design" },
 ] as const;
 
 const statItems = [
@@ -491,7 +493,7 @@ export default function HomePageClient() {
               ))}
             </div>
 
-            <div className="mt-8 text-center md:mt-6">
+            <div className="home-stack-footer-link mt-8 text-center md:mt-6">
               <Link
                 href="/industries"
                 className="inline-flex items-center gap-2 font-semibold text-brand-gold-muted transition hover:text-brand-gold"
@@ -502,6 +504,9 @@ export default function HomePageClient() {
             </div>
           </motion.div>
         </section>
+
+        {/* Lets the last sticky panel release before Proof scrolls in */}
+        <div className="home-stack-spacer home-stack-spacer--tail" aria-hidden="true" />
       </div>
 
       {/* PROOF — cases + testimonials as one polished block */}
@@ -845,6 +850,67 @@ export default function HomePageClient() {
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
                 Visit Wild Hearts Collective
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+
+            <Link
+              href="https://www.foodmamakitchens.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <div className="mb-6 flex h-16 items-center overflow-hidden rounded-xl">
+                <Image
+                  src="/heroes/catering-services.png"
+                  alt="Food Mama Kitchens catering website"
+                  width={200}
+                  height={64}
+                  className="h-16 w-full object-cover object-center"
+                />
+              </div>
+              <p className="mb-2 text-xl font-bold text-[#102f35]">Food Mama Kitchens</p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                A UK food brand specialising in West African cuisine — with a mobile-first
+                storefront, clear menu presentation, and enquiry paths built for catering and
+                online orders.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Visit Food Mama Kitchens
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+
+            <Link
+              href="https://the-office-lunch.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <div className="mb-6 flex h-16 items-center overflow-hidden rounded-xl bg-[#102f35]/5">
+                <Image
+                  src="/heroes/catering-services.png"
+                  alt="The Office Lunch corporate catering website"
+                  width={200}
+                  height={64}
+                  className="h-16 w-full object-cover object-center"
+                />
+              </div>
+              <p className="mb-2 text-xl font-bold text-[#102f35]">The Office Lunch</p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                Corporate office catering with a B2B-first website — built for bulk team orders,
+                clear menus, and fast paths from enquiry to booked delivery.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Visit The Office Lunch
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"

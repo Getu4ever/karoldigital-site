@@ -182,4 +182,18 @@ export const homeIndustries = [
     href: "/industries/fitness-studios",
     linkLabel: "Studio websites",
   },
+  {
+    title: "Catering & Hospitality",
+    description:
+      "Menu-led websites for UK caterers and food brands — clear packages, event enquiry paths, and mobile-first journeys that win corporate and private bookings.",
+    href: "/industries/catering-services",
+    linkLabel: "Catering sites",
+  },
+  {
+    title: "Corporate Office Catering",
+    description:
+      "B2B websites for office lunch providers — bulk order flows, crisp menus, and fast enquiry paths built for workplace teams and corporate events.",
+    href: "/industries/catering-services",
+    linkLabel: "Office lunch sites",
+  },
 ] as const;

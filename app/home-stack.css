@@ -21,6 +21,10 @@
   display: none;
 }
 
+.home-stack-spacer--tail {
+  display: none;
+}
+
 /* Sleek opaque panels — required so later cards fully cover earlier ones */
 .home-stack-card--approach {
   background:
@@ -40,6 +44,8 @@
 
 /* Continues the stack polish into Client work / proof */
 .home-proof {
+  position: relative;
+  z-index: 30;
   background:
     radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201, 168, 75, 0.08), transparent 55%),
     linear-gradient(180deg, #1a2f38 0%, #102f35 40%, #0c1a22 100%);
@@ -212,7 +218,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .home-stack-card--industries .home-stack-grid > :last-child {
+  .home-stack-card--industries .home-stack-grid > :last-child:nth-child(odd) {
     grid-column: 1 / -1;
     max-width: 22rem;
     margin-left: auto;
@@ -229,18 +235,24 @@
     pointer-events: none;
   }
 
+  .home-stack-spacer--tail {
+    display: block;
+    height: 140vh;
+    pointer-events: none;
+  }
+
   .home-stack-card {
     position: sticky;
     top: 0;
-    height: 100vh;
     min-height: 100vh;
-    max-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 5.5rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
+    overflow: clip;
   }
 
   .home-stack-card__inner {
@@ -298,6 +310,63 @@
 
   .home-stack-card--industries {
     z-index: 20;
+    justify-content: flex-start;
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .home-stack-card--industries .home-stack-heading {
+    margin-bottom: 1rem;
+  }
+
+  .home-stack-card--industries .home-stack-heading h2 {
+    font-size: clamp(1.45rem, 1.9vw, 2rem);
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+
+  .home-stack-card--industries .home-stack-heading p {
+    font-size: 0.875rem;
+    line-height: 1.45;
+    max-width: 38rem;
+  }
+
+  .home-stack-card--industries .home-stack-grid {
+    gap: 0.65rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-stack-card--industries .home-stack-tile {
+    padding: 0.75rem 0.75rem 0.85rem;
+  }
+
+  .home-stack-card--industries .home-stack-tile p:first-of-type {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
+  }
+
+  .home-stack-card--industries .home-stack-tile__body {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .home-stack-card--industries .home-stack-tile a {
+    font-size: 0.75rem;
+  }
+
+  .home-stack-card--industries .home-stack-media--lg {
+    aspect-ratio: 16 / 8;
+    margin-bottom: 0.45rem;
+  }
+
+  .home-stack-card--industries .home-stack-footer-link {
+    margin-top: 0.75rem;
   }
 }
 
