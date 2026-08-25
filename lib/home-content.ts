@@ -163,4 +163,11 @@ export const homeIndustries = [
     href: "/industries/building-services",
     linkLabel: "Construction sites",
   },
+  {
+    title: "Fitness & Wellness Studios",
+    description:
+      "High-performance websites and e-commerce for studios that need clear class discovery, online booking, and a brand people admire.",
+    href: "/industries/fitness-studios",
+    linkLabel: "Studio websites",
+  },
 ] as const;

@@ -23,6 +23,7 @@ import {
   Smartphone,
   Sparkles,
   Bot,
+  Heart,
 } from "lucide-react";
 
 
@@ -95,6 +96,11 @@ export default function Header() {
       href: "/industries/building-services",
       label: "Construction & Trades",
       icon: <HardHat size={16} />,
+    },
+    {
+      href: "/industries/fitness-studios",
+      label: "Fitness & Wellness Studios",
+      icon: <Heart size={16} />,
     },
   ];
 

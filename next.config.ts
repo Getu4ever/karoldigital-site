@@ -27,6 +27,7 @@ const nextConfig: NextConfig = {
       "immigration-services",
       "building-services",
       "catering-services",
+      "fitness-studios",
     ].map((slug) => ({
       source: `/services/${slug}`,
       destination: `/industries/${slug}`,

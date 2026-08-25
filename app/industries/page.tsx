@@ -9,6 +9,7 @@ import {
   Scale,
   HardHat,
   Landmark,
+  Heart,
   Briefcase,
   Building2,
   Calculator,
@@ -40,7 +41,14 @@ export default function IndustriesPage() {
       description:
         "Lead generation websites for construction companies and tradespeople that need stronger credibility and more quote-ready enquiries.",
     },
-    
+    {
+      href: "/industries/fitness-studios",
+      label: "Fitness & Wellness Studios",
+      linkLabel: "Studio websites",
+      icon: <Heart size={20} />,
+      description:
+        "High-performance websites and e-commerce for fitness and wellness studios — featuring Wild Hearts Collective.",
+    },
   ];
 
   const industryPrinciples = [

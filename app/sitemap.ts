@@ -89,9 +89,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "immigration-services",
     "building-services",
     "catering-services",
+    "fitness-studios",
   ].map((industry) => ({
     url: `${baseUrl}/industries/${industry}`,
-    lastModified: new Date("2026-05-19"),
+    lastModified: new Date("2026-08-25"),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));

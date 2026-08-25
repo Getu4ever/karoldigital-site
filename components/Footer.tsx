@@ -17,6 +17,7 @@ export default function Footer() {
     { name: "Building & Construction", href: "/industries/building-services" },
     { name: "Corporate & Event Catering", href: "/industries/catering-services" },
     { name: "Financial Firms", href: "/industries/financial-services" },
+    { name: "Fitness & Wellness Studios", href: "/industries/fitness-studios" },
     {
       name: "Small Business Web Design",
       href: "/services/small-business-web-design-london",
