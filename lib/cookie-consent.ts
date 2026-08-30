@@ -64,3 +64,7 @@ export function openCookiePreferences(): void {
 export function hasAnalyticsConsent(state: CookieConsentState | null): boolean {
   return Boolean(state?.analytics);
 }
+
+export function hasMarketingConsent(state: CookieConsentState | null): boolean {
+  return Boolean(state?.marketing);
+}

@@ -2,6 +2,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import SiteChrome from "@/components/SiteChrome";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import TikTokPixel from "@/components/TikTokPixel";
 import JsonLd from "@/components/JsonLd";
 import { Metadata, Viewport } from "next";
 import {
@@ -116,6 +117,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={personJsonLd()} />
         <GoogleAnalytics />
+        <TikTokPixel />
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>

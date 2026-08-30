@@ -81,8 +81,8 @@ export default function CookiePolicy() {
           </li>
           <li>
             <strong>Marketing cookies:</strong> May be used for optional
-            promotional or campaign-related features. These only run if you
-            allow marketing cookies.
+            promotional or campaign-related features, including the TikTok
+            Pixel. These only run if you allow marketing cookies.
           </li>
         </ul>
 
