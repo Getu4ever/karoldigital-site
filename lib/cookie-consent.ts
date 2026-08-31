@@ -68,3 +68,33 @@ export function hasAnalyticsConsent(state: CookieConsentState | null): boolean {
 export function hasMarketingConsent(state: CookieConsentState | null): boolean {
   return Boolean(state?.marketing);
 }
+
+/** Immediate current state, plus updates from this tab and other tabs. */
+export function subscribeCookieConsent(
+  listener: (state: CookieConsentState | null) => void
+): () => void {
+  if (typeof window === "undefined") return () => {};
+
+  const emit = (state?: CookieConsentState | null) => {
+    listener(state === undefined ? readCookieConsent() : state);
+  };
+
+  const onChange = (event: Event) => {
+    const detail = (event as CustomEvent<CookieConsentState>).detail;
+    emit(detail ?? readCookieConsent());
+  };
+
+  const onStorage = (event: StorageEvent) => {
+    if (event.key !== null && event.key !== COOKIE_CONSENT_KEY) return;
+    emit(event.key === null ? null : readCookieConsent());
+  };
+
+  window.addEventListener(COOKIE_CONSENT_EVENT, onChange);
+  window.addEventListener("storage", onStorage);
+  emit();
+
+  return () => {
+    window.removeEventListener(COOKIE_CONSENT_EVENT, onChange);
+    window.removeEventListener("storage", onStorage);
+  };
+}

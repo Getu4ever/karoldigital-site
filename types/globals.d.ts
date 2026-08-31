@@ -17,4 +17,11 @@ declare module '*.svg';
 interface Window {
   gtag?: (...args: unknown[]) => void;
   dataLayer?: unknown[];
+  TiktokAnalyticsObject?: string;
+  ttq?: {
+    page: (...args: unknown[]) => void;
+    track: (...args: unknown[]) => void;
+    load: (pixelId: string, options?: Record<string, unknown>) => void;
+    [key: string]: unknown;
+  };
 }

@@ -37,6 +37,25 @@ export function toLeadStatusLabel(enumValue: string): LeadStatusLabel {
   return LEAD_STATUS_LABEL[enumValue] ?? "New Lead";
 }
 
+/** Count of pipeline rows currently in the "New Lead" CRM status. */
+export function countNewLeads(leads: { status: string }[]): number {
+  return leads.filter((lead) => lead.status === "New Lead").length;
+}
+
+export function countLeadsByStatus(
+  leads: { status: string }[]
+): Record<LeadStatusLabel, number> {
+  const counts = Object.fromEntries(
+    LEAD_STATUS_VALUES.map((status) => [status, 0])
+  ) as Record<LeadStatusLabel, number>;
+  for (const lead of leads) {
+    if (lead.status in counts) {
+      counts[lead.status as LeadStatusLabel] += 1;
+    }
+  }
+  return counts;
+}
+
 /** Display label for Source / Channel — blank metadata → Direct Traffic */
 export function leadSourceLabel(sourceChannel: string | null | undefined): string {
   const trimmed = (sourceChannel || "").trim();

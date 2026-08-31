@@ -161,7 +161,7 @@ export default function CookieConsentDialog() {
                 />
                 <CategoryRow
                   title="Marketing"
-                  description="Optional campaign and promo tools."
+                  description="TikTok Pixel and other campaign tools."
                   checked={marketing}
                   onChange={setMarketing}
                 />

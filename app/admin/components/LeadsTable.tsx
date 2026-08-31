@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useMemo, useState, useTransition } from "react";
+import { Fragment, useMemo, useState, useTransition, type Dispatch, type SetStateAction } from "react";
 import type { LeadDTO } from "@/app/admin/actions/leads";
 import {
   deleteLeadAction,
@@ -23,7 +23,8 @@ type EditDraft = {
 };
 
 type Props = {
-  initialLeads: LeadDTO[];
+  leads: LeadDTO[];
+  onLeadsChange: Dispatch<SetStateAction<LeadDTO[]>>;
 };
 
 function toDraft(lead: LeadDTO): EditDraft {
@@ -38,8 +39,7 @@ function toDraft(lead: LeadDTO): EditDraft {
   };
 }
 
-export default function LeadsTable({ initialLeads }: Props) {
-  const [leads, setLeads] = useState(initialLeads);
+export default function LeadsTable({ leads, onLeadsChange }: Props) {
   const [pending, startTransition] = useTransition();
   const [filter, setFilter] = useState<string>("All");
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -79,7 +79,7 @@ export default function LeadsTable({ initialLeads }: Props) {
         status: withNotes.status,
         customNotes: withNotes.customNotes,
       };
-      setLeads((prev) => prev.map((l) => (l.id === id ? merged : l)));
+      onLeadsChange((prev) => prev.map((l) => (l.id === id ? merged : l)));
       setEditingId(null);
       setDraft(null);
     });
@@ -89,7 +89,7 @@ export default function LeadsTable({ initialLeads }: Props) {
     if (editingId === id) return;
     startTransition(async () => {
       const updated = await updateLeadStatusAction(id, status);
-      setLeads((prev) => prev.map((l) => (l.id === id ? updated : l)));
+      onLeadsChange((prev) => prev.map((l) => (l.id === id ? updated : l)));
     });
   }
 
@@ -97,7 +97,7 @@ export default function LeadsTable({ initialLeads }: Props) {
     if (editingId === id) return;
     startTransition(async () => {
       const updated = await updateLeadNotesAction(id, customNotes);
-      setLeads((prev) => prev.map((l) => (l.id === id ? updated : l)));
+      onLeadsChange((prev) => prev.map((l) => (l.id === id ? updated : l)));
     });
   }
 
@@ -105,7 +105,7 @@ export default function LeadsTable({ initialLeads }: Props) {
     if (!confirm("Delete this lead permanently?")) return;
     startTransition(async () => {
       await deleteLeadAction(id);
-      setLeads((prev) => prev.filter((l) => l.id !== id));
+      onLeadsChange((prev) => prev.filter((l) => l.id !== id));
       if (invoiceOpenId === id) setInvoiceOpenId(null);
       if (editingId === id) cancelEdit();
     });

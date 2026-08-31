@@ -1,8 +1,10 @@
 import { redirect } from "next/navigation";
+import { getInvoicesAction } from "@/app/admin/actions/invoices";
 import { getLeadsAction } from "@/app/admin/actions/leads";
 import AdminDashboardClient from "@/app/admin/components/AdminDashboardClient";
+import { getOpsDashboardData } from "@/app/admin/lib/get-ops-dashboard";
 import { isAdminAuthenticated } from "@/lib/admin-auth";
-import { fetchGa4DashboardMetrics } from "@/lib/ga4";
+import type { RecentInvoice } from "@/lib/ops-dashboard";
 
 export const metadata = {
   title: "Admin Dashboard | Karol Digital",
@@ -18,6 +20,7 @@ export default async function AdminDashboardPage() {
   }
 
   let leads: Awaited<ReturnType<typeof getLeadsAction>> = [];
+  let invoices: RecentInvoice[] = [];
   let dbError: string | null = null;
 
   try {
@@ -29,7 +32,22 @@ export default async function AdminDashboardPage() {
         : "Unable to load leads. Check database connection and migrations.";
   }
 
-  const metrics = await fetchGa4DashboardMetrics();
+  if (!dbError) {
+    try {
+      invoices = await getInvoicesAction();
+    } catch (error) {
+      dbError =
+        error instanceof Error
+          ? error.message
+          : "Unable to load invoices. Confirm the Invoice table exists.";
+    }
+  }
+
+  const ops = getOpsDashboardData({
+    dbConnected: !dbError,
+    leadCount: leads.length,
+    invoices,
+  });
 
   return (
     <>
@@ -40,9 +58,10 @@ export default async function AdminDashboardPage() {
         </div>
       )}
       <AdminDashboardClient
-        leads={leads}
-        metrics={metrics}
+        initialLeads={leads}
+        initialInvoices={invoices}
         dbConnected={!dbError}
+        ops={ops}
       />
     </>
   );

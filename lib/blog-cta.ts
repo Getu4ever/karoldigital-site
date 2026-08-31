@@ -92,6 +92,11 @@ const bySlug: Record<string, BlogCtaCopy> = {
     description:
       "Book a free consultation to plan a proper website for growth, or request an audit if you want an honest view of what DIY is holding back.",
   },
+  "website-traffic-no-enquiries-uk-conversion-audit-2026": {
+    title: "Getting traffic but almost no enquiries?",
+    description:
+      "Book a free consultation for a conversion-focused rebuild, or request a Website Performance & Growth Audit to pinpoint the friction stopping buyers from contacting you.",
+  },
 };
 
 const defaultCopy: BlogCtaCopy = {

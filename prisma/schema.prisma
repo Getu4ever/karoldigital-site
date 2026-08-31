@@ -47,3 +47,25 @@ model AdminAccount {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 }
+
+enum InvoiceStatus {
+  Paid
+  Sent
+  Overdue
+}
+
+/// Admin billing records shown on the operations dashboard.
+model Invoice {
+  id         String        @id @default(cuid())
+  reference  String        @unique
+  clientName String
+  amountGbp  Decimal       @db.Decimal(12, 2)
+  status     InvoiceStatus @default(Sent)
+  email      String?
+  issuedAt   DateTime      @default(now())
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  @@index([status])
+  @@index([issuedAt])
+}
