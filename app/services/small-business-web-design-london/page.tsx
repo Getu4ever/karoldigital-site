@@ -4,59 +4,56 @@ import FadeIn from "@/components/FadeIn";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { SITE_SERVICE_AREAS } from "@/lib/site-contact";
 
 export default function LondonSmallBusinessWebDesignPage() {
   return (
     <FadeIn>
       <main className="min-h-screen bg-white text-gray-900">
-        {/* === HERO SECTION === */}
-        {/* HERO */}
-<motion.section
-  className="relative min-h-[75vh] md:min-h-[80vh] w-full flex flex-col items-center justify-center text-center text-white px-6 pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1 }}
->
-  <Image
-    src="/heroes/london-web-design.png"
-    alt="High-performance custom web engineering for London businesses"
-    fill
-    priority
-    className="object-cover brightness-[0.5]"
-  />
+        <motion.section
+          className="relative min-h-[75vh] md:min-h-[80vh] w-full flex flex-col items-center justify-center text-center text-white px-6 pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <Image
+            src="/heroes/london-web-design.png"
+            alt="Web design for London SW20 and nearby small businesses"
+            fill
+            priority
+            className="object-cover brightness-[0.5]"
+          />
 
-  <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
-    <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
-      High-Performance Web Engineering · London
-    </span>
+          <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
+              London SW20 · Raynes Park · Wimbledon · Merton
+            </span>
 
-    <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
-      Custom Web Engineering for{" "}
-      <br className="hidden sm:inline" />
-      <span className="text-brand-gold-muted">London Small Businesses</span>
-    </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
+              Web Design for{" "}
+              <br className="hidden sm:inline" />
+              <span className="text-brand-gold-muted">SW20 &amp; Nearby Small Businesses</span>
+            </h1>
 
-    <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 text-gray-200 leading-relaxed font-medium">
-      Ultra-fast, conversion-focused websites engineered for London&apos;s competitive
-      landscape — built to dominate local search results and transform your digital
-      traffic into high-value client inquiries.
-    </p>
+            <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 text-gray-200 leading-relaxed font-medium">
+              Websites that help local service businesses look more professional, show up for
+              nearby searches, and turn more visitors into phone calls and booked work.
+            </p>
 
-    <p className="text-xs sm:text-sm text-gray-300 mb-8 max-w-md">
-      Premium, custom-built digital experiences for growing London enterprises
-      that demand speed, rock-solid security, and measurable growth.
-    </p>
+            <p className="text-xs sm:text-sm text-gray-300 mb-8 max-w-md">
+              Based in London SW20 — serving Raynes Park, Wimbledon, New Malden, Merton,
+              Kingston, and Greater London.
+            </p>
 
-    <Link
-      href="/book?service=Website+Audit"
-      className="bg-white text-[#102f35] hover:bg-brand-gold px-10 py-4.5 rounded-full font-semibold transition-all duration-300 inline-block shadow-md active:scale-95 text-sm uppercase tracking-wider"
-    >
-      Request a London Lead Audit
-    </Link>
-  </div>
-</motion.section>
+            <Link
+              href="/book?service=Website+Audit"
+              className="bg-white text-[#102f35] hover:bg-brand-gold px-10 py-4.5 rounded-full font-semibold transition-all duration-300 inline-block shadow-md active:scale-95 text-sm uppercase tracking-wider"
+            >
+              Request a Local Lead Audit
+            </Link>
+          </div>
+        </motion.section>
 
-        {/* === BREADCRUMB SECTION === */}
         <nav
           aria-label="Breadcrumb"
           className="bg-white border-b border-gray-100 py-4 px-6 md:px-12"
@@ -75,52 +72,59 @@ export default function LondonSmallBusinessWebDesignPage() {
             </li>
             <li className="text-gray-400">/</li>
             <li className="text-[#102f35] font-semibold">
-              London Custom Web Engineering
+              London SW20 Web Design
             </li>
           </ol>
         </nav>
 
-        {/* === LOCAL MARKET INTRODUCTION === */}
         <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text Column */}
             <div>
               <div className="max-w-5xl mb-8">
                 <span className="text-sm font-bold tracking-wider text-[#411b3f] uppercase block mb-2">
-                  Based in London
+                  Based in London SW20
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-6">
-                  Stop Losing High-Value Regional Leads to Template Bloat
+                  Stop Losing Local Enquiries to a Weak First Impression
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                  The London B2B market is fiercely competitive. If your website is weighed down by heavy plugins, bloated templates, or a fragile low-tier setup, your mobile speed suffers and potential clients bounce back to the search results within seconds.
+                  When a Raynes Park tradesperson, Wimbledon adviser, or Merton caterer needs a
+                  better website, they rarely type agency jargon into Google — they ask who looks
+                  professional and who is easy to work with. Your site has to prove that in seconds
+                  on mobile.
                 </p>
               </div>
 
               <div className="space-y-6 text-gray-700 text-base leading-relaxed">
                 <p>
-                  At Karol Digital, we build tailored, high-performance websites for ambitious local firms. By eliminating unnecessary weight and engineering lean, custom systems from scratch, we ensure your brand delivers an unmatched user experience that wins customer trust immediately.
+                  At Karol Digital, we build websites for ambitious local firms that need clearer
+                  offers, stronger trust, and enquiry paths that actually convert. Fast pages matter
+                  because London prospects bounce quickly — but the promise is more booked work, not
+                  a technical score.
                 </p>
 
-                {/* Local Client Validation Box */}
                 <div className="bg-gray-50 border-l-4 border-[#102f35] p-5 rounded-r-xl my-6">
-                  <p className="font-semibold text-[#102f35] mb-1">Trusted by London Professionals</p>
+                  <p className="font-semibold text-[#102f35] mb-1">Trusted by UK service brands</p>
                   <p className="text-sm text-gray-600">
-                    From streamlining financial inquiries for <strong>1st Call UK Finance</strong> to scaling trust matrices for <strong>1st Call UK Immigration</strong> and optimizing local catering visibility for <strong>Food Mama&apos;s Kitchen</strong>, we know what makes London customers take action.
+                    From <strong>Wild Hearts Collective</strong> — a studio site admired by the
+                    client and their community — to clearer journeys for{" "}
+                    <strong>1st Call UK</strong> and catering visibility for{" "}
+                    <strong>Food Mama&apos;s Kitchen</strong>, we know what makes buyers take action.
                   </p>
                 </div>
 
                 <p>
-                  Whether you serve commercial building development hubs, boutique legal entities, corporate hospitality sectors, or wealth management practices across Greater London, we align every step of our design framework with your direct commercial outcomes.
+                  Whether you serve customers across SW20, Wimbledon, New Malden, or further across
+                  Greater London, we align every page with commercial outcomes — more of the right
+                  enquiries, less wasted admin.
                 </p>
               </div>
             </div>
 
-            {/* Image Column */}
             <div className="relative h-[400px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
               <Image
                 src="/services-london-web-engineering.webp"
-                alt="High-performance custom web engineering for London small businesses"
+                alt="Web design for London SW20 small businesses"
                 fill
                 className="object-cover"
               />
@@ -128,25 +132,26 @@ export default function LondonSmallBusinessWebDesignPage() {
           </div>
         </section>
 
-        {/* === THREE CORE PILLARS OF LOCAL PERFORMANCE === */}
         <section className="bg-gray-50 py-20 px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-[#102f35] mb-4">
-                Why Local Growth Starts with Elite Performance
+                Why Local Growth Starts with a Clearer Website
               </h2>
               <p className="text-gray-600">
-                We bridge the gap between abstract design principles and actual commercial lead acquisition metrics.
+                We connect local visibility, trust, and enquiry flow to booked appointments and
+                better-quality leads.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-10">
               <div className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#102f35]">
                 <h3 className="text-xl font-bold text-[#102f35] mb-4">
-                  Advanced Local SEO Setup
+                  Local Search Around SW20
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  We embed regional structured data and high-intent local metadata directly into your custom build. This gives your business a stronger visibility boost on Google Maps and regional search blocks.
+                  We map your site to real local intent — SW20, Raynes Park, Wimbledon, New Malden,
+                  Merton, and Kingston — so Maps and regional search can connect nearby buyers to you.
                 </p>
               </div>
 
@@ -155,101 +160,124 @@ export default function LondonSmallBusinessWebDesignPage() {
                   Conversion-First Layout Design
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  We systematically eliminate layout friction points. By strategically placing clear calls-to-action and low-stress single-step lead fields, we make booking consultations or requesting quotes effortless.
+                  We remove friction that loses work. Clear calls-to-action and simple enquiry forms
+                  make booking consultations or requesting quotes effortless on a phone.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#102f35]">
                 <h3 className="text-xl font-bold text-[#102f35] mb-4">
-                  Sub-2 Second Mobile Speeds
+                  Fast Enough That Locals Stay
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  With the majority of London business searches occurring on mobile devices on the go, our performance-first engineering means pages load instantly — capturing leads before they change their minds.
+                  Most London business searches happen on the go. Pages that load quickly keep
+                  prospects on your site long enough to enquire — before they tap a competitor.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* === BOROUGH FOCUS & TARGET INDUSTRIES === */}
         <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold text-[#102f35] mb-4">
-              Serving High-Growth Business Sectors Across London
+              Serving Growth Sectors Across SW London
             </h2>
             <p className="text-gray-600 text-base">
-              We engineer specialized conversion funnels custom-tailored to your exact vertical and target local audience.
+              We tailor enquiry journeys to your sector and the local buyers you actually serve.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="p-6 border-l-4 border-[#102f35] bg-gray-50/50 rounded-r-xl">
-              <h4 className="text-lg font-bold mb-2 text-[#102f35]">Construction &amp; Trades</h4>
+              <h4 className="text-lg font-bold mb-2 text-[#102f35]">Fitness &amp; Studios</h4>
               <p className="text-gray-600 text-xs leading-relaxed">
-                Bespoke project showcase portfolios built to help commercial contractors win premium property development contracts and tenders across Greater London.
+                Class discovery and online booking sites people are proud to share — like Wild Hearts Collective.
               </p>
             </div>
-
             <div className="p-6 border-l-4 border-[#411b3f] bg-gray-50/50 rounded-r-xl">
               <h4 className="text-lg font-bold mb-2 text-[#411b3f]">Immigration Services</h4>
               <p className="text-gray-600 text-xs leading-relaxed">
-                High-trust, professional layouts highlighting OISC compliance frame structures and corporate sponsor client review tracks for maximum validation.
+                High-trust layouts that explain visa routes clearly and turn more enquiries into instructed cases.
               </p>
             </div>
-
             <div className="p-6 border-l-4 border-[#102f35] bg-gray-50/50 rounded-r-xl">
               <h4 className="text-lg font-bold mb-2 text-[#102f35]">Financial &amp; Advisory</h4>
               <p className="text-gray-600 text-xs leading-relaxed">
-                Security-focused platforms that establish clear authority for wealth managers and boutique financial consultancies, ensuring you capture leads from high-net-worth audiences.
+                Professional sites that establish authority and capture serious consultation requests.
               </p>
             </div>
-
             <div className="p-6 border-l-4 border-[#411b3f] bg-gray-50/50 rounded-r-xl">
-              <h4 className="text-lg font-bold mb-2 text-[#411b3f]">Hospitality &amp; Catering</h4>
+              <h4 className="text-lg font-bold mb-2 text-[#411b3f]">Hospitality &amp; Trades</h4>
               <p className="text-gray-600 text-xs leading-relaxed">
-                Visually immersive, mobile-optimized experience hubs designed to increase local event booking volumes and streamline corporate catering inquiries.
+                Menu-led and quote-ready journeys that win local bookings and reduce admin chase.
               </p>
             </div>
           </div>
         </section>
 
-        {/* === ADDITIONAL SEO CONTENT: WHY LONDON BUSINESSES NEED HIGH PERFORMANCE === */}
+        <section className="py-16 px-6 md:px-12 bg-[#102f35] text-white">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Our SW20 footprint
+            </h2>
+            <p className="text-white/75 mb-8 max-w-2xl mx-auto text-sm md:text-base">
+              London is too broad to target passively. We focus local messaging around SW20 and the
+              neighbouring pockets where trust and word-of-mouth already matter.
+            </p>
+            <ul className="flex flex-wrap justify-center gap-3 text-sm font-semibold">
+              {SITE_SERVICE_AREAS.map((area) => (
+                <li
+                  key={area}
+                  className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-brand-gold-muted"
+                >
+                  {area}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         <section className="py-20 px-6 md:px-12 bg-white border-t border-gray-100">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-[#102f35] mb-8 text-center">
-              Why London&apos;s Competitive Market Demands Bespoke Performance
+              Why SW20 businesses need a clearer digital front door
             </h2>
             <div className="prose prose-lg text-gray-700 mx-auto">
               <p>
-                In a city where attention spans are short and competition is everywhere, a template-based website is a liability. London enterprises require <strong>high-performance, search-optimised infrastructure</strong> to stand out. At Karol Digital, we move beyond the limitations of bloated platforms by engineering <strong>custom systems from scratch</strong> — giving you a lightning-fast, highly secure, and conversion-focused foundation.
+                In a city where attention spans are short and competition is everywhere, a weak
+                website costs you work. Local enterprises need a professional, search-visible site
+                that turns nearby demand into booked appointments — not another generic brochure.
               </p>
               <p>
-                Our <strong>London-centric SEO approach</strong> ensures your business isn&apos;t just visible — it&apos;s dominant. We map your site to local search intent, integrating specific borough-based keywords and location-aware structured data. This strategy helps your business capture high-intent traffic, turning searchers into booked appointments and long-term clients.
+                Our <strong>SW20-focused approach</strong> names real areas — Raynes Park,
+                Wimbledon, New Malden, Merton, Kingston — and pairs that with Google Business
+                Profile support so local intent can find you.
               </p>
               <p>
-                Whether you are looking for <strong>high-performance custom web engineering in London</strong>, regional SEO optimisation, or a complete digital brand overhaul, we provide the expertise to ensure your website is a powerful engine for commercial growth.
+                Whether you need <strong>web design in SW20</strong>, a stronger site for Wimbledon
+                customers, or a UK-wide presence with a South West London base, we build for
+                commercial growth first.
               </p>
             </div>
           </div>
         </section>
 
-        {/* === CTA SECTION === */}
         <section className="py-24 bg-gradient-to-r from-[#102f35] via-[#513356] to-[#102f35] text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Ready to Dominate Your London Market?
+              Ready to win more local work?
             </h2>
             <p className="text-lg mb-8 text-gray-100">
-              Stop settling for digital mediocrity. Let’s build a high-performance, conversion-optimized platform that secures your position as a local industry leader.
+              Let&apos;s build a website that looks the part, shows up nearby, and turns more
+              visitors into enquiries you actually want.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                className="bg-white text-[#102f35] hover:bg-brand-gold font-semibold px-8 py-4 rounded-full shadow-md transition-all"
-                href="/book"
-              >
-                Book Your London Lead Audit
-              </Link>
-            </div>
+            <Link
+              className="bg-white text-[#102f35] hover:bg-brand-gold font-semibold px-8 py-4 rounded-full shadow-md transition-all inline-block"
+              href="/book"
+            >
+              Book Your Local Lead Audit
+            </Link>
           </div>
         </section>
       </main>

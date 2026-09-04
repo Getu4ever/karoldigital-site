@@ -43,7 +43,7 @@ const STATIC_DOCS: SearchDoc[] = [
   {
     title: "High-performance custom web design",
     url: "/services/web-design",
-    description: "Custom-built websites for UK service businesses. Fast, conversion-focused, no template bloat.",
+    description: "Websites for UK service businesses that win qualified enquiries — London SW20 studio.",
   },
   {
     title: "Custom web development",
@@ -53,7 +53,7 @@ const STATIC_DOCS: SearchDoc[] = [
   {
     title: "Next.js development",
     url: "/services/nextjs-development",
-    description: "High-performance Next.js websites with strong SEO and GEO foundations.",
+    description: "Fast websites with strong SEO and AI search foundations.",
   },
   {
     title: "Website audits",
@@ -64,7 +64,7 @@ const STATIC_DOCS: SearchDoc[] = [
     title: "AI search optimisation (GEO)",
     url: "/services/ai-search-optimisation",
     description:
-      "Generative engine optimisation so ChatGPT, Perplexity, and Google AI Overviews can cite you.",
+      "Show up when buyers ask ChatGPT, Perplexity, or Google AI who to hire.",
   },
   {
     title: "Digital marketing",
@@ -89,7 +89,7 @@ const STATIC_DOCS: SearchDoc[] = [
   {
     title: "Small business web design London",
     url: "/services/small-business-web-design-london",
-    description: "London web design for local service firms that need speed and trust.",
+    description: "London SW20 web design for Raynes Park, Wimbledon, Merton and nearby firms.",
   },
   {
     title: "Industry web design",
@@ -104,7 +104,7 @@ const STATIC_DOCS: SearchDoc[] = [
   {
     title: "Immigration services websites",
     url: "/industries/immigration-services",
-    description: "Websites for UK immigration lawyers and advisers.",
+    description: "Web design and enquiry systems for UK immigration firms.",
   },
   {
     title: "Building and construction websites",
@@ -119,7 +119,7 @@ const STATIC_DOCS: SearchDoc[] = [
   {
     title: "Fitness studio websites",
     url: "/industries/fitness-studios",
-    description: "Class booking and brand websites for studios.",
+    description: "Wild Hearts Collective and studio sites with class booking and community brand.",
   },
   {
     title: "GEO and SEO website checker",

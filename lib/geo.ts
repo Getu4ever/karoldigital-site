@@ -6,7 +6,9 @@ import {
   SITE_LOCATION_LABEL,
   SITE_PHONE_DISPLAY,
   SITE_PHONE_E164,
+  SITE_POSTAL_CODE,
   SITE_REGION,
+  SITE_SERVICE_AREAS,
   SITE_SOCIAL,
 } from "@/lib/site-contact";
 
@@ -22,7 +24,7 @@ export const PREFERRED_CITATION =
 export const FOUNDER_NAME = "Karol";
 export const FOUNDER_JOB_TITLE = "Founder & Web Designer";
 export const FOUNDER_DESCRIPTION =
-  "Karol is the founder of Karol Digital, a London web design studio. Karol designs and engineers custom Next.js websites for UK service businesses, with a focus on conversion, technical SEO, and generative engine optimisation (GEO).";
+  "Karol is the founder of Karol Digital, a London SW20 web design studio. Karol designs conversion-focused websites for UK service businesses, with a focus on clearer offers, qualified enquiries, technical SEO, and generative engine optimisation (GEO).";
 
 export type FaqItem = { q: string; a: string };
 
@@ -69,6 +71,7 @@ export function personJsonLd() {
       "@type": "PostalAddress",
       addressLocality: SITE_LOCALITY,
       addressRegion: SITE_REGION,
+      postalCode: SITE_POSTAL_CODE,
       addressCountry: SITE_COUNTRY,
     },
   };
@@ -96,6 +99,7 @@ export function organizationJsonLd() {
       "@type": "PostalAddress",
       addressLocality: SITE_LOCALITY,
       addressRegion: SITE_REGION,
+      postalCode: SITE_POSTAL_CODE,
       addressCountry: SITE_COUNTRY,
     },
     openingHoursSpecification: [
@@ -106,10 +110,16 @@ export function organizationJsonLd() {
         closes: "18:00",
       },
     ],
-    areaServed: {
-      "@type": "Country",
-      name: SITE_COUNTRY_NAME,
-    },
+    areaServed: [
+      {
+        "@type": "Country",
+        name: SITE_COUNTRY_NAME,
+      },
+      ...SITE_SERVICE_AREAS.map((name) => ({
+        "@type": "Place" as const,
+        name,
+      })),
+    ],
     description: PREFERRED_CITATION,
     knowsAbout: [
       "Web design for UK service businesses",

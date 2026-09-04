@@ -59,16 +59,16 @@ export default function FitnessStudiosPage() {
 
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center justify-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
-              High-Performance Website Development
+              Featuring Wild Hearts Collective
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Fitness &amp; Wellness Studio{" "}
               <span className="text-brand-gold-muted">Websites</span>
             </h1>
             <p className="text-base sm:text-lg max-w-2xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
-              Custom web development and e-commerce for studios that need more
-              than a template — clear class discovery, fast booking, and a brand
-              presence clients are proud to share.
+              Class discovery, online booking, and a brand presence clients are
+              proud to share — like Wild Hearts Collective, admired by the
+              founders and their community.
             </p>
             <Link
               href="/book"
@@ -146,7 +146,7 @@ export default function FitnessStudiosPage() {
               {[
                 {
                   title: "Custom Web Development",
-                  desc: "100% custom-built sites — fast, secure, and flexible — without template bloat or plugin chaos. Designed around your brand, classes, and community voice.",
+                  desc: "Custom sites built around your brand, classes, and community — fast on mobile, easy to book, and free of the clutter that makes studios look amateur.",
                   icon: <Sparkles size={22} />,
                 },
                 {
@@ -190,9 +190,9 @@ export default function FitnessStudiosPage() {
                 Wild Hearts Collective
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
-                Widely admired by the client and their community — a
-                high-performance website with custom development and e-commerce
-                for an inclusive aerial and pole studio in Mansfield.
+                Highly admired by the client and their friends — an inclusive
+                aerial and pole studio site with online booking, clear schedules,
+                and a warm brand presence people are proud to share.
               </p>
             </div>
 
@@ -257,18 +257,18 @@ export default function FitnessStudiosPage() {
                 <div className="grid grid-cols-2 gap-4 mb-8 text-center">
                   <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-200/60">
                     <span className="block text-lg font-bold text-[#411b3f]">
-                      Custom Build
+                      Client admired
                     </span>
                     <span className="text-xs text-gray-500 font-semibold uppercase tracking-wide">
-                      Web Development
+                      Shared with friends
                     </span>
                   </div>
                   <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-200/60">
                     <span className="block text-lg font-bold text-[#411b3f]">
-                      E-commerce
+                      Book online
                     </span>
                     <span className="text-xs text-gray-500 font-semibold uppercase tracking-wide">
-                      Class Booking
+                      Classes &amp; workshops
                     </span>
                   </div>
                 </div>

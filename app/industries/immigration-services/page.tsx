@@ -59,24 +59,25 @@ export default function ImmigrationWebDesign() {
 
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
-              High-Trust Websites for OISC &amp; SRA-Regulated Practices
+              Web Design &amp; Automated Systems for UK Immigration Firms
             </span>
 
             <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
-              Web Design for{" "}
+              Websites that turn visa enquiries into{" "}
               <br className="hidden sm:inline" />
-              <span className="text-brand-gold-muted">Immigration Services</span>
+              <span className="text-brand-gold-muted">instructed cases</span>
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 text-gray-200 leading-relaxed font-medium">
-              High-performance, regulation-aware websites for UK immigration
-              law firms and consultants — built to earn trust, explain complex
-              services clearly, and turn more enquiries into instructed cases.
+              For UK immigration firms that need more of the right clients —
+              not another generic brochure site. We build clear visa journeys,
+              trust-first layouts, and intake forms that save your team hours
+              while stopping good cases from slipping away.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-300 mb-8 max-w-md">
-              Ideal for OISC and SRA-regulated firms that need a website which
-              reflects their real expertise and complies with current rules.
+              Ideal for OISC and SRA-regulated practices that want a website
+              which reflects real expertise and makes instructing you feel safe.
             </p>
 
             <Link

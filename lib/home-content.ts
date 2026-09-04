@@ -1,7 +1,7 @@
 export const homeFaqs = [
   {
     q: "What is Karol Digital?",
-    a: "Karol Digital is a UK web design agency that builds conversion-focused websites for service businesses, with expertise in SEO, AI search optimisation (GEO), and lead generation. The studio is based in London and led by Karol, Founder & Web Designer.",
+    a: "Karol Digital is a UK web design agency that builds conversion-focused websites for service businesses, with expertise in SEO, AI search optimisation (GEO), and lead generation. The studio is based in London SW20 and led by Karol, Founder & Web Designer.",
   },
   {
     q: "How much does a professional website cost?",
@@ -13,7 +13,7 @@ export const homeFaqs = [
   },
   {
     q: "Who do you work best with?",
-    a: "We work best with growing small businesses and service providers that need modern, fast digital systems—whether that is a high-performance website, a conversion-focused e-commerce store, or a custom mobile application that keeps customers coming back.",
+    a: "We work best with growing service businesses whose phones should be ringing more — firms that need a clear offer, a professional first impression, and enquiry journeys that save the team time.",
   },
   {
     q: "Can you improve an existing website?",
@@ -21,7 +21,7 @@ export const homeFaqs = [
   },
   {
     q: "Do you build custom websites or use templates?",
-    a: "We build 100% custom digital solutions—no template bloat and no slow drag-and-drop platforms. Custom-built websites and apps load faster, stay more secure, and are shaped around how your business actually wins customers.",
+    a: "We build every site around how you win work — clear offers, trust, and enquiry paths — rather than forcing your business into a generic template. The result is a faster site that looks more professional and converts more visitors into real conversations.",
   },
   {
     q: "What if I am not ready for a full website project?",
@@ -36,6 +36,11 @@ export const homeFaqs = [
 export const homeTestimonials = [
   {
     quote:
+      "Our new website is admired by our community and friends — it finally feels like us. Booking is clearer, the brand feels warm and inclusive, and people are proud to share it.",
+    author: "Wild Hearts Collective",
+  },
+  {
+    quote:
       "Karol Digital transformed our digital presence. The website made it easier for clients to understand what we offer and contact us.",
     author: "1st Call UK Immigration",
   },
@@ -44,48 +49,45 @@ export const homeTestimonials = [
       "A true lead generation engine. We saw a clear uplift in the quality of leads coming through the site.",
     author: "1st Call UK Financial",
   },
-  {
-    quote:
-      "Professional, fast, and results-driven. The new branding and website gave the business a much stronger online presence.",
-    author: "British Solar Direct",
-  },
 ] as const;
 
 export const homeCaseStudies = [
   {
-    title: "1st Call UK Financial",
-    logo: "/logos/1st-call-financial.webp",
-    logoAlt: "1st Call UK Financial logo",
+    title: "Wild Hearts Collective",
+    logo: "/wild-hearts-showcase.png",
+    logoAlt: "Wild Hearts Collective studio website",
     description:
-      "A mobile-first website experience with strong speed, accessibility, best practices, and SEO performance.",
-    metric: "98+",
-    metricLabel: "PageSpeed on core pages",
-    industryHref: "/industries/financial-services",
-    industryLabel: "Financial case study",
+      "Latest completed project — an inclusive aerial and pole studio site with online class booking, clear schedules, and a brand presence the founders and their friends are proud to share.",
+    metric: "Latest",
+    metricLabel: "Featured studio build",
+    industryHref: "/industries/fitness-studios",
+    industryLabel: "Studio case study",
     featured: true,
+    coverImage: true,
+    liveUrl: "https://www.wildheartscollective.org/",
   },
   {
     title: "1st Call UK Immigration",
     logo: "/logos/1st-calluk-immigration.webp",
     logoAlt: "1st Call UK Immigration logo",
     description:
-      "A high-performing service website built to combine trust, clarity, and strong mobile usability.",
-    metric: "↑ Lead quality",
-    metricLabel: "Clearer enquiry journeys",
+      "Visa paths explained in plain English, with intake flows that help stressed clients instruct the firm — and help the team qualify cases faster.",
+    metric: "↑ Instructed",
+    metricLabel: "Clearer client journeys",
     industryHref: "/industries/immigration-services",
     industryLabel: "Immigration case study",
     featured: false,
   },
   {
-    title: "British Solar Direct",
-    logo: "/logos/british-solar-direct-logo.png",
-    logoAlt: "British Solar Direct logo",
+    title: "1st Call UK Financial",
+    logo: "/logos/1st-call-financial.webp",
+    logoAlt: "1st Call UK Financial logo",
     description:
-      "A conversion-focused website for Nottingham’s turnkey home solar specialist—clear installation packages, fixed-quote journeys, and a fast path from enquiry to booking.",
-    metric: "3–6 wks",
-    metricLabel: "Launch-ready build cycle",
-    industryHref: "https://www.britishsolardirect.co.uk/",
-    industryLabel: "British Solar Direct",
+      "A clearer path from first visit to mortgage or finance enquiry — built so serious prospects trust the brand and take the next step on mobile.",
+    metric: "↑ Lead quality",
+    metricLabel: "Stronger enquiry journeys",
+    industryHref: "/industries/financial-services",
+    industryLabel: "Financial case study",
     featured: false,
   },
 ] as const;
@@ -94,42 +96,42 @@ export const homeServices = [
   {
     title: "High-Performance Websites",
     description:
-      "100% custom-built, modern digital solutions for growing small businesses—designed for clarity, credibility, and conversion, without template bloat or slow loading speeds.",
+      "Websites that make your offer obvious, earn trust in seconds, and turn more visitors into phone calls, form fills, and booked consultations.",
     href: "/services/web-design",
     cta: "Custom website design",
   },
   {
     title: "Custom Web Development",
     description:
-      "Modern, fast websites built from the ground up around how you sell—eliminating drag-and-drop limitations so your site stays quick, flexible, and ready to grow.",
+      "Built around how you sell — packages, quotes, bookings, and lead capture that fit your workflows, so enquiries stop falling through the cracks.",
     href: "/services/custom-web-development",
     cta: "Bespoke web builds",
   },
   {
     title: "High-Quality E-Commerce Websites",
     description:
-      "Conversion-focused online stores built for speed, secure payments, and a smooth checkout experience that turns browsers into paying customers.",
+      "Online stores with a smooth path from browse to buy — clear products, secure checkout, and fewer abandoned baskets on mobile.",
     href: "/services/custom-web-development",
     cta: "Explore e-commerce",
   },
   {
     title: "Custom Mobile Applications",
     description:
-      "High-quality mobile apps built to increase customer loyalty and sync seamlessly with your business systems—so your website and app work as one.",
+      "Apps that keep customers coming back — bookings, accounts, and loyalty in one place, synced with how you already run the business.",
     href: "/services/custom-mobile-applications",
     cta: "Mobile app builds",
   },
   {
     title: "Website Audits",
     description:
-      "Clear advice for businesses whose current site feels slow, unclear, outdated, or underperforming.",
+      "A plain-English review of what is costing you trust, visibility, and enquiries — plus a clear fix list before you invest in a rebuild.",
     href: "/services/website-audits",
     cta: "Site audit details",
   },
   {
     title: "AI Search Optimisation",
     description:
-      "GEO, content systems, interactive lead magnets, and analytics so AI engines can find, cite, and recommend your business.",
+      "Show up when buyers ask ChatGPT or Google AI who to hire — structured content and signals so engines can recommend your business accurately.",
     href: "/services/ai-search-optimisation",
     cta: "AI search optimisation",
   },
@@ -137,62 +139,62 @@ export const homeServices = [
 
 export const homeDifference = [
   {
-    title: "Lightning-fast performance",
+    title: "More completed enquiries",
     description:
-      "Custom-built websites and apps load faster than template platforms—so visitors stay engaged and search engines reward your speed.",
+      "Pages that load quickly on mobile keep prospects on your site instead of bouncing to a competitor — so more people finish the form or call.",
   },
   {
-    title: "Rock-solid security",
+    title: "A site that earns trust",
     description:
-      "Modern custom builds avoid the plugin bloat and weak spots common in template sites, giving your business a safer digital foundation.",
+      "Clear offers, professional presentation, and fewer broken experiences mean busy buyers feel safe enough to contact you.",
   },
   {
-    title: "Unified enquiry systems",
+    title: "Less admin, fewer lost leads",
     description:
-      "Clearer calls-to-action and shared modern databases mean your website and mobile app can work together—so leads and customers flow into one place.",
+      "Enquiry systems that capture the right details and keep website, app, and follow-up in sync — so your team spends less time chasing paperwork.",
   },
 ] as const;
 
 export const homeIndustries = [
   {
-    title: "Financial Services",
-    description:
-      "Website design for financial businesses that need trust, clarity, and a more professional lead generation journey.",
-    href: "/industries/financial-services",
-    linkLabel: "Financial sites",
-  },
-  {
-    title: "Immigration Lawyers",
-    description:
-      "Websites for immigration-focused firms that need to build authority, reduce confusion, and make it easier for clients to enquire.",
-    href: "/industries/immigration-services",
-    linkLabel: "Immigration sites",
-  },
-  {
-    title: "Construction and Trades",
-    description:
-      "High-performance websites for builders and specialist trades — clear packages, local trust, and quote-ready journeys.",
-    href: "/industries/building-services",
-    linkLabel: "Construction sites",
-  },
-  {
     title: "Fitness & Wellness Studios",
     description:
-      "High-performance websites and e-commerce for studios that need clear class discovery, online booking, and a brand people admire.",
+      "Studio sites with clear class discovery, online booking, and a brand people admire — as with Wild Hearts Collective.",
     href: "/industries/fitness-studios",
     linkLabel: "Studio websites",
   },
   {
+    title: "Immigration Lawyers",
+    description:
+      "Sites for immigration firms that need to build authority, explain visa routes clearly, and turn more enquiries into instructed cases.",
+    href: "/industries/immigration-services",
+    linkLabel: "Immigration sites",
+  },
+  {
+    title: "Financial Services",
+    description:
+      "Websites for accountants, brokers, and advisers that need credibility, clarity, and a smoother path from first visit to consultation.",
+    href: "/industries/financial-services",
+    linkLabel: "Financial sites",
+  },
+  {
+    title: "Construction and Trades",
+    description:
+      "Websites for builders and specialist trades — clear packages, local trust, and quote-ready journeys that win booked work.",
+    href: "/industries/building-services",
+    linkLabel: "Construction sites",
+  },
+  {
     title: "Catering & Hospitality",
     description:
-      "Menu-led websites for UK caterers and food brands — clear packages, event enquiry paths, and mobile-first journeys that win corporate and private bookings.",
+      "Menu-led sites for UK caterers — clear packages, event enquiry paths, and mobile journeys that win corporate and private bookings.",
     href: "/industries/catering-services",
     linkLabel: "Catering sites",
   },
   {
     title: "Corporate Office Catering",
     description:
-      "B2B websites for office lunch providers — bulk order flows, crisp menus, and fast enquiry paths built for workplace teams and corporate events.",
+      "B2B sites for office lunch providers — bulk order flows, crisp menus, and fast enquiry paths built for workplace teams.",
     href: "/industries/catering-services",
     linkLabel: "Office lunch sites",
   },

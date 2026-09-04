@@ -76,13 +76,32 @@ function ProofLogoPlate({
   src,
   alt,
   className = "mb-5",
+  cover = false,
 }: {
   src: string;
   alt: string;
   className?: string;
+  cover?: boolean;
 }) {
-  // White-backed logos blend into the plate; dark circular marks stay as-is.
-  const blendWhiteBg = !src.includes("british-solar");
+  // White-backed logos blend into the plate; photos / dark marks stay as-is.
+  const blendWhiteBg =
+    !cover && !src.includes("british-solar") && !src.includes("wild-hearts");
+
+  if (cover) {
+    return (
+      <div
+        className={`relative mb-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 ${className}`}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 480px"
+        />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -149,27 +168,27 @@ const serviceImages = [
   { src: "/home/sections/svc-ai-search.jpg", alt: "AI search optimisation and visibility" },
 ] as const;
 
-const differenceImages = [
-  { src: "/home/sections/diff-speed.jpg", alt: "Lightning-fast website performance" },
-  { src: "/home/sections/diff-security.jpg", alt: "Secure custom digital systems" },
-  { src: "/home/sections/diff-unified.jpg", alt: "Unified website and app enquiry systems" },
-] as const;
-
 const industryImages = [
-  { src: "/home/sections/ind-financial.jpg", alt: "Financial services website design" },
-  { src: "/home/sections/ind-immigration.jpg", alt: "Immigration law firm website design" },
-  { src: "/home/sections/ind-construction.png", alt: "Construction and trades website design" },
   { src: "/home/sections/ind-fitness.png", alt: "Fitness and wellness studio website design" },
+  { src: "/home/sections/ind-immigration.jpg", alt: "Immigration law firm website design" },
+  { src: "/home/sections/ind-financial.jpg", alt: "Financial services website design" },
+  { src: "/home/sections/ind-construction.png", alt: "Construction and trades website design" },
   { src: "/heroes/catering-services.png", alt: "Catering and hospitality website design" },
   { src: "/heroes/catering-services.png", alt: "Corporate office catering website design" },
 ] as const;
 
+const differenceImages = [
+  { src: "/home/sections/diff-speed.jpg", alt: "More completed website enquiries" },
+  { src: "/home/sections/diff-security.jpg", alt: "Professional websites that earn trust" },
+  { src: "/home/sections/diff-unified.jpg", alt: "Enquiry systems that reduce admin" },
+] as const;
+
 const statItems = [
   {
-    value: "98+",
-    label: "PageSpeed scores on core pages",
+    value: "↑",
+    label: "Focus on qualified enquiries, not vanity metrics",
     image: "/home/sections/stat-speed.jpg",
-    alt: "Website performance speed",
+    alt: "Qualified enquiry growth",
   },
   {
     value: "3-6",
@@ -178,16 +197,16 @@ const statItems = [
     alt: "Project delivery timeline",
   },
   {
-    value: "100%",
-    label: "Custom-built, no template bloat",
+    value: "Hours",
+    label: "Saved weekly with clearer enquiry systems",
     image: "/home/sections/stat-custom.jpg",
-    alt: "Fully custom-built digital solutions",
+    alt: "Time saved on admin and paperwork",
   },
   {
-    value: "UK",
-    label: "Focused on service-led businesses",
+    value: "SW20",
+    label: "London studio serving UK service businesses",
     image: "/home/sections/stat-uk.jpg",
-    alt: "UK service business focus",
+    alt: "London SW20 studio",
   },
 ] as const;
 
@@ -250,8 +269,9 @@ export default function HomePageClient() {
             >
               Karol Digital is a UK web design agency that builds conversion-focused
               websites for service businesses, with expertise in SEO, AI search
-              optimisation (GEO), and lead generation. Custom sites for growing UK
-              firms — fast, credible, and typically live in 3–6 weeks.
+              optimisation (GEO), and lead generation. Based in London SW20, we help
+              UK firms look more professional, win better enquiries, and waste less
+              time on paperwork — typically live in 3–6 weeks.
             </motion.p>
 
             <motion.div
@@ -282,28 +302,27 @@ export default function HomePageClient() {
           <div>
             <SectionEyebrow>Why it matters</SectionEyebrow>
             <h2 className="mb-8 text-4xl font-bold leading-tight text-[#102f35] md:text-5xl">
-              Custom-built beats template builders
+              Your website should make the phone
               <br />
-              when growth is the goal
+              ring with the right work
             </h2>
 
             <p className="mb-6 text-lg leading-relaxed text-gray-700">
-              Template platforms and drag-and-drop builders are easy to start with—but they often
-              leave small businesses with slow pages, weak security, and messy enquiry flows. We
-              build <strong>high-performance websites and applications</strong> that turn{" "}
-              <strong>more visitors into qualified enquiries and customers</strong>.
+              Busy service owners rarely lose sleep over technology. They worry about why
+              enquiries are quiet, why competitors look more professional, and why the team
+              wastes hours chasing incomplete quotes. We build websites that fix those problems.
             </p>
 
             <p className="mb-6 text-lg leading-relaxed text-gray-700">
-              Custom code delivers lightning-fast speeds, rock-solid security, and a clearer path
-              from first visit to contact or checkout. No template bloat. No plugin overload. Just
-              modern digital systems built around how your business actually wins work.
+              That means a clear offer, trust in seconds, and an enquiry path that captures the
+              right details — so more visitors become conversations, and fewer leads fall through
+              the cracks.
             </p>
 
             <p className="mb-8 text-lg leading-relaxed text-gray-700">
-              When you need both a website and a mobile app, we can connect them to the{" "}
-              <strong>same modern database</strong>—so your customer data, enquiries, and operations
-              stay unified instead of scattered across disconnected tools.
+              When you need a website and an app, we connect them so bookings, customers, and
+              follow-ups stay in one place — saving hours of paperwork each week instead of
+              juggling disconnected tools.
             </p>
 
             <Link href="/book" className="btn-teal">
@@ -323,7 +342,7 @@ export default function HomePageClient() {
               quality={82}
             />
             <p className="text-center text-sm text-gray-500">
-              Fast, modern websites and apps designed around trust, speed, and conversion
+              Websites and apps designed around trust, clearer enquiries, and less admin
             </p>
           </div>
         </div>
@@ -350,12 +369,11 @@ export default function HomePageClient() {
           <div className="mb-12 text-center">
             <SectionEyebrow>What we offer</SectionEyebrow>
             <h2 className="mb-4 text-4xl font-bold text-[#102f35] md:text-5xl">
-              Digital services built around growth
+              Services built around business results
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-gray-600">
-              From high-performance websites and conversion-focused e-commerce stores to custom
-              mobile applications and audits—the focus is always the same: modern digital solutions
-              that help your business win more of the right customers.
+              From websites and online stores to mobile apps and audits — every project is shaped
+              around one job: help your business win more of the right customers, with less friction.
             </p>
           </div>
 
@@ -417,9 +435,8 @@ export default function HomePageClient() {
                 Why growing small businesses choose Karol Digital
               </h2>
               <p className="mx-auto max-w-3xl text-lg text-white/70">
-                The goal is not just a prettier site. It is a faster, safer, and more connected
-                digital system that makes it easier for the right people to trust you and take
-                action.
+                The goal is not a prettier brochure. It is more of the right enquiries, a stronger
+                first impression, and systems that save your team time every week.
               </p>
             </div>
 
@@ -515,34 +532,51 @@ export default function HomePageClient() {
           <div className="mb-14 text-center">
             <SectionEyebrow tone="dark">Proof</SectionEyebrow>
             <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-              Built for performance, visibility, and lead generation
+              Recent work clients are proud to share
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-white/65">
-              Strong websites do more than look good. They load fast, follow best practices, and
-              create a better experience for both visitors and search engines.
+              Strong websites do more than look good. They win trust, make booking or enquiring
+              effortless, and become the digital business card people recommend to friends.
             </p>
           </div>
 
           {/* Featured case */}
-          <article className="mb-8 grid gap-8 rounded-3xl border border-white/10 bg-white/[0.06] p-8 backdrop-blur-sm md:grid-cols-[1.2fr_1fr] md:items-center md:p-10">
+          <article className="mb-8 grid gap-8 rounded-3xl border border-brand-gold/35 bg-white/[0.08] p-8 backdrop-blur-sm md:grid-cols-[1.2fr_1fr] md:items-center md:p-10">
             <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-brand-gold-muted">
+                Latest featured project
+              </p>
               <ProofLogoPlate
                 src={featuredCase.logo}
                 alt={featuredCase.logoAlt}
+                cover={"coverImage" in featuredCase && featuredCase.coverImage === true}
                 className="mb-6"
               />
               <p className="mb-3 text-2xl font-bold md:text-3xl">{featuredCase.title}</p>
               <p className="mb-6 leading-relaxed text-white/70">{featuredCase.description}</p>
-              <Link
-                href={featuredCase.industryHref}
-                {...(featuredCase.industryHref.startsWith("http")
-                  ? { target: "_blank" as const, rel: "noopener noreferrer" }
-                  : {})}
-                className="inline-flex items-center gap-1 font-semibold text-brand-gold-muted transition hover:text-brand-gold"
-              >
-                {featuredCase.industryLabel}
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href={featuredCase.industryHref}
+                  {...(featuredCase.industryHref.startsWith("http")
+                    ? { target: "_blank" as const, rel: "noopener noreferrer" }
+                    : {})}
+                  className="inline-flex items-center gap-1 font-semibold text-brand-gold-muted transition hover:text-brand-gold"
+                >
+                  {featuredCase.industryLabel}
+                  <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+                {"liveUrl" in featuredCase && featuredCase.liveUrl ? (
+                  <Link
+                    href={featuredCase.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-semibold text-white transition hover:text-brand-gold"
+                  >
+                    Visit live site
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </Link>
+                ) : null}
+              </div>
             </div>
             <div className="rounded-2xl border border-brand-gold/30 bg-[#0a1f24]/60 px-8 py-10 text-center">
               <p className="text-5xl font-bold text-brand-gold-muted md:text-6xl">
@@ -560,7 +594,11 @@ export default function HomePageClient() {
                 key={study.title}
                 className="flex flex-col rounded-3xl border border-white/10 bg-white/[0.06] p-8 backdrop-blur-sm transition hover:border-brand-gold/35"
               >
-                <ProofLogoPlate src={study.logo} alt={study.logoAlt} />
+                <ProofLogoPlate
+                  src={study.logo}
+                  alt={study.logoAlt}
+                  cover={"coverImage" in study && study.coverImage === true}
+                />
                 <div className="mb-4 flex items-end justify-between gap-4">
                   <p className="text-xl font-bold md:text-2xl">{study.title}</p>
                   <div className="shrink-0 text-right">
@@ -614,7 +652,7 @@ export default function HomePageClient() {
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
           <div>
             <p className="text-2xl font-bold md:text-3xl">
-              Ready to turn your website—or app—into a growth asset?
+              Ready to turn more visitors into the right enquiries?
             </p>
             <p className="mt-2 text-gray-200">
               Free consultation. Clear advice. No pressure to commit.
@@ -729,12 +767,51 @@ export default function HomePageClient() {
               Selected clients and partners
             </h2>
             <p className="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
-              Long-term relationships with UK marketing and service brands that value clarity,
-              speed, and conversion-focused digital work.
+              Recent work includes Wild Hearts Collective — a studio site admired by the client
+              and their community — alongside long-term UK service brands.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <Link
+              href="https://www.wildheartscollective.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex h-full flex-col rounded-3xl border-2 border-brand-gold/50 bg-white p-8 text-left shadow-md transition hover:-translate-y-0.5 hover:border-brand-gold hover:shadow-lg md:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-[1.1fr_1.4fr] lg:items-center lg:gap-10"
+            >
+              <span className="absolute right-6 top-6 rounded-full bg-[#411b3f] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                Latest
+              </span>
+              <div className="relative mb-6 aspect-[16/10] w-full overflow-hidden rounded-2xl lg:mb-0">
+                <Image
+                  src="/wild-hearts-showcase.png"
+                  alt="Wild Hearts Collective website design by Karol Digital"
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-width: 1024px) 100vw, 520px"
+                />
+              </div>
+              <div>
+                <p className="mb-2 text-2xl font-bold text-[#102f35]">Wild Hearts Collective</p>
+                <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#411b3f]">
+                  Featured website design · Mansfield aerial &amp; pole studio
+                </p>
+                <p className="mb-6 text-sm leading-relaxed text-gray-600 md:text-base">
+                  Inclusive aerial and pole studio site with online class booking, clear schedules,
+                  and a warm brand presence — highly admired by the founders and their friends.
+                  Built for discovery, trust, and booked places.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                  Visit wildheartscollective.org
+                  <ArrowRight
+                    size={16}
+                    className="transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </span>
+              </div>
+            </Link>
+
             <Link
               href="https://sbc-marketing.co.uk/"
               target="_blank"
@@ -820,36 +897,6 @@ export default function HomePageClient() {
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
                 See solar partner site
-                <ArrowRight
-                  size={16}
-                  className="transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </span>
-            </Link>
-
-            <Link
-              href="https://www.wildheartscollective.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
-            >
-              <div className="mb-6 flex h-16 items-center overflow-hidden rounded-xl">
-                <Image
-                  src="/heroes/fitness-studios.png"
-                  alt="Wild Hearts Collective"
-                  width={200}
-                  height={64}
-                  className="h-16 w-full object-cover object-center"
-                />
-              </div>
-              <p className="mb-2 text-xl font-bold text-[#102f35]">Wild Hearts Collective</p>
-              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
-                An inclusive aerial and pole studio in Mansfield — with a high-performance
-                website, online class booking, and an admin area for memberships and operations.
-              </p>
-              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
-                Visit Wild Hearts Collective
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"

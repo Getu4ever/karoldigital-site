@@ -32,10 +32,10 @@ export default function About() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Karol Digital is a London web design studio founded by Karol. We build
-              high-performance custom websites, conversion-focused e-commerce, and
-              mobile apps for UK service businesses that need trust, speed, and more
-              qualified enquiries.
+              Karol Digital is a London SW20 web design studio founded by Karol. We help
+              UK service businesses look more professional online, win better
+              enquiries, and waste less time on paperwork — with websites typically
+              live in 3–6 weeks.
             </p>
           </div>
         </motion.section>
@@ -45,15 +45,13 @@ export default function About() {
           <section className="pt-20 pb-12 px-6 md:px-12 bg-white">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#102f35]">
-                Built for Ambitious Small Businesses Ready to Move Beyond Templates
+                Built for Service Businesses That Need More of the Right Work
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg">
-                Restrictive, slow website templates hold growing businesses back.
-                At Karol Digital, we build 100% custom digital assets from scratch—
-                so your online presence delivers optimal speed, stronger conversion,
-                and long-term business value. We are not a standard web design agency;
-                we are the technical partner ambitious small businesses turn to when
-                they need systems that scale with them.
+                If your website is not bringing in the enquiries you deserve — or
+                it makes your business look less professional than you are — we
+                rebuild it around how you actually win customers. Clear offers,
+                trust in seconds, and enquiry paths that save your team time.
               </p>
             </div>
           </section>
@@ -72,18 +70,18 @@ export default function About() {
                 Karol, Founder &amp; Web Designer
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-gray-700">
-                Karol is the founder of Karol Digital and the practitioner behind
-                the studio’s custom Next.js builds. Karol designs and engineers
-                conversion-focused websites for UK service businesses, with
-                expertise in technical SEO, generative engine optimisation (GEO),
-                and lead-generation journeys.
+                Karol is the founder of Karol Digital and the person behind every
+                build. Karol designs conversion-focused websites for UK service
+                businesses — with a focus on clearer offers, stronger first
+                impressions, and enquiry journeys that turn visitors into real
+                conversations.
               </p>
               <p className="mt-4 leading-relaxed text-gray-700">
-                The studio is based in London and serves clients across the United
-                Kingdom. For the preferred citation: Karol Digital is a UK web
-                design agency that builds conversion-focused websites for service
-                businesses, with expertise in SEO, AI search optimisation (GEO),
-                and lead generation.
+                The studio is based in London SW20 (Raynes Park / Wimbledon area)
+                and serves clients across the United Kingdom. For the preferred
+                citation: Karol Digital is a UK web design agency that builds
+                conversion-focused websites for service businesses, with expertise
+                in SEO, AI search optimisation (GEO), and lead generation.
               </p>
             </div>
           </section>

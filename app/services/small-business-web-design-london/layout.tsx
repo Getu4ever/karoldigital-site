@@ -8,13 +8,13 @@ const PAGE_URL =
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
-    title: "High-Performance Web Engineering London",
+    title: "Web Design London SW20 | Raynes Park & Wimbledon",
     description:
-      "Custom high-performance websites for London small businesses — fast, secure, and conversion-focused. Premium web engineering without template bloat.",
+      "Web design for London SW20, Raynes Park, Wimbledon & Merton service businesses. Clear offers, local visibility, and enquiry systems that win more of the right work.",
     url: PAGE_URL,
     image: "/services-london-web-engineering.webp",
     keywords:
-      "high-performance web design London, custom web engineering London, conversion-focused websites London, premium websites for London small business",
+      "web design SW20, web design Raynes Park, Wimbledon web designer, Merton web design, New Malden website design, London SW20 web design",
   }),
   alternates: {
     canonical: PAGE_URL,
@@ -41,7 +41,7 @@ const serviceSchema = [
       {
         "@type": "ListItem",
         position: 3,
-        name: "High-Performance Web Engineering London",
+        name: "London SW20 Web Design",
         item: PAGE_URL,
       },
     ],
@@ -49,14 +49,23 @@ const serviceSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "High-Performance Custom Web Engineering London",
+    name: "Web Design for London SW20 Small Businesses",
     description:
-      "Premium custom-built websites for London small businesses focused on speed, security, trust, and lead generation.",
+      "Conversion-focused websites for service businesses across SW20, Raynes Park, Wimbledon, New Malden, Merton, Kingston, and Greater London.",
     provider: {
       "@type": "ProfessionalService",
       name: "Karol Digital",
       url: "https://www.karoldigital.co.uk",
     },
+    areaServed: [
+      { "@type": "PostalCode", name: "SW20" },
+      { "@type": "Place", name: "Raynes Park" },
+      { "@type": "Place", name: "Wimbledon" },
+      { "@type": "AdministrativeArea", name: "Merton" },
+      { "@type": "Place", name: "New Malden" },
+      { "@type": "Place", name: "Kingston" },
+      { "@type": "City", name: "London" },
+    ],
   },
 ];
 
@@ -74,7 +83,7 @@ export default function ServiceLayout({
         }}
       />
       {children}
-      <GeoExtras faqs={londonWebDesignFaqs} title="London web design FAQ" />
+      <GeoExtras faqs={londonWebDesignFaqs} title="London SW20 web design FAQ" />
     </>
   );
 }

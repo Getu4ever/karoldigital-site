@@ -39,20 +39,20 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   home: {
     title: "Web Design for UK Service Businesses | Karol Digital",
     description:
-      "Karol Digital is a UK web design agency that builds conversion-focused websites for service businesses, with expertise in SEO, AI search optimisation (GEO), and lead generation.",
+      "Karol Digital builds websites that win qualified enquiries for UK service businesses — based in London SW20, with SEO & AI search (GEO), typically live in 3–6 weeks.",
     url: "https://www.karoldigital.co.uk/",
     image: "/seo-cover.jpg",
     keywords:
-      "web design UK, website design for service businesses, London web designer, conversion-focused websites",
+      "web design UK, website design for service businesses, London SW20 web designer, Raynes Park web design, conversion-focused websites",
     type: "website",
   },
 
   about: {
-    title: "About Karol Digital | UK Web Design Studio",
+    title: "About Karol Digital | London SW20 Web Design Studio",
     description:
-      "Meet Karol, founder of Karol Digital — a London web design studio building high-performance websites for UK service businesses that need trust, clarity, and more enquiries.",
+      "Meet Karol, founder of Karol Digital — a London SW20 web design studio helping UK service businesses look more professional, win better enquiries, and waste less time on paperwork.",
     keywords:
-      "about Karol Digital, London web designer, founder Karol, UK web design studio",
+      "about Karol Digital, London SW20 web designer, Raynes Park, founder Karol, UK web design studio",
     url: "https://www.karoldigital.co.uk/about",
     image: "/about-team.jpg",
     type: "website",
@@ -61,18 +61,18 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   contact: {
     title: "Contact Karol Digital | Book a Call",
     description:
-      "Contact Karol Digital for a free website consultation. Call 07565 472445 or email info@karoldigital.co.uk — London-based, serving UK service businesses.",
+      "Contact Karol Digital for a free website consultation. Call 07565 472445 or email info@karoldigital.co.uk — London SW20-based, serving UK service businesses.",
     url: "https://www.karoldigital.co.uk/contact",
     image: "/heroes/contact.png",
     keywords:
-      "contact Karol Digital, website consultation UK, book web design call London",
+      "contact Karol Digital, website consultation UK, book web design call London SW20",
     type: "website",
   },
 
   services: {
     title: "Web Design & Digital Services | Karol Digital",
     description:
-      "Custom websites, audits, AI search optimisation, and digital marketing for UK small businesses — modern, fast, and conversion-focused.",
+      "Websites, audits, AI search optimisation, and digital marketing for UK small businesses — built to win more of the right enquiries with less admin.",
     url: "https://www.karoldigital.co.uk/services",
     image: "/seo-cover.jpg",
     type: "website",

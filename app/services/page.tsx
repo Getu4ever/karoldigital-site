@@ -186,11 +186,12 @@ export default function ServicesPage() {
               Services
             </p>
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              Premium custom websites and digital systems for growth
+              Websites and digital systems that win more of the right work
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
-              Modern, fast, conversion-focused websites for UK small businesses —
-              engineered from scratch with rock-solid security and no template bloat.
+              Conversion-focused websites for UK small businesses — built around
+              clearer offers, stronger trust, and enquiry paths that save your
+              team time.
             </p>
           </div>
         </motion.section>

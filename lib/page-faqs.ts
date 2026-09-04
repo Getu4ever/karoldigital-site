@@ -160,16 +160,16 @@ export const mobileAppFaqs: FaqItem[] = [
 
 export const londonWebDesignFaqs: FaqItem[] = [
   {
-    q: "Do you design websites for London small businesses?",
-    a: "Yes. Karol Digital is a London web design studio building high-performance, conversion-focused websites for local service businesses that need to stand out in a competitive market.",
+    q: "Do you design websites for London SW20 small businesses?",
+    a: "Yes. Karol Digital is based in London SW20 and builds conversion-focused websites for local service businesses across Raynes Park, Wimbledon, New Malden, Merton, Kingston, and Greater London.",
   },
   {
     q: "Why not use a London template agency?",
-    a: "Template sites often load slowly and look generic. Custom-built sites are faster, clearer, and shaped around how your London business actually wins work.",
+    a: "Generic sites often look the same as every competitor and make it hard to enquire. We build around how your local business actually wins work — clearer offers, trust, and enquiry paths.",
   },
   {
-    q: "Do you work outside London?",
-    a: "Yes. We are based in London and serve service businesses across the United Kingdom.",
+    q: "Do you work outside SW20?",
+    a: "Yes. We are based in London SW20 and serve service businesses across the United Kingdom.",
   },
 ];
 
@@ -206,7 +206,7 @@ export const financialFaqs: FaqItem[] = [
 export const immigrationFaqs: FaqItem[] = [
   {
     q: "Do you build websites for immigration lawyers and advisers?",
-    a: "Yes. Karol Digital designs websites for UK immigration-focused firms that need to explain services clearly, build authority, and make it easy for clients to enquire.",
+    a: "Yes. Karol Digital designs websites for UK immigration-focused firms that need to explain services clearly, build authority, and turn more enquiries into instructed cases.",
   },
   {
     q: "How do you reduce confusing visa content?",
@@ -214,7 +214,7 @@ export const immigrationFaqs: FaqItem[] = [
   },
   {
     q: "Can the site handle high-intent enquiries?",
-    a: "Yes. We design enquiry paths that capture the right details so your team spends less time on incomplete or poorly qualified contacts.",
+    a: "Yes. We design enquiry paths that capture the right details by visa type and urgency — so your team spends less time on incomplete contacts and more time on cases you can instruct.",
   },
 ];
 
@@ -281,15 +281,15 @@ export const pricingFaqs: FaqItem[] = [
 export const aboutFaqs: FaqItem[] = [
   {
     q: "Who is behind Karol Digital?",
-    a: "Karol Digital is a London web design studio founded by Karol, a web designer and developer who builds custom Next.js websites for UK service businesses, with expertise in conversion, SEO, and GEO.",
+    a: "Karol Digital is a London SW20 web design studio founded by Karol, who builds conversion-focused websites for UK service businesses — with expertise in SEO, AI search optimisation (GEO), and lead generation.",
   },
   {
     q: "Where is Karol Digital based?",
-    a: "Karol Digital is based in London, United Kingdom, and serves service businesses across the UK.",
+    a: "Karol Digital is based in London SW20 (Raynes Park / Wimbledon area), United Kingdom, and serves service businesses across the UK.",
   },
   {
     q: "What makes Karol Digital different from a template agency?",
-    a: "We build 100% custom digital assets from scratch — no template bloat — so sites load faster, stay more secure, and are shaped around how the business wins customers.",
+    a: "We build around how you win customers — clearer offers, stronger trust, and enquiry systems that save time — rather than forcing your business into a generic template. Recent work includes Wild Hearts Collective, a studio site admired by the client and their community.",
   },
 ];
 

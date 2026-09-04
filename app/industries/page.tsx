@@ -19,12 +19,12 @@ import {
 export default function IndustriesPage() {
   const industries = [
     {
-      href: "/industries/financial-services",
-      label: "Financial Services",
-      linkLabel: "Financial sites",
-      icon: <Landmark size={20} />,
+      href: "/industries/fitness-studios",
+      label: "Fitness & Wellness Studios",
+      linkLabel: "Studio websites",
+      icon: <Heart size={20} />,
       description:
-        "Web design for financial businesses that need clarity, trust, and a more professional route to enquiry.",
+        "Studio websites with class booking and a brand people admire — featuring Wild Hearts Collective.",
     },
     {
       href: "/industries/immigration-services",
@@ -32,7 +32,15 @@ export default function IndustriesPage() {
       linkLabel: "Immigration sites",
       icon: <Scale size={20} />,
       description:
-        "Website design for immigration-focused firms that need to build authority, reduce confusion, and make it easier for clients to get in touch.",
+        "Website design for immigration-focused firms that need to build authority, reduce confusion, and turn more enquiries into instructed cases.",
+    },
+    {
+      href: "/industries/financial-services",
+      label: "Financial Services",
+      linkLabel: "Financial sites",
+      icon: <Landmark size={20} />,
+      description:
+        "Web design for financial businesses that need clarity, trust, and a more professional route to enquiry.",
     },
     {
       href: "/industries/building-services",
@@ -49,14 +57,6 @@ export default function IndustriesPage() {
       icon: <UtensilsCrossed size={20} />,
       description:
         "Websites and ordering systems for caterers and food brands that need clear menus and more bookings.",
-    },
-    {
-      href: "/industries/fitness-studios",
-      label: "Fitness & Wellness Studios",
-      linkLabel: "Studio websites",
-      icon: <Heart size={20} />,
-      description:
-        "High-performance websites and e-commerce for fitness and wellness studios — featuring Wild Hearts Collective.",
     },
   ];
 
