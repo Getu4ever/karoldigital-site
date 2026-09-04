@@ -17,7 +17,7 @@ const STATIC_DOCS: SearchDoc[] = [
     title: "About Karol Digital",
     url: "/about",
     description:
-      "Meet Karol, founder of Karol Digital, a London studio building custom websites for UK service businesses.",
+      "Meet Karol, web designer at Karol Digital, a London studio building custom websites for UK service businesses.",
   },
   {
     title: "Contact Karol Digital",

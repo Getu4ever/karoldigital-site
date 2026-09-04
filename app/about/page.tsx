@@ -32,10 +32,10 @@ export default function About() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-              Karol Digital is a London web design studio founded by Karol. We help
-              UK service businesses look more professional online, win better
-              enquiries, and waste less time on paperwork — with websites typically
-              live in 3–6 weeks.
+              Karol Digital is a London web design studio. We help UK service
+              businesses look more professional online, win better enquiries, and
+              waste less time on paperwork — with websites typically live in 3–6
+              weeks.
             </p>
           </div>
         </motion.section>
@@ -61,22 +61,21 @@ export default function About() {
 
         <FadeIn>
           <section
-            id="founder"
+            id="designer"
             className="scroll-mt-28 px-6 pb-12 md:px-12"
           >
             <div className="mx-auto max-w-5xl rounded-2xl border border-gray-100 bg-gray-50 p-8 md:p-12">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]">
-                Founder
+                Designer
               </p>
               <h2 className="mt-3 text-3xl font-bold text-[#102f35] md:text-4xl">
-                Karol, Founder &amp; Web Designer
+                Karol, Web Designer
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-gray-700">
-                Karol is the founder of Karol Digital and the person behind every
-                build. Karol designs conversion-focused websites for UK service
-                businesses — with a focus on clearer offers, stronger first
-                impressions, and enquiry journeys that turn visitors into real
-                conversations.
+                Karol is the web designer behind Karol Digital builds. Karol
+                designs conversion-focused websites for UK service businesses —
+                with a focus on clearer offers, stronger first impressions, and
+                enquiry journeys that turn visitors into real conversations.
               </p>
               <p className="mt-4 leading-relaxed text-gray-700">
                 The studio is based in London and serves clients across the United

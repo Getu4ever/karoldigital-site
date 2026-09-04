@@ -5,7 +5,7 @@ import { aboutFaqs } from "@/lib/page-faqs";
 export const metadata = generateSEOMetadata({
   title: "About Karol Digital | UK Web Design Studio",
   description:
-    "Meet Karol, founder of Karol Digital — a London web design studio building high-performance websites for UK service businesses that need trust, clarity, and more enquiries.",
+    "Meet Karol, web designer at Karol Digital — a London web design studio building high-performance websites for UK service businesses that need trust, clarity, and more enquiries.",
   url: "https://www.karoldigital.co.uk/about",
   image: "/about-our-story.webp",
 });

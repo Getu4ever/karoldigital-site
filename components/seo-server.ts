@@ -50,9 +50,9 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   about: {
     title: "About Karol Digital | UK Web Design Studio",
     description:
-      "Meet Karol, founder of Karol Digital — a London web design studio helping UK service businesses look more professional, win better enquiries, and waste less time on paperwork.",
+      "Meet Karol, web designer at Karol Digital — a London web design studio helping UK service businesses look more professional, win better enquiries, and waste less time on paperwork.",
     keywords:
-      "about Karol Digital, London web designer, founder Karol, UK web design studio, London SW20",
+      "about Karol Digital, London web designer, Karol web designer, UK web design studio, London SW20",
     url: "https://www.karoldigital.co.uk/about",
     image: "/about-team.jpg",
     type: "website",
@@ -266,7 +266,7 @@ export function generateSEOMetadata({
     keywords,
     authors: (authors ?? ["Karol"]).map((name) => ({
       name,
-      url: "https://www.karoldigital.co.uk/about#founder",
+      url: "https://www.karoldigital.co.uk/about#designer",
     })),
     creator: "Karol",
     publisher: "Karol Digital",

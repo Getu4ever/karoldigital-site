@@ -297,7 +297,7 @@ export const pricingFaqs: FaqItem[] = [
 export const aboutFaqs: FaqItem[] = [
   {
     q: "Who is behind Karol Digital?",
-    a: "Karol Digital is a London web design studio founded by Karol, who builds conversion-focused websites for UK service businesses — with expertise in SEO, AI search optimisation (GEO), and lead generation.",
+    a: "Karol Digital is a London web design studio. Karol is the web designer who builds conversion-focused websites for UK service businesses — with expertise in SEO, AI search optimisation (GEO), and lead generation.",
   },
   {
     q: "Where is Karol Digital based?",

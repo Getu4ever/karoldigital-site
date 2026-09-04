@@ -16,7 +16,7 @@ import {
 export const SITE_ORIGIN = "https://www.karoldigital.co.uk";
 export const ORG_ID = `${SITE_ORIGIN}/#organization`;
 export const WEBSITE_ID = `${SITE_ORIGIN}/#website`;
-export const PERSON_ID = `${SITE_ORIGIN}/about#founder`;
+export const PERSON_ID = `${SITE_ORIGIN}/about#designer`;
 export const INDEXNOW_KEY = "a8f3c2e91b674d0aa15e6c8d4f2b9e70";
 
 export const PREFERRED_CITATION =
@@ -36,9 +36,9 @@ export const CORE_OFFER_KEYWORDS = [
 ] as const;
 
 export const FOUNDER_NAME = "Karol";
-export const FOUNDER_JOB_TITLE = "Founder & Web Designer";
+export const FOUNDER_JOB_TITLE = "Web Designer";
 export const FOUNDER_DESCRIPTION =
-  "Karol is the founder of Karol Digital, a London SW20 web design studio. Karol builds web design for pole and aerial studios with custom studio booking systems UK, and conversion-focused sites for immigration lawyers, financial firms, London trades, and catering.";
+  "Karol is the web designer at Karol Digital, a London SW20 web design studio. Karol builds web design for pole and aerial studios with custom studio booking systems UK, and conversion-focused sites for immigration lawyers, financial firms, London trades, and catering.";
 
 export type FaqItem = { q: string; a: string };
 
@@ -110,7 +110,6 @@ export function organizationJsonLd() {
     email: SITE_EMAIL,
     telephone: SITE_PHONE_E164,
     priceRange: "££",
-    founder: { "@id": PERSON_ID },
     employee: { "@id": PERSON_ID },
     address: {
       "@type": "PostalAddress",
