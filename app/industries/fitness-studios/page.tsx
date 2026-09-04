@@ -19,9 +19,14 @@ export default function FitnessStudiosPage() {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "High-Performance Website Development for Fitness Studios",
+    name: "Web Design for Pole and Aerial Studios",
+    alternateName: [
+      "Custom studio booking systems UK",
+      "Custom timetables for dance studios",
+      "High-converting studio websites London",
+    ],
     description:
-      "Custom web development and e-commerce for UK fitness and wellness studios, featuring online class booking and conversion-focused design. Featured project: Wild Hearts Collective.",
+      "Web design for pole and aerial studios with custom studio booking systems UK — timetables and checkout under your domain. Featured project: Wild Hearts Collective (wildheartscollective.org).",
     image: "https://www.karoldigital.co.uk/wild-hearts-showcase.png",
     provider: {
       "@type": "ProfessionalService",
@@ -32,7 +37,7 @@ export default function FitnessStudiosPage() {
       "@type": "Country",
       name: "United Kingdom",
     },
-    category: "Web Design Services for Fitness & Wellness Studios",
+    category: "Web design for pole dancing, aerial hoop, and aerial silk studios",
   };
 
   return (
@@ -59,16 +64,16 @@ export default function FitnessStudiosPage() {
 
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center justify-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
-              Featuring Wild Hearts Collective
+              Custom studio booking systems UK
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
-              Fitness &amp; Wellness Studio{" "}
-              <span className="text-brand-gold-muted">Websites</span>
+              Web Design for{" "}
+              <span className="text-brand-gold-muted">Pole &amp; Aerial Studios</span>
             </h1>
             <p className="text-base sm:text-lg max-w-2xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
-              Class discovery, online booking, and a brand presence clients are
-              proud to share — like Wild Hearts Collective, admired by the
-              founders and their community.
+              High-converting studio websites London owners control — custom
+              timetables, booking, and checkout under your domain. Replace
+              Bookwhen or TeamUp links that leak leads and drop conversions.
             </p>
             <Link
               href="/book"
@@ -106,24 +111,32 @@ export default function FitnessStudiosPage() {
 
         <section className="py-24 px-6 max-w-4xl mx-auto text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
-            Built for studios that sell experiences
+            Built for pole, aerial hoop &amp; aerial silk
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] mb-6 tracking-tight">
-            Your website should feel as inviting as{" "}
-            <span className="text-[#411b3f]">your studio floor</span>
+            Your website should fill the timetable —{" "}
+            <span className="text-[#411b3f]">not send people elsewhere</span>
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Fitness and wellness studios win on community, trust, and ease. If
-            class information is hard to find, booking feels clunky, or the site
-            looks generic, new members hesitate — and word-of-mouth stops short
-            of the website.
+            Third-party booking links and generic templates leak attention,
+            drop mobile conversions, and leave studio owners chasing paperwork.
+            Members should discover classes, book, and pay without leaving your
+            brand.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
             At <strong className="text-[#102f35]">Karol Digital</strong>, we
-            build high-performance websites with custom development and
-            e-commerce so studios can showcase classes beautifully, take
-            bookings online, and look as polished as the experience they deliver
-            in person.
+            build high-converting studio websites with custom booking systems,
+            dance-studio timetables, and automated enquiry flows under your own
+            domain — proved live at{" "}
+            <a
+              href="https://wildheartscollective.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#411b3f] underline-offset-2 hover:underline"
+            >
+              wildheartscollective.org
+            </a>
+            .
           </p>
         </section>
 
@@ -134,29 +147,29 @@ export default function FitnessStudiosPage() {
                 What we deliver
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] tracking-tight">
-                High-performance websites for studio brands
+                Custom studio booking systems UK studios can own
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
-                Custom web development and e-commerce shaped around how
-                members actually discover, choose, and book classes.
+                Replace Bookwhen or TeamUp friction with lightning-fast,
+                mobile-ready booking under your domain.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Custom Web Development",
-                  desc: "Custom sites built around your brand, classes, and community — fast on mobile, easy to book, and free of the clutter that makes studios look amateur.",
-                  icon: <Sparkles size={22} />,
-                },
-                {
-                  title: "E-commerce & Online Booking",
-                  desc: "Clear class catalogues, advance booking, and online payment flows so members can reserve and pay before they arrive — reducing no-shows and admin.",
+                  title: "Custom Studio Booking",
+                  desc: "Class booking and payments on your domain — no third-party hop that leaks leads or dilutes trust for pole and aerial brands.",
                   icon: <ShoppingBag size={22} />,
                 },
                 {
-                  title: "Conversion-Focused Design",
-                  desc: "Inclusive storytelling, strong visuals, and obvious next steps. Every page helps visitors understand the studio and book with confidence.",
+                  title: "Custom Timetables",
+                  desc: "Custom timetables for dance studios that make pole, hoop, silks, and workshops easy to scan on mobile and book in seconds.",
+                  icon: <Sparkles size={22} />,
+                },
+                {
+                  title: "High-Converting Design",
+                  desc: "High-converting studio websites London owners use to turn browsers into booked places — clear offers, proof, and one obvious next step.",
                   icon: <Heart size={22} />,
                 },
               ].map((item) => (
@@ -190,9 +203,9 @@ export default function FitnessStudiosPage() {
                 Wild Hearts Collective
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
-                Highly admired by the client and their friends — an inclusive
-                aerial and pole studio site with online booking, clear schedules,
-                and a warm brand presence people are proud to share.
+                Widely admired by the client and their community — a
+                high-performance website with custom development and e-commerce
+                for an inclusive aerial and pole studio in Mansfield.
               </p>
             </div>
 
@@ -238,11 +251,11 @@ export default function FitnessStudiosPage() {
 
                 <ul className="space-y-2 mb-8 text-sm text-gray-700">
                   {[
-                    "High-performance custom website",
-                    "E-commerce class booking & online payment",
-                    "Inclusive brand storytelling & clear class journeys",
-                    "Mobile-first experience for on-the-go booking",
-                    "Admin page to control booking, membership & studio operations",
+                    "Custom studio booking systems under wildheartscollective.org",
+                    "Custom timetables for pole, aerial hoop, silks & workshops",
+                    "Checkout and membership admin without Bookwhen/TeamUp hops",
+                    "Mobile-first booking for on-the-go class discovery",
+                    "High-converting studio website the community is proud to share",
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-2">
                       <CheckCircle2
@@ -257,18 +270,18 @@ export default function FitnessStudiosPage() {
                 <div className="grid grid-cols-2 gap-4 mb-8 text-center">
                   <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-200/60">
                     <span className="block text-lg font-bold text-[#411b3f]">
-                      Client admired
+                      Custom Build
                     </span>
                     <span className="text-xs text-gray-500 font-semibold uppercase tracking-wide">
-                      Shared with friends
+                      Web Development
                     </span>
                   </div>
                   <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-200/60">
                     <span className="block text-lg font-bold text-[#411b3f]">
-                      Book online
+                      E-commerce
                     </span>
                     <span className="text-xs text-gray-500 font-semibold uppercase tracking-wide">
-                      Classes &amp; workshops
+                      Class Booking
                     </span>
                   </div>
                 </div>
@@ -354,16 +367,16 @@ export default function FitnessStudiosPage() {
             <div className="space-y-6">
               {[
                 {
-                  q: "Why not just use a fitness template or booking-only app?",
-                  a: "Templates and bolt-on booking tools often look generic, load slowly, and fight your brand. A custom high-performance website puts your story, classes, and e-commerce booking in one polished experience members trust.",
+                  q: "Can you replace Bookwhen or TeamUp with a custom website?",
+                  a: "Yes. We build replacing-Bookwhen/TeamUp custom websites with booking, timetables, and checkout under your domain — so members never leave your brand and conversions stop dropping at the third-party hop.",
                 },
                 {
-                  q: "Can you integrate online class booking and payments?",
-                  a: "Yes. We build e-commerce and booking journeys so members can browse classes, book in advance, and pay online — reducing admin and making it easier to fill the timetable.",
+                  q: "Do you build custom studio booking systems UK studios can run themselves?",
+                  a: "Yes. Custom studio booking systems UK owners control: class catalogues, advance booking, payments, and admin for memberships — without developer help for day-to-day changes.",
                 },
                 {
-                  q: "Is this only for aerial or pole studios?",
-                  a: "No. The same approach works for yoga, pilates, boutique gyms, dance schools, and wellness collectives — any studio that needs a credible site and a smooth path from interest to booked class.",
+                  q: "Is this only for pole and aerial studios?",
+                  a: "Pole dancing, aerial hoop, and aerial silk are the primary focus. The same systems work for dance studios, yoga, pilates, and boutique wellness brands that need high-converting studio websites in London and across the UK.",
                 },
               ].map((item) => (
                 <div

@@ -7,55 +7,66 @@ import { Metadata } from "next";
 const PAGE_URL = "https://www.karoldigital.co.uk/services/web-design";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "High-Performance Web Design UK | Custom Websites",
+  title: "Web Design UK | Custom Websites",
   description:
-    "Premium custom-built websites for UK small businesses. Modern, fast, conversion-focused, and engineered from scratch without template bloat.",
+    "Web design UK for service businesses — conversion-focused custom websites from a London web designer. Clearer offers, stronger trust, more qualified enquiries.",
   url: PAGE_URL,
   image: "/services-web-design.webp",
   keywords:
-    "high-performance web design UK, custom websites for small business, conversion-focused websites, premium web design UK",
+    "web design UK, website design for service businesses, conversion-focused websites, custom websites, London web designer",
 });
 
 const webDesignSchema = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.karoldigital.co.uk"
+        position: 1,
+        name: "Home",
+        item: "https://www.karoldigital.co.uk",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://www.karoldigital.co.uk/services"
+        position: 2,
+        name: "Services",
+        item: "https://www.karoldigital.co.uk/services",
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": "Web Design",
-        "item": PAGE_URL
-      }
-    ]
+        position: 3,
+        name: "Web Design UK",
+        item: PAGE_URL,
+      },
+    ],
   },
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "High-Performance Custom Web Design",
-    "description": "Premium custom-built websites for UK small businesses — modern, fast, secure, and conversion-focused.",
-    "provider": {
+    "@id": `${PAGE_URL}#service`,
+    name: "Web Design for UK Service Businesses",
+    alternateName: [
+      "web design UK",
+      "website design for service businesses",
+      "conversion-focused websites",
+      "custom websites",
+      "London web designer",
+    ],
+    serviceType: "WebDesign",
+    description:
+      "Conversion-focused custom websites for UK service businesses — clearer offers, stronger trust, and enquiry paths that turn visitors into booked work.",
+    provider: {
       "@type": "ProfessionalService",
-      "name": "Karol Digital",
-      "url": "https://www.karoldigital.co.uk"
+      name: "Karol Digital",
+      url: "https://www.karoldigital.co.uk",
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    }
-  }
+    areaServed: [
+      { "@type": "City", name: "London" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    url: PAGE_URL,
+  },
 ];
 
 export default function WebDesignLayout({

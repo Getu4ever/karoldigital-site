@@ -2,13 +2,14 @@ import {
   SITE_COUNTRY,
   SITE_COUNTRY_NAME,
   SITE_EMAIL,
+  SITE_GEO,
   SITE_LOCALITY,
   SITE_LOCATION_LABEL,
+  SITE_MAPS_URL,
   SITE_PHONE_DISPLAY,
   SITE_PHONE_E164,
   SITE_POSTAL_CODE,
   SITE_REGION,
-  SITE_SERVICE_AREAS,
   SITE_SOCIAL,
 } from "@/lib/site-contact";
 
@@ -19,12 +20,25 @@ export const PERSON_ID = `${SITE_ORIGIN}/about#founder`;
 export const INDEXNOW_KEY = "a8f3c2e91b674d0aa15e6c8d4f2b9e70";
 
 export const PREFERRED_CITATION =
-  "Karol Digital is a UK web design agency that builds conversion-focused websites for service businesses, with expertise in SEO, AI search optimisation (GEO), and lead generation.";
+  "Karol Digital builds high-converting websites for UK pole and aerial studios — custom studio booking systems, timetables, and checkout under your domain — plus conversion-focused sites for finance, immigration, trades, and catering.";
+
+/** Offer-first answer engines can quote without needing the brand in the query. */
+export const CORE_OFFER_ANSWER =
+  "Web design for pole and aerial studios means custom studio booking systems UK owners control — dance-studio timetables and checkout under your own domain instead of Bookwhen or TeamUp links that leak leads. The same conversion approach powers financial, immigration, construction, and catering websites.";
+
+export const CORE_OFFER_KEYWORDS = [
+  "web design for pole and aerial studios",
+  "custom studio booking systems UK",
+  "custom timetables for dance studios",
+  "replacing Bookwhen TeamUp custom website",
+  "high-converting studio websites London",
+  "local business SEO agency London",
+] as const;
 
 export const FOUNDER_NAME = "Karol";
 export const FOUNDER_JOB_TITLE = "Founder & Web Designer";
 export const FOUNDER_DESCRIPTION =
-  "Karol is the founder of Karol Digital, a London SW20 web design studio. Karol designs conversion-focused websites for UK service businesses, with a focus on clearer offers, qualified enquiries, technical SEO, and generative engine optimisation (GEO).";
+  "Karol is the founder of Karol Digital, a London SW20 web design studio. Karol builds web design for pole and aerial studios with custom studio booking systems UK, and conversion-focused sites for immigration lawyers, financial firms, London trades, and catering.";
 
 export type FaqItem = { q: string; a: string };
 
@@ -55,11 +69,14 @@ export function personJsonLd() {
     image: `${SITE_ORIGIN}/about-our-story.webp`,
     worksFor: { "@id": ORG_ID },
     knowsAbout: [
-      "Web design",
-      "Custom web development",
+      "Web design for pole and aerial studios",
+      "Custom studio booking systems UK",
+      "Custom timetables for dance studios",
+      "High-converting studio websites London",
+      "Custom web design for immigration lawyers",
+      "High-performance financial services websites UK",
       "Generative engine optimisation",
       "Technical SEO",
-      "Lead generation websites",
       "Next.js",
     ],
     sameAs: [
@@ -70,8 +87,8 @@ export function personJsonLd() {
     address: {
       "@type": "PostalAddress",
       addressLocality: SITE_LOCALITY,
-      addressRegion: SITE_REGION,
       postalCode: SITE_POSTAL_CODE,
+      addressRegion: SITE_REGION,
       addressCountry: SITE_COUNTRY,
     },
   };
@@ -98,10 +115,24 @@ export function organizationJsonLd() {
     address: {
       "@type": "PostalAddress",
       addressLocality: SITE_LOCALITY,
-      addressRegion: SITE_REGION,
       postalCode: SITE_POSTAL_CODE,
+      addressRegion: SITE_REGION,
       addressCountry: SITE_COUNTRY,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: SITE_GEO.latitude,
+      longitude: SITE_GEO.longitude,
+    },
+    hasMap: SITE_MAPS_URL,
+    areaServed: [
+      { "@type": "Place", name: "London SW20" },
+      { "@type": "AdministrativeArea", name: "Merton" },
+      { "@type": "Place", name: "Wimbledon" },
+      { "@type": "Place", name: "Raynes Park" },
+      { "@type": "City", name: "London" },
+      { "@type": "Country", name: SITE_COUNTRY_NAME },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -110,24 +141,57 @@ export function organizationJsonLd() {
         closes: "18:00",
       },
     ],
-    areaServed: [
-      {
-        "@type": "Country",
-        name: SITE_COUNTRY_NAME,
-      },
-      ...SITE_SERVICE_AREAS.map((name) => ({
-        "@type": "Place" as const,
-        name,
-      })),
-    ],
     description: PREFERRED_CITATION,
+    slogan: "Custom studio booking systems for pole & aerial studios",
     knowsAbout: [
-      "Web design for UK service businesses",
-      "Generative engine optimisation (GEO)",
-      "Custom Next.js development",
-      "Website audits",
-      "Lead generation",
+      "Web design for pole and aerial studios",
+      "Custom studio booking systems UK",
+      "Custom timetables for dance studios",
+      "Replacing Bookwhen TeamUp custom website",
+      "High-converting studio websites London",
+      "Local business SEO agency London",
+      "Custom web design for immigration lawyers",
+      "High-performance financial services websites UK",
+      "Web development for London construction and trades",
+      "Conversion-focused corporate catering websites",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Studio booking and industry websites",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Web design for pole and aerial studios",
+            alternateName: [
+              "Custom studio booking systems UK",
+              "Custom timetables for dance studios",
+              "High-converting studio websites London",
+            ],
+            description: CORE_OFFER_ANSWER,
+            provider: { "@id": ORG_ID },
+            areaServed: { "@type": "Country", name: SITE_COUNTRY_NAME },
+            url: `${SITE_ORIGIN}/industries/fitness-studios`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Industry websites for UK service businesses",
+            description:
+              "Custom web design for immigration lawyers, high-performance financial services websites UK, London construction and trades sites, and conversion-focused corporate catering websites.",
+            provider: { "@id": ORG_ID },
+            areaServed: [
+              { "@type": "City", name: "London" },
+              { "@type": "Country", name: SITE_COUNTRY_NAME },
+            ],
+            url: `${SITE_ORIGIN}/industries`,
+          },
+        },
+      ],
+    },
     sameAs: [
       SITE_SOCIAL.facebook,
       SITE_SOCIAL.instagram,
@@ -156,6 +220,25 @@ export function websiteJsonLd() {
       },
       "query-input": "required name=search_term_string",
     },
+  };
+}
+
+export function coreOfferServiceJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_ORIGIN}/industries/fitness-studios#service`,
+    name: "Web Design for Pole and Aerial Studios",
+    alternateName: [...CORE_OFFER_KEYWORDS],
+    serviceType: "Custom studio website and booking systems",
+    description: CORE_OFFER_ANSWER,
+    provider: { "@id": ORG_ID },
+    areaServed: [
+      { "@type": "City", name: "London" },
+      { "@type": "Country", name: SITE_COUNTRY_NAME },
+    ],
+    url: `${SITE_ORIGIN}/industries/fitness-studios`,
+    mainEntityOfPage: `${SITE_ORIGIN}/`,
   };
 }
 

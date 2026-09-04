@@ -76,32 +76,13 @@ function ProofLogoPlate({
   src,
   alt,
   className = "mb-5",
-  cover = false,
 }: {
   src: string;
   alt: string;
   className?: string;
-  cover?: boolean;
 }) {
-  // White-backed logos blend into the plate; photos / dark marks stay as-is.
-  const blendWhiteBg =
-    !cover && !src.includes("british-solar") && !src.includes("wild-hearts");
-
-  if (cover) {
-    return (
-      <div
-        className={`relative mb-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 ${className}`}
-      >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 480px"
-        />
-      </div>
-    );
-  }
+  // White-backed logos blend into the plate; dark circular marks stay as-is.
+  const blendWhiteBg = !src.includes("british-solar");
 
   return (
     <div
@@ -168,19 +149,19 @@ const serviceImages = [
   { src: "/home/sections/svc-ai-search.jpg", alt: "AI search optimisation and visibility" },
 ] as const;
 
-const industryImages = [
-  { src: "/home/sections/ind-fitness.png", alt: "Fitness and wellness studio website design" },
-  { src: "/home/sections/ind-immigration.jpg", alt: "Immigration law firm website design" },
-  { src: "/home/sections/ind-financial.jpg", alt: "Financial services website design" },
-  { src: "/home/sections/ind-construction.png", alt: "Construction and trades website design" },
-  { src: "/heroes/catering-services.png", alt: "Catering and hospitality website design" },
-  { src: "/heroes/catering-services.png", alt: "Corporate office catering website design" },
-] as const;
-
 const differenceImages = [
   { src: "/home/sections/diff-speed.jpg", alt: "More completed website enquiries" },
   { src: "/home/sections/diff-security.jpg", alt: "Professional websites that earn trust" },
   { src: "/home/sections/diff-unified.jpg", alt: "Enquiry systems that reduce admin" },
+] as const;
+
+const industryImages = [
+  { src: "/home/sections/ind-fitness.png", alt: "Pole and aerial studio website design" },
+  { src: "/home/sections/ind-financial.jpg", alt: "Financial services website design" },
+  { src: "/home/sections/ind-immigration.jpg", alt: "Immigration law firm website design" },
+  { src: "/home/sections/ind-construction.png", alt: "Construction and trades website design" },
+  { src: "/heroes/catering-services.png", alt: "Catering and hospitality website design" },
+  { src: "/heroes/fitness-studios.png", alt: "Fitness and wellness studio website design" },
 ] as const;
 
 const statItems = [
@@ -203,10 +184,10 @@ const statItems = [
     alt: "Time saved on admin and paperwork",
   },
   {
-    value: "SW20",
-    label: "London studio serving UK service businesses",
+    value: "UK",
+    label: "Service businesses that win work on trust",
     image: "/home/sections/stat-uk.jpg",
-    alt: "London SW20 studio",
+    alt: "UK service business focus",
   },
 ] as const;
 
@@ -251,28 +232,16 @@ export default function HomePageClient() {
               aria-hidden="true"
             />
 
-            <motion.h1
-              className="text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-7xl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.45 }}
-            >
-              Websites and apps that turn visitors into{" "}
-              <span className="text-brand-gold-muted">qualified enquiries</span>
-            </motion.h1>
+            <h1 className="geo-offer text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-7xl">
+              Web Design for{" "}
+              <span className="text-brand-gold-muted">Pole &amp; Aerial Studios</span>
+            </h1>
 
-            <motion.p
-              className="geo-citation mx-auto mt-7 max-w-2xl text-base text-white/80 md:text-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.7 }}
-            >
-              Karol Digital is a UK web design agency that builds conversion-focused
-              websites for service businesses, with expertise in SEO, AI search
-              optimisation (GEO), and lead generation. Based in London SW20, we help
-              UK firms look more professional, win better enquiries, and waste less
-              time on paperwork — typically live in 3–6 weeks.
-            </motion.p>
+            <p className="geo-citation mx-auto mt-7 max-w-2xl text-base text-white/80 md:text-lg">
+              Custom studio booking systems UK owners control — timetables and
+              checkout under your domain, not Bookwhen or TeamUp links that leak
+              leads. Also built for finance, immigration, trades, and catering.
+            </p>
 
             <motion.div
               className="mt-11 flex flex-col items-center gap-4"
@@ -302,27 +271,28 @@ export default function HomePageClient() {
           <div>
             <SectionEyebrow>Why it matters</SectionEyebrow>
             <h2 className="mb-8 text-4xl font-bold leading-tight text-[#102f35] md:text-5xl">
-              Your website should make the phone
+              Stop leaking bookings to
               <br />
-              ring with the right work
+              third-party platforms
             </h2>
 
             <p className="mb-6 text-lg leading-relaxed text-gray-700">
-              Busy service owners rarely lose sleep over technology. They worry about why
-              enquiries are quiet, why competitors look more professional, and why the team
-              wastes hours chasing incomplete quotes. We build websites that fix those problems.
+              Clunky templates and off-site booking tools like Bookwhen or TeamUp
+              send members away from your brand, drop conversions, and create
+              admin you should not be doing by hand.
             </p>
 
             <p className="mb-6 text-lg leading-relaxed text-gray-700">
-              That means a clear offer, trust in seconds, and an enquiry path that captures the
-              right details — so more visitors become conversations, and fewer leads fall through
-              the cracks.
+              We build lightning-fast, mobile-ready systems with custom booking,
+              checkouts, and automated enquiry flows under your own domain —
+              so more people book and your team spends less time on paperwork.
             </p>
 
             <p className="mb-8 text-lg leading-relaxed text-gray-700">
-              When you need a website and an app, we connect them so bookings, customers, and
-              follow-ups stay in one place — saving hours of paperwork each week instead of
-              juggling disconnected tools.
+              Primary focus: pole dancing, aerial hoop, and aerial silk studios.
+              Same conversion approach for financial, immigration, construction,
+              and catering businesses that need clearer journeys and more direct
+              revenue.
             </p>
 
             <Link href="/book" className="btn-teal">
@@ -475,11 +445,11 @@ export default function HomePageClient() {
             <div className="home-stack-heading mb-12 text-center">
               <SectionEyebrow tone="dark">Sectors we know</SectionEyebrow>
               <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
-                Industry-focused website design
+                Studio-first, industry-ready
               </h2>
               <p className="mx-auto max-w-3xl text-lg text-white/70">
-                Different service businesses need different messaging, trust signals, and user
-                journeys. We build websites around how your industry wins work.
+                Pole and aerial studios lead our work — with the same conversion-focused
+                systems for finance, immigration, trades, and catering.
               </p>
             </div>
 
@@ -490,8 +460,8 @@ export default function HomePageClient() {
                   className="home-stack-tile flex flex-col rounded-2xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:bg-white/[0.1]"
                 >
                   <SectionImage
-                    src={industryImages[index].src}
-                    alt={industryImages[index].alt}
+                    src={industry.image ?? industryImages[index].src}
+                    alt={industry.imageAlt ?? industryImages[index].alt}
                     size="lg"
                     className="home-stack-media home-stack-media--lg"
                   />
@@ -532,51 +502,34 @@ export default function HomePageClient() {
           <div className="mb-14 text-center">
             <SectionEyebrow tone="dark">Proof</SectionEyebrow>
             <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-              Recent work clients are proud to share
+              Built for performance, visibility, and lead generation
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-white/65">
-              Strong websites do more than look good. They win trust, make booking or enquiring
-              effortless, and become the digital business card people recommend to friends.
+              Strong websites do more than look good. They load fast, follow best practices, and
+              create a better experience for both visitors and search engines.
             </p>
           </div>
 
           {/* Featured case */}
-          <article className="mb-8 grid gap-8 rounded-3xl border border-brand-gold/35 bg-white/[0.08] p-8 backdrop-blur-sm md:grid-cols-[1.2fr_1fr] md:items-center md:p-10">
+          <article className="mb-8 grid gap-8 rounded-3xl border border-white/10 bg-white/[0.06] p-8 backdrop-blur-sm md:grid-cols-[1.2fr_1fr] md:items-center md:p-10">
             <div>
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-brand-gold-muted">
-                Latest featured project
-              </p>
               <ProofLogoPlate
                 src={featuredCase.logo}
                 alt={featuredCase.logoAlt}
-                cover={"coverImage" in featuredCase && featuredCase.coverImage === true}
                 className="mb-6"
               />
               <p className="mb-3 text-2xl font-bold md:text-3xl">{featuredCase.title}</p>
               <p className="mb-6 leading-relaxed text-white/70">{featuredCase.description}</p>
-              <div className="flex flex-wrap items-center gap-4">
-                <Link
-                  href={featuredCase.industryHref}
-                  {...(featuredCase.industryHref.startsWith("http")
-                    ? { target: "_blank" as const, rel: "noopener noreferrer" }
-                    : {})}
-                  className="inline-flex items-center gap-1 font-semibold text-brand-gold-muted transition hover:text-brand-gold"
-                >
-                  {featuredCase.industryLabel}
-                  <ArrowRight size={16} aria-hidden="true" />
-                </Link>
-                {"liveUrl" in featuredCase && featuredCase.liveUrl ? (
-                  <Link
-                    href={featuredCase.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 font-semibold text-white transition hover:text-brand-gold"
-                  >
-                    Visit live site
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </Link>
-                ) : null}
-              </div>
+              <Link
+                href={featuredCase.industryHref}
+                {...(featuredCase.industryHref.startsWith("http")
+                  ? { target: "_blank" as const, rel: "noopener noreferrer" }
+                  : {})}
+                className="inline-flex items-center gap-1 font-semibold text-brand-gold-muted transition hover:text-brand-gold"
+              >
+                {featuredCase.industryLabel}
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
             </div>
             <div className="rounded-2xl border border-brand-gold/30 bg-[#0a1f24]/60 px-8 py-10 text-center">
               <p className="text-5xl font-bold text-brand-gold-muted md:text-6xl">
@@ -594,11 +547,7 @@ export default function HomePageClient() {
                 key={study.title}
                 className="flex flex-col rounded-3xl border border-white/10 bg-white/[0.06] p-8 backdrop-blur-sm transition hover:border-brand-gold/35"
               >
-                <ProofLogoPlate
-                  src={study.logo}
-                  alt={study.logoAlt}
-                  cover={"coverImage" in study && study.coverImage === true}
-                />
+                <ProofLogoPlate src={study.logo} alt={study.logoAlt} />
                 <div className="mb-4 flex items-end justify-between gap-4">
                   <p className="text-xl font-bold md:text-2xl">{study.title}</p>
                   <div className="shrink-0 text-right">
@@ -767,51 +716,12 @@ export default function HomePageClient() {
               Selected clients and partners
             </h2>
             <p className="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
-              Recent work includes Wild Hearts Collective — a studio site admired by the client
-              and their community — alongside long-term UK service brands.
+              Long-term relationships with UK marketing and service brands that value clarity,
+              speed, and conversion-focused digital work.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <Link
-              href="https://www.wildheartscollective.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex h-full flex-col rounded-3xl border-2 border-brand-gold/50 bg-white p-8 text-left shadow-md transition hover:-translate-y-0.5 hover:border-brand-gold hover:shadow-lg md:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-[1.1fr_1.4fr] lg:items-center lg:gap-10"
-            >
-              <span className="absolute right-6 top-6 rounded-full bg-[#411b3f] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
-                Latest
-              </span>
-              <div className="relative mb-6 aspect-[16/10] w-full overflow-hidden rounded-2xl lg:mb-0">
-                <Image
-                  src="/wild-hearts-showcase.png"
-                  alt="Wild Hearts Collective website design by Karol Digital"
-                  fill
-                  className="object-cover transition duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-width: 1024px) 100vw, 520px"
-                />
-              </div>
-              <div>
-                <p className="mb-2 text-2xl font-bold text-[#102f35]">Wild Hearts Collective</p>
-                <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#411b3f]">
-                  Featured website design · Mansfield aerial &amp; pole studio
-                </p>
-                <p className="mb-6 text-sm leading-relaxed text-gray-600 md:text-base">
-                  Inclusive aerial and pole studio site with online class booking, clear schedules,
-                  and a warm brand presence — highly admired by the founders and their friends.
-                  Built for discovery, trust, and booked places.
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
-                  Visit wildheartscollective.org
-                  <ArrowRight
-                    size={16}
-                    className="transition-transform group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </span>
-              </div>
-            </Link>
-
             <Link
               href="https://sbc-marketing.co.uk/"
               target="_blank"
@@ -897,6 +807,37 @@ export default function HomePageClient() {
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
                 See solar partner site
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+
+            <Link
+              href="https://www.wildheartscollective.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-3xl border border-[#102f35]/10 bg-white p-8 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-gold/50 hover:shadow-md"
+            >
+              <div className="mb-6 flex h-16 items-center overflow-hidden rounded-xl">
+                <Image
+                  src="/heroes/fitness-studios.png"
+                  alt="Wild Hearts Collective"
+                  width={200}
+                  height={64}
+                  className="h-16 w-full object-cover object-center"
+                />
+              </div>
+              <p className="mb-2 text-xl font-bold text-[#102f35]">Wild Hearts Collective</p>
+              <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
+                Proof of concept for pole and aerial studios — custom studio booking,
+                timetables, and checkout under wildheartscollective.org instead of
+                third-party booking links.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
+                Visit Wild Hearts Collective
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"

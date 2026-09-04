@@ -3,42 +3,42 @@ import GeoExtras from "@/components/GeoExtras";
 import { financialFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
-  title: "Financial Services Web Design & Systems | Karol Digital",
+  title: "Financial Services Websites UK | Karol Digital",
   description:
-    "Specialist financial services web design for UK corporate brands. High-trust, GDPR-compliant websites for Accountants, Mortgage Brokers, and IFAs.",
+    "High-performance financial services websites UK — clear offers, trust and enquiry flows for brokers, accountants and IFAs.",
   url: "https://www.karoldigital.co.uk/industries/financial-services",
   image: "/1stcall-finance-showcase.jpg",
+  keywords:
+    "high-performance financial services websites UK, financial services web design, mortgage broker websites, accountant websites UK",
 });
 
 const financeServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Financial Services Web Design & Corporate Systems",
-  "serviceType": "Bespoke website Designing Services for Financial Sector",
-  "description":
-    "Bespoke digital solutions for the financial sector, focusing on secure lead generation, professional branding, and compliance-ready corporate web design for UK firms including accountants, mortgage brokers, and IFAs.",
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "GBP",
-    "price": "0.00",
-    "lowPrice": "800", // Fixes the Search Console error
-    "highPrice": "8000",
-    "url": "https://www.karoldigital.co.uk/industries/financial-services"
-  },
-  "provider": {
+  name: "High-performance financial services websites UK",
+  alternateName: [
+    "High-performance financial services websites UK",
+    "Financial services web design",
+  ],
+  serviceType: "Financial services website design",
+  description:
+    "High-performance financial services websites UK for brokers, accountants, and IFAs — secure lead generation, professional branding, and clear enquiry flows.",
+  url: "https://www.karoldigital.co.uk/industries/financial-services",
+  provider: {
     "@type": "ProfessionalService",
-    "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk",
-    "address": {
+    name: "Karol Digital",
+    url: "https://www.karoldigital.co.uk",
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "London",
-      "addressCountry": "GB"
-    }
+      addressLocality: "London",
+      postalCode: "SW20",
+      addressCountry: "GB",
+    },
   },
-  "areaServed": {
+  areaServed: {
     "@type": "Country",
-    "name": "United Kingdom"
-  }
+    name: "United Kingdom",
+  },
 };
 
 export default function FinanceLayout({

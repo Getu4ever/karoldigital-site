@@ -3,7 +3,7 @@ import type { FaqItem } from "@/lib/geo";
 export const servicesFaqs: FaqItem[] = [
   {
     q: "Do you build custom websites or use templates?",
-    a: "Karol Digital builds premium custom websites from scratch around your business goals, messaging, and user journey — without template bloat. That usually leads to a cleaner, faster, and more effective result than forcing a business into a generic platform.",
+    a: "Karol Digital builds websites around your business goals, messaging, and how customers actually enquire — so the result is clearer, faster, and more effective than forcing your business into a generic template.",
   },
   {
     q: "Can you improve an existing website instead of replacing it?",
@@ -21,46 +21,54 @@ export const servicesFaqs: FaqItem[] = [
 
 export const webDesignFaqs: FaqItem[] = [
   {
-    q: "What is custom web design at Karol Digital?",
-    a: "Custom web design at Karol Digital means a 100% bespoke website engineered for UK service businesses — fast, conversion-focused, and built without template bloat so every page supports trust and enquiries.",
+    q: "What is web design UK for service businesses?",
+    a: "Web design UK for service businesses is conversion-focused website design — custom websites with clear offers, trust, and enquiry paths so visitors become phone calls, form fills, and booked consultations.",
+  },
+  {
+    q: "What are conversion-focused websites?",
+    a: "Conversion-focused websites are built to win work: fast on mobile, obvious value, strong proof, and a simple next step. They outperform generic templates when the goal is qualified enquiries.",
+  },
+  {
+    q: "Why choose custom websites over templates?",
+    a: "Custom websites are shaped around how you sell. Templates often look identical to competitors and bury the enquiry path — which costs service businesses real booked work.",
+  },
+  {
+    q: "What does a London web designer deliver for SMEs?",
+    a: "A London web designer should deliver website design for service businesses: professional presentation, local credibility, and conversion-focused websites that generate better-quality enquiries.",
   },
   {
     q: "How long does a custom website take?",
-    a: "Most Karol Digital website projects take between 3 and 6 weeks depending on scope, number of pages, and feedback turnaround.",
-  },
-  {
-    q: "Who is this web design service for?",
-    a: "It is for UK service businesses and SMEs that need a high-performance website that turns visitors into qualified enquiries, rather than a slow template site.",
+    a: "Most custom website projects take between 3 and 6 weeks depending on scope, number of pages, and feedback turnaround.",
   },
 ];
 
 export const customWebDevFaqs: FaqItem[] = [
   {
     q: "What is custom web development at Karol Digital?",
-    a: "Custom web development means Karol Digital writes the site from scratch around how you sell — not a drag-and-drop builder — so the site stays fast, flexible, and ready to grow.",
+    a: "Custom web development means we build around how you sell — packages, quotes, bookings, and lead capture — so the site stays fast, flexible, and ready to grow with your business.",
   },
   {
     q: "Can you rebuild a slow WordPress or Wix site?",
-    a: "Yes. Many clients come from template platforms that feel limited or slow. We can audit first, then rebuild as a custom high-performance site if that is the better path.",
+    a: "Yes. Many clients come from platforms that feel limited or slow. We can audit first, then rebuild as a clearer, conversion-focused site if that is the better path.",
   },
   {
     q: "Do you include a content management system?",
-    a: "Yes. Custom builds include a modern, secure content system so your team can update pages without relying on fragile plugins.",
+    a: "Yes. Builds include a content system so your team can update pages without waiting on an agency for every small change.",
   },
 ];
 
 export const nextjsFaqs: FaqItem[] = [
   {
     q: "Why does Karol Digital use Next.js?",
-    a: "Next.js delivers fast server-rendered pages, strong SEO, and a modern foundation for conversion-focused UK business websites. Karol Digital uses it so crawlers and AI engines receive real HTML, not an empty JavaScript shell.",
+    a: "Next.js delivers fast pages and strong SEO foundations for conversion-focused UK business websites. We use it so search engines and AI tools can read your content clearly and recommend you accurately.",
   },
   {
     q: "Is Next.js suitable for a small service business?",
-    a: "Yes. It is a strong fit when you need speed, security, and room to add tools such as booking, lead magnets, or a CMS without template bloat.",
+    a: "Yes. It is a strong fit when you need speed, reliability, and room to add tools such as booking or lead capture as you grow.",
   },
   {
     q: "Can you migrate an existing site to Next.js?",
-    a: "Yes. We map your current pages, redirects, and content, then rebuild on Next.js so search visibility and enquiry journeys are preserved or improved.",
+    a: "Yes. We map your current pages, redirects, and content, then rebuild so search visibility and enquiry journeys are preserved or improved.",
   },
 ];
 
@@ -150,7 +158,7 @@ export const mobileAppFaqs: FaqItem[] = [
   },
   {
     q: "Can the app share data with my website?",
-    a: "Yes. Where useful, we connect the website and app to a shared modern database so enquiries, customers, and operations stay in one place.",
+    a: "Yes. Where useful, we connect the website and app so enquiries, customers, and operations stay in one place — less admin, fewer lost leads.",
   },
   {
     q: "How are app projects priced?",
@@ -160,15 +168,15 @@ export const mobileAppFaqs: FaqItem[] = [
 
 export const londonWebDesignFaqs: FaqItem[] = [
   {
-    q: "Do you design websites for London SW20 small businesses?",
-    a: "Yes. Karol Digital is based in London SW20 and builds conversion-focused websites for local service businesses across Raynes Park, Wimbledon, New Malden, Merton, Kingston, and Greater London.",
+    q: "Do you design websites for London small businesses?",
+    a: "Yes. Karol Digital is a London SW20 web design studio building conversion-focused websites for local service businesses — serving Merton, Wimbledon, Raynes Park, and Greater London.",
   },
   {
     q: "Why not use a London template agency?",
     a: "Generic sites often look the same as every competitor and make it hard to enquire. We build around how your local business actually wins work — clearer offers, trust, and enquiry paths.",
   },
   {
-    q: "Do you work outside SW20?",
+    q: "Do you work outside London?",
     a: "Yes. We are based in London SW20 and serve service businesses across the United Kingdom.",
   },
 ];
@@ -176,7 +184,7 @@ export const londonWebDesignFaqs: FaqItem[] = [
 export const industriesFaqs: FaqItem[] = [
   {
     q: "Which industries does Karol Digital specialise in?",
-    a: "Karol Digital builds websites for UK financial services, immigration firms, building and construction, catering, and fitness studios — plus other service businesses that need trust and qualified enquiries.",
+    a: "Primary focus: pole dancing, aerial hoop, and aerial silk studios. Secondary: UK financial services, immigration lawyers, construction and trades, catering, and other service businesses that need trust and qualified enquiries.",
   },
   {
     q: "Why have industry-specific website pages?",
@@ -216,6 +224,10 @@ export const immigrationFaqs: FaqItem[] = [
     q: "Can the site handle high-intent enquiries?",
     a: "Yes. We design enquiry paths that capture the right details by visa type and urgency — so your team spends less time on incomplete contacts and more time on cases you can instruct.",
   },
+  {
+    q: "Do you understand multi-brand immigration and finance groups?",
+    a: "Yes. For groups like 1st Call UK, we design journeys that route immigration and financial enquiries cleanly across related brands — so cross-referrals do not rely on manual chasing.",
+  },
 ];
 
 export const buildingFaqs: FaqItem[] = [
@@ -250,16 +262,20 @@ export const cateringFaqs: FaqItem[] = [
 
 export const fitnessFaqs: FaqItem[] = [
   {
-    q: "Do you build websites for fitness and wellness studios?",
-    a: "Yes. Karol Digital builds studio websites with clear class discovery, branding, and paths into booking or membership so the site matches how the studio actually sells.",
+    q: "Do you build web design for pole and aerial studios?",
+    a: "Yes. We specialise in web design for pole and aerial studios — custom studio booking systems UK, dance-studio timetables, and checkout under your own domain.",
   },
   {
-    q: "Can you connect class booking?",
-    a: "Yes. We can integrate online class booking and, where needed, an admin area for memberships and operations.",
+    q: "Can you replace Bookwhen or TeamUp?",
+    a: "Yes. We build high-converting studio websites that replace Bookwhen or TeamUp links with booking and payments on your domain, so you keep conversions and brand control.",
   },
   {
-    q: "What makes a studio website convert?",
-    a: "Fast pages, timetable clarity, strong photography, and one obvious next step — book a class, start a membership, or enquire.",
+    q: "What is included in a custom studio booking system?",
+    a: "Custom timetables for dance studios, advance class booking, online payment, and an admin area for memberships and day-to-day operations — without leaking traffic to third-party platforms.",
+  },
+  {
+    q: "Who is the Wild Hearts Collective case study?",
+    a: "Wild Hearts Collective (wildheartscollective.org) is our proof of concept: an inclusive pole and aerial studio site with custom booking, timetables, and admin under their own domain.",
   },
 ];
 
@@ -281,15 +297,15 @@ export const pricingFaqs: FaqItem[] = [
 export const aboutFaqs: FaqItem[] = [
   {
     q: "Who is behind Karol Digital?",
-    a: "Karol Digital is a London SW20 web design studio founded by Karol, who builds conversion-focused websites for UK service businesses — with expertise in SEO, AI search optimisation (GEO), and lead generation.",
+    a: "Karol Digital is a London web design studio founded by Karol, who builds conversion-focused websites for UK service businesses — with expertise in SEO, AI search optimisation (GEO), and lead generation.",
   },
   {
     q: "Where is Karol Digital based?",
-    a: "Karol Digital is based in London SW20 (Raynes Park / Wimbledon area), United Kingdom, and serves service businesses across the UK.",
+    a: "Karol Digital is based in London SW20, United Kingdom, and serves service businesses across the UK — with a strong South West London footprint including Merton, Wimbledon, and Raynes Park.",
   },
   {
     q: "What makes Karol Digital different from a template agency?",
-    a: "We build around how you win customers — clearer offers, stronger trust, and enquiry systems that save time — rather than forcing your business into a generic template. Recent work includes Wild Hearts Collective, a studio site admired by the client and their community.",
+    a: "We build around how you win customers — clearer offers, stronger trust, and enquiry systems that save time — rather than forcing your business into a generic template.",
   },
 ];
 

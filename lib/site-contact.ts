@@ -5,7 +5,7 @@ export const SITE_PHONE_E164 = "+447565472445";
 export const SITE_PHONE_TEL = "tel:+447565472445";
 export const SITE_LOCALITY = "London";
 export const SITE_POSTAL_CODE = "SW20";
-export const SITE_REGION = "England";
+export const SITE_REGION = "Greater London";
 export const SITE_COUNTRY = "GB";
 export const SITE_COUNTRY_NAME = "United Kingdom";
 /** Human-readable NAP line — SW20 (Raynes Park / Wimbledon area). */
@@ -19,6 +19,12 @@ export const SITE_SERVICE_AREAS = [
   "Kingston",
   "Greater London",
 ] as const;
+export const SITE_GEO = {
+  latitude: 51.4095,
+  longitude: -0.232,
+} as const;
+export const SITE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=London+SW20";
 
 export const SITE_SOCIAL = {
   facebook: "https://www.facebook.com/karolgraphics",

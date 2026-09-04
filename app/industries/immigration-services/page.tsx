@@ -16,9 +16,9 @@ import {
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Immigration Law Firm Website Design Systems",
+  name: "Web Design & Automated Systems for UK Immigration Firms",
   description:
-    "Premium, high-trust website design and SEO systems tailored for UK immigration law firms, OISC-regulated consultants, and corporate visa advisory practices.",
+    "Websites and enquiry systems for UK immigration law firms, OISC-regulated consultants, and visa advisers — built to earn trust, explain complex services clearly, and turn more enquiries into instructed cases.",
   image: "https://www.karoldigital.co.uk/1st-call-uk-immigration-services.jpg",
   provider: {
     "@type": "ProfessionalService",
@@ -153,7 +153,7 @@ export default function ImmigrationWebDesign() {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
-                I design immigration websites that combine clear service
+                We design immigration websites that combine clear service
                 explanations, strong trust signals, and compliant information
                 displays. The result is a site that supports your reputation,
                 makes it easy for people to understand how you help, and helps
@@ -195,8 +195,9 @@ export default function ImmigrationWebDesign() {
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
                 Generic “services” pages rarely convert well in immigration law.
-                I structure focused pages around the specific visa routes and
-                case types that matter most to your practice.
+                We structure focused pages around the specific visa routes and
+                case types that matter most to your practice — so visitors find
+                the right path and your team gets better-qualified enquiries.
               </p>
             </div>
 
@@ -362,6 +363,59 @@ export default function ImmigrationWebDesign() {
           </div>
         </section>
 
+        {/* SECTION — BUSINESS OUTCOMES */}
+        <section className="py-24 px-6 bg-white border-t border-gray-100">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f] block mb-3">
+                Business Outcomes, Not Tech Speak
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#102f35] tracking-tight">
+                Built around how immigration firms actually make money
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
+                High-value visa work lives or dies on clarity and follow-through.
+                We design for the commercial reality: stressed clients, multi-step
+                forms, and teams who cannot afford lost enquiries.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-8 rounded-2xl bg-gray-50 border border-gray-100">
+                <h3 className="text-lg font-bold text-[#102f35] mb-3">
+                  Small conversion lifts, large revenue impact
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  On spouse visa, ILR, and corporate routes, even a modest lift in
+                  completed enquiries or booked consultations can translate into
+                  tens of thousands of pounds in high-margin instructed work over
+                  a year — without buying more ads.
+                </p>
+              </div>
+              <div className="p-8 rounded-2xl bg-gray-50 border border-gray-100">
+                <h3 className="text-lg font-bold text-[#102f35] mb-3">
+                  Forms that qualify cases early
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Structured intake by visa type and urgency means your team spends
+                  less time on incomplete or poorly matched enquiries — and more
+                  time on cases you can actually take.
+                </p>
+              </div>
+              <div className="p-8 rounded-2xl bg-gray-50 border border-gray-100">
+                <h3 className="text-lg font-bold text-[#102f35] mb-3">
+                  Multi-brand lead routing
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  For groups running immigration alongside finance or related
+                  brands, we design journeys that route the right lead to the right
+                  practice — so cross-referrals become seamless instead of manual.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CASE STUDY */}
         <section className="py-24 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -380,41 +434,42 @@ export default function ImmigrationWebDesign() {
               {/* Project Details */}
               <div className="lg:w-1/2 p-8 md:p-14 flex flex-col justify-center">
                 <span className="text-[#411b3f] font-bold tracking-widest text-sm uppercase mb-3 block">
-                  Featured Case Study
+                  Featured Case Study · 1st Call UK Group
                 </span>
                 <h2 className="text-3xl font-bold text-[#102f35] mb-6 tracking-tight">
                   1st Call UK Immigration Services
                 </h2>
                 <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">
-                  I built a new platform for{" "}
+                  For{" "}
                   <strong className="text-[#102f35]">
                     1st Call UK Immigration
-                  </strong>{" "}
-                  focused on clarity, speed, and trust. The website guides users
-                  through work, study, and family visa options in plain English
-                  while keeping key compliance information easy to find.
+                  </strong>
+                  , we rebuilt the digital front door around how clients actually
+                  decide: plain-English visa paths, visible credentials, and
+                  enquiry flows that feel safe when the stakes are high.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed text-sm sm:text-base">
-                  The result is a fast, modern site that supports their
-                  reputation and makes it easier for potential clients to see
-                  how they can help and get in touch quickly.
+                  As part of a multi-brand group that also serves financial
+                  clients, the site needed to explain complex services clearly
+                  while routing serious enquiries efficiently — so the team wins
+                  more instructed cases with less admin chase.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mb-8 text-center">
                   <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-200/60">
                     <span className="block text-xl font-bold text-[#411b3f]">
-                      OISC Ready
+                      ↑ Lead quality
                     </span>
                     <span className="text-xs text-gray-500 font-semibold uppercase tracking-wide">
-                      Compliance Considered
+                      Clearer enquiry journeys
                     </span>
                   </div>
                   <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-200/60">
                     <span className="block text-xl font-bold text-[#411b3f]">
-                      Fast Load
+                      OISC Ready
                     </span>
                     <span className="text-xs text-gray-500 font-semibold uppercase tracking-wide">
-                      Core Web Vitals
+                      Trust &amp; compliance visible
                     </span>
                   </div>
                 </div>
@@ -446,7 +501,7 @@ export default function ImmigrationWebDesign() {
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 UK legal websites must show clear information about prices,
-                services, and complaints procedures. I design global header and
+                services, and complaints procedures. We design global header and
                 footer areas to house this content cleanly, so you stay
                 compliant without cluttering your key pages or confusing users.
               </p>
@@ -474,7 +529,7 @@ export default function ImmigrationWebDesign() {
                   How do you handle OISC and SRA requirements on the site?
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  I reserve space in your global header and footer for key
+                  We reserve space in your global header and footer for key
                   statutory information: credentials, registration numbers,
                   regulatory logos, and complaints information. This keeps you
                   compliant across every page without disrupting your main
@@ -517,13 +572,13 @@ export default function ImmigrationWebDesign() {
         <section className="py-20 bg-white text-center px-6">
           <div className="max-w-3xl mx-auto p-12 rounded-[3rem] bg-gradient-to-br from-[#411b3f] to-[#102f35] text-white shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
-              Ready to Modernise Your Immigration Firm Website?
+              Ready for a website that wins more instructed cases?
             </h2>
             <p className="text-base mb-10 text-gray-200 max-w-xl mx-auto">
               If your current site feels dated, slow, or unclear, high-value
-              cases will quietly go elsewhere. Let’s build a fast, credible
-              website that reflects your real expertise and makes it easier for
-              clients to instruct you.
+              cases will quietly go elsewhere. Let’s build a credible website
+              that reflects your expertise and makes it easier for clients to
+              instruct you.
             </p>
             <Link
               href="/book"

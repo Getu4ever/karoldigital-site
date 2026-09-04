@@ -60,14 +60,14 @@ export default function CateringWebDesign() {
           {/* Main Hero Content Box Container - Reduced Max Width to 2xl */}
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
-              Premium Next.js Frameworks for Food Brands
+              Menus, Bookings &amp; Corporate Enquiries That Convert
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Catering Website Design & <br className="hidden sm:inline" />
               <span className="text-brand-gold-muted">Hospitality Systems</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
-              Professional catering website design and high-conversion web frameworks for UK food brands. I build custom online ordering systems engineered to turn hungry visitors into booked events.
+              Websites for UK caterers and food brands that turn hungry visitors into booked events, office lunch orders, and fewer missed enquiries on mobile.
             </p>
             <Link 
               href="/book" 
@@ -106,10 +106,10 @@ export default function CateringWebDesign() {
             Stand Out in the Competitive <span className="text-[#411b3f]">UK Food Scene</span>
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            In the hospitality industry, your website is your digital flagship menu. Potential clients evaluating providers for weddings, large corporate functions, and high-end private events judge your culinary standards by the structural presentation of your site. At <strong className="text-[#102f35]">Karol Digital</strong>, we construct vibrant, mobile-first interfaces that showcase your kitchen operations beautifully.
+            In hospitality, your website is your digital flagship menu. Planners booking weddings, corporate functions, and private events judge your standards by how professional and easy your site feels. At <strong className="text-[#102f35]">Karol Digital</strong>, we build mobile-first sites that showcase your food beautifully and make it simple to enquire.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            From seamless, custom-coded <strong className="text-[#411b3f]">online ordering infrastructures</strong> to rich high-definition menu showcases, we engineer the core custom elements you require to streamline incoming logistics and scale your brand across your target geographic territories.
+            From <strong className="text-[#411b3f]">online ordering and bulk office lunch flows</strong> to clear package menus and event enquiry forms, we focus on the journeys that turn hungry visitors into booked work — without losing margin to third-party apps.
           </p>
         </section>
 
@@ -135,7 +135,7 @@ export default function CateringWebDesign() {
                 </div>
                 <h3 className="text-xl font-bold text-[#102f35] mb-3">Event & Wedding Caterers</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  High-end showcase layouts designed to convert massive corporate functions and private parties. Features high-res gallery components, automated inquiry forms, and custom multi-tier menus.
+                  Showcase layouts designed to win weddings, corporate functions, and private parties — with galleries, clear packages, and enquiry forms that capture dates, guest counts, and dietary needs.
                 </p>
                 <span className="text-xs font-bold uppercase text-[#411b3f] tracking-wide">Built for Inquiries & Lead Capture</span>
               </div>
@@ -146,7 +146,7 @@ export default function CateringWebDesign() {
                 </div>
                 <h3 className="text-xl font-bold text-[#102f35] mb-3">Premium Meal Prep Brands</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Advanced headless e-commerce architectures to support recurring subscriptions, custom box combinations, and nutritional dynamic calculations. Speedy order funnels ensure zero basket friction.
+                  Online stores for subscriptions, custom boxes, and nutritional choices — with smooth checkout so customers finish the order instead of abandoning the basket.
                 </p>
                 <span className="text-xs font-bold uppercase text-[#411b3f] tracking-wide">Built for Subscription E-Commerce</span>
               </div>
@@ -157,7 +157,7 @@ export default function CateringWebDesign() {
                 </div>
                 <h3 className="text-xl font-bold text-[#102f35] mb-3">Dark Kitchens & Delivery Hubs</h3>
                 <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                  Hyper-localized performance landing paths designed to funnel fast direct sales away from expensive third-party applications. Includes rapid mobile checkout patterns and direct integration with local couriers.
+                  Local landing pages built to win direct orders — so you keep more margin instead of handing it to delivery apps. Fast mobile checkout and clear delivery options included.
                 </p>
                 <span className="text-xs font-bold uppercase text-[#411b3f] tracking-wide">Built for Direct On-Demand Sales</span>
               </div>
@@ -182,16 +182,16 @@ export default function CateringWebDesign() {
                 <span className="text-[#411b3f] font-bold text-sm uppercase tracking-widest mb-2">Corporate Catering Integration</span>
                 <h3 className="text-3xl font-bold text-[#102f35] mb-6">The Office Lunch</h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
-                  We engineered a fluid, robust headless deployment for <strong className="text-[#102f35]">The Office Lunch</strong>. The platform handles complex bulk corporate orders smoothly, focusing strictly on crisp B2B aesthetics and instant navigational processing.
+                  For <strong className="text-[#102f35]">The Office Lunch</strong>, we built a clear B2B ordering experience for workplace teams — bulk corporate orders, crisp menus, and a fast path from browse to booked lunch without the chase.
                 </p>
                 <div className="flex gap-4 mb-8">
                   <div className="bg-[#102f35]/5 p-4 rounded-2xl flex-1 border border-[#102f35]/10">
-                    <span className="block text-xl font-bold text-[#102f35]">B2B Logic</span>
+                    <span className="block text-xl font-bold text-[#102f35]">B2B Orders</span>
                     <span className="text-xs text-gray-500 font-bold uppercase tracking-wide">Built for Teams</span>
                   </div>
                   <div className="bg-[#102f35]/5 p-4 rounded-2xl flex-1 border border-[#102f35]/10">
-                    <span className="block text-xl font-bold text-[#102f35]">Clean UI</span>
-                    <span className="text-xs text-gray-500 font-bold uppercase tracking-wide">Fast Conversion</span>
+                    <span className="block text-xl font-bold text-[#102f35]">Clear Menus</span>
+                    <span className="text-xs text-gray-500 font-bold uppercase tracking-wide">Faster Bookings</span>
                   </div>
                 </div>
                 <Link 
@@ -224,12 +224,12 @@ export default function CateringWebDesign() {
                 <span className="text-[#411b3f] font-bold text-sm uppercase tracking-widest mb-2">E-commerce Success Story</span>
                 <h3 className="text-3xl font-bold text-[#102f35] mb-6">Food Mama Kitchens</h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
-                  We designed and deployed a vibrant, lightning-fast storefront solution for <strong className="text-[#102f35]">Food Mama Kitchens</strong> to perfectly market their authentic West African culinary offerings. The infrastructure targets visual content loading metrics alongside smooth booking forms.
+                  For <strong className="text-[#102f35]">Food Mama Kitchens</strong>, we built a vibrant storefront that showcases authentic West African cooking — clear menus, smooth booking forms, and a mobile experience that turns interest into orders.
                 </p>
                 <div className="flex gap-4 mb-8">
                   <div className="bg-[#411b3f]/5 p-4 rounded-2xl flex-1 border border-[#411b3f]/10">
                     <span className="block text-xl font-bold text-[#411b3f]">Digital Menu</span>
-                    <span className="text-xs text-gray-500 font-bold uppercase tracking-wide">Dynamic Control</span>
+                    <span className="text-xs text-gray-500 font-bold uppercase tracking-wide">Easy Updates</span>
                   </div>
                   <div className="bg-[#411b3f]/5 p-4 rounded-2xl flex-1 border border-[#411b3f]/10">
                     <span className="block text-xl font-bold text-[#411b3f]">Mobile First</span>
@@ -255,26 +255,26 @@ export default function CateringWebDesign() {
           <div className="relative z-10 max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             <div className="md:col-span-3">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-muted block mb-3">
-                High-Performance Ordering Mechanics
+                Direct Orders, Higher Margins
               </span>
               <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">
-                Eliminate Third-Party App Commission Fees Forever
+                Keep More Profit Off Third-Party Apps
               </h2>
               <p className="text-gray-200 text-sm leading-relaxed mb-6">
-                Relying heavily on standard aggregators significantly reduces your operational profit margins. Our bespoke food-industry infrastructures are engineered from scratch to maximize direct customer conversion paths.
+                Relying on aggregators eats into margins. We build sites that make direct ordering easy — so more customers book with you, not a marketplace.
               </p>
               <div className="space-y-3 text-sm font-medium text-gray-100">
                 <p className="flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
-                  <span>Blazing-fast Next.js caching algorithms ensure fluid digital menu browsing</span>
+                  <span>Menus that load quickly so hungry buyers stay and order</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
-                  <span>Granular custom forms mapping collection locations and allergen requirements</span>
+                  <span>Forms that capture collection details, dates, and allergen needs</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-brand-gold-soft shrink-0" />
-                  <span>Seamless database synchronization with local merchant printers and POS lines</span>
+                  <span>Optional links to printers and POS so kitchen ops stay simple</span>
                 </p>
               </div>
             </div>
@@ -305,7 +305,7 @@ export default function CateringWebDesign() {
             <div className="grid md:grid-cols-3 gap-10">
               {[
                 { title: "Dynamic Digital Menus", desc: "Interactive presentation arrays that look stunning across any mobile device viewport and update directly without site bloat.", icon: "🍱" },
-                { title: "Ordering Integrations", desc: "Native API linkages built directly with headless platforms or tailored intake logic formats to protect transaction workflows.", icon: "💳" },
+                { title: "Ordering Integrations", desc: "Connect checkout and intake forms to the payment tools you already use — so orders and enquiries reach the kitchen without friction.", icon: "💳" },
                 { title: "Social Feed Synchronization", desc: "Secure integration points streaming dynamic real-time imagery layers directly onto your platform without reducing page speeds.", icon: "📸" },
               ].map((f) => (
                 <div 
@@ -330,7 +330,7 @@ export default function CateringWebDesign() {
                 Catering & Hospitality Web Design FAQ
               </h2>
               <p className="text-gray-600 mt-2 text-sm">
-                Essential expert insights concerning content management systems, checkout speed, and search optimization strategies.
+                Practical answers on updating menus, capturing corporate enquiries, and winning bookings on mobile.
               </p>
             </div>
 
@@ -338,21 +338,21 @@ export default function CateringWebDesign() {
               <div className="p-6 bg-white rounded-2xl border border-gray-100/60 shadow-sm">
                 <h3 className="text-base font-bold text-[#102f35] mb-2">Can we update our food and catering menus easily without needing coding skills?</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Absolutely. We link your application structure directly with a headless Content Management System (such as Sanity Studio). This gives you a clear visual dashboard to edit items, alter prices, list daily seasonal boxes, or adjust allergen warnings instantly from any phone or computer.
+                  Yes. You get a simple dashboard to edit menu items, prices, seasonal boxes, and allergen notes from any phone or computer — without waiting on a developer for every change.
                 </p>
               </div>
 
               <div className="p-6 bg-white rounded-2xl border border-gray-100/60 shadow-sm">
                 <h3 className="text-base font-bold text-[#102f35] mb-2">How do you ensure our corporate catering inquiry forms capture premium leads?</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  We build logical, interactive form layers that prompt prospective clients to input corporate sizing metrics, date parameters, budget structures, and menu specifications immediately. This ensures your intake systems screen out generic spam while collecting valuable data profiles.
+                  We ask for the details that matter early — headcount, date, budget range, and menu preferences — so your team spends time on real corporate opportunities instead of incomplete spam enquiries.
                 </p>
               </div>
 
               <div className="p-6 bg-white rounded-2xl border border-gray-100/60 shadow-sm">
                 <h3 className="text-base font-bold text-[#102f35] mb-2">Why is high page performance vital for localized UK catering rankings?</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Most event planners or corporate coordinators search for food solutions via mobile devices during strict timeline bounds. If your site features sluggish visual components or heavy scripts, users bounce instantly. A custom Next.js layout ranks highly because its loading speed outpaces standard monolithic builds.
+                  Most planners search on mobile under time pressure. If your site is slow, they bounce to a competitor. Faster pages keep them long enough to enquire — and search engines reward sites that do that well.
                 </p>
               </div>
             </div>

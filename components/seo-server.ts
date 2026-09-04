@@ -37,22 +37,22 @@ export type PageKey =
 
 export const seoConfig: Record<PageKey, SEOProps> = {
   home: {
-    title: "Web Design for UK Service Businesses | Karol Digital",
+    title: "Web Design for Pole & Aerial Studios UK",
     description:
-      "Karol Digital builds websites that win qualified enquiries for UK service businesses — based in London SW20, with SEO & AI search (GEO), typically live in 3–6 weeks.",
-    url: "https://www.karoldigital.co.uk/",
+      "Custom studio booking systems UK for pole & aerial studios. High-converting London websites — replace Bookwhen or TeamUp under your own domain.",
+    url: "https://www.karoldigital.co.uk",
     image: "/seo-cover.jpg",
     keywords:
-      "web design UK, website design for service businesses, London SW20 web designer, Raynes Park web design, conversion-focused websites",
+      "web design for pole and aerial studios, custom studio booking systems UK, custom timetables for dance studios, replacing Bookwhen TeamUp custom website, high-converting studio websites London, local business SEO agency London",
     type: "website",
   },
 
   about: {
-    title: "About Karol Digital | London SW20 Web Design Studio",
+    title: "About Karol Digital | UK Web Design Studio",
     description:
-      "Meet Karol, founder of Karol Digital — a London SW20 web design studio helping UK service businesses look more professional, win better enquiries, and waste less time on paperwork.",
+      "Meet Karol, founder of Karol Digital — a London web design studio helping UK service businesses look more professional, win better enquiries, and waste less time on paperwork.",
     keywords:
-      "about Karol Digital, London SW20 web designer, Raynes Park, founder Karol, UK web design studio",
+      "about Karol Digital, London web designer, founder Karol, UK web design studio, London SW20",
     url: "https://www.karoldigital.co.uk/about",
     image: "/about-team.jpg",
     type: "website",
@@ -61,11 +61,11 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   contact: {
     title: "Contact Karol Digital | Book a Call",
     description:
-      "Contact Karol Digital for a free website consultation. Call 07565 472445 or email info@karoldigital.co.uk — London SW20-based, serving UK service businesses.",
+      "Contact Karol Digital for a free website consultation. Call 07565 472445 or email info@karoldigital.co.uk — London-based, serving UK service businesses.",
     url: "https://www.karoldigital.co.uk/contact",
     image: "/heroes/contact.png",
     keywords:
-      "contact Karol Digital, website consultation UK, book web design call London SW20",
+      "contact Karol Digital, website consultation UK, book web design call London",
     type: "website",
   },
 
@@ -142,13 +142,13 @@ export const seoConfig: Record<PageKey, SEOProps> = {
   },
 
   industries: {
-    title: "Industry Web Design UK | Karol Digital",
+    title: "Studio & Service Business Web Design UK",
     description:
-      "Website design for UK financial, immigration, construction, catering, fitness, and service businesses that need trust, clarity, and more qualified enquiries.",
+      "Pole & aerial studio websites with custom booking, plus financial, immigration, construction and catering sites for UK service businesses.",
     url: "https://www.karoldigital.co.uk/industries",
     image: "/seo-cover.jpg",
     keywords:
-      "industry web design UK, financial services websites, immigration lawyer websites, construction web design",
+      "web design for pole and aerial studios, custom studio booking systems UK, high-performance financial services websites UK, custom web design for immigration lawyers, web development for London construction and trades, conversion-focused corporate catering websites",
     type: "website",
   },
 };

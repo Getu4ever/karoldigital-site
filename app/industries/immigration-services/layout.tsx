@@ -5,11 +5,13 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
-    title: "Immigration Law Firm Web & OISC Systems | Karol Digital",
+    title: "Web Design for Immigration Lawyers UK",
     description:
-      "Specialist OISC & SRA-compliant website design for UK immigration firms. High-trust, secure websites with smart intake forms & targeted legal SEO. Get a quote.",
+      "Custom web design for immigration lawyers — clear visa journeys and intake that turns enquiries into instructed cases.",
     url: "https://www.karoldigital.co.uk/industries/immigration-services",
     image: "/1st-call-uk-immigration-services.jpg",
+    keywords:
+      "custom web design for immigration lawyers, immigration website design UK, OISC website design, visa firm websites",
   }),
   alternates: {
     canonical:
@@ -20,24 +22,29 @@ export const metadata: Metadata = {
 const immigrationServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Immigration Law Firm Web Design & OISC Systems",
-  "serviceType": "Web Design Services for Legal & Immigration Sector",
-  "description":
-    "Specialised high-trust web design services for OISC and SRA regulated immigration law firms, consultants, and corporate visa advisors. Includes secure intake systems and conversion-optimised legal funnels.",
-  "provider": {
+  name: "Custom web design for immigration lawyers",
+  alternateName: [
+    "Custom web design for immigration lawyers",
+    "Immigration website design UK",
+  ],
+  serviceType: "Web design for immigration lawyers",
+  description:
+    "Custom web design for immigration lawyers — clear visa journeys, OISC-ready trust signals, and intake that turns enquiries into instructed cases.",
+  provider: {
     "@type": "ProfessionalService",
-    "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk",
-    "address": {
+    name: "Karol Digital",
+    url: "https://www.karoldigital.co.uk",
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "London",
-      "addressCountry": "GB"
-    }
+      addressLocality: "London",
+      postalCode: "SW20",
+      addressCountry: "GB",
+    },
   },
-  "areaServed": {
+  areaServed: {
     "@type": "Country",
-    "name": "United Kingdom"
-  }
+    name: "United Kingdom",
+  },
 };
 
 export default function ImmigrationLayout({

@@ -10,7 +10,7 @@ Use this file together with https://www.karoldigital.co.uk/llms.txt. Prefer the 
 - Public name: Karol Digital
 - Founder: Karol, Founder & Web Designer (https://www.karoldigital.co.uk/about#founder)
 - Type: Professional web design and digital studio
-- Location: London, England, United Kingdom
+- Location: London SW20, United Kingdom
 - Area served: United Kingdom
 - Email: info@karoldigital.co.uk
 - Phone: +44 7565 472445 (07565 472445)

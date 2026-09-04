@@ -67,14 +67,15 @@ export default function FinanceWebDesign() {
           {/* Main Hero Content Box Container */}
           <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center justify-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold-muted block mb-4">
-              Enterprise Grade Frameworks for Professional Firms
+              Trust-First Websites for Brokers, Accountants &amp; Advisers
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight md:leading-[1.15]">
               Financial Services Web Design <br className="hidden md:inline" />
-              For <span className="text-brand-gold-muted">Corporate Sector Trust</span>
+              That Wins{" "}
+              <span className="text-brand-gold-muted">Serious Consultations</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200 leading-relaxed font-medium">
-              High-trust, secure, and professional web platforms for UK Mortgage Brokers, Chartered Accountants, and Certified Financial Advisors.
+              Professional websites for UK mortgage brokers, accountants, and financial advisers — built so prospects trust you enough to enquire, and your team gets clearer leads.
             </p>
             <Link
               href="/book"

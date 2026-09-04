@@ -3,7 +3,6 @@
 import FadeIn from "@/components/FadeIn";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function WebDesignPage() {
   return (
@@ -22,24 +21,20 @@ export default function WebDesignPage() {
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="relative z-10 px-6 max-w-4xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
-            >
-              High-Performance Custom Websites{" "}
-              <span className="text-brand-gold-muted">— Built for Growth, Speed & Trust</span>
-            </motion.h1>
+            <h1 className="geo-offer text-5xl md:text-6xl font-bold mb-6">
+              Web Design UK —{" "}
+              <span className="text-brand-gold-muted">
+                Conversion-Focused Custom Websites
+              </span>
+            </h1>
 
-            <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-4">
-              Karol Digital is a UK web design agency that builds conversion-focused
-              custom websites for service businesses — modern, fast, and engineered
-              from scratch without template bloat so every page supports growth and trust.
+            <p className="geo-citation text-lg md:text-xl text-gray-100 leading-relaxed mb-4">
+              Website design for service businesses: custom websites with clear offers,
+              stronger trust, and enquiry paths that turn visitors into qualified work.
             </p>
             <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto">
-              Ideal for UK service businesses and SMEs who want a high-performance
-              website that turns visitors into qualified enquiries.
+              Ideal if you need a London web designer for UK service businesses and SMEs
+              who want more phone calls, form fills, and booked consultations.
             </p>
           </div>
         </section>
@@ -67,7 +62,7 @@ export default function WebDesignPage() {
             <li className="text-gray-400">/</li>
 
             <li className="text-[#102f35] font-semibold">
-              High-Performance Web Design
+              Web Design UK
             </li>
           </ol>
         </nav>

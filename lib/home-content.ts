@@ -1,44 +1,35 @@
 export const homeFaqs = [
   {
+    q: "Do you build websites for pole and aerial studios?",
+    a: "Yes. We specialise in web design for pole and aerial studios — custom studio booking systems UK, class timetables, and checkout under your own domain so you are not leaking leads to Bookwhen, TeamUp, or other third-party links.",
+  },
+  {
+    q: "Can you replace Bookwhen or TeamUp with a custom website?",
+    a: "Yes. We build high-converting studio websites London studios can own end-to-end: custom timetables for dance studios, booking, and payments on your domain — so members stay on your brand and you keep the revenue path.",
+  },
+  {
+    q: "What makes a conversion-focused studio website?",
+    a: "A conversion-focused studio site makes classes obvious, loads fast on mobile, and lets visitors book without bouncing to another platform. That means more direct revenue and less admin chasing incomplete enquiries.",
+  },
+  {
+    q: "Do you only work with fitness studios?",
+    a: "Pole, aerial hoop, and aerial silk studios are our primary focus. We also build custom web design for immigration lawyers, high-performance financial services websites UK, London construction and trades sites, and conversion-focused corporate catering websites.",
+  },
+  {
     q: "What is Karol Digital?",
-    a: "Karol Digital is a UK web design agency that builds conversion-focused websites for service businesses, with expertise in SEO, AI search optimisation (GEO), and lead generation. The studio is based in London SW20 and led by Karol, Founder & Web Designer.",
+    a: "Karol Digital is a London SW20 web design studio that builds conversion-focused websites with custom booking and enquiry systems — led by Karol, Founder & Web Designer.",
   },
   {
     q: "How much does a professional website cost?",
-    a: "Karol Digital website packages start at £95 for a performance audit. Custom builds typically range from £1,250 to £6,000 depending on pages, e-commerce, and integrations. You receive a clear fixed quote before work starts.",
+    a: "Website packages start at £95 for a performance audit. Custom builds typically range from £1,250 to £6,000 depending on pages, booking systems, and integrations. You receive a clear fixed quote before work starts.",
   },
   {
-    q: "What is GEO (generative engine optimisation)?",
-    a: "GEO is the practice of structuring your website, schema, and content so AI search engines such as ChatGPT, Perplexity, and Google AI Overviews can understand, cite, and recommend your business accurately.",
-  },
-  {
-    q: "Who do you work best with?",
-    a: "We work best with growing service businesses whose phones should be ringing more — firms that need a clear offer, a professional first impression, and enquiry journeys that save the team time.",
-  },
-  {
-    q: "Can you improve an existing website?",
-    a: "Yes. If your current website feels slow, unclear, outdated, or is not bringing in the right enquiries, we can audit it, improve it, or rebuild it into a faster, clearer, and more effective lead generation website.",
-  },
-  {
-    q: "Do you build custom websites or use templates?",
-    a: "We build every site around how you win work — clear offers, trust, and enquiry paths — rather than forcing your business into a generic template. The result is a faster site that looks more professional and converts more visitors into real conversations.",
-  },
-  {
-    q: "What if I am not ready for a full website project?",
-    a: "That is completely fine. Many businesses start with a website audit to understand what is hurting trust, visibility, and conversions before deciding on a larger rebuild.",
-  },
-  {
-    q: "How long does a typical project take?",
-    a: "Most website projects take between 3 and 6 weeks depending on the scope, number of pages, and feedback turnaround. E-commerce and custom mobile app projects are scoped separately based on features and complexity.",
+    q: "How long does a typical website project take?",
+    a: "Most custom website projects take between 3 and 6 weeks depending on scope, timetable complexity, and feedback turnaround. Studio booking systems are scoped around your class catalogue and admin needs.",
   },
 ] as const;
 
 export const homeTestimonials = [
-  {
-    quote:
-      "Our new website is admired by our community and friends — it finally feels like us. Booking is clearer, the brand feels warm and inclusive, and people are proud to share it.",
-    author: "Wild Hearts Collective",
-  },
   {
     quote:
       "Karol Digital transformed our digital presence. The website made it easier for clients to understand what we offer and contact us.",
@@ -49,34 +40,25 @@ export const homeTestimonials = [
       "A true lead generation engine. We saw a clear uplift in the quality of leads coming through the site.",
     author: "1st Call UK Financial",
   },
+  {
+    quote:
+      "Professional, fast, and results-driven. The new branding and website gave the business a much stronger online presence.",
+    author: "British Solar Direct",
+  },
 ] as const;
 
 export const homeCaseStudies = [
   {
     title: "Wild Hearts Collective",
     logo: "/wild-hearts-showcase.png",
-    logoAlt: "Wild Hearts Collective studio website",
+    logoAlt: "Wild Hearts Collective pole and aerial studio website",
     description:
-      "Latest completed project — an inclusive aerial and pole studio site with online class booking, clear schedules, and a brand presence the founders and their friends are proud to share.",
-    metric: "Latest",
-    metricLabel: "Featured studio build",
-    industryHref: "/industries/fitness-studios",
-    industryLabel: "Studio case study",
+      "Inclusive pole, aerial hoop, and silks studio in Mansfield — custom class booking, timetables, and admin under their own domain instead of third-party booking links.",
+    metric: "Own domain",
+    metricLabel: "Booking + timetable + checkout",
+    industryHref: "https://wildheartscollective.org",
+    industryLabel: "Visit Wild Hearts Collective",
     featured: true,
-    coverImage: true,
-    liveUrl: "https://www.wildheartscollective.org/",
-  },
-  {
-    title: "1st Call UK Immigration",
-    logo: "/logos/1st-calluk-immigration.webp",
-    logoAlt: "1st Call UK Immigration logo",
-    description:
-      "Visa paths explained in plain English, with intake flows that help stressed clients instruct the firm — and help the team qualify cases faster.",
-    metric: "↑ Instructed",
-    metricLabel: "Clearer client journeys",
-    industryHref: "/industries/immigration-services",
-    industryLabel: "Immigration case study",
-    featured: false,
   },
   {
     title: "1st Call UK Financial",
@@ -90,15 +72,34 @@ export const homeCaseStudies = [
     industryLabel: "Financial case study",
     featured: false,
   },
+  {
+    title: "1st Call UK Immigration",
+    logo: "/logos/1st-calluk-immigration.webp",
+    logoAlt: "1st Call UK Immigration logo",
+    description:
+      "Visa paths explained in plain English, with intake flows that help stressed clients instruct the firm — and help the team qualify cases faster.",
+    metric: "↑ Instructed cases",
+    metricLabel: "Clearer client journeys",
+    industryHref: "/industries/immigration-services",
+    industryLabel: "Immigration case study",
+    featured: false,
+  },
 ] as const;
 
 export const homeServices = [
   {
-    title: "High-Performance Websites",
+    title: "Custom Studio Booking Systems",
     description:
-      "Websites that make your offer obvious, earn trust in seconds, and turn more visitors into phone calls, form fills, and booked consultations.",
-    href: "/services/web-design",
-    cta: "Custom website design",
+      "Class booking, timetables, and checkout under your own domain — so pole and aerial studios stop leaking leads through Bookwhen, TeamUp, or clunky template links.",
+    href: "/industries/fitness-studios",
+    cta: "Studio booking websites",
+  },
+  {
+    title: "High-Converting Studio Websites",
+    description:
+      "Lightning-fast, mobile-ready sites for dance and aerial brands — clear class discovery, brand-led design, and enquiry flows that fill the timetable.",
+    href: "/industries/fitness-studios",
+    cta: "Pole & aerial web design",
   },
   {
     title: "Custom Web Development",
@@ -108,25 +109,18 @@ export const homeServices = [
     cta: "Bespoke web builds",
   },
   {
-    title: "High-Quality E-Commerce Websites",
-    description:
-      "Online stores with a smooth path from browse to buy — clear products, secure checkout, and fewer abandoned baskets on mobile.",
-    href: "/services/custom-web-development",
-    cta: "Explore e-commerce",
-  },
-  {
-    title: "Custom Mobile Applications",
-    description:
-      "Apps that keep customers coming back — bookings, accounts, and loyalty in one place, synced with how you already run the business.",
-    href: "/services/custom-mobile-applications",
-    cta: "Mobile app builds",
-  },
-  {
     title: "Website Audits",
     description:
-      "A plain-English review of what is costing you trust, visibility, and enquiries — plus a clear fix list before you invest in a rebuild.",
+      "A plain-English review of what is costing you trust, visibility, and bookings — plus a clear fix list before you invest in a rebuild.",
     href: "/services/website-audits",
     cta: "Site audit details",
+  },
+  {
+    title: "Local Business SEO London",
+    description:
+      "Local business SEO agency London support — structure, content, and signals so nearby buyers and AI search can find and recommend you.",
+    href: "/services/digital-marketing",
+    cta: "Local SEO support",
   },
   {
     title: "AI Search Optimisation",
@@ -139,63 +133,75 @@ export const homeServices = [
 
 export const homeDifference = [
   {
-    title: "More completed enquiries",
+    title: "Bookings stay on your domain",
     description:
-      "Pages that load quickly on mobile keep prospects on your site instead of bouncing to a competitor — so more people finish the form or call.",
+      "Custom studio booking systems UK studios control — no third-party hop that drops conversions or dilutes your brand.",
   },
   {
-    title: "A site that earns trust",
+    title: "More direct revenue",
     description:
-      "Clear offers, professional presentation, and fewer broken experiences mean busy buyers feel safe enough to contact you.",
+      "Fast, mobile-ready journeys from class browse to checkout so more visitors complete the booking instead of bouncing.",
   },
   {
-    title: "Less admin, fewer lost leads",
+    title: "Less admin paperwork",
     description:
-      "Enquiry systems that capture the right details and keep website, app, and follow-up in sync — so your team spends less time chasing paperwork.",
+      "Automated enquiry and booking flows capture the right details — so your team spends less time chasing incomplete forms.",
   },
 ] as const;
 
 export const homeIndustries = [
   {
-    title: "Fitness & Wellness Studios",
+    title: "Pole & Aerial Studios",
     description:
-      "Studio sites with clear class discovery, online booking, and a brand people admire — as with Wild Hearts Collective.",
+      "Web design for pole and aerial studios with custom timetables, booking, and checkout — high-converting studio websites London owners can grow on.",
     href: "/industries/fitness-studios",
     linkLabel: "Studio websites",
-  },
-  {
-    title: "Immigration Lawyers",
-    description:
-      "Sites for immigration firms that need to build authority, explain visa routes clearly, and turn more enquiries into instructed cases.",
-    href: "/industries/immigration-services",
-    linkLabel: "Immigration sites",
+    image: "/home/sections/ind-fitness.png",
+    imageAlt: "Pole and aerial studio website design",
   },
   {
     title: "Financial Services",
     description:
-      "Websites for accountants, brokers, and advisers that need credibility, clarity, and a smoother path from first visit to consultation.",
+      "High-performance financial services websites UK — credibility, clarity, and a smoother path from first visit to consultation.",
     href: "/industries/financial-services",
     linkLabel: "Financial sites",
+    image: "/home/sections/ind-financial.jpg",
+    imageAlt: "Financial services website design",
+  },
+  {
+    title: "Immigration Lawyers",
+    description:
+      "Custom web design for immigration lawyers — clear visa journeys and intake that turns more enquiries into instructed cases.",
+    href: "/industries/immigration-services",
+    linkLabel: "Immigration sites",
+    image: "/home/sections/ind-immigration.jpg",
+    imageAlt: "Immigration law firm website design",
   },
   {
     title: "Construction and Trades",
     description:
-      "Websites for builders and specialist trades — clear packages, local trust, and quote-ready journeys that win booked work.",
+      "Web development for London construction and trades — packages, local proof, and quote-ready journeys that win booked work.",
     href: "/industries/building-services",
     linkLabel: "Construction sites",
+    image: "/home/sections/ind-construction.png",
+    imageAlt: "Construction and trades website design",
   },
   {
     title: "Catering & Hospitality",
     description:
-      "Menu-led sites for UK caterers — clear packages, event enquiry paths, and mobile journeys that win corporate and private bookings.",
+      "Conversion-focused corporate catering websites — menus, packages, and enquiry paths that win bookings with less admin.",
     href: "/industries/catering-services",
     linkLabel: "Catering sites",
+    image: "/heroes/catering-services.png",
+    imageAlt: "Catering and hospitality website design",
   },
   {
-    title: "Corporate Office Catering",
+    title: "Fitness & Wellness Studios",
     description:
-      "B2B sites for office lunch providers — bulk order flows, crisp menus, and fast enquiry paths built for workplace teams.",
-    href: "/industries/catering-services",
-    linkLabel: "Office lunch sites",
+      "Beyond pole and aerial — yoga, pilates, and boutique studios that need class discovery, memberships, and booking without template friction.",
+    href: "/industries/fitness-studios",
+    linkLabel: "Wellness studio sites",
+    image: "/heroes/fitness-studios.png",
+    imageAlt: "Fitness and wellness studio website design",
   },
 ] as const;

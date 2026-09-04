@@ -19,7 +19,7 @@ export async function generateMetadata({
       ? `${SITE_ORIGIN}/search?q=${encodeURIComponent(query)}`
       : `${SITE_ORIGIN}/search`,
     image: "/seo-cover.jpg",
-    noIndex: Boolean(query),
+    noIndex: true,
   });
 }
 

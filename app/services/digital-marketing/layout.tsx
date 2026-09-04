@@ -3,11 +3,13 @@ import GeoExtras from "@/components/GeoExtras";
 import { digitalMarketingFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
-  title: "Digital Marketing & SEO Services | Karol Digital",
+  title: "Local Business SEO Agency London",
   description:
-    "Practical digital marketing support for small businesses. SEO guidance, email marketing setup, and actionable growth strategies to attract more customers online.",
+    "Local business SEO agency London — SEO, content and visibility for studios and service businesses that need more of the right enquiries.",
   url: "https://www.karoldigital.co.uk/services/digital-marketing",
   image: "/services-digital-marketing.webp",
+  keywords:
+    "local business SEO agency London, SEO for studios UK, digital marketing London, small business SEO",
 });
 
 const digitalMarketingSchema = [
@@ -38,20 +40,24 @@ const digitalMarketingSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Small Business Digital Marketing Support",
-    "serviceType": "Digital Marketing Services for SMEs",
-    "description":
-      "Actionable marketing strategies including SEO optimisation, email marketing setup, and content planning for UK small businesses and SMEs.",
-    "provider": {
+    name: "Local business SEO agency London",
+    alternateName: [
+      "Local business SEO agency London",
+      "SEO for studios UK",
+    ],
+    serviceType: "Local business SEO",
+    description:
+      "Local business SEO agency London — SEO, content, and visibility for pole and aerial studios and UK service businesses that need more of the right enquiries.",
+    provider: {
       "@type": "ProfessionalService",
-      "name": "Karol Digital",
-      "url": "https://www.karoldigital.co.uk"
+      name: "Karol Digital",
+      url: "https://www.karoldigital.co.uk",
     },
-    "areaServed": {
+    areaServed: {
       "@type": "Country",
-      "name": "United Kingdom"
-    }
-  }
+      name: "United Kingdom",
+    },
+  },
 ];
 
 export default function DigitalMarketingLayout({

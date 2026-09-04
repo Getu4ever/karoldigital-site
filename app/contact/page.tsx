@@ -9,6 +9,7 @@ import { useSearchParams } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import { trackLead } from "@/lib/analytics";
 import { RECAPTCHA_SITE_KEY } from "@/lib/recaptcha";
+import { SITE_LOCATION_LABEL } from "@/lib/site-contact";
 
 function ContactFormSection() {
   const searchParams = useSearchParams();
@@ -320,13 +321,13 @@ export default function ContactPage() {
                   info@karoldigital.co.uk
                 </a>
                 <p className="mt-4 text-sm text-gray-500">
-                  London, United Kingdom
+                  {SITE_LOCATION_LABEL}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex-1">
                 <iframe
-                  title="Karol Digital — London, United Kingdom"
-                  src="https://www.google.com/maps?q=London,+United+Kingdom&z=10&output=embed"
+                  title="Karol Digital — London SW20"
+                  src="https://www.google.com/maps?q=London+SW20,+United+Kingdom&z=13&output=embed"
                   className="w-full h-full min-h-[380px]"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

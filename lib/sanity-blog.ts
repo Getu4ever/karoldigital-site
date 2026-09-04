@@ -96,13 +96,19 @@ export async function getBlogPostSeo(slug: string): Promise<BlogPostSeo | null> 
 export async function getBlogPostsForSitemap(): Promise<
   { slug: string; publishedAt?: string; updatedAt?: string }[]
 > {
-  return client.fetch(
-    groq`*[_type == "blogPost" && defined(slug.current)]{
-      "slug": slug.current,
-      publishedAt,
-      "updatedAt": _updatedAt
-    }`
-  );
+  try {
+    const posts = await client.fetch(
+      groq`*[_type == "blogPost" && defined(slug.current)]{
+        "slug": slug.current,
+        publishedAt,
+        "updatedAt": _updatedAt
+      }`
+    );
+    return Array.isArray(posts) ? posts : [];
+  } catch (error) {
+    console.error("Sitemap blog fetch failed", error);
+    return [];
+  }
 }
 
 export async function getBlogIndexPosts(): Promise<BlogPostListItem[]> {

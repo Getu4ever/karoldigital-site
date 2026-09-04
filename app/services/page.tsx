@@ -75,10 +75,10 @@ export default function ServicesPage() {
     {
       title: "High-Performance Custom Websites",
       description:
-        "Premium custom-built websites designed for trust, clarity, and conversion. Ideal for small businesses that need a stronger first impression and a clearer path to enquiry — without template bloat.",
+        "Websites designed for trust, clarity, and conversion. Ideal for small businesses that need a stronger first impression and a clearer path to enquiry.",
       points: [
         "Conversion-focused messaging and structure",
-        "Lightning-fast, mobile-ready performance",
+        "Fast, mobile-ready experience that keeps visitors",
         "Stronger trust and credibility signals",
       ],
       href: "/book",
@@ -88,11 +88,11 @@ export default function ServicesPage() {
     {
       title: "Custom Web Development",
       description:
-        "Bespoke systems engineered from scratch for businesses that need more flexibility, better performance, and builds shaped around how they actually sell and operate.",
+        "Built around how you sell and operate — packages, quotes, bookings, and lead capture that fit your workflows so enquiries stop falling through the cracks.",
       points: [
         "Tailored functionality and e-commerce",
-        "No template bloat",
-        "Built around your goals and user journey",
+        "Shaped around your real sales process",
+        "Built for growth without constant rebuilds",
       ],
       href: "/book",
       servicePrefill: "Custom Web Development",
@@ -113,7 +113,7 @@ export default function ServicesPage() {
     {
       title: "Website Audits and Improvement Plans",
       description:
-        "A practical review of your current website to identify what is hurting speed, security, trust, or conversions — and what to fix first.",
+        "A practical review of your current website to identify what is hurting trust, visibility, or conversions — and what to fix first.",
       points: [
         "Speed, security, and UX review",
         "Performance and SEO checks",
@@ -201,22 +201,21 @@ export default function ServicesPage() {
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
                 <span className="text-sm font-bold uppercase tracking-widest text-[#411b3f] block mb-3">
-                  Engineered for Results
+                  Built for Results
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-[#102f35] mb-6">
-                  Strategic Solutions Rooted in Technical Excellence
+                  Strategic Solutions Rooted in Business Outcomes
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
                   At Karol Digital, we don&apos;t just design good-looking websites. We build
-                  fast, reliable, and conversion-focused platforms that support how you
-                  actually sell, deliver, and communicate as a business — custom-engineered
-                  without template bloat.
+                  platforms that support how you actually sell, deliver, and communicate —
+                  so more visitors become qualified enquiries and fewer leads fall through
+                  the cracks.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  By combining clean, professional layouts with strong technical SEO and
-                  high-performance engineering, we create websites that feel effortless to use,
-                  load quickly on any device, and act as a dependable source of new
-                  enquiries.
+                  By combining clear messaging with strong local visibility and a fast mobile
+                  experience, we create websites that feel effortless to use and act as a
+                  dependable source of new work.
                 </p>
               </div>
 

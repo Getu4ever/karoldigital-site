@@ -20,19 +20,11 @@ export default function IndustriesPage() {
   const industries = [
     {
       href: "/industries/fitness-studios",
-      label: "Fitness & Wellness Studios",
-      linkLabel: "Studio websites",
+      label: "Pole & Aerial Studios",
+      linkLabel: "Studio booking websites",
       icon: <Heart size={20} />,
       description:
-        "Studio websites with class booking and a brand people admire — featuring Wild Hearts Collective.",
-    },
-    {
-      href: "/industries/immigration-services",
-      label: "Immigration Lawyers",
-      linkLabel: "Immigration sites",
-      icon: <Scale size={20} />,
-      description:
-        "Website design for immigration-focused firms that need to build authority, reduce confusion, and turn more enquiries into instructed cases.",
+        "Web design for pole and aerial studios — custom studio booking systems UK, dance timetables, and checkout under your domain. Proof: Wild Hearts Collective.",
     },
     {
       href: "/industries/financial-services",
@@ -40,7 +32,15 @@ export default function IndustriesPage() {
       linkLabel: "Financial sites",
       icon: <Landmark size={20} />,
       description:
-        "Web design for financial businesses that need clarity, trust, and a more professional route to enquiry.",
+        "High-performance financial services websites UK — clarity, trust, and a professional route to consultation.",
+    },
+    {
+      href: "/industries/immigration-services",
+      label: "Immigration Lawyers",
+      linkLabel: "Immigration sites",
+      icon: <Scale size={20} />,
+      description:
+        "Custom web design for immigration lawyers — clear visa journeys and intake that turns enquiries into instructed cases.",
     },
     {
       href: "/industries/building-services",
@@ -48,7 +48,7 @@ export default function IndustriesPage() {
       linkLabel: "Construction sites",
       icon: <HardHat size={20} />,
       description:
-        "High-performance websites for builders and specialist trades — featuring British Solar Direct.",
+        "Web development for London construction and trades — packages, local proof, and quote-ready journeys.",
     },
     {
       href: "/industries/catering-services",
@@ -56,7 +56,7 @@ export default function IndustriesPage() {
       linkLabel: "Catering sites",
       icon: <UtensilsCrossed size={20} />,
       description:
-        "Websites and ordering systems for caterers and food brands that need clear menus and more bookings.",
+        "Conversion-focused corporate catering websites — menus, packages, and enquiry flows that win bookings.",
     },
   ];
 
@@ -101,11 +101,12 @@ export default function IndustriesPage() {
               Industries
             </p>
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              Industry-focused websites for service businesses
+              Pole &amp; aerial studios — plus service industries
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
-              Industry-focused websites for service businesses that need stronger
-              credibility, clearer messaging, and better lead generation.
+              Custom studio booking systems UK for pole and aerial brands, with
+              the same conversion approach for finance, immigration, trades, and
+              catering.
             </p>
           </div>
         </motion.section>

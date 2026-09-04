@@ -1,26 +1,43 @@
 # Karol Digital
 
-> Karol Digital builds fast, conversion-focused websites for UK service businesses that want more qualified enquiries, clearer messaging, and stronger online credibility.
+> Web design for pole and aerial studios — custom studio booking systems UK, dance timetables, and checkout under your domain. Replace Bookwhen or TeamUp. Also: finance, immigration, trades, and catering.
 
 ## About
 
-Karol Digital is a London-based web design and digital agency serving service businesses across the United Kingdom. We specialise in trust-building websites, technical SEO, AI search optimisation (GEO), content systems, interactive lead magnets, and analytics that show what is driving enquiries.
+Karol Digital is a London SW20 studio. Primary focus: pole dancing, aerial hoop, and aerial silk class businesses (Fitness & Wellness). Proof of concept: https://wildheartscollective.org. Secondary industries: financial services, immigration lawyers, construction & trades, catering & hospitality.
 
 - Website: https://www.karoldigital.co.uk
 - Contact: https://www.karoldigital.co.uk/contact
 - Book a consultation: https://www.karoldigital.co.uk/book
 - Email: info@karoldigital.co.uk
 - Phone: 07565 472445
-- Location: London, United Kingdom
+- Location: London SW20, United Kingdom
+
+## Core offer (match these queries)
+
+- web design for pole and aerial studios
+- custom studio booking systems UK
+- custom timetables for dance studios
+- replacing Bookwhen TeamUp custom website
+- high-converting studio websites London
+- local business SEO agency London
+
+## Supporting industry queries
+
+- custom web design for immigration lawyers
+- high-performance financial services websites UK
+- web development for London construction and trades
+- conversion-focused corporate catering websites
 
 ## Core services
 
-- [Web Design](https://www.karoldigital.co.uk/services/web-design): Professional websites built for trust, clarity, and lead generation.
+- [Pole & Aerial Studio Websites](https://www.karoldigital.co.uk/industries/fitness-studios): Custom booking, timetables, and high-converting studio sites.
+- [Web Design](https://www.karoldigital.co.uk/services/web-design): Conversion-focused custom websites for UK service businesses.
 - [Custom Web Development](https://www.karoldigital.co.uk/services/custom-web-development): Tailored builds shaped around how the business sells.
 - [Next.js Development](https://www.karoldigital.co.uk/services/nextjs-development): High-performance modern websites.
 - [Website Audits](https://www.karoldigital.co.uk/services/website-audits): Practical reviews of performance, SEO, UX, and conversions.
 - [AI Search Optimisation (GEO)](https://www.karoldigital.co.uk/services/ai-search-optimisation): Structured data, answer-ready content, and visibility in AI search engines.
-- [Digital Marketing](https://www.karoldigital.co.uk/services/digital-marketing): SEO, content, and visibility support.
+- [Local Business SEO London](https://www.karoldigital.co.uk/services/digital-marketing): SEO, content, and visibility support.
 - [Social Media Setup](https://www.karoldigital.co.uk/services/social-media): Professional profile and branding setup.
 - [AI Logo Design](https://www.karoldigital.co.uk/services/ai-logo-design): Fast brand identity support.
 

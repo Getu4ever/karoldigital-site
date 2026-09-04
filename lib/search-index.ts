@@ -8,10 +8,10 @@ export type SearchDoc = {
 
 const STATIC_DOCS: SearchDoc[] = [
   {
-    title: "Karol Digital — web design for UK service businesses",
+    title: "Web design for pole and aerial studios",
     url: "/",
     description:
-      "London web design studio. Conversion-focused websites, GEO, audits, and lead generation.",
+      "Custom studio booking systems UK — timetables and checkout under your domain. Replace Bookwhen or TeamUp. Proof: wildheartscollective.org.",
   },
   {
     title: "About Karol Digital",
@@ -41,9 +41,10 @@ const STATIC_DOCS: SearchDoc[] = [
     description: "Custom websites, Next.js, audits, GEO, marketing, and mobile apps.",
   },
   {
-    title: "High-performance custom web design",
+    title: "Web design UK — conversion-focused custom websites",
     url: "/services/web-design",
-    description: "Websites for UK service businesses that win qualified enquiries — London SW20 studio.",
+    description:
+      "Website design for service businesses: custom websites and conversion-focused websites from a London web designer.",
   },
   {
     title: "Custom web development",
@@ -89,7 +90,7 @@ const STATIC_DOCS: SearchDoc[] = [
   {
     title: "Small business web design London",
     url: "/services/small-business-web-design-london",
-    description: "London SW20 web design for Raynes Park, Wimbledon, Merton and nearby firms.",
+    description: "London SW20 web design for Merton, Wimbledon, Raynes Park and nearby firms.",
   },
   {
     title: "Industry web design",
@@ -117,9 +118,10 @@ const STATIC_DOCS: SearchDoc[] = [
     description: "Menu-led websites for UK catering and hospitality firms.",
   },
   {
-    title: "Fitness studio websites",
+    title: "Pole & aerial studio websites",
     url: "/industries/fitness-studios",
-    description: "Wild Hearts Collective and studio sites with class booking and community brand.",
+    description:
+      "Web design for pole and aerial studios — custom studio booking systems UK, dance timetables, and high-converting London studio websites.",
   },
   {
     title: "GEO and SEO website checker",

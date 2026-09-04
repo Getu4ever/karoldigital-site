@@ -3,34 +3,41 @@ import GeoExtras from "@/components/GeoExtras";
 import { cateringFaqs } from "@/lib/page-faqs";
 
 export const metadata = generateSEOMetadata({
-  title: "Catering Website Design & Hospitality Systems | Karol Digital",
+  title: "Corporate Catering Website Design UK",
   description:
-    "Professional catering website design for UK food brands. High-conversion web frameworks for caterers with smooth online ordering and digital menu systems.",
+    "Conversion-focused corporate catering websites — menus, packages and enquiry flows that win bookings with less admin.",
   url: "https://www.karoldigital.co.uk/industries/catering-services",
   image: "/foodmama-showcase-new.jpg",
+  keywords:
+    "conversion-focused corporate catering websites, catering website design UK, hospitality web design, event catering websites",
 });
 
 const cateringServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Catering Website Design & Hospitality Systems",
-  "serviceType": "Web Design Services for Hospitality & Catering",
-  "description":
-    "Bespoke digital solutions and high-conversion web frameworks for UK food brands, caterers, and meal prep businesses featuring integrated ordering systems and menu management tools.",
-  "provider": {
+  name: "Conversion-focused corporate catering websites",
+  alternateName: [
+    "Conversion-focused corporate catering websites",
+    "Catering website design UK",
+  ],
+  serviceType: "Corporate catering website design",
+  description:
+    "Conversion-focused corporate catering websites — menus, packages, and enquiry flows that win bookings with less admin.",
+  provider: {
     "@type": "ProfessionalService",
-    "name": "Karol Digital",
-    "url": "https://www.karoldigital.co.uk",
-    "address": {
+    name: "Karol Digital",
+    url: "https://www.karoldigital.co.uk",
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "London",
-      "addressCountry": "GB"
-    }
+      addressLocality: "London",
+      postalCode: "SW20",
+      addressCountry: "GB",
+    },
   },
-  "areaServed": {
+  areaServed: {
     "@type": "Country",
-    "name": "United Kingdom"
-  }
+    name: "United Kingdom",
+  },
 };
 
 export default function CateringLayout({
