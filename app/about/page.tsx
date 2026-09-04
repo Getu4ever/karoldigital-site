@@ -61,21 +61,21 @@ export default function About() {
 
         <FadeIn>
           <section
-            id="designer"
+            id="studio"
             className="scroll-mt-28 px-6 pb-12 md:px-12"
           >
             <div className="mx-auto max-w-5xl rounded-2xl border border-gray-100 bg-gray-50 p-8 md:p-12">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#411b3f]">
-                Designer
+                The studio
               </p>
               <h2 className="mt-3 text-3xl font-bold text-[#102f35] md:text-4xl">
-                Karol, Web Designer
+                Karol Digital
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-gray-700">
-                Karol is the web designer behind Karol Digital builds. Karol
-                designs conversion-focused websites for UK service businesses —
-                with a focus on clearer offers, stronger first impressions, and
-                enquiry journeys that turn visitors into real conversations.
+                Karol Digital designs conversion-focused websites for UK service
+                businesses — with a focus on clearer offers, stronger first
+                impressions, and enquiry journeys that turn visitors into real
+                conversations.
               </p>
               <p className="mt-4 leading-relaxed text-gray-700">
                 The studio is based in London and serves clients across the United

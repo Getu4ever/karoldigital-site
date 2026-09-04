@@ -6,12 +6,9 @@ import TikTokPixel from "@/components/TikTokPixel";
 import JsonLd from "@/components/JsonLd";
 import { Metadata, Viewport } from "next";
 import {
-  FOUNDER_NAME,
-  PERSON_ID,
   PREFERRED_CITATION,
   SITE_ORIGIN,
   organizationJsonLd,
-  personJsonLd,
   websiteJsonLd,
 } from "@/lib/geo";
 
@@ -39,8 +36,8 @@ export const metadata: Metadata = {
     "custom web design for immigration lawyers",
     "high-performance financial services websites UK",
   ],
-  authors: [{ name: FOUNDER_NAME, url: PERSON_ID }],
-  creator: FOUNDER_NAME,
+  authors: [{ name: "Karol Digital", url: `${SITE_ORIGIN}/about` }],
+  creator: "Karol Digital",
   publisher: "Karol Digital",
   category: "Web Design",
   referrer: "origin-when-cross-origin",
@@ -117,7 +114,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="relative min-h-screen flex flex-col bg-white text-gray-900">
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={websiteJsonLd()} />
-        <JsonLd data={personJsonLd()} />
         <GoogleAnalytics />
         <TikTokPixel />
         <SiteChrome>{children}</SiteChrome>

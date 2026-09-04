@@ -269,12 +269,12 @@ export default function WebsiteCheckerPage() {
               <article className="rounded-2xl border border-[#102f35]/15 bg-[#102f35] p-6 md:p-8 text-white">
                 <h2 className="text-2xl font-bold mb-2">
                   {hasIssues
-                    ? "Something looks off? Talk to Karol."
+                    ? "Something looks off? Talk to Karol Digital."
                     : "Want this maintained?"}
                 </h2>
                 <p className="text-white/80 mb-6">
                   {hasIssues
-                    ? "This snapshot is a starting point. Karol can review the issues, explain what actually matters for enquiries, and quote a proper audit or GEO fix."
+                    ? "This snapshot is a starting point. Karol Digital can review the issues, explain what actually matters for enquiries, and quote a proper audit or GEO fix."
                     : "The homepage snapshot looks healthy. A paid audit still covers speed, conversions, and whether AI search actually cites you."}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -289,8 +289,8 @@ export default function WebsiteCheckerPage() {
                     className="rounded-lg bg-white px-6 py-3 text-center font-semibold text-[#102f35]"
                   >
                     {hasIssues
-                      ? "Contact Karol about these issues"
-                      : "Contact Karol"}
+                      ? "Contact Karol Digital about these issues"
+                      : "Contact Karol Digital"}
                   </Link>
                   <Link
                     href="/book"
@@ -316,7 +316,7 @@ export default function WebsiteCheckerPage() {
                 ) : (
                   <form onSubmit={handleLead} className="space-y-4">
                     <h2 className="text-xl font-bold text-[#102f35]">
-                      Send this snapshot to Karol
+                      Send this snapshot to Karol Digital
                     </h2>
                     <p className="text-gray-600">
                       Optional. Include a note if you want help fixing what showed up.

@@ -17,7 +17,7 @@ const STATIC_DOCS: SearchDoc[] = [
     title: "About Karol Digital",
     url: "/about",
     description:
-      "Meet Karol, web designer at Karol Digital, a London studio building custom websites for UK service businesses.",
+      "About Karol Digital, a London studio building custom websites for UK service businesses.",
   },
   {
     title: "Contact Karol Digital",
@@ -127,7 +127,7 @@ const STATIC_DOCS: SearchDoc[] = [
     title: "GEO and SEO website checker",
     url: "/tools/website-checker",
     description:
-      "Free homepage snapshot of titles, schema, robots.txt, and llms.txt, with a way to contact Karol if issues show up.",
+      "Free homepage snapshot of titles, schema, robots.txt, and llms.txt, with a way to contact Karol Digital if issues show up.",
   },
   {
     title: "AI Search Readiness Scorecard",

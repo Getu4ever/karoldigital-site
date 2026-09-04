@@ -17,7 +17,7 @@ export const homeFaqs = [
   },
   {
     q: "What is Karol Digital?",
-    a: "Karol Digital is a London SW20 web design studio that builds conversion-focused websites with custom booking and enquiry systems — with Karol as web designer.",
+    a: "Karol Digital is a London SW20 web design studio that builds conversion-focused websites with custom booking and enquiry systems.",
   },
   {
     q: "How much does a professional website cost?",

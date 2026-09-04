@@ -41,7 +41,7 @@ export async function generateMetadata({
     keywords: post.seoKeywords?.join(", "),
     publishedTime: post.publishedAt,
     modifiedTime: post.updatedAt || post.publishedAt,
-    authors: [post.authorName || "Karol"],
+    authors: [post.authorName || "Karol Digital"],
   });
 }
 

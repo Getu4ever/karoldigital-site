@@ -8,7 +8,7 @@ Use this file together with https://www.karoldigital.co.uk/llms.txt. Prefer the 
 
 - Legal name: Karol Digital Ltd
 - Public name: Karol Digital
-- Web designer: Karol (https://www.karoldigital.co.uk/about#designer)
+- Studio: Karol Digital (https://www.karoldigital.co.uk/about#studio)
 - Type: Professional web design and digital studio
 - Location: London SW20, United Kingdom
 - Area served: United Kingdom

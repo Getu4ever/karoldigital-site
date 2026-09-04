@@ -644,7 +644,7 @@ export default function HomePageClient() {
               </p>
               <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 md:text-base">
                 Paste a URL for a homepage check of titles, schema, robots.txt, and
-                llms.txt — then contact Karol if the snapshot flags issues.
+                llms.txt — then contact Karol Digital if the snapshot flags issues.
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#102f35] transition group-hover:text-[#411b3f]">
                 Check a website

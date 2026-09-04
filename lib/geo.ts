@@ -16,7 +16,6 @@ import {
 export const SITE_ORIGIN = "https://www.karoldigital.co.uk";
 export const ORG_ID = `${SITE_ORIGIN}/#organization`;
 export const WEBSITE_ID = `${SITE_ORIGIN}/#website`;
-export const PERSON_ID = `${SITE_ORIGIN}/about#designer`;
 export const INDEXNOW_KEY = "a8f3c2e91b674d0aa15e6c8d4f2b9e70";
 
 export const PREFERRED_CITATION =
@@ -35,10 +34,8 @@ export const CORE_OFFER_KEYWORDS = [
   "local business SEO agency London",
 ] as const;
 
-export const FOUNDER_NAME = "Karol";
-export const FOUNDER_JOB_TITLE = "Web Designer";
-export const FOUNDER_DESCRIPTION =
-  "Karol is the web designer at Karol Digital, a London SW20 web design studio. Karol builds web design for pole and aerial studios with custom studio booking systems UK, and conversion-focused sites for immigration lawyers, financial firms, London trades, and catering.";
+/** Brand name used for authorship metadata — no personal names on the public site. */
+export const FOUNDER_NAME = "Karol Digital";
 
 export type FaqItem = { q: string; a: string };
 
@@ -54,43 +51,6 @@ export function faqPageJsonLd(faqs: readonly FaqItem[]) {
         text: a,
       },
     })),
-  };
-}
-
-export function personJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": PERSON_ID,
-    name: FOUNDER_NAME,
-    url: PERSON_ID,
-    jobTitle: FOUNDER_JOB_TITLE,
-    description: FOUNDER_DESCRIPTION,
-    image: `${SITE_ORIGIN}/about-our-story.webp`,
-    worksFor: { "@id": ORG_ID },
-    knowsAbout: [
-      "Web design for pole and aerial studios",
-      "Custom studio booking systems UK",
-      "Custom timetables for dance studios",
-      "High-converting studio websites London",
-      "Custom web design for immigration lawyers",
-      "High-performance financial services websites UK",
-      "Generative engine optimisation",
-      "Technical SEO",
-      "Next.js",
-    ],
-    sameAs: [
-      SITE_SOCIAL.linkedin,
-      SITE_SOCIAL.youtube,
-      SITE_SOCIAL.instagram,
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: SITE_LOCALITY,
-      postalCode: SITE_POSTAL_CODE,
-      addressRegion: SITE_REGION,
-      addressCountry: SITE_COUNTRY,
-    },
   };
 }
 
@@ -110,7 +70,6 @@ export function organizationJsonLd() {
     email: SITE_EMAIL,
     telephone: SITE_PHONE_E164,
     priceRange: "££",
-    employee: { "@id": PERSON_ID },
     address: {
       "@type": "PostalAddress",
       addressLocality: SITE_LOCALITY,
@@ -251,12 +210,14 @@ export function providerRef() {
 }
 
 export function authorRef(name?: string) {
-  const displayName = name?.trim() && name !== "Karol Digital" ? name : FOUNDER_NAME;
+  const displayName =
+    name?.trim() && name !== "Karol Digital" && name !== "Karol"
+      ? name
+      : "Karol Digital";
   return {
-    "@type": "Person" as const,
-    "@id": PERSON_ID,
+    "@type": "Organization" as const,
+    "@id": ORG_ID,
     name: displayName,
-    url: PERSON_ID,
-    jobTitle: FOUNDER_JOB_TITLE,
+    url: SITE_ORIGIN,
   };
 }

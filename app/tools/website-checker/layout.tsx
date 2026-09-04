@@ -9,7 +9,7 @@ const PAGE_URL = "https://www.karoldigital.co.uk/tools/website-checker";
 export const metadata: Metadata = generateSEOMetadata({
   title: "Free GEO & SEO Website Checker | Karol Digital",
   description:
-    "Paste a URL for a homepage snapshot of titles, schema, robots.txt, and llms.txt. Then take the 9-question scorecard or talk to Karol if something looks off.",
+    "Paste a URL for a homepage snapshot of titles, schema, robots.txt, and llms.txt. Then take the 9-question scorecard or talk to Karol Digital if something looks off.",
   url: PAGE_URL,
   image: "/seo-cover.jpg",
   keywords:
@@ -53,7 +53,7 @@ export default function WebsiteCheckerLayout({
           eyebrow="Free GEO & SEO snapshot"
           title="Website"
           titleAccent="Checker"
-          description="Paste a URL. We read the public homepage, robots.txt, and llms.txt — then show a plain-English snapshot and a way to talk to Karol if something looks off."
+          description="Paste a URL. We read the public homepage, robots.txt, and llms.txt — then show a plain-English snapshot and a way to talk to Karol Digital if something looks off."
           imageSrc="/heroes/website-audits.png"
           imageAlt="GEO and SEO website checker for UK service businesses"
         />

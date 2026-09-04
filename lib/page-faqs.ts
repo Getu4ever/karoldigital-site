@@ -87,7 +87,7 @@ export const auditsFaqs: FaqItem[] = [
   },
   {
     q: "Is there a free check before a paid audit?",
-    a: "Yes. The GEO & SEO website checker takes a homepage snapshot of titles, schema, robots.txt, and llms.txt. It is not a full audit — use it to see obvious gaps, then book a £95 audit or contact Karol if you want the issues fixed.",
+    a: "Yes. The GEO & SEO website checker takes a homepage snapshot of titles, schema, robots.txt, and llms.txt. It is not a full audit — use it to see obvious gaps, then book a £95 audit or contact Karol Digital if you want the issues fixed.",
   },
 ];
 
@@ -297,7 +297,7 @@ export const pricingFaqs: FaqItem[] = [
 export const aboutFaqs: FaqItem[] = [
   {
     q: "Who is behind Karol Digital?",
-    a: "Karol Digital is a London web design studio. Karol is the web designer who builds conversion-focused websites for UK service businesses — with expertise in SEO, AI search optimisation (GEO), and lead generation.",
+    a: "Karol Digital is a London web design studio that builds conversion-focused websites for UK service businesses — with expertise in SEO, AI search optimisation (GEO), and lead generation.",
   },
   {
     q: "Where is Karol Digital based?",
