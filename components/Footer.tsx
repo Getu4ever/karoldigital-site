@@ -138,6 +138,14 @@ export default function Footer() {
                   Cookie Policy
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/disclaimer"
+                  className="hover:text-brand-gold-soft transition"
+                >
+                  Disclaimer
+                </Link>
+              </li>
             </ul>
           </div>
 

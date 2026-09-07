@@ -21,6 +21,11 @@ const LEGACY_MARKDOWN_REDIRECTS: Array<{ match: RegExp; destination: string }> =
     match: /1stcalluk\.co\.uk/i,
     destination: "https://www.1stcalluk.co.uk/",
   },
+  // Older immigration page used .com (no .co.uk) in the broken markdown href
+  {
+    match: /1stcalluk\.com/i,
+    destination: "https://1stcalluk.com/",
+  },
 ];
 
 export async function proxy(request: NextRequest) {

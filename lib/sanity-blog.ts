@@ -98,7 +98,7 @@ export async function getBlogPostsForSitemap(): Promise<
 > {
   try {
     const posts = await client.fetch(
-      groq`*[_type == "blogPost" && defined(slug.current)]{
+      groq`*[_type == "blogPost" && defined(slug.current) && defined(publishedAt) && publishedAt <= now()]{
         "slug": slug.current,
         publishedAt,
         "updatedAt": _updatedAt
