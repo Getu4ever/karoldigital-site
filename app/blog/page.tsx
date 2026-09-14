@@ -5,6 +5,8 @@ import BlogCta from "@/components/BlogCta";
 import { blogLinkLabel } from "@/lib/link-label";
 import { getBlogIndexPosts } from "@/lib/sanity-blog";
 
+export const revalidate = 60;
+
 export default async function BlogIndexPage() {
   const posts = await getBlogIndexPosts();
 

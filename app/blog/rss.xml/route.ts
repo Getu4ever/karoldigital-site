@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { SITE_ORIGIN } from "@/lib/geo";
 import { getBlogIndexPosts } from "@/lib/sanity-blog";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 function escapeXml(value: string): string {
   return value
