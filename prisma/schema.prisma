@@ -69,3 +69,39 @@ model Invoice {
   @@index([status])
   @@index([issuedAt])
 }
+
+enum SocialPlatform {
+  facebook
+  linkedin
+  instagram
+}
+
+enum SocialSyndicationStatus {
+  pending
+  success
+  failed
+  skipped
+}
+
+/// Idempotent log of blog → social media syndication attempts.
+model SocialSyndicationLog {
+  id             String                   @id @default(cuid())
+  sanityId       String
+  slug           String
+  platform       SocialPlatform
+  status         SocialSyndicationStatus  @default(pending)
+  postUrl        String?
+  externalPostId String?
+  attemptCount   Int                      @default(0)
+  lastError      String?                  @db.Text
+  payloadSnapshot String?                 @db.Text
+  lastAttemptAt  DateTime?
+  succeededAt    DateTime?
+  createdAt      DateTime                 @default(now())
+  updatedAt      DateTime                 @updatedAt
+
+  @@unique([slug, platform])
+  @@index([status, lastAttemptAt])
+  @@index([sanityId])
+  @@index([createdAt])
+}
